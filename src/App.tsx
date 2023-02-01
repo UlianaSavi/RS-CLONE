@@ -1,3 +1,4 @@
+import React from "react";
 import { AccessForm } from "./components/AccessForm/AccessForm";
 import { SubmitButton } from "./components/SubmitButton/SubmitButton";
 
