@@ -1,22 +1,20 @@
-import React from "react";
-import { AccessForm } from "./components/AccessForm/AccessForm";
-import { SubmitButton } from "./components/SubmitButton/SubmitButton";
-
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { PhoneCodeInput } from "./components/PhoneCodeInput/PhoneCodeInput";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { AccessForm } from './components/AccessForm/AccessForm';
+import { SubmitButton } from './components/SubmitButton/SubmitButton';
+import { PhoneCodeInput } from './components/PhoneCodeInput/PhoneCodeInput';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: (
       <AccessForm
-        children={<SubmitButton></SubmitButton>}
+        children={<SubmitButton />}
         placeholder="Enter your phone"
-      ></AccessForm>
+      />
     ),
   },
   {
-    path: "/phoneCodeEnter",
+    path: '/phoneCodeEnter',
     element: <PhoneCodeInput />,
   },
 ]);
