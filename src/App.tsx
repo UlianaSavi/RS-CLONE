@@ -1,4 +1,4 @@
-import { AccessForm } from "./components/SingUp/SingUp";
+import { AccessForm } from "./components/AccessForm/AccessForm";
 import { SubmitButton } from "./components/SubmitButton/SubmitButton";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
