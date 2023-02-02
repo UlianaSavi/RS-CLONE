@@ -1,7 +1,3 @@
-body {
-  margin: 0;
-}
-
 .container {
   background-color: $grey-dark;
   min-height: 100vh;
@@ -9,5 +5,5 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: $text-white;
+  color: $text-color;
 }

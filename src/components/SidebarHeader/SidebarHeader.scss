@@ -1,8 +1,10 @@
+@import "../../styles/variables";
+
 .sidebar-header {
   height: 35px;
   padding: 5px 10px 5px;
   display: flex;
   gap: 10px;
   color: #fff;
-  background-color: #3A8891;
+  background-color: $grey-lite;
 }

@@ -1,4 +1,7 @@
+@import "../../styles/variables";
+
 .chat-info {
+  background-color: $grey-lite;
   height: 35px;
   padding: 5px;
 }

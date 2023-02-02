@@ -4,11 +4,11 @@ import './ChatList.scss';
 function ChatList() {
   return (
     <div className="chat-list">
-      <ChatPreview />
-      <ChatPreview />
-      <ChatPreview />
-      <ChatPreview />
-      <ChatPreview />
+      <ChatPreview status="active" />
+      <ChatPreview status="inactive" />
+      <ChatPreview status="inactive" />
+      <ChatPreview status="inactive" />
+      <ChatPreview status="inactive" />
     </div>
   );
 }

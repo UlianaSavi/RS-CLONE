@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .chat-window {
   padding: 5px;
   display: flex;
@@ -5,5 +7,5 @@
   gap: 15px;
   flex-grow: 1;
   overflow: auto;
-  background-color: #F2DEBA;
+  background-color: $grey-dark;
 }
