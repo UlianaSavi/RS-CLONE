@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import AddAvatarButton from '../../components/AddAvatarButton/AddAvatarButton';
 import './Form.scss';
 
@@ -9,14 +10,14 @@ function Form({ mode }: FormProps) {
   const data = {
     register: {
       title: 'Register',
-      button: 'Sign up',
+      buttonText: 'Sign up',
       footerText: 'Do you have an account?',
       footerLink: '/login',
       footerLinkText: 'Login',
     },
     login: {
       title: 'Login',
-      button: 'Sign in',
+      buttonText: 'Sign in',
       footerText: 'Don\'t you have an accoint?',
       footerLink: '/',
       footerLinkText: 'Register',
@@ -32,15 +33,15 @@ function Form({ mode }: FormProps) {
         <input className="form__input" type="email" placeholder="Email" />
         <input className="form__input" type="password" placeholder="Password" />
         {mode === 'register' ? <AddAvatarButton /> : null}
-        <button type="button" className="form__submit-btn">
-          {data[mode].button}
-        </button>
+        <Link className="form__submit-btn" to="/messenger">
+          {data[mode].buttonText}
+        </Link>
       </form>
       <p className="form__footer">
         {data[mode].footerText}
-        <a className="form__link" href={data[mode].footerLink}>
+        <Link className="form__link" to={data[mode].footerLink}>
           {data[mode].footerLinkText}
-        </a>
+        </Link>
       </p>
     </div>
   );
