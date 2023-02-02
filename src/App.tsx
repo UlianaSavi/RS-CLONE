@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { PhoneCodeInput } from './components/PhoneCodeInput/PhoneCodeInput';
 import Form from './pages/Form/Form';
+import Messenger from './pages/Messenger/Messenger';
 
 const router = createBrowserRouter([
   {
@@ -10,6 +11,10 @@ const router = createBrowserRouter([
   {
     path: '/login',
     element: <Form mode="login" />,
+  },
+  {
+    path: '/messenger',
+    element: <Messenger />,
   },
   {
     path: '/phoneCodeEnter',

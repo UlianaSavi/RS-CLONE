@@ -1,0 +1,19 @@
+.chat-preview {
+  padding: 8px;
+  display: flex;
+  gap: 10px;
+  color: #fff;
+  cursor: pointer;
+  &:hover {
+    background-color: #4ca1aa;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  &__last-message {
+    font-size: 18px;
+  }
+}

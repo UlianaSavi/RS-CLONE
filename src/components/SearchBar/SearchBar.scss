@@ -1,0 +1,13 @@
+.search-bar {
+  width: 100%;
+  height: 24px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  color: #fff;
+  background-color: #0E5E6F;
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
