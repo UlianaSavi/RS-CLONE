@@ -1,2 +1,5 @@
-@use "./styles/app";
-@use "./styles/access";
+@import "./styles/variables";
+@import "./styles/global";
+@import "./styles/typography";
+
+@import "./styles/access";
