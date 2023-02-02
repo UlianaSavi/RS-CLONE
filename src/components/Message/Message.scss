@@ -1,0 +1,11 @@
+.message {
+  display: flex;
+  gap: 10px;
+
+  &__text {
+    padding: 5px 10px 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 14px;
+  }
+}
