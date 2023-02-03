@@ -1,6 +1,7 @@
 import SettingsMenuItem from '../SettingsMenuItem/SettingsMenuItem';
 import './SettingsMenu.scss';
 
+// Пока не знаю, куда лучше выносить логику, поэтому для удобства дальнейшего рефактора это здесь
 const closePopap = () => {
   const popap = document.getElementById('popap');
   popap?.classList.remove('active');

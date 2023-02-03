@@ -1,5 +1,6 @@
 import './BurgerButton.scss';
 
+// Пока не знаю, куда лучше выносить логику, поэтому для удобства дальнейшего рефактора это здесь
 const openPopap = () => {
   const popap = document.getElementById('popap');
   if (!popap?.classList.contains('active')) {
