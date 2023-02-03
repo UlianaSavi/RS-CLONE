@@ -3,7 +3,11 @@ import './BurgerButton.scss';
 
 const openPopap = () => {
   const popap = document.getElementById('popap');
-  console.log(popap);
+  if (!popap?.classList.contains('active')) {
+    popap?.classList.add('active');
+  } else {
+    popap?.classList.remove('active');
+  }
 };
 
 function BurgerButton() {

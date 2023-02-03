@@ -1,3 +1,4 @@
+import React from 'react';
 import ChatsFolders from '../ChatsFolders/ChatsFolders';
 import ChatsList from '../ChatsList/ChatsList';
 import './SidebarContent.scss';
