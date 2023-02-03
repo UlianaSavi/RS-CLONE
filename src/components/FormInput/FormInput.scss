@@ -21,7 +21,11 @@
     border: 2px solid $accent-color;
   }
   &:focus + .form-input__label {
-      color: $accent-color;
+    left: 7px;
+    top: -12px;
+    color: $accent-color;
+    font-size: 14px;
+    z-index: 10;
   }
   &::placeholder {
     color: $grey-lite;
@@ -30,12 +34,22 @@
   &__label {
     position: absolute;
     padding: 5px;
-    left: 7px;
-    top: -15px;
+    padding-top: 3px;
+    top: 14px;
+    left: 15px;
     color: $grey-secondary;
     background-color: $grey-main;
+    font-size: 18px;
     transition: .2s all;
+    z-index: 0;
+  }
+
+  &:not(:placeholder-shown) + .form-input__label {
+    left: 7px;
+    top: -12px;
+    font-size: 14px;
     z-index: 10;
+    font-weight: 600;
   }
 
   &__wrapper {

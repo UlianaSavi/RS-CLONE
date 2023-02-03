@@ -21,6 +21,7 @@ function FormInput({
         id={id}
         value={defaultValue}
         onChange={(event) => setValue(event.target.value)}
+        placeholder=" "
       />
       <label htmlFor={id} className="form-input__label">{label}</label>
     </div>
