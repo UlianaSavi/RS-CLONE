@@ -3,6 +3,7 @@
 .chat-info {
   display: flex;
   gap: 0.625rem;
+  width: 100%;
 
   .avatar {
     width: 2.5rem;
@@ -23,6 +24,6 @@
   &__status {
     font-size: .875rem;
 
-    color: $text-secondary;
+    color: $grey-secondary;
   }
 }
