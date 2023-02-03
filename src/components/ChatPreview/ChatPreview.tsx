@@ -8,8 +8,8 @@ function ChatPreview() {
       <div className="chat-preview-wrapper">
         <Avatar />
         <div className="chat-preview-text">
-          <div className="chat-preview__title">Какоетоимя👻</div>
-          <div className="chat-preview__last-message">Тут шото написано</div>
+          <div className="chat-preview__title">Sal Fisher👻</div>
+          <div className="chat-preview__last-message">Have your seen her t...</div>
         </div>
       </div>
       <div className="chat-preview__info">
