@@ -9,6 +9,7 @@ function ChatsList() {
       <ChatPreview />
       <ChatPreview />
       <ChatPreview />
+      <ChatPreview />
     </div>
   );
 }
