@@ -1,14 +1,20 @@
+import React from 'react';
 import ChatsFolderItem from '../ChatsFolderItem/ChatsFolderItem';
 import './ChatsFolders.scss';
 
-function ChatsFolders() {
+function ChatsFolder() {
   return (
-    <div className="chats-folders">
-      <ChatsFolderItem />
-      <ChatsFolderItem />
-      <ChatsFolderItem />
+    <div className="folders-tabs">
+      <div className="folders-tabs__wrapper">
+        <ChatsFolderItem />
+        <ChatsFolderItem />
+        <ChatsFolderItem />
+        <ChatsFolderItem />
+        <ChatsFolderItem />
+        <ChatsFolderItem />
+      </div>
     </div>
   );
 }
 
-export default ChatsFolders;
+export default ChatsFolder;

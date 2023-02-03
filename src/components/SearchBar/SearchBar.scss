@@ -1,15 +1,56 @@
 @import "../../styles/variables";
 
-.search-bar {
+
+.search {
+  position: relative;
+
   width: 100%;
-  height: 24px;
-  padding-left: 10px;
-  border: none;
-  border-radius: 12px;
-  outline: none;
-  color: #fff;
+  max-width: 332px;
+  height: 42px;
+  
   background-color: $grey-dark;
+  border: 0.5px solid $grey-secondary;
+  border-radius: 22px;
+  color: $text-color-white;
+  cursor: text;
+}
+
+.search:hover {
+  border: 0.5px solid $grey-main;
+}
+
+.search__input {
+  position: absolute;
+  top: 7px;
+  left: 45px;
+
+  width: 100%;
+  max-width: 260px;
+  height: 25px;
+
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: white;
+
   &::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: $grey-main;
   }
+}
+
+.search__icon {
+  position: absolute;
+  left: 14px;
+  bottom: 10px;
+
+  width: 25px;
+}
+
+.selected {
+  border: 0.5px solid $accent-color;
+}
+
+.selected:hover {
+  border: 0.5px solid $accent-color;
 }

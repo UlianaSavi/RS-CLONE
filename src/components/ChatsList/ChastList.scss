@@ -1,0 +1,11 @@
+@import "../../styles/variables";
+
+.chat-list {
+    width: 100%;
+    max-width: 400px;
+    min-height: 400px;
+
+    padding: 10px;
+    
+    background: $grey-dark;
+}

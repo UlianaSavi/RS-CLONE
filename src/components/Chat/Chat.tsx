@@ -1,3 +1,4 @@
+import React from 'react';
 import ChatInfo from '../ChatInfo/ChatInfo';
 import ChatInput from '../ChatInput/ChatInput';
 import ChatWindow from '../ChatWindow/ChatWindow';
