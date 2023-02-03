@@ -1,0 +1,24 @@
+@import "../../styles/variables";
+
+.chat-preview {
+  padding: 8px;
+  display: flex;
+  gap: 10px;
+  color: #fff;
+  cursor: pointer;
+  &:hover {
+    background-color: $accent-color;
+  }
+
+  &_active {
+    background-color: $accent-color;
+  }
+
+  &__title {
+    font-weight: bold;
+  }
+
+  &__last-message {
+    font-size: 18px;
+  }
+}

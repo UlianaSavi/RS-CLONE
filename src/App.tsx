@@ -1,21 +1,19 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { AccessForm } from './components/AccessForm/AccessForm';
-import { SubmitButton } from './components/SubmitButton/SubmitButton';
-import { PhoneCodeInput } from './components/PhoneCodeInput/PhoneCodeInput';
+import Form from './pages/Form/Form';
+import Messenger from './pages/Messenger/Messenger';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: (
-      <AccessForm
-        children={<SubmitButton />}
-        placeholder="Enter your phone"
-      />
-    ),
+    element: <Form mode="register" />,
   },
   {
-    path: '/phoneCodeEnter',
-    element: <PhoneCodeInput />,
+    path: '/login',
+    element: <Form mode="login" />,
+  },
+  {
+    path: '/messenger',
+    element: <Messenger />,
   },
 ]);
 

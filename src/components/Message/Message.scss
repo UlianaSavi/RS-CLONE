@@ -1,0 +1,14 @@
+@import "../../styles/variables";
+
+.message {
+  display: flex;
+  gap: 10px;
+
+  &__text {
+    padding: 5px 10px 5px;
+    border-radius: 5px;
+    color: $text-color;
+    background-color: $grey-lite;
+    font-size: 14px;
+  }
+}
