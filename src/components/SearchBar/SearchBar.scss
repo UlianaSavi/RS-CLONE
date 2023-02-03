@@ -1,7 +1,5 @@
 @import "../../styles/variables";
 
-$animate-type: linear 0.15s;
-
 .search {
   position: relative;
 
@@ -15,7 +13,7 @@ $animate-type: linear 0.15s;
   color: $text-color-white;
 
   cursor: text;
-  transition: $animate-type;
+  transition: linear 0.15s;
 }
 
 .search:hover {
@@ -54,14 +52,14 @@ $animate-type: linear 0.15s;
   &.selected {
     border: none;
     fill: $accent-color;
-    transition: $animate-type;
+    transition: linear 0.15s;
   }
-  transition: $animate-type;
+  transition: linear 0.15s;
 }
 
 .selected {
   border: 1px solid $accent-color;
-  transition: $animate-type;
+  transition: linear 0.15s;
 }
 
 .selected:hover {

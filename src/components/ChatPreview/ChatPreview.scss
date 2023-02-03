@@ -24,17 +24,23 @@
   }
 
   &__title {
+    margin-bottom: 8px;
     font-size: 1rem;
+    
   }
 
   &__last-message {
     font-size: 1rem;
+    font-weight: 400;
+    color: $grey-secondary;
+    
   }
 
   &__messenge-time{
     margin-bottom: 5px;
     
     font-size: 0.9rem;
+    font-weight: 400;
     color: $grey-secondary;
   }
 
