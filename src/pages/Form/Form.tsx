@@ -11,11 +11,21 @@ function Form({ mode }: FormProps) {
   const data = {
     'login-phone': {
       title: 'Please confirm your country code and enter your phone number.',
-      buttonText: 'NEXT',
+      buttonText: 'LOG IN BY EMAIL',
+      inputs:
+  <>
+    <FormInput type="text" id="country" label="Country" value="Russia" />
+    <FormInput type="text" id="phoneNumber" label="Your phone number" value="+7" />
+  </>,
     },
     'login-email': {
-      title: 'Login',
-      buttonText: 'Sign in',
+      title: 'Please enter your email and password.',
+      buttonText: 'LOG IN BY PHONE NUMBER',
+      inputs:
+  <>
+    <FormInput type="email" id="email" label="Email" value="" />
+    <FormInput type="password" id="password" label="Password" value="" />
+  </>,
     },
   };
 
@@ -26,17 +36,12 @@ function Form({ mode }: FormProps) {
         <h1 className="form__title">Telegram</h1>
         <h2 className="form__subtitle">{data[mode].title}</h2>
         <form className="form__inputs">
-          {/* {mode === 'register' ? <input
-          className="form__input" type="text" placeholder="Name" /> : null} */}
-          {/* <input className="form__input" type="email" placeholder="Email" />
-          <input className="form__input" type="password" placeholder="Password" /> */}
-          <FormInput type="text" id="country" label="Country" value="Russia" />
-          <FormInput type="text" id="phoneNumber" label="Your phone number" value="+7" />
+          {data[mode].inputs}
           <Link className="form__button" to="/messenger">
-            {data[mode].buttonText}
+            NEXT
           </Link>
-          <Link className="form__button form__button_outline" to="/messenger">
-            LOG IN BY EMAIL
+          <Link className="form__button form__button_outline" to="/login">
+            {data[mode].buttonText}
           </Link>
         </form>
       </div>
