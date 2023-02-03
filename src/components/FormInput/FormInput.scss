@@ -1,0 +1,55 @@
+@import "../../styles/variables";
+
+.form-input {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 16px;
+  color: $text-color-white;
+  border: 1px solid $grey-lite;
+  border-radius: 10px;
+  outline: none;
+  transition: .2s all;
+  background-color: $grey-main;
+  font-size: 18px;
+  &:hover {
+    border: 1px solid $accent-color;
+  }
+  &:focus {
+    border: 2px solid $accent-color;
+  }
+  &:focus + .form-input__label {
+      color: $accent-color;
+  }
+  &::placeholder {
+    color: $grey-lite;
+  }
+
+  &__label {
+    position: absolute;
+    padding: 5px;
+    left: 7px;
+    top: -15px;
+    color: $grey-secondary;
+    background-color: $grey-main;
+    transition: .2s all;
+    z-index: 10;
+  }
+
+  &__wrapper {
+    position: relative;
+    height: 54px;
+    &:hover {
+      .form-input__label {
+        color: $accent-color;
+      }
+    }
+    &:focus {
+      .form-input__label {
+        color: $accent-color;
+      }
+    }
+  }
+}

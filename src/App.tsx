@@ -5,11 +5,11 @@ import Messenger from './pages/Messenger/Messenger';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Form mode="register" />,
+    element: <Form mode="login-phone" />,
   },
   {
     path: '/login',
-    element: <Form mode="login" />,
+    element: <Form mode="login-email" />,
   },
   {
     path: '/messenger',
