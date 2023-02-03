@@ -1,4 +1,4 @@
-import ChatList from '../ChatList/ChatList';
+import SidebarContent from '../SidebarContent/SidebarContent';
 import SidebarHeader from '../SidebarHeader/SidebarHeader';
 import './Sidebar.scss';
 
@@ -6,7 +6,7 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <SidebarHeader />
-      <ChatList />
+      <SidebarContent />
     </div>
   );
 }
