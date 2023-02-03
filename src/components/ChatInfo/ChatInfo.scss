@@ -1,7 +1,28 @@
 @import "../../styles/variables";
 
 .chat-info {
-  background-color: $grey-lite;
-  height: 35px;
-  padding: 5px;
+  display: flex;
+  gap: 0.625rem;
+
+  .avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 1.125rem;
+  }
+
+  &__status {
+    font-size: .875rem;
+
+    color: $text-secondary;
+  }
 }
