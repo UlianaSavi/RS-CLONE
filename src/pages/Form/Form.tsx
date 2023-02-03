@@ -17,8 +17,8 @@ function Form({ mode }: FormProps) {
       registrationRoute: '/register-phone',
       inputs:
   <>
-    <FormInput type="text" id="country" label="Country" value="Russia" />
-    <FormInput type="text" id="phoneNumber" label="Your phone number" value="+7" />
+    <FormInput type="text" id="country" label="Country" value="" />
+    <FormInput type="text" id="phoneNumber" label="Your phone number" value="" />
   </>,
     },
     'login-email': {
@@ -41,8 +41,8 @@ function Form({ mode }: FormProps) {
       registrationRoute: '/',
       inputs:
   <>
-    <FormInput type="text" id="country" label="Country" value="Russia" />
-    <FormInput type="text" id="phoneNumber" label="Your phone number" value="+7" />
+    <FormInput type="text" id="country" label="Country" value="" />
+    <FormInput type="text" id="phoneNumber" label="Your phone number" value="" />
   </>,
     },
     'register-email': {
@@ -68,6 +68,8 @@ function Form({ mode }: FormProps) {
         <h2 className="form__subtitle">{data[mode].title}</h2>
         <form className="form__inputs">
           {data[mode].inputs}
+          {/* <input type="checkbox" className="form__checkbox" id="keep" />
+          <label htmlFor="keep" className="form__checkbox-label">Keep me signed in</label> */}
           <Link className="form__button" to="/messenger">
             NEXT
           </Link>
