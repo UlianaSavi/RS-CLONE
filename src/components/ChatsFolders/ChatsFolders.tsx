@@ -1,4 +1,3 @@
-import React from 'react';
 import ChatsFolderItem from '../ChatsFolderItem/ChatsFolderItem';
 import './ChatsFolders.scss';
 

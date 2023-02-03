@@ -1,4 +1,3 @@
-import React from 'react';
 import './ChatInfo.scss';
 
 function ChatInfo() {

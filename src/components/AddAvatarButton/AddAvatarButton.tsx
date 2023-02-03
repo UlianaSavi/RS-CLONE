@@ -1,4 +1,3 @@
-import React from 'react';
 import '../../pages/Form/Form.scss';
 import './AddAvatarButton.scss';
 

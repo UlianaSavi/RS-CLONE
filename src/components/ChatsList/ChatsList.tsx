@@ -1,4 +1,3 @@
-import React from 'react';
 import ChatPreview from '../ChatPreview/ChatPreview';
 import './ChastList.scss';
 

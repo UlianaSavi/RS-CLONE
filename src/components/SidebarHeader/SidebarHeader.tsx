@@ -1,4 +1,3 @@
-import React from 'react';
 import BurgerButton from '../BurgerButton/BurgerButton';
 import SearchBar from '../SearchBar/SearchBar';
 import './SidebarHeader.scss';

@@ -1,6 +1,5 @@
-import React from 'react';
 import './SearchBar.scss';
-import { SearchIcon } from '../../assets/icons/search-icon';
+import { SearchIcon } from '../../assets/icons/icons';
 import { addSelected, removeSelected } from '../../hooks/search';
 
 function SearchBar() {
