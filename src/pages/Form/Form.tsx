@@ -4,14 +4,17 @@ import FormInput from '../../components/FormInput/FormInput';
 import './Form.scss';
 
 interface FormProps {
-  mode: 'login-email' | 'login-phone';
+  mode: 'login-email' | 'login-phone' | 'register-phone' | 'register-email';
 }
 
 function Form({ mode }: FormProps) {
   const data = {
     'login-phone': {
       title: 'Please confirm your country code and enter your phone number.',
-      buttonText: 'LOG IN BY EMAIL',
+      changeProviderButtonText: 'LOG IN BY EMAIL',
+      changeModeButtonText: 'SIGN UP',
+      altLoginRoute: '/login-email',
+      registrationRoute: '/register-phone',
       inputs:
   <>
     <FormInput type="text" id="country" label="Country" value="Russia" />
@@ -20,9 +23,37 @@ function Form({ mode }: FormProps) {
     },
     'login-email': {
       title: 'Please enter your email and password.',
-      buttonText: 'LOG IN BY PHONE NUMBER',
+      changeProviderButtonText: 'LOG IN BY PHONE NUMBER',
+      changeModeButtonText: 'SIGN UP',
+      altLoginRoute: '/',
+      registrationRoute: '/register-email',
       inputs:
   <>
+    <FormInput type="email" id="email" label="Email" value="" />
+    <FormInput type="password" id="password" label="Password" value="" />
+  </>,
+    },
+    'register-phone': {
+      title: 'Please confirm your country code and enter your phone number.',
+      changeProviderButtonText: 'REGISTER BY EMAIL',
+      changeModeButtonText: 'SIGN IN',
+      altLoginRoute: '/register-email',
+      registrationRoute: '/',
+      inputs:
+  <>
+    <FormInput type="text" id="country" label="Country" value="Russia" />
+    <FormInput type="text" id="phoneNumber" label="Your phone number" value="+7" />
+  </>,
+    },
+    'register-email': {
+      title: 'Please enter your name, email and password.',
+      changeProviderButtonText: 'REGISTER BY PHONE NUMBER',
+      changeModeButtonText: 'SIGN IN',
+      altLoginRoute: '/register-phone',
+      registrationRoute: '/login-email',
+      inputs:
+  <>
+    <FormInput type="text" id="name" label="Name" value="" />
     <FormInput type="email" id="email" label="Email" value="" />
     <FormInput type="password" id="password" label="Password" value="" />
   </>,
@@ -40,8 +71,11 @@ function Form({ mode }: FormProps) {
           <Link className="form__button" to="/messenger">
             NEXT
           </Link>
-          <Link className="form__button form__button_outline" to="/login">
-            {data[mode].buttonText}
+          <Link className="form__button form__button_outline" to={data[mode].altLoginRoute}>
+            {data[mode].changeProviderButtonText}
+          </Link>
+          <Link className="form__button form__button_outline" to={data[mode].registrationRoute}>
+            {data[mode].changeModeButtonText}
           </Link>
         </form>
       </div>
