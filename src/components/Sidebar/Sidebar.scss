@@ -1,6 +1,7 @@
 @import "../../styles/variables";
 
 .sidebar {
-  width: 420px;
+  width: 100%;
+  max-width: 420px;
   background-color: $grey-main;
 }

@@ -1,9 +1,21 @@
+@import "../../styles/variables";
+
 #popap {
-    display: none;
+    position: absolute;
+    top: 53px;
+    left: 15px;
+
+    width: 100%;
+    max-width: 250px;
+
     visibility: hidden;
 
+    background: $grey-main;
+    box-shadow: 0px 0px 5px 2px rgb(0 0 0 / 22%);
+    transition: linear .15s;
+
     &.active {
-        display: block;
         visibility: visible;
+        transition: linear .15s;
     }
 }

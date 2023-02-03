@@ -1,4 +1,6 @@
 .container {
+  box-sizing: border-box;
+
   background-color: $grey-dark;
   min-height: 100vh;
   display: flex;

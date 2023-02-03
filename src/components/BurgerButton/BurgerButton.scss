@@ -32,13 +32,13 @@
     height: 40px;
     border-radius: 50%;
     background: none;
-    transition: linear 0.15s;
+    transition: linear .15s;
     z-index: 1;
   }
 
   &:hover {
     &::before {
-      transition: linear 0.15s;
+      transition: linear .15s;
       background: $grey-hover;
     }
   }
