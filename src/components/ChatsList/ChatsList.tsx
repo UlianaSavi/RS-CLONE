@@ -1,9 +1,9 @@
 import ChatPreview from '../ChatPreview/ChatPreview';
-import './ChatList.scss';
+import './ChatsList.scss';
 
-function ChatList() {
+function ChatsList() {
   return (
-    <div className="chat-list">
+    <div className="chats-list">
       <ChatPreview status="active" />
       <ChatPreview status="inactive" />
       <ChatPreview status="inactive" />
@@ -13,4 +13,4 @@ function ChatList() {
   );
 }
 
-export default ChatList;
+export default ChatsList;
