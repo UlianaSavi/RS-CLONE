@@ -1,11 +1,14 @@
 import React from 'react';
 import './SearchBar.scss';
+import { SearchIcon } from '../../assets/icons/search-icon';
 import { addSelected, removeSelected } from '../../hooks/search';
 
 function SearchBar() {
   return (
     <div className="search" id="search">
-      <img src="../../assets/icons/search-icon.svg" alt="Search icon" className="search__icon" />
+      <div className="search__icon" id="searchSvg">
+        <SearchIcon />
+      </div>
       <input
         className="search__input"
         id="search__input"

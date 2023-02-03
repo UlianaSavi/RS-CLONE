@@ -3,11 +3,14 @@
 // из этого файла данный функционал может быть переменщен в более подходящее место
 
 const inputParent = document.getElementById('search');
+const svgIcon = document.getElementById('search-svg');
 
 export const addSelected = () => {
   inputParent?.classList.add('selected');
+  svgIcon?.classList.add('selected');
 };
 
 export const removeSelected = () => {
   inputParent?.classList.remove('selected');
+  svgIcon?.classList.remove('selected');
 };

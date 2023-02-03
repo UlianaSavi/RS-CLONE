@@ -1,5 +1,6 @@
 @import "../../styles/variables";
 
+$animate-type: linear 0.15s;
 
 .search {
   position: relative;
@@ -9,48 +10,61 @@
   height: 42px;
   
   background-color: $grey-dark;
-  border: 0.5px solid $grey-secondary;
+  border: 0.5px solid $grey-hover;
   border-radius: 22px;
   color: $text-color-white;
+
   cursor: text;
+  transition: $animate-type;
 }
 
 .search:hover {
-  border: 0.5px solid $grey-main;
+  border: 0.5px solid $grey-lite;
 }
 
 .search__input {
   position: absolute;
-  top: 7px;
+  top: 2px;
   left: 45px;
 
   width: 100%;
   max-width: 260px;
-  height: 25px;
+  height: 35px;
 
   background: none;
   border: none;
   outline: none;
   font-size: 14px;
-  color: white;
+  color: $text-color-white;
 
   &::placeholder {
-    color: $grey-main;
+    color: $grey-secondary;
   }
 }
 
-.search__icon {
+#search-svg {
   position: absolute;
+  bottom: 0;
   left: 14px;
-  bottom: 10px;
 
-  width: 25px;
+  height: 100%;
+  width: 100%;
+  max-width: 25px;
+
+  &.selected {
+    border: none;
+    fill: $accent-color;
+    transition: $animate-type;
+  }
+  transition: $animate-type;
 }
 
 .selected {
-  border: 0.5px solid $accent-color;
+  border: 1px solid $accent-color;
+  transition: $animate-type;
 }
 
 .selected:hover {
-  border: 0.5px solid $accent-color;
+  border: 1px solid $accent-color;
 }
+
