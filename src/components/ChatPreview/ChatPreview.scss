@@ -1,24 +1,71 @@
 @import "../../styles/variables";
 
 .chat-preview {
-  padding: 8px;
-  display: flex;
-  gap: 10px;
-  color: #fff;
-  cursor: pointer;
-  &:hover {
-    background-color: $accent-color;
-  }
+  width: 100%;
+  max-width: 380px;
 
-  &_active {
-    background-color: $accent-color;
+  padding: 8px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+  border-radius: 10px;
+  color: $text-color-white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $grey-hover;
   }
 
   &__title {
-    font-weight: bold;
+    width: 100%;
+    
+
+    text-overflow: ellipsis;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    white-space: nowrap;
   }
 
   &__last-message {
-    font-size: 18px;
+    width: 100%;
+    max-width: 250px;
+
+    text-overflow: ellipsis;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $grey-secondary;
+
+    overflow: hidden;
+    white-space: nowrap;
   }
+
+  &__messenge-time{
+    margin-bottom: 5px;
+    
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: $grey-secondary;
+  }
+
+  &__messenge-num {
+    padding: 2px;
+
+    background: $grey-lite;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .avatar {
+    margin-right: 10px;
+  }
+
+}
+
+.chat-preview-wrapper {
+  display: flex;
+  text-align: left;
 }

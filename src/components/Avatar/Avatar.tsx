@@ -3,7 +3,7 @@ import './Avatar.scss';
 function Avatar() {
   return (
     <img
-      src="https://as2.ftcdn.net/v2/jpg/01/67/38/11/1000_F_167381175_zXPLq5Mw0X5BOmtUzWPBRklbLBC7YI1O.jpg"
+      src="https://i.pinimg.com/564x/9e/c3/9f/9ec39f56b00c97ab0ef3a99817b27f87.jpg"
       alt="User avatar"
       className="avatar"
     />
