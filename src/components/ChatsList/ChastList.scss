@@ -1,0 +1,23 @@
+@import "../../styles/variables";
+
+.chat-list {
+    width: 100%;
+    max-width: 400px;
+    height: 85%;
+
+    overflow-y: scroll;
+    // overflow-x: hidden;
+    padding: 10px;
+
+    background: $grey-main;
+
+    &::-webkit-scrollbar {
+        width: 100%;
+        height: 4px;
+        background: $grey-main;
+    }
+
+      &::-webkit-scrollbar-thumb {
+          background: $grey-secondary;
+      }
+}

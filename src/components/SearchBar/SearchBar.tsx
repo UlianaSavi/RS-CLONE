@@ -1,12 +1,21 @@
 import './SearchBar.scss';
+import { SearchIcon } from '../../assets/icons/icons';
+import { addSelected, removeSelected } from '../../hooks/search';
 
 function SearchBar() {
   return (
-    <input
-      className="search-bar"
-      type="text"
-      placeholder="Search..."
-    />
+    <div className="search" id="search">
+      <div className="search__icon" id="searchSvg">
+        <SearchIcon />
+      </div>
+      <input
+        className="search__input"
+        onFocus={addSelected}
+        onBlur={removeSelected}
+        type="text"
+        placeholder="Search..."
+      />
+    </div>
   );
 }
 

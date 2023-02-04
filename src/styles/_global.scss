@@ -1,9 +1,11 @@
 .container {
+  box-sizing: border-box;
+
   background-color: $grey-dark;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: $text-color;
+  color: $text-color-white;
 }
