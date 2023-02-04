@@ -8,7 +8,7 @@ function ChatPreview() {
         <Avatar />
         <div className="chat-preview-text">
           <div className="chat-preview__title">Sal Fisher👻</div>
-          <div className="chat-preview__last-message">Have your seen her t...</div>
+          <div className="chat-preview__last-message">It was just a joke, but now I need a very long text here</div>
         </div>
       </div>
       <div className="chat-preview__info">

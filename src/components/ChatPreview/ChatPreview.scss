@@ -19,16 +19,26 @@
   }
 
   &__title {
+    width: 100%;
+    
+
+    text-overflow: ellipsis;
     margin-bottom: 8px;
     font-size: 1rem;
-    
+    white-space: nowrap;
   }
 
   &__last-message {
+    width: 100%;
+    max-width: 250px;
+
+    text-overflow: ellipsis;
     font-size: 1rem;
     font-weight: 400;
     color: $grey-secondary;
-    
+
+    overflow: hidden;
+    white-space: nowrap;
   }
 
   &__messenge-time{
