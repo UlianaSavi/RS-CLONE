@@ -1,7 +1,7 @@
 import ChatsFolderItem from '../ChatsFolderItem/ChatsFolderItem';
-import './ChatsFolders.scss';
+import './FoldersTabs.scss';
 
-function ChatsFolder() {
+function FoldersTabs() {
   return (
     <div className="folders-tabs">
       <div className="folders-tabs__wrapper">
@@ -16,4 +16,4 @@ function ChatsFolder() {
   );
 }
 
-export default ChatsFolder;
+export default FoldersTabs;
