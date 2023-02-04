@@ -1,5 +1,5 @@
-import { SettingsIcon } from "../../assets/icons/icons";
-import "./SettingsMenuItem.scss";
+import { SettingsIcon } from '../../assets/icons/icons';
+import './SettingsMenuItem.scss';
 
 function SettingsMenuItem() {
   return (
