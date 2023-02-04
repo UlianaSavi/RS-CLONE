@@ -18,11 +18,6 @@
     background-color: $grey-hover;
   }
 
-  &-wrapper {
-    display: flex;
-    text-align: left;
-  }
-
   &__title {
     margin-bottom: 8px;
     font-size: 1rem;
@@ -58,4 +53,9 @@
     margin-right: 10px;
   }
 
+}
+
+.chat-preview-wrapper {
+  display: flex;
+  text-align: left;
 }
