@@ -1,48 +1,84 @@
 import { Link } from 'react-router-dom';
-import AddAvatarButton from '../../components/AddAvatarButton/AddAvatarButton';
+import telegramLogo from '../../assets/img/telegramLogo.svg';
+import FormInput from '../../components/FormInput/FormInput';
 import './Form.scss';
 
 interface FormProps {
-  mode: 'register' | 'login';
+  mode: 'login-email' | 'login-phone' | 'register-phone' | 'register-email';
 }
 
 function Form({ mode }: FormProps) {
   const data = {
-    register: {
-      title: 'Register',
-      buttonText: 'Sign up',
-      footerText: 'Do you have an account?',
-      footerLink: '/login',
-      footerLinkText: 'Login',
+    'login-phone': {
+      title: 'Please confirm your country code and enter your phone number.',
+      changeProviderButtonText: 'LOG IN BY EMAIL',
+      changeModeButtonText: 'SIGN UP',
+      altLoginRoute: '/login-email',
+      registrationRoute: '/register-phone',
+      inputs:
+  <>
+    <FormInput type="text" id="country" label="Country" value="" />
+    <FormInput type="text" id="phoneNumber" label="Your phone number" value="" />
+  </>,
     },
-    login: {
-      title: 'Login',
-      buttonText: 'Sign in',
-      footerText: 'Don\'t you have an accoint?',
-      footerLink: '/',
-      footerLinkText: 'Register',
+    'login-email': {
+      title: 'Please enter your email and password.',
+      changeProviderButtonText: 'LOG IN BY PHONE NUMBER',
+      changeModeButtonText: 'SIGN UP',
+      altLoginRoute: '/',
+      registrationRoute: '/register-email',
+      inputs:
+  <>
+    <FormInput type="email" id="email" label="Email" value="" />
+    <FormInput type="password" id="password" label="Password" value="" />
+  </>,
+    },
+    'register-phone': {
+      title: 'Please confirm your country code and enter your phone number.',
+      changeProviderButtonText: 'REGISTER BY EMAIL',
+      changeModeButtonText: 'SIGN IN',
+      altLoginRoute: '/register-email',
+      registrationRoute: '/',
+      inputs:
+  <>
+    <FormInput type="text" id="country" label="Country" value="" />
+    <FormInput type="text" id="phoneNumber" label="Your phone number" value="" />
+  </>,
+    },
+    'register-email': {
+      title: 'Please enter your name, email and password.',
+      changeProviderButtonText: 'REGISTER BY PHONE NUMBER',
+      changeModeButtonText: 'SIGN IN',
+      altLoginRoute: '/register-phone',
+      registrationRoute: '/login-email',
+      inputs:
+  <>
+    <FormInput type="text" id="name" label="Name" value="" />
+    <FormInput type="email" id="email" label="Email" value="" />
+    <FormInput type="password" id="password" label="Password" value="" />
+  </>,
     },
   };
 
   return (
-    <div className="form">
-      <h1 className="form__logo">Super Chat</h1>
-      <h2 className="form__title">{data[mode].title}</h2>
-      <form className="form__inputs">
-        {mode === 'register' ? <input className="form__input" type="text" placeholder="Name" /> : null}
-        <input className="form__input" type="email" placeholder="Email" />
-        <input className="form__input" type="password" placeholder="Password" />
-        {mode === 'register' ? <AddAvatarButton /> : null}
-        <Link className="form__submit-btn" to="/messenger">
-          {data[mode].buttonText}
-        </Link>
-      </form>
-      <p className="form__footer">
-        {data[mode].footerText}
-        <Link className="form__link" to={data[mode].footerLink}>
-          {data[mode].footerLinkText}
-        </Link>
-      </p>
+    <div className="form__background">
+      <div className="form">
+        <img className="form__logo" src={telegramLogo} alt="SVG logo" />
+        <h1 className="form__title">Telegram</h1>
+        <h2 className="form__subtitle">{data[mode].title}</h2>
+        <form className="form__inputs">
+          {data[mode].inputs}
+          <Link className="form__button" to="/messenger">
+            NEXT
+          </Link>
+          <Link className="form__button form__button_outline" to={data[mode].altLoginRoute}>
+            {data[mode].changeProviderButtonText}
+          </Link>
+          <Link className="form__button form__button_outline" to={data[mode].registrationRoute}>
+            {data[mode].changeModeButtonText}
+          </Link>
+        </form>
+      </div>
     </div>
   );
 }
