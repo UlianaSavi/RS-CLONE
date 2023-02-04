@@ -10,7 +10,6 @@ function SearchBar() {
       </div>
       <input
         className="search__input"
-        id="search__input"
         onFocus={addSelected}
         onBlur={removeSelected}
         type="text"
