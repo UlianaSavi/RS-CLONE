@@ -1,5 +1,5 @@
 import TopPanel from '../TopPanel/TopPanel';
-import ChatInput from '../ChatInput/ChatInput';
+import MessageInput from '../MessageInput/MessageInput';
 import ChatWindow from '../ChatWindow/ChatWindow';
 import './Chat.scss';
 
@@ -8,7 +8,7 @@ function Chat() {
     <div className="chat">
       <TopPanel />
       <ChatWindow />
-      <ChatInput />
+      <MessageInput />
     </div>
   );
 }

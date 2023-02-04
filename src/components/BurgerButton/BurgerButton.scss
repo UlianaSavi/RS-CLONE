@@ -1,25 +1,45 @@
 @import "../../styles/variables";
 
 .burger-button {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 24px;
-  height: 24px;
-  padding: 6px 3px;
+
   border: none;
-  background-color: $grey-main;
-  border-radius: 12px;
-  transition: 0.2s all;
+  background: none;
+
   cursor: pointer;
 
   &__line {
-    width: 100%;
+    width: 20px;
     height: 2px;
-    background-color: $grey-lite;
+
+    margin-bottom: 4px;
+
+    background: $grey-lite;
+    z-index: 2;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: -4px;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: none;
+    transition: linear .15s;
+    z-index: 1;
   }
 
   &:hover {
-    background-color: #4ca1aa;
+    &::before {
+      transition: linear .15s;
+      background: $grey-hover;
+    }
   }
 }
