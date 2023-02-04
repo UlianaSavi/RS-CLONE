@@ -3,7 +3,8 @@
 .sidebar {
   width: 100%;
   max-width: 420px;
-  height: 100vh;
+  height: 100%;
+  overflow: hidden;
 
   background-color: $grey-main;
 
