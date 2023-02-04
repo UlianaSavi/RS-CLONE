@@ -1,7 +1,7 @@
 @import "../../styles/variables";
 
 .form {
-  padding: 25px;
+  padding: 0 25px 0;
   width: 100%;
   max-width: 376px;
 
@@ -66,7 +66,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     width: 100vw;
     
     background-color: $grey-main;
