@@ -1,15 +1,10 @@
 import SettingsMenuItem from '../SettingsMenuItem/SettingsMenuItem';
 import './SettingsMenu.scss';
 
-// Пока не знаю, куда лучше выносить логику, поэтому для удобства дальнейшего рефактора это здесь
-const closePopup = () => {
-  const popup = document.getElementById('popup');
-  popup?.classList.remove('active');
-};
-
-function SettingsMenu() {
+function SettingsMenu(props: { isOpen: boolean, onClose: () => void }) {
+  const { isOpen, onClose } = props;
   return (
-    <nav className="popup" id="popup" onMouseLeave={closePopup}>
+    <nav className={isOpen ? 'popup active' : 'popup'} id="popup" onMouseLeave={() => onClose()}>
       <SettingsMenuItem />
       <SettingsMenuItem />
       <SettingsMenuItem />

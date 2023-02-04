@@ -2,6 +2,7 @@ import ChatInfo from '../ChatInfo/ChatInfo';
 import './TopPanel.scss';
 import TopPanelTools from '../TopPanelTools/TopPanelTools';
 import TopPanelPinnedMessage from '../TopPanelPinnedMessage/TopPanelPinnedMessage';
+// import TopPanelSettings from '../TopPanelSettings/TopPanelSettings';
 
 export default function TopPanel() {
   return (
@@ -9,6 +10,7 @@ export default function TopPanel() {
       <ChatInfo />
       <TopPanelPinnedMessage />
       <TopPanelTools />
+      {/* <TopPanelSettings /> */}
     </div>
   );
 }
