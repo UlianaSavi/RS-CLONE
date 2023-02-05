@@ -3,15 +3,16 @@ import './PopupMenuItem.scss';
 
 interface PopupMenuItemProps {
   label: string,
-  icon: JSX.Element
+  icon: JSX.Element,
+  handleClick: () => void
 }
 
-function PopupMenuItem({ label, icon }: PopupMenuItemProps) {
+function PopupMenuItem({ label, icon, handleClick }: PopupMenuItemProps) {
   return (
-    <div className="popap-item-wrapper">
+    <button type="button" className="popup-item" onClick={handleClick}>
       {icon}
       <span>{label}</span>
-    </div>
+    </button>
   );
 }
 

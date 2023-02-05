@@ -8,10 +8,12 @@ interface AttachPopupProps {
 }
 
 function AttachPopup({ isVisible, handleMouseLeave }: AttachPopupProps) {
+  const click = () => null;
+
   return (
     <nav className={`attach-popup ${isVisible ? 'active' : ''}`} onMouseLeave={handleMouseLeave}>
-      <PopupMenuItem label="Photo" icon={<SettingsIcon />} />
-      <PopupMenuItem label="Document" icon={<SettingsIcon />} />
+      <PopupMenuItem label="Photo" icon={<SettingsIcon />} handleClick={click} />
+      <PopupMenuItem label="Document" icon={<SettingsIcon />} handleClick={click} />
     </nav>
   );
 }
