@@ -1,4 +1,3 @@
-import './TopPanelSettingsItem.scss';
 import { SettingsIcon } from '../../assets/icons/icons';
 
 export default function TopPanelSettingsItem() {
