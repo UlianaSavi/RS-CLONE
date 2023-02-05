@@ -1,11 +1,67 @@
 @import "../../styles/variables";
 
 .chat-window {
-  padding: 5px;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: end;
+  padding: 0.5rem 0;
+  // padding: 5px;
+  // flex-direction: column;
+  // gap: 15px;
+  // overflow: auto;
+  // height: 100%;
+
+  background-color: $grey-dark;
+  background-image: url(../../assets/chat-bg/bg-house-theme.png);
+  background-size: 500px;
+
+  &__wrapper {
+    width: 75%;
+  }
+}
+
+.bubbles-date-group {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  flex-grow: 1;
-  overflow: auto;
-  background-color: $grey-dark;
+  gap: 0.6rem;
+
+  &__date {
+    display: block;
+    align-self: center;
+    padding: 0.28125rem 0.625rem;
+
+    background-color: rgba($accent-color, 0.5);
+    border-radius: 0.875rem;
+  }
+
+  &__messages-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  &__user-message-wrapper {
+    display: flex;
+    align-items: end;
+  }
+
+  &__user-message-container {
+    background-color: $accent-color;
+    border-radius: 12px 6px 6px 12px;
+    margin-left: auto;
+    box-shadow: 0 1px 2px 0 rgb(16 35 47 / 15%);
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 100%;
+    min-width: 56px;
+    padding: 6px 8px 6px 10px;
+  }
+
+  &__message-triangle {
+    fill: yellow;
+    width: 60px;
+    height: 25px;
+    align-self: flex-end;
+  }
 }
