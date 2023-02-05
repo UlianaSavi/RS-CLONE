@@ -1,6 +1,51 @@
 @import "../../styles/variables";
 
 .top-panel-pinned {
+  &__wrapper {
+    display: flex;
+    margin-left: 1rem;
+  }
+
+  &__pinned-messages {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__left-border {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__line {
+    height: 100%;
+
+    fill: rgba($accent-color, 0.3);
+
+    &.active {
+      fill: $accent-color;
+    }
+  }
+
+  &__message-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 20vw;
+    width: 100%;
+
+    overflow: hidden;
+  }
+
+  &__pinned-message-text {
+    color: $accent-color;
+  }
+
+  &__message {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
   &__btn {
     display: flex;
     align-items: center;
