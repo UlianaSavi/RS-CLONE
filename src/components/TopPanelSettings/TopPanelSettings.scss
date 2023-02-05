@@ -9,6 +9,7 @@
   flex-direction: column;
   padding: 1rem;
 
+  opacity: 0;
   visibility: hidden;
 
   background: $grey-main;
@@ -19,7 +20,9 @@
   transform-origin: bottom right;
 
   &.active {
+    opacity: 1;
     visibility: visible;
+
     transition: .2s ease-in-out;
     transform: scaleX(1);
     transform-origin: top right;

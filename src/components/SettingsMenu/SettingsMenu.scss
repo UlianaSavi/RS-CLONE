@@ -2,24 +2,28 @@
 
 #popup {
   position: absolute;
-  top: 65px;
-  left: -28px;
+  top: 63px;
+  left: 28px;
 
-  width: 100%;
-  max-width: 250px;
-  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 
+  opacity: 0;
   visibility: hidden;
 
   background: $grey-main;
   box-shadow: 0px 0px 5px 2px rgb(0 0 0 / 22%);
-  transition: linear 0.15s;
+
+  transition: .2s ease-in-out;
+  transform-origin: bottom left;
 
   &.active {
-    top: 65px;
-    left: 15px;
-
+    opacity: 1;
     visibility: visible;
-    transition: linear 0.15s;
+
+    transition: .2s ease-in-out;
+    transform: scaleX(1);
+    transform-origin: top left;
   }
 }
