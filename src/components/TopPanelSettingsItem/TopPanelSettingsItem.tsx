@@ -1,7 +1,6 @@
 import { SettingsIcon } from '../../assets/icons/icons';
-import './SettingsMenuItem.scss';
 
-function SettingsMenuItem() {
+export default function TopPanelSettingsItem() {
   return (
     <div className="popup-item-wrapper">
       <SettingsIcon />
@@ -9,5 +8,3 @@ function SettingsMenuItem() {
     </div>
   );
 }
-
-export default SettingsMenuItem;

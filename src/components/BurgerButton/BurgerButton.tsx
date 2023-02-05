@@ -1,14 +1,9 @@
 import './BurgerButton.scss';
 
-// Пока не знаю, куда лучше выносить логику, поэтому для удобства дальнейшего рефактора это здесь
-const togglePopap = () => {
-  const popap = document.getElementById('popap');
-  popap?.classList.toggle('active');
-};
-
-function BurgerButton() {
+function BurgerButton(props: {callback: () => void }) {
+  const { callback } = props;
   return (
-    <button type="button" className="burger-button" onClick={togglePopap}>
+    <button type="button" className="burger-button" onClick={() => callback()}>
       <div className="burger-button__line" />
       <div className="burger-button__line" />
       <div className="burger-button__line" />
