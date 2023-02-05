@@ -1,0 +1,20 @@
+@import "../../styles/variables";
+
+.emotion-popup {
+    position: absolute;
+    bottom: 63px;
+    left: 0;
+
+    padding: 8px;
+
+    background: $grey-main;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 2px rgb(0 0 0 / 22%);
+    opacity: 0;
+
+    transition: linear .2s;
+
+    &.active {
+        opacity: 100%;
+    }
+}
