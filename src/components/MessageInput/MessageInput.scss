@@ -3,7 +3,8 @@
 .message-input {
   display: flex;
   gap: 10px;
-  width: 630px;
+  width: 90%;
+  max-width: 700px;
   margin: 0 auto;
   padding: 5px;
   padding-bottom: 20px;
@@ -58,7 +59,7 @@
     }
   }
 
-  &__send-voice-btn {
+  &__send-btn {
     display: flex;
     justify-content: center;
     align-items: center;
