@@ -1,9 +1,9 @@
 @import "../../styles/variables";
 
-#popup {
+#top-panel-popup {
   position: absolute;
   top: 63px;
-  left: 28px;
+  right: 20px;
 
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
   border-radius: 10px;
 
   transition: .2s ease-in-out;
-  transform-origin: bottom left;
+  transform-origin: bottom right;
 
   &.active {
     opacity: 1;
@@ -25,6 +25,6 @@
 
     transition: .2s ease-in-out;
     transform: scaleX(1);
-    transform-origin: top left;
+    transform-origin: top right;
   }
 }
