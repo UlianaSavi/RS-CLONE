@@ -1,11 +1,11 @@
 import './TopPanelSettingsItem.scss';
-// import { SettingsIcon } from '../../assets/icons/icons';
+import { SettingsIcon } from '../../assets/icons/icons';
 
-// export default function TopPanelSettingsItem() {
-//   return (
-//     <div className="popup-item-wrapper">
-//       <SettingsIcon />
-//       <span>Settings</span>
-//     </div>
-//   );
-// }
+export default function TopPanelSettingsItem() {
+  return (
+    <div className="popup-item-wrapper">
+      <SettingsIcon />
+      <span>Settings</span>
+    </div>
+  );
+}

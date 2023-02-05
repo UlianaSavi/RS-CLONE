@@ -1,16 +1,15 @@
 import './TopPanelSettings.scss';
-// import { closePopup } from '../../hooks/popup';
-// import TopPanelSettingsItem from '../TopPanelSettingsItem/TopPanelSettingsItem';
+import TopPanelSettingsItem from '../TopPanelSettingsItem/TopPanelSettingsItem';
 
-// export default function TopPanelSettings() {
-//   const popup = document.getElementById('top-panel-popup');
-//   return (
-//     <nav className="top-panel-popup" id="top-panel-popup" onMouseLeave={() => closePopup(popup)}>
-//       <TopPanelSettingsItem />
-//       <TopPanelSettingsItem />
-//       <TopPanelSettingsItem />
-//       <TopPanelSettingsItem />
-//       <TopPanelSettingsItem />
-//     </nav>
-//   );
-// }
+export default function TopPanelSettings(props: { isOpen: boolean, onClose: () => void }) {
+  const { isOpen, onClose } = props;
+  return (
+    <nav className={isOpen ? 'top-panel-popup active' : 'top-panel-popup'} id="top-panel-popup" onMouseLeave={() => onClose()}>
+      <TopPanelSettingsItem />
+      <TopPanelSettingsItem />
+      <TopPanelSettingsItem />
+      <TopPanelSettingsItem />
+      <TopPanelSettingsItem />
+    </nav>
+  );
+}

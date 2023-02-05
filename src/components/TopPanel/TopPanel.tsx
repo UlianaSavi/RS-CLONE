@@ -2,15 +2,14 @@ import ChatInfo from '../ChatInfo/ChatInfo';
 import './TopPanel.scss';
 import TopPanelTools from '../TopPanelTools/TopPanelTools';
 import TopPanelPinnedMessage from '../TopPanelPinnedMessage/TopPanelPinnedMessage';
-// import TopPanelSettings from '../TopPanelSettings/TopPanelSettings';
 
-export default function TopPanel() {
+export default function TopPanel(props: {callback: () => void}) {
+  const { callback } = props;
   return (
     <div className="top-panel">
       <ChatInfo />
       <TopPanelPinnedMessage />
-      <TopPanelTools />
-      {/* <TopPanelSettings /> */}
+      <TopPanelTools callback={callback} />
     </div>
   );
 }
