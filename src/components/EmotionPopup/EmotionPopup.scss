@@ -4,6 +4,7 @@
     position: absolute;
     bottom: 63px;
     left: 0;
+    z-index: -1;
 
     padding: 8px;
 
@@ -15,6 +16,7 @@
     transition: linear .2s;
 
     &.active {
+        z-index: 1;
         opacity: 100%;
     }
 }
