@@ -1,5 +1,5 @@
 import './EmotionPopup.scss';
-import smileIcon from '../../assets/icons/smile-icon.png';
+import Emoji from '../Emoji/Emoji';
 
 interface EmotionPopupProps {
   isVisible: boolean,
@@ -7,9 +7,12 @@ interface EmotionPopupProps {
 }
 
 function EmotionPopup({ isVisible, handleMouseLeave }: EmotionPopupProps) {
+  const elements = Array.from({ length: 24 }, (_, index) => index);
+  const emojiArr = elements.map((element) => <Emoji key={element} />);
+
   return (
     <div className={`emotion-popup ${isVisible ? 'active' : ''}`} onMouseLeave={handleMouseLeave}>
-      <img src={smileIcon} alt="smile" height={150} width={150} />
+      {emojiArr}
     </div>
   );
 }

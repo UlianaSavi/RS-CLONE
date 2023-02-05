@@ -1,0 +1,14 @@
+@import "../../styles/variables";
+
+.emoji {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+
+    &:hover {
+        background: $grey-hover;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+}
