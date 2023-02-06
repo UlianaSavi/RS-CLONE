@@ -41,7 +41,8 @@
   }
 
   &__messenge-time{
-    margin-bottom: 5px;
+    margin-top: 4px;
+    margin-bottom: 8px;
     
     font-size: 0.9rem;
     font-weight: 400;
@@ -85,5 +86,6 @@
 
 .chat-preview-wrapper {
   display: flex;
+  align-items: center;
   text-align: left;
 }
