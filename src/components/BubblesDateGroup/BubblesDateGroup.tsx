@@ -1,10 +1,11 @@
 import { ReactComponent as CheckMark } from '../../assets/icons/check-solid.svg';
+import BubblesDate from '../BubblesDate/BubblesDate';
 import './BubblesDateGroup.scss';
 
 export default function BubblesDateGroup() {
   return (
     <section className="bubbles-date-group">
-      <div className="bubbles-date-group__date">Today</div>
+      <BubblesDate />
       <div className="bubbles-date-group__messages-wrapper">
         <div className="bubbles-date-group__user-messages-wrapper">
           <div className="bubbles-date-group__user-message">
