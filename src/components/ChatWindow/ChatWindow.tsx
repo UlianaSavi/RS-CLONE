@@ -8,19 +8,59 @@ function ChatWindow() {
         <section className="bubbles-date-group">
           <div className="bubbles-date-group__date">Today</div>
           <div className="bubbles-date-group__messages-wrapper">
-            <div className="bubbles-date-group__user-message-wrapper">
-              <div className="bubbles-date-group__user-message">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas totam aspernatur quis earum, suscipit mollitia incidunt facere molestiae ducimus quos iste illo harum corrupti eveniet magnam delectus dicta? Voluptatibus, a.</div>
-              <div className="bubbles-date-group__user-message">Lorem ipsum</div>
+            <div className="bubbles-date-group__user-messages-wrapper">
+              <div className="bubbles-date-group__user-message">
+                <span className="bubbles-date-group__message">Lorem ipsum dolor sit amet consectetur, adipisicing elit. At animi dignissimos inventore corporis, cupiditate cum delectus odit. Optio inventore minima hic facilis nobis molestias recusandae, laboriosam consequatur quo, cum ipsum?  </span>
+                <span className="bubbles-date-group__time">
+                  00:23
+                </span>
+              </div>
+              <div className="bubbles-date-group__user-message">
+                <span className="bubbles-date-group__message">
+                  Lorem
+                </span>
+                <span className="bubbles-date-group__time">
+                  00:23
+                </span>
+              </div>
             </div>
-            <div className="bubbles-date-group__user-message-wrapper">
-              <div className="bubbles-date-group__user-message another-user">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas totam aspernatur quis earum, suscipit mollitia incidunt facere molestiae ducimus quos iste illo harum corrupti eveniet magnam delectus dicta? Voluptatibus, a.</div>
-              <div className="bubbles-date-group__user-message another-user">Lorem</div>
+            <div className="bubbles-date-group__user-messages-wrapper">
+              <div className="bubbles-date-group__user-message another-user">
+                <span className="bubbles-date-group__message">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, distin
+                </span>
+                <span className="bubbles-date-group__time">
+                  00:23
+                </span>
+              </div>
+              <div className="bubbles-date-group__user-message another-user">
+                <span className="bubbles-date-group__message">
+                  Lorem
+                </span>
+                <span className="bubbles-date-group__time">
+                  00:23
+                </span>
+              </div>
             </div>
-            <div className="bubbles-date-group__user-message-wrapper">
-              <div className="bubbles-date-group__user-message">Lorem ipsum</div>
+            <div className="bubbles-date-group__user-messages-wrapper">
+              <div className="bubbles-date-group__user-message">
+                <span className="bubbles-date-group__message">
+                  Lorem ipsum
+                </span>
+                <span className="bubbles-date-group__time">
+                  00:23
+                </span>
+              </div>
             </div>
-            <div className="bubbles-date-group__user-message-wrapper">
-              <div className="bubbles-date-group__user-message another-user">Lorem</div>
+            <div className="bubbles-date-group__user-messages-wrapper">
+              <div className="bubbles-date-group__user-message another-user">
+                <span className="bubbles-date-group__message">
+                  Lorem
+                </span>
+                <span className="bubbles-date-group__time">
+                  00:23
+                </span>
+              </div>
             </div>
           </div>
         </section>

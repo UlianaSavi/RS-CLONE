@@ -36,7 +36,7 @@
     gap: 0.6rem;
   }
 
-  &__user-message-wrapper {
+  &__user-messages-wrapper {
     display: flex;
     align-items: flex-end;
     flex-direction: column;
@@ -47,14 +47,22 @@
     position: relative;
 
     display: flex;
-    flex-direction: column-reverse;
-    max-width: 100%;
+    flex-direction: column;
+    max-width: 85%;
     min-width: 56px;
     padding: 6px 8px 6px 10px;
 
     background-color: $accent-color;
     border-radius: 12px 6px 0px 12px;
     box-shadow: 0 1px 2px 0 rgb(16 35 47 / 15%);
+
+    .bubbles-date-group__time {
+      font-size: 12px;
+
+      align-self: flex-end;
+
+      color: $text-color-time-out;
+    }
     
 
     &::after {
@@ -78,6 +86,10 @@
 
       background-color: $grey-main;
       border-radius: 6px 12px 12px 0px;
+
+      .bubbles-date-group__time {  
+        color: $text-color-time;
+      }
 
       &::after {
         left: -20px;
