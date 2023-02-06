@@ -8,6 +8,10 @@ const router = createBrowserRouter([
     element: <Form mode="login-phone" />,
   },
   {
+    path: '/code',
+    element: <Form mode="access-code" />,
+  },
+  {
     path: '/login-email',
     element: <Form mode="login-email" />,
   },

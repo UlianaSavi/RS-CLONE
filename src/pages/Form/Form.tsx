@@ -4,7 +4,7 @@ import FormInput from '../../components/FormInput/FormInput';
 import './Form.scss';
 
 interface FormProps {
-  mode: 'login-email' | 'login-phone' | 'register-phone' | 'register-email';
+  mode: 'login-email' | 'login-phone' | 'register-phone' | 'register-email' | 'access-code';
 }
 
 function Form({ mode }: FormProps) {
@@ -58,6 +58,15 @@ function Form({ mode }: FormProps) {
     <FormInput type="password" id="password" label="Password" value="" />
   </>,
     },
+    'access-code': {
+      title: 'We send you a messege with the code',
+      changeProviderButtonText: 'GO BACK',
+      changeModeButtonText: 'ENTER',
+      altLoginRoute: '/access-code',
+      registrationRoute: '/access-code',
+      inputs:
+  <FormInput type="text" id="code" label="Code" value="" />,
+    },
   };
 
   return (
@@ -68,7 +77,7 @@ function Form({ mode }: FormProps) {
         <h2 className="form__subtitle">{data[mode].title}</h2>
         <form className="form__inputs">
           {data[mode].inputs}
-          <Link className="form__button" to="/messenger">
+          <Link className="form__button" to="/code">
             NEXT
           </Link>
           <Link className="form__button form__button_outline" to={data[mode].altLoginRoute}>
