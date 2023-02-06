@@ -16,11 +16,15 @@ function ChatsFolderItem({
 }: ChatsFolderItemProps) {
   const { title, unreadConversations } = data;
 
+  const selectFolder = () => {
+    setActiveIndex(index);
+  };
+
   return (
     <button
       type="button"
       className={`folder-tab ${isActive ? 'active' : ''}`}
-      onClick={() => setActiveIndex(index)}
+      onClick={selectFolder}
     >
       <div className="folder-tab__title">{title}</div>
       <span className="folder-tab__message-count">{unreadConversations}</span>

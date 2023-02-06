@@ -2,25 +2,17 @@ import { useState } from 'react';
 import ChatsFolderItem from '../ChatsFolderItem/ChatsFolderItem';
 import './FoldersTabs.scss';
 
-function FoldersTabs() {
-  const foldersData = [
-    {
-      title: 'All',
-      unreadConversations: 3,
-    },
-    {
-      title: 'Contacts',
-      unreadConversations: 2,
-    },
-    {
-      title: 'Chats',
-      unreadConversations: 1,
-    },
-  ];
+interface FoldersTabsProps {
+  data: {
+    title: string,
+    unreadConversations: number
+  }[],
+}
 
+function FoldersTabs({ data }: FoldersTabsProps) {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const foldersArr = foldersData
+  const foldersArr = data
     .map((folder, index) => (
       <ChatsFolderItem
         key={folder.title}
