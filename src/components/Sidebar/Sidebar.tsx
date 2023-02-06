@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import CreateButton from '../CreateButton/CreateButton';
 import SettingsMenu from '../SettingsMenu/SettingsMenu';
 import SidebarContent from '../SidebarContent/SidebarContent';
 import SidebarHeader from '../SidebarHeader/SidebarHeader';
@@ -13,6 +14,7 @@ function Sidebar() {
     <div className="sidebar">
       <SidebarHeader callback={() => flipFlop()} />
       <SidebarContent />
+      <CreateButton />
       <SettingsMenu isOpen={isActivePopup} onClose={() => setActivePopup(false)} />
     </div>
   );

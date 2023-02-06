@@ -1,11 +1,12 @@
 @import "../../styles/variables";
 
 .sidebar {
+  position: relative;
+
   width: 100%;
   max-width: 420px;
   height: 100%;
   overflow: hidden;
 
   background-color: $grey-main;
-
 }

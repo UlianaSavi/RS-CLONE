@@ -1,7 +1,85 @@
 @import "../../styles/variables";
 
-.chat-input {
+.message-input {
+  display: flex;
+  gap: 10px;
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
   padding: 5px;
-  height: 50px;
-  background-color: $grey-main;
+  padding-bottom: 20px;
+  
+  &__container {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+    height: 34px;
+    padding: 10px;
+
+    background-color: $grey-main;
+    border-radius: 15px;
+  }
+
+  &__text-area {
+    flex-grow: 1;
+
+    background-color: $grey-main;
+    color: $text-color-white;
+    border: none;
+    outline: none;
+  }
+
+  &__emotion-btn,
+  &__attach-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    
+    background: none;
+    border: none;
+    border-radius: 18px;
+
+    transition: .2s all;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: $accent-hover-folder;
+
+      .message-input__icon {
+        fill: $accent-color;
+        transition: .2s all;
+      }
+    }
+  }
+
+  &__send-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 54px;
+    width: 54px;
+
+    background-color: $accent-color;
+    border: none;
+    border-radius: 27px;
+
+    transition: .2s all;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: $accent-hover-dark;
+    }
+  }
+
+  &__send-icon {
+    transform: rotate(90deg);
+  }
 }
