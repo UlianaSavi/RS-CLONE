@@ -1,4 +1,4 @@
-import { useState } from 'react';
+/* eslint-disable no-undef */
 import ChatsFolderItem from '../ChatsFolderItem/ChatsFolderItem';
 import './FoldersTabs.scss';
 
@@ -7,18 +7,18 @@ interface FoldersTabsProps {
     title: string,
     unreadConversations: number
   }[],
+  activeFolder: number,
+  setActiveFolder: React.Dispatch<React.SetStateAction<number>>
 }
 
-function FoldersTabs({ data }: FoldersTabsProps) {
-  const [activeIndex, setActiveIndex] = useState(0);
-
+function FoldersTabs({ data, activeFolder, setActiveFolder }: FoldersTabsProps) {
   const foldersArr = data
     .map((folder, index) => (
       <ChatsFolderItem
         key={folder.title}
         data={folder}
-        isActive={index === activeIndex}
-        setActiveIndex={setActiveIndex}
+        isActive={index === activeFolder}
+        setActiveIndex={setActiveFolder}
         index={index}
       />
     ));

@@ -16,9 +16,7 @@ function ChatsFolderItem({
 }: ChatsFolderItemProps) {
   const { title, unreadConversations } = data;
 
-  const selectFolder = () => {
-    setActiveIndex(index);
-  };
+  const selectFolder = () => setActiveIndex(index);
 
   return (
     <button
