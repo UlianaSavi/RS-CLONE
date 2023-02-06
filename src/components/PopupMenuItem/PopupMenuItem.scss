@@ -1,0 +1,33 @@
+@import "../../styles/variables";
+
+.popup-item {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px;
+
+    font-weight: 500;
+
+    background: none;
+    border: none;
+    color: $text-color-white;
+
+    &:hover {
+        background: $grey-hover;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+}
+
+.popup-svg {
+    height: fit-content;
+    width: 25px;
+
+    margin-right: 10px;
+}
+
+.popup-svg-color {
+    fill: $grey-lite;
+}

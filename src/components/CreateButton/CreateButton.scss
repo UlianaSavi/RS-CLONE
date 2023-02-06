@@ -1,0 +1,23 @@
+@import "../../styles/variables";
+
+.create-button {
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+    width: 54px;
+    height: 54px;
+
+    border: none;
+    border-radius: 50%;
+    color: white;
+    background-color: $accent-color;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $accent-hover-dark;
+    }
+}
+
+#create-svg {
+    height: 100%;
+}
