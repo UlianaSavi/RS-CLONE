@@ -5,7 +5,7 @@ import './BubblesDateGroup.scss';
 export default function BubblesDateGroup() {
   return (
     <section className="bubbles-date-group">
-      <BubblesDate />
+      <BubblesDate date="Today" />
       <div className="bubbles-date-group__messages-wrapper">
         <div className="bubbles-date-group__user-messages-wrapper">
           <div className="bubbles-date-group__user-message">

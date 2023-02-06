@@ -1,7 +1,8 @@
 import './BubblesDate.scss';
 
-export default function BubblesDate() {
+export default function BubblesDate(props: {date: string}) {
+  const { date } = props;
   return (
-    <div className="bubbles-date">Today</div>
+    <div className="bubbles-date">{date}</div>
   );
 }
