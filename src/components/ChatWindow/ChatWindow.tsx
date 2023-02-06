@@ -1,5 +1,7 @@
 import './ChatWindow.scss';
 import { ReactComponent as CheckMark } from '../../assets/icons/check-solid.svg';
+// import ThemeImage from '../../assets/chat-bg/bg-house-theme.png';
+import MessageInput from '../MessageInput/MessageInput';
 
 function ChatWindow() {
   return (
@@ -66,6 +68,7 @@ function ChatWindow() {
           </div>
         </section>
       </div>
+      <MessageInput />
       <svg height="0" width="0">
         <defs>
           <clipPath id="svgPath">
@@ -73,6 +76,8 @@ function ChatWindow() {
           </clipPath>
         </defs>
       </svg>
+      {/* <img src={ThemeImage} alt=" " className="chat-window__bg-image" /> */}
+      <div className="chat-window__bg-image" />
     </div>
   );
 }

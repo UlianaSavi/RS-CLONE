@@ -1,6 +1,8 @@
 @import "../../styles/variables";
 
 .message-input {
+  z-index: 2;
+
   display: flex;
   gap: 10px;
   width: 90%;

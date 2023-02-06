@@ -1,18 +1,53 @@
 @import "../../styles/variables";
 
 .chat-window {
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-  align-items: flex-end;
-  padding: 0.5rem 0;
+  position: relative;
 
-  background-color: $grey-dark;
-  background-image: url(../../assets/chat-bg/bg-house-theme.png);
-  background-size: 500px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem 0;
 
   &__wrapper {
     width: 75%;
+  }
+
+  &__bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: transparent;
+    background-image: url(../../assets/chat-bg/bg-house-theme.png);
+    background-size: 500px;
+
+    opacity: 0.12;
+    filter: invert(1);
+  }
+  &::after {
+    content: '';
+
+    position: absolute;
+    top: 0;      
+    left: 0;   
+
+    display: block;
+    width: 100%;
+    height: 100%;    
+    
+    background: transparent;
+    background:
+    linear-gradient(235deg, rgba(0, 153, 255, 0.8), rgba(255,0,0,0) 35%),
+    linear-gradient(127deg, rgba(162, 0, 255, 0.8), rgba(0,255,0,0) 70%),
+    linear-gradient(336deg, rgba(255, 187, 0, 0.8), rgba(0,0,255,0) 25%);
+    opacity: 0.09;
   }
 }
 
@@ -22,6 +57,8 @@
   gap: 0.6rem;
 
   &__date {
+    z-index: 2;
+
     display: block;
     align-self: center;
     padding: 0.28125rem 0.625rem;
@@ -31,6 +68,8 @@
   }
 
   &__messages-wrapper {
+    z-index: 2;
+
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
