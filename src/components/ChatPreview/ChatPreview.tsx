@@ -1,21 +1,42 @@
+/* eslint-disable no-undef */
+import { useState } from 'react';
 import Avatar from '../Avatar/Avatar';
 import './ChatPreview.scss';
 
-function ChatPreview() {
+interface ChatPreviewProps {
+  data: {
+    name: string,
+    avatar: string,
+    lastMessage: string,
+    timeOfLastMessage: string,
+    unreadMessages: number
+  },
+  isActive: boolean,
+}
+
+function ChatPreview({ data, isActive }: ChatPreviewProps) {
+  const {
+    name, avatar, lastMessage, timeOfLastMessage, unreadMessages,
+  } = data;
+
+  const [isChatActive, setChatActive] = useState(isActive);
+
+  const toggleChatActive = () => setChatActive(!isChatActive);
+
   return (
-    <div className="chat-preview">
+    <button type="button" className={`chat-preview ${isChatActive ? 'active' : ''}`} onClick={toggleChatActive}>
       <div className="chat-preview-wrapper">
-        <Avatar />
+        <Avatar image={avatar} />
         <div className="chat-preview-text">
-          <div className="chat-preview__title">Sal Fisher👻</div>
-          <div className="chat-preview__last-message">It was just a joke, but now I need a very long text here</div>
+          <div className="chat-preview__title">{name}</div>
+          <div className="chat-preview__last-message">{lastMessage}</div>
         </div>
       </div>
       <div className="chat-preview__info">
-        <div className="chat-preview__messenge-time">00:00</div>
-        <div className="chat-preview__messenge-num">416</div>
+        <div className="chat-preview__messenge-time">{timeOfLastMessage}</div>
+        {unreadMessages ? <div className="chat-preview__messenge-num">{unreadMessages}</div> : ''}
       </div>
-    </div>
+    </button>
   );
 }
 
