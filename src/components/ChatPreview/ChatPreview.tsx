@@ -1,5 +1,4 @@
 /* eslint-disable no-undef */
-import { useState } from 'react';
 import Avatar from '../Avatar/Avatar';
 import './ChatPreview.scss';
 
@@ -12,19 +11,23 @@ interface ChatPreviewProps {
     unreadMessages: number
   },
   isActive: boolean,
+  index: number,
+  setActiveIndex: React.Dispatch<React.SetStateAction<number>>
 }
 
-function ChatPreview({ data, isActive }: ChatPreviewProps) {
+function ChatPreview({
+  data, isActive, index, setActiveIndex,
+}: ChatPreviewProps) {
   const {
     name, avatar, lastMessage, timeOfLastMessage, unreadMessages,
   } = data;
 
-  const [isChatActive, setChatActive] = useState(isActive);
-
-  const toggleChatActive = () => setChatActive(!isChatActive);
-
   return (
-    <button type="button" className={`chat-preview ${isChatActive ? 'active' : ''}`} onClick={toggleChatActive}>
+    <button
+      type="button"
+      className={`chat-preview ${isActive ? 'active' : ''}`}
+      onClick={() => setActiveIndex(index)}
+    >
       <div className="chat-preview-wrapper">
         <Avatar image={avatar} />
         <div className="chat-preview-text">

@@ -1,4 +1,5 @@
 import './Avatar.scss';
+import avatarPlaceholder from '../../assets/icons/avatar-placeholder.png';
 
 interface AvatarProps {
   image: string
@@ -7,7 +8,7 @@ interface AvatarProps {
 function Avatar({ image }: AvatarProps) {
   return (
     <img
-      src={image}
+      src={image || avatarPlaceholder}
       alt="User avatar"
       className="avatar"
     />
