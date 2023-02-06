@@ -6,7 +6,8 @@ function ChatWindow() {
   return (
     <div className="chat-window">
       <div className="chat-window__wrapper">
-        <BubblesDateGroup />
+        <BubblesDateGroup date="Yesterday" />
+        <BubblesDateGroup date="Today" />
       </div>
       <MessageInput />
       <svg height="0" width="0">
