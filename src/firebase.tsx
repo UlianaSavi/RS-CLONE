@@ -1,6 +1,6 @@
-import { initializeApp } from 'firebase/app';
+// import { getAuth } from 'firebase/auth';
 
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: 'genial-motif-376109.firebaseapp.com',
   projectId: 'genial-motif-376109',
@@ -10,4 +10,7 @@ const firebaseConfig = {
   measurementId: 'G-GFD0HL1NJL',
 };
 
-initializeApp(firebaseConfig);
+// registration by phone
+
+// const auth = getAuth(app);
+// console.log(auth);

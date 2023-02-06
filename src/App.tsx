@@ -1,6 +1,10 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { initializeApp } from 'firebase/app';
 import Form from './pages/Form/Form';
 import Messenger from './pages/Messenger/Messenger';
+import { firebaseConfig } from './firebase';
+
+initializeApp(firebaseConfig);
 
 const router = createBrowserRouter([
   {
