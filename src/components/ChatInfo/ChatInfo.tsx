@@ -1,13 +1,19 @@
 import Avatar from '../Avatar/Avatar';
 import './ChatInfo.scss';
 
-function ChatInfo() {
+interface ChatInfoProps {
+  avatar: string,
+  title: string,
+  status: string,
+}
+
+function ChatInfo({ avatar, title, status }: ChatInfoProps) {
   return (
     <div className="chat-info">
-      <Avatar image="https://i.pinimg.com/564x/9e/c3/9f/9ec39f56b00c97ab0ef3a99817b27f87.jpg" />
+      <Avatar image={avatar} />
       <div className="chat-info__info">
-        <div className="chat-info__title">Title</div>
-        <div className="chat-info__status">Online</div>
+        <div className="chat-info__title">{title}</div>
+        <div className="chat-info__status">{status}</div>
       </div>
     </div>
   );

@@ -22,11 +22,15 @@ function ChatPreview({
     name, avatar, lastMessage, timeOfLastMessage, unreadMessages,
   } = data;
 
+  const selectChat = () => {
+    setActiveIndex(index);
+  };
+
   return (
     <button
       type="button"
       className={`chat-preview ${isActive ? 'active' : ''}`}
-      onClick={() => setActiveIndex(index)}
+      onClick={selectChat}
     >
       <div className="chat-preview-wrapper">
         <Avatar image={avatar} />
