@@ -8,10 +8,19 @@
   flex-grow: 1;
   justify-content: flex-end;
   align-items: center;
-  padding: 0.5rem 0;
+
+  overflow: hidden;
 
   &__wrapper {
-    width: 75%;
+    box-sizing: border-box;
+    max-width: 80%;
+    padding: 20px;
+
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
   }
 
   &__bg-image {
