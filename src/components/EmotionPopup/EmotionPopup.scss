@@ -4,7 +4,6 @@
     position: absolute;
     bottom: 63px;
     left: 0;
-    z-index: -1;
 
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -19,8 +18,11 @@
 
     transition: linear .2s;
 
+    visibility: hidden;
+
     &.active {
-        z-index: 1;
-        opacity: 100%;
+        opacity: 1;
+        
+        visibility: visible;
     }
 }
