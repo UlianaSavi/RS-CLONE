@@ -3,12 +3,13 @@ import { initializeApp } from 'firebase/app';
 import Form from './pages/Form/Form';
 import Messenger from './pages/Messenger/Messenger';
 import { firebaseConfig } from './firebase';
+import AuthRoute from './auntification/AuthRoute/AuthRoute';
 
 initializeApp(firebaseConfig);
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/login',
     element: <Form mode="login-phone" />,
   },
   {
@@ -28,8 +29,8 @@ const router = createBrowserRouter([
     element: <Form mode="register-email" />,
   },
   {
-    path: '/messenger',
-    element: <Messenger />,
+    path: '/',
+    element: <AuthRoute><Messenger /></AuthRoute>,
   },
 ]);
 

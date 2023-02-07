@@ -14,3 +14,6 @@ export const firebaseConfig = {
 
 // const auth = getAuth(app);
 // console.log(auth);
+
+// Оставновилась на видео на 4:35, он говорил о создании файла который
+// походу для логики аунтификации как раз
