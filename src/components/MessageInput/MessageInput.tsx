@@ -14,7 +14,7 @@ function MessageInput() {
   return (
     <div className="message-input">
       <div className="message-input__container">
-        <button className="message-input__emotion-btn" type="button" onClick={toggleEmotionPopup}>
+        <button className="message-input__emotion-btn" type="button" onClick={toggleEmotionPopup} onMouseEnter={toggleEmotionPopup}>
           <EmojiIcon />
         </button>
         <EmotionPopup isVisible={isVisibleEmotion} handleMouseLeave={toggleEmotionPopup} />
