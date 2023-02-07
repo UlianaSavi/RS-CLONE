@@ -1,22 +1,25 @@
+/* eslint-disable no-undef */
 import PopupMenuItem from '../PopupMenuItem/PopupMenuItem';
 import { SettingsIcon } from '../../assets/icons/icons';
-import './PopupMenu.scss';
+import './ContextMenu.scss';
 
-interface PopupMenuProps {
+interface ContextMenuProps {
   isVisible: boolean,
+  handleMouseLeave: () => void
 }
 
-function PopupMenu({ isVisible }: PopupMenuProps) {
+function ContextMenu({ isVisible, handleMouseLeave }: ContextMenuProps) {
   const click = () => null;
 
-  const closePopup = () => !isVisible;
-
   return (
-    <nav className={`popup-menu ${isVisible ? 'active' : ''}`} onMouseLeave={closePopup}>
+    <nav
+      className={`context-menu ${isVisible ? 'active' : ''}`}
+      onMouseLeave={handleMouseLeave}
+    >
       <PopupMenuItem label="Make as unread" icon={<SettingsIcon />} handleClick={click} />
       <PopupMenuItem label="Delete chat" icon={<SettingsIcon />} handleClick={click} />
     </nav>
   );
 }
 
-export default PopupMenu;
+export default ContextMenu;

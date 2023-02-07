@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
-import PopupMenu from '../PopupMenu/PopupMenu';
+import { useState, useEffect } from 'react';
+import ContextMenu from '../ContextMenu/ContextMenu';
 import Avatar from '../Avatar/Avatar';
 import type { UserData } from '../../types';
 import './ChatPreview.scss';
@@ -19,10 +20,21 @@ function ChatPreview({
 
   const selectChat = () => setActiveChatId(id);
 
+  const [showMenu, setShowMenu] = useState(false);
+
   const handleContextMenu = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
-    console.log(name);
+    setShowMenu(true);
   };
+
+  const closeContextMenu = () => setShowMenu(false);
+
+  useEffect(() => {
+    document.addEventListener('click', closeContextMenu);
+    return () => {
+      document.removeEventListener('click', closeContextMenu);
+    };
+  }, []);
 
   return (
     <>
@@ -44,7 +56,7 @@ function ChatPreview({
           {unreadMessages ? <div className="chat-preview__messenge-num">{unreadMessages}</div> : ''}
         </div>
       </button>
-      <PopupMenu isVisible />
+      <ContextMenu isVisible={showMenu} handleMouseLeave={closeContextMenu} />
     </>
   );
 }
