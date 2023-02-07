@@ -1,10 +1,16 @@
+/* eslint-disable no-undef */
 import { useState } from 'react';
 import { usersData, chatsData } from '../../fakeData';
 import FoldersTabs from '../FoldersTabs/FoldersTabs';
 import ChatsList from '../ChatsList/ChatsList';
 import './SidebarContent.scss';
 
-function SidebarContent() {
+interface SidebarContentProps {
+  activeChat: number,
+  setActiveChat: React.Dispatch<React.SetStateAction<number>>
+}
+
+function SidebarContent({ activeChat, setActiveChat }: SidebarContentProps) {
   const foldersData = [
     {
       title: 'All',
@@ -32,7 +38,11 @@ function SidebarContent() {
         activeFolder={activeFolder}
         setActiveFolder={setActiveFolder}
       />
-      <ChatsList data={foldersData[activeFolder].content} />
+      <ChatsList
+        data={foldersData[activeFolder].content}
+        activeChat={activeChat}
+        setActiveChat={setActiveChat}
+      />
     </div>
   );
 }

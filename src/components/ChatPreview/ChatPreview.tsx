@@ -12,18 +12,18 @@ interface ChatPreviewProps {
   },
   isActive: boolean,
   index: number,
-  setActiveIndex: React.Dispatch<React.SetStateAction<number>>
+  setActiveChat: React.Dispatch<React.SetStateAction<number>>
 }
 
 function ChatPreview({
-  data, isActive, index, setActiveIndex,
+  data, isActive, index, setActiveChat,
 }: ChatPreviewProps) {
   const {
     name, avatar, lastMessage, timeOfLastMessage, unreadMessages,
   } = data;
 
   const selectChat = () => {
-    setActiveIndex(index);
+    setActiveChat(index);
   };
 
   return (

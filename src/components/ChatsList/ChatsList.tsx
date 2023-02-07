@@ -1,4 +1,4 @@
-import { useState } from 'react';
+/* eslint-disable no-undef */
 import ChatPreview from '../ChatPreview/ChatPreview';
 import './ChastList.scss';
 
@@ -10,18 +10,18 @@ interface ChatsListProps {
     timeOfLastMessage: string,
     unreadMessages: number
   }[],
+  activeChat: number,
+  setActiveChat: React.Dispatch<React.SetStateAction<number>>
 }
 
-function ChatsList({ data }: ChatsListProps) {
-  const [activeIndex, setActiveIndex] = useState(0);
-
+function ChatsList({ data, activeChat, setActiveChat }: ChatsListProps) {
   const chatsArr = data
     .map((chat, index) => (
       <ChatPreview
         key={chat.name}
         data={chat}
-        isActive={index === activeIndex}
-        setActiveIndex={setActiveIndex}
+        isActive={index === activeChat}
+        setActiveChat={setActiveChat}
         index={index}
       />
     ));

@@ -5,21 +5,22 @@ import ChatWindow from '../ChatWindow/ChatWindow';
 import './Chat.scss';
 import TopPanelSettings from '../TopPanelSettings/TopPanelSettings';
 
-function Chat() {
+interface ChatProps {
+  activeChat: number
+}
+
+function Chat({ activeChat }: ChatProps) {
   const [isActivePopup, setActivePopup] = useState(false);
   function flipFlop() {
     setActivePopup(!isActivePopup);
   }
 
-  const data = {
-    avatar: '',
-    title: 'John',
-    status: 'online',
-  };
-
   return (
     <div className="chat">
-      <TopPanel data={data} callback={() => flipFlop()} />
+      <TopPanel
+        activeChat={activeChat}
+        callback={() => flipFlop()}
+      />
       <ChatWindow />
       <MessageInput />
       <TopPanelSettings isOpen={isActivePopup} onClose={() => setActivePopup(false)} />

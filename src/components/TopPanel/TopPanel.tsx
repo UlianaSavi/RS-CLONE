@@ -4,24 +4,14 @@ import TopPanelTools from '../TopPanelTools/TopPanelTools';
 import TopPanelPinnedMessage from '../TopPanelPinnedMessage/TopPanelPinnedMessage';
 
 interface TopPanelProps {
-  data: {
-    avatar: string,
-    title: string,
-    status: string
-  },
+  activeChat: number,
   callback: () => void
 }
 
-export default function TopPanel({ data, callback }: TopPanelProps) {
-  const { avatar, title, status } = data;
-
+export default function TopPanel({ activeChat, callback }: TopPanelProps) {
   return (
     <div className="top-panel">
-      <ChatInfo
-        avatar={avatar}
-        title={title}
-        status={status}
-      />
+      <ChatInfo activeChat={activeChat} />
       <TopPanelPinnedMessage />
       <TopPanelTools callback={callback} />
     </div>
