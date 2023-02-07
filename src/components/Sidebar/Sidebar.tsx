@@ -7,11 +7,11 @@ import SidebarHeader from '../SidebarHeader/SidebarHeader';
 import './Sidebar.scss';
 
 interface SidebarProps {
-  activeChat: number,
-  setActiveChat: React.Dispatch<React.SetStateAction<number>>
+  activeChatId: number,
+  setActiveChatId: React.Dispatch<React.SetStateAction<number>>
 }
 
-function Sidebar({ activeChat, setActiveChat }: SidebarProps) {
+function Sidebar({ activeChatId, setActiveChatId }: SidebarProps) {
   const [isActivePopup, setActivePopup] = useState(false);
   function flipFlop() {
     setActivePopup(!isActivePopup);
@@ -20,8 +20,8 @@ function Sidebar({ activeChat, setActiveChat }: SidebarProps) {
     <div className="sidebar">
       <SidebarHeader callback={() => flipFlop()} />
       <SidebarContent
-        activeChat={activeChat}
-        setActiveChat={setActiveChat}
+        activeChatId={activeChatId}
+        setActiveChatId={setActiveChatId}
       />
       <CreateButton />
       <SettingsMenu

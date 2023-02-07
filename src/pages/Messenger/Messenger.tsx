@@ -4,15 +4,15 @@ import Sidebar from '../../components/Sidebar/Sidebar';
 import './Messenger.scss';
 
 function Messenger() {
-  const [activeChat, setActiveChat] = useState(0);
+  const [activeChatId, setActiveChatId] = useState(1);
 
   return (
     <div className="messenger">
       <Sidebar
-        activeChat={activeChat}
-        setActiveChat={setActiveChat}
+        activeChatId={activeChatId}
+        setActiveChatId={setActiveChatId}
       />
-      <Chat activeChat={activeChat} />
+      <Chat activeChatId={activeChatId} />
     </div>
   );
 }

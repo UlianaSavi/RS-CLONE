@@ -6,11 +6,11 @@ import ChatsList from '../ChatsList/ChatsList';
 import './SidebarContent.scss';
 
 interface SidebarContentProps {
-  activeChat: number,
-  setActiveChat: React.Dispatch<React.SetStateAction<number>>
+  activeChatId: number,
+  setActiveChatId: React.Dispatch<React.SetStateAction<number>>
 }
 
-function SidebarContent({ activeChat, setActiveChat }: SidebarContentProps) {
+function SidebarContent({ activeChatId, setActiveChatId }: SidebarContentProps) {
   const [activeFolder, setActiveFolder] = useState(0);
 
   return (
@@ -22,8 +22,8 @@ function SidebarContent({ activeChat, setActiveChat }: SidebarContentProps) {
       />
       <ChatsList
         data={foldersData[activeFolder].content}
-        activeChat={activeChat}
-        setActiveChat={setActiveChat}
+        activeChatId={activeChatId}
+        setActiveChatId={setActiveChatId}
       />
     </div>
   );

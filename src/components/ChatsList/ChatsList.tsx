@@ -5,19 +5,18 @@ import './ChastList.scss';
 
 interface ChatsListProps {
   data: UserData[],
-  activeChat: number,
-  setActiveChat: React.Dispatch<React.SetStateAction<number>>
+  activeChatId: number,
+  setActiveChatId: React.Dispatch<React.SetStateAction<number>>
 }
 
-function ChatsList({ data, activeChat, setActiveChat }: ChatsListProps) {
+function ChatsList({ data, activeChatId, setActiveChatId }: ChatsListProps) {
   const chatsArr = data
-    .map((chat, index) => (
+    .map((chat) => (
       <ChatPreview
         key={chat.name}
         data={chat}
-        isActive={index === activeChat}
-        setActiveChat={setActiveChat}
-        index={index}
+        isActive={chat.id === activeChatId}
+        setActiveChatId={setActiveChatId}
       />
     ));
 

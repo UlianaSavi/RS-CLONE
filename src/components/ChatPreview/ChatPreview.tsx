@@ -6,20 +6,17 @@ import './ChatPreview.scss';
 interface ChatPreviewProps {
   data: UserData,
   isActive: boolean,
-  index: number,
-  setActiveChat: React.Dispatch<React.SetStateAction<number>>
+  setActiveChatId: React.Dispatch<React.SetStateAction<number>>
 }
 
 function ChatPreview({
-  data, isActive, index, setActiveChat,
+  data, isActive, setActiveChatId,
 }: ChatPreviewProps) {
   const {
-    name, avatar, lastMessage, timeOfLastMessage, unreadMessages,
+    id, name, avatar, lastMessage, timeOfLastMessage, unreadMessages,
   } = data;
 
-  const selectChat = () => {
-    setActiveChat(index);
-  };
+  const selectChat = () => setActiveChatId(id);
 
   return (
     <button

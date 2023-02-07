@@ -5,10 +5,10 @@ import './Chat.scss';
 import TopPanelSettings from '../TopPanelSettings/TopPanelSettings';
 
 interface ChatProps {
-  activeChat: number
+  activeChatId: number
 }
 
-function Chat({ activeChat }: ChatProps) {
+function Chat({ activeChatId }: ChatProps) {
   const [isActivePopup, setActivePopup] = useState(false);
   function flipFlop() {
     setActivePopup(!isActivePopup);
@@ -17,7 +17,7 @@ function Chat({ activeChat }: ChatProps) {
   return (
     <div className="chat">
       <TopPanel
-        activeChat={activeChat}
+        activeChatId={activeChatId}
         callback={() => flipFlop()}
       />
       <ChatWindow />
