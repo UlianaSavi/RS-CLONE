@@ -5,7 +5,6 @@ import './Messenger.scss';
 
 function Messenger() {
   const [activeChat, setActiveChat] = useState(0);
-  console.log(activeChat);
 
   return (
     <div className="messenger">

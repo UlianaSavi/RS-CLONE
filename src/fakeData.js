@@ -1,5 +1,17 @@
+export const groupsData = [
+  {
+    id: 1,
+    name: 'Launge',
+    avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRESh2hh7u_t-VkB5GEouQCbL0-RahdE1SE2g&usqp=CAU',
+    lastMessage: 'Thanks for getting back to me so quickly!',
+    timeOfLastMessage: '23:59',
+    unreadMessages: 2,
+  },
+];
+
 export const usersData = [
   {
+    id: 2,
     name: 'Alice',
     avatar: 'https://i.pinimg.com/564x/9e/c3/9f/9ec39f56b00c97ab0ef3a99817b27f87.jpg',
     lastMessage: 'Hey, just wanted to touch base about',
@@ -7,6 +19,7 @@ export const usersData = [
     unreadMessages: 42,
   },
   {
+    id: 3,
     name: 'Bob',
     avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIXvV8B00DCXZWB4z0w0XUF66D7jVK8zrg3A&usqp=CAU',
     lastMessage: 'I\'m running late for our meeting today',
@@ -14,6 +27,7 @@ export const usersData = [
     unreadMessages: 999,
   },
   {
+    id: 4,
     name: 'John',
     avatar: '',
     lastMessage: 'Can you send over the latest version of',
@@ -22,12 +36,20 @@ export const usersData = [
   },
 ];
 
-export const chatsData = [
+export const foldersData = [
   {
-    name: 'Launge',
-    avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRESh2hh7u_t-VkB5GEouQCbL0-RahdE1SE2g&usqp=CAU',
-    lastMessage: 'Thanks for getting back to me so quickly!',
-    timeOfLastMessage: '23:59',
-    unreadMessages: 2,
+    title: 'All',
+    unreadConversations: 3,
+    content: [...groupsData, ...usersData],
+  },
+  {
+    title: 'Contacts',
+    unreadConversations: 2,
+    content: usersData,
+  },
+  {
+    title: 'Chats',
+    unreadConversations: 1,
+    content: groupsData,
   },
 ];

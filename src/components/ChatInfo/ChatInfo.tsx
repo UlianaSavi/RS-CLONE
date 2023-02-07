@@ -1,4 +1,4 @@
-import { usersData, chatsData } from '../../fakeData';
+import { usersData, groupsData } from '../../fakeData';
 import Avatar from '../Avatar/Avatar';
 import './ChatInfo.scss';
 
@@ -7,7 +7,7 @@ interface ChatInfoProps {
 }
 
 function ChatInfo({ activeChat }: ChatInfoProps) {
-  const data = [...chatsData, ...usersData];
+  const data = [...groupsData, ...usersData];
 
   return (
     <div className="chat-info">

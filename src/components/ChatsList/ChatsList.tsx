@@ -1,15 +1,10 @@
 /* eslint-disable no-undef */
 import ChatPreview from '../ChatPreview/ChatPreview';
+import type { UserData } from '../../types';
 import './ChastList.scss';
 
 interface ChatsListProps {
-  data: {
-    name: string,
-    avatar: string,
-    lastMessage: string,
-    timeOfLastMessage: string,
-    unreadMessages: number
-  }[],
+  data: UserData[],
   activeChat: number,
   setActiveChat: React.Dispatch<React.SetStateAction<number>>
 }
