@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { onAuthStateChanged } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
+import { auth } from '../firebaseConfig';
 
 function AuthRoute(props: any) {
   const { children } = props;
-  const auth = getAuth();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
@@ -13,8 +13,8 @@ function AuthRoute(props: any) {
       if (user) {
         setLoading(false);
       } else {
-        console.log('unauthorized');
-        navigate('/login');
+        console.log('Unauthorized');
+        navigate('/register');
       }
     });
 
@@ -25,5 +25,4 @@ function AuthRoute(props: any) {
 
   return children;
 }
-
 export default AuthRoute;
