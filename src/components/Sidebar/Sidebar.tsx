@@ -16,6 +16,7 @@ function Sidebar({ activeChatId, setActiveChatId }: SidebarProps) {
   function flipFlop() {
     setActivePopup(!isActivePopup);
   }
+
   return (
     <div className="sidebar">
       <SidebarHeader callback={() => flipFlop()} />
