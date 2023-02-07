@@ -77,9 +77,9 @@ function Form({ mode }: FormProps) {
         <h2 className="form__subtitle">{data[mode].title}</h2>
         <form className="form__inputs">
           {data[mode].inputs}
-          <Link className="form__button" to="/code">
+          <button type="submit" className="form__button">
             NEXT
-          </Link>
+          </button>
           <Link className="form__button form__button_outline" to={data[mode].altLoginRoute}>
             {data[mode].changeProviderButtonText}
           </Link>

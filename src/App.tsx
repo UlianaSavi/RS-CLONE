@@ -9,12 +9,12 @@ initializeApp(firebaseConfig);
 
 const router = createBrowserRouter([
   {
-    path: '/login',
-    element: <Form mode="login-phone" />,
+    path: '/',
+    element: <AuthRoute><Messenger /></AuthRoute>,
   },
   {
-    path: '/code',
-    element: <Form mode="access-code" />,
+    path: '/login',
+    element: <Form mode="login-phone" />,
   },
   {
     path: '/login-email',
@@ -29,8 +29,8 @@ const router = createBrowserRouter([
     element: <Form mode="register-email" />,
   },
   {
-    path: '/',
-    element: <AuthRoute><Messenger /></AuthRoute>,
+    path: '/code',
+    element: <Form mode="access-code" />,
   },
 ]);
 
