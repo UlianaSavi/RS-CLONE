@@ -4,7 +4,6 @@
     position: absolute;
     bottom: 63px;
     right: 0;
-    z-index: -1;
 
     padding: 8px;
 
@@ -15,8 +14,11 @@
 
     transition: linear .2s;
 
+    visibility: hidden;
+
     &.active {
-        z-index: 1;
-        opacity: 100%;
+        opacity: 1;
+
+        visibility: visible;
     }
 }
