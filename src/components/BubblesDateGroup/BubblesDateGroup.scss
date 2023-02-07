@@ -1,0 +1,23 @@
+@import "../../styles/variables";
+
+.bubbles-date-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  &__messages-wrapper {
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin: 0.3rem;
+  }
+
+  &__user-messages-wrapper {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+}
