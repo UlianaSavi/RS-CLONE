@@ -9,7 +9,6 @@ interface ChatsListProps {
     lastMessage: string,
     timeOfLastMessage: string,
     unreadMessages: number
-    type: string,
   }[],
 }
 
