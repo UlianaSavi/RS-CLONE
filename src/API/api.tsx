@@ -18,7 +18,7 @@ export const singIn = async (email: string, password: string) => {
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       const { user } = userCredential;
-      console.log('Singed in with sucsess');
+      console.log('Singed in');
     })
     .catch((error) => {
       const errorCode = error.code;
