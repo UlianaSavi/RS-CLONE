@@ -26,8 +26,12 @@
     width: 25px;
 
     margin-right: 10px;
+
+    fill: $grey-lite;
 }
 
-.popup-svg-color {
-    fill: $grey-lite;
+.log-out-popup {
+  height: 25px;
+
+  transform: scale(-1, 1);
 }
