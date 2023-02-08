@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { sentCode } from '../../API/api';
+import { singIn, singUp } from '../../API/api';
 import telegramLogo from '../../assets/img/telegramLogo.svg';
 import FormInput from '../../components/FormInput/FormInput';
 import './Form.scss';
@@ -11,6 +11,9 @@ interface FormProps {
 
 function Form({ mode }: FormProps) {
   const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  console.log(email, password);
+
   const data = {
     'login-email': {
       title: 'Please enter your email and password.',
@@ -37,15 +40,19 @@ function Form({ mode }: FormProps) {
   <>
     <FormInput type="text" id="name" label="Name" value="" />
     <FormInput type="email" id="email" label="Email" value="" setValue={setEmail} />
-    <FormInput type="password" id="password" label="Password" value="" />
+    <FormInput type="password" id="password" label="Password" value="" setValue={setPassword} />
   </>,
     },
   };
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    console.log(email);
-    sentCode(email);
+    if (data[mode].changeModeButtonText === 'SIGN IN') {
+      singUp(email, password);
+    }
+    if (data[mode].changeModeButtonText === 'SIGN UP') {
+      singIn(email, password);
+    }
   };
 
   return (

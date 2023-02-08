@@ -1,17 +1,11 @@
-import { sendSignInLinkToEmail } from 'firebase/auth';
+/* eslint-disable no-unused-vars */
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebaseConfig';
 
-const actionCodeSettings = {
-  url: 'genial-motif-376109.firebaseapp.com',
-  handleCodeInApp: true,
-};
-
-export const sentCode = async (email: string) => {
-  console.log('here');
-  sendSignInLinkToEmail(auth, email, actionCodeSettings)
-    .then(() => {
-      console.log('The link was successfully sent!');
-      window.localStorage.setItem('emailForSignIn', email);
+export const singUp = async (email: string, password: string) => {
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      const { user } = userCredential;
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -19,3 +13,24 @@ export const sentCode = async (email: string) => {
       console.log(errorCode, errorMessage);
     });
 };
+
+export const singIn = async (email: string, password: string) => {
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      const { user } = userCredential;
+      console.log('Singed in');
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode, errorMessage);
+    });
+};
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    const { uid } = user;
+  } else {
+    console.log('User is signed out');
+  }
+});
