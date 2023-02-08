@@ -10,11 +10,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/login',
-    element: <Form mode="login-email" />,
+    element: <AuthRoute><Form mode="login-email" /></AuthRoute>,
   },
   {
     path: '/register',
-    element: <Form mode="register-email" />,
+    element: <AuthRoute><Form mode="register-email" /></AuthRoute>,
   },
 ]);
 

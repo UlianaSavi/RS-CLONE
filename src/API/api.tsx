@@ -26,11 +26,3 @@ export const singIn = async (email: string, password: string) => {
       console.log(errorCode, errorMessage);
     });
 };
-
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    const { uid } = user;
-  } else {
-    console.log('User is signed out');
-  }
-});

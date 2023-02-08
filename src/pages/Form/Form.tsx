@@ -12,7 +12,6 @@ interface FormProps {
 function Form({ mode }: FormProps) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  console.log(email, password);
 
   const data = {
     'login-email': {
@@ -27,8 +26,9 @@ function Form({ mode }: FormProps) {
       id="email"
       label="Email"
       value=""
+      setValue={setEmail}
     />
-    <FormInput type="password" id="password" label="Password" value="" />
+    <FormInput type="password" id="password" label="Password" value="" setValue={setPassword} />
   </>,
     },
     'register-email': {
