@@ -26,9 +26,12 @@ function ChatsList({ data, activeChatId, setActiveChatId }: ChatsListProps) {
   const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
 
   const handleContextMenu = (event: React.MouseEvent<HTMLDivElement>) => {
-    event.preventDefault();
-    setShowMenu(true);
-    setMenuPosition({ x: event.clientX, y: event.clientY });
+    const target = event.target as HTMLElement;
+    if (target.closest('.chat-preview')) {
+      event.preventDefault();
+      setShowMenu(true);
+      setMenuPosition({ x: event.clientX, y: event.clientY });
+    }
   };
 
   const closeContextMenu = () => setShowMenu(false);

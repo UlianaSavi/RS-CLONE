@@ -16,7 +16,7 @@ function ContextMenu({ isVisible, handleMouseLeave, position }: ContextMenuProps
     <nav
       className={`context-menu ${isVisible ? 'active' : ''}`}
       onMouseLeave={handleMouseLeave}
-      style={{ position: 'fixed', top: `${position.y}px`, left: `${position.x}px` }}
+      style={{ top: `${position.y}px`, left: `${position.x}px` }}
     >
       <PopupMenuItem label="Make as unread" icon={<SettingsIcon />} handleClick={click} />
       <PopupMenuItem label="Delete chat" icon={<SettingsIcon />} handleClick={click} />
