@@ -39,5 +39,9 @@
         "some": ["nesting", "id"]
       }
     }]
-  }
+  },
+  "globals": {
+    "React": true,
+    "JSX": true
+}
 }

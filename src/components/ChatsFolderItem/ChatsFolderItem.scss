@@ -1,15 +1,17 @@
 @import "../../styles/variables";
 
 .folder-tab {
-    width: 100%;
     display: flex;
     align-items: center;
-    margin-right: 10px;
-    padding: 10px;
-    border-radius: 7px 7px 0 0;
+    padding: 13px;
 
     white-space: nowrap;
     font-size: 1rem;
+
+    background-color: $grey-main;
+    border: none;
+    border-radius: 7px 7px 0 0;
+
     cursor: pointer;
 
     &:hover {
@@ -22,7 +24,6 @@
     }
     
     &__message-count{
-        width: 100%;
         height: fit-content;
         min-width: 20px;
 
@@ -34,6 +35,25 @@
         font-size: 0.9rem;
         font-weight: 500;
         text-align: center;
+    }
+
+    &.active {
+        padding-bottom: 10px;
+        border-bottom: 3px solid $accent-color;
+
+        &:hover {
+            background: $accent-hover-folder;
+        }
+    
+        .folder-tab {
+            &__title {
+                color: $accent-color;
+            }
+
+            &__message-count {
+                background: $accent-color;
+            }
+        }
     }
 }
 

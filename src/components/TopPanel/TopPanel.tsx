@@ -3,11 +3,15 @@ import './TopPanel.scss';
 import TopPanelTools from '../TopPanelTools/TopPanelTools';
 import TopPanelPinnedMessage from '../TopPanelPinnedMessage/TopPanelPinnedMessage';
 
-export default function TopPanel(props: {callback: () => void}) {
-  const { callback } = props;
+interface TopPanelProps {
+  activeChatId: number,
+  callback: () => void
+}
+
+export default function TopPanel({ activeChatId, callback }: TopPanelProps) {
   return (
     <div className="top-panel">
-      <ChatInfo />
+      <ChatInfo activeChatId={activeChatId} />
       <TopPanelPinnedMessage />
       <TopPanelTools callback={callback} />
     </div>
