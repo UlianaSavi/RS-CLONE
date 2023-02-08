@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import './PopupMenuItem.scss';
 
 interface PopupMenuItemProps {

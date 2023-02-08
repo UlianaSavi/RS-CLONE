@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import { useState, useEffect } from 'react';
 import ChatPreview from '../ChatPreview/ChatPreview';
 import ContextMenu from '../ContextMenu/ContextMenu';

@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import { useState } from 'react';
 import { foldersData } from '../../fakeData';
 import FoldersTabs from '../FoldersTabs/FoldersTabs';

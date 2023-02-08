@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import Avatar from '../Avatar/Avatar';
 import type { UserData } from '../../types';
 import './ChatPreview.scss';

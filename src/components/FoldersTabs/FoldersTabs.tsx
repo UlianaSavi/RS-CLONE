@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import ChatsFolderItem from '../ChatsFolderItem/ChatsFolderItem';
 import './FoldersTabs.scss';
 

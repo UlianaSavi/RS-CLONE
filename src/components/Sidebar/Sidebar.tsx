@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import { useState } from 'react';
 import CreateButton from '../CreateButton/CreateButton';
 import SettingsMenu from '../SettingsMenu/SettingsMenu';

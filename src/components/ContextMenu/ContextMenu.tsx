@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import PopupMenuItem from '../PopupMenuItem/PopupMenuItem';
 import { SettingsIcon } from '../../assets/icons/icons';
 import './ContextMenu.scss';
