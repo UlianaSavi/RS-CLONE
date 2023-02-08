@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebaseConfig';
 
 export const singUp = async (email: string, password: string) => {
