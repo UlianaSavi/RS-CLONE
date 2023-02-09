@@ -1,11 +1,17 @@
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../firebaseConfig';
+import { doc, setDoc } from 'firebase/firestore';
+import { auth, db } from '../firebaseConfig';
 
-export const singUp = async (email: string, password: string) => {
+export const singUp = async (name: string, email: string, password: string) => {
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       const { user } = userCredential;
-      return user;
+      setDoc(doc(db, 'users', user.uid), {
+        name,
+        email,
+        avatarUrl: '',
+        isOnline: true,
+      });
     })
     .catch((error) => {
       const errorCode = error.code;

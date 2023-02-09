@@ -10,6 +10,7 @@ interface FormProps {
 }
 
 function Form({ mode }: FormProps) {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -38,7 +39,7 @@ function Form({ mode }: FormProps) {
       registrationRoute: '/login',
       inputs:
   <>
-    <FormInput type="text" id="name" label="Name" value="" />
+    <FormInput type="text" id="name" label="Name" value="" setValue={setName} />
     <FormInput type="email" id="email" label="Email" value="" setValue={setEmail} />
     <FormInput type="password" id="password" label="Password" value="" setValue={setPassword} />
   </>,
@@ -48,7 +49,7 @@ function Form({ mode }: FormProps) {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     if (data[mode].changeModeButtonText === 'SIGN IN') {
-      singUp(email, password);
+      singUp(name, email, password);
     }
     if (data[mode].changeModeButtonText === 'SIGN UP') {
       singIn(email, password);
