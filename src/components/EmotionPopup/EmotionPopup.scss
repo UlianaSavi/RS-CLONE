@@ -6,10 +6,9 @@
     left: 0;
 
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-column-gap: 8px;
-    grid-row-gap: 8px;
+    grid-template-columns: repeat(8, 1fr);
     padding: 8px;
+    max-height: 26.25rem;
 
     background: $grey-main;
     border-radius: 10px;
@@ -19,6 +18,26 @@
     transition: linear .2s;
 
     visibility: hidden;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar { width: 0; }
+    -ms-overflow-style: none;
+
+    &__emoji {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 4px;
+      
+      font-size: 1.7rem;
+
+      &:hover {
+        background: $grey-hover;
+        border-radius: 8px;
+
+        cursor: pointer;
+      }
+    }
 
     &.active {
         opacity: 1;
