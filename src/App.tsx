@@ -1,7 +1,9 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { useContext } from 'react';
 import Form from './pages/Form/Form';
 import Messenger from './pages/Messenger/Messenger';
 import AuthRoute from './auth/Auth';
+import { AuthContext } from './auth/AuthContext';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +21,8 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  const currentUser = useContext(AuthContext);
+  console.log(currentUser);
   return (
     <section className="container">
       <RouterProvider router={router} />
