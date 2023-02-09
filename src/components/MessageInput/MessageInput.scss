@@ -4,9 +4,12 @@
   z-index: 2;
 
   display: flex;
+  align-items: flex-end;
   gap: 10px;
   width: 90%;
   max-width: 700px;
+  height: 100%;
+  max-height: 600px;
   margin: 0 auto;
   padding: 5px;
   padding-bottom: 20px;
@@ -15,10 +18,10 @@
     position: relative;
 
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     gap: 10px;
     flex-grow: 1;
-    height: 34px;
+    // height: 34px;
     padding: 10px;
 
     background-color: $grey-main;
@@ -26,8 +29,9 @@
   }
 
   &__text-area {
-    height: 100%;
-    max-height: 20px;
+    width: 100%;
+    max-width: 524px;
+    max-height: 600px;
     flex-grow: 1;
 
     background-color: $grey-main;
@@ -35,7 +39,6 @@
     border: none;
     outline: none;
     resize: none;
-    vertical-align: center;
 
     &::-webkit-scrollbar {
       width: 100%;
@@ -97,6 +100,7 @@
 
   &__send-icon {
     transform: rotate(90deg);
+    transition: height 0.25s linear;
   }
 
   &__audio-icon {
@@ -104,6 +108,7 @@
     height: 100%;
     max-width: 25px;
     max-height: 25px;
+    transition: height 0.25s linear;
 
     fill: $text-color-white;
   }
