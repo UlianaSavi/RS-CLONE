@@ -3,3 +3,5 @@ from = '/*'
 to = '/index.html'
 status = 200
 command = "CI=false npm run build"
+[build]
+  command = "CI=false npm run build && node .env"
