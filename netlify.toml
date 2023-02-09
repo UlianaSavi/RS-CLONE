@@ -4,4 +4,4 @@ to = '/index.html'
 status = 200
 
 [build]
-  command = "CI=false npm run build && node .env"
+  command = "CI=false npm run build"
