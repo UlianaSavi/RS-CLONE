@@ -1,17 +1,27 @@
-import { useState } from 'react';
+/* eslint-disable no-unused-vars */
+import React, { useEffect, useState } from 'react';
 import './FormInput.scss';
 
 interface FormInputProps {
-  type: string,
-  id: string,
-  label: string,
-  value: string,
+  type: string;
+  id: string;
+  label: string;
+  value: string;
+  setValue?: (value: string) => void;
 }
 
 function FormInput({
-  type, id, label, value,
+  type, id, label, value, setValue,
 }: FormInputProps) {
-  const [defaultValue, setValue] = useState(value);
+  const [defaultValue, setdefaultValue] = useState(value);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setdefaultValue(e.target.value);
+  };
+
+  useEffect(() => {
+    setValue?.(defaultValue);
+  }, [defaultValue]);
 
   return (
     <div className="form-input__wrapper">
@@ -20,7 +30,7 @@ function FormInput({
         className="form-input"
         id={id}
         value={defaultValue}
-        onChange={(event) => setValue(event.target.value)}
+        onChange={handleChange}
         placeholder=" "
       />
       <label htmlFor={id} className="form-input__label">{label}</label>

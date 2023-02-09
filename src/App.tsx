@@ -1,27 +1,20 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Form from './pages/Form/Form';
 import Messenger from './pages/Messenger/Messenger';
+import AuthRoute from './auth/Auth';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Form mode="login-phone" />,
+    element: <AuthRoute><Messenger /></AuthRoute>,
   },
   {
-    path: '/login-email',
-    element: <Form mode="login-email" />,
+    path: '/login',
+    element: <AuthRoute><Form mode="login-email" /></AuthRoute>,
   },
   {
-    path: '/register-phone',
-    element: <Form mode="register-phone" />,
-  },
-  {
-    path: '/register-email',
-    element: <Form mode="register-email" />,
-  },
-  {
-    path: '/messenger',
-    element: <Messenger />,
+    path: '/register',
+    element: <AuthRoute><Form mode="register-email" /></AuthRoute>,
   },
 ]);
 
