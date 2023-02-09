@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { singIn, singUp } from '../../API/api';
 import telegramLogo from '../../assets/img/telegramLogo.svg';
 import FormInput from '../../components/FormInput/FormInput';
+import AddAvatarButton from '../../components/AddAvatarButton/AddAvatarButton';
 import './Form.scss';
 
 interface FormProps {
@@ -13,6 +14,7 @@ function Form({ mode }: FormProps) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [avatar, setAvatar] = useState({ file: null });
 
   const data = {
     'login-email': {
@@ -48,10 +50,11 @@ function Form({ mode }: FormProps) {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    if (data[mode].changeModeButtonText === 'SIGN IN') {
-      singUp(name, email, password);
+    if (mode === 'register-email') {
+      console.log(avatar.file);
+      singUp(name, email, password, avatar.file);
     }
-    if (data[mode].changeModeButtonText === 'SIGN UP') {
+    if (mode === 'login-email') {
       singIn(email, password);
     }
   };
@@ -64,6 +67,7 @@ function Form({ mode }: FormProps) {
         <h2 className="form__subtitle">{data[mode].title}</h2>
         <form className="form__inputs" onSubmit={handleSubmit}>
           {data[mode].inputs}
+          {mode === 'register-email' && <AddAvatarButton setValue={setAvatar} />}
           <button type="submit" className="form__button">
             NEXT
           </button>
