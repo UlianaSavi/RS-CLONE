@@ -1,6 +1,7 @@
 import PopupMenuItem from '../PopupMenuItem/PopupMenuItem';
-import { SettingsIcon } from '../../assets/icons/icons';
 import './AttachPopup.scss';
+import { ReactComponent as ImageNVideoIcon } from '../../assets/icons/image-n-video.svg';
+import { ReactComponent as DocumentIcon } from '../../assets/icons/document.svg';
 
 interface AttachPopupProps {
   isVisible: boolean,
@@ -12,8 +13,8 @@ function AttachPopup({ isVisible, handleMouseLeave }: AttachPopupProps) {
 
   return (
     <nav className={`attach-popup ${isVisible ? 'active' : ''}`} onMouseLeave={handleMouseLeave}>
-      <PopupMenuItem label="Photo" icon={<SettingsIcon />} handleClick={click} />
-      <PopupMenuItem label="Document" icon={<SettingsIcon />} handleClick={click} />
+      <PopupMenuItem label="Photo" icon={<ImageNVideoIcon />} handleClick={click} />
+      <PopupMenuItem label="Document" icon={<DocumentIcon />} handleClick={click} />
     </nav>
   );
 }
