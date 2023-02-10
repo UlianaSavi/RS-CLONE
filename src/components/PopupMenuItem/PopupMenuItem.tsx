@@ -3,7 +3,7 @@ import './PopupMenuItem.scss';
 interface PopupMenuItemProps {
   label: string,
   icon: JSX.Element,
-  handleClick: () => void
+  handleClick?: () => void
 }
 
 function PopupMenuItem({ label, icon, handleClick }: PopupMenuItemProps) {
