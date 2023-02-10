@@ -20,28 +20,29 @@ interface ChatsListProps {
 function ChatsList({ activeChatId, setActiveChatId }: ChatsListProps) {
   // Chats list
   const currentUser: User = useContext(AuthContext) as User;
-
   const [chatsArr, setChatsArr] = useState([]);
 
-  const getUsers = async () => {
-    const q = query(collection(db, 'users'), where('uid', '!=', currentUser.uid));
-    const querySnapshot = await getDocs(q);
-    const chatsData: any = [];
-    querySnapshot.forEach((doc) => {
-      chatsData.push(doc.data());
-    });
-    console.log(chatsData);
-    setChatsArr(chatsData
-      .map((chat: User) => (
-        <ChatPreview
-          key={chat.uid}
-          data={chat}
-          isActive={chat.uid === activeChatId}
-          setActiveChatId={setActiveChatId}
-        />
-      )));
-  };
-  getUsers();
+  useEffect(() => {
+    const getUsers = async () => {
+      const q = query(collection(db, 'users'), where('uid', '!=', currentUser.uid));
+      const querySnapshot = await getDocs(q);
+      const chatsData: any = [];
+      querySnapshot.forEach((doc) => {
+        chatsData.push(doc.data());
+      });
+      console.log(chatsData);
+      setChatsArr(chatsData
+        .map((chat: User) => (
+          <ChatPreview
+            key={chat.uid}
+            data={chat}
+            isActive={chat.uid === activeChatId}
+            setActiveChatId={setActiveChatId}
+          />
+        )));
+    };
+    getUsers();
+  }, [activeChatId]);
 
   // Context menu
   const [showMenu, setShowMenu] = useState(false);
