@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import PopupMenuItem from '../PopupMenuItem/PopupMenuItem';
 import { SettingsIcon } from '../../assets/icons/icons';
-import './SettingsMenu.scss';
+import './SettingsPopap.scss';
 
 function SettingsMenu(props: { isOpen: boolean, onClose: () => void }) {
   const { isOpen, onClose } = props;

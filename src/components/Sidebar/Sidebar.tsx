@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import CreateButton from '../CreateButton/CreateButton';
-import SettingsMenu from '../SettingsMenu/SettingsMenu';
+import SettingsMenu from '../SettingsPopap/SettingsPopap';
 import SidebarContent from '../SidebarContent/SidebarContent';
 import SidebarHeader from '../SidebarHeader/SidebarHeader';
 import './Sidebar.scss';
