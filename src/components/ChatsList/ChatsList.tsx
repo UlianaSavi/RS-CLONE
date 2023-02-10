@@ -1,7 +1,15 @@
-import { useState, useEffect } from 'react';
+/* eslint-disable no-undef */
+import { useState, useEffect, useContext } from 'react';
+import {
+  collection, query, where, getDocs,
+} from 'firebase/firestore';
+import { db } from '../../firebaseConfig';
+import { AuthContext } from '../../auth/AuthContext';
+
 import ChatPreview from '../ChatPreview/ChatPreview';
 import ContextMenu from '../ContextMenu/ContextMenu';
-import type { UserData } from '../../types';
+
+import type { UserData, User } from '../../types';
 import './ChastList.scss';
 
 interface ChatsListProps {
@@ -11,6 +19,23 @@ interface ChatsListProps {
 }
 
 function ChatsList({ data, activeChatId, setActiveChatId }: ChatsListProps) {
+  // Chats list
+  const currentUser: User = useContext(AuthContext) as User;
+  console.log('you are: ', currentUser);
+
+  const chats: any = [];
+
+  const getUsers = async () => {
+    const q = query(collection(db, 'users'), where('uid', '!=', currentUser.uid));
+    const querySnapshot = await getDocs(q);
+    querySnapshot.forEach((doc) => {
+      // console.log(doc.id, ' => ', doc.data());
+      chats.push(doc.data());
+    });
+    console.log(chats);
+  };
+  getUsers();
+
   const chatsArr = data
     .map((chat) => (
       <ChatPreview
@@ -21,6 +46,7 @@ function ChatsList({ data, activeChatId, setActiveChatId }: ChatsListProps) {
       />
     ));
 
+  // Context menu
   const [showMenu, setShowMenu] = useState(false);
   const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
 
