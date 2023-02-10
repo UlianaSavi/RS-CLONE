@@ -4,6 +4,7 @@ import Form from './pages/Form/Form';
 import Messenger from './pages/Messenger/Messenger';
 import AuthRoute from './auth/Auth';
 import { AuthContext } from './auth/AuthContext';
+import type { User } from './types';
 
 const router = createBrowserRouter([
   {
@@ -21,8 +22,10 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  const currentUser = useContext(AuthContext);
-  console.log(currentUser);
+  const currentUser: User = useContext(AuthContext) as User;
+  const { uid } = currentUser;
+  console.log(uid);
+
   return (
     <section className="container">
       <RouterProvider router={router} />
