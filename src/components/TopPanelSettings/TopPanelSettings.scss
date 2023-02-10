@@ -20,6 +20,8 @@
   transform-origin: bottom right;
 
   &.active {
+    z-index: 3;
+
     opacity: 1;
     visibility: visible;
 
