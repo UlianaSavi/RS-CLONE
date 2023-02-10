@@ -4,7 +4,7 @@ import TopPanelTools from '../TopPanelTools/TopPanelTools';
 import TopPanelPinnedMessage from '../TopPanelPinnedMessage/TopPanelPinnedMessage';
 
 interface TopPanelProps {
-  activeChatId: number,
+  activeChatId: string,
   callback: () => void
 }
 

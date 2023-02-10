@@ -1,21 +1,21 @@
 import Avatar from '../Avatar/Avatar';
-import type { UserData } from '../../types';
+import type { User } from '../../types';
 import './ChatPreview.scss';
 
 interface ChatPreviewProps {
-  data: UserData,
+  data: User,
   isActive: boolean,
-  setActiveChatId: React.Dispatch<React.SetStateAction<number>>
+  setActiveChatId: React.Dispatch<React.SetStateAction<string>>
 }
 
 function ChatPreview({
   data, isActive, setActiveChatId,
 }: ChatPreviewProps) {
   const {
-    id, name, avatar, lastMessage, timeOfLastMessage, unreadMessages,
+    uid, displayName, photoURL,
   } = data;
 
-  const selectChat = () => setActiveChatId(id);
+  const selectChat = () => setActiveChatId(uid);
 
   return (
     <button
@@ -24,15 +24,15 @@ function ChatPreview({
       onClick={selectChat}
     >
       <div className="chat-preview-wrapper">
-        <Avatar image={avatar} />
+        <Avatar image={photoURL} />
         <div className="chat-preview-text">
-          <div className="chat-preview__title">{name}</div>
-          <div className="chat-preview__last-message">{lastMessage}</div>
+          <div className="chat-preview__title">{displayName}</div>
+          <div className="chat-preview__last-message">last message</div>
         </div>
       </div>
       <div className="chat-preview__info">
-        <div className="chat-preview__messenge-time">{timeOfLastMessage}</div>
-        {unreadMessages ? <div className="chat-preview__messenge-num">{unreadMessages}</div> : ''}
+        <div className="chat-preview__messenge-time">00:00</div>
+        <div className="chat-preview__messenge-num">42</div>
       </div>
     </button>
   );

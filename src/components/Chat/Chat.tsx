@@ -5,7 +5,7 @@ import './Chat.scss';
 import TopPanelSettings from '../TopPanelSettings/TopPanelSettings';
 
 interface ChatProps {
-  activeChatId: number
+  activeChatId: string
 }
 
 function Chat({ activeChatId }: ChatProps) {

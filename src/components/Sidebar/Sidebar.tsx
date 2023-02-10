@@ -6,8 +6,8 @@ import SidebarHeader from '../SidebarHeader/SidebarHeader';
 import './Sidebar.scss';
 
 interface SidebarProps {
-  activeChatId: number,
-  setActiveChatId: React.Dispatch<React.SetStateAction<number>>
+  activeChatId: string,
+  setActiveChatId: React.Dispatch<React.SetStateAction<string>>
 }
 
 function Sidebar({ activeChatId, setActiveChatId }: SidebarProps) {

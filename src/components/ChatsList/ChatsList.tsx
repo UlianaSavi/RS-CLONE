@@ -9,42 +9,40 @@ import { AuthContext } from '../../auth/AuthContext';
 import ChatPreview from '../ChatPreview/ChatPreview';
 import ContextMenu from '../ContextMenu/ContextMenu';
 
-import type { UserData, User } from '../../types';
+import type { User } from '../../types';
 import './ChastList.scss';
 
 interface ChatsListProps {
-  data: UserData[],
-  activeChatId: number,
-  setActiveChatId: React.Dispatch<React.SetStateAction<number>>
+  activeChatId: string,
+  setActiveChatId: React.Dispatch<React.SetStateAction<string>>
 }
 
-function ChatsList({ data, activeChatId, setActiveChatId }: ChatsListProps) {
+function ChatsList({ activeChatId, setActiveChatId }: ChatsListProps) {
   // Chats list
   const currentUser: User = useContext(AuthContext) as User;
-  console.log('you are: ', currentUser);
 
-  const chats: any = [];
+  const chatsData: any = [];
+
+  const [chatsArr, setChatsArr] = useState([]);
 
   const getUsers = async () => {
     const q = query(collection(db, 'users'), where('uid', '!=', currentUser.uid));
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
-      // console.log(doc.id, ' => ', doc.data());
-      chats.push(doc.data());
+      chatsData.push(doc.data());
     });
-    console.log(chats);
+    setChatsArr(chatsData
+      .map((chat: User) => (
+        <ChatPreview
+          key={chat.uid}
+          data={chat}
+          isActive={chat.uid === activeChatId}
+          setActiveChatId={setActiveChatId}
+        />
+      )));
   };
-  getUsers();
 
-  const chatsArr = data
-    .map((chat) => (
-      <ChatPreview
-        key={chat.name}
-        data={chat}
-        isActive={chat.id === activeChatId}
-        setActiveChatId={setActiveChatId}
-      />
-    ));
+  getUsers();
 
   // Context menu
   const [showMenu, setShowMenu] = useState(false);

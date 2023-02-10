@@ -4,7 +4,7 @@ import Sidebar from '../../components/Sidebar/Sidebar';
 import './Messenger.scss';
 
 function Messenger() {
-  const [activeChatId, setActiveChatId] = useState(1);
+  const [activeChatId, setActiveChatId] = useState('');
 
   return (
     <div className="messenger">
