@@ -28,7 +28,6 @@ export const emojisArray = [
       'good',
       'selfie',
     ],
-    version: '1.0',
   },
   {
     id: 2,
@@ -59,7 +58,6 @@ export const emojisArray = [
       'good',
       'selfie',
     ],
-    version: '0.6',
   },
   {
     id: 3,
@@ -92,7 +90,6 @@ export const emojisArray = [
       'cry',
       'sarcastic',
     ],
-    version: '0.6',
   },
   {
     id: 4,
@@ -125,7 +122,6 @@ export const emojisArray = [
       'cry',
       'sarcastic',
     ],
-    version: '3.0',
   },
   {
     id: 5,
@@ -158,7 +154,6 @@ export const emojisArray = [
       'cry',
       'sarcastic',
     ],
-    version: '0.6',
   },
   {
     id: 6,
@@ -191,7 +186,6 @@ export const emojisArray = [
       'sarcastic',
       'eyes',
     ],
-    version: '0.6',
   },
   {
     id: 7,
@@ -225,7 +219,6 @@ export const emojisArray = [
       'cold',
       'workout',
     ],
-    version: '0.6',
   },
   {
     id: 8,
@@ -259,7 +252,6 @@ export const emojisArray = [
       'eyes',
       'cry',
     ],
-    version: '0.6',
   },
   {
     id: 9,
@@ -289,7 +281,6 @@ export const emojisArray = [
       'eyes',
       'silly',
     ],
-    version: '0.6',
   },
   {
     id: 10,
@@ -321,7 +312,6 @@ export const emojisArray = [
       'cheeks',
       'red',
     ],
-    version: '0.6',
   },
   {
     id: 11,
@@ -351,7 +341,6 @@ export const emojisArray = [
       'good',
       'eat',
     ],
-    version: '0.6',
   },
   {
     id: 12,
@@ -381,7 +370,6 @@ export const emojisArray = [
       'boys',
       'night',
     ],
-    version: '1.0',
   },
   {
     id: 13,
@@ -407,7 +395,6 @@ export const emojisArray = [
       'emotion',
       'beautiful',
     ],
-    version: '0.6',
   },
   {
     id: 14,
@@ -433,7 +420,6 @@ export const emojisArray = [
       'heart',
       'lips',
     ],
-    version: '0.6',
   },
   {
     id: 15,
@@ -457,7 +443,6 @@ export const emojisArray = [
       'beautiful',
       'lips',
     ],
-    version: '1.0',
   },
   {
     id: 16,
@@ -483,7 +468,6 @@ export const emojisArray = [
       'happy',
       'cool',
     ],
-    version: '1.0',
   },
   {
     id: 17,
@@ -509,7 +493,6 @@ export const emojisArray = [
       'red',
       'cheeks',
     ],
-    version: '0.6',
   },
   {
     id: 18,
@@ -531,7 +514,6 @@ export const emojisArray = [
       'red',
       'cheeks',
     ],
-    version: '0.6',
   },
   {
     id: 19,
@@ -561,7 +543,6 @@ export const emojisArray = [
       'good',
       'selfie',
     ],
-    version: '1.0',
   },
   {
     id: 20,
@@ -581,7 +562,6 @@ export const emojisArray = [
       'hug',
       'thank you',
     ],
-    version: '1.0',
   },
   {
     id: 21,
@@ -601,7 +581,6 @@ export const emojisArray = [
       'famous',
       'admiration',
     ],
-    version: '5.0',
   },
   {
     id: 22,
@@ -620,7 +599,6 @@ export const emojisArray = [
     keywords: [
       'think',
     ],
-    version: '1.0',
   },
   {
     id: 23,
@@ -639,7 +617,6 @@ export const emojisArray = [
     keywords: [
       'understanding',
     ],
-    version: '5.0',
   },
   {
     id: 24,
@@ -660,7 +637,6 @@ export const emojisArray = [
       'shrug',
       'expressionless',
     ],
-    version: '0.7',
   },
   {
     id: 25,
@@ -680,7 +656,6 @@ export const emojisArray = [
       'neutral',
       'emotion',
     ],
-    version: '1.0',
   },
   {
     id: 26,
@@ -700,7 +675,6 @@ export const emojisArray = [
       'neutral',
       'expressionless',
     ],
-    version: '1.0',
   },
   {
     id: 27,
@@ -717,7 +691,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 28,
@@ -739,7 +712,6 @@ export const emojisArray = [
       'sex',
       'erotic',
     ],
-    version: '0.6',
   },
   {
     id: 29,
@@ -763,7 +735,6 @@ export const emojisArray = [
       'bad',
       'disappointed',
     ],
-    version: '0.6',
   },
   {
     id: 30,
@@ -791,7 +762,6 @@ export const emojisArray = [
       'unhappy',
       'bad',
     ],
-    version: '0.6',
   },
   {
     id: 31,
@@ -813,7 +783,6 @@ export const emojisArray = [
       'surprised',
       'wow',
     ],
-    version: '1.0',
   },
   {
     id: 32,
@@ -834,7 +803,6 @@ export const emojisArray = [
       'mad',
       'mute',
     ],
-    version: '1.0',
   },
   {
     id: 33,
@@ -855,7 +823,6 @@ export const emojisArray = [
       'surprised',
       'wow',
     ],
-    version: '1.0',
   },
   {
     id: 34,
@@ -879,7 +846,6 @@ export const emojisArray = [
       'ill',
       'nauseated',
     ],
-    version: '0.6',
   },
   {
     id: 35,
@@ -903,7 +869,6 @@ export const emojisArray = [
       'bad',
       'unhappy',
     ],
-    version: '0.6',
   },
   {
     id: 36,
@@ -926,7 +891,6 @@ export const emojisArray = [
       'bed',
       'dream',
     ],
-    version: '1.0',
   },
   {
     id: 37,
@@ -947,7 +911,6 @@ export const emojisArray = [
       'cool',
       'good',
     ],
-    version: '0.6',
   },
   {
     id: 38,
@@ -972,7 +935,6 @@ export const emojisArray = [
       'spoof',
       'parties',
     ],
-    version: '1.0',
   },
   {
     id: 39,
@@ -999,7 +961,6 @@ export const emojisArray = [
       'laugh',
       'spoof',
     ],
-    version: '0.6',
   },
   {
     id: 40,
@@ -1026,7 +987,6 @@ export const emojisArray = [
       'laugh',
       'spoof',
     ],
-    version: '0.6',
   },
   {
     id: 41,
@@ -1050,7 +1010,6 @@ export const emojisArray = [
       'ill',
       'nauseated',
     ],
-    version: '3.0',
   },
   {
     id: 42,
@@ -1074,7 +1033,6 @@ export const emojisArray = [
       'unhappy',
       'bad',
     ],
-    version: '0.6',
   },
   {
     id: 43,
@@ -1100,7 +1058,6 @@ export const emojisArray = [
       'bad',
       'sweat',
     ],
-    version: '0.6',
   },
   {
     id: 44,
@@ -1123,7 +1080,6 @@ export const emojisArray = [
       'bad',
       'bad',
     ],
-    version: '0.6',
   },
   {
     id: 45,
@@ -1147,7 +1103,6 @@ export const emojisArray = [
       'bad',
       'sweat',
     ],
-    version: '1.0',
   },
   {
     id: 46,
@@ -1168,7 +1123,6 @@ export const emojisArray = [
       'joke',
       'mad',
     ],
-    version: '1.0',
   },
   {
     id: 47,
@@ -1192,7 +1146,6 @@ export const emojisArray = [
       'rich',
       'dollar',
     ],
-    version: '1.0',
   },
   {
     id: 48,
@@ -1213,7 +1166,6 @@ export const emojisArray = [
       'wow',
       'omg',
     ],
-    version: '0.6',
   },
   {
     id: 49,
@@ -1237,7 +1189,6 @@ export const emojisArray = [
       'bad',
       'disappointed',
     ],
-    version: '0.7',
   },
   {
     id: 50,
@@ -1261,7 +1212,6 @@ export const emojisArray = [
       'bad',
       'disappointed',
     ],
-    version: '1.0',
   },
   {
     id: 51,
@@ -1285,7 +1235,6 @@ export const emojisArray = [
       'vomiting',
       'disappointed',
     ],
-    version: '0.6',
   },
   {
     id: 52,
@@ -1309,7 +1258,6 @@ export const emojisArray = [
       'unhappy',
       'bad',
     ],
-    version: '0.6',
   },
   {
     id: 53,
@@ -1333,7 +1281,6 @@ export const emojisArray = [
       'unhappy',
       'bad',
     ],
-    version: '1.0',
   },
   {
     id: 54,
@@ -1358,7 +1305,6 @@ export const emojisArray = [
       'steam',
       'anger',
     ],
-    version: '0.6',
   },
   {
     id: 55,
@@ -1383,7 +1329,6 @@ export const emojisArray = [
       'bad',
       'unhappy',
     ],
-    version: '0.6',
   },
   {
     id: 56,
@@ -1409,7 +1354,6 @@ export const emojisArray = [
       'bad',
       'unhappy',
     ],
-    version: '0.6',
   },
   {
     id: 57,
@@ -1431,7 +1375,6 @@ export const emojisArray = [
       'surprised',
       'emotion',
     ],
-    version: '1.0',
   },
   {
     id: 58,
@@ -1453,7 +1396,6 @@ export const emojisArray = [
       'surprised',
       'emotion',
     ],
-    version: '1.0',
   },
   {
     id: 59,
@@ -1475,7 +1417,6 @@ export const emojisArray = [
       'surprised',
       'emotion',
     ],
-    version: '0.6',
   },
   {
     id: 60,
@@ -1497,7 +1438,6 @@ export const emojisArray = [
       'stressed',
       'emotion',
     ],
-    version: '0.6',
   },
   {
     id: 61,
@@ -1520,7 +1460,6 @@ export const emojisArray = [
       'emotion',
       'bomb',
     ],
-    version: '5.0',
   },
   {
     id: 62,
@@ -1543,7 +1482,6 @@ export const emojisArray = [
       'selfie',
       'squinting',
     ],
-    version: '1.0',
   },
   {
     id: 63,
@@ -1564,7 +1502,6 @@ export const emojisArray = [
       'smiley',
       'emotion',
     ],
-    version: '0.6',
   },
   {
     id: 64,
@@ -1586,7 +1523,6 @@ export const emojisArray = [
       'emotion',
       'omg',
     ],
-    version: '0.6',
   },
   {
     id: 65,
@@ -1608,7 +1544,6 @@ export const emojisArray = [
       'emotion',
       'omg',
     ],
-    version: '0.6',
   },
   {
     id: 66,
@@ -1629,7 +1564,6 @@ export const emojisArray = [
       'joke',
       'mad',
     ],
-    version: '5.0',
   },
   {
     id: 67,
@@ -1652,7 +1586,6 @@ export const emojisArray = [
       'emotion',
       'omg',
     ],
-    version: '0.6',
   },
   {
     id: 68,
@@ -1675,7 +1608,6 @@ export const emojisArray = [
       'emotion',
       'red',
     ],
-    version: '0.6',
   },
   {
     id: 69,
@@ -1694,7 +1626,6 @@ export const emojisArray = [
     keywords: [
       'irritated',
     ],
-    version: '0.6',
   },
   {
     id: 70,
@@ -1716,7 +1647,6 @@ export const emojisArray = [
       'zipper',
       'red',
     ],
-    version: '5.0',
   },
   {
     id: 71,
@@ -1740,7 +1670,6 @@ export const emojisArray = [
       'doctor',
       'dentist',
     ],
-    version: '0.6',
   },
   {
     id: 72,
@@ -1762,7 +1691,6 @@ export const emojisArray = [
       'ill',
       'covid',
     ],
-    version: '1.0',
   },
   {
     id: 73,
@@ -1783,7 +1711,6 @@ export const emojisArray = [
       'sick',
       'hospital',
     ],
-    version: '1.0',
   },
   {
     id: 74,
@@ -1804,7 +1731,6 @@ export const emojisArray = [
       'ill',
       'vomiting',
     ],
-    version: '3.0',
   },
   {
     id: 75,
@@ -1826,7 +1752,6 @@ export const emojisArray = [
       'nauseated',
       'vomit',
     ],
-    version: '5.0',
   },
   {
     id: 76,
@@ -1850,7 +1775,6 @@ export const emojisArray = [
       'glanders',
       'handkerchiefs',
     ],
-    version: '3.0',
   },
   {
     id: 77,
@@ -1871,7 +1795,6 @@ export const emojisArray = [
       'angel',
       'religion',
     ],
-    version: '1.0',
   },
   {
     id: 78,
@@ -1891,7 +1814,6 @@ export const emojisArray = [
       'far west',
       'lucky luck',
     ],
-    version: '3.0',
   },
   {
     id: 79,
@@ -1912,7 +1834,6 @@ export const emojisArray = [
       'pinocchio',
       'noise',
     ],
-    version: '3.0',
   },
   {
     id: 80,
@@ -1932,7 +1853,6 @@ export const emojisArray = [
       'silence',
       'noise',
     ],
-    version: '5.0',
   },
   {
     id: 81,
@@ -1951,7 +1871,6 @@ export const emojisArray = [
     keywords: [
       'oups',
     ],
-    version: '5.0',
   },
   {
     id: 82,
@@ -1971,7 +1890,6 @@ export const emojisArray = [
       'glasses',
       'nerd',
     ],
-    version: '5.0',
   },
   {
     id: 83,
@@ -1990,7 +1908,6 @@ export const emojisArray = [
     keywords: [
       'glasses',
     ],
-    version: '1.0',
   },
   {
     id: 84,
@@ -2014,7 +1931,6 @@ export const emojisArray = [
       'boys',
       'night',
     ],
-    version: '1.0',
   },
   {
     id: 85,
@@ -2034,7 +1950,6 @@ export const emojisArray = [
       'monster',
       'devil',
     ],
-    version: '0.6',
   },
   {
     id: 86,
@@ -2056,7 +1971,6 @@ export const emojisArray = [
       'circus',
       'fancy',
     ],
-    version: '3.0',
   },
   {
     id: 87,
@@ -2076,7 +1990,6 @@ export const emojisArray = [
       'japanese',
       'monster',
     ],
-    version: '0.6',
   },
   {
     id: 88,
@@ -2097,7 +2010,6 @@ export const emojisArray = [
       'angry',
       'monster',
     ],
-    version: '0.6',
   },
   {
     id: 89,
@@ -2117,7 +2029,6 @@ export const emojisArray = [
       'dead',
       'halloween',
     ],
-    version: '0.6',
   },
   {
     id: 90,
@@ -2138,7 +2049,6 @@ export const emojisArray = [
       'pirate',
       'toxique',
     ],
-    version: '1.0',
   },
   {
     id: 91,
@@ -2158,7 +2068,6 @@ export const emojisArray = [
       'halloween',
       'monster',
     ],
-    version: '0.6',
   },
   {
     id: 92,
@@ -2180,7 +2089,6 @@ export const emojisArray = [
       'monster',
       'scientology',
     ],
-    version: '0.6',
   },
   {
     id: 93,
@@ -2201,7 +2109,6 @@ export const emojisArray = [
       'space',
       'scientology',
     ],
-    version: '0.6',
   },
   {
     id: 94,
@@ -2221,7 +2128,6 @@ export const emojisArray = [
       'terminator',
       'humanoid',
     ],
-    version: '1.0',
   },
   {
     id: 95,
@@ -2244,7 +2150,6 @@ export const emojisArray = [
       'diarrhea',
       'caca',
     ],
-    version: '0.6',
   },
   {
     id: 96,
@@ -2264,7 +2169,6 @@ export const emojisArray = [
       'smile',
       'happy',
     ],
-    version: '0.6',
   },
   {
     id: 97,
@@ -2284,7 +2188,6 @@ export const emojisArray = [
       'happy',
       'smile',
     ],
-    version: '0.6',
   },
   {
     id: 98,
@@ -2307,7 +2210,6 @@ export const emojisArray = [
       'laugh',
       'sarcastic',
     ],
-    version: '0.6',
   },
   {
     id: 99,
@@ -2333,7 +2235,6 @@ export const emojisArray = [
       'emotion',
       'beautiful',
     ],
-    version: '0.6',
   },
   {
     id: 100,
@@ -2350,7 +2251,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 101,
@@ -2374,7 +2274,6 @@ export const emojisArray = [
       'beautiful',
       'lips',
     ],
-    version: '0.6',
   },
   {
     id: 102,
@@ -2393,7 +2292,6 @@ export const emojisArray = [
     keywords: [
       'scared',
     ],
-    version: '0.6',
   },
   {
     id: 103,
@@ -2419,7 +2317,6 @@ export const emojisArray = [
       'bad',
       'unhappy',
     ],
-    version: '0.6',
   },
   {
     id: 104,
@@ -2442,7 +2339,6 @@ export const emojisArray = [
       'emotion',
       'red',
     ],
-    version: '0.6',
   },
   {
     id: 105,
@@ -2464,7 +2360,6 @@ export const emojisArray = [
       'hide',
       'blind',
     ],
-    version: '0.6',
   },
   {
     id: 106,
@@ -2484,7 +2379,6 @@ export const emojisArray = [
       'hears',
       'deaf',
     ],
-    version: '0.6',
   },
   {
     id: 107,
@@ -2503,7 +2397,6 @@ export const emojisArray = [
     keywords: [
       'mute',
     ],
-    version: '0.6',
   },
   {
     id: 108,
@@ -2532,7 +2425,6 @@ export const emojisArray = [
           id: 32,
           name: 'skin-tone',
         },
-        version: '1.0',
       },
       {
         id: 109,
@@ -2547,7 +2439,6 @@ export const emojisArray = [
           id: 32,
           name: 'skin-tone',
         },
-        version: '1.0',
       },
       {
         id: 110,
@@ -2562,7 +2453,6 @@ export const emojisArray = [
           id: 32,
           name: 'skin-tone',
         },
-        version: '1.0',
       },
       {
         id: 111,
@@ -2577,7 +2467,6 @@ export const emojisArray = [
           id: 32,
           name: 'skin-tone',
         },
-        version: '1.0',
       },
       {
         id: 112,
@@ -2592,14 +2481,12 @@ export const emojisArray = [
           id: 32,
           name: 'skin-tone',
         },
-        version: '1.0',
       },
     ],
     keywords: [
       'square',
       'beige',
     ],
-    version: '1.0',
   },
   {
     id: 113,
@@ -2628,7 +2515,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 115,
@@ -2643,7 +2529,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 116,
@@ -2658,7 +2543,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 117,
@@ -2673,7 +2557,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 118,
@@ -2688,7 +2571,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
     ],
     keywords: [
@@ -2696,7 +2578,6 @@ export const emojisArray = [
       'diversity',
       'human',
     ],
-    version: '0.6',
   },
   {
     id: 119,
@@ -2725,7 +2606,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '5.0',
       },
       {
         id: 121,
@@ -2740,7 +2620,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '5.0',
       },
       {
         id: 122,
@@ -2755,7 +2634,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '5.0',
       },
       {
         id: 123,
@@ -2770,7 +2648,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '5.0',
       },
       {
         id: 124,
@@ -2785,13 +2662,11 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '5.0',
       },
     ],
     keywords: [
       'human',
     ],
-    version: '5.0',
   },
   {
     id: 125,
@@ -2820,7 +2695,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 127,
@@ -2835,7 +2709,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 128,
@@ -2850,7 +2723,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 129,
@@ -2865,7 +2737,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 130,
@@ -2880,7 +2751,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
     ],
     keywords: [
@@ -2891,7 +2761,6 @@ export const emojisArray = [
       'human',
       'son',
     ],
-    version: '0.6',
   },
   {
     id: 131,
@@ -2920,7 +2789,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 133,
@@ -2935,7 +2803,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 134,
@@ -2950,7 +2817,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 135,
@@ -2965,7 +2831,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 136,
@@ -2980,7 +2845,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
     ],
     keywords: [
@@ -2991,7 +2855,6 @@ export const emojisArray = [
       'human',
       'daughter',
     ],
-    version: '0.6',
   },
   {
     id: 137,
@@ -3020,7 +2883,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '5.0',
       },
       {
         id: 139,
@@ -3035,7 +2897,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '5.0',
       },
       {
         id: 140,
@@ -3050,7 +2911,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '5.0',
       },
       {
         id: 141,
@@ -3065,7 +2925,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '5.0',
       },
       {
         id: 142,
@@ -3080,14 +2939,12 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '5.0',
       },
     ],
     keywords: [
       'human',
       'parent',
     ],
-    version: '5.0',
   },
   {
     id: 143,
@@ -3116,7 +2973,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 145,
@@ -3131,7 +2987,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 146,
@@ -3146,7 +3001,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 147,
@@ -3161,7 +3015,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 148,
@@ -3176,7 +3029,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
     ],
     keywords: [
@@ -3191,7 +3043,6 @@ export const emojisArray = [
       'parent',
       'uncle',
     ],
-    version: '0.6',
   },
   {
     id: 149,
@@ -3220,7 +3071,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 151,
@@ -3235,7 +3085,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 152,
@@ -3250,7 +3099,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 153,
@@ -3265,7 +3113,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 154,
@@ -3280,7 +3127,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
     ],
     keywords: [
@@ -3297,7 +3143,6 @@ export const emojisArray = [
       'parent',
       'aunt',
     ],
-    version: '0.6',
   },
   {
     id: 155,
@@ -3326,7 +3171,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '5.0',
       },
       {
         id: 157,
@@ -3341,7 +3185,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '5.0',
       },
       {
         id: 158,
@@ -3356,7 +3199,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '5.0',
       },
       {
         id: 159,
@@ -3371,7 +3213,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '5.0',
       },
       {
         id: 160,
@@ -3386,14 +3227,12 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '5.0',
       },
     ],
     keywords: [
       'human',
       'grand parent',
     ],
-    version: '5.0',
   },
   {
     id: 161,
@@ -3422,7 +3261,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 163,
@@ -3437,7 +3275,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 164,
@@ -3452,7 +3289,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 165,
@@ -3467,7 +3303,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 166,
@@ -3482,7 +3317,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
     ],
     keywords: [
@@ -3492,7 +3326,6 @@ export const emojisArray = [
       'human',
       'grandfather',
     ],
-    version: '0.6',
   },
   {
     id: 167,
@@ -3521,7 +3354,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 169,
@@ -3536,7 +3368,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 170,
@@ -3551,7 +3382,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 171,
@@ -3566,7 +3396,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 172,
@@ -3581,7 +3410,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
     ],
     keywords: [
@@ -3591,7 +3419,6 @@ export const emojisArray = [
       'human',
       'grandmother',
     ],
-    version: '0.6',
   },
   {
     id: 173,
@@ -3620,7 +3447,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 175,
@@ -3635,7 +3461,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 176,
@@ -3650,7 +3475,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 177,
@@ -3665,7 +3489,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 178,
@@ -3680,13 +3503,11 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'doctor',
     ],
-    version: '4.0',
   },
   {
     id: 179,
@@ -3715,7 +3536,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 181,
@@ -3730,7 +3550,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 182,
@@ -3745,7 +3564,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 183,
@@ -3760,7 +3578,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 184,
@@ -3775,13 +3592,11 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'doctor',
     ],
-    version: '4.0',
   },
   {
     id: 185,
@@ -3810,7 +3625,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 187,
@@ -3825,7 +3639,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 188,
@@ -3840,7 +3653,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 189,
@@ -3855,7 +3667,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 190,
@@ -3870,7 +3681,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -3879,7 +3689,6 @@ export const emojisArray = [
       'pupil',
       'university',
     ],
-    version: '4.0',
   },
   {
     id: 191,
@@ -3908,7 +3717,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 193,
@@ -3923,7 +3731,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 194,
@@ -3938,7 +3745,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 195,
@@ -3953,7 +3759,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 196,
@@ -3968,7 +3773,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -3977,7 +3781,6 @@ export const emojisArray = [
       'pupil',
       'university',
     ],
-    version: '4.0',
   },
   {
     id: 197,
@@ -4006,7 +3809,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 199,
@@ -4021,7 +3823,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 200,
@@ -4036,7 +3837,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 201,
@@ -4051,7 +3851,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 202,
@@ -4066,7 +3865,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -4074,7 +3872,6 @@ export const emojisArray = [
       'study',
       'university',
     ],
-    version: '4.0',
   },
   {
     id: 203,
@@ -4103,7 +3900,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 205,
@@ -4118,7 +3914,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 206,
@@ -4133,7 +3928,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 207,
@@ -4148,7 +3942,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 208,
@@ -4163,7 +3956,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -4171,7 +3963,6 @@ export const emojisArray = [
       'study',
       'university',
     ],
-    version: '4.0',
   },
   {
     id: 209,
@@ -4200,7 +3991,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 211,
@@ -4215,7 +4005,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 212,
@@ -4230,7 +4019,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 213,
@@ -4245,7 +4033,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 214,
@@ -4260,7 +4047,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 2709,
@@ -4275,7 +4061,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 2710,
@@ -4290,7 +4075,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 2711,
@@ -4305,7 +4089,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 2712,
@@ -4320,7 +4103,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 2713,
@@ -4335,7 +4117,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -4344,7 +4125,6 @@ export const emojisArray = [
       'jail',
       'murder',
     ],
-    version: '4.0',
   },
   {
     id: 215,
@@ -4373,7 +4153,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 217,
@@ -4388,7 +4167,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 218,
@@ -4403,7 +4181,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 219,
@@ -4418,7 +4195,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 220,
@@ -4433,7 +4209,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 2715,
@@ -4448,7 +4223,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 2716,
@@ -4463,7 +4237,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 2717,
@@ -4478,7 +4251,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 2718,
@@ -4493,7 +4265,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 2719,
@@ -4508,7 +4279,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -4517,7 +4287,6 @@ export const emojisArray = [
       'jail',
       'murder',
     ],
-    version: '4.0',
   },
   {
     id: 221,
@@ -4546,7 +4315,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 223,
@@ -4561,7 +4329,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 224,
@@ -4576,7 +4343,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 225,
@@ -4591,7 +4357,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 226,
@@ -4606,13 +4371,11 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'farm',
     ],
-    version: '4.0',
   },
   {
     id: 227,
@@ -4641,7 +4404,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 229,
@@ -4656,7 +4418,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 230,
@@ -4671,7 +4432,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 231,
@@ -4686,7 +4446,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 232,
@@ -4701,13 +4460,11 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'farm',
     ],
-    version: '4.0',
   },
   {
     id: 233,
@@ -4736,7 +4493,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 235,
@@ -4751,7 +4507,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 236,
@@ -4766,7 +4521,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 237,
@@ -4781,7 +4535,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 238,
@@ -4796,7 +4549,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -4804,7 +4556,6 @@ export const emojisArray = [
       'restaurant',
       'meal',
     ],
-    version: '4.0',
   },
   {
     id: 239,
@@ -4833,7 +4584,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 241,
@@ -4848,7 +4598,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 242,
@@ -4863,7 +4612,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 243,
@@ -4878,7 +4626,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 244,
@@ -4893,7 +4640,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -4901,7 +4647,6 @@ export const emojisArray = [
       'restaurant',
       'meal',
     ],
-    version: '4.0',
   },
   {
     id: 245,
@@ -4930,7 +4675,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 247,
@@ -4945,7 +4689,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 248,
@@ -4960,7 +4703,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 249,
@@ -4975,7 +4717,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 250,
@@ -4990,7 +4731,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -4999,7 +4739,6 @@ export const emojisArray = [
       'garage',
       'motorbike',
     ],
-    version: '4.0',
   },
   {
     id: 251,
@@ -5028,7 +4767,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 253,
@@ -5043,7 +4781,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 254,
@@ -5058,7 +4795,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 255,
@@ -5073,7 +4809,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 256,
@@ -5088,7 +4823,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -5097,7 +4831,6 @@ export const emojisArray = [
       'garage',
       'motorbike',
     ],
-    version: '4.0',
   },
   {
     id: 257,
@@ -5126,7 +4859,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 259,
@@ -5141,7 +4873,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 260,
@@ -5156,7 +4887,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 261,
@@ -5171,7 +4901,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 262,
@@ -5186,11 +4915,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [],
-    version: '4.0',
   },
   {
     id: 263,
@@ -5219,7 +4946,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 265,
@@ -5234,7 +4960,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 266,
@@ -5249,7 +4974,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 267,
@@ -5264,7 +4988,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 268,
@@ -5279,11 +5002,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [],
-    version: '4.0',
   },
   {
     id: 269,
@@ -5312,7 +5033,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 271,
@@ -5327,7 +5047,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 272,
@@ -5342,7 +5061,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 273,
@@ -5357,7 +5075,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 274,
@@ -5372,14 +5089,12 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'tie',
       'suit',
     ],
-    version: '4.0',
   },
   {
     id: 275,
@@ -5408,7 +5123,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 277,
@@ -5423,7 +5137,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 278,
@@ -5438,7 +5151,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 279,
@@ -5453,7 +5165,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 280,
@@ -5468,13 +5179,11 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'suit',
     ],
-    version: '4.0',
   },
   {
     id: 281,
@@ -5503,7 +5212,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 283,
@@ -5518,7 +5226,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 284,
@@ -5533,7 +5240,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 285,
@@ -5548,7 +5254,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 286,
@@ -5563,7 +5268,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -5571,7 +5275,6 @@ export const emojisArray = [
       'chemist',
       'chemistry',
     ],
-    version: '4.0',
   },
   {
     id: 287,
@@ -5600,7 +5303,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 289,
@@ -5615,7 +5317,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 290,
@@ -5630,7 +5331,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 291,
@@ -5645,7 +5345,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 292,
@@ -5660,7 +5359,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -5668,7 +5366,6 @@ export const emojisArray = [
       'chemist',
       'chemistry',
     ],
-    version: '4.0',
   },
   {
     id: 293,
@@ -5697,7 +5394,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 295,
@@ -5712,7 +5408,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 296,
@@ -5727,7 +5422,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 297,
@@ -5742,7 +5436,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 298,
@@ -5757,7 +5450,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -5769,7 +5461,6 @@ export const emojisArray = [
       'work',
       'macbook',
     ],
-    version: '4.0',
   },
   {
     id: 299,
@@ -5798,7 +5489,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 301,
@@ -5813,7 +5503,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 302,
@@ -5828,7 +5517,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 303,
@@ -5843,7 +5531,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 304,
@@ -5858,7 +5545,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -5870,7 +5556,6 @@ export const emojisArray = [
       'work',
       'macbook',
     ],
-    version: '4.0',
   },
   {
     id: 305,
@@ -5899,7 +5584,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 307,
@@ -5914,7 +5598,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 308,
@@ -5929,7 +5612,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 309,
@@ -5944,7 +5626,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 310,
@@ -5959,7 +5640,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -5970,7 +5650,6 @@ export const emojisArray = [
       'microphone',
       'micro',
     ],
-    version: '4.0',
   },
   {
     id: 311,
@@ -5999,7 +5678,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 313,
@@ -6014,7 +5692,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 314,
@@ -6029,7 +5706,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 315,
@@ -6044,7 +5720,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 316,
@@ -6059,7 +5734,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -6070,7 +5744,6 @@ export const emojisArray = [
       'microphone',
       'micro',
     ],
-    version: '4.0',
   },
   {
     id: 317,
@@ -6099,7 +5772,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 319,
@@ -6114,7 +5786,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 320,
@@ -6129,7 +5800,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 321,
@@ -6144,7 +5814,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 322,
@@ -6159,7 +5828,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -6168,7 +5836,6 @@ export const emojisArray = [
       'painter',
       'brush',
     ],
-    version: '4.0',
   },
   {
     id: 323,
@@ -6197,7 +5864,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 325,
@@ -6212,7 +5878,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 326,
@@ -6227,7 +5892,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 327,
@@ -6242,7 +5906,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 328,
@@ -6257,7 +5920,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -6266,7 +5928,6 @@ export const emojisArray = [
       'painter',
       'brush',
     ],
-    version: '4.0',
   },
   {
     id: 329,
@@ -6295,7 +5956,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 331,
@@ -6310,7 +5970,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 332,
@@ -6325,7 +5984,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 333,
@@ -6340,7 +5998,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 334,
@@ -6355,7 +6012,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -6364,7 +6020,6 @@ export const emojisArray = [
       'airport',
       'fly',
     ],
-    version: '4.0',
   },
   {
     id: 335,
@@ -6393,7 +6048,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 337,
@@ -6408,7 +6062,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 338,
@@ -6423,7 +6076,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 339,
@@ -6438,7 +6090,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 340,
@@ -6453,7 +6104,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -6462,7 +6112,6 @@ export const emojisArray = [
       'airport',
       'fly',
     ],
-    version: '4.0',
   },
   {
     id: 341,
@@ -6491,7 +6140,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 343,
@@ -6506,7 +6154,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 344,
@@ -6521,7 +6168,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 345,
@@ -6536,7 +6182,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 346,
@@ -6551,7 +6196,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -6562,7 +6206,6 @@ export const emojisArray = [
       'spaceman',
       'suit',
     ],
-    version: '4.0',
   },
   {
     id: 347,
@@ -6591,7 +6234,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 349,
@@ -6606,7 +6248,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 350,
@@ -6621,7 +6262,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 351,
@@ -6636,7 +6276,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 352,
@@ -6651,7 +6290,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -6662,7 +6300,6 @@ export const emojisArray = [
       'spacewoman',
       'suit',
     ],
-    version: '4.0',
   },
   {
     id: 353,
@@ -6691,7 +6328,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 355,
@@ -6706,7 +6342,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 356,
@@ -6721,7 +6356,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 357,
@@ -6736,7 +6370,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 358,
@@ -6751,7 +6384,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -6759,7 +6391,6 @@ export const emojisArray = [
       'suit',
       'helmet',
     ],
-    version: '4.0',
   },
   {
     id: 359,
@@ -6788,7 +6419,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 361,
@@ -6803,7 +6433,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 362,
@@ -6818,7 +6447,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 363,
@@ -6833,7 +6461,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 364,
@@ -6848,7 +6475,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -6856,7 +6482,6 @@ export const emojisArray = [
       'suit',
       'helmet',
     ],
-    version: '4.0',
   },
   {
     id: 365,
@@ -6885,7 +6510,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 367,
@@ -6900,7 +6524,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 368,
@@ -6915,7 +6538,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 369,
@@ -6930,7 +6552,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 370,
@@ -6945,7 +6566,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -6953,7 +6573,6 @@ export const emojisArray = [
       'jail',
       'handcuffs',
     ],
-    version: '4.0',
   },
   {
     id: 371,
@@ -6982,7 +6601,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 373,
@@ -6997,7 +6615,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 374,
@@ -7012,7 +6629,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 375,
@@ -7027,7 +6643,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 376,
@@ -7042,7 +6657,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -7050,7 +6664,6 @@ export const emojisArray = [
       'jail',
       'handcuffs',
     ],
-    version: '4.0',
   },
   {
     id: 377,
@@ -7079,7 +6692,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 379,
@@ -7094,7 +6706,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 380,
@@ -7109,7 +6720,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 381,
@@ -7124,7 +6734,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 382,
@@ -7139,7 +6748,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -7147,7 +6755,6 @@ export const emojisArray = [
       'riddle',
       'magnifying glass',
     ],
-    version: '4.0',
   },
   {
     id: 383,
@@ -7176,7 +6783,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 385,
@@ -7191,7 +6797,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 386,
@@ -7206,7 +6811,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 387,
@@ -7221,7 +6825,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 388,
@@ -7236,7 +6839,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -7244,7 +6846,6 @@ export const emojisArray = [
       'riddle',
       'magnifying glass',
     ],
-    version: '4.0',
   },
   {
     id: 389,
@@ -7273,7 +6874,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 391,
@@ -7288,7 +6888,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 392,
@@ -7303,7 +6902,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 393,
@@ -7318,7 +6916,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 394,
@@ -7333,13 +6930,11 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'england',
     ],
-    version: '4.0',
   },
   {
     id: 395,
@@ -7368,7 +6963,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 397,
@@ -7383,7 +6977,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 398,
@@ -7398,7 +6991,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 399,
@@ -7413,7 +7005,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 400,
@@ -7428,13 +7019,11 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'england',
     ],
-    version: '4.0',
   },
   {
     id: 401,
@@ -7463,7 +7052,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 403,
@@ -7478,7 +7066,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 404,
@@ -7493,7 +7080,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 405,
@@ -7508,7 +7094,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 406,
@@ -7523,7 +7108,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -7531,7 +7115,6 @@ export const emojisArray = [
       'helmet',
       'worksite',
     ],
-    version: '4.0',
   },
   {
     id: 407,
@@ -7560,7 +7143,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 409,
@@ -7575,7 +7157,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 410,
@@ -7590,7 +7171,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 411,
@@ -7605,7 +7185,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 412,
@@ -7620,7 +7199,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -7628,7 +7206,6 @@ export const emojisArray = [
       'helmet',
       'worksite',
     ],
-    version: '4.0',
   },
   {
     id: 413,
@@ -7657,7 +7234,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '3.0',
       },
       {
         id: 415,
@@ -7672,7 +7248,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '3.0',
       },
       {
         id: 416,
@@ -7687,7 +7262,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '3.0',
       },
       {
         id: 417,
@@ -7702,7 +7276,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '3.0',
       },
       {
         id: 418,
@@ -7717,7 +7290,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '3.0',
       },
     ],
     keywords: [
@@ -7727,7 +7299,6 @@ export const emojisArray = [
       'boy',
       'queen',
     ],
-    version: '3.0',
   },
   {
     id: 419,
@@ -7756,7 +7327,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 421,
@@ -7771,7 +7341,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 422,
@@ -7786,7 +7355,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 423,
@@ -7801,7 +7369,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 424,
@@ -7816,7 +7383,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
     ],
     keywords: [
@@ -7827,7 +7393,6 @@ export const emojisArray = [
       'kingdom',
       'queen',
     ],
-    version: '0.6',
   },
   {
     id: 425,
@@ -7856,7 +7421,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 427,
@@ -7871,7 +7435,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 428,
@@ -7886,7 +7449,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 429,
@@ -7901,7 +7463,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 430,
@@ -7916,14 +7477,12 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'muslim',
       'arab',
     ],
-    version: '4.0',
   },
   {
     id: 431,
@@ -7952,7 +7511,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 433,
@@ -7967,7 +7525,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 434,
@@ -7982,7 +7539,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 435,
@@ -7997,7 +7553,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
       {
         id: 436,
@@ -8012,14 +7567,12 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'muslim',
       'arab',
     ],
-    version: '4.0',
   },
   {
     id: 437,
@@ -8048,7 +7601,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 439,
@@ -8063,7 +7615,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 440,
@@ -8078,7 +7629,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 441,
@@ -8093,7 +7643,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 442,
@@ -8108,7 +7657,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
     ],
     keywords: [
@@ -8117,7 +7665,6 @@ export const emojisArray = [
       'diversity',
       'china',
     ],
-    version: '0.6',
   },
   {
     id: 443,
@@ -8146,7 +7693,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '5.0',
       },
       {
         id: 445,
@@ -8161,7 +7707,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '5.0',
       },
       {
         id: 446,
@@ -8176,7 +7721,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '5.0',
       },
       {
         id: 447,
@@ -8191,7 +7735,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '5.0',
       },
       {
         id: 448,
@@ -8206,14 +7749,12 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '5.0',
       },
     ],
     keywords: [
       'muslim',
       'arab',
     ],
-    version: '5.0',
   },
   {
     id: 449,
@@ -8242,7 +7783,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '5.0',
       },
       {
         id: 451,
@@ -8257,7 +7797,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '5.0',
       },
       {
         id: 452,
@@ -8272,7 +7811,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '5.0',
       },
       {
         id: 453,
@@ -8287,7 +7825,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '5.0',
       },
       {
         id: 454,
@@ -8302,13 +7839,11 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '5.0',
       },
     ],
     keywords: [
       'beard',
     ],
-    version: '5.0',
   },
   {
     id: 455,
@@ -8337,7 +7872,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '4.0',
       },
       {
         id: 457,
@@ -8352,7 +7886,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '4.0',
       },
       {
         id: 458,
@@ -8367,7 +7900,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '4.0',
       },
       {
         id: 459,
@@ -8382,7 +7914,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '4.0',
       },
       {
         id: 460,
@@ -8397,13 +7928,11 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'hair',
     ],
-    version: '4.0',
   },
   {
     id: 461,
@@ -8432,7 +7961,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '4.0',
       },
       {
         id: 463,
@@ -8447,7 +7975,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '4.0',
       },
       {
         id: 464,
@@ -8462,7 +7989,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '4.0',
       },
       {
         id: 465,
@@ -8477,7 +8003,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '4.0',
       },
       {
         id: 466,
@@ -8492,13 +8017,11 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'hair',
     ],
-    version: '4.0',
   },
   {
     id: 467,
@@ -8527,7 +8050,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '3.0',
       },
       {
         id: 469,
@@ -8542,7 +8064,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '3.0',
       },
       {
         id: 470,
@@ -8557,7 +8078,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '3.0',
       },
       {
         id: 471,
@@ -8572,7 +8092,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '3.0',
       },
       {
         id: 472,
@@ -8587,14 +8106,12 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '3.0',
       },
     ],
     keywords: [
       'wedding',
       'love',
     ],
-    version: '3.0',
   },
   {
     id: 473,
@@ -8623,7 +8140,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 475,
@@ -8638,7 +8154,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 476,
@@ -8653,7 +8168,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 477,
@@ -8668,7 +8182,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 478,
@@ -8683,7 +8196,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
     ],
     keywords: [
@@ -8691,7 +8203,6 @@ export const emojisArray = [
       'love',
       'women',
     ],
-    version: '0.6',
   },
   {
     id: 479,
@@ -8720,7 +8231,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '3.0',
       },
       {
         id: 481,
@@ -8735,7 +8245,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '3.0',
       },
       {
         id: 482,
@@ -8750,7 +8259,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '3.0',
       },
       {
         id: 483,
@@ -8765,7 +8273,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '3.0',
       },
       {
         id: 484,
@@ -8780,14 +8287,12 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '3.0',
       },
     ],
     keywords: [
       'baby',
       'birth',
     ],
-    version: '3.0',
   },
   {
     id: 485,
@@ -8816,7 +8321,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '5.0',
       },
       {
         id: 487,
@@ -8831,7 +8335,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '5.0',
       },
       {
         id: 488,
@@ -8846,7 +8349,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '5.0',
       },
       {
         id: 489,
@@ -8861,7 +8363,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '5.0',
       },
       {
         id: 490,
@@ -8876,14 +8377,12 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '5.0',
       },
     ],
     keywords: [
       'baby',
       'birth',
     ],
-    version: '5.0',
   },
   {
     id: 491,
@@ -8904,7 +8403,6 @@ export const emojisArray = [
       'monster',
       'dead',
     ],
-    version: '4.0',
   },
   {
     id: 492,
@@ -8925,7 +8423,6 @@ export const emojisArray = [
       'monster',
       'dead',
     ],
-    version: '5.0',
   },
   {
     id: 493,
@@ -8954,7 +8451,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '1.0',
       },
       {
         id: 495,
@@ -8969,7 +8465,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '1.0',
       },
       {
         id: 496,
@@ -8984,7 +8479,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '1.0',
       },
       {
         id: 497,
@@ -8999,7 +8493,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '1.0',
       },
       {
         id: 498,
@@ -9014,7 +8507,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '1.0',
       },
     ],
     keywords: [
@@ -9025,7 +8517,6 @@ export const emojisArray = [
       'holidays',
       'gift',
     ],
-    version: '0.6',
   },
   {
     id: 499,
@@ -9054,7 +8545,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '3.0',
       },
       {
         id: 501,
@@ -9069,7 +8559,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '3.0',
       },
       {
         id: 502,
@@ -9084,7 +8573,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '3.0',
       },
       {
         id: 503,
@@ -9099,7 +8587,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '3.0',
       },
       {
         id: 504,
@@ -9114,7 +8601,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '3.0',
       },
     ],
     keywords: [
@@ -9125,7 +8611,6 @@ export const emojisArray = [
       'holidays',
       'gift',
     ],
-    version: '3.0',
   },
   {
     id: 505,
@@ -9154,7 +8639,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 507,
@@ -9169,7 +8653,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 508,
@@ -9184,7 +8667,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 509,
@@ -9199,7 +8681,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 510,
@@ -9214,13 +8695,11 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
     ],
     keywords: [
       'witch',
     ],
-    version: '5.0',
   },
   {
     id: 511,
@@ -9249,7 +8728,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 513,
@@ -9264,7 +8742,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 514,
@@ -9279,7 +8756,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 515,
@@ -9294,7 +8770,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 516,
@@ -9309,13 +8784,11 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
     ],
     keywords: [
       'wizard',
     ],
-    version: '5.0',
   },
   {
     id: 517,
@@ -9344,7 +8817,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 519,
@@ -9359,7 +8831,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 520,
@@ -9374,7 +8845,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 521,
@@ -9389,7 +8859,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 522,
@@ -9404,11 +8873,9 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
     ],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 523,
@@ -9437,7 +8904,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 525,
@@ -9452,7 +8918,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 526,
@@ -9467,7 +8932,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 527,
@@ -9482,7 +8946,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 528,
@@ -9497,11 +8960,9 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
     ],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 529,
@@ -9530,7 +8991,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 531,
@@ -9545,7 +9005,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 532,
@@ -9560,7 +9019,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 533,
@@ -9575,7 +9033,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 534,
@@ -9590,14 +9047,12 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
     ],
     keywords: [
       'blood',
       'monster',
     ],
-    version: '5.0',
   },
   {
     id: 535,
@@ -9626,7 +9081,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 537,
@@ -9641,7 +9095,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 538,
@@ -9656,7 +9109,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 539,
@@ -9671,7 +9123,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 540,
@@ -9686,14 +9137,12 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
     ],
     keywords: [
       'blood',
       'monster',
     ],
-    version: '5.0',
   },
   {
     id: 541,
@@ -9722,7 +9171,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 543,
@@ -9737,7 +9185,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 544,
@@ -9752,7 +9199,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 545,
@@ -9767,7 +9213,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 546,
@@ -9782,7 +9227,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
     ],
     keywords: [
@@ -9790,7 +9234,6 @@ export const emojisArray = [
       'creature',
       'ariel',
     ],
-    version: '5.0',
   },
   {
     id: 547,
@@ -9819,7 +9262,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 549,
@@ -9834,7 +9276,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 550,
@@ -9849,7 +9290,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 551,
@@ -9864,7 +9304,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 552,
@@ -9879,14 +9318,12 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
     ],
     keywords: [
       'fish',
       'creature',
     ],
-    version: '5.0',
   },
   {
     id: 553,
@@ -9915,7 +9352,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 555,
@@ -9930,7 +9366,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 556,
@@ -9945,7 +9380,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 557,
@@ -9960,7 +9394,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 558,
@@ -9975,13 +9408,11 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
     ],
     keywords: [
       'creature',
     ],
-    version: '5.0',
   },
   {
     id: 559,
@@ -10010,7 +9441,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 561,
@@ -10025,7 +9455,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 562,
@@ -10040,7 +9469,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 563,
@@ -10055,7 +9483,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 564,
@@ -10070,13 +9497,11 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
     ],
     keywords: [
       'creature',
     ],
-    version: '5.0',
   },
   {
     id: 565,
@@ -10095,7 +9520,6 @@ export const emojisArray = [
     keywords: [
       'creature',
     ],
-    version: '5.0',
   },
   {
     id: 566,
@@ -10115,7 +9539,6 @@ export const emojisArray = [
       'creature',
       'aladin',
     ],
-    version: '5.0',
   },
   {
     id: 567,
@@ -10144,7 +9567,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 569,
@@ -10159,7 +9581,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 570,
@@ -10174,7 +9595,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 571,
@@ -10189,7 +9609,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 572,
@@ -10204,7 +9623,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -10215,7 +9633,6 @@ export const emojisArray = [
       'bad',
       'unhappy',
     ],
-    version: '4.0',
   },
   {
     id: 573,
@@ -10244,7 +9661,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 575,
@@ -10259,7 +9675,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 576,
@@ -10274,7 +9689,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 577,
@@ -10289,7 +9703,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 578,
@@ -10304,7 +9717,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -10315,7 +9727,6 @@ export const emojisArray = [
       'bad',
       'unhappy',
     ],
-    version: '4.0',
   },
   {
     id: 579,
@@ -10344,7 +9755,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 581,
@@ -10359,7 +9769,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 582,
@@ -10374,7 +9783,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 583,
@@ -10389,7 +9797,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 584,
@@ -10404,11 +9811,9 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
     ],
     keywords: [],
-    version: '4.0',
   },
   {
     id: 585,
@@ -10437,7 +9842,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 587,
@@ -10452,7 +9856,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 588,
@@ -10467,7 +9870,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 589,
@@ -10482,7 +9884,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 590,
@@ -10497,11 +9898,9 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
     ],
     keywords: [],
-    version: '4.0',
   },
   {
     id: 591,
@@ -10530,7 +9929,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 593,
@@ -10545,7 +9943,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 594,
@@ -10560,7 +9957,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 595,
@@ -10575,7 +9971,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 596,
@@ -10590,13 +9985,11 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'negative',
     ],
-    version: '4.0',
   },
   {
     id: 597,
@@ -10625,7 +10018,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 599,
@@ -10640,7 +10032,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 600,
@@ -10655,7 +10046,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 601,
@@ -10670,7 +10060,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 602,
@@ -10685,13 +10074,11 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'negative',
     ],
-    version: '4.0',
   },
   {
     id: 603,
@@ -10720,7 +10107,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 605,
@@ -10735,7 +10121,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 606,
@@ -10750,7 +10135,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 607,
@@ -10765,7 +10149,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 608,
@@ -10780,14 +10163,12 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'yes',
       'positive',
     ],
-    version: '4.0',
   },
   {
     id: 609,
@@ -10816,7 +10197,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 611,
@@ -10831,7 +10211,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 612,
@@ -10846,7 +10225,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 613,
@@ -10861,7 +10239,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 614,
@@ -10876,14 +10253,12 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'yes',
       'positive',
     ],
-    version: '4.0',
   },
   {
     id: 615,
@@ -10912,7 +10287,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 617,
@@ -10927,7 +10301,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 618,
@@ -10942,7 +10315,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 619,
@@ -10957,7 +10329,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 620,
@@ -10972,11 +10343,9 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
     ],
     keywords: [],
-    version: '4.0',
   },
   {
     id: 621,
@@ -11005,7 +10374,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 623,
@@ -11020,7 +10388,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 624,
@@ -11035,7 +10402,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 625,
@@ -11050,7 +10416,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 626,
@@ -11065,11 +10430,9 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
     ],
     keywords: [],
-    version: '4.0',
   },
   {
     id: 627,
@@ -11098,7 +10461,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 629,
@@ -11113,7 +10475,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 630,
@@ -11128,7 +10489,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 631,
@@ -11143,7 +10503,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 632,
@@ -11158,13 +10517,11 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'school',
     ],
-    version: '4.0',
   },
   {
     id: 633,
@@ -11193,7 +10550,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 635,
@@ -11208,7 +10564,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 636,
@@ -11223,7 +10578,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 637,
@@ -11238,7 +10592,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 638,
@@ -11253,13 +10606,11 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'school',
     ],
-    version: '4.0',
   },
   {
     id: 639,
@@ -11288,7 +10639,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 641,
@@ -11303,7 +10653,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 642,
@@ -11318,7 +10667,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 643,
@@ -11333,7 +10681,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 644,
@@ -11348,11 +10695,9 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
     ],
     keywords: [],
-    version: '4.0',
   },
   {
     id: 645,
@@ -11381,7 +10726,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 647,
@@ -11396,7 +10740,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 648,
@@ -11411,7 +10754,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 649,
@@ -11426,7 +10768,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 650,
@@ -11441,11 +10782,9 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
     ],
     keywords: [],
-    version: '4.0',
   },
   {
     id: 651,
@@ -11474,7 +10813,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 653,
@@ -11489,7 +10827,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 654,
@@ -11504,7 +10841,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 655,
@@ -11519,7 +10855,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 656,
@@ -11534,13 +10869,11 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'stupid',
     ],
-    version: '4.0',
   },
   {
     id: 657,
@@ -11569,7 +10902,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 659,
@@ -11584,7 +10916,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 660,
@@ -11599,7 +10930,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 661,
@@ -11614,7 +10944,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 662,
@@ -11629,13 +10958,11 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'stupid',
     ],
-    version: '4.0',
   },
   {
     id: 663,
@@ -11664,7 +10991,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 665,
@@ -11679,7 +11005,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 666,
@@ -11694,7 +11019,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 667,
@@ -11709,7 +11033,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 668,
@@ -11724,11 +11047,9 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
     ],
     keywords: [],
-    version: '4.0',
   },
   {
     id: 669,
@@ -11757,7 +11078,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 671,
@@ -11772,7 +11092,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 672,
@@ -11787,7 +11106,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 673,
@@ -11802,7 +11120,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
       {
         id: 674,
@@ -11817,11 +11134,9 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '4.0',
       },
     ],
     keywords: [],
-    version: '4.0',
   },
   {
     id: 675,
@@ -11850,7 +11165,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 677,
@@ -11865,7 +11179,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 678,
@@ -11880,7 +11193,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 679,
@@ -11895,7 +11207,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 680,
@@ -11910,13 +11221,11 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'relax',
     ],
-    version: '4.0',
   },
   {
     id: 681,
@@ -11945,7 +11254,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 683,
@@ -11960,7 +11268,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 684,
@@ -11975,7 +11282,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 685,
@@ -11990,7 +11296,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 686,
@@ -12005,13 +11310,11 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'relax',
     ],
-    version: '4.0',
   },
   {
     id: 687,
@@ -12040,7 +11343,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 689,
@@ -12055,7 +11357,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 690,
@@ -12070,7 +11371,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 691,
@@ -12085,7 +11385,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 692,
@@ -12100,7 +11399,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -12109,7 +11407,6 @@ export const emojisArray = [
       'hairdresser',
       'scissors',
     ],
-    version: '4.0',
   },
   {
     id: 693,
@@ -12138,7 +11435,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 695,
@@ -12153,7 +11449,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 696,
@@ -12168,7 +11463,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 697,
@@ -12183,7 +11477,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 698,
@@ -12198,7 +11491,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -12207,7 +11499,6 @@ export const emojisArray = [
       'hairdresser',
       'scissors',
     ],
-    version: '4.0',
   },
   {
     id: 699,
@@ -12236,7 +11527,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 701,
@@ -12251,7 +11541,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 702,
@@ -12266,7 +11555,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 703,
@@ -12281,7 +11569,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 704,
@@ -12296,13 +11583,11 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'walk',
     ],
-    version: '4.0',
   },
   {
     id: 705,
@@ -12331,7 +11616,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 707,
@@ -12346,7 +11630,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 708,
@@ -12361,7 +11644,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 709,
@@ -12376,7 +11658,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 710,
@@ -12391,13 +11672,11 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'walk',
     ],
-    version: '4.0',
   },
   {
     id: 711,
@@ -12426,7 +11705,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 713,
@@ -12441,7 +11719,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 714,
@@ -12456,7 +11733,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 715,
@@ -12471,7 +11747,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 716,
@@ -12486,7 +11761,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -12494,7 +11768,6 @@ export const emojisArray = [
       'run',
       'marathon',
     ],
-    version: '4.0',
   },
   {
     id: 717,
@@ -12523,7 +11796,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 719,
@@ -12538,7 +11810,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 720,
@@ -12553,7 +11824,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 721,
@@ -12568,7 +11838,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 722,
@@ -12583,7 +11852,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -12591,7 +11859,6 @@ export const emojisArray = [
       'run',
       'marathon',
     ],
-    version: '4.0',
   },
   {
     id: 723,
@@ -12620,7 +11887,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
       {
         id: 725,
@@ -12635,7 +11901,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
       {
         id: 726,
@@ -12650,7 +11915,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
       {
         id: 727,
@@ -12665,7 +11929,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
       {
         id: 728,
@@ -12680,7 +11943,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
     ],
     keywords: [
@@ -12693,7 +11955,6 @@ export const emojisArray = [
       'dance',
       'nightclub',
     ],
-    version: '0.6',
   },
   {
     id: 729,
@@ -12722,7 +11983,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '3.0',
       },
       {
         id: 731,
@@ -12737,7 +11997,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '3.0',
       },
       {
         id: 732,
@@ -12752,7 +12011,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '3.0',
       },
       {
         id: 733,
@@ -12767,7 +12025,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '3.0',
       },
       {
         id: 734,
@@ -12782,7 +12039,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '3.0',
       },
     ],
     keywords: [
@@ -12795,7 +12051,6 @@ export const emojisArray = [
       'dance',
       'nightclub',
     ],
-    version: '3.0',
   },
   {
     id: 735,
@@ -12815,7 +12070,6 @@ export const emojisArray = [
       'rabbit',
       'cabaret',
     ],
-    version: '4.0',
   },
   {
     id: 736,
@@ -12835,7 +12089,6 @@ export const emojisArray = [
       'rabbit',
       'cabaret',
     ],
-    version: '4.0',
   },
   {
     id: 737,
@@ -12864,7 +12117,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
       {
         id: 739,
@@ -12879,7 +12131,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
       {
         id: 740,
@@ -12894,7 +12145,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
       {
         id: 741,
@@ -12909,7 +12159,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
       {
         id: 742,
@@ -12924,7 +12173,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
     ],
     keywords: [
@@ -12932,7 +12180,6 @@ export const emojisArray = [
       'relax',
       'holidays',
     ],
-    version: '5.0',
   },
   {
     id: 743,
@@ -12961,7 +12208,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
       {
         id: 745,
@@ -12976,7 +12222,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
       {
         id: 746,
@@ -12991,7 +12236,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
       {
         id: 747,
@@ -13006,7 +12250,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
       {
         id: 748,
@@ -13021,7 +12264,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
     ],
     keywords: [
@@ -13029,7 +12271,6 @@ export const emojisArray = [
       'relax',
       'holidays',
     ],
-    version: '5.0',
   },
   {
     id: 749,
@@ -13058,7 +12299,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
       {
         id: 751,
@@ -13073,7 +12313,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
       {
         id: 752,
@@ -13088,7 +12327,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
       {
         id: 753,
@@ -13103,7 +12341,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
       {
         id: 754,
@@ -13118,13 +12355,11 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
     ],
     keywords: [
       'climb',
     ],
-    version: '5.0',
   },
   {
     id: 755,
@@ -13153,7 +12388,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
       {
         id: 757,
@@ -13168,7 +12402,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
       {
         id: 758,
@@ -13183,7 +12416,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
       {
         id: 759,
@@ -13198,7 +12430,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
       {
         id: 760,
@@ -13213,13 +12444,11 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
     ],
     keywords: [
       'climb',
     ],
-    version: '5.0',
   },
   {
     id: 761,
@@ -13248,7 +12477,6 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '5.0',
       },
       {
         id: 763,
@@ -13263,7 +12491,6 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '5.0',
       },
       {
         id: 764,
@@ -13278,7 +12505,6 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '5.0',
       },
       {
         id: 765,
@@ -13293,7 +12519,6 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '5.0',
       },
       {
         id: 766,
@@ -13308,14 +12533,12 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '5.0',
       },
     ],
     keywords: [
       'yoga',
       'relax',
     ],
-    version: '5.0',
   },
   {
     id: 767,
@@ -13344,7 +12567,6 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '5.0',
       },
       {
         id: 769,
@@ -13359,7 +12581,6 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '5.0',
       },
       {
         id: 770,
@@ -13374,7 +12595,6 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '5.0',
       },
       {
         id: 771,
@@ -13389,7 +12609,6 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '5.0',
       },
       {
         id: 772,
@@ -13404,14 +12623,12 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '5.0',
       },
     ],
     keywords: [
       'yoga',
       'relax',
     ],
-    version: '5.0',
   },
   {
     id: 773,
@@ -13440,7 +12657,6 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '1.0',
       },
       {
         id: 775,
@@ -13455,7 +12671,6 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '1.0',
       },
       {
         id: 776,
@@ -13470,7 +12685,6 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '1.0',
       },
       {
         id: 777,
@@ -13485,7 +12699,6 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '1.0',
       },
       {
         id: 778,
@@ -13500,7 +12713,6 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '1.0',
       },
     ],
     keywords: [
@@ -13509,7 +12721,6 @@ export const emojisArray = [
       'steam',
       'relax',
     ],
-    version: '0.6',
   },
   {
     id: 779,
@@ -13538,7 +12749,6 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '4.0',
       },
       {
         id: 781,
@@ -13553,7 +12763,6 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '4.0',
       },
       {
         id: 782,
@@ -13568,7 +12777,6 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '4.0',
       },
       {
         id: 783,
@@ -13583,7 +12791,6 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '4.0',
       },
       {
         id: 784,
@@ -13598,7 +12805,6 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -13606,7 +12812,6 @@ export const emojisArray = [
       'tired',
       'dream',
     ],
-    version: '1.0',
   },
   {
     id: 785,
@@ -13635,7 +12840,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 787,
@@ -13650,7 +12854,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 788,
@@ -13665,7 +12868,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 789,
@@ -13680,7 +12882,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
       {
         id: 790,
@@ -13695,11 +12896,9 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '4.0',
       },
     ],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 791,
@@ -13719,7 +12918,6 @@ export const emojisArray = [
       'voice',
       'cry',
     ],
-    version: '0.7',
   },
   {
     id: 792,
@@ -13736,7 +12934,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 793,
@@ -13753,7 +12950,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 794,
@@ -13772,7 +12968,6 @@ export const emojisArray = [
     keywords: [
       'fencer',
     ],
-    version: '3.0',
   },
   {
     id: 795,
@@ -13801,7 +12996,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 797,
@@ -13816,7 +13010,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 798,
@@ -13831,7 +13024,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 799,
@@ -13846,7 +13038,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 800,
@@ -13861,7 +13052,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
     ],
     keywords: [
@@ -13870,7 +13060,6 @@ export const emojisArray = [
       'cow-boy',
       'far-west',
     ],
-    version: '1.0',
   },
   {
     id: 801,
@@ -13889,7 +13078,6 @@ export const emojisArray = [
     keywords: [
       'ski',
     ],
-    version: '0.7',
   },
   {
     id: 802,
@@ -13918,7 +13106,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 804,
@@ -13933,7 +13120,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 805,
@@ -13948,7 +13134,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 806,
@@ -13963,7 +13148,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 807,
@@ -13978,7 +13162,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
     ],
     keywords: [
@@ -13988,7 +13171,6 @@ export const emojisArray = [
       'snow',
       'snowboarding',
     ],
-    version: '0.6',
   },
   {
     id: 808,
@@ -14017,7 +13199,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 810,
@@ -14032,7 +13213,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 811,
@@ -14047,7 +13227,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 812,
@@ -14062,7 +13241,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 813,
@@ -14077,13 +13255,11 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'golf',
     ],
-    version: '4.0',
   },
   {
     id: 814,
@@ -14112,7 +13288,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 816,
@@ -14127,7 +13302,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 817,
@@ -14142,7 +13316,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 818,
@@ -14157,7 +13330,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 819,
@@ -14172,13 +13344,11 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'golf',
     ],
-    version: '4.0',
   },
   {
     id: 820,
@@ -14207,7 +13377,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 822,
@@ -14222,7 +13391,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 823,
@@ -14237,7 +13405,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 824,
@@ -14252,7 +13419,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 825,
@@ -14267,7 +13433,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -14277,7 +13442,6 @@ export const emojisArray = [
       'sea',
       'surfboard',
     ],
-    version: '4.0',
   },
   {
     id: 826,
@@ -14306,7 +13470,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 828,
@@ -14321,7 +13484,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 829,
@@ -14336,7 +13498,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 830,
@@ -14351,7 +13512,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 831,
@@ -14366,7 +13526,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -14376,7 +13535,6 @@ export const emojisArray = [
       'sea',
       'surfboard',
     ],
-    version: '4.0',
   },
   {
     id: 832,
@@ -14405,7 +13563,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 834,
@@ -14420,7 +13577,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 835,
@@ -14435,7 +13591,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 836,
@@ -14450,7 +13605,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 837,
@@ -14465,14 +13619,12 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'kayak',
       'canoe',
     ],
-    version: '4.0',
   },
   {
     id: 838,
@@ -14501,7 +13653,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 840,
@@ -14516,7 +13667,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 841,
@@ -14531,7 +13681,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 842,
@@ -14546,7 +13695,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 843,
@@ -14561,14 +13709,12 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'kayak',
       'canoe',
     ],
-    version: '4.0',
   },
   {
     id: 844,
@@ -14597,7 +13743,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 846,
@@ -14612,7 +13757,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 847,
@@ -14627,7 +13771,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 848,
@@ -14642,7 +13785,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 849,
@@ -14657,7 +13799,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -14665,7 +13806,6 @@ export const emojisArray = [
       'pool',
       'swimming pool',
     ],
-    version: '4.0',
   },
   {
     id: 850,
@@ -14694,7 +13834,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 852,
@@ -14709,7 +13848,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 853,
@@ -14724,7 +13862,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 854,
@@ -14739,7 +13876,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 855,
@@ -14754,7 +13890,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -14762,7 +13897,6 @@ export const emojisArray = [
       'pool',
       'swimming pool',
     ],
-    version: '4.0',
   },
   {
     id: 856,
@@ -14791,7 +13925,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 858,
@@ -14806,7 +13939,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 859,
@@ -14821,7 +13953,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 860,
@@ -14836,7 +13967,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 861,
@@ -14851,14 +13981,12 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'basket',
       'basketball',
     ],
-    version: '4.0',
   },
   {
     id: 862,
@@ -14887,7 +14015,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 864,
@@ -14902,7 +14029,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 865,
@@ -14917,7 +14043,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 866,
@@ -14932,7 +14057,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 867,
@@ -14947,14 +14071,12 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'basket',
       'basketball',
     ],
-    version: '4.0',
   },
   {
     id: 868,
@@ -14983,7 +14105,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 870,
@@ -14998,7 +14119,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 871,
@@ -15013,7 +14133,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 872,
@@ -15028,7 +14147,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 873,
@@ -15043,7 +14161,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -15053,7 +14170,6 @@ export const emojisArray = [
       'crossfit',
       'gym',
     ],
-    version: '4.0',
   },
   {
     id: 874,
@@ -15082,7 +14198,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 876,
@@ -15097,7 +14212,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 877,
@@ -15112,7 +14226,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 878,
@@ -15127,7 +14240,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 879,
@@ -15142,7 +14254,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -15152,7 +14263,6 @@ export const emojisArray = [
       'crossfit',
       'gym',
     ],
-    version: '4.0',
   },
   {
     id: 880,
@@ -15181,7 +14291,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 882,
@@ -15196,7 +14305,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 883,
@@ -15211,7 +14319,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 884,
@@ -15226,7 +14333,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 885,
@@ -15241,14 +14347,12 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'bike',
       'bicycle',
     ],
-    version: '4.0',
   },
   {
     id: 886,
@@ -15277,7 +14381,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 888,
@@ -15292,7 +14395,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 889,
@@ -15307,7 +14409,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 890,
@@ -15322,7 +14423,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 891,
@@ -15337,14 +14437,12 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'bike',
       'bicycle',
     ],
-    version: '4.0',
   },
   {
     id: 892,
@@ -15373,7 +14471,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 894,
@@ -15388,7 +14485,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 895,
@@ -15403,7 +14499,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 896,
@@ -15418,7 +14513,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 897,
@@ -15433,14 +14527,12 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'bike',
       'bicycle',
     ],
-    version: '4.0',
   },
   {
     id: 898,
@@ -15469,7 +14561,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 900,
@@ -15484,7 +14575,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 901,
@@ -15499,7 +14589,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 902,
@@ -15514,7 +14603,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 903,
@@ -15529,14 +14617,12 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'bike',
       'bicycle',
     ],
-    version: '4.0',
   },
   {
     id: 904,
@@ -15556,7 +14642,6 @@ export const emojisArray = [
       'formula 1',
       'race',
     ],
-    version: '0.7',
   },
   {
     id: 905,
@@ -15576,7 +14661,6 @@ export const emojisArray = [
       'motorbike',
       'bike',
     ],
-    version: '0.7',
   },
   {
     id: 906,
@@ -15605,7 +14689,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 908,
@@ -15620,7 +14703,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 909,
@@ -15635,7 +14717,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 910,
@@ -15650,7 +14731,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 911,
@@ -15665,13 +14745,11 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'gymnastic',
     ],
-    version: '4.0',
   },
   {
     id: 912,
@@ -15700,7 +14778,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 914,
@@ -15715,7 +14792,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 915,
@@ -15730,7 +14806,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 916,
@@ -15745,7 +14820,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 917,
@@ -15760,13 +14834,11 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'gymnastic',
     ],
-    version: '4.0',
   },
   {
     id: 918,
@@ -15787,7 +14859,6 @@ export const emojisArray = [
       'fight',
       'fighting',
     ],
-    version: '4.0',
   },
   {
     id: 919,
@@ -15808,7 +14879,6 @@ export const emojisArray = [
       'fight',
       'fighting',
     ],
-    version: '4.0',
   },
   {
     id: 920,
@@ -15837,7 +14907,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 922,
@@ -15852,7 +14921,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 923,
@@ -15867,7 +14935,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 924,
@@ -15882,7 +14949,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 925,
@@ -15897,7 +14963,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -15905,7 +14970,6 @@ export const emojisArray = [
       'pool',
       'swimming pool',
     ],
-    version: '4.0',
   },
   {
     id: 926,
@@ -15934,7 +14998,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 928,
@@ -15949,7 +15012,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 929,
@@ -15964,7 +15026,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 930,
@@ -15979,7 +15040,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 931,
@@ -15994,7 +15054,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [
@@ -16002,7 +15061,6 @@ export const emojisArray = [
       'pool',
       'swimming pool',
     ],
-    version: '4.0',
   },
   {
     id: 932,
@@ -16031,7 +15089,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 934,
@@ -16046,7 +15103,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 935,
@@ -16061,7 +15117,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 936,
@@ -16076,7 +15131,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 937,
@@ -16091,13 +15145,11 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'ball',
     ],
-    version: '4.0',
   },
   {
     id: 938,
@@ -16126,7 +15178,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 940,
@@ -16141,7 +15192,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 941,
@@ -16156,7 +15206,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 942,
@@ -16171,7 +15220,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 943,
@@ -16186,13 +15234,11 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'ball',
     ],
-    version: '4.0',
   },
   {
     id: 944,
@@ -16221,7 +15267,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 946,
@@ -16236,7 +15281,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 947,
@@ -16251,7 +15295,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 948,
@@ -16266,7 +15309,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 949,
@@ -16281,13 +15323,11 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'circus',
     ],
-    version: '4.0',
   },
   {
     id: 950,
@@ -16316,7 +15356,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 952,
@@ -16331,7 +15370,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 953,
@@ -16346,7 +15384,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 954,
@@ -16361,7 +15398,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 955,
@@ -16376,13 +15412,11 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [
       'circus',
     ],
-    version: '4.0',
   },
   {
     id: 956,
@@ -16411,7 +15445,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3222,
@@ -16426,7 +15459,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3223,
@@ -16441,7 +15473,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3224,
@@ -16456,7 +15487,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3225,
@@ -16471,7 +15501,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3226,
@@ -16486,7 +15515,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3227,
@@ -16501,7 +15529,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3228,
@@ -16516,7 +15543,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3229,
@@ -16531,7 +15557,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3230,
@@ -16546,7 +15571,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3231,
@@ -16561,7 +15585,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3232,
@@ -16576,7 +15599,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3233,
@@ -16591,7 +15613,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3234,
@@ -16606,7 +15627,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3235,
@@ -16621,7 +15641,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3236,
@@ -16636,7 +15655,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3237,
@@ -16651,7 +15669,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3238,
@@ -16666,7 +15683,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3239,
@@ -16681,7 +15697,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3240,
@@ -16696,7 +15711,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3241,
@@ -16711,7 +15725,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3242,
@@ -16726,7 +15739,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3243,
@@ -16741,7 +15753,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3244,
@@ -16756,7 +15767,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3245,
@@ -16771,7 +15781,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
     ],
     keywords: [
@@ -16779,7 +15788,6 @@ export const emojisArray = [
       'sex',
       'hetero',
     ],
-    version: '0.6',
   },
   {
     id: 957,
@@ -16808,7 +15816,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3247,
@@ -16823,7 +15830,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3248,
@@ -16838,7 +15844,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3249,
@@ -16853,7 +15858,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3250,
@@ -16868,7 +15872,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3251,
@@ -16883,7 +15886,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3252,
@@ -16898,7 +15900,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3253,
@@ -16913,7 +15914,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3254,
@@ -16928,7 +15928,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3255,
@@ -16943,7 +15942,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3256,
@@ -16958,7 +15956,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3257,
@@ -16973,7 +15970,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3258,
@@ -16988,7 +15984,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3259,
@@ -17003,7 +15998,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3260,
@@ -17018,7 +16012,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3261,
@@ -17033,7 +16026,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3262,
@@ -17048,7 +16040,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3263,
@@ -17063,7 +16054,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3264,
@@ -17078,7 +16068,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3265,
@@ -17093,7 +16082,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3266,
@@ -17108,7 +16096,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3267,
@@ -17123,7 +16110,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3268,
@@ -17138,7 +16124,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3269,
@@ -17153,7 +16138,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3270,
@@ -17168,7 +16152,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
     ],
     keywords: [
@@ -17177,7 +16160,6 @@ export const emojisArray = [
       'lgbt',
       'love',
     ],
-    version: '1.0',
   },
   {
     id: 958,
@@ -17206,7 +16188,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3197,
@@ -17221,7 +16202,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3198,
@@ -17236,7 +16216,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3199,
@@ -17251,7 +16230,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3200,
@@ -17266,7 +16244,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3201,
@@ -17281,7 +16258,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3202,
@@ -17296,7 +16272,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3203,
@@ -17311,7 +16286,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3204,
@@ -17326,7 +16300,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3205,
@@ -17341,7 +16314,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3206,
@@ -17356,7 +16328,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3207,
@@ -17371,7 +16342,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3208,
@@ -17386,7 +16356,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3209,
@@ -17401,7 +16370,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3210,
@@ -17416,7 +16384,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3211,
@@ -17431,7 +16398,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3212,
@@ -17446,7 +16412,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3213,
@@ -17461,7 +16426,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3214,
@@ -17476,7 +16440,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3215,
@@ -17491,7 +16454,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3216,
@@ -17506,7 +16468,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3217,
@@ -17521,7 +16482,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3218,
@@ -17536,7 +16496,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3219,
@@ -17551,7 +16510,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3220,
@@ -17566,7 +16524,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
     ],
     keywords: [
@@ -17576,7 +16533,6 @@ export const emojisArray = [
       'girls',
       'love',
     ],
-    version: '1.0',
   },
   {
     id: 959,
@@ -17597,7 +16553,6 @@ export const emojisArray = [
       'love',
       'sex',
     ],
-    version: '2.0',
   },
   {
     id: 960,
@@ -17618,7 +16573,6 @@ export const emojisArray = [
       'love',
       'sex',
     ],
-    version: '2.0',
   },
   {
     id: 961,
@@ -17639,7 +16593,6 @@ export const emojisArray = [
       'lgbt',
       'love',
     ],
-    version: '2.0',
   },
   {
     id: 962,
@@ -17660,7 +16613,6 @@ export const emojisArray = [
       'lgbt',
       'love',
     ],
-    version: '2.0',
   },
   {
     id: 963,
@@ -17681,7 +16633,6 @@ export const emojisArray = [
       'lgbt',
       'love',
     ],
-    version: '2.0',
   },
   {
     id: 964,
@@ -17702,7 +16653,6 @@ export const emojisArray = [
       'lgbt',
       'love',
     ],
-    version: '2.0',
   },
   {
     id: 965,
@@ -17722,7 +16672,6 @@ export const emojisArray = [
       'love',
       'sex',
     ],
-    version: '2.0',
   },
   {
     id: 966,
@@ -17743,7 +16692,6 @@ export const emojisArray = [
       'love',
       'sex',
     ],
-    version: '2.0',
   },
   {
     id: 967,
@@ -17765,7 +16713,6 @@ export const emojisArray = [
       'love',
       'sex',
     ],
-    version: '2.0',
   },
   {
     id: 968,
@@ -17787,7 +16734,6 @@ export const emojisArray = [
       'love',
       'sex',
     ],
-    version: '2.0',
   },
   {
     id: 969,
@@ -17809,7 +16755,6 @@ export const emojisArray = [
       'love',
       'sex',
     ],
-    version: '2.0',
   },
   {
     id: 970,
@@ -17831,7 +16776,6 @@ export const emojisArray = [
       'love',
       'sex',
     ],
-    version: '2.0',
   },
   {
     id: 971,
@@ -17848,7 +16792,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '2.0',
   },
   {
     id: 972,
@@ -17865,7 +16808,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '2.0',
   },
   {
     id: 973,
@@ -17882,7 +16824,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '2.0',
   },
   {
     id: 974,
@@ -17899,7 +16840,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '2.0',
   },
   {
     id: 975,
@@ -17916,7 +16856,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '2.0',
   },
   {
     id: 976,
@@ -17933,7 +16872,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '2.0',
   },
   {
     id: 977,
@@ -17950,7 +16888,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '2.0',
   },
   {
     id: 978,
@@ -17967,7 +16904,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '2.0',
   },
   {
     id: 979,
@@ -17984,7 +16920,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '2.0',
   },
   {
     id: 980,
@@ -18001,7 +16936,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '2.0',
   },
   {
     id: 981,
@@ -18018,7 +16952,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '2.0',
   },
   {
     id: 982,
@@ -18035,7 +16968,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '2.0',
   },
   {
     id: 983,
@@ -18052,7 +16984,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '2.0',
   },
   {
     id: 984,
@@ -18069,7 +17000,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '2.0',
   },
   {
     id: 985,
@@ -18086,7 +17016,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '2.0',
   },
   {
     id: 986,
@@ -18103,7 +17032,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '4.0',
   },
   {
     id: 987,
@@ -18120,7 +17048,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '4.0',
   },
   {
     id: 988,
@@ -18137,7 +17064,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '4.0',
   },
   {
     id: 989,
@@ -18154,7 +17080,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '4.0',
   },
   {
     id: 990,
@@ -18171,7 +17096,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '4.0',
   },
   {
     id: 991,
@@ -18188,7 +17112,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '4.0',
   },
   {
     id: 992,
@@ -18205,7 +17128,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '4.0',
   },
   {
     id: 993,
@@ -18222,7 +17144,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '4.0',
   },
   {
     id: 994,
@@ -18239,7 +17160,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '4.0',
   },
   {
     id: 995,
@@ -18256,7 +17176,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '4.0',
   },
   {
     id: 996,
@@ -18285,7 +17204,6 @@ export const emojisArray = [
           id: 21,
           name: 'hand-prop',
         },
-        version: '3.0',
       },
       {
         id: 998,
@@ -18300,7 +17218,6 @@ export const emojisArray = [
           id: 21,
           name: 'hand-prop',
         },
-        version: '3.0',
       },
       {
         id: 999,
@@ -18315,7 +17232,6 @@ export const emojisArray = [
           id: 21,
           name: 'hand-prop',
         },
-        version: '3.0',
       },
       {
         id: 1000,
@@ -18330,7 +17246,6 @@ export const emojisArray = [
           id: 21,
           name: 'hand-prop',
         },
-        version: '3.0',
       },
       {
         id: 1001,
@@ -18345,7 +17260,6 @@ export const emojisArray = [
           id: 21,
           name: 'hand-prop',
         },
-        version: '3.0',
       },
     ],
     keywords: [
@@ -18353,7 +17267,6 @@ export const emojisArray = [
       'camera',
       'phone',
     ],
-    version: '3.0',
   },
   {
     id: 1002,
@@ -18382,7 +17295,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '1.0',
       },
       {
         id: 1004,
@@ -18397,7 +17309,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '1.0',
       },
       {
         id: 1005,
@@ -18412,7 +17323,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '1.0',
       },
       {
         id: 1006,
@@ -18427,7 +17337,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '1.0',
       },
       {
         id: 1007,
@@ -18442,7 +17351,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '1.0',
       },
     ],
     keywords: [
@@ -18451,7 +17359,6 @@ export const emojisArray = [
       'feminist',
       'boy',
     ],
-    version: '0.6',
   },
   {
     id: 1008,
@@ -18480,7 +17387,6 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
       {
         id: 1010,
@@ -18495,7 +17401,6 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
       {
         id: 1011,
@@ -18510,7 +17415,6 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
       {
         id: 1012,
@@ -18525,7 +17429,6 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
       {
         id: 1013,
@@ -18540,13 +17443,11 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
     ],
     keywords: [
       'show',
     ],
-    version: '0.6',
   },
   {
     id: 1014,
@@ -18575,7 +17476,6 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
       {
         id: 1016,
@@ -18590,7 +17490,6 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
       {
         id: 1017,
@@ -18605,7 +17504,6 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
       {
         id: 1018,
@@ -18620,7 +17518,6 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
       {
         id: 1019,
@@ -18635,13 +17532,11 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
     ],
     keywords: [
       'show',
     ],
-    version: '0.6',
   },
   {
     id: 1020,
@@ -18670,7 +17565,6 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
       {
         id: 1022,
@@ -18685,7 +17579,6 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
       {
         id: 1023,
@@ -18700,7 +17593,6 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
       {
         id: 1024,
@@ -18715,7 +17607,6 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
       {
         id: 1025,
@@ -18730,13 +17621,11 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
     ],
     keywords: [
       'me',
     ],
-    version: '0.6',
   },
   {
     id: 1026,
@@ -18765,7 +17654,6 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
       {
         id: 1028,
@@ -18780,7 +17668,6 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
       {
         id: 1029,
@@ -18795,7 +17682,6 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
       {
         id: 1030,
@@ -18810,7 +17696,6 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
       {
         id: 1031,
@@ -18825,13 +17710,11 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
     ],
     keywords: [
       'show',
     ],
-    version: '0.6',
   },
   {
     id: 1032,
@@ -18860,7 +17743,6 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
       {
         id: 1034,
@@ -18875,7 +17757,6 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
       {
         id: 1035,
@@ -18890,7 +17771,6 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
       {
         id: 1036,
@@ -18905,7 +17785,6 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
       {
         id: 1037,
@@ -18920,13 +17799,11 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
     ],
     keywords: [
       'fuck',
     ],
-    version: '1.0',
   },
   {
     id: 1038,
@@ -18955,7 +17832,6 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
       {
         id: 1040,
@@ -18970,7 +17846,6 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
       {
         id: 1041,
@@ -18985,7 +17860,6 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
       {
         id: 1042,
@@ -19000,7 +17874,6 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
       {
         id: 1043,
@@ -19015,13 +17888,11 @@ export const emojisArray = [
           id: 18,
           name: 'hand-single-finger',
         },
-        version: '1.0',
       },
     ],
     keywords: [
       'show',
     ],
-    version: '0.6',
   },
   {
     id: 1044,
@@ -19050,7 +17921,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '1.0',
       },
       {
         id: 1046,
@@ -19065,7 +17935,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '1.0',
       },
       {
         id: 1047,
@@ -19080,7 +17949,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '1.0',
       },
       {
         id: 1048,
@@ -19095,7 +17963,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '1.0',
       },
       {
         id: 1049,
@@ -19110,13 +17977,11 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '1.0',
       },
     ],
     keywords: [
       'peace',
     ],
-    version: '0.6',
   },
   {
     id: 1050,
@@ -19145,7 +18010,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '3.0',
       },
       {
         id: 1052,
@@ -19160,7 +18024,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '3.0',
       },
       {
         id: 1053,
@@ -19175,7 +18038,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '3.0',
       },
       {
         id: 1054,
@@ -19190,7 +18052,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '3.0',
       },
       {
         id: 1055,
@@ -19205,13 +18066,11 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '3.0',
       },
     ],
     keywords: [
       'cross',
     ],
-    version: '3.0',
   },
   {
     id: 1056,
@@ -19240,7 +18099,6 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '1.0',
       },
       {
         id: 1058,
@@ -19255,7 +18113,6 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '1.0',
       },
       {
         id: 1059,
@@ -19270,7 +18127,6 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '1.0',
       },
       {
         id: 1060,
@@ -19285,7 +18141,6 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '1.0',
       },
       {
         id: 1061,
@@ -19300,13 +18155,11 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '1.0',
       },
     ],
     keywords: [
       'hi',
     ],
-    version: '1.0',
   },
   {
     id: 1062,
@@ -19335,7 +18188,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '1.0',
       },
       {
         id: 1064,
@@ -19350,7 +18202,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '1.0',
       },
       {
         id: 1065,
@@ -19365,7 +18216,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '1.0',
       },
       {
         id: 1066,
@@ -19380,7 +18230,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '1.0',
       },
       {
         id: 1067,
@@ -19395,7 +18244,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '1.0',
       },
     ],
     keywords: [
@@ -19403,7 +18251,6 @@ export const emojisArray = [
       'parties',
       'devil',
     ],
-    version: '1.0',
   },
   {
     id: 1068,
@@ -19432,7 +18279,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '3.0',
       },
       {
         id: 1070,
@@ -19447,7 +18293,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '3.0',
       },
       {
         id: 1071,
@@ -19462,7 +18307,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '3.0',
       },
       {
         id: 1072,
@@ -19477,7 +18321,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '3.0',
       },
       {
         id: 1073,
@@ -19492,13 +18335,11 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '3.0',
       },
     ],
     keywords: [
       'phone',
     ],
-    version: '3.0',
   },
   {
     id: 1074,
@@ -19527,7 +18368,6 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '1.0',
       },
       {
         id: 1076,
@@ -19542,7 +18382,6 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '1.0',
       },
       {
         id: 1077,
@@ -19557,7 +18396,6 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '1.0',
       },
       {
         id: 1078,
@@ -19572,7 +18410,6 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '1.0',
       },
       {
         id: 1079,
@@ -19587,14 +18424,12 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '1.0',
       },
     ],
     keywords: [
       'hi',
       'hello',
     ],
-    version: '0.7',
   },
   {
     id: 1080,
@@ -19623,7 +18458,6 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '1.0',
       },
       {
         id: 1082,
@@ -19638,7 +18472,6 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '1.0',
       },
       {
         id: 1083,
@@ -19653,7 +18486,6 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '1.0',
       },
       {
         id: 1084,
@@ -19668,7 +18500,6 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '1.0',
       },
       {
         id: 1085,
@@ -19683,14 +18514,12 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '1.0',
       },
     ],
     keywords: [
       'hi',
       'hello',
     ],
-    version: '0.6',
   },
   {
     id: 1086,
@@ -19719,7 +18548,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '1.0',
       },
       {
         id: 1088,
@@ -19734,7 +18562,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '1.0',
       },
       {
         id: 1089,
@@ -19749,7 +18576,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '1.0',
       },
       {
         id: 1090,
@@ -19764,7 +18590,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '1.0',
       },
       {
         id: 1091,
@@ -19779,7 +18604,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '1.0',
       },
     ],
     keywords: [
@@ -19789,7 +18613,6 @@ export const emojisArray = [
       'good',
       'beautiful',
     ],
-    version: '0.6',
   },
   {
     id: 1092,
@@ -19818,7 +18641,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '1.0',
       },
       {
         id: 1094,
@@ -19833,7 +18655,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '1.0',
       },
       {
         id: 1095,
@@ -19848,7 +18669,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '1.0',
       },
       {
         id: 1096,
@@ -19863,7 +18683,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '1.0',
       },
       {
         id: 1097,
@@ -19878,7 +18697,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '1.0',
       },
     ],
     keywords: [
@@ -19891,7 +18709,6 @@ export const emojisArray = [
       'beautiful',
       'super',
     ],
-    version: '0.6',
   },
   {
     id: 1098,
@@ -19920,7 +18737,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '1.0',
       },
       {
         id: 1100,
@@ -19935,7 +18751,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '1.0',
       },
       {
         id: 1101,
@@ -19950,7 +18765,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '1.0',
       },
       {
         id: 1102,
@@ -19965,7 +18779,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '1.0',
       },
       {
         id: 1103,
@@ -19980,14 +18793,12 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '1.0',
       },
     ],
     keywords: [
       'wrong',
       'bad',
     ],
-    version: '0.6',
   },
   {
     id: 1104,
@@ -20016,7 +18827,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '1.0',
       },
       {
         id: 1106,
@@ -20031,7 +18841,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '1.0',
       },
       {
         id: 1107,
@@ -20046,7 +18855,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '1.0',
       },
       {
         id: 1108,
@@ -20061,7 +18869,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '1.0',
       },
       {
         id: 1109,
@@ -20076,7 +18883,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '1.0',
       },
     ],
     keywords: [
@@ -20086,7 +18892,6 @@ export const emojisArray = [
       'condolence',
       'union',
     ],
-    version: '0.6',
   },
   {
     id: 1110,
@@ -20115,7 +18920,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '1.0',
       },
       {
         id: 1112,
@@ -20130,7 +18934,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '1.0',
       },
       {
         id: 1113,
@@ -20145,7 +18948,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '1.0',
       },
       {
         id: 1114,
@@ -20160,7 +18962,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '1.0',
       },
       {
         id: 1115,
@@ -20175,11 +18976,9 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '1.0',
       },
     ],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1116,
@@ -20208,7 +19007,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '3.0',
       },
       {
         id: 1118,
@@ -20223,7 +19021,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '3.0',
       },
       {
         id: 1119,
@@ -20238,7 +19035,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '3.0',
       },
       {
         id: 1120,
@@ -20253,7 +19049,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '3.0',
       },
       {
         id: 1121,
@@ -20268,11 +19063,9 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '3.0',
       },
     ],
     keywords: [],
-    version: '3.0',
   },
   {
     id: 1122,
@@ -20301,7 +19094,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '3.0',
       },
       {
         id: 1124,
@@ -20316,7 +19108,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '3.0',
       },
       {
         id: 1125,
@@ -20331,7 +19122,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '3.0',
       },
       {
         id: 1126,
@@ -20346,7 +19136,6 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '3.0',
       },
       {
         id: 1127,
@@ -20361,11 +19150,9 @@ export const emojisArray = [
           id: 19,
           name: 'hand-fingers-closed',
         },
-        version: '3.0',
       },
     ],
     keywords: [],
-    version: '3.0',
   },
   {
     id: 1128,
@@ -20394,7 +19181,6 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '3.0',
       },
       {
         id: 1130,
@@ -20409,7 +19195,6 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '3.0',
       },
       {
         id: 1131,
@@ -20424,7 +19209,6 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '3.0',
       },
       {
         id: 1132,
@@ -20439,7 +19223,6 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '3.0',
       },
       {
         id: 1133,
@@ -20454,13 +19237,11 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '3.0',
       },
     ],
     keywords: [
       'hi',
     ],
-    version: '3.0',
   },
   {
     id: 1134,
@@ -20489,7 +19270,6 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '1.0',
       },
       {
         id: 1136,
@@ -20504,7 +19284,6 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '1.0',
       },
       {
         id: 1137,
@@ -20519,7 +19298,6 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '1.0',
       },
       {
         id: 1138,
@@ -20534,7 +19312,6 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '1.0',
       },
       {
         id: 1139,
@@ -20549,13 +19326,11 @@ export const emojisArray = [
           id: 16,
           name: 'hand-fingers-open',
         },
-        version: '1.0',
       },
     ],
     keywords: [
       'hi',
     ],
-    version: '0.6',
   },
   {
     id: 1140,
@@ -20584,7 +19359,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '5.0',
       },
       {
         id: 1142,
@@ -20599,7 +19373,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '5.0',
       },
       {
         id: 1143,
@@ -20614,7 +19387,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '5.0',
       },
       {
         id: 1144,
@@ -20629,7 +19401,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '5.0',
       },
       {
         id: 1145,
@@ -20644,11 +19415,9 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '5.0',
       },
     ],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 1146,
@@ -20677,7 +19446,6 @@ export const emojisArray = [
           id: 21,
           name: 'hand-prop',
         },
-        version: '1.0',
       },
       {
         id: 1148,
@@ -20692,7 +19460,6 @@ export const emojisArray = [
           id: 21,
           name: 'hand-prop',
         },
-        version: '1.0',
       },
       {
         id: 1149,
@@ -20707,7 +19474,6 @@ export const emojisArray = [
           id: 21,
           name: 'hand-prop',
         },
-        version: '1.0',
       },
       {
         id: 1150,
@@ -20722,7 +19488,6 @@ export const emojisArray = [
           id: 21,
           name: 'hand-prop',
         },
-        version: '1.0',
       },
       {
         id: 1151,
@@ -20737,13 +19502,11 @@ export const emojisArray = [
           id: 21,
           name: 'hand-prop',
         },
-        version: '1.0',
       },
     ],
     keywords: [
       'pen',
     ],
-    version: '0.7',
   },
   {
     id: 1152,
@@ -20772,7 +19535,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '1.0',
       },
       {
         id: 1154,
@@ -20787,7 +19549,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '1.0',
       },
       {
         id: 1155,
@@ -20802,7 +19563,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '1.0',
       },
       {
         id: 1156,
@@ -20817,7 +19577,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '1.0',
       },
       {
         id: 1157,
@@ -20832,14 +19591,12 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '1.0',
       },
     ],
     keywords: [
       'good',
       'beautiful',
     ],
-    version: '0.6',
   },
   {
     id: 1158,
@@ -20868,7 +19625,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '1.0',
       },
       {
         id: 1160,
@@ -20883,7 +19639,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '1.0',
       },
       {
         id: 1161,
@@ -20898,7 +19653,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '1.0',
       },
       {
         id: 1162,
@@ -20913,7 +19667,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '1.0',
       },
       {
         id: 1163,
@@ -20928,11 +19681,9 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '1.0',
       },
     ],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1164,
@@ -20961,7 +19712,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '1.0',
       },
       {
         id: 1166,
@@ -20976,7 +19726,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '1.0',
       },
       {
         id: 1167,
@@ -20991,7 +19740,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '1.0',
       },
       {
         id: 1168,
@@ -21006,7 +19754,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '1.0',
       },
       {
         id: 1169,
@@ -21021,14 +19768,12 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '1.0',
       },
     ],
     keywords: [
       'celebration',
       'parties',
     ],
-    version: '0.6',
   },
   {
     id: 1170,
@@ -21057,7 +19802,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '5.0',
       },
       {
         id: 1172,
@@ -21072,7 +19816,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '5.0',
       },
       {
         id: 1173,
@@ -21087,7 +19830,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '5.0',
       },
       {
         id: 1174,
@@ -21102,7 +19844,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '5.0',
       },
       {
         id: 1175,
@@ -21117,11 +19858,9 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '5.0',
       },
     ],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 1176,
@@ -21150,7 +19889,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '1.0',
       },
       {
         id: 1178,
@@ -21165,7 +19903,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '1.0',
       },
       {
         id: 1179,
@@ -21180,7 +19917,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '1.0',
       },
       {
         id: 1180,
@@ -21195,7 +19931,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '1.0',
       },
       {
         id: 1181,
@@ -21210,7 +19945,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '1.0',
       },
     ],
     keywords: [
@@ -21218,7 +19952,6 @@ export const emojisArray = [
       'please',
       'pray',
     ],
-    version: '0.6',
   },
   {
     id: 1182,
@@ -21247,7 +19980,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '3.0',
       },
       {
         id: 2473,
@@ -21262,7 +19994,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '3.0',
       },
       {
         id: 2474,
@@ -21277,7 +20008,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '3.0',
       },
       {
         id: 2475,
@@ -21292,7 +20022,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '3.0',
       },
       {
         id: 2476,
@@ -21307,7 +20036,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '3.0',
       },
       {
         id: 2477,
@@ -21322,7 +20050,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '14.0',
       },
       {
         id: 2478,
@@ -21337,7 +20064,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '14.0',
       },
       {
         id: 2479,
@@ -21352,7 +20078,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '14.0',
       },
       {
         id: 2480,
@@ -21367,7 +20092,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '14.0',
       },
       {
         id: 2481,
@@ -21382,7 +20106,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '14.0',
       },
       {
         id: 2482,
@@ -21397,7 +20120,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '14.0',
       },
       {
         id: 2483,
@@ -21412,7 +20134,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '14.0',
       },
       {
         id: 2484,
@@ -21427,7 +20148,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '14.0',
       },
       {
         id: 2485,
@@ -21442,7 +20162,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '14.0',
       },
       {
         id: 2486,
@@ -21457,7 +20176,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '14.0',
       },
       {
         id: 2487,
@@ -21472,7 +20190,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '14.0',
       },
       {
         id: 2488,
@@ -21487,7 +20204,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '14.0',
       },
       {
         id: 2489,
@@ -21502,7 +20218,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '14.0',
       },
       {
         id: 2490,
@@ -21517,7 +20232,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '14.0',
       },
       {
         id: 2491,
@@ -21532,7 +20246,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '14.0',
       },
       {
         id: 2492,
@@ -21547,7 +20260,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '14.0',
       },
       {
         id: 2493,
@@ -21562,7 +20274,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '14.0',
       },
       {
         id: 2494,
@@ -21577,7 +20288,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '14.0',
       },
       {
         id: 2495,
@@ -21592,7 +20302,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '14.0',
       },
       {
         id: 2496,
@@ -21607,7 +20316,6 @@ export const emojisArray = [
           id: 20,
           name: 'hands',
         },
-        version: '14.0',
       },
     ],
     keywords: [
@@ -21615,7 +20323,6 @@ export const emojisArray = [
       'agreement',
       'contract',
     ],
-    version: '3.0',
   },
   {
     id: 1183,
@@ -21644,7 +20351,6 @@ export const emojisArray = [
           id: 21,
           name: 'hand-prop',
         },
-        version: '1.0',
       },
       {
         id: 1185,
@@ -21659,7 +20365,6 @@ export const emojisArray = [
           id: 21,
           name: 'hand-prop',
         },
-        version: '1.0',
       },
       {
         id: 1186,
@@ -21674,7 +20379,6 @@ export const emojisArray = [
           id: 21,
           name: 'hand-prop',
         },
-        version: '1.0',
       },
       {
         id: 1187,
@@ -21689,7 +20393,6 @@ export const emojisArray = [
           id: 21,
           name: 'hand-prop',
         },
-        version: '1.0',
       },
       {
         id: 1188,
@@ -21704,14 +20407,12 @@ export const emojisArray = [
           id: 21,
           name: 'hand-prop',
         },
-        version: '1.0',
       },
     ],
     keywords: [
       'girl',
       'night',
     ],
-    version: '0.6',
   },
   {
     id: 1189,
@@ -21740,7 +20441,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '1.0',
       },
       {
         id: 1191,
@@ -21755,7 +20455,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '1.0',
       },
       {
         id: 1192,
@@ -21770,7 +20469,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '1.0',
       },
       {
         id: 1193,
@@ -21785,7 +20483,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '1.0',
       },
       {
         id: 1194,
@@ -21800,13 +20497,11 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '1.0',
       },
     ],
     keywords: [
       'listen',
     ],
-    version: '0.6',
   },
   {
     id: 1195,
@@ -21835,7 +20530,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '1.0',
       },
       {
         id: 1197,
@@ -21850,7 +20544,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '1.0',
       },
       {
         id: 1198,
@@ -21865,7 +20558,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '1.0',
       },
       {
         id: 1199,
@@ -21880,7 +20572,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '1.0',
       },
       {
         id: 1200,
@@ -21895,13 +20586,11 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '1.0',
       },
     ],
     keywords: [
       'smell',
     ],
-    version: '0.6',
   },
   {
     id: 1201,
@@ -21920,7 +20609,6 @@ export const emojisArray = [
     keywords: [
       'foot',
     ],
-    version: '0.6',
   },
   {
     id: 1202,
@@ -21939,7 +20627,6 @@ export const emojisArray = [
     keywords: [
       'look',
     ],
-    version: '0.6',
   },
   {
     id: 1203,
@@ -21958,7 +20645,6 @@ export const emojisArray = [
     keywords: [
       'look',
     ],
-    version: '0.7',
   },
   {
     id: 1204,
@@ -21975,7 +20661,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '2.0',
   },
   {
     id: 1205,
@@ -21997,7 +20682,6 @@ export const emojisArray = [
       'einstein',
       'science',
     ],
-    version: '5.0',
   },
   {
     id: 1206,
@@ -22018,7 +20702,6 @@ export const emojisArray = [
       'lips',
       'lick',
     ],
-    version: '0.6',
   },
   {
     id: 1207,
@@ -22041,7 +20724,6 @@ export const emojisArray = [
       'lips',
       'lick',
     ],
-    version: '0.6',
   },
   {
     id: 1208,
@@ -22067,7 +20749,6 @@ export const emojisArray = [
       'girls',
       'night',
     ],
-    version: '0.6',
   },
   {
     id: 1209,
@@ -22086,7 +20767,6 @@ export const emojisArray = [
     keywords: [
       'love',
     ],
-    version: '0.6',
   },
   {
     id: 1210,
@@ -22105,7 +20785,6 @@ export const emojisArray = [
     keywords: [
       'love',
     ],
-    version: '0.6',
   },
   {
     id: 1211,
@@ -22124,7 +20803,6 @@ export const emojisArray = [
     keywords: [
       'love',
     ],
-    version: '0.6',
   },
   {
     id: 1212,
@@ -22144,7 +20822,6 @@ export const emojisArray = [
       'love',
       'heartbreak',
     ],
-    version: '0.6',
   },
   {
     id: 1213,
@@ -22163,7 +20840,6 @@ export const emojisArray = [
     keywords: [
       'love',
     ],
-    version: '0.6',
   },
   {
     id: 1214,
@@ -22182,7 +20858,6 @@ export const emojisArray = [
     keywords: [
       'love',
     ],
-    version: '0.6',
   },
   {
     id: 1215,
@@ -22201,7 +20876,6 @@ export const emojisArray = [
     keywords: [
       'love',
     ],
-    version: '0.6',
   },
   {
     id: 1216,
@@ -22220,7 +20894,6 @@ export const emojisArray = [
     keywords: [
       'love',
     ],
-    version: '0.6',
   },
   {
     id: 1217,
@@ -22239,7 +20912,6 @@ export const emojisArray = [
     keywords: [
       'love',
     ],
-    version: '0.6',
   },
   {
     id: 1218,
@@ -22258,7 +20930,6 @@ export const emojisArray = [
     keywords: [
       'love',
     ],
-    version: '0.6',
   },
   {
     id: 1219,
@@ -22277,7 +20948,6 @@ export const emojisArray = [
     keywords: [
       'love',
     ],
-    version: '5.0',
   },
   {
     id: 1220,
@@ -22296,7 +20966,6 @@ export const emojisArray = [
     keywords: [
       'love',
     ],
-    version: '0.6',
   },
   {
     id: 1221,
@@ -22315,7 +20984,6 @@ export const emojisArray = [
     keywords: [
       'love',
     ],
-    version: '3.0',
   },
   {
     id: 1222,
@@ -22335,7 +21003,6 @@ export const emojisArray = [
       'love',
       'gift',
     ],
-    version: '0.6',
   },
   {
     id: 1223,
@@ -22354,7 +21021,6 @@ export const emojisArray = [
     keywords: [
       'love',
     ],
-    version: '0.6',
   },
   {
     id: 1224,
@@ -22374,7 +21040,6 @@ export const emojisArray = [
       'decoration',
       'love',
     ],
-    version: '0.6',
   },
   {
     id: 1225,
@@ -22393,7 +21058,6 @@ export const emojisArray = [
     keywords: [
       'love',
     ],
-    version: '1.0',
   },
   {
     id: 1226,
@@ -22413,7 +21077,6 @@ export const emojisArray = [
       'love',
       'envelope',
     ],
-    version: '0.6',
   },
   {
     id: 1227,
@@ -22436,7 +21099,6 @@ export const emojisArray = [
       'bed',
       'dreams',
     ],
-    version: '0.6',
   },
   {
     id: 1228,
@@ -22453,7 +21115,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1229,
@@ -22476,7 +21137,6 @@ export const emojisArray = [
       'war',
       'explosion',
     ],
-    version: '0.6',
   },
   {
     id: 1230,
@@ -22498,7 +21158,6 @@ export const emojisArray = [
       'blast',
       'explosion',
     ],
-    version: '0.6',
   },
   {
     id: 1231,
@@ -22520,7 +21179,6 @@ export const emojisArray = [
       'stressed',
       'sex',
     ],
-    version: '0.6',
   },
   {
     id: 1232,
@@ -22542,7 +21200,6 @@ export const emojisArray = [
       'smoking',
       'blow',
     ],
-    version: '0.6',
   },
   {
     id: 1233,
@@ -22561,7 +21218,6 @@ export const emojisArray = [
     keywords: [
       'star',
     ],
-    version: '0.6',
   },
   {
     id: 1234,
@@ -22580,7 +21236,6 @@ export const emojisArray = [
     keywords: [
       'speek',
     ],
-    version: '0.6',
   },
   {
     id: 1235,
@@ -22599,7 +21254,6 @@ export const emojisArray = [
     keywords: [
       'speek',
     ],
-    version: '2.0',
   },
   {
     id: 1236,
@@ -22616,7 +21270,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1237,
@@ -22633,7 +21286,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1238,
@@ -22652,7 +21304,6 @@ export const emojisArray = [
     keywords: [
       'fall',
     ],
-    version: '0.7',
   },
   {
     id: 1239,
@@ -22673,7 +21324,6 @@ export const emojisArray = [
       'fashion',
       'accessories',
     ],
-    version: '0.6',
   },
   {
     id: 1240,
@@ -22698,7 +21348,6 @@ export const emojisArray = [
       'sea',
       'summer',
     ],
-    version: '0.7',
   },
   {
     id: 1241,
@@ -22718,7 +21367,6 @@ export const emojisArray = [
       'tie',
       'work',
     ],
-    version: '0.6',
   },
   {
     id: 1242,
@@ -22737,7 +21385,6 @@ export const emojisArray = [
     keywords: [
       'summer',
     ],
-    version: '0.6',
   },
   {
     id: 1243,
@@ -22754,7 +21401,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1244,
@@ -22774,7 +21420,6 @@ export const emojisArray = [
       'cold',
       'winter',
     ],
-    version: '5.0',
   },
   {
     id: 1245,
@@ -22794,7 +21439,6 @@ export const emojisArray = [
       'cold',
       'winter',
     ],
-    version: '5.0',
   },
   {
     id: 1246,
@@ -22814,7 +21458,6 @@ export const emojisArray = [
       'cold',
       'winter',
     ],
-    version: '5.0',
   },
   {
     id: 1247,
@@ -22836,7 +21479,6 @@ export const emojisArray = [
       'foot',
       'feet',
     ],
-    version: '5.0',
   },
   {
     id: 1248,
@@ -22861,7 +21503,6 @@ export const emojisArray = [
       'summer',
       'party',
     ],
-    version: '0.6',
   },
   {
     id: 1249,
@@ -22880,7 +21521,6 @@ export const emojisArray = [
     keywords: [
       'judo',
     ],
-    version: '0.6',
   },
   {
     id: 1250,
@@ -22908,7 +21548,6 @@ export const emojisArray = [
       'sea',
       'beach',
     ],
-    version: '0.6',
   },
   {
     id: 1251,
@@ -22928,7 +21567,6 @@ export const emojisArray = [
       'women',
       'fashion',
     ],
-    version: '0.6',
   },
   {
     id: 1252,
@@ -22952,7 +21590,6 @@ export const emojisArray = [
       'money',
       'bag',
     ],
-    version: '0.6',
   },
   {
     id: 1253,
@@ -22976,7 +21613,6 @@ export const emojisArray = [
       'vacation',
       'accessories',
     ],
-    version: '0.6',
   },
   {
     id: 1254,
@@ -22996,7 +21632,6 @@ export const emojisArray = [
       'pouch',
       'bag',
     ],
-    version: '0.6',
   },
   {
     id: 1255,
@@ -23017,7 +21652,6 @@ export const emojisArray = [
       'buy',
       'money',
     ],
-    version: '0.7',
   },
   {
     id: 1256,
@@ -23037,7 +21671,6 @@ export const emojisArray = [
       'pupils',
       'study',
     ],
-    version: '0.6',
   },
   {
     id: 1257,
@@ -23057,7 +21690,6 @@ export const emojisArray = [
       'class',
       'fashion',
     ],
-    version: '0.6',
   },
   {
     id: 1258,
@@ -23078,7 +21710,6 @@ export const emojisArray = [
       'run',
       'marathon',
     ],
-    version: '0.6',
   },
   {
     id: 1259,
@@ -23102,7 +21733,6 @@ export const emojisArray = [
       'girls',
       'night',
     ],
-    version: '0.6',
   },
   {
     id: 1260,
@@ -23126,7 +21756,6 @@ export const emojisArray = [
       'girls',
       'night',
     ],
-    version: '0.6',
   },
   {
     id: 1261,
@@ -23152,7 +21781,6 @@ export const emojisArray = [
       'boots',
       'shoe',
     ],
-    version: '0.6',
   },
   {
     id: 1262,
@@ -23171,7 +21799,6 @@ export const emojisArray = [
     keywords: [
       'king',
     ],
-    version: '0.6',
   },
   {
     id: 1263,
@@ -23188,7 +21815,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1264,
@@ -23205,7 +21831,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1265,
@@ -23224,7 +21849,6 @@ export const emojisArray = [
     keywords: [
       'school',
     ],
-    version: '0.6',
   },
   {
     id: 1266,
@@ -23241,7 +21865,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 1267,
@@ -23258,7 +21881,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1268,
@@ -23277,7 +21899,6 @@ export const emojisArray = [
     keywords: [
       'rosary',
     ],
-    version: '1.0',
   },
   {
     id: 1269,
@@ -23298,7 +21919,6 @@ export const emojisArray = [
       'sexy',
       'lip',
     ],
-    version: '0.6',
   },
   {
     id: 1270,
@@ -23317,7 +21937,6 @@ export const emojisArray = [
     keywords: [
       'wedding',
     ],
-    version: '0.6',
   },
   {
     id: 1271,
@@ -23337,7 +21956,6 @@ export const emojisArray = [
     keywords: [
       'luxury',
     ],
-    version: '0.6',
   },
   {
     id: 1272,
@@ -23356,7 +21974,6 @@ export const emojisArray = [
     keywords: [
       'jungle',
     ],
-    version: '0.6',
   },
   {
     id: 1273,
@@ -23375,7 +21992,6 @@ export const emojisArray = [
     keywords: [
       'jungle',
     ],
-    version: '0.6',
   },
   {
     id: 1274,
@@ -23394,7 +22010,6 @@ export const emojisArray = [
     keywords: [
       'jungle',
     ],
-    version: '3.0',
   },
   {
     id: 1275,
@@ -23413,7 +22028,6 @@ export const emojisArray = [
     keywords: [
       'pug',
     ],
-    version: '0.6',
   },
   {
     id: 1276,
@@ -23432,7 +22046,6 @@ export const emojisArray = [
     keywords: [
       'pug',
     ],
-    version: '0.7',
   },
   {
     id: 1277,
@@ -23451,7 +22064,6 @@ export const emojisArray = [
     keywords: [
       'luxury',
     ],
-    version: '0.6',
   },
   {
     id: 1278,
@@ -23470,7 +22082,6 @@ export const emojisArray = [
     keywords: [
       'roar',
     ],
-    version: '0.6',
   },
   {
     id: 1279,
@@ -23489,7 +22100,6 @@ export const emojisArray = [
     keywords: [
       'clever',
     ],
-    version: '3.0',
   },
   {
     id: 1280,
@@ -23506,7 +22116,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1281,
@@ -23523,7 +22132,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1282,
@@ -23544,7 +22152,6 @@ export const emojisArray = [
       'cat',
       'jungle',
     ],
-    version: '1.0',
   },
   {
     id: 1283,
@@ -23565,7 +22172,6 @@ export const emojisArray = [
       'cat',
       'jungle',
     ],
-    version: '0.6',
   },
   {
     id: 1284,
@@ -23586,7 +22192,6 @@ export const emojisArray = [
       'cat',
       'jungle',
     ],
-    version: '1.0',
   },
   {
     id: 1285,
@@ -23607,7 +22212,6 @@ export const emojisArray = [
       'cat',
       'jungle',
     ],
-    version: '1.0',
   },
   {
     id: 1286,
@@ -23626,7 +22230,6 @@ export const emojisArray = [
     keywords: [
       'farm',
     ],
-    version: '0.6',
   },
   {
     id: 1287,
@@ -23645,7 +22248,6 @@ export const emojisArray = [
     keywords: [
       'farm',
     ],
-    version: '0.6',
   },
   {
     id: 1288,
@@ -23664,7 +22266,6 @@ export const emojisArray = [
     keywords: [
       'fun',
     ],
-    version: '1.0',
   },
   {
     id: 1289,
@@ -23683,7 +22284,6 @@ export const emojisArray = [
     keywords: [
       'jungle',
     ],
-    version: '5.0',
   },
   {
     id: 1290,
@@ -23700,7 +22300,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '3.0',
   },
   {
     id: 1291,
@@ -23719,7 +22318,6 @@ export const emojisArray = [
     keywords: [
       'farm',
     ],
-    version: '0.6',
   },
   {
     id: 1292,
@@ -23738,7 +22336,6 @@ export const emojisArray = [
     keywords: [
       'farm',
     ],
-    version: '1.0',
   },
   {
     id: 1293,
@@ -23755,7 +22352,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1294,
@@ -23774,7 +22370,6 @@ export const emojisArray = [
     keywords: [
       'farm',
     ],
-    version: '1.0',
   },
   {
     id: 1295,
@@ -23793,7 +22388,6 @@ export const emojisArray = [
     keywords: [
       'farm',
     ],
-    version: '0.6',
   },
   {
     id: 1296,
@@ -23812,7 +22406,6 @@ export const emojisArray = [
     keywords: [
       'farm',
     ],
-    version: '1.0',
   },
   {
     id: 1297,
@@ -23829,7 +22422,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1298,
@@ -23848,7 +22440,6 @@ export const emojisArray = [
     keywords: [
       'farm',
     ],
-    version: '0.6',
   },
   {
     id: 1299,
@@ -23867,7 +22458,6 @@ export const emojisArray = [
     keywords: [
       'farm',
     ],
-    version: '1.0',
   },
   {
     id: 1300,
@@ -23887,7 +22477,6 @@ export const emojisArray = [
       'farm',
       'sheep',
     ],
-    version: '0.6',
   },
   {
     id: 1301,
@@ -23906,7 +22495,6 @@ export const emojisArray = [
     keywords: [
       'farm',
     ],
-    version: '1.0',
   },
   {
     id: 1302,
@@ -23926,7 +22514,6 @@ export const emojisArray = [
       'dromedary',
       'desert',
     ],
-    version: '1.0',
   },
   {
     id: 1303,
@@ -23946,7 +22533,6 @@ export const emojisArray = [
       'dromedary',
       'desert',
     ],
-    version: '0.6',
   },
   {
     id: 1304,
@@ -23965,7 +22551,6 @@ export const emojisArray = [
     keywords: [
       'savannah',
     ],
-    version: '5.0',
   },
   {
     id: 1305,
@@ -23984,7 +22569,6 @@ export const emojisArray = [
     keywords: [
       'savannah',
     ],
-    version: '0.6',
   },
   {
     id: 1306,
@@ -24003,7 +22587,6 @@ export const emojisArray = [
     keywords: [
       'savannah',
     ],
-    version: '3.0',
   },
   {
     id: 1307,
@@ -24022,7 +22605,6 @@ export const emojisArray = [
     keywords: [
       'rodent',
     ],
-    version: '0.6',
   },
   {
     id: 1308,
@@ -24041,7 +22623,6 @@ export const emojisArray = [
     keywords: [
       'rodent',
     ],
-    version: '1.0',
   },
   {
     id: 1309,
@@ -24060,7 +22641,6 @@ export const emojisArray = [
     keywords: [
       'rodent',
     ],
-    version: '1.0',
   },
   {
     id: 1310,
@@ -24079,7 +22659,6 @@ export const emojisArray = [
     keywords: [
       'rodent',
     ],
-    version: '0.6',
   },
   {
     id: 1311,
@@ -24099,7 +22678,6 @@ export const emojisArray = [
       'bunny',
       'rodent',
     ],
-    version: '0.6',
   },
   {
     id: 1312,
@@ -24119,7 +22697,6 @@ export const emojisArray = [
       'bunny',
       'rodent',
     ],
-    version: '1.0',
   },
   {
     id: 1313,
@@ -24138,7 +22715,6 @@ export const emojisArray = [
     keywords: [
       'rodent',
     ],
-    version: '0.7',
   },
   {
     id: 1314,
@@ -24155,7 +22731,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 1315,
@@ -24174,7 +22749,6 @@ export const emojisArray = [
     keywords: [
       'batman',
     ],
-    version: '3.0',
   },
   {
     id: 1316,
@@ -24193,7 +22767,6 @@ export const emojisArray = [
     keywords: [
       'forest',
     ],
-    version: '0.6',
   },
   {
     id: 1317,
@@ -24212,7 +22785,6 @@ export const emojisArray = [
     keywords: [
       'jungle',
     ],
-    version: '0.6',
   },
   {
     id: 1318,
@@ -24231,7 +22803,6 @@ export const emojisArray = [
     keywords: [
       'jungle',
     ],
-    version: '0.6',
   },
   {
     id: 1319,
@@ -24248,7 +22819,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1320,
@@ -24265,7 +22835,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1321,
@@ -24285,7 +22854,6 @@ export const emojisArray = [
       'farm',
       'kfc',
     ],
-    version: '0.6',
   },
   {
     id: 1322,
@@ -24304,7 +22872,6 @@ export const emojisArray = [
     keywords: [
       'farm',
     ],
-    version: '1.0',
   },
   {
     id: 1323,
@@ -24325,7 +22892,6 @@ export const emojisArray = [
       'farm',
       'chicken',
     ],
-    version: '0.6',
   },
   {
     id: 1324,
@@ -24344,7 +22910,6 @@ export const emojisArray = [
     keywords: [
       'chicken',
     ],
-    version: '0.6',
   },
   {
     id: 1325,
@@ -24363,7 +22928,6 @@ export const emojisArray = [
     keywords: [
       'chicken',
     ],
-    version: '0.6',
   },
   {
     id: 1326,
@@ -24382,7 +22946,6 @@ export const emojisArray = [
     keywords: [
       'fly',
     ],
-    version: '0.6',
   },
   {
     id: 1327,
@@ -24402,7 +22965,6 @@ export const emojisArray = [
       'north pole',
       'artic',
     ],
-    version: '0.6',
   },
   {
     id: 1328,
@@ -24419,7 +22981,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1329,
@@ -24439,7 +23000,6 @@ export const emojisArray = [
       'fly',
       'eagle',
     ],
-    version: '3.0',
   },
   {
     id: 1330,
@@ -24456,7 +23016,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '3.0',
   },
   {
     id: 1331,
@@ -24475,7 +23034,6 @@ export const emojisArray = [
     keywords: [
       'night',
     ],
-    version: '3.0',
   },
   {
     id: 1332,
@@ -24494,7 +23052,6 @@ export const emojisArray = [
     keywords: [
       'pond',
     ],
-    version: '0.6',
   },
   {
     id: 1333,
@@ -24511,7 +23068,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1334,
@@ -24530,7 +23086,6 @@ export const emojisArray = [
     keywords: [
       'slow',
     ],
-    version: '0.6',
   },
   {
     id: 1335,
@@ -24547,7 +23102,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '3.0',
   },
   {
     id: 1336,
@@ -24566,7 +23120,6 @@ export const emojisArray = [
     keywords: [
       'reptile',
     ],
-    version: '0.6',
   },
   {
     id: 1337,
@@ -24586,7 +23139,6 @@ export const emojisArray = [
       'monster',
       'china',
     ],
-    version: '0.6',
   },
   {
     id: 1338,
@@ -24606,7 +23158,6 @@ export const emojisArray = [
       'monster',
       'china',
     ],
-    version: '1.0',
   },
   {
     id: 1339,
@@ -24625,7 +23176,6 @@ export const emojisArray = [
     keywords: [
       'prehistory',
     ],
-    version: '5.0',
   },
   {
     id: 1340,
@@ -24644,7 +23194,6 @@ export const emojisArray = [
     keywords: [
       'prehistory',
     ],
-    version: '5.0',
   },
   {
     id: 1341,
@@ -24663,7 +23212,6 @@ export const emojisArray = [
     keywords: [
       'sea',
     ],
-    version: '0.6',
   },
   {
     id: 1342,
@@ -24682,7 +23230,6 @@ export const emojisArray = [
     keywords: [
       'sea',
     ],
-    version: '1.0',
   },
   {
     id: 1343,
@@ -24701,7 +23248,6 @@ export const emojisArray = [
     keywords: [
       'sea',
     ],
-    version: '0.6',
   },
   {
     id: 1344,
@@ -24720,7 +23266,6 @@ export const emojisArray = [
     keywords: [
       'sea',
     ],
-    version: '0.6',
   },
   {
     id: 1345,
@@ -24739,7 +23284,6 @@ export const emojisArray = [
     keywords: [
       'sea',
     ],
-    version: '0.6',
   },
   {
     id: 1346,
@@ -24758,7 +23302,6 @@ export const emojisArray = [
     keywords: [
       'sea',
     ],
-    version: '0.6',
   },
   {
     id: 1347,
@@ -24777,7 +23320,6 @@ export const emojisArray = [
     keywords: [
       'sea',
     ],
-    version: '3.0',
   },
   {
     id: 1348,
@@ -24796,7 +23338,6 @@ export const emojisArray = [
     keywords: [
       'sea',
     ],
-    version: '0.6',
   },
   {
     id: 1349,
@@ -24815,7 +23356,6 @@ export const emojisArray = [
     keywords: [
       'sea',
     ],
-    version: '0.6',
   },
   {
     id: 1350,
@@ -24835,7 +23375,6 @@ export const emojisArray = [
       'sea',
       'beach',
     ],
-    version: '1.0',
   },
   {
     id: 1351,
@@ -24855,7 +23394,6 @@ export const emojisArray = [
       'sea',
       'beach',
     ],
-    version: '3.0',
   },
   {
     id: 1352,
@@ -24874,7 +23412,6 @@ export const emojisArray = [
     keywords: [
       'sea',
     ],
-    version: '3.0',
   },
   {
     id: 1353,
@@ -24894,7 +23431,6 @@ export const emojisArray = [
       'insect',
       'slow',
     ],
-    version: '0.6',
   },
   {
     id: 1354,
@@ -24914,7 +23450,6 @@ export const emojisArray = [
       'summer',
       'insect',
     ],
-    version: '3.0',
   },
   {
     id: 1355,
@@ -24933,7 +23468,6 @@ export const emojisArray = [
     keywords: [
       'insect',
     ],
-    version: '0.6',
   },
   {
     id: 1356,
@@ -24952,7 +23486,6 @@ export const emojisArray = [
     keywords: [
       'insect',
     ],
-    version: '0.6',
   },
   {
     id: 1357,
@@ -24971,7 +23504,6 @@ export const emojisArray = [
     keywords: [
       'insect',
     ],
-    version: '0.6',
   },
   {
     id: 1358,
@@ -24990,7 +23522,6 @@ export const emojisArray = [
     keywords: [
       'insect',
     ],
-    version: '0.6',
   },
   {
     id: 1359,
@@ -25009,7 +23540,6 @@ export const emojisArray = [
     keywords: [
       'insect',
     ],
-    version: '5.0',
   },
   {
     id: 1360,
@@ -25029,7 +23559,6 @@ export const emojisArray = [
       'insect',
       'spiderman',
     ],
-    version: '0.7',
   },
   {
     id: 1361,
@@ -25049,7 +23578,6 @@ export const emojisArray = [
       'insect',
       'spiderman',
     ],
-    version: '0.7',
   },
   {
     id: 1362,
@@ -25068,7 +23596,6 @@ export const emojisArray = [
     keywords: [
       'insect',
     ],
-    version: '1.0',
   },
   {
     id: 1363,
@@ -25088,7 +23615,6 @@ export const emojisArray = [
       'rip',
       'condolence',
     ],
-    version: '0.6',
   },
   {
     id: 1364,
@@ -25105,7 +23631,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1365,
@@ -25122,7 +23647,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1366,
@@ -25139,7 +23663,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1367,
@@ -25161,7 +23684,6 @@ export const emojisArray = [
       'beautiful',
       'love',
     ],
-    version: '0.6',
   },
   {
     id: 1368,
@@ -25178,7 +23700,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '3.0',
   },
   {
     id: 1369,
@@ -25195,7 +23716,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1370,
@@ -25215,7 +23735,6 @@ export const emojisArray = [
       'farm',
       'field',
     ],
-    version: '0.6',
   },
   {
     id: 1371,
@@ -25232,7 +23751,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1372,
@@ -25252,7 +23770,6 @@ export const emojisArray = [
       'beautiful',
       'love',
     ],
-    version: '0.6',
   },
   {
     id: 1373,
@@ -25271,7 +23788,6 @@ export const emojisArray = [
     keywords: [
       'leaf',
     ],
-    version: '0.6',
   },
   {
     id: 1374,
@@ -25295,7 +23811,6 @@ export const emojisArray = [
       'santa claus',
       'gift',
     ],
-    version: '1.0',
   },
   {
     id: 1375,
@@ -25314,7 +23829,6 @@ export const emojisArray = [
     keywords: [
       'wood',
     ],
-    version: '1.0',
   },
   {
     id: 1376,
@@ -25337,7 +23851,6 @@ export const emojisArray = [
       'island',
       'isle',
     ],
-    version: '0.6',
   },
   {
     id: 1377,
@@ -25357,7 +23870,6 @@ export const emojisArray = [
       'desert',
       'dry',
     ],
-    version: '0.6',
   },
   {
     id: 1378,
@@ -25376,7 +23888,6 @@ export const emojisArray = [
     keywords: [
       'china',
     ],
-    version: '0.6',
   },
   {
     id: 1379,
@@ -25395,7 +23906,6 @@ export const emojisArray = [
     keywords: [
       'leaf',
     ],
-    version: '0.6',
   },
   {
     id: 1380,
@@ -25412,7 +23922,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1381,
@@ -25432,7 +23941,6 @@ export const emojisArray = [
       'luck',
       'lucky',
     ],
-    version: '0.6',
   },
   {
     id: 1382,
@@ -25449,7 +23957,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1383,
@@ -25466,7 +23973,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1384,
@@ -25483,7 +23989,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1385,
@@ -25503,7 +24008,6 @@ export const emojisArray = [
       'lipid',
       'fat',
     ],
-    version: '3.0',
   },
   {
     id: 1386,
@@ -25524,7 +24028,6 @@ export const emojisArray = [
       'penis',
       'sex',
     ],
-    version: '0.6',
   },
   {
     id: 1387,
@@ -25541,7 +24044,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '3.0',
   },
   {
     id: 1388,
@@ -25558,7 +24060,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '3.0',
   },
   {
     id: 1389,
@@ -25577,7 +24078,6 @@ export const emojisArray = [
     keywords: [
       'maize',
     ],
-    version: '0.6',
   },
   {
     id: 1390,
@@ -25594,7 +24094,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1391,
@@ -25611,7 +24110,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '3.0',
   },
   {
     id: 1392,
@@ -25628,7 +24126,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 1393,
@@ -25647,7 +24144,6 @@ export const emojisArray = [
     keywords: [
       'drugs',
     ],
-    version: '0.6',
   },
   {
     id: 1394,
@@ -25666,7 +24162,6 @@ export const emojisArray = [
     keywords: [
       'fat',
     ],
-    version: '3.0',
   },
   {
     id: 1395,
@@ -25683,7 +24178,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1396,
@@ -25700,7 +24194,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1397,
@@ -25719,7 +24212,6 @@ export const emojisArray = [
     keywords: [
       'france',
     ],
-    version: '3.0',
   },
   {
     id: 1398,
@@ -25738,7 +24230,6 @@ export const emojisArray = [
     keywords: [
       'france',
     ],
-    version: '3.0',
   },
   {
     id: 1399,
@@ -25755,7 +24246,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 1400,
@@ -25772,7 +24262,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '3.0',
   },
   {
     id: 1401,
@@ -25791,7 +24280,6 @@ export const emojisArray = [
     keywords: [
       'mouse',
     ],
-    version: '1.0',
   },
   {
     id: 1402,
@@ -25808,7 +24296,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1403,
@@ -25827,7 +24314,6 @@ export const emojisArray = [
     keywords: [
       'chicken',
     ],
-    version: '0.6',
   },
   {
     id: 1404,
@@ -25844,7 +24330,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 1405,
@@ -25863,7 +24348,6 @@ export const emojisArray = [
     keywords: [
       'pig',
     ],
-    version: '3.0',
   },
   {
     id: 1406,
@@ -25885,7 +24369,6 @@ export const emojisArray = [
       'fat',
       'macdonald',
     ],
-    version: '0.6',
   },
   {
     id: 1407,
@@ -25908,7 +24391,6 @@ export const emojisArray = [
       'fat',
       'macdonald',
     ],
-    version: '0.6',
   },
   {
     id: 1408,
@@ -25928,7 +24410,6 @@ export const emojisArray = [
       'italy',
       'fat',
     ],
-    version: '0.6',
   },
   {
     id: 1409,
@@ -25949,7 +24430,6 @@ export const emojisArray = [
       'america',
       'fat',
     ],
-    version: '1.0',
   },
   {
     id: 1410,
@@ -25966,7 +24446,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 1411,
@@ -25986,7 +24465,6 @@ export const emojisArray = [
       'mexico',
       'otacos',
     ],
-    version: '1.0',
   },
   {
     id: 1412,
@@ -26005,7 +24483,6 @@ export const emojisArray = [
     keywords: [
       'mexico',
     ],
-    version: '1.0',
   },
   {
     id: 1413,
@@ -26022,7 +24499,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '3.0',
   },
   {
     id: 1414,
@@ -26043,7 +24519,6 @@ export const emojisArray = [
       'protein',
       'chick',
     ],
-    version: '3.0',
   },
   {
     id: 1415,
@@ -26063,7 +24538,6 @@ export const emojisArray = [
       'cook',
       'restaurant',
     ],
-    version: '0.6',
   },
   {
     id: 1416,
@@ -26080,7 +24554,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '3.0',
   },
   {
     id: 1417,
@@ -26097,7 +24570,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1418,
@@ -26114,7 +24586,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 1419,
@@ -26133,7 +24604,6 @@ export const emojisArray = [
     keywords: [
       'healthy',
     ],
-    version: '3.0',
   },
   {
     id: 1420,
@@ -26154,7 +24624,6 @@ export const emojisArray = [
       'theater',
       'partie',
     ],
-    version: '1.0',
   },
   {
     id: 1421,
@@ -26173,7 +24642,6 @@ export const emojisArray = [
     keywords: [
       'soda',
     ],
-    version: '5.0',
   },
   {
     id: 1422,
@@ -26193,7 +24661,6 @@ export const emojisArray = [
       'sushi',
       'japan',
     ],
-    version: '0.6',
   },
   {
     id: 1423,
@@ -26212,7 +24679,6 @@ export const emojisArray = [
     keywords: [
       'sushi',
     ],
-    version: '0.6',
   },
   {
     id: 1424,
@@ -26232,7 +24698,6 @@ export const emojisArray = [
       'sushi',
       'japan',
     ],
-    version: '0.6',
   },
   {
     id: 1425,
@@ -26252,7 +24717,6 @@ export const emojisArray = [
       'sushi',
       'japan',
     ],
-    version: '0.6',
   },
   {
     id: 1426,
@@ -26269,7 +24733,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1427,
@@ -26290,7 +24753,6 @@ export const emojisArray = [
       'ramen',
       'japan',
     ],
-    version: '0.6',
   },
   {
     id: 1428,
@@ -26307,7 +24769,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1429,
@@ -26326,7 +24787,6 @@ export const emojisArray = [
     keywords: [
       'boobs',
     ],
-    version: '0.6',
   },
   {
     id: 1430,
@@ -26343,7 +24803,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1431,
@@ -26360,7 +24819,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1432,
@@ -26379,7 +24837,6 @@ export const emojisArray = [
     keywords: [
       'acid',
     ],
-    version: '1.0',
   },
   {
     id: 1433,
@@ -26399,7 +24856,6 @@ export const emojisArray = [
       'penis',
       'sex',
     ],
-    version: '0.6',
   },
   {
     id: 1434,
@@ -26418,7 +24874,6 @@ export const emojisArray = [
     keywords: [
       'tropical',
     ],
-    version: '0.6',
   },
   {
     id: 1435,
@@ -26437,7 +24892,6 @@ export const emojisArray = [
     keywords: [
       'creationism',
     ],
-    version: '0.6',
   },
   {
     id: 1436,
@@ -26454,7 +24908,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1437,
@@ -26471,7 +24924,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1438,
@@ -26491,7 +24943,6 @@ export const emojisArray = [
       'butt',
       'sex',
     ],
-    version: '0.6',
   },
   {
     id: 1439,
@@ -26508,7 +24959,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1440,
@@ -26525,7 +24975,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1441,
@@ -26542,7 +24991,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '3.0',
   },
   {
     id: 1442,
@@ -26562,7 +25010,6 @@ export const emojisArray = [
       'vegetable',
       'red',
     ],
-    version: '0.6',
   },
   {
     id: 1443,
@@ -26581,7 +25028,6 @@ export const emojisArray = [
     keywords: [
       'tropical',
     ],
-    version: '5.0',
   },
   {
     id: 1444,
@@ -26602,7 +25048,6 @@ export const emojisArray = [
       'pasta',
       'italy',
     ],
-    version: '0.6',
   },
   {
     id: 1445,
@@ -26622,7 +25067,6 @@ export const emojisArray = [
       'yam',
       'vegetable',
     ],
-    version: '0.6',
   },
   {
     id: 1446,
@@ -26639,7 +25083,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1447,
@@ -26658,7 +25101,6 @@ export const emojisArray = [
     keywords: [
       'japan',
     ],
-    version: '0.6',
   },
   {
     id: 1448,
@@ -26675,7 +25117,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1449,
@@ -26696,7 +25137,6 @@ export const emojisArray = [
       'sushi',
       'japan',
     ],
-    version: '0.6',
   },
   {
     id: 1450,
@@ -26715,7 +25155,6 @@ export const emojisArray = [
     keywords: [
       'japan',
     ],
-    version: '0.6',
   },
   {
     id: 1451,
@@ -26737,7 +25176,6 @@ export const emojisArray = [
       'china',
       'japan',
     ],
-    version: '5.0',
   },
   {
     id: 1452,
@@ -26754,7 +25192,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 1453,
@@ -26771,7 +25208,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 1454,
@@ -26790,7 +25226,6 @@ export const emojisArray = [
     keywords: [
       'dessert',
     ],
-    version: '0.6',
   },
   {
     id: 1455,
@@ -26809,7 +25244,6 @@ export const emojisArray = [
     keywords: [
       'dessert',
     ],
-    version: '0.6',
   },
   {
     id: 1456,
@@ -26828,7 +25262,6 @@ export const emojisArray = [
     keywords: [
       'dessert',
     ],
-    version: '0.6',
   },
   {
     id: 1457,
@@ -26848,7 +25281,6 @@ export const emojisArray = [
       'dessert',
       'sugar',
     ],
-    version: '0.6',
   },
   {
     id: 1458,
@@ -26868,7 +25300,6 @@ export const emojisArray = [
       'dessert',
       'sugar',
     ],
-    version: '0.6',
   },
   {
     id: 1459,
@@ -26889,7 +25320,6 @@ export const emojisArray = [
       'sugar',
       'partie',
     ],
-    version: '0.6',
   },
   {
     id: 1460,
@@ -26911,7 +25341,6 @@ export const emojisArray = [
       'partie',
       'birthday',
     ],
-    version: '0.6',
   },
   {
     id: 1461,
@@ -26933,7 +25362,6 @@ export const emojisArray = [
       'partie',
       'birthday',
     ],
-    version: '5.0',
   },
   {
     id: 1462,
@@ -26952,7 +25380,6 @@ export const emojisArray = [
     keywords: [
       'sugar',
     ],
-    version: '0.6',
   },
   {
     id: 1463,
@@ -26973,7 +25400,6 @@ export const emojisArray = [
       'halloween',
       'lollipop',
     ],
-    version: '0.6',
   },
   {
     id: 1464,
@@ -26994,7 +25420,6 @@ export const emojisArray = [
       'halloween',
       'candy',
     ],
-    version: '0.6',
   },
   {
     id: 1465,
@@ -27013,7 +25438,6 @@ export const emojisArray = [
     keywords: [
       'flan',
     ],
-    version: '0.6',
   },
   {
     id: 1466,
@@ -27033,7 +25457,6 @@ export const emojisArray = [
       'sugar',
       'bee',
     ],
-    version: '0.6',
   },
   {
     id: 1467,
@@ -27050,7 +25473,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1468,
@@ -27070,7 +25492,6 @@ export const emojisArray = [
       'cow',
       'calcium',
     ],
-    version: '3.0',
   },
   {
     id: 1469,
@@ -27090,7 +25511,6 @@ export const emojisArray = [
       'caffeine',
       'morning',
     ],
-    version: '0.6',
   },
   {
     id: 1470,
@@ -27112,7 +25532,6 @@ export const emojisArray = [
       'night',
       'party',
     ],
-    version: '0.6',
   },
   {
     id: 1471,
@@ -27135,7 +25554,6 @@ export const emojisArray = [
       'party',
       'champagnes',
     ],
-    version: '1.0',
   },
   {
     id: 1472,
@@ -27157,7 +25575,6 @@ export const emojisArray = [
       'night',
       'party',
     ],
-    version: '0.6',
   },
   {
     id: 1473,
@@ -27178,7 +25595,6 @@ export const emojisArray = [
       'night',
       'party',
     ],
-    version: '0.6',
   },
   {
     id: 1474,
@@ -27199,7 +25615,6 @@ export const emojisArray = [
       'cocktail',
       'alcohol',
     ],
-    version: '0.6',
   },
   {
     id: 1475,
@@ -27221,7 +25636,6 @@ export const emojisArray = [
       'foot',
       'football',
     ],
-    version: '0.6',
   },
   {
     id: 1476,
@@ -27244,7 +25658,6 @@ export const emojisArray = [
       'night',
       'party',
     ],
-    version: '0.6',
   },
   {
     id: 1477,
@@ -27264,7 +25677,6 @@ export const emojisArray = [
       'alcohol',
       'party',
     ],
-    version: '3.0',
   },
   {
     id: 1478,
@@ -27284,7 +25696,6 @@ export const emojisArray = [
       'alcohol',
       'booze',
     ],
-    version: '3.0',
   },
   {
     id: 1479,
@@ -27301,7 +25712,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 1480,
@@ -27321,7 +25731,6 @@ export const emojisArray = [
       'japan',
       'eat',
     ],
-    version: '5.0',
   },
   {
     id: 1481,
@@ -27341,7 +25750,6 @@ export const emojisArray = [
       'eat',
       'restaurant',
     ],
-    version: '0.7',
   },
   {
     id: 1482,
@@ -27361,7 +25769,6 @@ export const emojisArray = [
       'eat',
       'restaurant',
     ],
-    version: '0.6',
   },
   {
     id: 1483,
@@ -27382,7 +25789,6 @@ export const emojisArray = [
       'restaurant',
       'cook',
     ],
-    version: '3.0',
   },
   {
     id: 1484,
@@ -27405,7 +25811,6 @@ export const emojisArray = [
       'cook',
       'weapon',
     ],
-    version: '0.6',
   },
   {
     id: 1485,
@@ -27424,7 +25829,6 @@ export const emojisArray = [
     keywords: [
       'vase',
     ],
-    version: '1.0',
   },
   {
     id: 1486,
@@ -27445,7 +25849,6 @@ export const emojisArray = [
       'vacation',
       'holidays',
     ],
-    version: '0.7',
   },
   {
     id: 1487,
@@ -27468,7 +25871,6 @@ export const emojisArray = [
       'holidays',
       'usa',
     ],
-    version: '0.7',
   },
   {
     id: 1488,
@@ -27490,7 +25892,6 @@ export const emojisArray = [
       'vacation',
       'holidays',
     ],
-    version: '0.6',
   },
   {
     id: 1489,
@@ -27507,7 +25908,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1490,
@@ -27528,7 +25928,6 @@ export const emojisArray = [
       'vacation',
       'holidays',
     ],
-    version: '0.7',
   },
   {
     id: 1491,
@@ -27549,7 +25948,6 @@ export const emojisArray = [
       'vacation',
       'holidays',
     ],
-    version: '0.6',
   },
   {
     id: 1492,
@@ -27569,7 +25967,6 @@ export const emojisArray = [
       'escalation',
       'climbing',
     ],
-    version: '0.7',
   },
   {
     id: 1493,
@@ -27589,7 +25986,6 @@ export const emojisArray = [
       'escalation',
       'climbing',
     ],
-    version: '0.7',
   },
   {
     id: 1494,
@@ -27609,7 +26005,6 @@ export const emojisArray = [
       'fire',
       'wash',
     ],
-    version: '0.6',
   },
   {
     id: 1495,
@@ -27628,7 +26023,6 @@ export const emojisArray = [
     keywords: [
       'cold',
     ],
-    version: '0.6',
   },
   {
     id: 1496,
@@ -27648,7 +26042,6 @@ export const emojisArray = [
       'vacation',
       'holidays',
     ],
-    version: '0.7',
   },
   {
     id: 1497,
@@ -27670,7 +26063,6 @@ export const emojisArray = [
       'sun',
       'sea',
     ],
-    version: '0.7',
   },
   {
     id: 1498,
@@ -27689,7 +26081,6 @@ export const emojisArray = [
     keywords: [
       'cactus',
     ],
-    version: '0.7',
   },
   {
     id: 1499,
@@ -27710,7 +26101,6 @@ export const emojisArray = [
       'holidays',
       'beach',
     ],
-    version: '0.7',
   },
   {
     id: 1500,
@@ -27727,7 +26117,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1501,
@@ -27750,7 +26139,6 @@ export const emojisArray = [
       'rugby',
       'athletics',
     ],
-    version: '0.7',
   },
   {
     id: 1502,
@@ -27767,7 +26155,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1503,
@@ -27784,7 +26171,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1504,
@@ -27803,7 +26189,6 @@ export const emojisArray = [
     keywords: [
       'home',
     ],
-    version: '0.7',
   },
   {
     id: 1505,
@@ -27822,7 +26207,6 @@ export const emojisArray = [
     keywords: [
       'home',
     ],
-    version: '0.7',
   },
   {
     id: 1506,
@@ -27841,7 +26225,6 @@ export const emojisArray = [
     keywords: [
       'home',
     ],
-    version: '0.6',
   },
   {
     id: 1507,
@@ -27860,7 +26243,6 @@ export const emojisArray = [
     keywords: [
       'home',
     ],
-    version: '0.6',
   },
   {
     id: 1508,
@@ -27879,7 +26261,6 @@ export const emojisArray = [
     keywords: [
       'work',
     ],
-    version: '0.6',
   },
   {
     id: 1509,
@@ -27898,7 +26279,6 @@ export const emojisArray = [
     keywords: [
       'japan',
     ],
-    version: '0.6',
   },
   {
     id: 1510,
@@ -27919,7 +26299,6 @@ export const emojisArray = [
       'courier',
       'letters',
     ],
-    version: '1.0',
   },
   {
     id: 1511,
@@ -27939,7 +26318,6 @@ export const emojisArray = [
       'health',
       '911',
     ],
-    version: '0.6',
   },
   {
     id: 1512,
@@ -27959,7 +26337,6 @@ export const emojisArray = [
       'money',
       'gold',
     ],
-    version: '0.6',
   },
   {
     id: 1513,
@@ -27980,7 +26357,6 @@ export const emojisArray = [
       'sleep',
       'holidays',
     ],
-    version: '0.6',
   },
   {
     id: 1514,
@@ -27999,7 +26375,6 @@ export const emojisArray = [
     keywords: [
       'sex',
     ],
-    version: '0.6',
   },
   {
     id: 1515,
@@ -28016,7 +26391,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1516,
@@ -28037,7 +26411,6 @@ export const emojisArray = [
       'pupil',
       'study',
     ],
-    version: '0.6',
   },
   {
     id: 1517,
@@ -28054,7 +26427,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1518,
@@ -28073,7 +26445,6 @@ export const emojisArray = [
     keywords: [
       'worker',
     ],
-    version: '0.6',
   },
   {
     id: 1519,
@@ -28092,7 +26463,6 @@ export const emojisArray = [
     keywords: [
       'japan',
     ],
-    version: '0.6',
   },
   {
     id: 1520,
@@ -28111,7 +26481,6 @@ export const emojisArray = [
     keywords: [
       'king',
     ],
-    version: '0.6',
   },
   {
     id: 1521,
@@ -28131,7 +26500,6 @@ export const emojisArray = [
       'love',
       'party',
     ],
-    version: '0.6',
   },
   {
     id: 1522,
@@ -28151,7 +26519,6 @@ export const emojisArray = [
       'japan',
       'eiffel',
     ],
-    version: '0.6',
   },
   {
     id: 1523,
@@ -28174,7 +26541,6 @@ export const emojisArray = [
       'free',
       'usa',
     ],
-    version: '0.6',
   },
   {
     id: 1524,
@@ -28197,7 +26563,6 @@ export const emojisArray = [
       'god',
       'christianity',
     ],
-    version: '0.6',
   },
   {
     id: 1525,
@@ -28217,7 +26582,6 @@ export const emojisArray = [
       'islam',
       'religion',
     ],
-    version: '1.0',
   },
   {
     id: 1526,
@@ -28236,7 +26600,6 @@ export const emojisArray = [
     keywords: [
       'religion',
     ],
-    version: '1.0',
   },
   {
     id: 1527,
@@ -28255,7 +26618,6 @@ export const emojisArray = [
     keywords: [
       'religion',
     ],
-    version: '0.7',
   },
   {
     id: 1528,
@@ -28276,7 +26638,6 @@ export const emojisArray = [
       'religion',
       'mecca',
     ],
-    version: '1.0',
   },
   {
     id: 1529,
@@ -28295,7 +26656,6 @@ export const emojisArray = [
     keywords: [
       'water',
     ],
-    version: '0.6',
   },
   {
     id: 1530,
@@ -28314,7 +26674,6 @@ export const emojisArray = [
     keywords: [
       'camp',
     ],
-    version: '0.6',
   },
   {
     id: 1531,
@@ -28334,7 +26693,6 @@ export const emojisArray = [
       'sky',
       'vacation',
     ],
-    version: '0.6',
   },
   {
     id: 1532,
@@ -28355,7 +26713,6 @@ export const emojisArray = [
       'vacation',
       'goodnight',
     ],
-    version: '0.6',
   },
   {
     id: 1533,
@@ -28372,7 +26729,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1534,
@@ -28394,7 +26750,6 @@ export const emojisArray = [
       'camp',
       'morning',
     ],
-    version: '0.6',
   },
   {
     id: 1535,
@@ -28418,7 +26773,6 @@ export const emojisArray = [
       'sun',
       'morning',
     ],
-    version: '0.6',
   },
   {
     id: 1536,
@@ -28437,7 +26791,6 @@ export const emojisArray = [
     keywords: [
       'building',
     ],
-    version: '0.6',
   },
   {
     id: 1537,
@@ -28458,7 +26811,6 @@ export const emojisArray = [
       'sky',
       'vacation',
     ],
-    version: '0.6',
   },
   {
     id: 1538,
@@ -28475,7 +26827,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1539,
@@ -28492,7 +26843,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1540,
@@ -28513,7 +26863,6 @@ export const emojisArray = [
       'sky',
       'vacation',
     ],
-    version: '0.6',
   },
   {
     id: 1541,
@@ -28534,7 +26883,6 @@ export const emojisArray = [
       'roller',
       'coaster',
     ],
-    version: '0.6',
   },
   {
     id: 1542,
@@ -28554,7 +26902,6 @@ export const emojisArray = [
       'vacation',
       'carousel',
     ],
-    version: '0.6',
   },
   {
     id: 1543,
@@ -28574,7 +26921,6 @@ export const emojisArray = [
       'vacation',
       'carousel',
     ],
-    version: '0.6',
   },
   {
     id: 1544,
@@ -28591,7 +26937,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1545,
@@ -28608,7 +26953,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1546,
@@ -28628,7 +26972,6 @@ export const emojisArray = [
       'transportation',
       'train',
     ],
-    version: '1.0',
   },
   {
     id: 1547,
@@ -28648,7 +26991,6 @@ export const emojisArray = [
       'transportation',
       'train',
     ],
-    version: '0.6',
   },
   {
     id: 1548,
@@ -28668,7 +27010,6 @@ export const emojisArray = [
       'transportation',
       'train',
     ],
-    version: '0.6',
   },
   {
     id: 1549,
@@ -28687,7 +27028,6 @@ export const emojisArray = [
     keywords: [
       'transportation',
     ],
-    version: '0.6',
   },
   {
     id: 1550,
@@ -28706,7 +27046,6 @@ export const emojisArray = [
     keywords: [
       'transportation',
     ],
-    version: '1.0',
   },
   {
     id: 1551,
@@ -28726,7 +27065,6 @@ export const emojisArray = [
       'transportation',
       'train',
     ],
-    version: '0.6',
   },
   {
     id: 1552,
@@ -28746,7 +27084,6 @@ export const emojisArray = [
       'transportation',
       'train',
     ],
-    version: '1.0',
   },
   {
     id: 1553,
@@ -28766,7 +27103,6 @@ export const emojisArray = [
       'transportation',
       'train',
     ],
-    version: '0.6',
   },
   {
     id: 1554,
@@ -28786,7 +27122,6 @@ export const emojisArray = [
       'transportation',
       'train',
     ],
-    version: '1.0',
   },
   {
     id: 1555,
@@ -28806,7 +27141,6 @@ export const emojisArray = [
       'transportation',
       'train',
     ],
-    version: '1.0',
   },
   {
     id: 1556,
@@ -28826,7 +27160,6 @@ export const emojisArray = [
       'transportation',
       'train',
     ],
-    version: '1.0',
   },
   {
     id: 1557,
@@ -28846,7 +27179,6 @@ export const emojisArray = [
       'transportation',
       'train',
     ],
-    version: '1.0',
   },
   {
     id: 1558,
@@ -28868,7 +27200,6 @@ export const emojisArray = [
       'office',
       'school',
     ],
-    version: '0.6',
   },
   {
     id: 1559,
@@ -28888,7 +27219,6 @@ export const emojisArray = [
       'transportation',
       'train',
     ],
-    version: '0.7',
   },
   {
     id: 1560,
@@ -28908,7 +27238,6 @@ export const emojisArray = [
       'transportation',
       'train',
     ],
-    version: '1.0',
   },
   {
     id: 1561,
@@ -28929,7 +27258,6 @@ export const emojisArray = [
       'train',
       'bus',
     ],
-    version: '1.0',
   },
   {
     id: 1562,
@@ -28950,7 +27278,6 @@ export const emojisArray = [
       'transportation',
       '911',
     ],
-    version: '0.6',
   },
   {
     id: 1563,
@@ -28971,7 +27298,6 @@ export const emojisArray = [
       'truck',
       '911',
     ],
-    version: '0.6',
   },
   {
     id: 1564,
@@ -28992,7 +27318,6 @@ export const emojisArray = [
       'jail',
       '911',
     ],
-    version: '0.6',
   },
   {
     id: 1565,
@@ -29013,7 +27338,6 @@ export const emojisArray = [
       'jail',
       '911',
     ],
-    version: '0.7',
   },
   {
     id: 1566,
@@ -29033,7 +27357,6 @@ export const emojisArray = [
       'transportation',
       'car',
     ],
-    version: '0.6',
   },
   {
     id: 1567,
@@ -29053,7 +27376,6 @@ export const emojisArray = [
       'transportation',
       'car',
     ],
-    version: '1.0',
   },
   {
     id: 1568,
@@ -29073,7 +27395,6 @@ export const emojisArray = [
       'transportation',
       'car',
     ],
-    version: '0.6',
   },
   {
     id: 1569,
@@ -29093,7 +27414,6 @@ export const emojisArray = [
       'transportation',
       'car',
     ],
-    version: '0.7',
   },
   {
     id: 1570,
@@ -29113,7 +27433,6 @@ export const emojisArray = [
       'transportation',
       'car',
     ],
-    version: '0.6',
   },
   {
     id: 1571,
@@ -29130,7 +27449,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1572,
@@ -29150,7 +27468,6 @@ export const emojisArray = [
       'transportation',
       'truck',
     ],
-    version: '1.0',
   },
   {
     id: 1573,
@@ -29170,7 +27487,6 @@ export const emojisArray = [
       'farm',
       'transportation',
     ],
-    version: '1.0',
   },
   {
     id: 1574,
@@ -29189,7 +27505,6 @@ export const emojisArray = [
     keywords: [
       'bike',
     ],
-    version: '0.6',
   },
   {
     id: 1575,
@@ -29206,7 +27521,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '3.0',
   },
   {
     id: 1576,
@@ -29223,7 +27537,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 1577,
@@ -29242,7 +27555,6 @@ export const emojisArray = [
     keywords: [
       'moped',
     ],
-    version: '3.0',
   },
   {
     id: 1578,
@@ -29261,7 +27573,6 @@ export const emojisArray = [
     keywords: [
       'school',
     ],
-    version: '0.6',
   },
   {
     id: 1579,
@@ -29278,7 +27589,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1580,
@@ -29295,7 +27605,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1581,
@@ -29312,7 +27621,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1582,
@@ -29331,7 +27639,6 @@ export const emojisArray = [
     keywords: [
       'gas',
     ],
-    version: '0.6',
   },
   {
     id: 1583,
@@ -29351,7 +27658,6 @@ export const emojisArray = [
       'light',
       '911',
     ],
-    version: '0.6',
   },
   {
     id: 1584,
@@ -29370,7 +27676,6 @@ export const emojisArray = [
     keywords: [
       'stop',
     ],
-    version: '0.6',
   },
   {
     id: 1585,
@@ -29389,7 +27694,6 @@ export const emojisArray = [
     keywords: [
       'stop',
     ],
-    version: '1.0',
   },
   {
     id: 1586,
@@ -29406,7 +27710,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '3.0',
   },
   {
     id: 1587,
@@ -29423,7 +27726,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1588,
@@ -29442,7 +27744,6 @@ export const emojisArray = [
     keywords: [
       'boat',
     ],
-    version: '0.6',
   },
   {
     id: 1589,
@@ -29463,7 +27764,6 @@ export const emojisArray = [
       'vacation',
       'ship',
     ],
-    version: '0.6',
   },
   {
     id: 1590,
@@ -29482,7 +27782,6 @@ export const emojisArray = [
     keywords: [
       'kayak',
     ],
-    version: '3.0',
   },
   {
     id: 1591,
@@ -29502,7 +27801,6 @@ export const emojisArray = [
       'boat',
       'ship',
     ],
-    version: '0.6',
   },
   {
     id: 1592,
@@ -29521,7 +27819,6 @@ export const emojisArray = [
     keywords: [
       'boat',
     ],
-    version: '0.7',
   },
   {
     id: 1593,
@@ -29541,7 +27838,6 @@ export const emojisArray = [
       'boat',
       'ship',
     ],
-    version: '0.7',
   },
   {
     id: 1594,
@@ -29560,7 +27856,6 @@ export const emojisArray = [
     keywords: [
       'ship',
     ],
-    version: '0.7',
   },
   {
     id: 1595,
@@ -29579,7 +27874,6 @@ export const emojisArray = [
     keywords: [
       'boat',
     ],
-    version: '0.6',
   },
   {
     id: 1596,
@@ -29600,7 +27894,6 @@ export const emojisArray = [
       'airport',
       'fly',
     ],
-    version: '0.6',
   },
   {
     id: 1597,
@@ -29621,7 +27914,6 @@ export const emojisArray = [
       'airport',
       'fly',
     ],
-    version: '0.7',
   },
   {
     id: 1598,
@@ -29644,7 +27936,6 @@ export const emojisArray = [
       'vacation',
       'fly',
     ],
-    version: '1.0',
   },
   {
     id: 1599,
@@ -29667,7 +27958,6 @@ export const emojisArray = [
       'vacation',
       'fly',
     ],
-    version: '1.0',
   },
   {
     id: 1600,
@@ -29686,7 +27976,6 @@ export const emojisArray = [
     keywords: [
       'airplaine',
     ],
-    version: '0.6',
   },
   {
     id: 1601,
@@ -29705,7 +27994,6 @@ export const emojisArray = [
     keywords: [
       'fly',
     ],
-    version: '1.0',
   },
   {
     id: 1602,
@@ -29722,7 +28010,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1603,
@@ -29741,7 +28028,6 @@ export const emojisArray = [
     keywords: [
       'transportation',
     ],
-    version: '1.0',
   },
   {
     id: 1604,
@@ -29758,7 +28044,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1605,
@@ -29777,7 +28062,6 @@ export const emojisArray = [
     keywords: [
       'space',
     ],
-    version: '0.7',
   },
   {
     id: 1606,
@@ -29798,7 +28082,6 @@ export const emojisArray = [
       'fly',
       'blast',
     ],
-    version: '0.6',
   },
   {
     id: 1607,
@@ -29819,7 +28102,6 @@ export const emojisArray = [
       'extraterrestrial',
       'alien',
     ],
-    version: '5.0',
   },
   {
     id: 1608,
@@ -29836,7 +28118,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1609,
@@ -29855,7 +28136,6 @@ export const emojisArray = [
     keywords: [
       'sand',
     ],
-    version: '0.6',
   },
   {
     id: 1610,
@@ -29874,7 +28154,6 @@ export const emojisArray = [
     keywords: [
       'sand',
     ],
-    version: '0.6',
   },
   {
     id: 1611,
@@ -29893,7 +28172,6 @@ export const emojisArray = [
     keywords: [
       'electronics',
     ],
-    version: '0.6',
   },
   {
     id: 1612,
@@ -29913,7 +28191,6 @@ export const emojisArray = [
       'morning',
       'awake',
     ],
-    version: '0.6',
   },
   {
     id: 1613,
@@ -29932,7 +28209,6 @@ export const emojisArray = [
     keywords: [
       'race',
     ],
-    version: '1.0',
   },
   {
     id: 1614,
@@ -29951,7 +28227,6 @@ export const emojisArray = [
     keywords: [
       'cook',
     ],
-    version: '1.0',
   },
   {
     id: 1615,
@@ -29968,7 +28243,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1616,
@@ -29990,7 +28264,6 @@ export const emojisArray = [
       'minute',
       'seconde',
     ],
-    version: '0.6',
   },
   {
     id: 1617,
@@ -30012,7 +28285,6 @@ export const emojisArray = [
       'minute',
       'seconde',
     ],
-    version: '0.7',
   },
   {
     id: 1618,
@@ -30034,7 +28306,6 @@ export const emojisArray = [
       'minute',
       'seconde',
     ],
-    version: '0.6',
   },
   {
     id: 1619,
@@ -30056,7 +28327,6 @@ export const emojisArray = [
       'minute',
       'seconde',
     ],
-    version: '0.7',
   },
   {
     id: 1620,
@@ -30078,7 +28348,6 @@ export const emojisArray = [
       'minute',
       'seconde',
     ],
-    version: '0.6',
   },
   {
     id: 1621,
@@ -30100,7 +28369,6 @@ export const emojisArray = [
       'minute',
       'seconde',
     ],
-    version: '0.7',
   },
   {
     id: 1622,
@@ -30122,7 +28390,6 @@ export const emojisArray = [
       'minute',
       'seconde',
     ],
-    version: '0.6',
   },
   {
     id: 1623,
@@ -30144,7 +28411,6 @@ export const emojisArray = [
       'minute',
       'seconde',
     ],
-    version: '0.7',
   },
   {
     id: 1624,
@@ -30166,7 +28432,6 @@ export const emojisArray = [
       'minute',
       'seconde',
     ],
-    version: '0.6',
   },
   {
     id: 1625,
@@ -30188,7 +28453,6 @@ export const emojisArray = [
       'minute',
       'seconde',
     ],
-    version: '0.7',
   },
   {
     id: 1626,
@@ -30210,7 +28474,6 @@ export const emojisArray = [
       'minute',
       'seconde',
     ],
-    version: '0.6',
   },
   {
     id: 1627,
@@ -30232,7 +28495,6 @@ export const emojisArray = [
       'minute',
       'seconde',
     ],
-    version: '0.7',
   },
   {
     id: 1628,
@@ -30254,7 +28516,6 @@ export const emojisArray = [
       'minute',
       'seconde',
     ],
-    version: '0.6',
   },
   {
     id: 1629,
@@ -30276,7 +28537,6 @@ export const emojisArray = [
       'minute',
       'seconde',
     ],
-    version: '0.7',
   },
   {
     id: 1630,
@@ -30298,7 +28558,6 @@ export const emojisArray = [
       'minute',
       'seconde',
     ],
-    version: '0.6',
   },
   {
     id: 1631,
@@ -30320,7 +28579,6 @@ export const emojisArray = [
       'minute',
       'seconde',
     ],
-    version: '0.7',
   },
   {
     id: 1632,
@@ -30342,7 +28600,6 @@ export const emojisArray = [
       'minute',
       'seconde',
     ],
-    version: '0.6',
   },
   {
     id: 1633,
@@ -30364,7 +28621,6 @@ export const emojisArray = [
       'minute',
       'seconde',
     ],
-    version: '0.7',
   },
   {
     id: 1634,
@@ -30386,7 +28642,6 @@ export const emojisArray = [
       'minute',
       'seconde',
     ],
-    version: '0.6',
   },
   {
     id: 1635,
@@ -30408,7 +28663,6 @@ export const emojisArray = [
       'minute',
       'seconde',
     ],
-    version: '0.7',
   },
   {
     id: 1636,
@@ -30430,7 +28684,6 @@ export const emojisArray = [
       'minute',
       'seconde',
     ],
-    version: '0.6',
   },
   {
     id: 1637,
@@ -30452,7 +28705,6 @@ export const emojisArray = [
       'minute',
       'seconde',
     ],
-    version: '0.7',
   },
   {
     id: 1638,
@@ -30473,7 +28725,6 @@ export const emojisArray = [
       'minute',
       'seconde',
     ],
-    version: '0.6',
   },
   {
     id: 1639,
@@ -30495,7 +28746,6 @@ export const emojisArray = [
       'minute',
       'seconde',
     ],
-    version: '0.7',
   },
   {
     id: 1640,
@@ -30514,7 +28764,6 @@ export const emojisArray = [
     keywords: [
       'space',
     ],
-    version: '0.6',
   },
   {
     id: 1641,
@@ -30533,7 +28782,6 @@ export const emojisArray = [
     keywords: [
       'space',
     ],
-    version: '1.0',
   },
   {
     id: 1642,
@@ -30552,7 +28800,6 @@ export const emojisArray = [
     keywords: [
       'space',
     ],
-    version: '0.6',
   },
   {
     id: 1643,
@@ -30571,7 +28818,6 @@ export const emojisArray = [
     keywords: [
       'space',
     ],
-    version: '0.6',
   },
   {
     id: 1644,
@@ -30590,7 +28836,6 @@ export const emojisArray = [
     keywords: [
       'space',
     ],
-    version: '0.6',
   },
   {
     id: 1645,
@@ -30609,7 +28854,6 @@ export const emojisArray = [
     keywords: [
       'space',
     ],
-    version: '1.0',
   },
   {
     id: 1646,
@@ -30628,7 +28872,6 @@ export const emojisArray = [
     keywords: [
       'space',
     ],
-    version: '1.0',
   },
   {
     id: 1647,
@@ -30647,7 +28890,6 @@ export const emojisArray = [
     keywords: [
       'space',
     ],
-    version: '1.0',
   },
   {
     id: 1648,
@@ -30668,7 +28910,6 @@ export const emojisArray = [
       'goodnight',
       'night',
     ],
-    version: '0.6',
   },
   {
     id: 1649,
@@ -30689,7 +28930,6 @@ export const emojisArray = [
       'goodnight',
       'night',
     ],
-    version: '1.0',
   },
   {
     id: 1650,
@@ -30710,7 +28950,6 @@ export const emojisArray = [
       'goodnight',
       'night',
     ],
-    version: '0.6',
   },
   {
     id: 1651,
@@ -30731,7 +28970,6 @@ export const emojisArray = [
       'goodnight',
       'night',
     ],
-    version: '0.7',
   },
   {
     id: 1652,
@@ -30754,7 +28992,6 @@ export const emojisArray = [
       'hot',
       'cold',
     ],
-    version: '0.7',
   },
   {
     id: 1653,
@@ -30777,7 +29014,6 @@ export const emojisArray = [
       'sea',
       'beach',
     ],
-    version: '0.6',
   },
   {
     id: 1654,
@@ -30799,7 +29035,6 @@ export const emojisArray = [
       'goodnight',
       'night',
     ],
-    version: '1.0',
   },
   {
     id: 1655,
@@ -30820,7 +29055,6 @@ export const emojisArray = [
       'hump',
       'morning',
     ],
-    version: '1.0',
   },
   {
     id: 1656,
@@ -30840,7 +29074,6 @@ export const emojisArray = [
       'medium',
       'space',
     ],
-    version: '0.6',
   },
   {
     id: 1657,
@@ -30859,7 +29092,6 @@ export const emojisArray = [
     keywords: [
       'space',
     ],
-    version: '0.6',
   },
   {
     id: 1658,
@@ -30878,7 +29110,6 @@ export const emojisArray = [
     keywords: [
       'space',
     ],
-    version: '0.6',
   },
   {
     id: 1659,
@@ -30897,7 +29128,6 @@ export const emojisArray = [
     keywords: [
       'rain',
     ],
-    version: '0.6',
   },
   {
     id: 1660,
@@ -30914,7 +29144,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1661,
@@ -30931,7 +29160,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1662,
@@ -30948,7 +29176,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1663,
@@ -30965,7 +29192,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1664,
@@ -30982,7 +29208,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1665,
@@ -30999,7 +29224,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1666,
@@ -31016,7 +29240,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1667,
@@ -31033,7 +29256,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1668,
@@ -31053,7 +29275,6 @@ export const emojisArray = [
       'disaster',
       'catastrophe',
     ],
-    version: '0.7',
   },
   {
     id: 1669,
@@ -31070,7 +29291,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1670,
@@ -31087,7 +29307,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1671,
@@ -31106,7 +29325,6 @@ export const emojisArray = [
     keywords: [
       'drugs',
     ],
-    version: '0.6',
   },
   {
     id: 1672,
@@ -31126,7 +29344,6 @@ export const emojisArray = [
       'gay',
       'rain',
     ],
-    version: '0.6',
   },
   {
     id: 1673,
@@ -31146,7 +29363,6 @@ export const emojisArray = [
       'rain',
       'accessories',
     ],
-    version: '0.6',
   },
   {
     id: 1674,
@@ -31166,7 +29382,6 @@ export const emojisArray = [
       'rain',
       'accessories',
     ],
-    version: '0.7',
   },
   {
     id: 1675,
@@ -31187,7 +29402,6 @@ export const emojisArray = [
       'accessories',
       'cold',
     ],
-    version: '0.6',
   },
   {
     id: 1676,
@@ -31210,7 +29424,6 @@ export const emojisArray = [
       'sea',
       'summer',
     ],
-    version: '0.7',
   },
   {
     id: 1677,
@@ -31227,7 +29440,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1678,
@@ -31248,7 +29460,6 @@ export const emojisArray = [
       'winter',
       'snow',
     ],
-    version: '0.6',
   },
   {
     id: 1679,
@@ -31269,7 +29480,6 @@ export const emojisArray = [
       'winter',
       'snow',
     ],
-    version: '0.7',
   },
   {
     id: 1680,
@@ -31291,7 +29501,6 @@ export const emojisArray = [
       'snow',
       'holidays',
     ],
-    version: '0.6',
   },
   {
     id: 1681,
@@ -31311,7 +29520,6 @@ export const emojisArray = [
       'disaster',
       'catastrophe',
     ],
-    version: '1.0',
   },
   {
     id: 1682,
@@ -31331,7 +29539,6 @@ export const emojisArray = [
       'wth',
       'hot',
     ],
-    version: '0.6',
   },
   {
     id: 1683,
@@ -31351,7 +29558,6 @@ export const emojisArray = [
       'weather',
       'rain',
     ],
-    version: '0.6',
   },
   {
     id: 1684,
@@ -31373,7 +29579,6 @@ export const emojisArray = [
       'tropical',
       'swim',
     ],
-    version: '0.6',
   },
   {
     id: 1685,
@@ -31393,7 +29598,6 @@ export const emojisArray = [
       'holidays',
       'halloween',
     ],
-    version: '0.6',
   },
   {
     id: 1686,
@@ -31415,7 +29619,6 @@ export const emojisArray = [
       'trees',
       'gift',
     ],
-    version: '0.6',
   },
   {
     id: 1687,
@@ -31434,7 +29637,6 @@ export const emojisArray = [
     keywords: [
       'party',
     ],
-    version: '0.6',
   },
   {
     id: 1688,
@@ -31454,7 +29656,6 @@ export const emojisArray = [
       'firework',
       'parties',
     ],
-    version: '0.6',
   },
   {
     id: 1689,
@@ -31474,7 +29675,6 @@ export const emojisArray = [
       'star',
       'night',
     ],
-    version: '0.6',
   },
   {
     id: 1690,
@@ -31494,7 +29694,6 @@ export const emojisArray = [
       'birthday',
       'parties',
     ],
-    version: '0.6',
   },
   {
     id: 1691,
@@ -31518,7 +29717,6 @@ export const emojisArray = [
       'night',
       'parties',
     ],
-    version: '0.6',
   },
   {
     id: 1692,
@@ -31541,7 +29739,6 @@ export const emojisArray = [
       'night',
       'parties',
     ],
-    version: '0.6',
   },
   {
     id: 1693,
@@ -31558,7 +29755,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1694,
@@ -31575,7 +29771,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1695,
@@ -31594,7 +29789,6 @@ export const emojisArray = [
     keywords: [
       'japan',
     ],
-    version: '0.6',
   },
   {
     id: 1696,
@@ -31613,7 +29807,6 @@ export const emojisArray = [
     keywords: [
       'japan',
     ],
-    version: '0.6',
   },
   {
     id: 1697,
@@ -31632,7 +29825,6 @@ export const emojisArray = [
     keywords: [
       'japan',
     ],
-    version: '0.6',
   },
   {
     id: 1698,
@@ -31654,7 +29846,6 @@ export const emojisArray = [
       'sky',
       'travel',
     ],
-    version: '0.6',
   },
   {
     id: 1699,
@@ -31671,7 +29862,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 1700,
@@ -31691,7 +29881,6 @@ export const emojisArray = [
       'gift',
       'birthday',
     ],
-    version: '0.6',
   },
   {
     id: 1701,
@@ -31713,7 +29902,6 @@ export const emojisArray = [
       'christmas',
       'parties',
     ],
-    version: '0.6',
   },
   {
     id: 1702,
@@ -31735,7 +29923,6 @@ export const emojisArray = [
       'christmas',
       'parties',
     ],
-    version: '0.7',
   },
   {
     id: 1703,
@@ -31752,7 +29939,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1704,
@@ -31773,7 +29959,6 @@ export const emojisArray = [
       'movie',
       'parties',
     ],
-    version: '0.6',
   },
   {
     id: 1705,
@@ -31792,7 +29977,6 @@ export const emojisArray = [
     keywords: [
       'war',
     ],
-    version: '0.7',
   },
   {
     id: 1706,
@@ -31817,7 +30001,6 @@ export const emojisArray = [
       'competition',
       'tournament',
     ],
-    version: '0.6',
   },
   {
     id: 1707,
@@ -31842,7 +30025,6 @@ export const emojisArray = [
       'competition',
       'tournament',
     ],
-    version: '1.0',
   },
   {
     id: 1708,
@@ -31867,7 +30049,6 @@ export const emojisArray = [
       'competition',
       'tournament',
     ],
-    version: '3.0',
   },
   {
     id: 1709,
@@ -31891,7 +30072,6 @@ export const emojisArray = [
       'competition',
       'tournament',
     ],
-    version: '3.0',
   },
   {
     id: 1710,
@@ -31915,7 +30095,6 @@ export const emojisArray = [
       'competition',
       'tournament',
     ],
-    version: '3.0',
   },
   {
     id: 1711,
@@ -31938,7 +30117,6 @@ export const emojisArray = [
       'messi',
       'ronaldo',
     ],
-    version: '0.6',
   },
   {
     id: 1712,
@@ -31958,7 +30136,6 @@ export const emojisArray = [
       'game',
       'ball',
     ],
-    version: '0.6',
   },
   {
     id: 1713,
@@ -31979,7 +30156,6 @@ export const emojisArray = [
       'game',
       'ball',
     ],
-    version: '0.6',
   },
   {
     id: 1714,
@@ -31999,7 +30175,6 @@ export const emojisArray = [
       'game',
       'ball',
     ],
-    version: '1.0',
   },
   {
     id: 1715,
@@ -32021,7 +30196,6 @@ export const emojisArray = [
       'ball',
       'usa',
     ],
-    version: '0.6',
   },
   {
     id: 1716,
@@ -32041,7 +30215,6 @@ export const emojisArray = [
       'game',
       'ball',
     ],
-    version: '1.0',
   },
   {
     id: 1717,
@@ -32064,7 +30237,6 @@ export const emojisArray = [
       'nadal',
       'federer',
     ],
-    version: '0.6',
   },
   {
     id: 1718,
@@ -32084,7 +30256,6 @@ export const emojisArray = [
       'night',
       'party',
     ],
-    version: '0.6',
   },
   {
     id: 1719,
@@ -32103,7 +30274,6 @@ export const emojisArray = [
     keywords: [
       'bat',
     ],
-    version: '1.0',
   },
   {
     id: 1720,
@@ -32122,7 +30292,6 @@ export const emojisArray = [
     keywords: [
       'stick',
     ],
-    version: '1.0',
   },
   {
     id: 1721,
@@ -32141,7 +30310,6 @@ export const emojisArray = [
     keywords: [
       'puck',
     ],
-    version: '1.0',
   },
   {
     id: 1722,
@@ -32164,7 +30332,6 @@ export const emojisArray = [
       'racquet',
       'china',
     ],
-    version: '1.0',
   },
   {
     id: 1723,
@@ -32185,7 +30352,6 @@ export const emojisArray = [
       'bat',
       'racquet',
     ],
-    version: '1.0',
   },
   {
     id: 1724,
@@ -32202,7 +30368,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '3.0',
   },
   {
     id: 1725,
@@ -32221,7 +30386,6 @@ export const emojisArray = [
     keywords: [
       'judo',
     ],
-    version: '3.0',
   },
   {
     id: 1726,
@@ -32241,7 +30405,6 @@ export const emojisArray = [
       'football',
       'foot',
     ],
-    version: '3.0',
   },
   {
     id: 1727,
@@ -32262,7 +30425,6 @@ export const emojisArray = [
       'vacation',
       'golf',
     ],
-    version: '0.6',
   },
   {
     id: 1728,
@@ -32279,7 +30441,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1729,
@@ -32298,7 +30459,6 @@ export const emojisArray = [
     keywords: [
       'fish',
     ],
-    version: '0.6',
   },
   {
     id: 1730,
@@ -32319,7 +30479,6 @@ export const emojisArray = [
       'sash',
       'award',
     ],
-    version: '0.6',
   },
   {
     id: 1731,
@@ -32339,7 +30498,6 @@ export const emojisArray = [
       'boot',
       'cold',
     ],
-    version: '0.6',
   },
   {
     id: 1732,
@@ -32356,7 +30514,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 1733,
@@ -32374,7 +30531,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 1734,
@@ -32393,7 +30549,6 @@ export const emojisArray = [
     keywords: [
       'target',
     ],
-    version: '0.6',
   },
   {
     id: 1735,
@@ -32412,7 +30567,6 @@ export const emojisArray = [
     keywords: [
       'billiard',
     ],
-    version: '0.6',
   },
   {
     id: 1736,
@@ -32431,7 +30585,6 @@ export const emojisArray = [
     keywords: [
       'seer',
     ],
-    version: '0.6',
   },
   {
     id: 1737,
@@ -32452,7 +30605,6 @@ export const emojisArray = [
       'night',
       'play',
     ],
-    version: '0.6',
   },
   {
     id: 1738,
@@ -32474,7 +30626,6 @@ export const emojisArray = [
       'night',
       'play',
     ],
-    version: '0.7',
   },
   {
     id: 1739,
@@ -32494,7 +30645,6 @@ export const emojisArray = [
       'money',
       'play',
     ],
-    version: '0.6',
   },
   {
     id: 1740,
@@ -32513,7 +30663,6 @@ export const emojisArray = [
     keywords: [
       'play',
     ],
-    version: '0.6',
   },
   {
     id: 1741,
@@ -32533,7 +30682,6 @@ export const emojisArray = [
       'card',
       'sign',
     ],
-    version: '0.6',
   },
   {
     id: 1742,
@@ -32553,7 +30701,6 @@ export const emojisArray = [
       'card',
       'sign',
     ],
-    version: '0.6',
   },
   {
     id: 1743,
@@ -32573,7 +30720,6 @@ export const emojisArray = [
       'card',
       'sign',
     ],
-    version: '0.6',
   },
   {
     id: 1744,
@@ -32593,7 +30739,6 @@ export const emojisArray = [
       'card',
       'sign',
     ],
-    version: '0.6',
   },
   {
     id: 1745,
@@ -32610,7 +30755,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 1746,
@@ -32630,7 +30774,6 @@ export const emojisArray = [
       'play',
       'card',
     ],
-    version: '0.6',
   },
   {
     id: 1747,
@@ -32647,7 +30790,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1748,
@@ -32664,7 +30806,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1749,
@@ -32684,7 +30825,6 @@ export const emojisArray = [
       'theatre',
       'movie',
     ],
-    version: '0.6',
   },
   {
     id: 1750,
@@ -32701,7 +30841,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1751,
@@ -32720,7 +30859,6 @@ export const emojisArray = [
     keywords: [
       'draw',
     ],
-    version: '0.6',
   },
   {
     id: 1752,
@@ -32740,7 +30878,6 @@ export const emojisArray = [
       'stroke',
       'alarm',
     ],
-    version: '1.0',
   },
   {
     id: 1753,
@@ -32759,7 +30896,6 @@ export const emojisArray = [
     keywords: [
       'alarm',
     ],
-    version: '0.7',
   },
   {
     id: 1754,
@@ -32780,7 +30916,6 @@ export const emojisArray = [
       'wave',
       'alarm',
     ],
-    version: '1.0',
   },
   {
     id: 1755,
@@ -32801,7 +30936,6 @@ export const emojisArray = [
       'waves',
       'alarm',
     ],
-    version: '0.6',
   },
   {
     id: 1756,
@@ -32822,7 +30956,6 @@ export const emojisArray = [
       'object',
       'alarm',
     ],
-    version: '0.6',
   },
   {
     id: 1757,
@@ -32842,7 +30975,6 @@ export const emojisArray = [
       'cry',
       'public',
     ],
-    version: '0.6',
   },
   {
     id: 1758,
@@ -32859,7 +30991,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1759,
@@ -32878,7 +31009,6 @@ export const emojisArray = [
     keywords: [
       'alarm',
     ],
-    version: '0.6',
   },
   {
     id: 1760,
@@ -32897,7 +31027,6 @@ export const emojisArray = [
     keywords: [
       'alarm',
     ],
-    version: '1.0',
   },
   {
     id: 1761,
@@ -32917,7 +31046,6 @@ export const emojisArray = [
       'instrument',
       'piano',
     ],
-    version: '0.6',
   },
   {
     id: 1762,
@@ -32937,7 +31065,6 @@ export const emojisArray = [
       'instrument',
       'piano',
     ],
-    version: '0.6',
   },
   {
     id: 1763,
@@ -32957,7 +31084,6 @@ export const emojisArray = [
       'instrument',
       'piano',
     ],
-    version: '0.6',
   },
   {
     id: 1764,
@@ -32977,7 +31103,6 @@ export const emojisArray = [
       'sing',
       'singer',
     ],
-    version: '0.7',
   },
   {
     id: 1765,
@@ -32994,7 +31119,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1766,
@@ -33013,7 +31137,6 @@ export const emojisArray = [
     keywords: [
       'sound',
     ],
-    version: '0.7',
   },
   {
     id: 1767,
@@ -33033,7 +31156,6 @@ export const emojisArray = [
       'sing',
       'singer',
     ],
-    version: '0.6',
   },
   {
     id: 1768,
@@ -33052,7 +31174,6 @@ export const emojisArray = [
     keywords: [
       'sound',
     ],
-    version: '0.6',
   },
   {
     id: 1769,
@@ -33071,7 +31192,6 @@ export const emojisArray = [
     keywords: [
       'electronic',
     ],
-    version: '0.6',
   },
   {
     id: 1770,
@@ -33088,7 +31208,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1771,
@@ -33105,7 +31224,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1772,
@@ -33124,7 +31242,6 @@ export const emojisArray = [
     keywords: [
       'piano',
     ],
-    version: '0.6',
   },
   {
     id: 1773,
@@ -33141,7 +31258,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1774,
@@ -33160,7 +31276,6 @@ export const emojisArray = [
     keywords: [
       'sarcastic',
     ],
-    version: '0.6',
   },
   {
     id: 1775,
@@ -33179,7 +31294,6 @@ export const emojisArray = [
     keywords: [
       'drumsticks',
     ],
-    version: '3.0',
   },
   {
     id: 1776,
@@ -33203,7 +31317,6 @@ export const emojisArray = [
       'xiaomi',
       'huawei',
     ],
-    version: '0.6',
   },
   {
     id: 1777,
@@ -33226,7 +31339,6 @@ export const emojisArray = [
       'xiaomi',
       'huawei',
     ],
-    version: '0.6',
   },
   {
     id: 1778,
@@ -33243,7 +31355,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1779,
@@ -33260,7 +31371,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1780,
@@ -33279,7 +31389,6 @@ export const emojisArray = [
     keywords: [
       'work',
     ],
-    version: '0.6',
   },
   {
     id: 1781,
@@ -33299,7 +31408,6 @@ export const emojisArray = [
       'work',
       'office',
     ],
-    version: '0.6',
   },
   {
     id: 1782,
@@ -33319,7 +31427,6 @@ export const emojisArray = [
       'lithium',
       'electricity',
     ],
-    version: '0.6',
   },
   {
     id: 1783,
@@ -33338,7 +31445,6 @@ export const emojisArray = [
     keywords: [
       'electricity',
     ],
-    version: '0.6',
   },
   {
     id: 1784,
@@ -33360,7 +31466,6 @@ export const emojisArray = [
       'work',
       'office',
     ],
-    version: '0.6',
   },
   {
     id: 1785,
@@ -33380,7 +31485,6 @@ export const emojisArray = [
       'work',
       'office',
     ],
-    version: '0.7',
   },
   {
     id: 1786,
@@ -33400,7 +31504,6 @@ export const emojisArray = [
       'print',
       'ink',
     ],
-    version: '0.7',
   },
   {
     id: 1787,
@@ -33417,7 +31520,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1788,
@@ -33436,7 +31538,6 @@ export const emojisArray = [
     keywords: [
       'click',
     ],
-    version: '0.7',
   },
   {
     id: 1789,
@@ -33453,7 +31554,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1790,
@@ -33472,7 +31572,6 @@ export const emojisArray = [
     keywords: [
       'minidisc',
     ],
-    version: '0.6',
   },
   {
     id: 1791,
@@ -33489,7 +31588,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1792,
@@ -33506,7 +31604,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1793,
@@ -33525,7 +31622,6 @@ export const emojisArray = [
     keywords: [
       'movie',
     ],
-    version: '0.6',
   },
   {
     id: 1794,
@@ -33544,7 +31640,6 @@ export const emojisArray = [
     keywords: [
       'film',
     ],
-    version: '0.6',
   },
   {
     id: 1795,
@@ -33561,7 +31656,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1796,
@@ -33580,7 +31674,6 @@ export const emojisArray = [
     keywords: [
       'movie',
     ],
-    version: '0.7',
   },
   {
     id: 1797,
@@ -33600,7 +31693,6 @@ export const emojisArray = [
       'movie',
       'actor',
     ],
-    version: '0.6',
   },
   {
     id: 1798,
@@ -33619,7 +31711,6 @@ export const emojisArray = [
     keywords: [
       'tv',
     ],
-    version: '0.6',
   },
   {
     id: 1799,
@@ -33638,7 +31729,6 @@ export const emojisArray = [
     keywords: [
       'selfie',
     ],
-    version: '0.6',
   },
   {
     id: 1800,
@@ -33657,7 +31747,6 @@ export const emojisArray = [
     keywords: [
       'selfie',
     ],
-    version: '1.0',
   },
   {
     id: 1801,
@@ -33676,7 +31765,6 @@ export const emojisArray = [
     keywords: [
       'movie',
     ],
-    version: '0.6',
   },
   {
     id: 1802,
@@ -33695,7 +31783,6 @@ export const emojisArray = [
     keywords: [
       'movie',
     ],
-    version: '0.6',
   },
   {
     id: 1803,
@@ -33714,7 +31801,6 @@ export const emojisArray = [
     keywords: [
       'detective',
     ],
-    version: '0.6',
   },
   {
     id: 1804,
@@ -33733,7 +31819,6 @@ export const emojisArray = [
     keywords: [
       'detective',
     ],
-    version: '0.6',
   },
   {
     id: 1805,
@@ -33750,7 +31835,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1806,
@@ -33770,7 +31854,6 @@ export const emojisArray = [
       'idea',
       'science',
     ],
-    version: '0.6',
   },
   {
     id: 1807,
@@ -33789,7 +31872,6 @@ export const emojisArray = [
     keywords: [
       'dark',
     ],
-    version: '0.6',
   },
   {
     id: 1808,
@@ -33809,7 +31891,6 @@ export const emojisArray = [
       'izakaya',
       'japan',
     ],
-    version: '0.6',
   },
   {
     id: 1809,
@@ -33829,7 +31910,6 @@ export const emojisArray = [
       'office',
       'write',
     ],
-    version: '0.6',
   },
   {
     id: 1810,
@@ -33848,7 +31928,6 @@ export const emojisArray = [
     keywords: [
       'write',
     ],
-    version: '0.6',
   },
   {
     id: 1811,
@@ -33867,7 +31946,6 @@ export const emojisArray = [
     keywords: [
       'write',
     ],
-    version: '0.6',
   },
   {
     id: 1812,
@@ -33884,7 +31962,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1813,
@@ -33903,7 +31980,6 @@ export const emojisArray = [
     keywords: [
       'write',
     ],
-    version: '0.6',
   },
   {
     id: 1814,
@@ -33922,7 +31998,6 @@ export const emojisArray = [
     keywords: [
       'write',
     ],
-    version: '0.6',
   },
   {
     id: 1815,
@@ -33941,7 +32016,6 @@ export const emojisArray = [
     keywords: [
       'book',
     ],
-    version: '0.6',
   },
   {
     id: 1816,
@@ -33960,7 +32034,6 @@ export const emojisArray = [
     keywords: [
       'write',
     ],
-    version: '0.6',
   },
   {
     id: 1817,
@@ -33977,7 +32050,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1818,
@@ -33996,7 +32068,6 @@ export const emojisArray = [
     keywords: [
       'write',
     ],
-    version: '0.6',
   },
   {
     id: 1819,
@@ -34013,7 +32084,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1820,
@@ -34030,7 +32100,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1821,
@@ -34049,7 +32118,6 @@ export const emojisArray = [
     keywords: [
       'news',
     ],
-    version: '0.6',
   },
   {
     id: 1822,
@@ -34068,7 +32136,6 @@ export const emojisArray = [
     keywords: [
       'news',
     ],
-    version: '0.7',
   },
   {
     id: 1823,
@@ -34085,7 +32152,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1824,
@@ -34102,7 +32168,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1825,
@@ -34119,7 +32184,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1826,
@@ -34138,7 +32202,6 @@ export const emojisArray = [
     keywords: [
       'award',
     ],
-    version: '0.6',
   },
   {
     id: 1827,
@@ -34155,7 +32218,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1828,
@@ -34172,7 +32234,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1829,
@@ -34189,7 +32250,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1830,
@@ -34206,7 +32266,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1831,
@@ -34223,7 +32282,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1832,
@@ -34240,7 +32298,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1833,
@@ -34260,7 +32317,6 @@ export const emojisArray = [
       'trend',
       'graphic',
     ],
-    version: '0.6',
   },
   {
     id: 1834,
@@ -34277,7 +32333,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1835,
@@ -34298,7 +32353,6 @@ export const emojisArray = [
       'math',
       'php',
     ],
-    version: '0.6',
   },
   {
     id: 1836,
@@ -34320,7 +32374,6 @@ export const emojisArray = [
       'courier',
       'letters',
     ],
-    version: '0.6',
   },
   {
     id: 1837,
@@ -34341,7 +32394,6 @@ export const emojisArray = [
       'courier',
       'letters',
     ],
-    version: '0.6',
   },
   {
     id: 1838,
@@ -34363,7 +32415,6 @@ export const emojisArray = [
       'courier',
       'letters',
     ],
-    version: '0.6',
   },
   {
     id: 1839,
@@ -34385,7 +32436,6 @@ export const emojisArray = [
       'courier',
       'letters',
     ],
-    version: '0.6',
   },
   {
     id: 1840,
@@ -34405,7 +32455,6 @@ export const emojisArray = [
       'work',
       'office',
     ],
-    version: '0.6',
   },
   {
     id: 1841,
@@ -34425,7 +32474,6 @@ export const emojisArray = [
       'work',
       'office',
     ],
-    version: '0.6',
   },
   {
     id: 1842,
@@ -34444,7 +32492,6 @@ export const emojisArray = [
     keywords: [
       'gift',
     ],
-    version: '0.6',
   },
   {
     id: 1843,
@@ -34461,7 +32508,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1844,
@@ -34478,7 +32524,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1845,
@@ -34495,7 +32540,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1846,
@@ -34512,7 +32556,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1847,
@@ -34529,7 +32572,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1848,
@@ -34546,7 +32588,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1849,
@@ -34565,7 +32606,6 @@ export const emojisArray = [
     keywords: [
       'write',
     ],
-    version: '0.6',
   },
   {
     id: 1850,
@@ -34584,7 +32624,6 @@ export const emojisArray = [
     keywords: [
       'write',
     ],
-    version: '0.6',
   },
   {
     id: 1851,
@@ -34603,7 +32642,6 @@ export const emojisArray = [
     keywords: [
       'draw',
     ],
-    version: '0.7',
   },
   {
     id: 1852,
@@ -34622,7 +32660,6 @@ export const emojisArray = [
     keywords: [
       'write',
     ],
-    version: '0.7',
   },
   {
     id: 1853,
@@ -34641,7 +32678,6 @@ export const emojisArray = [
     keywords: [
       'draw',
     ],
-    version: '0.7',
   },
   {
     id: 1854,
@@ -34660,7 +32696,6 @@ export const emojisArray = [
     keywords: [
       'write',
     ],
-    version: '0.7',
   },
   {
     id: 1855,
@@ -34679,7 +32714,6 @@ export const emojisArray = [
     keywords: [
       'write',
     ],
-    version: '0.6',
   },
   {
     id: 1856,
@@ -34699,7 +32733,6 @@ export const emojisArray = [
       'nutcase',
       'job',
     ],
-    version: '0.6',
   },
   {
     id: 1857,
@@ -34716,7 +32749,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1858,
@@ -34733,7 +32765,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1859,
@@ -34750,7 +32781,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1860,
@@ -34767,7 +32797,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1861,
@@ -34784,7 +32813,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1862,
@@ -34801,7 +32829,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1863,
@@ -34818,7 +32845,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1864,
@@ -34835,7 +32861,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1865,
@@ -34857,7 +32882,6 @@ export const emojisArray = [
       'work',
       'graphic',
     ],
-    version: '0.6',
   },
   {
     id: 1866,
@@ -34879,7 +32903,6 @@ export const emojisArray = [
       'work',
       'graphic',
     ],
-    version: '0.6',
   },
   {
     id: 1867,
@@ -34899,7 +32922,6 @@ export const emojisArray = [
       'work',
       'graphic',
     ],
-    version: '0.6',
   },
   {
     id: 1868,
@@ -34918,7 +32940,6 @@ export const emojisArray = [
     keywords: [
       'paste',
     ],
-    version: '0.6',
   },
   {
     id: 1869,
@@ -34935,7 +32956,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1870,
@@ -34956,7 +32976,6 @@ export const emojisArray = [
       'location',
       'tracking',
     ],
-    version: '0.6',
   },
   {
     id: 1871,
@@ -34973,7 +32992,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1872,
@@ -34990,7 +33008,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1873,
@@ -35007,7 +33024,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1874,
@@ -35024,7 +33040,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1875,
@@ -35043,7 +33058,6 @@ export const emojisArray = [
     keywords: [
       'cut',
     ],
-    version: '0.6',
   },
   {
     id: 1876,
@@ -35060,7 +33074,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1877,
@@ -35077,7 +33090,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1878,
@@ -35098,7 +33110,6 @@ export const emojisArray = [
       'delete',
       'remove',
     ],
-    version: '0.7',
   },
   {
     id: 1879,
@@ -35118,7 +33129,6 @@ export const emojisArray = [
       'padlock',
       'close',
     ],
-    version: '0.6',
   },
   {
     id: 1880,
@@ -35138,7 +33148,6 @@ export const emojisArray = [
       'open',
       'padlock',
     ],
-    version: '0.6',
   },
   {
     id: 1881,
@@ -35157,7 +33166,6 @@ export const emojisArray = [
     keywords: [
       'ink',
     ],
-    version: '0.6',
   },
   {
     id: 1882,
@@ -35176,7 +33184,6 @@ export const emojisArray = [
     keywords: [
       'close',
     ],
-    version: '0.6',
   },
   {
     id: 1883,
@@ -35195,7 +33202,6 @@ export const emojisArray = [
     keywords: [
       'open',
     ],
-    version: '0.6',
   },
   {
     id: 1884,
@@ -35212,7 +33218,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1885,
@@ -35231,7 +33236,6 @@ export const emojisArray = [
     keywords: [
       'weapon',
     ],
-    version: '0.6',
   },
   {
     id: 1886,
@@ -35248,7 +33252,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1887,
@@ -35265,7 +33268,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1888,
@@ -35282,7 +33284,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1889,
@@ -35299,7 +33300,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1890,
@@ -35316,7 +33316,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1891,
@@ -35337,7 +33336,6 @@ export const emojisArray = [
       'dead',
       'gun',
     ],
-    version: '0.6',
   },
   {
     id: 1892,
@@ -35356,7 +33354,6 @@ export const emojisArray = [
     keywords: [
       'weapon',
     ],
-    version: '1.0',
   },
   {
     id: 1893,
@@ -35377,7 +33374,6 @@ export const emojisArray = [
       'defense',
       'guard',
     ],
-    version: '0.7',
   },
   {
     id: 1894,
@@ -35394,7 +33390,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1895,
@@ -35411,7 +33406,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1896,
@@ -35431,7 +33425,6 @@ export const emojisArray = [
       'system',
       'settings',
     ],
-    version: '1.0',
   },
   {
     id: 1897,
@@ -35448,7 +33441,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1898,
@@ -35467,7 +33459,6 @@ export const emojisArray = [
     keywords: [
       'weight',
     ],
-    version: '1.0',
   },
   {
     id: 1899,
@@ -35484,7 +33475,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1900,
@@ -35503,7 +33493,6 @@ export const emojisArray = [
     keywords: [
       'slavery',
     ],
-    version: '0.7',
   },
   {
     id: 1901,
@@ -35520,7 +33509,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1902,
@@ -35537,7 +33525,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1903,
@@ -35556,7 +33543,6 @@ export const emojisArray = [
     keywords: [
       'space',
     ],
-    version: '1.0',
   },
   {
     id: 1904,
@@ -35575,7 +33561,6 @@ export const emojisArray = [
     keywords: [
       'tv',
     ],
-    version: '0.6',
   },
   {
     id: 1905,
@@ -35594,7 +33579,6 @@ export const emojisArray = [
     keywords: [
       'drugs',
     ],
-    version: '0.6',
   },
   {
     id: 1906,
@@ -35614,7 +33598,6 @@ export const emojisArray = [
       'health',
       'drugs',
     ],
-    version: '0.6',
   },
   {
     id: 1907,
@@ -35634,7 +33617,6 @@ export const emojisArray = [
       'door',
       'object',
     ],
-    version: '0.6',
   },
   {
     id: 1908,
@@ -35654,7 +33636,6 @@ export const emojisArray = [
       'sleep',
       'dream',
     ],
-    version: '0.7',
   },
   {
     id: 1909,
@@ -35671,7 +33652,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1910,
@@ -35694,7 +33674,6 @@ export const emojisArray = [
       'caca',
       'poo',
     ],
-    version: '0.6',
   },
   {
     id: 1911,
@@ -35714,7 +33693,6 @@ export const emojisArray = [
       'shower',
       'bathroom',
     ],
-    version: '1.0',
   },
   {
     id: 1912,
@@ -35734,7 +33712,6 @@ export const emojisArray = [
       'bathroom',
       'tired',
     ],
-    version: '1.0',
   },
   {
     id: 1913,
@@ -35754,7 +33731,6 @@ export const emojisArray = [
       'shop',
       'trolley',
     ],
-    version: '3.0',
   },
   {
     id: 1914,
@@ -35775,7 +33751,6 @@ export const emojisArray = [
       'drugs',
       'dead',
     ],
-    version: '0.6',
   },
   {
     id: 1915,
@@ -35794,7 +33769,6 @@ export const emojisArray = [
     keywords: [
       'dead',
     ],
-    version: '1.0',
   },
   {
     id: 1916,
@@ -35813,7 +33787,6 @@ export const emojisArray = [
     keywords: [
       'dead',
     ],
-    version: '1.0',
   },
   {
     id: 1917,
@@ -35833,7 +33806,6 @@ export const emojisArray = [
       'travel',
       'vacation',
     ],
-    version: '0.6',
   },
   {
     id: 1918,
@@ -35855,7 +33827,6 @@ export const emojisArray = [
       'machine',
       'money',
     ],
-    version: '0.6',
   },
   {
     id: 1919,
@@ -35875,7 +33846,6 @@ export const emojisArray = [
       'trash',
       'waste',
     ],
-    version: '1.0',
   },
   {
     id: 1920,
@@ -35894,7 +33864,6 @@ export const emojisArray = [
     keywords: [
       'drink',
     ],
-    version: '1.0',
   },
   {
     id: 1921,
@@ -35914,7 +33883,6 @@ export const emojisArray = [
       'handicap',
       'disabled',
     ],
-    version: '0.6',
   },
   {
     id: 1922,
@@ -35933,7 +33901,6 @@ export const emojisArray = [
     keywords: [
       'wc',
     ],
-    version: '0.6',
   },
   {
     id: 1923,
@@ -35952,7 +33919,6 @@ export const emojisArray = [
     keywords: [
       'wc',
     ],
-    version: '0.6',
   },
   {
     id: 1924,
@@ -35971,7 +33937,6 @@ export const emojisArray = [
     keywords: [
       'wc',
     ],
-    version: '0.6',
   },
   {
     id: 1925,
@@ -35988,7 +33953,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1926,
@@ -36007,7 +33971,6 @@ export const emojisArray = [
     keywords: [
       'wc',
     ],
-    version: '0.6',
   },
   {
     id: 1927,
@@ -36026,7 +33989,6 @@ export const emojisArray = [
     keywords: [
       'airport',
     ],
-    version: '1.0',
   },
   {
     id: 1928,
@@ -36045,7 +34007,6 @@ export const emojisArray = [
     keywords: [
       'airport',
     ],
-    version: '1.0',
   },
   {
     id: 1929,
@@ -36064,7 +34025,6 @@ export const emojisArray = [
     keywords: [
       'airport',
     ],
-    version: '1.0',
   },
   {
     id: 1930,
@@ -36081,7 +34041,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1931,
@@ -36098,7 +34057,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1932,
@@ -36115,7 +34073,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1933,
@@ -36135,7 +34092,6 @@ export const emojisArray = [
       'prohibited',
       'forbidden',
     ],
-    version: '0.6',
   },
   {
     id: 1934,
@@ -36154,7 +34110,6 @@ export const emojisArray = [
     keywords: [
       'prohibited',
     ],
-    version: '0.6',
   },
   {
     id: 1935,
@@ -36173,7 +34128,6 @@ export const emojisArray = [
     keywords: [
       'bike',
     ],
-    version: '1.0',
   },
   {
     id: 1936,
@@ -36193,7 +34147,6 @@ export const emojisArray = [
       'smoke',
       'cigarette',
     ],
-    version: '0.6',
   },
   {
     id: 1937,
@@ -36210,7 +34163,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1938,
@@ -36229,7 +34181,6 @@ export const emojisArray = [
     keywords: [
       'drink',
     ],
-    version: '1.0',
   },
   {
     id: 1939,
@@ -36248,7 +34199,6 @@ export const emojisArray = [
     keywords: [
       'walk',
     ],
-    version: '1.0',
   },
   {
     id: 1940,
@@ -36268,7 +34218,6 @@ export const emojisArray = [
       'phone',
       'network',
     ],
-    version: '1.0',
   },
   {
     id: 1941,
@@ -36287,7 +34236,6 @@ export const emojisArray = [
     keywords: [
       'sex',
     ],
-    version: '0.6',
   },
   {
     id: 1942,
@@ -36306,7 +34254,6 @@ export const emojisArray = [
     keywords: [
       'tchernobyl',
     ],
-    version: '1.0',
   },
   {
     id: 1943,
@@ -36323,7 +34270,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1944,
@@ -36340,7 +34286,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1945,
@@ -36357,7 +34302,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1946,
@@ -36374,7 +34318,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1947,
@@ -36391,7 +34334,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1948,
@@ -36408,7 +34350,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1949,
@@ -36425,7 +34366,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1950,
@@ -36442,7 +34382,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1951,
@@ -36459,7 +34398,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1952,
@@ -36476,7 +34414,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1953,
@@ -36493,7 +34430,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1954,
@@ -36510,7 +34446,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1955,
@@ -36527,7 +34462,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1956,
@@ -36544,7 +34478,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1957,
@@ -36561,7 +34494,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1958,
@@ -36578,7 +34510,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1959,
@@ -36595,7 +34526,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1960,
@@ -36612,7 +34542,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1961,
@@ -36629,7 +34558,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1962,
@@ -36646,7 +34574,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1963,
@@ -36663,7 +34590,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1964,
@@ -36680,7 +34606,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1965,
@@ -36700,7 +34625,6 @@ export const emojisArray = [
       'religion',
       'pray',
     ],
-    version: '1.0',
   },
   {
     id: 1966,
@@ -36720,7 +34644,6 @@ export const emojisArray = [
       'physics',
       'chemistry',
     ],
-    version: '1.0',
   },
   {
     id: 1967,
@@ -36737,7 +34660,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1968,
@@ -36754,7 +34676,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1969,
@@ -36771,7 +34692,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1970,
@@ -36788,7 +34708,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1971,
@@ -36805,7 +34724,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1972,
@@ -36822,7 +34740,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1973,
@@ -36839,7 +34756,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1974,
@@ -36856,7 +34772,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1975,
@@ -36873,7 +34788,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1976,
@@ -36890,7 +34804,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1977,
@@ -36907,7 +34820,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1978,
@@ -36924,7 +34836,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1979,
@@ -36941,7 +34852,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1980,
@@ -36958,7 +34868,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1981,
@@ -36975,7 +34884,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1982,
@@ -36992,7 +34900,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1983,
@@ -37009,7 +34916,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1984,
@@ -37026,7 +34932,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1985,
@@ -37043,7 +34948,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1986,
@@ -37060,7 +34964,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1987,
@@ -37077,7 +34980,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1988,
@@ -37094,7 +34996,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1989,
@@ -37111,7 +35012,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1990,
@@ -37128,7 +35028,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1991,
@@ -37145,7 +35044,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1992,
@@ -37162,7 +35060,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1993,
@@ -37179,7 +35076,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1994,
@@ -37196,7 +35092,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1995,
@@ -37213,7 +35108,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 1996,
@@ -37230,7 +35124,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 1997,
@@ -37247,7 +35140,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 1998,
@@ -37266,7 +35158,6 @@ export const emojisArray = [
     keywords: [
       'double',
     ],
-    version: '0.6',
   },
   {
     id: 1999,
@@ -37283,7 +35174,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 2000,
@@ -37300,7 +35190,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2001,
@@ -37317,7 +35206,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2002,
@@ -37334,7 +35222,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2003,
@@ -37353,7 +35240,6 @@ export const emojisArray = [
     keywords: [
       'double',
     ],
-    version: '0.6',
   },
   {
     id: 2004,
@@ -37370,7 +35256,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 2005,
@@ -37387,7 +35272,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 2006,
@@ -37404,7 +35288,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 2007,
@@ -37421,7 +35304,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 2008,
@@ -37441,7 +35323,6 @@ export const emojisArray = [
       'camera',
       'movie',
     ],
-    version: '0.6',
   },
   {
     id: 2009,
@@ -37462,7 +35343,6 @@ export const emojisArray = [
       'brightness',
       'sun',
     ],
-    version: '1.0',
   },
   {
     id: 2010,
@@ -37483,7 +35363,6 @@ export const emojisArray = [
       'brightness',
       'sun',
     ],
-    version: '1.0',
   },
   {
     id: 2011,
@@ -37502,7 +35381,6 @@ export const emojisArray = [
     keywords: [
       'network',
     ],
-    version: '0.6',
   },
   {
     id: 2012,
@@ -37519,7 +35397,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2013,
@@ -37536,7 +35413,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2014,
@@ -37555,7 +35431,6 @@ export const emojisArray = [
     keywords: [
       'woman',
     ],
-    version: '4.0',
   },
   {
     id: 2015,
@@ -37574,7 +35449,6 @@ export const emojisArray = [
     keywords: [
       'men',
     ],
-    version: '4.0',
   },
   {
     id: 2016,
@@ -37591,7 +35465,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '4.0',
   },
   {
     id: 2017,
@@ -37610,7 +35483,6 @@ export const emojisArray = [
     keywords: [
       'math',
     ],
-    version: '11.0',
   },
   {
     id: 2018,
@@ -37629,7 +35501,6 @@ export const emojisArray = [
     keywords: [
       'trash',
     ],
-    version: '0.6',
   },
   {
     id: 2019,
@@ -37646,7 +35517,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 2020,
@@ -37666,7 +35536,6 @@ export const emojisArray = [
       'poseidon',
       'god',
     ],
-    version: '0.6',
   },
   {
     id: 2021,
@@ -37683,7 +35552,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2022,
@@ -37700,7 +35568,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2023,
@@ -37717,7 +35584,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2024,
@@ -37734,7 +35600,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2025,
@@ -37755,7 +35620,6 @@ export const emojisArray = [
       'coorect',
       'right',
     ],
-    version: '0.6',
   },
   {
     id: 2026,
@@ -37776,7 +35640,6 @@ export const emojisArray = [
       'coorect',
       'right',
     ],
-    version: '0.6',
   },
   {
     id: 2027,
@@ -37798,7 +35661,6 @@ export const emojisArray = [
       'wrong',
       'cross',
     ],
-    version: '0.6',
   },
   {
     id: 2028,
@@ -37819,7 +35681,6 @@ export const emojisArray = [
       'incoorect',
       'wrong',
     ],
-    version: '0.6',
   },
   {
     id: 2029,
@@ -37840,7 +35701,6 @@ export const emojisArray = [
       'incoorect',
       'wrong',
     ],
-    version: '0.6',
   },
   {
     id: 2030,
@@ -37859,7 +35719,6 @@ export const emojisArray = [
     keywords: [
       'math',
     ],
-    version: '0.6',
   },
   {
     id: 2031,
@@ -37878,7 +35737,6 @@ export const emojisArray = [
     keywords: [
       'math',
     ],
-    version: '0.6',
   },
   {
     id: 2032,
@@ -37897,7 +35755,6 @@ export const emojisArray = [
     keywords: [
       'math',
     ],
-    version: '0.6',
   },
   {
     id: 2033,
@@ -37914,7 +35771,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2034,
@@ -37931,7 +35787,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 2035,
@@ -37948,7 +35803,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2036,
@@ -37965,7 +35819,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2037,
@@ -37982,7 +35835,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2038,
@@ -37999,7 +35851,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2039,
@@ -38016,7 +35867,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2040,
@@ -38033,7 +35883,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2041,
@@ -38052,7 +35901,6 @@ export const emojisArray = [
     keywords: [
       'punctuation',
     ],
-    version: '0.6',
   },
   {
     id: 2042,
@@ -38071,7 +35919,6 @@ export const emojisArray = [
     keywords: [
       'punctuation',
     ],
-    version: '0.6',
   },
   {
     id: 2043,
@@ -38090,7 +35937,6 @@ export const emojisArray = [
     keywords: [
       'punctuation',
     ],
-    version: '0.6',
   },
   {
     id: 2044,
@@ -38109,7 +35955,6 @@ export const emojisArray = [
     keywords: [
       'punctuation',
     ],
-    version: '0.6',
   },
   {
     id: 2045,
@@ -38126,7 +35971,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2046,
@@ -38143,7 +35987,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2047,
@@ -38160,7 +36003,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2048,
@@ -38177,7 +36019,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2049,
@@ -38196,7 +36037,6 @@ export const emojisArray = [
     keywords: [
       'sharp',
     ],
-    version: '0.6',
   },
   {
     id: 2050,
@@ -38215,7 +36055,6 @@ export const emojisArray = [
     keywords: [
       'start',
     ],
-    version: '2.0',
   },
   {
     id: 2051,
@@ -38234,7 +36073,6 @@ export const emojisArray = [
     keywords: [
       'zero',
     ],
-    version: '0.6',
   },
   {
     id: 2052,
@@ -38253,7 +36091,6 @@ export const emojisArray = [
     keywords: [
       'one',
     ],
-    version: '0.6',
   },
   {
     id: 2053,
@@ -38272,7 +36109,6 @@ export const emojisArray = [
     keywords: [
       'two',
     ],
-    version: '0.6',
   },
   {
     id: 2054,
@@ -38291,7 +36127,6 @@ export const emojisArray = [
     keywords: [
       'three',
     ],
-    version: '0.6',
   },
   {
     id: 2055,
@@ -38310,7 +36145,6 @@ export const emojisArray = [
     keywords: [
       'four',
     ],
-    version: '0.6',
   },
   {
     id: 2056,
@@ -38329,7 +36163,6 @@ export const emojisArray = [
     keywords: [
       'five',
     ],
-    version: '0.6',
   },
   {
     id: 2057,
@@ -38348,7 +36181,6 @@ export const emojisArray = [
     keywords: [
       'six',
     ],
-    version: '0.6',
   },
   {
     id: 2058,
@@ -38367,7 +36199,6 @@ export const emojisArray = [
     keywords: [
       'seven',
     ],
-    version: '0.6',
   },
   {
     id: 2059,
@@ -38386,7 +36217,6 @@ export const emojisArray = [
     keywords: [
       'eight',
     ],
-    version: '0.6',
   },
   {
     id: 2060,
@@ -38405,7 +36235,6 @@ export const emojisArray = [
     keywords: [
       'nine',
     ],
-    version: '0.6',
   },
   {
     id: 2061,
@@ -38424,7 +36253,6 @@ export const emojisArray = [
     keywords: [
       'ten',
     ],
-    version: '0.6',
   },
   {
     id: 2062,
@@ -38446,7 +36274,6 @@ export const emojisArray = [
       'perfect',
       'parties',
     ],
-    version: '0.6',
   },
   {
     id: 2063,
@@ -38466,7 +36293,6 @@ export const emojisArray = [
       'capital',
       'letters',
     ],
-    version: '0.6',
   },
   {
     id: 2064,
@@ -38485,7 +36311,6 @@ export const emojisArray = [
     keywords: [
       'letters',
     ],
-    version: '0.6',
   },
   {
     id: 2065,
@@ -38502,7 +36327,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2066,
@@ -38519,7 +36343,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2067,
@@ -38536,7 +36359,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2068,
@@ -38553,7 +36375,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2069,
@@ -38570,7 +36391,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2070,
@@ -38587,7 +36407,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2071,
@@ -38604,7 +36423,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2072,
@@ -38621,7 +36439,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2073,
@@ -38638,7 +36455,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2074,
@@ -38655,7 +36471,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2075,
@@ -38672,7 +36487,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2076,
@@ -38689,7 +36503,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2077,
@@ -38706,7 +36519,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2078,
@@ -38723,7 +36535,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2079,
@@ -38740,7 +36551,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2080,
@@ -38757,7 +36567,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2081,
@@ -38774,7 +36583,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2082,
@@ -38793,7 +36601,6 @@ export const emojisArray = [
     keywords: [
       'help',
     ],
-    version: '0.6',
   },
   {
     id: 2083,
@@ -38810,7 +36617,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2084,
@@ -38829,7 +36635,6 @@ export const emojisArray = [
     keywords: [
       'fight',
     ],
-    version: '0.6',
   },
   {
     id: 2085,
@@ -38849,7 +36654,6 @@ export const emojisArray = [
       'katakana',
       'koko',
     ],
-    version: '0.6',
   },
   {
     id: 2086,
@@ -38866,7 +36670,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2087,
@@ -38883,7 +36686,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2088,
@@ -38900,7 +36702,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2089,
@@ -38917,7 +36718,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2090,
@@ -38934,7 +36734,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2091,
@@ -38951,7 +36750,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2092,
@@ -38968,7 +36766,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2093,
@@ -38987,7 +36784,6 @@ export const emojisArray = [
     keywords: [
       'japan',
     ],
-    version: '0.6',
   },
   {
     id: 2094,
@@ -39007,7 +36803,6 @@ export const emojisArray = [
       'ideograph',
       'accept',
     ],
-    version: '0.6',
   },
   {
     id: 2095,
@@ -39024,7 +36819,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2096,
@@ -39041,7 +36835,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2097,
@@ -39058,7 +36851,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2098,
@@ -39075,7 +36867,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2099,
@@ -39092,7 +36883,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2100,
@@ -39109,7 +36899,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2101,
@@ -39126,7 +36915,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2102,
@@ -39143,7 +36931,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2103,
@@ -39160,7 +36947,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2104,
@@ -39177,7 +36963,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2105,
@@ -39194,7 +36979,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2106,
@@ -39211,7 +36995,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2107,
@@ -39228,7 +37011,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2108,
@@ -39245,7 +37027,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2109,
@@ -39262,7 +37043,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2110,
@@ -39279,7 +37059,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2111,
@@ -39296,7 +37075,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2112,
@@ -39313,7 +37091,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2113,
@@ -39330,7 +37107,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2114,
@@ -39347,7 +37123,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2115,
@@ -39364,7 +37139,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2116,
@@ -39381,7 +37155,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2117,
@@ -39398,7 +37171,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2118,
@@ -39415,7 +37187,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2119,
@@ -39432,7 +37203,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2120,
@@ -39449,7 +37219,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2121,
@@ -39466,7 +37235,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2122,
@@ -39483,7 +37251,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2123,
@@ -39500,7 +37267,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2124,
@@ -39520,7 +37286,6 @@ export const emojisArray = [
       'start',
       'finish',
     ],
-    version: '0.6',
   },
   {
     id: 2125,
@@ -39537,7 +37302,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2126,
@@ -39556,7 +37320,6 @@ export const emojisArray = [
     keywords: [
       'japan',
     ],
-    version: '0.6',
   },
   {
     id: 2127,
@@ -39575,7 +37338,6 @@ export const emojisArray = [
     keywords: [
       'pirate',
     ],
-    version: '1.0',
   },
   {
     id: 2128,
@@ -39592,7 +37354,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 2129,
@@ -39609,7 +37370,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '4.0',
   },
   {
     id: 2130,
@@ -39626,7 +37386,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2389,
@@ -39655,7 +37414,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '1.0',
       },
       {
         id: 2391,
@@ -39670,7 +37428,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '1.0',
       },
       {
         id: 2392,
@@ -39685,7 +37442,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '1.0',
       },
       {
         id: 2393,
@@ -39700,7 +37456,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '1.0',
       },
       {
         id: 2394,
@@ -39715,11 +37470,9 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '1.0',
       },
     ],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2396,
@@ -39736,7 +37489,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2402,
@@ -39753,7 +37505,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '13.1',
   },
   {
     id: 2403,
@@ -39770,7 +37521,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '13.1',
   },
   {
     id: 2404,
@@ -39787,7 +37537,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2405,
@@ -39804,7 +37553,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2406,
@@ -39821,7 +37569,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2407,
@@ -39838,7 +37585,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '13.1',
   },
   {
     id: 2408,
@@ -39855,7 +37601,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2411,
@@ -39872,7 +37617,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2413,
@@ -39889,7 +37633,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 2414,
@@ -39906,7 +37649,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '13.1',
   },
   {
     id: 2415,
@@ -39923,7 +37665,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '13.1',
   },
   {
     id: 2416,
@@ -39940,7 +37681,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 2417,
@@ -39957,7 +37697,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 2448,
@@ -39986,7 +37725,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '12.0',
       },
       {
         id: 2450,
@@ -40001,7 +37739,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '12.0',
       },
       {
         id: 2451,
@@ -40016,7 +37753,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '12.0',
       },
       {
         id: 2452,
@@ -40031,7 +37767,6 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '12.0',
       },
       {
         id: 2453,
@@ -40046,11 +37781,9 @@ export const emojisArray = [
           id: 17,
           name: 'hand-fingers-partial',
         },
-        version: '12.0',
       },
     ],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 2497,
@@ -40067,7 +37800,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 2498,
@@ -40084,7 +37816,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 2499,
@@ -40113,7 +37844,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '11.0',
       },
       {
         id: 2501,
@@ -40128,7 +37858,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '11.0',
       },
       {
         id: 2502,
@@ -40143,7 +37872,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '11.0',
       },
       {
         id: 2503,
@@ -40158,7 +37886,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '11.0',
       },
       {
         id: 2504,
@@ -40173,11 +37900,9 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '11.0',
       },
     ],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2505,
@@ -40206,7 +37931,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '11.0',
       },
       {
         id: 2507,
@@ -40221,7 +37945,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '11.0',
       },
       {
         id: 2508,
@@ -40236,7 +37959,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '11.0',
       },
       {
         id: 2509,
@@ -40251,7 +37973,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '11.0',
       },
       {
         id: 2510,
@@ -40266,11 +37987,9 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '11.0',
       },
     ],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2511,
@@ -40299,7 +38018,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '12.0',
       },
       {
         id: 2513,
@@ -40314,7 +38032,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '12.0',
       },
       {
         id: 2514,
@@ -40329,7 +38046,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '12.0',
       },
       {
         id: 2515,
@@ -40344,7 +38060,6 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '12.0',
       },
       {
         id: 2516,
@@ -40359,11 +38074,9 @@ export const emojisArray = [
           id: 22,
           name: 'body-parts',
         },
-        version: '12.0',
       },
     ],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 2519,
@@ -40380,7 +38093,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2520,
@@ -40397,7 +38109,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2522,
@@ -40426,7 +38137,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 2524,
@@ -40441,7 +38151,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 2525,
@@ -40456,7 +38165,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 2526,
@@ -40471,7 +38179,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
       {
         id: 2527,
@@ -40486,11 +38193,9 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '1.0',
       },
     ],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2528,
@@ -40519,7 +38224,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '13.1',
       },
       {
         id: 2530,
@@ -40534,7 +38238,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '13.1',
       },
       {
         id: 2531,
@@ -40549,7 +38252,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '13.1',
       },
       {
         id: 2532,
@@ -40564,7 +38266,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '13.1',
       },
       {
         id: 2533,
@@ -40579,11 +38280,9 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '13.1',
       },
     ],
     keywords: [],
-    version: '13.1',
   },
   {
     id: 2534,
@@ -40612,7 +38311,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '13.1',
       },
       {
         id: 2536,
@@ -40627,7 +38325,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '13.1',
       },
       {
         id: 2537,
@@ -40642,7 +38339,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '13.1',
       },
       {
         id: 2538,
@@ -40657,7 +38353,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '13.1',
       },
       {
         id: 2539,
@@ -40672,11 +38367,9 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '13.1',
       },
     ],
     keywords: [],
-    version: '13.1',
   },
   {
     id: 2540,
@@ -40705,7 +38398,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2542,
@@ -40720,7 +38412,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2543,
@@ -40735,7 +38426,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2544,
@@ -40750,7 +38440,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2545,
@@ -40765,11 +38454,9 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
     ],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2546,
@@ -40798,7 +38485,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2548,
@@ -40813,7 +38499,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2549,
@@ -40828,7 +38513,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2550,
@@ -40843,7 +38527,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2551,
@@ -40858,11 +38541,9 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
     ],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2552,
@@ -40891,7 +38572,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2554,
@@ -40906,7 +38586,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2555,
@@ -40921,7 +38600,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2556,
@@ -40936,7 +38614,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2557,
@@ -40951,11 +38628,9 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
     ],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2558,
@@ -40984,7 +38659,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2560,
@@ -40999,7 +38673,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2561,
@@ -41014,7 +38687,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2562,
@@ -41029,7 +38701,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2563,
@@ -41044,11 +38715,9 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
     ],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2564,
@@ -41077,7 +38746,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2566,
@@ -41092,7 +38760,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2567,
@@ -41107,7 +38774,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2568,
@@ -41122,7 +38788,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2569,
@@ -41137,11 +38802,9 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
     ],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2570,
@@ -41170,7 +38833,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '12.1',
       },
       {
         id: 2572,
@@ -41185,7 +38847,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '12.1',
       },
       {
         id: 2573,
@@ -41200,7 +38861,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '12.1',
       },
       {
         id: 2574,
@@ -41215,7 +38875,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '12.1',
       },
       {
         id: 2575,
@@ -41230,11 +38889,9 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '12.1',
       },
     ],
     keywords: [],
-    version: '12.1',
   },
   {
     id: 2576,
@@ -41263,7 +38920,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2578,
@@ -41278,7 +38934,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2579,
@@ -41293,7 +38948,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2580,
@@ -41308,7 +38962,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2581,
@@ -41323,11 +38976,9 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
     ],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2582,
@@ -41356,7 +39007,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '12.1',
       },
       {
         id: 2584,
@@ -41371,7 +39021,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '12.1',
       },
       {
         id: 2585,
@@ -41386,7 +39035,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '12.1',
       },
       {
         id: 2586,
@@ -41401,7 +39049,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '12.1',
       },
       {
         id: 2587,
@@ -41416,11 +39063,9 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '12.1',
       },
     ],
     keywords: [],
-    version: '12.1',
   },
   {
     id: 2588,
@@ -41449,7 +39094,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2590,
@@ -41464,7 +39108,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2591,
@@ -41479,7 +39122,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2592,
@@ -41494,7 +39136,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2593,
@@ -41509,11 +39150,9 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
     ],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2594,
@@ -41542,7 +39181,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '12.1',
       },
       {
         id: 2596,
@@ -41557,7 +39195,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '12.1',
       },
       {
         id: 2597,
@@ -41572,7 +39209,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '12.1',
       },
       {
         id: 2598,
@@ -41587,7 +39223,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '12.1',
       },
       {
         id: 2599,
@@ -41602,11 +39237,9 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '12.1',
       },
     ],
     keywords: [],
-    version: '12.1',
   },
   {
     id: 2600,
@@ -41635,7 +39268,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2602,
@@ -41650,7 +39282,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2603,
@@ -41665,7 +39296,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2604,
@@ -41680,7 +39310,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
       {
         id: 2605,
@@ -41695,11 +39324,9 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '11.0',
       },
     ],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2606,
@@ -41728,7 +39355,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '12.1',
       },
       {
         id: 2608,
@@ -41743,7 +39369,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '12.1',
       },
       {
         id: 2609,
@@ -41758,7 +39383,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '12.1',
       },
       {
         id: 2610,
@@ -41773,7 +39397,6 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '12.1',
       },
       {
         id: 2611,
@@ -41788,11 +39411,9 @@ export const emojisArray = [
           id: 23,
           name: 'person',
         },
-        version: '12.1',
       },
     ],
     keywords: [],
-    version: '12.1',
   },
   {
     id: 2612,
@@ -41821,7 +39442,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2614,
@@ -41836,7 +39456,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2615,
@@ -41851,7 +39470,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2616,
@@ -41866,7 +39484,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2617,
@@ -41881,11 +39498,9 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
     ],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2618,
@@ -41914,7 +39529,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2620,
@@ -41929,7 +39543,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2621,
@@ -41944,7 +39557,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2622,
@@ -41959,7 +39571,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2623,
@@ -41974,11 +39585,9 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
     ],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2624,
@@ -42007,7 +39616,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2626,
@@ -42022,7 +39630,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2627,
@@ -42037,7 +39644,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2628,
@@ -42052,7 +39658,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2629,
@@ -42067,11 +39672,9 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
     ],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2630,
@@ -42100,7 +39703,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2632,
@@ -42115,7 +39717,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2633,
@@ -42130,7 +39731,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2634,
@@ -42145,7 +39745,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2635,
@@ -42160,11 +39759,9 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
     ],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2636,
@@ -42193,7 +39790,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2638,
@@ -42208,7 +39804,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2639,
@@ -42223,7 +39818,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2640,
@@ -42238,7 +39832,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2641,
@@ -42253,11 +39846,9 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
     ],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2642,
@@ -42286,7 +39877,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2644,
@@ -42301,7 +39891,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2645,
@@ -42316,7 +39905,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2646,
@@ -42331,7 +39919,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2647,
@@ -42346,11 +39933,9 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
     ],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2648,
@@ -42379,7 +39964,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '12.0',
       },
       {
         id: 2650,
@@ -42394,7 +39978,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '12.0',
       },
       {
         id: 2651,
@@ -42409,7 +39992,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '12.0',
       },
       {
         id: 2652,
@@ -42424,7 +40006,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '12.0',
       },
       {
         id: 2653,
@@ -42439,11 +40020,9 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '12.0',
       },
     ],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 2654,
@@ -42472,7 +40051,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '12.0',
       },
       {
         id: 2656,
@@ -42487,7 +40065,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '12.0',
       },
       {
         id: 2657,
@@ -42502,7 +40079,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '12.0',
       },
       {
         id: 2658,
@@ -42517,7 +40093,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '12.0',
       },
       {
         id: 2659,
@@ -42532,11 +40107,9 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '12.0',
       },
     ],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 2660,
@@ -42565,7 +40138,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '12.0',
       },
       {
         id: 2662,
@@ -42580,7 +40152,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '12.0',
       },
       {
         id: 2663,
@@ -42595,7 +40166,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '12.0',
       },
       {
         id: 2664,
@@ -42610,7 +40180,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '12.0',
       },
       {
         id: 2665,
@@ -42625,11 +40194,9 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '12.0',
       },
     ],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 2666,
@@ -42658,7 +40225,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2668,
@@ -42673,7 +40239,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2669,
@@ -42688,7 +40253,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2670,
@@ -42703,7 +40267,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
       {
         id: 2671,
@@ -42718,11 +40281,9 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '1.0',
       },
     ],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2672,
@@ -42751,7 +40312,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '3.0',
       },
       {
         id: 2674,
@@ -42766,7 +40326,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '3.0',
       },
       {
         id: 2675,
@@ -42781,7 +40340,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '3.0',
       },
       {
         id: 2676,
@@ -42796,7 +40354,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '3.0',
       },
       {
         id: 2677,
@@ -42811,11 +40368,9 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '3.0',
       },
     ],
     keywords: [],
-    version: '3.0',
   },
   {
     id: 2678,
@@ -42844,7 +40399,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '3.0',
       },
       {
         id: 2680,
@@ -42859,7 +40413,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '3.0',
       },
       {
         id: 2681,
@@ -42874,7 +40427,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '3.0',
       },
       {
         id: 2682,
@@ -42889,7 +40441,6 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '3.0',
       },
       {
         id: 2683,
@@ -42904,11 +40455,9 @@ export const emojisArray = [
           id: 24,
           name: 'person-gesture',
         },
-        version: '3.0',
       },
     ],
     keywords: [],
-    version: '3.0',
   },
   {
     id: 2684,
@@ -42937,7 +40486,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2686,
@@ -42952,7 +40500,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2687,
@@ -42967,7 +40514,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2688,
@@ -42982,7 +40528,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2689,
@@ -42997,11 +40542,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
     ],
     keywords: [],
-    version: '12.1',
   },
   {
     id: 2690,
@@ -43030,7 +40573,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2692,
@@ -43045,7 +40587,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2693,
@@ -43060,7 +40601,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2694,
@@ -43075,7 +40615,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2695,
@@ -43090,11 +40629,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
     ],
     keywords: [],
-    version: '12.1',
   },
   {
     id: 2696,
@@ -43123,7 +40660,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2698,
@@ -43138,7 +40674,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2699,
@@ -43153,7 +40688,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2700,
@@ -43168,7 +40702,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2701,
@@ -43183,11 +40716,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
     ],
     keywords: [],
-    version: '12.1',
   },
   {
     id: 2702,
@@ -43216,7 +40747,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2704,
@@ -43231,7 +40761,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2705,
@@ -43246,7 +40775,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2706,
@@ -43261,7 +40789,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2707,
@@ -43276,11 +40803,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
     ],
     keywords: [],
-    version: '12.1',
   },
   {
     id: 2708,
@@ -43297,7 +40822,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '4.0',
   },
   {
     id: 2714,
@@ -43314,7 +40838,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '4.0',
   },
   {
     id: 2720,
@@ -43343,7 +40866,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2722,
@@ -43358,7 +40880,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2723,
@@ -43373,7 +40894,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2724,
@@ -43388,7 +40908,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2725,
@@ -43403,11 +40922,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
     ],
     keywords: [],
-    version: '12.1',
   },
   {
     id: 2726,
@@ -43436,7 +40953,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2728,
@@ -43451,7 +40967,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2729,
@@ -43466,7 +40981,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2730,
@@ -43481,7 +40995,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2731,
@@ -43496,11 +41009,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
     ],
     keywords: [],
-    version: '12.1',
   },
   {
     id: 2732,
@@ -43529,7 +41040,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2734,
@@ -43544,7 +41054,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2735,
@@ -43559,7 +41068,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2736,
@@ -43574,7 +41082,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2737,
@@ -43589,11 +41096,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
     ],
     keywords: [],
-    version: '12.1',
   },
   {
     id: 2738,
@@ -43622,7 +41127,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2740,
@@ -43637,7 +41141,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2741,
@@ -43652,7 +41155,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2742,
@@ -43667,7 +41169,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2743,
@@ -43682,11 +41183,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
     ],
     keywords: [],
-    version: '12.1',
   },
   {
     id: 2744,
@@ -43715,7 +41214,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2746,
@@ -43730,7 +41228,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2747,
@@ -43745,7 +41242,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2748,
@@ -43760,7 +41256,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2749,
@@ -43775,11 +41270,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
     ],
     keywords: [],
-    version: '12.1',
   },
   {
     id: 2750,
@@ -43808,7 +41301,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2752,
@@ -43823,7 +41315,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2753,
@@ -43838,7 +41329,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2754,
@@ -43853,7 +41343,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2755,
@@ -43868,11 +41357,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
     ],
     keywords: [],
-    version: '12.1',
   },
   {
     id: 2756,
@@ -43901,7 +41388,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2758,
@@ -43916,7 +41402,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2759,
@@ -43931,7 +41416,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2760,
@@ -43946,7 +41430,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2761,
@@ -43961,11 +41444,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
     ],
     keywords: [],
-    version: '12.1',
   },
   {
     id: 2762,
@@ -43994,7 +41475,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2764,
@@ -44009,7 +41489,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2765,
@@ -44024,7 +41503,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2766,
@@ -44039,7 +41517,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2767,
@@ -44054,11 +41531,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
     ],
     keywords: [],
-    version: '12.1',
   },
   {
     id: 2768,
@@ -44087,7 +41562,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2770,
@@ -44102,7 +41576,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2771,
@@ -44117,7 +41590,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2772,
@@ -44132,7 +41604,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2773,
@@ -44147,11 +41618,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
     ],
     keywords: [],
-    version: '12.1',
   },
   {
     id: 2774,
@@ -44180,7 +41649,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2776,
@@ -44195,7 +41663,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2777,
@@ -44210,7 +41677,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2778,
@@ -44225,7 +41691,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2779,
@@ -44240,11 +41705,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
     ],
     keywords: [],
-    version: '12.1',
   },
   {
     id: 2780,
@@ -44273,7 +41736,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2782,
@@ -44288,7 +41750,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2783,
@@ -44303,7 +41764,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2784,
@@ -44318,7 +41778,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2785,
@@ -44333,11 +41792,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
     ],
     keywords: [],
-    version: '12.1',
   },
   {
     id: 2786,
@@ -44366,7 +41823,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2788,
@@ -44381,7 +41837,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2789,
@@ -44396,7 +41851,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2790,
@@ -44411,7 +41865,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
       {
         id: 2791,
@@ -44426,11 +41879,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '12.1',
       },
     ],
     keywords: [],
-    version: '12.1',
   },
   {
     id: 2792,
@@ -44459,7 +41910,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 2794,
@@ -44474,7 +41924,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 2795,
@@ -44489,7 +41938,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 2796,
@@ -44504,7 +41952,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 2797,
@@ -44519,11 +41966,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
     ],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2798,
@@ -44552,7 +41997,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '2.0',
       },
       {
         id: 2800,
@@ -44567,7 +42011,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '2.0',
       },
       {
         id: 2801,
@@ -44582,7 +42025,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '2.0',
       },
       {
         id: 2802,
@@ -44597,7 +42039,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '2.0',
       },
       {
         id: 2803,
@@ -44612,11 +42053,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '2.0',
       },
     ],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 2804,
@@ -44645,7 +42084,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 2806,
@@ -44660,7 +42098,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 2807,
@@ -44675,7 +42112,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 2808,
@@ -44690,7 +42126,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 2809,
@@ -44705,11 +42140,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
     ],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2816,
@@ -44738,7 +42171,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 2818,
@@ -44753,7 +42185,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 2819,
@@ -44768,7 +42199,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 2820,
@@ -44783,7 +42213,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 2821,
@@ -44798,11 +42227,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
     ],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2828,
@@ -44831,7 +42258,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 2830,
@@ -44846,7 +42272,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 2831,
@@ -44861,7 +42286,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 2832,
@@ -44876,7 +42300,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
       {
         id: 2833,
@@ -44891,11 +42314,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '1.0',
       },
     ],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2834,
@@ -44924,7 +42345,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2836,
@@ -44939,7 +42359,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2837,
@@ -44954,7 +42373,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2838,
@@ -44969,7 +42387,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2839,
@@ -44984,11 +42401,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
     ],
     keywords: [],
-    version: '13.0',
   },
   {
     id: 2840,
@@ -45017,7 +42432,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2842,
@@ -45032,7 +42446,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2843,
@@ -45047,7 +42460,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2844,
@@ -45062,7 +42474,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2845,
@@ -45077,11 +42488,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
     ],
     keywords: [],
-    version: '13.0',
   },
   {
     id: 2846,
@@ -45110,7 +42519,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2848,
@@ -45125,7 +42533,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2849,
@@ -45140,7 +42547,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2850,
@@ -45155,7 +42561,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2851,
@@ -45170,11 +42575,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
     ],
     keywords: [],
-    version: '13.0',
   },
   {
     id: 2852,
@@ -45203,7 +42606,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2854,
@@ -45218,7 +42620,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2855,
@@ -45233,7 +42634,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2856,
@@ -45248,7 +42648,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2857,
@@ -45263,11 +42662,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
     ],
     keywords: [],
-    version: '13.0',
   },
   {
     id: 2870,
@@ -45296,7 +42693,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2872,
@@ -45311,7 +42707,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2873,
@@ -45326,7 +42721,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2874,
@@ -45341,7 +42735,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2875,
@@ -45356,11 +42749,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
     ],
     keywords: [],
-    version: '13.0',
   },
   {
     id: 2876,
@@ -45389,7 +42780,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2878,
@@ -45404,7 +42794,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2879,
@@ -45419,7 +42808,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2880,
@@ -45434,7 +42822,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2881,
@@ -45449,11 +42836,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
     ],
     keywords: [],
-    version: '13.0',
   },
   {
     id: 2882,
@@ -45482,7 +42867,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2884,
@@ -45497,7 +42881,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2885,
@@ -45512,7 +42895,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2886,
@@ -45527,7 +42909,6 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
       {
         id: 2887,
@@ -45542,11 +42923,9 @@ export const emojisArray = [
           id: 25,
           name: 'person-role',
         },
-        version: '13.0',
       },
     ],
     keywords: [],
-    version: '13.0',
   },
   {
     id: 2888,
@@ -45575,7 +42954,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '13.0',
       },
       {
         id: 2890,
@@ -45590,7 +42968,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '13.0',
       },
       {
         id: 2891,
@@ -45605,7 +42982,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '13.0',
       },
       {
         id: 2892,
@@ -45620,7 +42996,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '13.0',
       },
       {
         id: 2893,
@@ -45635,11 +43010,9 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '13.0',
       },
     ],
     keywords: [],
-    version: '13.0',
   },
   {
     id: 2894,
@@ -45668,7 +43041,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
       {
         id: 2896,
@@ -45683,7 +43055,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
       {
         id: 2897,
@@ -45698,7 +43069,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
       {
         id: 2898,
@@ -45713,7 +43083,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
       {
         id: 2899,
@@ -45728,11 +43097,9 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
     ],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2900,
@@ -45761,7 +43128,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
       {
         id: 2902,
@@ -45776,7 +43142,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
       {
         id: 2903,
@@ -45791,7 +43156,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
       {
         id: 2904,
@@ -45806,7 +43170,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
       {
         id: 2905,
@@ -45821,11 +43184,9 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
     ],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2906,
@@ -45854,7 +43215,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
       {
         id: 2908,
@@ -45869,7 +43229,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
       {
         id: 2909,
@@ -45884,7 +43243,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
       {
         id: 2910,
@@ -45899,7 +43257,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
       {
         id: 2911,
@@ -45914,11 +43271,9 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
     ],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2912,
@@ -45947,7 +43302,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
       {
         id: 2914,
@@ -45962,7 +43316,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
       {
         id: 2915,
@@ -45977,7 +43330,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
       {
         id: 2916,
@@ -45992,7 +43344,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
       {
         id: 2917,
@@ -46007,11 +43358,9 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
     ],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2918,
@@ -46040,7 +43389,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
       {
         id: 2920,
@@ -46055,7 +43403,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
       {
         id: 2921,
@@ -46070,7 +43417,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
       {
         id: 2922,
@@ -46085,7 +43431,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
       {
         id: 2923,
@@ -46100,11 +43445,9 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
     ],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2924,
@@ -46133,7 +43476,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
       {
         id: 2926,
@@ -46148,7 +43490,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
       {
         id: 2927,
@@ -46163,7 +43504,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
       {
         id: 2928,
@@ -46178,7 +43518,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
       {
         id: 2929,
@@ -46193,11 +43532,9 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '11.0',
       },
     ],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 2930,
@@ -46226,7 +43563,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 2932,
@@ -46241,7 +43577,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 2933,
@@ -46256,7 +43591,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 2934,
@@ -46271,7 +43605,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 2935,
@@ -46286,11 +43619,9 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
     ],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 2936,
@@ -46319,7 +43650,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 2938,
@@ -46334,7 +43664,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 2939,
@@ -46349,7 +43678,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 2940,
@@ -46364,7 +43692,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 2941,
@@ -46379,11 +43706,9 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
     ],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 2942,
@@ -46412,7 +43737,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 2944,
@@ -46427,7 +43751,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 2945,
@@ -46442,7 +43765,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 2946,
@@ -46457,7 +43779,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 2947,
@@ -46472,11 +43793,9 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
     ],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 2948,
@@ -46505,7 +43824,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 2950,
@@ -46520,7 +43838,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 2951,
@@ -46535,7 +43852,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 2952,
@@ -46550,7 +43866,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 2953,
@@ -46565,11 +43880,9 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
     ],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 2954,
@@ -46598,7 +43911,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 2956,
@@ -46613,7 +43925,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 2957,
@@ -46628,7 +43939,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 2958,
@@ -46643,7 +43953,6 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
       {
         id: 2959,
@@ -46658,11 +43967,9 @@ export const emojisArray = [
           id: 26,
           name: 'person-fantasy',
         },
-        version: '5.0',
       },
     ],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 2960,
@@ -46679,7 +43986,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 2961,
@@ -46696,7 +44002,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 2962,
@@ -46713,7 +44018,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 2963,
@@ -46730,7 +44034,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '14.0',
   },
   {
     id: 2964,
@@ -46759,7 +44062,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
       {
         id: 2966,
@@ -46774,7 +44076,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
       {
         id: 2967,
@@ -46789,7 +44090,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
       {
         id: 2968,
@@ -46804,7 +44104,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
       {
         id: 2969,
@@ -46819,11 +44118,9 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
     ],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2970,
@@ -46852,7 +44149,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
       {
         id: 2972,
@@ -46867,7 +44163,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
       {
         id: 2973,
@@ -46882,7 +44177,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
       {
         id: 2974,
@@ -46897,7 +44191,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
       {
         id: 2975,
@@ -46912,11 +44205,9 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
     ],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2976,
@@ -46945,7 +44236,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
       {
         id: 2978,
@@ -46960,7 +44250,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
       {
         id: 2979,
@@ -46975,7 +44264,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
       {
         id: 2980,
@@ -46990,7 +44278,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
       {
         id: 2981,
@@ -47005,11 +44292,9 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
     ],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 2982,
@@ -47038,7 +44323,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 2984,
@@ -47053,7 +44337,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 2985,
@@ -47068,7 +44351,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 2986,
@@ -47083,7 +44365,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 2987,
@@ -47098,11 +44379,9 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
     ],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 2988,
@@ -47131,7 +44410,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 2990,
@@ -47146,7 +44424,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 2991,
@@ -47161,7 +44438,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 2992,
@@ -47176,7 +44452,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 2993,
@@ -47191,11 +44466,9 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
     ],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 2994,
@@ -47224,7 +44497,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 2996,
@@ -47239,7 +44511,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 2997,
@@ -47254,7 +44525,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 2998,
@@ -47269,7 +44539,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 2999,
@@ -47284,11 +44553,9 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
     ],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3000,
@@ -47317,7 +44584,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3002,
@@ -47332,7 +44598,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3003,
@@ -47347,7 +44612,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3004,
@@ -47362,7 +44626,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3005,
@@ -47377,11 +44640,9 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
     ],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3006,
@@ -47410,7 +44671,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3008,
@@ -47425,7 +44685,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3009,
@@ -47440,7 +44699,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3010,
@@ -47455,7 +44713,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3011,
@@ -47470,11 +44727,9 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
     ],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3012,
@@ -47503,7 +44758,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3014,
@@ -47518,7 +44772,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3015,
@@ -47533,7 +44786,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3016,
@@ -47548,7 +44800,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3017,
@@ -47563,11 +44814,9 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
     ],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3018,
@@ -47596,7 +44845,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.1',
       },
       {
         id: 3020,
@@ -47611,7 +44859,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.1',
       },
       {
         id: 3021,
@@ -47626,7 +44873,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.1',
       },
       {
         id: 3022,
@@ -47641,7 +44887,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.1',
       },
       {
         id: 3023,
@@ -47656,11 +44901,9 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.1',
       },
     ],
     keywords: [],
-    version: '12.1',
   },
   {
     id: 3024,
@@ -47689,7 +44932,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3026,
@@ -47704,7 +44946,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3027,
@@ -47719,7 +44960,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3028,
@@ -47734,7 +44974,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3029,
@@ -47749,11 +44988,9 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
     ],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3030,
@@ -47782,7 +45019,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3032,
@@ -47797,7 +45033,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3033,
@@ -47812,7 +45047,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3034,
@@ -47827,7 +45061,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3035,
@@ -47842,11 +45075,9 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
     ],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3036,
@@ -47875,7 +45106,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.1',
       },
       {
         id: 3038,
@@ -47890,7 +45120,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.1',
       },
       {
         id: 3039,
@@ -47905,7 +45134,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.1',
       },
       {
         id: 3040,
@@ -47920,7 +45148,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.1',
       },
       {
         id: 3041,
@@ -47935,11 +45162,9 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.1',
       },
     ],
     keywords: [],
-    version: '12.1',
   },
   {
     id: 3042,
@@ -47968,7 +45193,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3044,
@@ -47983,7 +45207,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3045,
@@ -47998,7 +45221,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3046,
@@ -48013,7 +45235,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3047,
@@ -48028,11 +45249,9 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
     ],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3048,
@@ -48061,7 +45280,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3050,
@@ -48076,7 +45294,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3051,
@@ -48091,7 +45308,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3052,
@@ -48106,7 +45322,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3053,
@@ -48121,11 +45336,9 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
     ],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3054,
@@ -48154,7 +45367,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.1',
       },
       {
         id: 3056,
@@ -48169,7 +45381,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.1',
       },
       {
         id: 3057,
@@ -48184,7 +45395,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.1',
       },
       {
         id: 3058,
@@ -48199,7 +45409,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.1',
       },
       {
         id: 3059,
@@ -48214,11 +45423,9 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.1',
       },
     ],
     keywords: [],
-    version: '12.1',
   },
   {
     id: 3060,
@@ -48247,7 +45454,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3062,
@@ -48262,7 +45468,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3063,
@@ -48277,7 +45482,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3064,
@@ -48292,7 +45496,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3065,
@@ -48307,11 +45510,9 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
     ],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3066,
@@ -48340,7 +45541,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3068,
@@ -48355,7 +45555,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3069,
@@ -48370,7 +45569,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3070,
@@ -48385,7 +45583,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
       {
         id: 3071,
@@ -48400,11 +45597,9 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '12.0',
       },
     ],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3072,
@@ -48433,7 +45628,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
       {
         id: 3074,
@@ -48448,7 +45642,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
       {
         id: 3075,
@@ -48463,7 +45656,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
       {
         id: 3076,
@@ -48478,7 +45670,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
       {
         id: 3077,
@@ -48493,11 +45684,9 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '1.0',
       },
     ],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 3078,
@@ -48514,7 +45703,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 3079,
@@ -48543,7 +45731,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
       {
         id: 3081,
@@ -48558,7 +45745,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
       {
         id: 3082,
@@ -48573,7 +45759,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
       {
         id: 3083,
@@ -48588,7 +45773,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
       {
         id: 3084,
@@ -48603,11 +45787,9 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
     ],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 3085,
@@ -48636,7 +45818,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
       {
         id: 3087,
@@ -48651,7 +45832,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
       {
         id: 3088,
@@ -48666,7 +45846,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
       {
         id: 3089,
@@ -48681,7 +45860,6 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
       {
         id: 3090,
@@ -48696,11 +45874,9 @@ export const emojisArray = [
           id: 27,
           name: 'person-activity',
         },
-        version: '5.0',
       },
     ],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 3091,
@@ -48729,7 +45905,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 3093,
@@ -48744,7 +45919,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 3094,
@@ -48759,7 +45933,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 3095,
@@ -48774,7 +45947,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
       {
         id: 3096,
@@ -48789,11 +45961,9 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '4.0',
       },
     ],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 3097,
@@ -48822,7 +45992,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 3099,
@@ -48837,7 +46006,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 3100,
@@ -48852,7 +46020,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 3101,
@@ -48867,7 +46034,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 3102,
@@ -48882,11 +46048,9 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
     ],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 3103,
@@ -48915,7 +46079,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 3105,
@@ -48930,7 +46093,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 3106,
@@ -48945,7 +46107,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 3107,
@@ -48960,7 +46121,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 3108,
@@ -48975,11 +46135,9 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
     ],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 3109,
@@ -49008,7 +46166,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 3111,
@@ -49023,7 +46180,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 3112,
@@ -49038,7 +46194,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 3113,
@@ -49053,7 +46208,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 3114,
@@ -49068,11 +46222,9 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
     ],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 3115,
@@ -49101,7 +46253,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '2.0',
       },
       {
         id: 3117,
@@ -49116,7 +46267,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '2.0',
       },
       {
         id: 3118,
@@ -49131,7 +46281,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '2.0',
       },
       {
         id: 3119,
@@ -49146,7 +46295,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '2.0',
       },
       {
         id: 3120,
@@ -49161,11 +46309,9 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '2.0',
       },
     ],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 3121,
@@ -49194,7 +46340,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '2.0',
       },
       {
         id: 3123,
@@ -49209,7 +46354,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '2.0',
       },
       {
         id: 3124,
@@ -49224,7 +46368,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '2.0',
       },
       {
         id: 3125,
@@ -49239,7 +46382,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '2.0',
       },
       {
         id: 3126,
@@ -49254,11 +46396,9 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '2.0',
       },
     ],
     keywords: [],
-    version: '0.7',
   },
   {
     id: 3127,
@@ -49287,7 +46427,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 3129,
@@ -49302,7 +46441,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 3130,
@@ -49317,7 +46455,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 3131,
@@ -49332,7 +46469,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 3132,
@@ -49347,11 +46483,9 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
     ],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 3133,
@@ -49380,7 +46514,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 3135,
@@ -49395,7 +46528,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 3136,
@@ -49410,7 +46542,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 3137,
@@ -49425,7 +46556,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
       {
         id: 3138,
@@ -49440,11 +46570,9 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '1.0',
       },
     ],
     keywords: [],
-    version: '1.0',
   },
   {
     id: 3139,
@@ -49473,7 +46601,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '3.0',
       },
       {
         id: 3141,
@@ -49488,7 +46615,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '3.0',
       },
       {
         id: 3142,
@@ -49503,7 +46629,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '3.0',
       },
       {
         id: 3143,
@@ -49518,7 +46643,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '3.0',
       },
       {
         id: 3144,
@@ -49533,11 +46657,9 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '3.0',
       },
     ],
     keywords: [],
-    version: '3.0',
   },
   {
     id: 3145,
@@ -49554,7 +46676,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '3.0',
   },
   {
     id: 3146,
@@ -49583,7 +46704,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '3.0',
       },
       {
         id: 3148,
@@ -49598,7 +46718,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '3.0',
       },
       {
         id: 3149,
@@ -49613,7 +46732,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '3.0',
       },
       {
         id: 3150,
@@ -49628,7 +46746,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '3.0',
       },
       {
         id: 3151,
@@ -49643,11 +46760,9 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '3.0',
       },
     ],
     keywords: [],
-    version: '3.0',
   },
   {
     id: 3152,
@@ -49676,7 +46791,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '3.0',
       },
       {
         id: 3154,
@@ -49691,7 +46805,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '3.0',
       },
       {
         id: 3155,
@@ -49706,7 +46819,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '3.0',
       },
       {
         id: 3156,
@@ -49721,7 +46833,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '3.0',
       },
       {
         id: 3157,
@@ -49736,11 +46847,9 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '3.0',
       },
     ],
     keywords: [],
-    version: '3.0',
   },
   {
     id: 3158,
@@ -49769,7 +46878,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '3.0',
       },
       {
         id: 3160,
@@ -49784,7 +46892,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '3.0',
       },
       {
         id: 3161,
@@ -49799,7 +46906,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '3.0',
       },
       {
         id: 3162,
@@ -49814,7 +46920,6 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '3.0',
       },
       {
         id: 3163,
@@ -49829,11 +46934,9 @@ export const emojisArray = [
           id: 28,
           name: 'person-sport',
         },
-        version: '3.0',
       },
     ],
     keywords: [],
-    version: '3.0',
   },
   {
     id: 3164,
@@ -49862,7 +46965,6 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '5.0',
       },
       {
         id: 3166,
@@ -49877,7 +46979,6 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '5.0',
       },
       {
         id: 3167,
@@ -49892,7 +46993,6 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '5.0',
       },
       {
         id: 3168,
@@ -49907,7 +47007,6 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '5.0',
       },
       {
         id: 3169,
@@ -49922,11 +47021,9 @@ export const emojisArray = [
           id: 29,
           name: 'person-resting',
         },
-        version: '5.0',
       },
     ],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 3170,
@@ -49955,7 +47052,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3172,
@@ -49970,7 +47066,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3173,
@@ -49985,7 +47080,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3174,
@@ -50000,7 +47094,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3175,
@@ -50015,7 +47108,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3176,
@@ -50030,7 +47122,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3177,
@@ -50045,7 +47136,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3178,
@@ -50060,7 +47150,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3179,
@@ -50075,7 +47164,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3180,
@@ -50090,7 +47178,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3181,
@@ -50105,7 +47192,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3182,
@@ -50120,7 +47206,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3183,
@@ -50135,7 +47220,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3184,
@@ -50150,7 +47234,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3185,
@@ -50165,7 +47248,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3186,
@@ -50180,7 +47262,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3187,
@@ -50195,7 +47276,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3188,
@@ -50210,7 +47290,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3189,
@@ -50225,7 +47304,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3190,
@@ -50240,7 +47318,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.1',
       },
       {
         id: 3191,
@@ -50255,7 +47332,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3192,
@@ -50270,7 +47346,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3193,
@@ -50285,7 +47360,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3194,
@@ -50300,7 +47374,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
       {
         id: 3195,
@@ -50315,11 +47388,9 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '12.0',
       },
     ],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3271,
@@ -50348,7 +47419,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3273,
@@ -50363,7 +47433,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3274,
@@ -50378,7 +47447,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3275,
@@ -50393,7 +47461,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3276,
@@ -50408,7 +47475,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3277,
@@ -50423,7 +47489,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3278,
@@ -50438,7 +47503,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3279,
@@ -50453,7 +47517,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3280,
@@ -50468,7 +47531,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3281,
@@ -50483,7 +47545,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3282,
@@ -50498,7 +47559,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3283,
@@ -50513,7 +47573,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3284,
@@ -50528,7 +47587,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3285,
@@ -50543,7 +47601,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3286,
@@ -50558,7 +47615,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3287,
@@ -50573,7 +47629,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3288,
@@ -50588,7 +47643,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3289,
@@ -50603,7 +47657,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3290,
@@ -50618,7 +47671,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3291,
@@ -50633,7 +47685,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3292,
@@ -50648,7 +47699,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3293,
@@ -50663,7 +47713,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3294,
@@ -50678,7 +47727,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3295,
@@ -50693,7 +47741,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3296,
@@ -50708,7 +47755,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3297,
@@ -50723,7 +47769,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3298,
@@ -50738,7 +47783,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3299,
@@ -50753,7 +47797,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3300,
@@ -50768,7 +47811,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3301,
@@ -50783,7 +47825,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3302,
@@ -50798,7 +47839,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3303,
@@ -50813,7 +47853,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3304,
@@ -50828,7 +47867,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3305,
@@ -50843,7 +47881,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3306,
@@ -50858,7 +47895,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3307,
@@ -50873,7 +47909,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3308,
@@ -50888,7 +47923,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3309,
@@ -50903,7 +47937,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3310,
@@ -50918,7 +47951,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3311,
@@ -50933,7 +47965,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3312,
@@ -50948,7 +47979,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3313,
@@ -50963,7 +47993,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3314,
@@ -50978,7 +48007,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3315,
@@ -50993,7 +48021,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3316,
@@ -51008,7 +48035,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3317,
@@ -51023,7 +48049,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3318,
@@ -51038,7 +48063,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3319,
@@ -51053,7 +48077,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3320,
@@ -51068,7 +48091,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3321,
@@ -51083,7 +48105,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3322,
@@ -51098,7 +48119,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3323,
@@ -51113,7 +48133,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3324,
@@ -51128,7 +48147,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3325,
@@ -51143,7 +48161,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3326,
@@ -51158,7 +48175,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3327,
@@ -51173,7 +48189,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3328,
@@ -51188,7 +48203,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3329,
@@ -51203,7 +48217,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3330,
@@ -51218,7 +48231,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3331,
@@ -51233,7 +48245,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3332,
@@ -51248,7 +48259,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3333,
@@ -51263,7 +48273,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3334,
@@ -51278,7 +48287,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3335,
@@ -51293,7 +48301,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3336,
@@ -51308,7 +48315,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3337,
@@ -51323,7 +48329,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3338,
@@ -51338,7 +48343,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3339,
@@ -51353,7 +48357,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3340,
@@ -51368,7 +48371,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3341,
@@ -51383,7 +48385,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3342,
@@ -51398,7 +48399,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3343,
@@ -51413,7 +48413,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3344,
@@ -51428,7 +48427,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3345,
@@ -51443,7 +48441,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3346,
@@ -51458,7 +48455,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3347,
@@ -51473,7 +48469,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3348,
@@ -51488,7 +48483,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3349,
@@ -51503,7 +48497,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3350,
@@ -51518,7 +48511,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3351,
@@ -51533,7 +48525,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3352,
@@ -51548,7 +48539,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3353,
@@ -51563,7 +48553,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3354,
@@ -51578,7 +48567,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3355,
@@ -51593,7 +48581,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3356,
@@ -51608,7 +48595,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3357,
@@ -51623,7 +48609,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3358,
@@ -51638,7 +48623,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3359,
@@ -51653,7 +48637,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3360,
@@ -51668,7 +48651,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3361,
@@ -51683,7 +48665,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3362,
@@ -51698,7 +48679,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3363,
@@ -51713,7 +48693,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3364,
@@ -51728,7 +48707,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3365,
@@ -51743,7 +48721,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3366,
@@ -51758,7 +48735,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3367,
@@ -51773,7 +48749,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3368,
@@ -51788,7 +48763,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3369,
@@ -51803,7 +48777,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3370,
@@ -51818,7 +48791,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3371,
@@ -51833,11 +48805,9 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
     ],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 3372,
@@ -51866,7 +48836,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3374,
@@ -51881,7 +48850,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3375,
@@ -51896,7 +48864,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3376,
@@ -51911,7 +48878,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3377,
@@ -51926,7 +48892,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3378,
@@ -51941,7 +48906,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3379,
@@ -51956,7 +48920,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3380,
@@ -51971,7 +48934,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3381,
@@ -51986,7 +48948,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3382,
@@ -52001,7 +48962,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3383,
@@ -52016,7 +48976,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3384,
@@ -52031,7 +48990,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3385,
@@ -52046,7 +49004,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3386,
@@ -52061,7 +49018,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3387,
@@ -52076,7 +49032,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3388,
@@ -52091,7 +49046,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3389,
@@ -52106,7 +49060,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3390,
@@ -52121,7 +49074,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3391,
@@ -52136,7 +49088,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3392,
@@ -52151,7 +49102,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3393,
@@ -52166,7 +49116,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3394,
@@ -52181,7 +49130,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3395,
@@ -52196,7 +49144,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3396,
@@ -52211,7 +49158,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3397,
@@ -52226,7 +49172,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3398,
@@ -52241,7 +49186,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3399,
@@ -52256,7 +49200,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3400,
@@ -52271,7 +49214,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3401,
@@ -52286,7 +49228,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3402,
@@ -52301,7 +49242,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3403,
@@ -52316,7 +49256,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3404,
@@ -52331,7 +49270,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3405,
@@ -52346,7 +49284,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3406,
@@ -52361,7 +49298,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3407,
@@ -52376,7 +49312,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3408,
@@ -52391,7 +49326,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3409,
@@ -52406,7 +49340,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3410,
@@ -52421,7 +49354,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3411,
@@ -52436,7 +49368,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3412,
@@ -52451,7 +49382,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3413,
@@ -52466,7 +49396,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3414,
@@ -52481,7 +49410,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3415,
@@ -52496,7 +49424,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3416,
@@ -52511,7 +49438,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3417,
@@ -52526,7 +49452,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3418,
@@ -52541,7 +49466,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3419,
@@ -52556,7 +49480,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3420,
@@ -52571,7 +49494,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3421,
@@ -52586,7 +49508,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3422,
@@ -52601,7 +49522,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3423,
@@ -52616,7 +49536,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3424,
@@ -52631,7 +49550,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3425,
@@ -52646,7 +49564,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3426,
@@ -52661,7 +49578,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3427,
@@ -52676,7 +49592,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3428,
@@ -52691,7 +49606,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3429,
@@ -52706,7 +49620,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3430,
@@ -52721,7 +49634,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3431,
@@ -52736,7 +49648,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3432,
@@ -52751,7 +49662,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3433,
@@ -52766,7 +49676,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3434,
@@ -52781,7 +49690,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3435,
@@ -52796,7 +49704,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3436,
@@ -52811,7 +49718,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3437,
@@ -52826,7 +49732,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3438,
@@ -52841,7 +49746,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3439,
@@ -52856,7 +49760,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3440,
@@ -52871,7 +49774,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3441,
@@ -52886,7 +49788,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3442,
@@ -52901,7 +49802,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3443,
@@ -52916,7 +49816,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3444,
@@ -52931,7 +49830,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3445,
@@ -52946,7 +49844,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3446,
@@ -52961,7 +49858,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3447,
@@ -52976,7 +49872,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3448,
@@ -52991,7 +49886,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3449,
@@ -53006,7 +49900,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3450,
@@ -53021,7 +49914,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3451,
@@ -53036,7 +49928,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3452,
@@ -53051,7 +49942,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3453,
@@ -53066,7 +49956,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3454,
@@ -53081,7 +49970,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3455,
@@ -53096,7 +49984,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3456,
@@ -53111,7 +49998,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3457,
@@ -53126,7 +50012,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3458,
@@ -53141,7 +50026,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3459,
@@ -53156,7 +50040,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3460,
@@ -53171,7 +50054,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3461,
@@ -53186,7 +50068,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3462,
@@ -53201,7 +50082,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3463,
@@ -53216,7 +50096,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3464,
@@ -53231,7 +50110,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3465,
@@ -53246,7 +50124,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3466,
@@ -53261,7 +50138,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3467,
@@ -53276,7 +50152,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3468,
@@ -53291,7 +50166,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3469,
@@ -53306,7 +50180,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3470,
@@ -53321,7 +50194,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3471,
@@ -53336,7 +50208,6 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
       {
         id: 3472,
@@ -53351,11 +50222,9 @@ export const emojisArray = [
           id: 30,
           name: 'family',
         },
-        version: '13.1',
       },
     ],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 3473,
@@ -53372,7 +50241,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 3475,
@@ -53389,7 +50257,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3476,
@@ -53406,7 +50273,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3477,
@@ -53423,7 +50289,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3478,
@@ -53440,7 +50305,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3479,
@@ -53457,7 +50321,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3480,
@@ -53474,7 +50337,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3481,
@@ -53491,7 +50353,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3482,
@@ -53508,7 +50369,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3483,
@@ -53525,7 +50385,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '13.0',
   },
   {
     id: 3485,
@@ -53542,7 +50401,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3487,
@@ -53559,7 +50417,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3489,
@@ -53576,7 +50433,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '13.0',
   },
   {
     id: 3490,
@@ -53593,7 +50449,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3491,
@@ -53610,7 +50465,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3492,
@@ -53627,7 +50481,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3493,
@@ -53644,7 +50497,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3494,
@@ -53661,7 +50513,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3495,
@@ -53678,7 +50529,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3498,
@@ -53695,7 +50545,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3499,
@@ -53712,7 +50561,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3500,
@@ -53729,7 +50577,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3505,
@@ -53746,7 +50593,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3508,
@@ -53763,7 +50609,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3513,
@@ -53780,7 +50625,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3517,
@@ -53797,7 +50641,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3518,
@@ -53814,7 +50657,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3519,
@@ -53831,7 +50673,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3522,
@@ -53848,7 +50689,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3523,
@@ -53865,7 +50705,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3525,
@@ -53882,7 +50721,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3527,
@@ -53899,7 +50737,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3528,
@@ -53916,7 +50753,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3529,
@@ -53933,7 +50769,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3530,
@@ -53950,7 +50785,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3531,
@@ -53967,7 +50801,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3532,
@@ -53984,7 +50817,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3533,
@@ -54001,7 +50833,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '0.6',
   },
   {
     id: 3537,
@@ -54018,7 +50849,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3538,
@@ -54035,7 +50865,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3539,
@@ -54052,7 +50881,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3541,
@@ -54069,7 +50897,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3542,
@@ -54086,7 +50913,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3546,
@@ -54103,7 +50929,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3549,
@@ -54120,7 +50945,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3550,
@@ -54137,7 +50961,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3551,
@@ -54154,7 +50977,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3555,
@@ -54171,7 +50993,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3556,
@@ -54188,7 +51009,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3557,
@@ -54205,7 +51025,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3558,
@@ -54222,7 +51041,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3559,
@@ -54239,7 +51057,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3560,
@@ -54256,7 +51073,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3561,
@@ -54273,7 +51089,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3562,
@@ -54290,7 +51105,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3563,
@@ -54307,7 +51121,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3564,
@@ -54324,7 +51137,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3566,
@@ -54341,7 +51153,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3568,
@@ -54358,7 +51169,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3569,
@@ -54375,7 +51185,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3573,
@@ -54392,7 +51201,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3575,
@@ -54409,7 +51217,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3577,
@@ -54426,7 +51233,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3578,
@@ -54443,7 +51249,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3579,
@@ -54460,7 +51265,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3580,
@@ -54477,7 +51281,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3581,
@@ -54494,7 +51297,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3582,
@@ -54511,7 +51313,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3583,
@@ -54528,7 +51329,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3585,
@@ -54545,7 +51345,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3586,
@@ -54562,7 +51361,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3587,
@@ -54579,7 +51377,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3590,
@@ -54596,7 +51393,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3593,
@@ -54613,7 +51409,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3594,
@@ -54630,7 +51425,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3596,
@@ -54647,7 +51441,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3597,
@@ -54664,7 +51457,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3601,
@@ -54681,7 +51473,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3603,
@@ -54698,7 +51489,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3604,
@@ -54715,7 +51505,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3606,
@@ -54732,7 +51521,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3607,
@@ -54749,7 +51537,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3608,
@@ -54766,7 +51553,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3609,
@@ -54783,7 +51569,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3610,
@@ -54800,7 +51585,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3612,
@@ -54817,7 +51601,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3617,
@@ -54834,7 +51617,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3620,
@@ -54851,7 +51633,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3621,
@@ -54868,7 +51649,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3622,
@@ -54885,7 +51665,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3623,
@@ -54902,7 +51681,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3624,
@@ -54919,7 +51697,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3625,
@@ -54936,7 +51713,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3627,
@@ -54953,7 +51729,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3630,
@@ -54970,7 +51745,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3631,
@@ -54987,7 +51761,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '11.0',
   },
   {
     id: 3635,
@@ -55004,7 +51777,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '13.0',
   },
   {
     id: 3637,
@@ -55021,7 +51793,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3638,
@@ -55038,7 +51809,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3639,
@@ -55055,7 +51825,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3640,
@@ -55072,7 +51841,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3641,
@@ -55089,7 +51857,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3642,
@@ -55106,7 +51873,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3643,
@@ -55123,7 +51889,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3644,
@@ -55140,7 +51905,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3645,
@@ -55157,7 +51921,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3646,
@@ -55174,7 +51937,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3647,
@@ -55191,7 +51953,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3648,
@@ -55208,7 +51969,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '12.0',
   },
   {
     id: 3649,
@@ -55225,7 +51985,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '13.0',
   },
   {
     id: 3650,
@@ -55242,7 +52001,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 3651,
@@ -55259,7 +52017,6 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '5.0',
   },
   {
     id: 3652,
@@ -55276,6 +52033,5 @@ export const emojisArray = [
     },
     children: [],
     keywords: [],
-    version: '5.0',
   },
 ];
