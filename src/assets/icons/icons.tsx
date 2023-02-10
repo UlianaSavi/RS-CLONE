@@ -1,3 +1,14 @@
+import datatIcon from './data.png';
+import devices from './devices.png';
+import phoneIcon from './phone-user.png';
+import folders from './folders.png';
+import gearWheel from './gearWheel.png';
+import info from './info.png';
+import laungage from './laungage.png';
+import lock from './lock.png';
+import nameUser from './name-user.png';
+import notice from './notice.png';
+
 export function SearchIcon() {
   return (
     <svg
@@ -126,5 +137,117 @@ export function CreateNewChatIcon() {
         d="M 18 2 L 15.585938 4.4140625 L 19.585938 8.4140625 L 22 6 L 18 2 z M 14.076172 5.9238281 L 3 17 L 3 21 L 7 21 L 18.076172 9.9238281 L 14.076172 5.9238281 z"
       />
     </svg>
+  );
+}
+
+export function ArrowLeftIcon() {
+  return (
+    <span>&#129120;</span>
+  );
+}
+
+export function LogOutIcon() {
+  return (
+    <svg
+      version="1.0"
+      xmlns="http://www.w3.org/2000/svg"
+      width="48.000000pt"
+      height="48.000000pt"
+      viewBox="0 0 48.000000 48.000000"
+      preserveAspectRatio="xMidYMid meet"
+      className="logOut-icon icon"
+    >
+      <g transform="translate(0.000000,48.000000) scale(0.100000,-0.100000)" fill="grey" stroke="none">
+        <path d="M80 400 c-18 -18 -20 -33 -20 -160 0 -182 -1 -180 143 -180 105 0
+147 13 147 45 0 23 -20 28 -39 11 -15 -14 -37 -16 -112 -14 l-94 3 0 135 0
+135 94 3 c75 2 97 0 112 -14 19 -17 39 -12 39 11 0 32 -42 45 -147 45 -90 0
+-106 -3 -123 -20z"
+        />
+        <path d="M325 309 c-4 -5 1 -19 10 -29 17 -19 15 -19 -81 -22 -80 -2 -99 -6
+-99 -18 0 -12 19 -16 99 -18 97 -3 98 -3 80 -23 -13 -15 -15 -22 -6 -31 10
+-10 22 -3 54 30 l42 42 -39 40 c-41 42 -50 46 -60 29z"
+        />
+      </g>
+    </svg>
+  );
+}
+
+export function PhoneIcon() {
+  return (
+    <div>
+      <img className="icon" src={phoneIcon} alt="" />
+    </div>
+  );
+}
+
+export function DatatIcon() {
+  return (
+    <div>
+      <img className="icon" src={datatIcon} alt="" />
+    </div>
+  );
+}
+
+export function DevicesIcon() {
+  return (
+    <div>
+      <img className="icon" src={devices} alt="" />
+    </div>
+  );
+}
+
+export function FoldersIcon() {
+  return (
+    <div>
+      <img className="icon" src={folders} alt="" />
+    </div>
+  );
+}
+
+export function GearWheelIcon() {
+  return (
+    <div>
+      <img className="icon" src={gearWheel} alt="" />
+    </div>
+  );
+}
+
+export function InfolIcon() {
+  return (
+    <div>
+      <img className="icon" src={info} alt="" />
+    </div>
+  );
+}
+
+export function LaungageIcon() {
+  return (
+    <div>
+      <img className="icon" src={laungage} alt="" />
+    </div>
+  );
+}
+
+export function LockIcon() {
+  return (
+    <div>
+      <img className="icon" src={lock} alt="" />
+    </div>
+  );
+}
+
+export function NameUserIcon() {
+  return (
+    <div>
+      <img className="icon" src={nameUser} alt="" />
+    </div>
+  );
+}
+
+export function NoticeIcon() {
+  return (
+    <div>
+      <img className="icon" src={notice} alt="" />
+    </div>
   );
 }
