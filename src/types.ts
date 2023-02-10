@@ -9,8 +9,8 @@ export interface UserData {
 
 export interface User {
   uid: string,
-  name: string,
-  avatarURL: string,
+  displayName: string,
+  photoURL: string,
   email: string,
   isOnline: boolean
 }

@@ -23,8 +23,7 @@ const router = createBrowserRouter([
 
 function App() {
   const currentUser: User = useContext(AuthContext) as User;
-  const { uid } = currentUser;
-  console.log(uid);
+  console.log(currentUser);
 
   return (
     <section className="container">

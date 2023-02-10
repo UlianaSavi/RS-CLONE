@@ -16,10 +16,14 @@ export const singUp = async (
 
     await setDoc(doc(db, 'users', user.uid), {
       uid: user.uid,
-      name,
+      displayName: name,
       email,
-      avatarURL: '',
+      photoURL: '',
       isOnline: true,
+    });
+
+    await updateProfile(user, {
+      displayName: name,
     });
 
     if (avatar) {
@@ -39,7 +43,7 @@ export const singUp = async (
               photoURL: downloadURL,
             });
             await updateDoc(doc(db, 'users', user.uid), {
-              avatarURL: downloadURL,
+              photoURL: downloadURL,
             });
           });
         },
