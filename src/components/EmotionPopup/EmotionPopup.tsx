@@ -7,7 +7,7 @@ interface EmotionPopupProps {
 }
 
 function EmotionPopup({ isVisible, handleMouseLeave }: EmotionPopupProps) {
-  const emojiArrPopup = emojisArray.map((item) => <li className={`emotion-popup__emoji ${item.id}`}>{String.fromCodePoint(parseInt(item.unicode, 16))}</li>);
+  const emojiArrPopup = emojisArray.map((item, id) => <li className={`emotion-popup__emoji ${id}`}>{String.fromCodePoint(parseInt(item, 16))}</li>);
 
   return (
     <div className={`emotion-popup ${isVisible ? 'active' : ''}`} onMouseLeave={handleMouseLeave}>
