@@ -21,16 +21,16 @@ function ChatsList({ activeChatId, setActiveChatId }: ChatsListProps) {
   // Chats list
   const currentUser: User = useContext(AuthContext) as User;
 
-  const chatsData: any = [];
-
   const [chatsArr, setChatsArr] = useState([]);
 
   const getUsers = async () => {
     const q = query(collection(db, 'users'), where('uid', '!=', currentUser.uid));
     const querySnapshot = await getDocs(q);
+    const chatsData: any = [];
     querySnapshot.forEach((doc) => {
       chatsData.push(doc.data());
     });
+    console.log(chatsData);
     setChatsArr(chatsData
       .map((chat: User) => (
         <ChatPreview
@@ -41,7 +41,6 @@ function ChatsList({ activeChatId, setActiveChatId }: ChatsListProps) {
         />
       )));
   };
-
   getUsers();
 
   // Context menu

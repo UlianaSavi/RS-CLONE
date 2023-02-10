@@ -19,7 +19,7 @@ function AddAvatarButton({ setValue }: AddAvatarButtonProps) {
         id="avatar"
         onChange={handleChange}
       />
-      <label className="add-avatar form__button" htmlFor="avatar">
+      <label className="form__button add-avatar" htmlFor="avatar">
         <span className="add-avatar__label">Add an avatar</span>
       </label>
     </>
