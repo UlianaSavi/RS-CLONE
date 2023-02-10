@@ -2,7 +2,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Form from './pages/Form/Form';
 import Messenger from './pages/Messenger/Messenger';
 import AuthRoute from './auth/Auth';
-import SettingsPage from './pages/SettingsPage/SettingsPage';
 
 const router = createBrowserRouter([
   {
@@ -16,10 +15,6 @@ const router = createBrowserRouter([
   {
     path: '/register',
     element: <AuthRoute><Form mode="register-email" /></AuthRoute>,
-  },
-  {
-    path: '/settings',
-    element: <AuthRoute><SettingsPage /></AuthRoute>,
   },
 ]);
 
