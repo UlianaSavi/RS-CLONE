@@ -1,5 +1,5 @@
 import SettingsList from './SettingsList/SettingsList';
-import SettingsTopPanel from './SettingsTopPanel/SettingsHeader';
+import SettingsTopPanel from './SettingsHeader/SettingsHeader';
 import UserInfo from './UserInfo/UserInfo';
 import './SettingsSidebar.scss';
 
