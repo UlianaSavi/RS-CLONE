@@ -5,19 +5,19 @@ interface ProviderProps {
 }
 
 interface ActiveChatContextProps {
-  activeChat: string;
-  setActiveChat: React.Dispatch<React.SetStateAction<string>>;
+  activeChatID: string;
+  setActiveChatID: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export const ActiveChatContext = createContext<ActiveChatContextProps>({
-  activeChat: '',
-  setActiveChat: () => '',
+  activeChatID: '',
+  setActiveChatID: () => '',
 });
 
 export function ActiveChatContextProvider({ children }: ProviderProps) {
-  const [activeChat, setActiveChat] = useState('');
+  const [activeChatID, setActiveChatID] = useState('');
 
-  const value = useMemo(() => ({ activeChat, setActiveChat }), [activeChat, setActiveChat]);
+  const value = useMemo(() => ({ activeChatID, setActiveChatID }), [activeChatID, setActiveChatID]);
 
   return (
     <ActiveChatContext.Provider value={value}>

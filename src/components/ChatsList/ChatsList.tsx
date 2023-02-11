@@ -13,16 +13,8 @@ import ContextMenu from '../ContextMenu/ContextMenu';
 import type { User } from '../../types';
 import './ChastList.scss';
 
-interface ChatsListProps {
-  activeChatId: string,
-  setActiveChatId: React.Dispatch<React.SetStateAction<string>>
-}
-
-function ChatsList({ activeChatId, setActiveChatId }: ChatsListProps) {
-  setActiveChatId(activeChatId);
-  // Chats list
-
-  const { activeChat, setActiveChat } = useContext(ActiveChatContext);
+function ChatsList() {
+  const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
 
   const currentUser: User = useContext(AuthContext) as User;
   const [chatsArr, setChatsArr] = useState([]);
@@ -40,8 +32,8 @@ function ChatsList({ activeChatId, setActiveChatId }: ChatsListProps) {
           <ChatPreview
             key={chat.uid}
             data={chat}
-            isActive={chat.uid === activeChat}
-            setActiveChatId={setActiveChat}
+            isActive={chat.uid === activeChatID}
+            setActiveChatId={setActiveChatID}
           />
         )));
     }
@@ -53,7 +45,7 @@ function ChatsList({ activeChatId, setActiveChatId }: ChatsListProps) {
 
   useEffect(() => {
     getUsers();
-  }, [activeChat]);
+  }, [activeChatID]);
 
   // Context menu
   const [showMenu, setShowMenu] = useState(false);

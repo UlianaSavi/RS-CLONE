@@ -1,22 +1,17 @@
-import { usersData, groupsData } from '../../fakeData';
+import { useContext } from 'react';
+import { ActiveChatContext } from '../../context/ActiveChatContext';
 import Avatar from '../Avatar/Avatar';
 import './ChatInfo.scss';
-import type { UserData } from '../../types';
 
-interface ChatInfoProps {
-  activeChatId: string,
-}
+function ChatInfo() {
+  const { activeChatID } = useContext(ActiveChatContext);
+  console.log('chatID', activeChatID);
 
-function ChatInfo({ activeChatId }: ChatInfoProps) {
-  const data = [...groupsData, ...usersData];
-
-  const activeChat = data.find((item) => item.id === +activeChatId) as UserData;
-  console.log(activeChat);
   return (
     <div className="chat-info">
-      <Avatar image="f" />
+      <Avatar image="" />
       <div className="chat-info__info">
-        <div className="chat-info__title">sdf</div>
+        <div className="chat-info__title">User</div>
         <div className="chat-info__status">Online</div>
       </div>
     </div>
