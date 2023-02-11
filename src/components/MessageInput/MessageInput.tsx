@@ -7,6 +7,7 @@ import {
 } from 'firebase/firestore';
 import { db } from '../../firebaseConfig';
 import { AuthContext } from '../../context/AuthContext';
+import { UserContext } from '../../context/UserContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
 
 import AttachPopup from '../AttachPopup/AttachPopup';
@@ -51,25 +52,38 @@ function MessageInput() {
 
   // Chat activation
   const currentUser: User = useContext(AuthContext) as User;
-  const { activeChatID } = useContext(ActiveChatContext);
+  const { userID } = useContext(UserContext);
+  const { setActiveChatID } = useContext(ActiveChatContext);
 
   const activateChat = async () => {
-    const chatID = currentUser.uid > activeChatID ? `${currentUser.uid}${activeChatID}` : `${activeChatID}${currentUser.uid}`;
-
-    const res = await getDoc(doc(db, 'chats', chatID));
+    const combinedID = currentUser.uid > userID ? `${currentUser.uid}${userID}` : `${userID}${currentUser.uid}`;
+    const res = await getDoc(doc(db, 'chats', combinedID));
+    setActiveChatID(combinedID);
 
     if (!res.exists()) {
-      await setDoc(doc(db, 'chats', chatID), { messages: [] });
-      const user = await getDoc(doc(db, 'users', activeChatID));
+      await setDoc(doc(db, 'chats', combinedID), { messages: [] });
+      const user = await getDoc(doc(db, 'users', userID));
       const userData = user.data();
+      console.log(userData);
 
       await updateDoc(doc(db, 'userChats', currentUser.uid), {
-        [`${chatID}.userInfo`]: {
-          uid: activeChatID,
+        [`${combinedID}.userInfo`]: {
+          uid: userID,
           displayName: userData?.displayName,
           photoURL: userData?.photoURL,
+          isOnline: true,
         },
-        [`${chatID}.createdAt`]: serverTimestamp(),
+        [`${combinedID}.createdAt`]: serverTimestamp(),
+      });
+
+      await updateDoc(doc(db, 'userChats', userID), {
+        [`${combinedID}.userInfo`]: {
+          uid: currentUser.uid,
+          displayName: currentUser.displayName,
+          photoURL: currentUser.photoURL,
+          isOnline: true,
+        },
+        [`${combinedID}.createdAt`]: serverTimestamp(),
       });
     }
   };

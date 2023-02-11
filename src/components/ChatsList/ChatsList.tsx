@@ -5,6 +5,7 @@ import {
 } from 'firebase/firestore';
 import { db } from '../../firebaseConfig';
 import { AuthContext } from '../../context/AuthContext';
+import { UserContext } from '../../context/UserContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
 
 import ChatPreview from '../ChatPreview/ChatPreview';
@@ -19,17 +20,19 @@ interface ChatsListProps {
 
 function ChatsList({ activeFolder }: ChatsListProps) {
   const currentUser: User = useContext(AuthContext) as User;
+  const { userID, setUserID } = useContext(UserContext);
   const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
+
   const [chatsArr, setChatsArr] = useState([]);
 
-  const updateChatsList = (chatsData: any) => {
+  const updateChatsList = (chatsData: any, isChats: boolean) => {
     setChatsArr(chatsData
       .map((chat: User) => (
         <ChatPreview
           key={chat.uid}
           data={chat}
-          isActive={chat.uid === activeChatID}
-          setActiveChatId={setActiveChatID}
+          isActive={chat.uid === (isChats ? activeChatID : userID)}
+          setActiveChatId={isChats ? setActiveChatID : setUserID}
         />
       )));
   };
@@ -43,6 +46,7 @@ function ChatsList({ activeFolder }: ChatsListProps) {
         querySnapshot.forEach((d) => {
           chatsData.push(d.data());
         });
+        updateChatsList(chatsData, false);
       } else {
         onSnapshot(doc(db, 'userChats', currentUser.uid), (d) => {
           const data = d.data();
@@ -51,16 +55,17 @@ function ChatsList({ activeFolder }: ChatsListProps) {
           dataArray.forEach((item) => {
             chatsData.push(item.userInfo);
           });
-          updateChatsList(chatsData);
+          updateChatsList(chatsData, true);
         });
       }
-      updateChatsList(chatsData);
+      console.log('user', userID);
+      console.log('chat', activeChatID);
     }
   };
 
   useEffect(() => {
     getUserChats();
-  }, [currentUser.uid, activeChatID, activeFolder]);
+  }, [currentUser.uid, userID, activeChatID, activeFolder]);
 
   // Context menu
   const [showMenu, setShowMenu] = useState(false);
