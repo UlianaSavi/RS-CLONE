@@ -2,7 +2,9 @@ import React, {
   useState, useContext, useRef, useEffect,
 } from 'react';
 import styled from 'styled-components';
-import { doc, getDoc, setDoc } from 'firebase/firestore';
+import {
+  doc, getDoc, serverTimestamp, setDoc, updateDoc,
+} from 'firebase/firestore';
 import { db } from '../../firebaseConfig';
 import { AuthContext } from '../../context/AuthContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
@@ -63,7 +65,15 @@ function MessageInput() {
       console.log('No such document!');
       // create chat in chats collection
       await setDoc(doc(db, 'chats', chatID), { messages: [] });
-      // create user chats
+      // create user chat
+      await updateDoc(doc(db, 'userChats', currentUser.uid), {
+        [`${chatID}.userInfo`]: {
+          uid: activeChatID,
+          displayName: '',
+          photoURL: '',
+        },
+        [`${chatID}.createdAt`]: serverTimestamp(),
+      });
     }
   };
 

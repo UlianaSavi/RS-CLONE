@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import { useState, useEffect, useContext } from 'react';
 import {
-  collection, query, where, getDocs,
+  collection, query, where, getDocs, onSnapshot, doc,
 } from 'firebase/firestore';
 import { db } from '../../firebaseConfig';
 import { AuthContext } from '../../context/AuthContext';
@@ -18,42 +18,52 @@ interface ChatsListProps {
 }
 
 function ChatsList({ activeFolder }: ChatsListProps) {
-  const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
-
   const currentUser: User = useContext(AuthContext) as User;
+  const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
   const [chatsArr, setChatsArr] = useState([]);
-  const getUsers = async () => {
+
+  const updateChatsList = (chatsData: any) => {
+    setChatsArr(chatsData
+      .map((chat: User) => (
+        <ChatPreview
+          key={chat.uid}
+          data={chat}
+          isActive={chat.uid === activeChatID}
+          setActiveChatId={setActiveChatID}
+        />
+      )));
+  };
+
+  const getUserChats = async () => {
     if (currentUser.uid) {
-      const q = query(collection(db, `${activeFolder ? 'userChats' : 'users'}`), where('uid', '!=', currentUser.uid));
-      const querySnapshot = await getDocs(q);
       const chatsData: any = [];
-      querySnapshot.forEach((doc) => {
-        chatsData.push(doc.data());
-      });
-      console.log(chatsData);
-      setChatsArr(chatsData
-        .map((chat: User) => (
-          <ChatPreview
-            key={chat.uid}
-            data={chat}
-            isActive={chat.uid === activeChatID}
-            setActiveChatId={setActiveChatID}
-          />
-        )));
+      if (!activeFolder) {
+        const q = query(collection(db, 'users'), where('uid', '!=', currentUser.uid));
+        const querySnapshot = await getDocs(q);
+        querySnapshot.forEach((d) => {
+          chatsData.push(d.data());
+        });
+      } else {
+        onSnapshot(doc(db, 'userChats', currentUser.uid), (d) => {
+          const data = d.data();
+          if (!data) return;
+          const dataArray = Object.values(data);
+          dataArray.forEach((item) => {
+            console.log(item.userInfo);
+            chatsData.push(item.userInfo);
+          });
+          updateChatsList(chatsData);
+        });
+      }
+
+      console.log('data', chatsData);
+      updateChatsList(chatsData);
     }
   };
 
   useEffect(() => {
-    getUsers();
-  }, [currentUser.uid]);
-
-  useEffect(() => {
-    getUsers();
-  }, [activeChatID]);
-
-  useEffect(() => {
-    getUsers();
-  }, [activeFolder]);
+    getUserChats();
+  }, [currentUser.uid, activeChatID, activeFolder]);
 
   // Context menu
   const [showMenu, setShowMenu] = useState(false);
