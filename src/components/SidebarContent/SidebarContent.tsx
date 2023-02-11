@@ -14,7 +14,7 @@ function SidebarContent() {
         activeFolder={activeFolder}
         setActiveFolder={setActiveFolder}
       />
-      <ChatsList />
+      <ChatsList activeFolder={activeFolder} />
     </div>
   );
 }

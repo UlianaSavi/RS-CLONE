@@ -39,17 +39,12 @@ export const usersData = [
 export const foldersData = [
   {
     title: 'All',
-    unreadConversations: 3,
+    unreadConversations: 0,
     content: [...groupsData, ...usersData],
   },
   {
     title: 'Contacts',
-    unreadConversations: 2,
+    unreadConversations: 0,
     content: usersData,
-  },
-  {
-    title: 'Groups',
-    unreadConversations: 1,
-    content: groupsData,
   },
 ];

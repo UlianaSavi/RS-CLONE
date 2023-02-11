@@ -22,6 +22,8 @@ export const singUp = async (
       isOnline: true,
     });
 
+    await setDoc(doc(db, 'userChats', user.uid), {});
+
     await updateProfile(user, {
       displayName: name,
     });
@@ -38,7 +40,6 @@ export const singUp = async (
         },
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
-            console.log(downloadURL);
             await updateProfile(user, {
               photoURL: downloadURL,
             });

@@ -1,7 +1,16 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, {
+  useState, useContext, useRef, useEffect,
+} from 'react';
 import styled from 'styled-components';
+import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { db } from '../../firebaseConfig';
+import { AuthContext } from '../../context/AuthContext';
+import { ActiveChatContext } from '../../context/ActiveChatContext';
+
 import AttachPopup from '../AttachPopup/AttachPopup';
 import EmotionPopup from '../EmotionPopup/EmotionPopup';
+import type { User } from '../../types';
+
 import {
   EmojiIcon, AttachIcon, SendMessageIcon, AudioMessageIcon,
 } from '../../assets/icons/icons';
@@ -38,6 +47,26 @@ function MessageInput() {
     }
   };
 
+  // Chat activation
+  const currentUser: User = useContext(AuthContext) as User;
+  const { activeChatID } = useContext(ActiveChatContext);
+
+  const activateChat = async () => {
+    const chatID = currentUser.uid > activeChatID ? `${currentUser.uid}${activeChatID}` : `${activeChatID}${currentUser.uid}`;
+    console.log(chatID);
+
+    const res = await getDoc(doc(db, 'chats', chatID));
+
+    if (res.exists()) {
+      console.log('Document data:', res.data());
+    } else {
+      console.log('No such document!');
+      // create chat in chats collection
+      await setDoc(doc(db, 'chats', chatID), { messages: [] });
+      // create user chats
+    }
+  };
+
   return (
     <div className="message-input">
       <div className="message-input__container">
@@ -45,13 +74,24 @@ function MessageInput() {
           <EmojiIcon />
         </button>
         <EmotionPopup isVisible={isVisibleEmotion} handleMouseLeave={toggleEmotionPopup} />
-        <TextArea placeholder="Message" className="message-input__text-area" ref={textAreaRef} value={messageValue} onChange={handleChange} rows={1} />
+        <TextArea
+          placeholder="Message"
+          className="message-input__text-area"
+          ref={textAreaRef}
+          value={messageValue}
+          onChange={handleChange}
+          rows={1}
+        />
         <button className="message-input__attach-btn" type="button" onClick={toggleAttachPopup}>
           <AttachIcon />
         </button>
         <AttachPopup isVisible={isVisibleAttach} handleMouseLeave={toggleAttachPopup} />
       </div>
-      <button className="message-input__send-btn" type="button">
+      <button
+        className="message-input__send-btn"
+        type="button"
+        onClick={activateChat}
+      >
         {
           isAudio ? <SendMessageIcon /> : <AudioMessageIcon />
         }

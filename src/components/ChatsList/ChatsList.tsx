@@ -13,14 +13,18 @@ import ContextMenu from '../ContextMenu/ContextMenu';
 import type { User } from '../../types';
 import './ChastList.scss';
 
-function ChatsList() {
+interface ChatsListProps {
+  activeFolder: number,
+}
+
+function ChatsList({ activeFolder }: ChatsListProps) {
   const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
 
   const currentUser: User = useContext(AuthContext) as User;
   const [chatsArr, setChatsArr] = useState([]);
   const getUsers = async () => {
     if (currentUser.uid) {
-      const q = query(collection(db, 'users'), where('uid', '!=', currentUser.uid));
+      const q = query(collection(db, `${activeFolder ? 'userChats' : 'users'}`), where('uid', '!=', currentUser.uid));
       const querySnapshot = await getDocs(q);
       const chatsData: any = [];
       querySnapshot.forEach((doc) => {
@@ -46,6 +50,10 @@ function ChatsList() {
   useEffect(() => {
     getUsers();
   }, [activeChatID]);
+
+  useEffect(() => {
+    getUsers();
+  }, [activeFolder]);
 
   // Context menu
   const [showMenu, setShowMenu] = useState(false);
