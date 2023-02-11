@@ -51,7 +51,7 @@ export const singUp = async (
       );
     }
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 

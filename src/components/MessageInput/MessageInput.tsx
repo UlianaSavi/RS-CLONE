@@ -61,13 +61,13 @@ function MessageInput() {
     if (!res.exists()) {
       await setDoc(doc(db, 'chats', chatID), { messages: [] });
       const user = await getDoc(doc(db, 'users', activeChatID));
-      const usersData = user.data();
+      const userData = user.data();
 
       await updateDoc(doc(db, 'userChats', currentUser.uid), {
         [`${chatID}.userInfo`]: {
           uid: activeChatID,
-          displayName: usersData?.displayName,
-          photoURL: usersData?.photoURL,
+          displayName: userData?.displayName,
+          photoURL: userData?.photoURL,
         },
         [`${chatID}.createdAt`]: serverTimestamp(),
       });

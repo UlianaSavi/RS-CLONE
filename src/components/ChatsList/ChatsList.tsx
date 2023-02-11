@@ -49,14 +49,11 @@ function ChatsList({ activeFolder }: ChatsListProps) {
           if (!data) return;
           const dataArray = Object.values(data);
           dataArray.forEach((item) => {
-            console.log(item.userInfo);
             chatsData.push(item.userInfo);
           });
           updateChatsList(chatsData);
         });
       }
-
-      console.log('data', chatsData);
       updateChatsList(chatsData);
     }
   };
