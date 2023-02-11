@@ -39,3 +39,16 @@
 .phone-popup {
   scale: (1.3);
 }
+
+.image-popup {
+  transform: scale(.65);
+}
+
+.document-popup {
+  transform: scale(.5);
+}
+
+.image-popup,
+.document-popup {
+  fill: $text-color-white;
+}
