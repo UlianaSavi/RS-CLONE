@@ -55,22 +55,19 @@ function MessageInput() {
 
   const activateChat = async () => {
     const chatID = currentUser.uid > activeChatID ? `${currentUser.uid}${activeChatID}` : `${activeChatID}${currentUser.uid}`;
-    console.log(chatID);
 
     const res = await getDoc(doc(db, 'chats', chatID));
 
-    if (res.exists()) {
-      console.log('Document data:', res.data());
-    } else {
-      console.log('No such document!');
-      // create chat in chats collection
+    if (!res.exists()) {
       await setDoc(doc(db, 'chats', chatID), { messages: [] });
-      // create user chat
+      const user = await getDoc(doc(db, 'users', activeChatID));
+      const usersData = user.data();
+
       await updateDoc(doc(db, 'userChats', currentUser.uid), {
         [`${chatID}.userInfo`]: {
           uid: activeChatID,
-          displayName: '',
-          photoURL: '',
+          displayName: usersData?.displayName,
+          photoURL: usersData?.photoURL,
         },
         [`${chatID}.createdAt`]: serverTimestamp(),
       });

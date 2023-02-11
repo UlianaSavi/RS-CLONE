@@ -50,9 +50,7 @@ function Form({ mode }: FormProps) {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    console.log(avatar.file);
     if (mode === 'register-email') {
-      console.log(avatar.file);
       singUp(name, email, password, avatar.file);
     }
     if (mode === 'login-email') {
