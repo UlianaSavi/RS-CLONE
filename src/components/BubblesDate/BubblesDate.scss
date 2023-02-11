@@ -3,11 +3,14 @@
 .bubbles-date {
   z-index: 2;
 
+  font-size: 15px;
+  line-height: 20px;
+
   display: block;
   align-self: center;
   padding: 0.28125rem 0.625rem;
   margin-top: 0.5rem;
 
-  background-color: rgba($accent-color, 0.5);
+  background-color: $date-in-chat-bg;
   border-radius: 0.875rem;
 }
