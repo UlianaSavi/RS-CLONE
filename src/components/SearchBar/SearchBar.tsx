@@ -13,7 +13,7 @@ function SearchBar() {
         onFocus={addSelected}
         onBlur={removeSelected}
         type="text"
-        placeholder="Search..."
+        placeholder="Search"
       />
     </div>
   );
