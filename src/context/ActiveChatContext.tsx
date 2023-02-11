@@ -1,20 +1,21 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
 import { createContext, useState, useMemo } from 'react';
 
-interface Props {
+interface ProviderProps {
   children: React.ReactNode;
 }
 
-export const ActiveChatContext = createContext<{
+interface ActiveChatContextProps {
   activeChat: string;
   setActiveChat: React.Dispatch<React.SetStateAction<string>>;
-}>({
+}
+
+export const ActiveChatContext = createContext<ActiveChatContextProps>({
   activeChat: '',
-  setActiveChat: () => {},
+  setActiveChat: () => '',
 });
 
-export function ActiveChatContextProvider({ children }: Props) {
-  const [activeChat, setActiveChat] = useState<string>('');
+export function ActiveChatContextProvider({ children }: ProviderProps) {
+  const [activeChat, setActiveChat] = useState('');
 
   const value = useMemo(() => ({ activeChat, setActiveChat }), [activeChat, setActiveChat]);
 
