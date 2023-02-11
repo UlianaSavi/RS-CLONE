@@ -58,8 +58,6 @@ function ChatsList({ activeFolder }: ChatsListProps) {
           updateChatsList(chatsData, true);
         });
       }
-      console.log('user', userID);
-      console.log('chat', activeChatID);
     }
   };
 

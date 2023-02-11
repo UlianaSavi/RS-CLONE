@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 import styled from 'styled-components';
 import {
-  doc, getDoc, serverTimestamp, setDoc, updateDoc,
+  doc, getDoc, serverTimestamp, setDoc, updateDoc, arrayUnion, Timestamp,
 } from 'firebase/firestore';
 import { db } from '../../firebaseConfig';
 import { AuthContext } from '../../context/AuthContext';
@@ -55,8 +55,8 @@ function MessageInput() {
   const { userID } = useContext(UserContext);
   const { setActiveChatID } = useContext(ActiveChatContext);
 
+  const combinedID = currentUser.uid > userID ? `${currentUser.uid}${userID}` : `${userID}${currentUser.uid}`;
   const activateChat = async () => {
-    const combinedID = currentUser.uid > userID ? `${currentUser.uid}${userID}` : `${userID}${currentUser.uid}`;
     const res = await getDoc(doc(db, 'chats', combinedID));
     setActiveChatID(combinedID);
 
@@ -64,7 +64,6 @@ function MessageInput() {
       await setDoc(doc(db, 'chats', combinedID), { messages: [] });
       const user = await getDoc(doc(db, 'users', userID));
       const userData = user.data();
-      console.log(userData);
 
       await updateDoc(doc(db, 'userChats', currentUser.uid), {
         [`${combinedID}.userInfo`]: {
@@ -86,6 +85,22 @@ function MessageInput() {
         [`${combinedID}.createdAt`]: serverTimestamp(),
       });
     }
+  };
+
+  const sendMessage = async () => {
+    await updateDoc(doc(db, 'chats', combinedID), {
+      messages: arrayUnion({
+        id: Math.random(),
+        text: 'какой-то текст',
+        senderID: currentUser.uid,
+        date: Timestamp.now(),
+      }),
+    });
+  };
+
+  const click = async () => {
+    await activateChat();
+    await sendMessage();
   };
 
   return (
@@ -111,7 +126,7 @@ function MessageInput() {
       <button
         className="message-input__send-btn"
         type="button"
-        onClick={activateChat}
+        onClick={click}
       >
         {
           isAudio ? <SendMessageIcon /> : <AudioMessageIcon />
