@@ -1,7 +1,8 @@
 import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './App';
-import { AuthContextProvider } from './auth/AuthContext';
+import { AuthContextProvider } from './context/AuthContext';
+import { ActiveChatContextProvider } from './context/ActiveChatContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -9,6 +10,8 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <AuthContextProvider>
-    <App />
+    <ActiveChatContextProvider>
+      <App />
+    </ActiveChatContextProvider>
   </AuthContextProvider>,
 );

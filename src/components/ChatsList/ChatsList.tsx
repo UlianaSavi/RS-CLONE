@@ -4,7 +4,8 @@ import {
   collection, query, where, getDocs,
 } from 'firebase/firestore';
 import { db } from '../../firebaseConfig';
-import { AuthContext } from '../../auth/AuthContext';
+import { AuthContext } from '../../context/AuthContext';
+import { ActiveChatContext } from '../../context/ActiveChatContext';
 
 import ChatPreview from '../ChatPreview/ChatPreview';
 import ContextMenu from '../ContextMenu/ContextMenu';
@@ -18,12 +19,15 @@ interface ChatsListProps {
 }
 
 function ChatsList({ activeChatId, setActiveChatId }: ChatsListProps) {
+  setActiveChatId(activeChatId);
   // Chats list
+
+  const { activeChat, setActiveChat } = useContext(ActiveChatContext);
+
   const currentUser: User = useContext(AuthContext) as User;
   const [chatsArr, setChatsArr] = useState([]);
-
-  useEffect(() => {
-    const getUsers = async () => {
+  const getUsers = async () => {
+    if (currentUser.uid) {
       const q = query(collection(db, 'users'), where('uid', '!=', currentUser.uid));
       const querySnapshot = await getDocs(q);
       const chatsData: any = [];
@@ -36,13 +40,20 @@ function ChatsList({ activeChatId, setActiveChatId }: ChatsListProps) {
           <ChatPreview
             key={chat.uid}
             data={chat}
-            isActive={chat.uid === activeChatId}
-            setActiveChatId={setActiveChatId}
+            isActive={chat.uid === activeChat}
+            setActiveChatId={setActiveChat}
           />
         )));
-    };
+    }
+  };
+
+  useEffect(() => {
     getUsers();
-  }, [activeChatId]);
+  }, [currentUser.uid]);
+
+  useEffect(() => {
+    getUsers();
+  }, [activeChat]);
 
   // Context menu
   const [showMenu, setShowMenu] = useState(false);

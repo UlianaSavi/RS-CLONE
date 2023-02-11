@@ -32,7 +32,7 @@ function ChatPreview({
       </div>
       <div className="chat-preview__info">
         <div className="chat-preview__messenge-time">00:00</div>
-        <div className="chat-preview__messenge-num">42</div>
+        <div className="chat-preview__messenge-num">0</div>
       </div>
     </button>
   );

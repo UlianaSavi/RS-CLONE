@@ -12,9 +12,13 @@ export function AuthContextProvider({ children }: Props) {
   const [currentUser, setCurrentUser] = useState({});
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
+    const unsub = onAuthStateChanged(auth, (user) => {
       setCurrentUser(user as object);
     });
+
+    return () => {
+      unsub();
+    };
   }, []);
 
   return (
