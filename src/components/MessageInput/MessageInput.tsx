@@ -54,9 +54,9 @@ function MessageInput() {
   const currentUser: User = useContext(AuthContext) as User;
   const { userID } = useContext(UserContext);
   const { setActiveChatID } = useContext(ActiveChatContext);
-
-  const combinedID = currentUser.uid > userID ? `${currentUser.uid}${userID}` : `${userID}${currentUser.uid}`;
+  let combinedID: string;
   const activateChat = async () => {
+    combinedID = currentUser.uid > userID ? `${currentUser.uid}${userID}` : `${userID}${currentUser.uid}`;
     const res = await getDoc(doc(db, 'chats', combinedID));
     setActiveChatID(combinedID);
 

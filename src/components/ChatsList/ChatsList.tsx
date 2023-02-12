@@ -38,7 +38,7 @@ function ChatsList({ activeFolder }: ChatsListProps) {
   };
 
   const getUserChats = async () => {
-    if (currentUser.uid) {
+    if (currentUser?.uid) {
       const chatsData: any = [];
       if (!activeFolder) {
         const q = query(collection(db, 'users'), where('uid', '!=', currentUser.uid));
@@ -64,7 +64,7 @@ function ChatsList({ activeFolder }: ChatsListProps) {
 
   useEffect(() => {
     getUserChats();
-  }, [currentUser.uid, userID, activeChatID, activeFolder]);
+  }, [currentUser?.uid, userID, activeChatID, activeFolder]);
 
   // Context menu
   const [showMenu, setShowMenu] = useState(false);
