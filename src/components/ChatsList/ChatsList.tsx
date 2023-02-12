@@ -26,6 +26,7 @@ function ChatsList({ activeFolder }: ChatsListProps) {
   const [chatsArr, setChatsArr] = useState([]);
 
   const updateChatsList = (chatsData: any) => {
+    console.log(chatsData);
     setChatsArr(chatsData
       .map((chat: User) => (
         <ChatPreview
@@ -40,7 +41,7 @@ function ChatsList({ activeFolder }: ChatsListProps) {
   const getUserChats = async () => {
     if (currentUser?.uid) {
       const chatsData: any = [];
-      if (!activeFolder) {
+      if (activeFolder === 0) {
         const q = query(collection(db, 'users'), where('uid', '!=', currentUser.uid));
         const querySnapshot = await getDocs(q);
         querySnapshot.forEach((d) => {

@@ -1,5 +1,7 @@
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
-import { doc, setDoc, updateDoc } from 'firebase/firestore';
+import {
+  doc, setDoc, updateDoc, arrayUnion,
+} from 'firebase/firestore';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { auth, db, storage } from '../firebaseConfig';
 
@@ -13,6 +15,7 @@ export const singUp = async (
     const { user } = await createUserWithEmailAndPassword(auth, email, password);
     const storageRef = ref(storage, `${name}${Math.floor(100000 + Math.random() * 900000)}`);
     const uploadTask = uploadBytesResumable(storageRef, avatar as File);
+    const mainGroupChatID = 'g_6j5jkb5JQJrT4xkArXtq';
 
     await setDoc(doc(db, 'users', user.uid), {
       uid: user.uid,
@@ -23,6 +26,21 @@ export const singUp = async (
     });
 
     await setDoc(doc(db, 'userChats', user.uid), {});
+    await setDoc(doc(db, 'userGroups', user.uid), {});
+
+    await updateDoc(doc(db, 'userGroups', user.uid), {
+      [`${mainGroupChatID}.groupInfo`]: {
+        displayName: 'Launge',
+        photoURL: '',
+      },
+      [`${mainGroupChatID}.lastMessage`]: {},
+    });
+
+    await updateDoc(doc(db, 'chats', mainGroupChatID), {
+      members: arrayUnion({
+        [user.uid]: true,
+      }),
+    });
 
     await updateProfile(user, {
       displayName: name,
