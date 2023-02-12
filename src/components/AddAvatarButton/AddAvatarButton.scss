@@ -1,24 +1,20 @@
+@import "../../styles/variables";
+
 .add-avatar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding: 5px;
-  border-radius: 5px;
-  transition: .2s all;
-  cursor: pointer;
+  padding: 16px 10px 16px;
+
+  color: $accent-color;
+  background-color: $grey-main;
+  border: 1px solid $accent-color;
+
   &:hover {
-    background-color: #ffefd670;
+    background-color: $accent-hover-folder;
   }
-  
+
   &_hidden {
     display: none;
   }
   
-  &__img {
-    height: 32px;
-  }
-
   &__label {
     font-size: 18px;
   }

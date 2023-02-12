@@ -1,26 +1,73 @@
-import { useState, useEffect } from 'react';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable no-undef */
+import { useState, useEffect, useContext } from 'react';
+import {
+  collection, query, where, getDocs, onSnapshot, doc, DocumentData,
+} from 'firebase/firestore';
+import { db } from '../../firebaseConfig';
+import { AuthContext } from '../../context/AuthContext';
+import { UserContext } from '../../context/UserContext';
+import { ActiveChatContext } from '../../context/ActiveChatContext';
+
 import ChatPreview from '../ChatPreview/ChatPreview';
 import ContextMenu from '../ContextMenu/ContextMenu';
-import type { UserData } from '../../types';
+
+import type { User } from '../../types';
 import './ChastList.scss';
 
 interface ChatsListProps {
-  data: UserData[],
-  activeChatId: number,
-  setActiveChatId: React.Dispatch<React.SetStateAction<number>>
+  activeFolder: number,
 }
 
-function ChatsList({ data, activeChatId, setActiveChatId }: ChatsListProps) {
-  const chatsArr = data
-    .map((chat) => (
-      <ChatPreview
-        key={chat.name}
-        data={chat}
-        isActive={chat.id === activeChatId}
-        setActiveChatId={setActiveChatId}
-      />
-    ));
+function ChatsList({ activeFolder }: ChatsListProps) {
+  const currentUser: User = useContext(AuthContext) as User;
+  const { userID, setUserID } = useContext(UserContext);
+  const { activeChatID } = useContext(ActiveChatContext);
 
+  const [chatsArr, setChatsArr] = useState([]);
+
+  const updateChatsList = (chatsData: any) => {
+    setChatsArr(chatsData
+      .map((chat: User) => (
+        <ChatPreview
+          key={chat.uid}
+          data={chat}
+          isActive={chat?.uid === userID}
+          setActiveUserID={setUserID}
+        />
+      )));
+  };
+
+  const getUserChats = async () => {
+    if (currentUser?.uid) {
+      const chatsData: DocumentData[] = [];
+      if (activeFolder === 0) {
+        const q = query(collection(db, 'users'), where('uid', '!=', currentUser.uid));
+        const querySnapshot = await getDocs(q);
+        querySnapshot.forEach((d) => {
+          chatsData.push(d.data());
+        });
+        updateChatsList(chatsData);
+      } else {
+        onSnapshot(doc(db, 'userChats', currentUser.uid), (d) => {
+          chatsData.length = 0;
+          const data = d.data();
+          if (!data) return;
+          const dataArray = Object.values(data);
+          dataArray.forEach((item) => {
+            chatsData.push(item.userInfo);
+          });
+          updateChatsList(chatsData);
+        });
+      }
+    }
+  };
+
+  useEffect(() => {
+    getUserChats();
+  }, [currentUser?.uid, userID, activeChatID, activeFolder]);
+
+  // Context menu
   const [showMenu, setShowMenu] = useState(false);
   const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
 

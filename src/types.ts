@@ -8,8 +8,10 @@ export interface UserData {
 }
 
 export interface User {
-  name: string,
-  avatarURL: string,
+  uid: string,
+  displayName: string,
+  photoURL: string,
+  email: string,
   isOnline: boolean
 }
 

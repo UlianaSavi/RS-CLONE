@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { singIn, singUp } from '../../API/api';
 import telegramLogo from '../../assets/img/telegramLogo.svg';
 import FormInput from '../../components/FormInput/FormInput';
+import AddAvatarButton from '../../components/AddAvatarButton/AddAvatarButton';
 import './Form.scss';
 
 interface FormProps {
@@ -10,8 +11,10 @@ interface FormProps {
 }
 
 function Form({ mode }: FormProps) {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [avatar, setAvatar] = useState({ file: null });
 
   const data = {
     'login-email': {
@@ -38,7 +41,7 @@ function Form({ mode }: FormProps) {
       registrationRoute: '/login',
       inputs:
   <>
-    <FormInput type="text" id="name" label="Name" value="" />
+    <FormInput type="text" id="name" label="Name" value="" setValue={setName} />
     <FormInput type="email" id="email" label="Email" value="" setValue={setEmail} />
     <FormInput type="password" id="password" label="Password" value="" setValue={setPassword} />
   </>,
@@ -47,10 +50,10 @@ function Form({ mode }: FormProps) {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    if (data[mode].changeModeButtonText === 'SIGN IN') {
-      singUp(email, password);
+    if (mode === 'register-email') {
+      singUp(name, email, password, avatar.file);
     }
-    if (data[mode].changeModeButtonText === 'SIGN UP') {
+    if (mode === 'login-email') {
       singIn(email, password);
     }
   };
@@ -63,6 +66,7 @@ function Form({ mode }: FormProps) {
         <h2 className="form__subtitle">{data[mode].title}</h2>
         <form className="form__inputs" onSubmit={handleSubmit}>
           {data[mode].inputs}
+          {mode === 'register-email' && <AddAvatarButton setValue={setAvatar} />}
           <button type="submit" className="form__button">
             NEXT
           </button>

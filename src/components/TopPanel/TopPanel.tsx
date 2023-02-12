@@ -4,14 +4,13 @@ import TopPanelTools from '../TopPanelTools/TopPanelTools';
 import TopPanelPinnedMessage from '../TopPanelPinnedMessage/TopPanelPinnedMessage';
 
 interface TopPanelProps {
-  activeChatId: number,
   callback: () => void
 }
 
-export default function TopPanel({ activeChatId, callback }: TopPanelProps) {
+export default function TopPanel({ callback }: TopPanelProps) {
   return (
     <div className="top-panel">
-      <ChatInfo activeChatId={activeChatId} />
+      <ChatInfo />
       <TopPanelPinnedMessage />
       <TopPanelTools callback={callback} />
     </div>

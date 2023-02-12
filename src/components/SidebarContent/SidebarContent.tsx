@@ -4,12 +4,7 @@ import FoldersTabs from '../FoldersTabs/FoldersTabs';
 import ChatsList from '../ChatsList/ChatsList';
 import './SidebarContent.scss';
 
-interface SidebarContentProps {
-  activeChatId: number,
-  setActiveChatId: React.Dispatch<React.SetStateAction<number>>
-}
-
-function SidebarContent({ activeChatId, setActiveChatId }: SidebarContentProps) {
+function SidebarContent() {
   const [activeFolder, setActiveFolder] = useState(0);
 
   return (
@@ -19,11 +14,7 @@ function SidebarContent({ activeChatId, setActiveChatId }: SidebarContentProps) 
         activeFolder={activeFolder}
         setActiveFolder={setActiveFolder}
       />
-      <ChatsList
-        data={foldersData[activeFolder].content}
-        activeChatId={activeChatId}
-        setActiveChatId={setActiveChatId}
-      />
+      <ChatsList activeFolder={activeFolder} />
     </div>
   );
 }
