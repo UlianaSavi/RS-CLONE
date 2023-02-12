@@ -87,20 +87,35 @@ function MessageInput() {
     }
   };
 
-  const sendMessage = async () => {
+  // Send message
+  const sendMessage = async (messageText: string) => {
     await updateDoc(doc(db, 'chats', combinedID), {
       messages: arrayUnion({
-        id: Math.random(),
-        text: 'какой-то текст',
+        id: Math.floor(10000000000 + Math.random() * 90000000000),
+        text: messageText,
         senderID: currentUser.uid,
         date: Timestamp.now(),
       }),
+    });
+
+    await updateDoc(doc(db, 'userChats', currentUser.uid), {
+      [`${combinedID}.lastMessage`]: {
+        text: messageText,
+        date: serverTimestamp(),
+      },
+    });
+
+    await updateDoc(doc(db, 'userChats', userID), {
+      [`${combinedID}.lastMessage`]: {
+        text: messageText,
+        date: serverTimestamp(),
+      },
     });
   };
 
   const click = async () => {
     await activateChat();
-    await sendMessage();
+    await sendMessage('какой-то текст');
   };
 
   return (

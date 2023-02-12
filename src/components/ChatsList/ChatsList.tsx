@@ -21,18 +21,18 @@ interface ChatsListProps {
 function ChatsList({ activeFolder }: ChatsListProps) {
   const currentUser: User = useContext(AuthContext) as User;
   const { userID, setUserID } = useContext(UserContext);
-  const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
+  const { activeChatID } = useContext(ActiveChatContext);
 
   const [chatsArr, setChatsArr] = useState([]);
 
-  const updateChatsList = (chatsData: any, isChats: boolean) => {
+  const updateChatsList = (chatsData: any) => {
     setChatsArr(chatsData
       .map((chat: User) => (
         <ChatPreview
           key={chat.uid}
           data={chat}
-          isActive={chat.uid === (isChats ? activeChatID : userID)}
-          setActiveChatId={isChats ? setActiveChatID : setUserID}
+          isActive={chat?.uid === userID}
+          setActiveChatId={setUserID}
         />
       )));
   };
@@ -46,16 +46,17 @@ function ChatsList({ activeFolder }: ChatsListProps) {
         querySnapshot.forEach((d) => {
           chatsData.push(d.data());
         });
-        updateChatsList(chatsData, false);
+        updateChatsList(chatsData);
       } else {
         onSnapshot(doc(db, 'userChats', currentUser.uid), (d) => {
+          chatsData.length = 0;
           const data = d.data();
           if (!data) return;
           const dataArray = Object.values(data);
           dataArray.forEach((item) => {
             chatsData.push(item.userInfo);
           });
-          updateChatsList(chatsData, true);
+          updateChatsList(chatsData);
         });
       }
     }
