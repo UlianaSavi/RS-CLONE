@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import {
   doc, setDoc, updateDoc, arrayUnion,
@@ -51,7 +52,7 @@ export const singUp = async (
         'state_changed',
         (snapshot) => {
           const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          console.log(progress);
+          return progress;
         },
         (error) => {
           throw error;

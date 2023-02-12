@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-undef */
 import { useState, useEffect, useContext } from 'react';
 import {
-  collection, query, where, getDocs, onSnapshot, doc,
+  collection, query, where, getDocs, onSnapshot, doc, DocumentData,
 } from 'firebase/firestore';
 import { db } from '../../firebaseConfig';
 import { AuthContext } from '../../context/AuthContext';
@@ -26,7 +27,6 @@ function ChatsList({ activeFolder }: ChatsListProps) {
   const [chatsArr, setChatsArr] = useState([]);
 
   const updateChatsList = (chatsData: any) => {
-    console.log(chatsData);
     setChatsArr(chatsData
       .map((chat: User) => (
         <ChatPreview
@@ -40,7 +40,7 @@ function ChatsList({ activeFolder }: ChatsListProps) {
 
   const getUserChats = async () => {
     if (currentUser?.uid) {
-      const chatsData: any = [];
+      const chatsData: DocumentData[] = [];
       if (activeFolder === 0) {
         const q = query(collection(db, 'users'), where('uid', '!=', currentUser.uid));
         const querySnapshot = await getDocs(q);
