@@ -28,6 +28,8 @@
   }
 
   &__message-content {
+    font-size: .875rem;
+
     display: flex;
     flex-direction: column;
     max-width: 20vw;
@@ -37,10 +39,17 @@
   }
 
   &__pinned-message-text {
+    line-height: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
     color: $accent-color;
+    
+    overflow: hidden;
   }
 
   &__message {
+    line-height: 18px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;

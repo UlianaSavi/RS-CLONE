@@ -1,24 +1,25 @@
 @import "../../styles/variables";
 
 .popup-item {
-    width: 100%;
+  font-size: .875rem;
+  line-height: 18px;
+  font-weight: 500;
+  
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px;
+  width: 100%;
 
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 5px;
+  background: none;
+  border: none;
+  color: $text-color-white;
 
-    font-weight: 500;
-
-    background: none;
-    border: none;
-    color: $text-color-white;
-
-    &:hover {
-        background: $grey-hover;
-        border-radius: 8px;
-        cursor: pointer;
-    }
+  &:hover {
+      background: $grey-hover;
+      border-radius: 8px;
+      cursor: pointer;
+  }
 }
 
 .popup-svg {
@@ -27,7 +28,7 @@
 
     margin-right: 10px;
 
-    fill: $grey-lite;
+    fill: $text-color-white;
 }
 
 .log-out-popup {
@@ -36,6 +37,27 @@
   transform: scale(-1, 1);
 }
 
+.muted-bell-popup {
+  transform: scale(.75);
+}
+
 .phone-popup {
-  scale: (1.3);
+  scale: (1.15);
+}
+
+.trash-popup {
+  transform: scale(.8);
+
+  fill: $danger-color;
+}
+
+.image-popup {
+  transform: scale(.65);
+}
+
+.document-popup {
+  transform: scale(.7);
+
+  stroke: $text-color-white;
+  stroke-width: 3%;
 }
