@@ -53,43 +53,43 @@ function MessageInput() {
   // Chat activation
   const currentUser: User = useContext(AuthContext) as User;
   const { userID } = useContext(UserContext);
-  const { setActiveChatID } = useContext(ActiveChatContext);
-  let combinedID: string;
+  const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
+
   const activateChat = async () => {
-    combinedID = currentUser.uid > userID ? `${currentUser.uid}${userID}` : `${userID}${currentUser.uid}`;
-    const res = await getDoc(doc(db, 'chats', combinedID));
+    const combinedID = currentUser.uid > userID ? `${currentUser.uid}${userID}` : `${userID}${currentUser.uid}`;
     setActiveChatID(combinedID);
+    const res = await getDoc(doc(db, 'chats', activeChatID));
 
     if (!res.exists()) {
-      await setDoc(doc(db, 'chats', combinedID), { messages: [] });
+      await setDoc(doc(db, 'chats', activeChatID), { messages: [] });
       const user = await getDoc(doc(db, 'users', userID));
       const userData = user.data();
 
       await updateDoc(doc(db, 'userChats', currentUser.uid), {
-        [`${combinedID}.userInfo`]: {
+        [`${activeChatID}.userInfo`]: {
           uid: userID,
           displayName: userData?.displayName,
           photoURL: userData?.photoURL,
           isOnline: true,
         },
-        [`${combinedID}.createdAt`]: serverTimestamp(),
+        [`${activeChatID}.createdAt`]: serverTimestamp(),
       });
 
       await updateDoc(doc(db, 'userChats', userID), {
-        [`${combinedID}.userInfo`]: {
+        [`${activeChatID}.userInfo`]: {
           uid: currentUser.uid,
           displayName: currentUser.displayName,
           photoURL: currentUser.photoURL,
           isOnline: true,
         },
-        [`${combinedID}.createdAt`]: serverTimestamp(),
+        [`${activeChatID}.createdAt`]: serverTimestamp(),
       });
     }
   };
 
   // Send message
   const sendMessage = async (messageText: string) => {
-    await updateDoc(doc(db, 'chats', combinedID), {
+    await updateDoc(doc(db, 'chats', activeChatID), {
       messages: arrayUnion({
         id: Math.floor(10000000000 + Math.random() * 90000000000),
         text: messageText,
@@ -99,21 +99,21 @@ function MessageInput() {
     });
 
     await updateDoc(doc(db, 'userChats', currentUser.uid), {
-      [`${combinedID}.lastMessage`]: {
+      [`${activeChatID}.lastMessage`]: {
         text: messageText,
         date: serverTimestamp(),
       },
     });
 
     await updateDoc(doc(db, 'userChats', userID), {
-      [`${combinedID}.lastMessage`]: {
+      [`${activeChatID}.lastMessage`]: {
         text: messageText,
         date: serverTimestamp(),
       },
     });
   };
 
-  const click = async () => {
+  const handleSendMessageBtn = async () => {
     await activateChat();
     await sendMessage('какой-то текст');
   };
@@ -141,7 +141,7 @@ function MessageInput() {
       <button
         className="message-input__send-btn"
         type="button"
-        onClick={click}
+        onClick={handleSendMessageBtn}
       >
         {
           isAudio ? <SendMessageIcon /> : <AudioMessageIcon />

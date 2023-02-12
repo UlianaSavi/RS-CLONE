@@ -32,7 +32,7 @@ function ChatsList({ activeFolder }: ChatsListProps) {
           key={chat.uid}
           data={chat}
           isActive={chat?.uid === userID}
-          setActiveChatId={setUserID}
+          setActiveUserID={setUserID}
         />
       )));
   };

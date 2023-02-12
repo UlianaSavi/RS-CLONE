@@ -4,12 +4,12 @@ interface ProviderProps {
   children: React.ReactNode;
 }
 
-interface ActiveChatContextProps {
+interface ChatContextProps {
   activeChatID: string;
   setActiveChatID: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export const ActiveChatContext = createContext<ActiveChatContextProps>({
+export const ActiveChatContext = createContext<ChatContextProps>({
   activeChatID: '',
   setActiveChatID: () => '',
 });

@@ -1,21 +1,31 @@
+import { useContext } from 'react';
 import Avatar from '../Avatar/Avatar';
+import { AuthContext } from '../../context/AuthContext';
+import { ActiveChatContext } from '../../context/ActiveChatContext';
 import type { User } from '../../types';
 import './ChatPreview.scss';
 
 interface ChatPreviewProps {
   data: User,
   isActive: boolean,
-  setActiveChatId: React.Dispatch<React.SetStateAction<string>>
+  setActiveUserID: React.Dispatch<React.SetStateAction<string>>
 }
 
 function ChatPreview({
-  data, isActive, setActiveChatId,
+  data, isActive, setActiveUserID,
 }: ChatPreviewProps) {
   const {
     uid, displayName, photoURL,
   } = data;
 
-  const selectChat = () => setActiveChatId(uid);
+  const { setActiveChatID } = useContext(ActiveChatContext);
+  const currentUser: User = useContext(AuthContext) as User;
+
+  const selectChat = () => {
+    const combinedID = currentUser.uid > uid ? `${currentUser.uid}${uid}` : `${uid}${currentUser.uid}`;
+    setActiveUserID(uid);
+    setActiveChatID(combinedID);
+  };
 
   return (
     <button
