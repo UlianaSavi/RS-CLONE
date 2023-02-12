@@ -56,5 +56,8 @@
 }
 
 .document-popup {
-  transform: scale(.5);
+  transform: scale(.7);
+
+  stroke: $text-color-white;
+  stroke-width: 3%;
 }
