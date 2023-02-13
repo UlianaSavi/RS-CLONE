@@ -26,6 +26,7 @@ function Sidebar() {
   }
 
   const toggleCreatePopup = () => setActiveCreatePopup(!isActiveCreatePopup);
+  const closeCreatePopup = () => setActiveCreatePopup(false);
 
   return (
     <div className="sidebar">
@@ -38,7 +39,7 @@ function Sidebar() {
                 <CreateButton handleClick={toggleCreatePopup} />
                 <CreatePopup
                   isVisible={isActiveCreatePopup}
-                  handleMouseLeave={toggleCreatePopup}
+                  closePopup={closeCreatePopup}
                 />
                 <SettingsMenu
                   isOpen={isActivePopup}

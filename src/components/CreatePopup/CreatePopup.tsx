@@ -4,16 +4,18 @@ import { ReactComponent as SettingIcon } from '../../assets/icons/setting-icon.s
 
 interface CreatePopupProps {
   isVisible: boolean,
-  handleMouseLeave: () => void
+  closePopup: () => void
 }
 
-function CreatePopup({ isVisible, handleMouseLeave }: CreatePopupProps) {
-  const click = () => null;
+function CreatePopup({ isVisible, closePopup }: CreatePopupProps) {
+  const click = () => {
+    closePopup();
+  };
 
   return (
     <nav
       className={`create-popup ${isVisible ? 'active' : ''}`}
-      onMouseLeave={handleMouseLeave}
+      onMouseLeave={closePopup}
     >
       <PopupMenuItem label="New Group" icon={<SettingIcon />} handleClick={click} />
       <PopupMenuItem label="New Private Chat" icon={<SettingIcon />} handleClick={click} />
