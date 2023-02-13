@@ -32,7 +32,6 @@
   background: none;
   border: none;
   outline: none;
-  font-size: 14px;
   color: $text-color-white;
 
   &::placeholder {
@@ -49,12 +48,20 @@
   width: 100%;
   max-width: 25px;
 
+  transform: scale(0.8);
+  transition: linear 0.15s;
+
+  stroke: $grey-secondary;
+  stroke-width: 4%;
+
   &.selected {
     border: none;
-    fill: $accent-color;
+
     transition: linear 0.15s;
+    
+    fill: $accent-color;
+    stroke: $accent-color;
   }
-  transition: linear 0.15s;
 }
 
 .selected {

@@ -19,7 +19,20 @@
   transition: .2s ease-in-out;
   transform-origin: bottom right;
 
+  .popup-item {
+    &:last-child {
+      color: $danger-color;
+  
+      &:hover {
+        background-color: rgba($danger-color, 0.05);
+      }
+    }
+  }
+
+
   &.active {
+    z-index: 3;
+
     opacity: 1;
     visibility: visible;
 
