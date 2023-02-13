@@ -1,3 +1,14 @@
+import datatIcon from './data.png';
+import devices from './devices.png';
+import phoneIcon from './phone-user.png';
+import folders from './folders.png';
+import gearWheel from './gearWheel.png';
+import info from './info.png';
+import laungage from './laungage.png';
+import lock from './lock.png';
+import nameUser from './name-user.png';
+import notice from './notice.png';
+
 export function SearchIcon() {
   return (
     <svg
@@ -120,10 +131,147 @@ export function CreateNewChatIcon() {
       width="24px"
       height="24px"
       fill="#ffff"
-      id="create-svg"
+      id="button-svg"
     >
       <path
         d="M 18 2 L 15.585938 4.4140625 L 19.585938 8.4140625 L 22 6 L 18 2 z M 14.076172 5.9238281 L 3 17 L 3 21 L 7 21 L 18.076172 9.9238281 L 14.076172 5.9238281 z"
+      />
+    </svg>
+  );
+}
+export function EditIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      width="24px"
+      height="24px"
+      fill="grey"
+      className="icon"
+    >
+      <path
+        d="M 18 2 L 15.585938 4.4140625 L 19.585938 8.4140625 L 22 6 L 18 2 z M 14.076172 5.9238281 L 3 17 L 3 21 L 7 21 L 18.076172 9.9238281 L 14.076172 5.9238281 z"
+      />
+    </svg>
+  );
+}
+
+export function ArrowLeftIcon() {
+  return (
+    <span className="icon">&#129120;</span>
+  );
+}
+
+export function LogOutIcon() {
+  return (
+    <svg
+      version="1.0"
+      xmlns="http://www.w3.org/2000/svg"
+      width="48.000000pt"
+      height="48.000000pt"
+      viewBox="0 0 48.000000 48.000000"
+      preserveAspectRatio="xMidYMid meet"
+      className="logOut-icon icon"
+    >
+      <g transform="translate(0.000000,48.000000) scale(0.100000,-0.100000)" fill="grey" stroke="none">
+        <path d="M80 400 c-18 -18 -20 -33 -20 -160 0 -182 -1 -180 143 -180 105 0
+147 13 147 45 0 23 -20 28 -39 11 -15 -14 -37 -16 -112 -14 l-94 3 0 135 0
+135 94 3 c75 2 97 0 112 -14 19 -17 39 -12 39 11 0 32 -42 45 -147 45 -90 0
+-106 -3 -123 -20z"
+        />
+        <path d="M325 309 c-4 -5 1 -19 10 -29 17 -19 15 -19 -81 -22 -80 -2 -99 -6
+-99 -18 0 -12 19 -16 99 -18 97 -3 98 -3 80 -23 -13 -15 -15 -22 -6 -31 10
+-10 22 -3 54 30 l42 42 -39 40 c-41 42 -50 46 -60 29z"
+        />
+      </g>
+    </svg>
+  );
+}
+
+export function PhoneIcon() {
+  return (
+    <div>
+      <img className="icon" src={phoneIcon} alt="" />
+    </div>
+  );
+}
+
+export function DatatIcon() {
+  return (
+    <div>
+      <img className="icon" src={datatIcon} alt="" />
+    </div>
+  );
+}
+
+export function DevicesIcon() {
+  return (
+    <div>
+      <img className="icon" src={devices} alt="" />
+    </div>
+  );
+}
+
+export function FoldersIcon() {
+  return (
+    <div>
+      <img className="icon" src={folders} alt="" />
+    </div>
+  );
+}
+
+export function GearWheelIcon() {
+  return (
+    <div>
+      <img className="icon" src={gearWheel} alt="" />
+    </div>
+  );
+}
+
+export function InfoIcon() {
+  return (
+    <div>
+      <img className="icon" src={info} alt="" />
+    </div>
+  );
+}
+
+export function LaungageIcon() {
+  return (
+    <div>
+      <img className="icon" src={laungage} alt="" />
+    </div>
+  );
+}
+
+export function LockIcon() {
+  return (
+    <div>
+      <img className="icon" src={lock} alt="" />
+    </div>
+  );
+}
+
+export function NameUserIcon() {
+  return (
+    <div>
+      <img className="icon" src={nameUser} alt="" />
+    </div>
+  );
+}
+
+export function NoticeIcon() {
+  return (
+    <div>
+      <img className="icon" src={notice} alt="" />
+    </div>
+  );
+}
+export function AddPhotoIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="icon" fill="white">
+      <path
+        d="M20,10.5a1,1,0,0,0-1,1v7a1,1,0,0,1-1,1H4a1,1,0,0,1-1-1v-8a1,1,0,0,1,1-1H6a1,1,0,0,0,1-.68l.54-1.64a1,1,0,0,1,.95-.68H14a1,1,0,0,0,0-2H8.44A3,3,0,0,0,5.6,6.55l-.32,1H4a3,3,0,0,0-3,3v8a3,3,0,0,0,3,3H18a3,3,0,0,0,3-3v-7A1,1,0,0,0,20,10.5Zm-9-1a4,4,0,1,0,4,4A4,4,0,0,0,11,9.5Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,11,15.5Zm11-11H21v-1a1,1,0,0,0-2,0v1H18a1,1,0,0,0,0,2h1v1a1,1,0,0,0,2,0v-1h1a1,1,0,0,0,0-2Z"
       />
     </svg>
   );

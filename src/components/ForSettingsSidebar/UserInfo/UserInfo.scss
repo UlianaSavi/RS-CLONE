@@ -1,0 +1,73 @@
+@import "../../../styles/variables";
+
+.user-info {
+    margin-bottom: 10px;
+    background: $grey-main;
+    padding-bottom: 5px;
+
+    &__item {
+        .popup-item {
+            width: 100%;
+            max-width: 390px;
+            height: 56px;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            margin: 10px 20px;
+            padding: 5px 10px;
+
+            font-size: 17px;
+            font-weight: 400;
+
+            &__title {
+                width: 100%;
+                margin-left: 34px;
+
+                font-size: 14px;
+                font-weight: 600;
+                text-align: left;
+                color: $grey-secondary;
+            }
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+        min-height: 200px;
+
+
+        &__ava {
+            width: 100%;
+            height: 100%;
+            max-height: 240px;
+            object-fit: cover;
+            
+        }
+
+        &__name {
+            position: absolute;
+            bottom: 35px;
+            left: 20px;
+
+            font-size: 21px;
+        }
+
+        &__status {
+            position: absolute;
+            bottom: 15px;
+            left: 20px;
+
+            color: $text-color-time-out;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .icon-button {
+            bottom: -15px;
+            right: 15px;
+        }
+
+        .icon {
+            margin: 0;
+        }
+    }
+}

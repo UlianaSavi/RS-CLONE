@@ -1,25 +1,45 @@
 import { useState } from 'react';
 import CreateButton from '../CreateButton/CreateButton';
-import SettingsMenu from '../SettingsMenu/SettingsMenu';
+import SettingsSidebar from '../ForSettingsSidebar/SettingsSidebar';
+import SettingsMenu from '../SettingsPopap/SettingsPopap';
 import SidebarContent from '../SidebarContent/SidebarContent';
 import SidebarHeader from '../SidebarHeader/SidebarHeader';
 import './Sidebar.scss';
 
 function Sidebar() {
   const [isActivePopup, setActivePopup] = useState(false);
+  const [isSettings, setSettings] = useState(false);
+
   function flipFlop() {
     setActivePopup(!isActivePopup);
   }
 
+  function changeSidebar() {
+    if (isSettings) {
+      setActivePopup(false);
+      setSettings(false);
+    } else {
+      setSettings(true);
+    }
+  }
+
   return (
     <div className="sidebar">
-      <SidebarHeader callback={() => flipFlop()} />
-      <SidebarContent />
-      <CreateButton />
-      <SettingsMenu
-        isOpen={isActivePopup}
-        onClose={() => setActivePopup(false)}
-      />
+      {
+          isSettings ? <SettingsSidebar onSidebarChange={() => changeSidebar()} />
+            : (
+              <>
+                <SidebarHeader callback={() => flipFlop()} />
+                <SidebarContent />
+                <CreateButton />
+                <SettingsMenu
+                  isOpen={isActivePopup}
+                  onClose={() => setActivePopup(false)}
+                  onSidebarChange={() => changeSidebar()}
+                />
+              </>
+            )
+      }
     </div>
   );
 }
