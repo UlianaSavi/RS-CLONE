@@ -1,5 +1,10 @@
 /* eslint-disable no-console */
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  updateProfile,
+} from 'firebase/auth';
 import {
   doc, setDoc, updateDoc, arrayUnion,
 } from 'firebase/firestore';
@@ -85,4 +90,14 @@ export const singIn = async (email: string, password: string) => {
       const errorMessage = error.message;
       console.log(errorCode, errorMessage);
     });
+};
+
+export const logOut = async () => {
+  signOut(auth).then(() => {
+    console.log('Sign-out successful.');
+  }).catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log(errorCode, errorMessage);
+  });
 };

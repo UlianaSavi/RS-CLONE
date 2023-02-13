@@ -22,6 +22,23 @@
         }
     }
 
+    &__logout-button {
+        position: relative;
+
+        &:hover::after {
+            content: attr(data-title);
+
+            z-index: 5;
+            position: absolute;
+            top: 45px;
+            right: 8px;
+
+            font-size: 13px;
+            font-weight: 500;
+            color: $grey-lite;
+        }
+    }
+
     &__close-button,
     &__edit-button,
     &__logout-button {

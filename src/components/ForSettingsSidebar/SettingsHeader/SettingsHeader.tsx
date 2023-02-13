@@ -1,3 +1,4 @@
+import { logOut } from '../../../API/api';
 import { ArrowLeftIcon, EditIcon, LogOutIcon } from '../../../assets/icons/icons';
 import './SettingsHeader.scss';
 
@@ -15,7 +16,7 @@ function SettingsHeader({ handleClick }: SettingsHeaderProps) {
       <button type="button" className="settings-header__edit-button">
         <EditIcon />
       </button>
-      <button type="button" className="settings-header__logout-button">
+      <button type="button" className="settings-header__logout-button" onClick={logOut} data-title="LogOut">
         <LogOutIcon />
       </button>
     </div>
