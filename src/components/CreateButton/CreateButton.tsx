@@ -3,7 +3,7 @@ import './CreateButton.scss';
 
 function CreateButton() {
   return (
-    <button type="button" className="create-button">
+    <button type="button" className="icon-button">
       <CreateNewChatIcon />
     </button>
   );

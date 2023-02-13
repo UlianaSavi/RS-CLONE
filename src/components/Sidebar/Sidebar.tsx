@@ -38,7 +38,7 @@ function Sidebar() {
                 />
               </>
             )
-        }
+      }
     </div>
   );
 }
