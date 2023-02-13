@@ -15,6 +15,13 @@
         text-align: left;
     }
 
+    &__close-button {
+        &::before {
+            top: -8px !important;
+            left: -5px !important;
+        }
+    }
+
     &__close-button,
     &__edit-button,
     &__logout-button {

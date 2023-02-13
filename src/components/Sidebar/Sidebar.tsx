@@ -16,6 +16,7 @@ function Sidebar() {
 
   function changeSidebar() {
     if (isSettings) {
+      setActivePopup(false);
       setSettings(false);
     } else {
       setSettings(true);
