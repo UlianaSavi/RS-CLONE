@@ -1,9 +1,13 @@
 import { CreateNewChatIcon } from '../../assets/icons/icons';
 import './CreateButton.scss';
 
-function CreateButton() {
+interface CreateButtonpProps {
+  handleClick: () => void
+}
+
+function CreateButton({ handleClick }: CreateButtonpProps) {
   return (
-    <button type="button" className="icon-button">
+    <button type="button" className="icon-button" onClick={handleClick}>
       <CreateNewChatIcon />
     </button>
   );

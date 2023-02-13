@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import CreateButton from '../CreateButton/CreateButton';
+import CreatePopup from '../CreatePopup/CreatePopup';
 import SettingsSidebar from '../ForSettingsSidebar/SettingsSidebar';
 import SettingsMenu from '../SettingsPopap/SettingsPopap';
 import SidebarContent from '../SidebarContent/SidebarContent';
@@ -8,6 +9,7 @@ import './Sidebar.scss';
 
 function Sidebar() {
   const [isActivePopup, setActivePopup] = useState(false);
+  const [isActiveCreatePopup, setActiveCreatePopup] = useState(false);
   const [isSettings, setSettings] = useState(false);
 
   function flipFlop() {
@@ -23,6 +25,8 @@ function Sidebar() {
     }
   }
 
+  const toggleCreatePopup = () => setActiveCreatePopup(!isActiveCreatePopup);
+
   return (
     <div className="sidebar">
       {
@@ -31,7 +35,11 @@ function Sidebar() {
               <>
                 <SidebarHeader callback={() => flipFlop()} />
                 <SidebarContent />
-                <CreateButton />
+                <CreateButton handleClick={toggleCreatePopup} />
+                <CreatePopup
+                  isVisible={isActiveCreatePopup}
+                  handleMouseLeave={toggleCreatePopup}
+                />
                 <SettingsMenu
                   isOpen={isActivePopup}
                   onClose={() => setActivePopup(false)}
