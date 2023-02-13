@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { AuthContext } from '../../../context/AuthContext';
 import type { User } from '../../../types';
+import avatarPlaceholder from '../../../assets/icons/avatar-placeholder.png';
 
 import { AddPhotoIcon, InfoIcon, NameUserIcon } from '../../../assets/icons/icons';
 import PopupMenuItem from '../../PopupMenuItem/PopupMenuItem';
@@ -11,7 +12,7 @@ function UserInfo() {
   return (
     <div className="user-info">
       <div className="user-info__wrapper">
-        <img className="user-info__wrapper__ava" src={currentUser.photoURL} alt="User" />
+        <img className="user-info__wrapper__ava" src={currentUser.photoURL !== null ? currentUser.photoURL : avatarPlaceholder} alt="User" />
         <div className="user-info__wrapper__name">{currentUser.displayName}</div>
         <div className="user-info__wrapper__status">{currentUser.isOnline || 'online'}</div>
         <button type="button" className="icon-button">
