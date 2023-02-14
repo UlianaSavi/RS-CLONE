@@ -9,10 +9,12 @@ interface ChatPreviewProps {
   data: User,
   isActive: boolean,
   setActiveUserID: React.Dispatch<React.SetStateAction<string>>
+  isSearchMode: boolean
+  setSearchMode: React.Dispatch<React.SetStateAction<boolean>>,
 }
 
 function ChatPreview({
-  data, isActive, setActiveUserID,
+  data, isActive, setActiveUserID, isSearchMode, setSearchMode,
 }: ChatPreviewProps) {
   const {
     uid, displayName, photoURL,
@@ -25,6 +27,7 @@ function ChatPreview({
     const combinedID = currentUser.uid > uid ? `${currentUser.uid}${uid}` : `${uid}${currentUser.uid}`;
     setActiveUserID(uid);
     setActiveChatID(combinedID);
+    setSearchMode(false);
   };
 
   return (
@@ -37,13 +40,17 @@ function ChatPreview({
         <Avatar image={photoURL} />
         <div className="chat-preview-text">
           <div className="chat-preview__title">{displayName}</div>
-          <div className="chat-preview__last-message">last message</div>
+          {isSearchMode
+            ? <div className="chat-preview__online-status">Online</div>
+            : <div className="chat-preview__last-message">last message</div>}
         </div>
       </div>
+      {!isSearchMode && (
       <div className="chat-preview__info">
         <div className="chat-preview__messenge-time">00:00</div>
         <div className="chat-preview__messenge-num">0</div>
       </div>
+      )}
     </button>
   );
 }

@@ -1,10 +1,6 @@
 export const foldersData = [
   {
-    title: 'All',
-    unreadConversations: 0,
-  },
-  {
-    title: 'Contacts',
+    title: 'Personal',
     unreadConversations: 0,
   },
 ];
