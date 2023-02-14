@@ -65,7 +65,7 @@ function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps
         dataArray.forEach((item) => {
           chatsData.push(item);
         });
-        updateChatsList(chatsData);
+        updateChatsList(chatsData.sort((a, b) => b.lastMessage.date - a.lastMessage.date));
       });
     }
   };
