@@ -28,7 +28,7 @@ export function BubblesDateGroup(props: {date: string}) {
             message={message.text}
             time={`${(new Date(message.date.seconds * 1000)).getHours()}:${new Date(message.date.seconds * 1000).getMinutes()}`}
             isRead
-            isCurrenUser={message.senderID === userID}
+            isCurrenUser={message.senderID !== userID}
           />
         )));
     });
