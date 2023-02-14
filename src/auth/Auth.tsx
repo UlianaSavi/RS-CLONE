@@ -1,11 +1,13 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable no-console */
 import { useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import { auth } from '../firebaseConfig';
 
-function AuthRoute(props: any) {
+interface IProps {
+  children: JSX.Element
+}
+
+function AuthRoute(props: IProps) {
   const navigate = useNavigate();
   const { children } = props;
   function check() {
