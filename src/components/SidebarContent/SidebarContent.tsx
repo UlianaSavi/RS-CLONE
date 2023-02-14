@@ -20,7 +20,10 @@ function SidebarContent({ isSearchMode }: SidebarContentProps) {
         setActiveFolder={setActiveFolder}
       />
       )}
-      <ChatsList activeFolder={activeFolder} />
+      <ChatsList
+        isSearchMode={isSearchMode}
+        activeFolder={activeFolder}
+      />
     </div>
   );
 }

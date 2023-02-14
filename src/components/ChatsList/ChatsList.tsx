@@ -17,9 +17,10 @@ import './ChastList.scss';
 
 interface ChatsListProps {
   activeFolder: number,
+  isSearchMode: boolean
 }
 
-function ChatsList({ activeFolder }: ChatsListProps) {
+function ChatsList({ activeFolder, isSearchMode }: ChatsListProps) {
   const currentUser: User = useContext(AuthContext) as User;
   const { userID, setUserID } = useContext(UserContext);
   const { activeChatID } = useContext(ActiveChatContext);
@@ -38,34 +39,42 @@ function ChatsList({ activeFolder }: ChatsListProps) {
       )));
   };
 
-  const getUserChats = async () => {
+  const getAllUsers = async () => {
     if (currentUser?.uid) {
       const chatsData: DocumentData[] = [];
-      if (activeFolder === 0) {
-        const q = query(collection(db, 'users'), where('uid', '!=', currentUser.uid));
-        const querySnapshot = await getDocs(q);
-        querySnapshot.forEach((d) => {
-          chatsData.push(d.data());
-        });
-        updateChatsList(chatsData);
-      } else {
-        onSnapshot(doc(db, 'userChats', currentUser.uid), (d) => {
-          chatsData.length = 0;
-          const data = d.data();
-          if (!data) return;
-          const dataArray = Object.values(data);
-          dataArray.forEach((item) => {
-            chatsData.push(item.userInfo);
-          });
-          updateChatsList(chatsData);
-        });
-      }
+      const q = query(collection(db, 'users'), where('uid', '!=', currentUser.uid));
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach((d) => {
+        chatsData.push(d.data());
+      });
+      updateChatsList(chatsData);
     }
   };
 
+  const getUserChats = async () => {
+    if (currentUser?.uid) {
+      const chatsData: DocumentData[] = [];
+      onSnapshot(doc(db, 'userChats', currentUser.uid), (d) => {
+        chatsData.length = 0;
+        const data = d.data();
+        if (!data) return;
+        const dataArray = Object.values(data);
+        dataArray.forEach((item) => {
+          chatsData.push(item.userInfo);
+        });
+        updateChatsList(chatsData);
+      });
+    }
+  };
+
+  const showChatsList = async () => {
+    const res = isSearchMode ? await getAllUsers() : await getUserChats();
+    return res;
+  };
+
   useEffect(() => {
-    getUserChats();
-  }, [currentUser?.uid, userID, activeChatID, activeFolder]);
+    showChatsList();
+  }, [currentUser?.uid, userID, activeChatID, activeFolder, isSearchMode]);
 
   // Context menu
   const [showMenu, setShowMenu] = useState(false);
