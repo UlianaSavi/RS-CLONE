@@ -6,9 +6,10 @@ import './SidebarContent.scss';
 
 interface SidebarContentProps {
   isSearchMode: boolean,
+  setSearchMode: React.Dispatch<React.SetStateAction<boolean>>,
 }
 
-function SidebarContent({ isSearchMode }: SidebarContentProps) {
+function SidebarContent({ isSearchMode, setSearchMode }: SidebarContentProps) {
   const [activeFolder, setActiveFolder] = useState(0);
 
   return (
@@ -23,6 +24,7 @@ function SidebarContent({ isSearchMode }: SidebarContentProps) {
       <ChatsList
         isSearchMode={isSearchMode}
         activeFolder={activeFolder}
+        setSearchMode={setSearchMode}
       />
     </div>
   );

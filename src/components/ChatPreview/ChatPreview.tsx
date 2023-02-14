@@ -10,10 +10,11 @@ interface ChatPreviewProps {
   isActive: boolean,
   setActiveUserID: React.Dispatch<React.SetStateAction<string>>
   isSearchMode: boolean
+  setSearchMode: React.Dispatch<React.SetStateAction<boolean>>,
 }
 
 function ChatPreview({
-  data, isActive, setActiveUserID, isSearchMode,
+  data, isActive, setActiveUserID, isSearchMode, setSearchMode,
 }: ChatPreviewProps) {
   const {
     uid, displayName, photoURL,
@@ -26,6 +27,7 @@ function ChatPreview({
     const combinedID = currentUser.uid > uid ? `${currentUser.uid}${uid}` : `${uid}${currentUser.uid}`;
     setActiveUserID(uid);
     setActiveChatID(combinedID);
+    setSearchMode(false);
   };
 
   return (

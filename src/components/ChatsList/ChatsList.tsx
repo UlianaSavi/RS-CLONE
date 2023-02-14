@@ -18,9 +18,10 @@ import './ChastList.scss';
 interface ChatsListProps {
   activeFolder: number,
   isSearchMode: boolean
+  setSearchMode: React.Dispatch<React.SetStateAction<boolean>>,
 }
 
-function ChatsList({ activeFolder, isSearchMode }: ChatsListProps) {
+function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps) {
   const currentUser: User = useContext(AuthContext) as User;
   const { userID, setUserID } = useContext(UserContext);
   const { activeChatID } = useContext(ActiveChatContext);
@@ -36,6 +37,7 @@ function ChatsList({ activeFolder, isSearchMode }: ChatsListProps) {
           isActive={chat?.uid === userID}
           setActiveUserID={setUserID}
           isSearchMode={isSearchMode}
+          setSearchMode={setSearchMode}
         />
       )));
   };

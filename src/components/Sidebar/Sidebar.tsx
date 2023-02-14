@@ -40,7 +40,10 @@ function Sidebar() {
                 isSearchMode={isSearchMode}
                 setSearchMode={setSearchMode}
               />
-              <SidebarContent isSearchMode={isSearchMode} />
+              <SidebarContent
+                isSearchMode={isSearchMode}
+                setSearchMode={setSearchMode}
+              />
               <CreateButton
                 isVisible={!isSearchMode}
                 handleClick={toggleCreatePopup}
