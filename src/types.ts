@@ -18,12 +18,16 @@ export interface User {
 export interface Users {
   [uid: string]: User
 }
+export interface IMessageDate {
+  nanoseconds: number,
+  seconds: number
+}
 
 export interface Message {
-  conversationID: string,
+  date: IMessageDate,
+  id: string,
   senderID: string,
-  content: string,
-  timestamp: number
+  text: string
 }
 
 export interface Messages {
