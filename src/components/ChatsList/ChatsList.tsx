@@ -35,6 +35,7 @@ function ChatsList({ activeFolder, isSearchMode }: ChatsListProps) {
           data={chat}
           isActive={chat?.uid === userID}
           setActiveUserID={setUserID}
+          isSearchMode={isSearchMode}
         />
       )));
   };
