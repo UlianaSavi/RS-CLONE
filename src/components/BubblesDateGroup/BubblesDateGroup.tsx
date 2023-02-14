@@ -12,7 +12,6 @@ export function BubblesDateGroup(props: {date: string}) {
   const { activeChatID } = useContext(ActiveChatContext);
   const [chatsArr, setMessageArr] = useState([]);
   const { date } = props;
-
   const getData = async () => {
     onSnapshot(doc(db, 'chats', activeChatID), (d) => {
       const data = d.data();
@@ -25,7 +24,7 @@ export function BubblesDateGroup(props: {date: string}) {
         .map((message: Message) => (
           <BubblesMessage
             message={message.text}
-            time="15:00"
+            time={`${(new Date(message.date.seconds * 1000)).getHours()}:${new Date(message.date.seconds * 1000).getMinutes()}`}
             isRead
             isCurrenUser
           />
