@@ -1,0 +1,33 @@
+@import "../../styles/variables";
+
+.sidebar-close-button {
+  height: fit-content;
+  min-height: 25px;
+  position: relative;
+  border: none;
+  background: none;
+
+  cursor: pointer;
+
+  &::before {
+      z-index: 1;
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: -6px;
+
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: none;
+      transition: linear .15s;
+  }
+
+  &:hover {
+      &::before {
+          z-index: 1;
+          transition: linear .15s;
+          background: $grey-hover;
+      }
+  }
+}
