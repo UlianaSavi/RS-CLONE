@@ -7,9 +7,11 @@ import BubblesMessage from '../BubblesMessage/BubblesMessage';
 import './BubblesDateGroup.scss';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
 import { Message } from '../../types';
+import { UserContext } from '../../context/UserContext';
 
 export function BubblesDateGroup(props: {date: string}) {
   const { activeChatID } = useContext(ActiveChatContext);
+  const { userID } = useContext(UserContext);
   const [chatsArr, setMessageArr] = useState([]);
   const { date } = props;
   const getData = async () => {
@@ -26,7 +28,7 @@ export function BubblesDateGroup(props: {date: string}) {
             message={message.text}
             time={`${(new Date(message.date.seconds * 1000)).getHours()}:${new Date(message.date.seconds * 1000).getMinutes()}`}
             isRead
-            isCurrenUser
+            isCurrenUser={message.senderID === userID}
           />
         )));
     });
