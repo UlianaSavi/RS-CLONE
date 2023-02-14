@@ -35,8 +35,12 @@ function Sidebar() {
         isSettings ? <SettingsSidebar onSidebarChange={() => changeSidebar()} />
           : (
             <>
-              <SidebarHeader callback={() => flipFlop()} />
-              <SidebarContent />
+              <SidebarHeader
+                callback={() => flipFlop()}
+                isSearchMode={isSearchMode}
+                setSearchMode={setSearchMode}
+              />
+              <SidebarContent isSearchMode={isSearchMode} />
               <CreateButton
                 isVisible={!isSearchMode}
                 handleClick={toggleCreatePopup}
