@@ -12,7 +12,7 @@ import { ActiveChatContext } from '../../context/ActiveChatContext';
 import ChatPreview from '../ChatPreview/ChatPreview';
 import ContextMenu from '../ContextMenu/ContextMenu';
 
-import type { User } from '../../types';
+import type { User, UserChat } from '../../types';
 import './ChastList.scss';
 
 interface ChatsListProps {
@@ -30,11 +30,11 @@ function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps
 
   const updateChatsList = (chatsData: any) => {
     setChatsArr(chatsData
-      .map((chat: User) => (
+      .map((chat: UserChat) => (
         <ChatPreview
-          key={chat.uid}
+          key={chat.userInfo.uid}
           data={chat}
-          isActive={chat?.uid === userID}
+          isActive={chat?.userInfo.uid === userID}
           setActiveUserID={setUserID}
           isSearchMode={isSearchMode}
           setSearchMode={setSearchMode}
@@ -48,7 +48,7 @@ function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps
       const q = query(collection(db, 'users'), where('uid', '!=', currentUser.uid));
       const querySnapshot = await getDocs(q);
       querySnapshot.forEach((d) => {
-        chatsData.push(d.data());
+        chatsData.push({ userInfo: d.data() });
       });
       updateChatsList(chatsData);
     }
@@ -63,7 +63,7 @@ function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps
         if (!data) return;
         const dataArray = Object.values(data);
         dataArray.forEach((item) => {
-          chatsData.push(item.userInfo);
+          chatsData.push(item);
         });
         updateChatsList(chatsData);
       });

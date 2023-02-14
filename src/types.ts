@@ -1,11 +1,5 @@
-export interface UserData {
-  id: number,
-  name: string,
-  avatar: string,
-  lastMessage: string,
-  timeOfLastMessage: string,
-  unreadMessages: number
-}
+// import firebase from 'firebase/app';
+// import 'firebase/firestore';
 
 export interface User {
   uid: string,
@@ -13,6 +7,14 @@ export interface User {
   photoURL: string,
   email: string,
   isOnline: boolean
+}
+
+export interface UserChat {
+  userInfo: User,
+  lastMessage: {
+    date: any,
+    text: string
+  }
 }
 
 export interface Users {
