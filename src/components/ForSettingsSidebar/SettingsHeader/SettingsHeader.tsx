@@ -6,6 +6,7 @@ import { SettingsHeaderProps } from '../../../types';
 function SettingsHeader({ handleClick, handleEditClick }: SettingsHeaderProps) {
   return (
     <div className="settings-header">
+      {/* Эту кнопку можно заменить на компонент SidebarCloseButton */}
       <button type="button" className="settings-header__close-button" onClick={handleClick}>
         <ArrowLeftIcon />
       </button>

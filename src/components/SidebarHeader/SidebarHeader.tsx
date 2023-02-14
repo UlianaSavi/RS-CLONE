@@ -1,12 +1,22 @@
 import BurgerButton from '../BurgerButton/BurgerButton';
 import SearchBar from '../SearchBar/SearchBar';
+import SidebarCloseButton from '../SidebarCloseButton/SidebarCloseButton';
 import './SidebarHeader.scss';
 
-function SidebarHeader(props: {callback: () => void}) {
-  const { callback } = props;
+interface SidebarHeaderProps {
+  isSearchMode: boolean,
+  setSearchMode: React.Dispatch<React.SetStateAction<boolean>>,
+  callback: () => void,
+}
+
+function SidebarHeader({ isSearchMode, callback, setSearchMode }: SidebarHeaderProps) {
+  const closeSearch = () => setSearchMode(false);
+
   return (
     <div className="sidebar-header">
-      <BurgerButton callback={callback} />
+      {isSearchMode
+        ? <SidebarCloseButton handleClick={closeSearch} />
+        : <BurgerButton callback={callback} />}
       <SearchBar />
     </div>
   );
