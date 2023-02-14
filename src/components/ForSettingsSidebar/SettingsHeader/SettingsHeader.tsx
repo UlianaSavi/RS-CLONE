@@ -3,17 +3,18 @@ import { ArrowLeftIcon, EditIcon, LogOutIcon } from '../../../assets/icons/icons
 import './SettingsHeader.scss';
 
 interface SettingsHeaderProps {
-  handleClick: () => void
+  handleClick: () => void;
+  handleEditClick: () => void
 }
 
-function SettingsHeader({ handleClick }: SettingsHeaderProps) {
+function SettingsHeader({ handleClick, handleEditClick }: SettingsHeaderProps) {
   return (
     <div className="settings-header">
       <button type="button" className="settings-header__close-button" onClick={handleClick}>
         <ArrowLeftIcon />
       </button>
       <div className="settings-header__title"><span>Settings</span></div>
-      <button type="button" className="settings-header__edit-button">
+      <button type="button" className="settings-header__edit-button" onClick={handleEditClick}>
         <EditIcon />
       </button>
       <button type="button" className="settings-header__logout-button" onClick={logOut} data-title="LogOut">
