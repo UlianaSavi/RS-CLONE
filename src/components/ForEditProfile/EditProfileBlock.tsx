@@ -1,11 +1,15 @@
 import { ArrowLeftIcon } from '../../assets/icons/icons';
 import './EditProfileBlock.scss';
 
-export default function EditProfileBlock() {
+import { SettingsHeaderProps } from '../../types';
+
+export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProps) {
   return (
     <div className="edit-profile">
       <div className="header">
-        <ArrowLeftIcon />
+        <button type="button" className="header__arrow" onClick={handleEditClick}>
+          <ArrowLeftIcon />
+        </button>
         <span className="header__text">Edit Profile</span>
       </div>
       <section className="edit-user-info">

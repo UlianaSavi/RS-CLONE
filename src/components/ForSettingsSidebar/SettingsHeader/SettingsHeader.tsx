@@ -1,11 +1,7 @@
 import { logOut } from '../../../API/api';
 import { ArrowLeftIcon, EditIcon, LogOutIcon } from '../../../assets/icons/icons';
 import './SettingsHeader.scss';
-
-interface SettingsHeaderProps {
-  handleClick: () => void;
-  handleEditClick: () => void
-}
+import { SettingsHeaderProps } from '../../../types';
 
 function SettingsHeader({ handleClick, handleEditClick }: SettingsHeaderProps) {
   return (

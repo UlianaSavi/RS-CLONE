@@ -18,7 +18,7 @@ function SettingsSidebar(props: { onSidebarChange: () => void }) {
   }
 
   return (
-    isEditProfile ? <EditProfileBlock /> : (
+    isEditProfile ? <EditProfileBlock handleEditClick={() => changeSettings()} /> : (
       <div className="setting">
         <SettingsTopPanel handleClick={onSidebarChange} handleEditClick={() => changeSettings()} />
         <UserInfo />

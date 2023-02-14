@@ -39,3 +39,8 @@ export interface Conversation {
 export interface Conversations {
   [uid: string]: Conversation
 }
+
+export interface SettingsHeaderProps {
+  handleEditClick: () => void
+  handleClick?: () => void;
+}
