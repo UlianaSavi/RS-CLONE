@@ -4,11 +4,15 @@ import { ReactComponent as SettingIcon } from '../../assets/icons/setting-icon.s
 
 interface CreatePopupProps {
   isVisible: boolean,
-  closePopup: () => void
+  closePopup: () => void,
+  setSearchMode: React.Dispatch<React.SetStateAction<boolean>>,
 }
 
-function CreatePopup({ isVisible, closePopup }: CreatePopupProps) {
-  const click = () => {
+function CreatePopup({ isVisible, closePopup, setSearchMode }: CreatePopupProps) {
+  const createNewGroup = () => closePopup();
+
+  const createNewPrivateChat = () => {
+    setSearchMode(true);
     closePopup();
   };
 
@@ -17,8 +21,16 @@ function CreatePopup({ isVisible, closePopup }: CreatePopupProps) {
       className={`create-popup ${isVisible ? 'active' : ''}`}
       onMouseLeave={closePopup}
     >
-      <PopupMenuItem label="New Group" icon={<SettingIcon />} handleClick={click} />
-      <PopupMenuItem label="New Private Chat" icon={<SettingIcon />} handleClick={click} />
+      <PopupMenuItem
+        label="New Group"
+        icon={<SettingIcon />}
+        handleClick={createNewGroup}
+      />
+      <PopupMenuItem
+        label="New Private Chat"
+        icon={<SettingIcon />}
+        handleClick={createNewPrivateChat}
+      />
     </nav>
   );
 }

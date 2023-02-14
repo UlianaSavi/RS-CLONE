@@ -12,9 +12,18 @@
     color: white;
     background-color: $accent-color;
     cursor: pointer;
+    opacity: 1;
+
+    visibility: visible;
 
     &:hover {
         background-color: $accent-hover-dark;
+    }
+
+    &.hidden {
+        opacity: 0;
+
+        visibility: hidden;
     }
 }
 

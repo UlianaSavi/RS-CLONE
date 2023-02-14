@@ -11,6 +11,7 @@ function Sidebar() {
   const [isActivePopup, setActivePopup] = useState(false);
   const [isActiveCreatePopup, setActiveCreatePopup] = useState(false);
   const [isSettings, setSettings] = useState(false);
+  const [isSearchMode, setSearchMode] = useState(false);
 
   function flipFlop() {
     setActivePopup(!isActivePopup);
@@ -31,23 +32,27 @@ function Sidebar() {
   return (
     <div className="sidebar">
       {
-          isSettings ? <SettingsSidebar onSidebarChange={() => changeSidebar()} />
-            : (
-              <>
-                <SidebarHeader callback={() => flipFlop()} />
-                <SidebarContent />
-                <CreateButton handleClick={toggleCreatePopup} />
-                <CreatePopup
-                  isVisible={isActiveCreatePopup}
-                  closePopup={closeCreatePopup}
-                />
-                <SettingsMenu
-                  isOpen={isActivePopup}
-                  onClose={() => setActivePopup(false)}
-                  onSidebarChange={() => changeSidebar()}
-                />
-              </>
-            )
+        isSettings ? <SettingsSidebar onSidebarChange={() => changeSidebar()} />
+          : (
+            <>
+              <SidebarHeader callback={() => flipFlop()} />
+              <SidebarContent />
+              <CreateButton
+                isVisible={!isSearchMode}
+                handleClick={toggleCreatePopup}
+              />
+              <CreatePopup
+                isVisible={isActiveCreatePopup}
+                closePopup={closeCreatePopup}
+                setSearchMode={setSearchMode}
+              />
+              <SettingsMenu
+                isOpen={isActivePopup}
+                onClose={() => setActivePopup(false)}
+                onSidebarChange={() => changeSidebar()}
+              />
+            </>
+          )
       }
     </div>
   );
