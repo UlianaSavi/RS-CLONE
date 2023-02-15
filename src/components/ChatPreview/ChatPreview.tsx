@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import * as firestore from 'firebase/firestore';
 import { useContext } from 'react';
 import Avatar from '../Avatar/Avatar';
@@ -9,13 +10,14 @@ import './ChatPreview.scss';
 interface ChatPreviewProps {
   data: UserChat,
   isActive: boolean,
-  setActiveUserID: React.Dispatch<React.SetStateAction<string>>
-  isSearchMode: boolean
+  setActiveUserID: React.Dispatch<React.SetStateAction<string>>,
+  isSearchMode: boolean,
   setSearchMode: React.Dispatch<React.SetStateAction<boolean>>,
+  onContextMenu: any
 }
 
 function ChatPreview({
-  data, isActive, setActiveUserID, isSearchMode, setSearchMode,
+  data, isActive, setActiveUserID, isSearchMode, setSearchMode, onContextMenu,
 }: ChatPreviewProps) {
   const {
     uid, displayName, photoURL,
@@ -47,11 +49,17 @@ function ChatPreview({
     return `${month} ${day}`;
   };
 
+  const handleContextMenu = (event: React.MouseEvent) => {
+    const combinedID = currentUser.uid > uid ? `${currentUser.uid}${uid}` : `${uid}${currentUser.uid}`;
+    onContextMenu(event, combinedID);
+  };
+
   return (
     <button
       type="button"
       className={`chat-preview ${isActive ? 'active' : ''}`}
       onClick={selectChat}
+      onContextMenu={handleContextMenu}
     >
       <div className="chat-preview-wrapper">
         <Avatar image={photoURL} />

@@ -22,6 +22,30 @@ interface ChatsListProps {
 }
 
 function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps) {
+  // Context menu
+  const [showMenu, setShowMenu] = useState(false);
+  const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
+  const [chatIdUnderRMK, setChatIdUnderRMK] = useState('');
+
+  const handleContextMenu = (event: React.MouseEvent<HTMLDivElement>, id: string) => {
+    const target = event.target as HTMLElement;
+    if (target.closest('.chat-preview') && !isSearchMode) {
+      event.preventDefault();
+      setChatIdUnderRMK(id);
+      setShowMenu(true);
+      setMenuPosition({ x: event.clientX, y: event.clientY });
+    }
+  };
+
+  const closeContextMenu = () => setShowMenu(false);
+
+  useEffect(() => {
+    document.addEventListener('click', closeContextMenu);
+    return () => {
+      document.removeEventListener('click', closeContextMenu);
+    };
+  }, []);
+
   const currentUser: User = useContext(AuthContext) as User;
   const { userID, setUserID } = useContext(UserContext);
   const { activeChatID } = useContext(ActiveChatContext);
@@ -38,6 +62,7 @@ function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps
           setActiveUserID={setUserID}
           isSearchMode={isSearchMode}
           setSearchMode={setSearchMode}
+          onContextMenu={handleContextMenu}
         />
       )));
   };
@@ -81,37 +106,16 @@ function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps
     showChatsList();
   }, [currentUser?.uid, activeChatID, userID, activeFolder, isSearchMode]);
 
-  // Context menu
-  const [showMenu, setShowMenu] = useState(false);
-  const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
-
-  const handleContextMenu = (event: React.MouseEvent<HTMLDivElement>) => {
-    const target = event.target as HTMLElement;
-    if (target.closest('.chat-preview')) {
-      event.preventDefault();
-      setShowMenu(true);
-      setMenuPosition({ x: event.clientX, y: event.clientY });
-    }
-  };
-
-  const closeContextMenu = () => setShowMenu(false);
-
-  useEffect(() => {
-    document.addEventListener('click', closeContextMenu);
-    return () => {
-      document.removeEventListener('click', closeContextMenu);
-    };
-  }, []);
-
   return (
     <>
-      <div className="chat-list" onContextMenu={handleContextMenu}>
+      <div className="chat-list">
         {chatsArr}
       </div>
       <ContextMenu
         isVisible={showMenu}
         handleMouseLeave={closeContextMenu}
         position={menuPosition}
+        chatID={chatIdUnderRMK}
       />
     </>
   );

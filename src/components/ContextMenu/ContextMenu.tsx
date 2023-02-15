@@ -6,10 +6,15 @@ interface ContextMenuProps {
   isVisible: boolean,
   handleMouseLeave: () => void,
   position: { x: number, y: number };
+  chatID: string
 }
 
-function ContextMenu({ isVisible, handleMouseLeave, position }: ContextMenuProps) {
-  const click = () => null;
+function ContextMenu({
+  isVisible, handleMouseLeave, position, chatID,
+}: ContextMenuProps) {
+  const deleteChat = () => {
+    console.log('underRMK', chatID);
+  };
 
   return (
     <nav
@@ -17,7 +22,7 @@ function ContextMenu({ isVisible, handleMouseLeave, position }: ContextMenuProps
       onMouseLeave={handleMouseLeave}
       style={{ top: `${position.y}px`, left: `${position.x}px` }}
     >
-      <PopupMenuItem label="Delete chat" icon={<TrashIcon />} handleClick={click} />
+      <PopupMenuItem label="Delete chat" icon={<TrashIcon />} handleClick={deleteChat} />
     </nav>
   );
 }
