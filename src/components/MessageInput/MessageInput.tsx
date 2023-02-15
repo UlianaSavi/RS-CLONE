@@ -41,15 +41,6 @@ function MessageInput() {
   const toggleAttachPopup = () => setVisibilityAttach(!isVisibleAttach);
   const toggleEmotionPopup = () => setVisibilityEmotion(!isVisibleEmotion);
 
-  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setMessageValue(e.target.value);
-    if (messageValue === '' || e.target.value === '') {
-      setIsAudio(!isAudio);
-    } else {
-      setIsAudio(isAudio);
-    }
-  };
-
   // Chat activation
   const currentUser: User = useContext(AuthContext) as User;
   const { userID } = useContext(UserContext);
@@ -116,6 +107,26 @@ function MessageInput() {
   const handleSendMessageBtn = async () => {
     await activateChat();
     await sendMessage(messageValue);
+    setIsAudio(!isAudio);
+    setMessageValue('');
+  };
+
+  const handleSendMessageTextArea = async (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === 'Enter') {
+      await activateChat();
+      await sendMessage(messageValue);
+      setIsAudio(!isAudio);
+      setMessageValue('');
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setMessageValue(e.target.value);
+    if (messageValue === '' || e.target.value === '') {
+      setIsAudio(!isAudio);
+    } else {
+      setIsAudio(isAudio);
+    }
   };
 
   return (
@@ -131,6 +142,7 @@ function MessageInput() {
           ref={textAreaRef}
           value={messageValue}
           onChange={handleChange}
+          onKeyDown={handleSendMessageTextArea}
           rows={1}
         />
         <button className="message-input__attach-btn" type="button" onClick={toggleAttachPopup}>
