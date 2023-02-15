@@ -14,7 +14,7 @@ export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProp
         <button type="button" className="header__arrow" onClick={handleEditClick}>
           <ArrowLeftIcon />
         </button>
-        <span className="header__text">Edit Profile</span>
+        <h3 className="header__text">Edit profile</h3>
       </div>
       <section className="edit-user-info">
         <div className="edit-user-info__img">
