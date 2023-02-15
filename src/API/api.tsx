@@ -103,18 +103,13 @@ export const logOut = async () => {
 };
 
 export const deleteChat = async (chatID: string, currentUserID: string, userID: string) => {
-  console.log(chatID);
   await deleteDoc(doc(db, 'chats', chatID));
 
-  const currentUserChatRef = doc(db, 'userChats', currentUserID);
-
-  await updateDoc(currentUserChatRef, {
+  await updateDoc(doc(db, 'userChats', currentUserID), {
     [chatID]: deleteField(),
   });
 
-  const userChatRef = doc(db, 'userChats', userID);
-
-  await updateDoc(userChatRef, {
+  await updateDoc(doc(db, 'userChats', userID), {
     [chatID]: deleteField(),
   });
 };

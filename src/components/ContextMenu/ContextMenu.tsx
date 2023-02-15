@@ -4,6 +4,7 @@ import { ReactComponent as TrashIcon } from '../../assets/icons/trash.svg';
 import { deleteChat } from '../../API/api';
 import { AuthContext } from '../../context/AuthContext';
 import { UserContext } from '../../context/UserContext';
+import { ActiveChatContext } from '../../context/ActiveChatContext';
 import type { User } from '../../types';
 import './ContextMenu.scss';
 
@@ -18,8 +19,14 @@ function ContextMenu({
   isVisible, handleMouseLeave, position, chatID,
 }: ContextMenuProps) {
   const currentUser: User = useContext(AuthContext) as User;
-  const { userID } = useContext(UserContext);
-  const handleDeleteBtn = () => deleteChat(chatID, currentUser.uid, userID);
+  const { userID, setUserID } = useContext(UserContext);
+  const { setActiveChatID } = useContext(ActiveChatContext);
+
+  const handleDeleteBtn = () => {
+    deleteChat(chatID, currentUser.uid, userID);
+    setUserID('');
+    setActiveChatID('');
+  };
 
   return (
     <nav

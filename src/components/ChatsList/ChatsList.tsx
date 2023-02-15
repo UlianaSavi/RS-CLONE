@@ -87,7 +87,7 @@ function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps
         const data = d.data();
         if (!data) return;
         const dataArray = Object.values(data);
-        if (dataArray.some((item) => item.lastMessage.date === null)) return;
+        if (dataArray.some((item) => !item.lastMessage?.date)) return;
 
         dataArray.forEach((item) => {
           chatsData.push(item);
