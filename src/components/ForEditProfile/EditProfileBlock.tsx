@@ -18,7 +18,7 @@ export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProp
       </div>
       <section className="edit-user-info">
         <div className="edit-user-info__img">
-          <img className="user-info__wrapper__ava" src={currentUser.photoURL !== null ? currentUser.photoURL : avatarPlaceholder} alt="User" />
+          <img className="edit-user-info__ava" src={currentUser.photoURL !== null ? currentUser.photoURL : avatarPlaceholder} alt="User" />
         </div>
         <div className="edit-uer-info__first-name">
           <input type="text" placeholder={currentUser.displayName} />

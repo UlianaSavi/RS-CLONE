@@ -37,3 +37,30 @@
     }
   }
 }
+
+.edit-user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 1.5rem;
+
+  background-color: $grey-main;
+
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: .5rem;
+  }
+
+  &__ava {
+    width: 7.5rem;
+    height: 7.5rem;
+    max-height: 240px;
+
+    border-radius: 50%;
+
+    object-fit: cover; 
+    filter: brightness(60%);
+  }
+}
