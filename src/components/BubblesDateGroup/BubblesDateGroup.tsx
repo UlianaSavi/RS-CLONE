@@ -21,7 +21,7 @@ export function BubblesDateGroup(props: {date: string}) {
         console.log('Hey! There are no messages here.');
         return;
       }
-      // .padStart(2, '0')
+
       setMessageArr(data.messages
         .map((message: Message) => (
           <BubblesMessage
