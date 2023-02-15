@@ -115,7 +115,7 @@ function MessageInput() {
 
   const handleSendMessageBtn = async () => {
     await activateChat();
-    await sendMessage('какой-то текст');
+    await sendMessage(messageValue);
   };
 
   return (
