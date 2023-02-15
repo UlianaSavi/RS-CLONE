@@ -34,6 +34,7 @@ export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProp
           <img className="edit-user-info__ava" src={currentUser.photoURL !== null ? currentUser.photoURL : avatarPlaceholder} alt="User" />
           <button type="button" className="edit-user-info__add-photo-btn">
             <AddPhotoIcon />
+            <input type="file" className="edit-user-info__input-file" />
           </button>
         </div>
         <FormInput type="text" id="name" label="Name" value={name.split(',')[0]} setValue={setName} />
