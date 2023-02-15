@@ -1,9 +1,13 @@
+import { useContext } from 'react';
 import { ArrowLeftIcon } from '../../assets/icons/icons';
 import './EditProfileBlock.scss';
-
 import { SettingsHeaderProps } from '../../types';
+import { AuthContext } from '../../context/AuthContext';
+import avatarPlaceholder from '../../assets/icons/avatar-placeholder.png';
+import type { User } from '../../types';
 
 export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProps) {
+  const currentUser: User = useContext(AuthContext) as User;
   return (
     <div className="edit-profile">
       <div className="header">
@@ -13,7 +17,9 @@ export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProp
         <span className="header__text">Edit Profile</span>
       </div>
       <section className="edit-user-info">
-        <div className="edit-user-info__img">Photo</div>
+        <div className="edit-user-info__img">
+          <img className="user-info__wrapper__ava" src={currentUser.photoURL !== null ? currentUser.photoURL : avatarPlaceholder} alt="User" />
+        </div>
         <div className="edit-uer-info__first-name">Masik</div>
         <div className="edit-user-info__last-name">Kolen</div>
         <div className="edit-user-info__bio">Bio</div>
