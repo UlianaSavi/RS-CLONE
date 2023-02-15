@@ -1,5 +1,10 @@
+import { useContext } from 'react';
 import PopupMenuItem from '../PopupMenuItem/PopupMenuItem';
 import { ReactComponent as TrashIcon } from '../../assets/icons/trash.svg';
+import { deleteChat } from '../../API/api';
+import { AuthContext } from '../../context/AuthContext';
+import { UserContext } from '../../context/UserContext';
+import type { User } from '../../types';
 import './ContextMenu.scss';
 
 interface ContextMenuProps {
@@ -12,9 +17,9 @@ interface ContextMenuProps {
 function ContextMenu({
   isVisible, handleMouseLeave, position, chatID,
 }: ContextMenuProps) {
-  const deleteChat = () => {
-    console.log('underRMK', chatID);
-  };
+  const currentUser: User = useContext(AuthContext) as User;
+  const { userID } = useContext(UserContext);
+  const handleDeleteBtn = () => deleteChat(chatID, currentUser.uid, userID);
 
   return (
     <nav
@@ -22,7 +27,7 @@ function ContextMenu({
       onMouseLeave={handleMouseLeave}
       style={{ top: `${position.y}px`, left: `${position.x}px` }}
     >
-      <PopupMenuItem label="Delete chat" icon={<TrashIcon />} handleClick={deleteChat} />
+      <PopupMenuItem label="Delete chat" icon={<TrashIcon />} handleClick={handleDeleteBtn} />
     </nav>
   );
 }
