@@ -39,15 +39,6 @@ export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProp
           Example: 23 y.o. designer from San Francisco
         </div>
       </section>
-      <section className="edit-username">
-        <span>Username</span>
-        <div className="edit-username__username">
-          <input type="text" placeholder="username" />
-        </div>
-        <div className="edit-username__descr">
-          You can choose a username on Telegram. If you do, people will be able to find you by this username and contact you without needing your phone number.You can use a–z, 0–9 and underscores. Minimum length is 5 characters.This link opens a chat with you:https://t.me/winiceame
-        </div>
-      </section>
     </div>
   );
 }
