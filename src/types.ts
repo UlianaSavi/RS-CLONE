@@ -1,3 +1,5 @@
+import * as firestore from 'firebase/firestore';
+
 export interface User {
   uid: string,
   displayName: string,
@@ -9,7 +11,7 @@ export interface User {
 export interface UserChat {
   userInfo: User,
   lastMessage: {
-    date: number,
+    date: firestore.Timestamp,
     text: string
   }
 }

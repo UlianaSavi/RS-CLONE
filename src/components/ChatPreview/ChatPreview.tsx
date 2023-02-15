@@ -1,3 +1,4 @@
+import * as firestore from 'firebase/firestore';
 import { useContext } from 'react';
 import Avatar from '../Avatar/Avatar';
 import { AuthContext } from '../../context/AuthContext';
@@ -30,7 +31,7 @@ function ChatPreview({
     setSearchMode(false);
   };
 
-  const convertTimestamp = (timestamp: any): string => {
+  const convertTimestamp = (timestamp: firestore.Timestamp): string => {
     const currentDate = timestamp.toDate();
     const now = new Date();
 
