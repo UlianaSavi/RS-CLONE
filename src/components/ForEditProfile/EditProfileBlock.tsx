@@ -20,17 +20,22 @@ export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProp
         <div className="edit-user-info__img">
           <img className="edit-user-info__ava" src={currentUser.photoURL !== null ? currentUser.photoURL : avatarPlaceholder} alt="User" />
         </div>
-        <div className="edit-uer-info__first-name">
-          <input type="text" placeholder={currentUser.displayName} />
-        </div>
-        <div className="edit-user-info__last-name">
-          <input type="text" placeholder="Last name" />
-        </div>
-        <div className="edit-user-info__bio">
-          <input type="text" placeholder="Bio" />
-        </div>
+        <form className="edit-user-info__input-wrapper" id="first-name">
+          <input type="text" value={currentUser.displayName} className="edit-user-info__input" placeholder="First Name" />
+          <label htmlFor="first-name" className="edit-user-info__label">First name (required)</label>
+        </form>
+        <form className="edit-user-info__input-wrapper" id="last-name">
+          <input type="text" placeholder="Last name" className="edit-user-info__input" />
+          <label htmlFor="last-name" className="edit-user-info__label">Last name (optional)</label>
+        </form>
+        <form className="edit-user-info__input-wrapper" id="bio">
+          <input type="text" placeholder="Bio" className="edit-user-info__input" />
+          <label htmlFor="bio" className="edit-user-info__label">Bio</label>
+          <div className="edit-user-info__max-length">70</div>
+        </form>
         <div className="edit-user-info__descr">
           Any details such as age, occupation or city.
+          <br />
           Example: 23 y.o. designer from San Francisco
         </div>
       </section>

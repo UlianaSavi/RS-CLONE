@@ -63,4 +63,84 @@
     object-fit: cover; 
     filter: brightness(60%);
   }
+
+  &__input-wrapper {
+    position: relative;
+
+    display: flex;
+
+    &:hover {
+      .edit-user-info__label,
+      .edit-user-info__max-length,
+      ::placeholder {
+        color: $accent-color;
+      }
+    }
+  }
+
+  &__input {
+    flex-grow: 1;
+    padding: 13.4px 11px;
+
+    color: $text-color-white;
+    background: none;
+    border: 1px solid $grey-lite;
+    border-radius: 0.75rem;
+
+    outline: none;
+
+    &:hover {
+      border: 1px solid $accent-color;
+
+      .edit-user-info__label,
+      .edit-user-info__max-length,
+      ::placeholder {
+        color: $accent-color;
+      }
+    }
+
+    &:focus {
+      border: 1px solid $accent-color;
+    }
+  }
+
+  &__label,
+  &__max-length {
+    position: absolute;
+    
+    font-weight: 500;
+
+    color: $grey-lite;
+    background-color: $grey-main;
+    padding: 0 2px;
+  }
+
+  &__label {
+    top: -10px;
+    left: 5px;
+
+    font-size: .71rem;
+  }
+
+  &__max-length {
+    bottom: -10px;
+    right: 10px;
+
+    font-size: .75rem;
+  }
+
+  &__descr {
+    font-size: .83rem;
+    font-weight: 500;
+
+    padding-bottom: 1.5rem;
+
+    color: $grey-lite;
+  }
+}
+
+.edit-user-info__input:focus + .edit-user-info__label,
+.edit-user-info__input:focus ~ .edit-user-info__max-length,
+.edit-user-info__input:focus::placeholder {
+  color: $accent-color;
 }
