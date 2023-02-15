@@ -86,6 +86,8 @@
     }
 
     .icon {
+      margin-right: 0;
+
       transform: scale(2);
       transition: transform .15s linear;
     }
