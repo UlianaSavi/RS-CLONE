@@ -13,9 +13,11 @@ function ChatInfo() {
   const [userInfo, setUserInfo] = useState<User | null>(null);
 
   const getData = async () => {
-    const user = await getDoc(doc(db, 'users', userID));
-    const userData = user.data() as User;
-    setUserInfo(userData);
+    if (activeChatID) {
+      const user = await getDoc(doc(db, 'users', userID));
+      const userData = user.data() as User;
+      setUserInfo(userData);
+    }
   };
 
   useEffect(() => {
