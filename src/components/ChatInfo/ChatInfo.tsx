@@ -10,12 +10,12 @@ import './ChatInfo.scss';
 function ChatInfo() {
   const { activeChatID } = useContext(ActiveChatContext);
   const { userID } = useContext(UserContext);
-  const [test, setTest] = useState<User | null>(null);
+  const [userInfo, setUserInfo] = useState<User | null>(null);
 
   const getData = async () => {
     const user = await getDoc(doc(db, 'users', userID));
     const userData = user.data() as User;
-    setTest(userData);
+    setUserInfo(userData);
   };
 
   useEffect(() => {
@@ -24,9 +24,9 @@ function ChatInfo() {
 
   return (
     <div className="chat-info">
-      <Avatar image={test?.photoURL || ''} />
+      <Avatar image={userInfo?.photoURL || ''} />
       <div className="chat-info__info">
-        <div className="chat-info__title">{test?.displayName}</div>
+        <div className="chat-info__title">{userInfo?.displayName}</div>
         <div className="chat-info__status">Online</div>
       </div>
     </div>
