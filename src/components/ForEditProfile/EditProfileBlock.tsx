@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { ArrowLeftIcon } from '../../assets/icons/icons';
+import { ArrowLeftIcon, AddPhotoIcon } from '../../assets/icons/icons';
 import './EditProfileBlock.scss';
 import { SettingsHeaderProps } from '../../types';
 import { AuthContext } from '../../context/AuthContext';
@@ -19,6 +19,9 @@ export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProp
       <section className="edit-user-info">
         <div className="edit-user-info__img">
           <img className="edit-user-info__ava" src={currentUser.photoURL !== null ? currentUser.photoURL : avatarPlaceholder} alt="User" />
+          <button type="button" className="edit-user-info__add-photo-btn">
+            <AddPhotoIcon />
+          </button>
         </div>
         <form className="edit-user-info__input-wrapper" id="first-name">
           <input type="text" value={currentUser.displayName} className="edit-user-info__input" placeholder="First Name" />
