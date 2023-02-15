@@ -13,7 +13,9 @@
 
   &__wrapper {
     box-sizing: border-box;
-    max-width: 80%;
+    width: 100%;
+    max-width: 660px;
+    margin-right: 60px;
     padding: 20px;
 
     overflow-y: scroll;

@@ -1,11 +1,4 @@
-export interface UserData {
-  id: number,
-  name: string,
-  avatar: string,
-  lastMessage: string,
-  timeOfLastMessage: string,
-  unreadMessages: number
-}
+import * as firestore from 'firebase/firestore';
 
 export interface User {
   uid: string,
@@ -15,15 +8,27 @@ export interface User {
   isOnline: boolean
 }
 
+export interface UserChat {
+  userInfo: User,
+  lastMessage: {
+    date: firestore.Timestamp,
+    text: string
+  }
+}
+
 export interface Users {
   [uid: string]: User
 }
+export interface IMessageDate {
+  nanoseconds: number,
+  seconds: number
+}
 
 export interface Message {
-  conversationID: string,
+  date: IMessageDate,
+  id: string,
   senderID: string,
-  content: string,
-  timestamp: number
+  text: string
 }
 
 export interface Messages {
