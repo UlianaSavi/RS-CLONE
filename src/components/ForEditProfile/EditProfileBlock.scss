@@ -43,6 +43,7 @@
   flex-direction: column;
   gap: 1.5rem;
   padding: 0 1.5rem;
+  padding-bottom: 1.5rem;
 
   background-color: $grey-main;
 
@@ -53,6 +54,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: .5rem;
+    margin-top: 2rem;
   }
 
   &__ava {
@@ -77,13 +79,15 @@
 
     cursor: pointer;
 
+    &:hover {
+      .icon {
+        transform: scale(2.5);
+      }
+    }
+
     .icon {
       transform: scale(2);
       transition: transform .15s linear;
-
-      &:hover {
-        transform: scale(2.3);
-      }
     }
   }
 
@@ -107,10 +111,11 @@
 
     color: $text-color-white;
     background: none;
-    border: 1px solid $grey-lite;
-    border-radius: 0.75rem;
+    border: 1px solid $input-border-color;
+    border-radius: 10px;
 
     outline: none;
+    caret-color: $accent-color;
 
     &:hover {
       border: 1px solid $accent-color;
@@ -127,38 +132,26 @@
     }
   }
 
-  &__label,
-  &__max-length {
+  &__label {
     position: absolute;
-    
+    top: -7px;
+    left: 13px;
+
+    font-size: .71rem;
     font-weight: 500;
 
-    color: $grey-lite;
+    color: $label-color;
     background-color: $grey-main;
     padding: 0 2px;
   }
 
-  &__label {
-    top: -10px;
-    left: 5px;
-
-    font-size: .71rem;
-  }
-
-  &__max-length {
-    bottom: -10px;
-    right: 10px;
-
-    font-size: .75rem;
-  }
-
   &__descr {
-    font-size: .83rem;
+    font-size: .85rem;
     font-weight: 500;
 
-    padding-bottom: 1.5rem;
+    padding: .7rem 1.5rem;
 
-    color: $grey-lite;
+    color: $label-color;
   }
 }
 
