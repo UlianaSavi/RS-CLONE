@@ -6,15 +6,25 @@ import { AuthContext } from '../../context/AuthContext';
 import avatarPlaceholder from '../../assets/icons/avatar-placeholder.png';
 import type { User } from '../../types';
 import FormInput from '../FormInput/FormInput';
+import { changeProfileData } from '../../API/api';
 
 export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProps) {
   const currentUser: User = useContext(AuthContext) as User;
   const [name, setName] = useState(currentUser.displayName);
   const [bio, setBio] = useState('');
+
   return (
     <div className="edit-profile">
       <div className="header">
-        <button type="button" className="header__arrow" onClick={handleEditClick}>
+        <button
+          type="button"
+          className="header__arrow"
+          onClick={() => {
+            handleEditClick();
+            changeProfileData(name);
+            currentUser.displayName = name;
+          }}
+        >
           <ArrowLeftIcon />
         </button>
         <h3 className="header__text">Edit Profile</h3>

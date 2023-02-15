@@ -101,3 +101,23 @@ export const logOut = async () => {
     console.log(errorCode, errorMessage);
   });
 };
+
+export const changeProfileData = async (newName?: string, photo?: string) => {
+  if (newName && auth.currentUser) {
+    await updateProfile(auth.currentUser, {
+      displayName: newName,
+    });
+    await updateDoc(doc(db, 'users', auth.currentUser.uid), {
+      displayName: newName,
+    });
+  }
+
+  if (photo && auth.currentUser) {
+    await updateProfile(auth.currentUser, {
+      photoURL: photo,
+    });
+    await updateDoc(doc(db, 'users', auth.currentUser.uid), {
+      photoURL: photo,
+    });
+  }
+};
