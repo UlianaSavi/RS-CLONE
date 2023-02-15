@@ -1,12 +1,9 @@
 import { logOut } from '../../../API/api';
 import { ArrowLeftIcon, EditIcon, LogOutIcon } from '../../../assets/icons/icons';
 import './SettingsHeader.scss';
+import { SettingsHeaderProps } from '../../../types';
 
-interface SettingsHeaderProps {
-  handleClick: () => void
-}
-
-function SettingsHeader({ handleClick }: SettingsHeaderProps) {
+function SettingsHeader({ handleClick, handleEditClick }: SettingsHeaderProps) {
   return (
     <div className="settings-header">
       {/* Эту кнопку можно заменить на компонент SidebarCloseButton */}
@@ -14,7 +11,7 @@ function SettingsHeader({ handleClick }: SettingsHeaderProps) {
         <ArrowLeftIcon />
       </button>
       <div className="settings-header__title"><span>Settings</span></div>
-      <button type="button" className="settings-header__edit-button">
+      <button type="button" className="settings-header__edit-button" onClick={handleEditClick}>
         <EditIcon />
       </button>
       <button type="button" className="settings-header__logout-button" onClick={logOut} data-title="LogOut">
