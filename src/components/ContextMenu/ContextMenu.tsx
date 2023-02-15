@@ -1,5 +1,5 @@
 import PopupMenuItem from '../PopupMenuItem/PopupMenuItem';
-import { SettingsIcon } from '../../assets/icons/icons';
+import { ReactComponent as TrashIcon } from '../../assets/icons/trash.svg';
 import './ContextMenu.scss';
 
 interface ContextMenuProps {
@@ -17,8 +17,7 @@ function ContextMenu({ isVisible, handleMouseLeave, position }: ContextMenuProps
       onMouseLeave={handleMouseLeave}
       style={{ top: `${position.y}px`, left: `${position.x}px` }}
     >
-      <PopupMenuItem label="Make as unread" icon={<SettingsIcon />} handleClick={click} />
-      <PopupMenuItem label="Delete chat" icon={<SettingsIcon />} handleClick={click} />
+      <PopupMenuItem label="Delete chat" icon={<TrashIcon />} handleClick={click} />
     </nav>
   );
 }
