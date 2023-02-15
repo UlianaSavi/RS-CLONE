@@ -20,9 +20,15 @@ export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProp
         <div className="edit-user-info__img">
           <img className="user-info__wrapper__ava" src={currentUser.photoURL !== null ? currentUser.photoURL : avatarPlaceholder} alt="User" />
         </div>
-        <div className="edit-uer-info__first-name">Masik</div>
-        <div className="edit-user-info__last-name">Kolen</div>
-        <div className="edit-user-info__bio">Bio</div>
+        <div className="edit-uer-info__first-name">
+          <input type="text" placeholder={currentUser.displayName} />
+        </div>
+        <div className="edit-user-info__last-name">
+          <input type="text" placeholder="Last name" />
+        </div>
+        <div className="edit-user-info__bio">
+          <input type="text" placeholder="Bio" />
+        </div>
         <div className="edit-user-info__descr">
           Any details such as age, occupation or city.
           Example: 23 y.o. designer from San Francisco
@@ -31,7 +37,7 @@ export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProp
       <section className="edit-username">
         <span>Username</span>
         <div className="edit-username__username">
-          winiceame
+          <input type="text" placeholder="username" />
         </div>
         <div className="edit-username__descr">
           You can choose a username on Telegram. If you do, people will be able to find you by this username and contact you without needing your phone number.You can use a–z, 0–9 and underscores. Minimum length is 5 characters.This link opens a chat with you:https://t.me/winiceame
