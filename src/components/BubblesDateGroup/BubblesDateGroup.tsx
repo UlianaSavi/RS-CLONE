@@ -21,12 +21,12 @@ export function BubblesDateGroup(props: {date: string}) {
         console.log('Hey! There are no messages here.');
         return;
       }
-
+      // .padStart(2, '0')
       setMessageArr(data.messages
         .map((message: Message) => (
           <BubblesMessage
             message={message.text}
-            time={`${(new Date(message.date.seconds * 1000)).getHours()}:${new Date(message.date.seconds * 1000).getMinutes()}`}
+            time={`${(new Date(message.date.seconds * 1000)).getHours().toString().padStart(2, '0')}:${new Date(message.date.seconds * 1000).getMinutes().toString().padStart(2, '0')}`}
             isRead
             isCurrenUser={message.senderID !== userID}
           />
