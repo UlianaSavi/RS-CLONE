@@ -116,6 +116,7 @@ function MessageInput() {
 
   const handleSendMessageTextArea = async (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && messageValue.trim() !== '') {
+      e.preventDefault();
       await activateChat();
       await sendMessage(messageValue);
       setIsAudio(!isAudio);
