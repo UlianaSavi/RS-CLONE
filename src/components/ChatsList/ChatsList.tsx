@@ -62,6 +62,8 @@ function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps
         const data = d.data();
         if (!data) return;
         const dataArray = Object.values(data);
+        if (dataArray.some((item) => item.lastMessage.date === null)) return;
+
         dataArray.forEach((item) => {
           chatsData.push(item);
         });
@@ -77,7 +79,7 @@ function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps
 
   useEffect(() => {
     showChatsList();
-  }, [currentUser?.uid, userID, activeChatID, activeFolder, isSearchMode]);
+  }, [currentUser?.uid, activeChatID, userID, activeFolder, isSearchMode]);
 
   // Context menu
   const [showMenu, setShowMenu] = useState(false);
