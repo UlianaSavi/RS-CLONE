@@ -1,12 +1,12 @@
 import './ChatWindow.scss';
 import MessageInput from '../MessageInput/MessageInput';
-import BubblesDateGroup from '../BubblesDateGroup/BubblesDateGroup';
+import { BubblesDateGroup } from '../BubblesDateGroup/BubblesDateGroup';
 
 function ChatWindow() {
   return (
     <div className="chat-window">
       <div className="chat-window__wrapper">
-        <BubblesDateGroup date="Yesterday" />
+        {/* <BubblesDateGroup date="Yesterday" /> */}
         <BubblesDateGroup date="Today" />
       </div>
       <MessageInput />
