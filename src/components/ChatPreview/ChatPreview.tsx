@@ -1,12 +1,13 @@
+import * as firestore from 'firebase/firestore';
 import { useContext } from 'react';
 import Avatar from '../Avatar/Avatar';
 import { AuthContext } from '../../context/AuthContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
-import type { User } from '../../types';
+import type { User, UserChat } from '../../types';
 import './ChatPreview.scss';
 
 interface ChatPreviewProps {
-  data: User,
+  data: UserChat,
   isActive: boolean,
   setActiveUserID: React.Dispatch<React.SetStateAction<string>>
   isSearchMode: boolean
@@ -18,7 +19,7 @@ function ChatPreview({
 }: ChatPreviewProps) {
   const {
     uid, displayName, photoURL,
-  } = data;
+  } = data.userInfo;
 
   const { setActiveChatID } = useContext(ActiveChatContext);
   const currentUser: User = useContext(AuthContext) as User;
@@ -28,6 +29,22 @@ function ChatPreview({
     setActiveUserID(uid);
     setActiveChatID(combinedID);
     setSearchMode(false);
+  };
+
+  const convertTimestamp = (timestamp: firestore.Timestamp): string => {
+    const currentDate = timestamp.toDate();
+    const now = new Date();
+
+    if (currentDate.getFullYear() === now.getFullYear()
+      && currentDate.getMonth() === now.getMonth()
+      && currentDate.getDate() === now.getDate()) {
+      const hours = currentDate.getHours().toString().padStart(2, '0');
+      const minutes = currentDate.getMinutes().toString().padStart(2, '0');
+      return `${hours}:${minutes}`;
+    }
+    const month = currentDate.toLocaleString('default', { month: 'short' });
+    const day = currentDate.getDate();
+    return `${month} ${day}`;
   };
 
   return (
@@ -42,13 +59,13 @@ function ChatPreview({
           <div className="chat-preview__title">{displayName}</div>
           {isSearchMode
             ? <div className="chat-preview__online-status">Online</div>
-            : <div className="chat-preview__last-message">last message</div>}
+            : <div className="chat-preview__last-message">{data?.lastMessage.text}</div>}
         </div>
       </div>
       {!isSearchMode && (
       <div className="chat-preview__info">
-        <div className="chat-preview__messenge-time">00:00</div>
-        <div className="chat-preview__messenge-num">0</div>
+        <div className="chat-preview__messenge-time">{convertTimestamp(data?.lastMessage.date)}</div>
+        {/* <div className="chat-preview__messenge-num">0</div> */}
       </div>
       )}
     </button>
