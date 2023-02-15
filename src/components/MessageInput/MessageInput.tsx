@@ -105,14 +105,17 @@ function MessageInput() {
   };
 
   const handleSendMessageBtn = async () => {
-    await activateChat();
-    await sendMessage(messageValue);
-    setIsAudio(!isAudio);
-    setMessageValue('');
+    if (messageValue.trim() !== '') {
+      await activateChat();
+      await sendMessage(messageValue);
+      setIsAudio(!isAudio);
+      setMessageValue('');
+    }
+    return null;
   };
 
   const handleSendMessageTextArea = async (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' && messageValue.trim() !== '') {
       await activateChat();
       await sendMessage(messageValue);
       setIsAudio(!isAudio);
