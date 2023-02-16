@@ -9,4 +9,8 @@
   overflow: hidden;
 
   background-color: $grey-dark;
+
+  @media (max-width: 1000px) {
+    max-width: 400px;
+  }
 }
