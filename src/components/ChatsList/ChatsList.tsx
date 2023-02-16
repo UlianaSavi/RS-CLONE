@@ -2,7 +2,7 @@
 /* eslint-disable no-undef */
 import { useState, useEffect, useContext } from 'react';
 import {
-  collection, query, where, getDocs, onSnapshot, doc, DocumentData,
+  collection, query, where, getDocs, onSnapshot, doc, DocumentData, getDoc,
 } from 'firebase/firestore';
 import { db } from '../../firebaseConfig';
 import { AuthContext } from '../../context/AuthContext';
@@ -91,10 +91,15 @@ function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps
         const dataArray = Object.values(data);
         if (dataArray.some((item) => !item.lastMessage?.date)) return;
 
-        dataArray.forEach((item) => {
-          chatsData.push(item);
+        const promises = dataArray.map(async (item) => {
+          const user = await getDoc(doc(db, 'users', item.userInfo.uid));
+          const userData = user.data() as User;
+          chatsData.push({ lastMessage: item.lastMessage, userInfo: userData });
         });
-        updateChatsList(chatsData.sort((a, b) => b.lastMessage.date - a.lastMessage.date));
+
+        Promise.all(promises).then(() => {
+          updateChatsList(chatsData.sort((a, b) => b.lastMessage.date - a.lastMessage.date));
+        });
       });
     }
   };
