@@ -71,7 +71,7 @@ function DeletionPopup({
           <h2 className="deletion-popup__header">Delete chat</h2>
         </div>
         <div className="deletion-popup__description">
-          {`Are you shure you want to delete the chat with ${userData?.displayName}?`}
+          {`Are you sure you want to delete the chat with ${userData?.displayName}?`}
         </div>
         <div className="deletion-popup__checkbox-wrapper">
           <input

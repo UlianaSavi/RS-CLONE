@@ -7,7 +7,7 @@
     z-index: 100;
 
     width: 240px;
-    padding: 8px;
+    padding: 8px 20px 12px;
 
     background: $grey-main;
     border-radius: 10px;
@@ -17,6 +17,11 @@
     display: none;
 
     transform: translate(-50%, -50%);
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+    }
 
     &__background {
       position: fixed;
@@ -33,6 +38,10 @@
       display: flex;
       align-items: center;
       gap: 20px;
+    }
+
+    &__header {
+      font-size: 20px;
     }
 
     &__description {
