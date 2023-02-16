@@ -50,8 +50,8 @@ function ChatPreview({
   };
 
   const handleContextMenu = (event: React.MouseEvent) => {
-    const combinedID = currentUser.uid > uid ? `${currentUser.uid}${uid}` : `${uid}${currentUser.uid}`;
-    onContextMenu(event, combinedID);
+    onContextMenu(event, uid);
+    console.log(uid);
   };
 
   return (

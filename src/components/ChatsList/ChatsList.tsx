@@ -27,13 +27,13 @@ function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps
   const [showMenu, setShowMenu] = useState(false);
   const [showDeletionPopup, setShowDeletionPopup] = useState(false);
   const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
-  const [chatIdUnderRMK, setChatIdUnderRMK] = useState('');
+  const [userIdUnderRMK, setUserIdUnderRMK] = useState('');
 
   const handleContextMenu = (event: React.MouseEvent<HTMLDivElement>, id: string) => {
     const target = event.target as HTMLElement;
     if (target.closest('.chat-preview') && !isSearchMode) {
       event.preventDefault();
-      setChatIdUnderRMK(id);
+      setUserIdUnderRMK(id);
       setShowMenu(true);
       setMenuPosition({ x: event.clientX, y: event.clientY });
     }
@@ -121,7 +121,7 @@ function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps
       />
       <DeletionPopup
         isVisible={showDeletionPopup}
-        chatID={chatIdUnderRMK}
+        userID={userIdUnderRMK}
       />
     </>
   );

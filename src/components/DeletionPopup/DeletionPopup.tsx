@@ -10,14 +10,14 @@ import './DeletionPopup.scss';
 
 interface ContextMenuProps {
   isVisible: boolean,
-  chatID: string
+  userID: string
 }
 
 function DeletionPopup({
-  isVisible, chatID,
+  isVisible, userID,
 }: ContextMenuProps) {
   const currentUser: User = useContext(AuthContext) as User;
-  const { userID, setUserID } = useContext(UserContext);
+  const { setUserID } = useContext(UserContext);
   const [userData, setUserData] = useState<User | null>(null);
   const { setActiveChatID } = useContext(ActiveChatContext);
 
@@ -31,10 +31,12 @@ function DeletionPopup({
 
   useEffect(() => {
     getUserData();
+    console.log(userData?.displayName);
   }, [userID]);
 
   const handleDeleteBtn = () => {
-    deleteChat(chatID, currentUser.uid, userID);
+    const combinedID = currentUser.uid > userID ? `${currentUser.uid}${userID}` : `${userID}${currentUser.uid}`;
+    deleteChat(combinedID, currentUser.uid, userID);
     setUserID('');
     setActiveChatID('');
   };
