@@ -24,6 +24,7 @@ function DeletionPopup({
   const { userID, setUserID } = useContext(UserContext);
   const [userData, setUserData] = useState<User | null>(null);
   const { setActiveChatID } = useContext(ActiveChatContext);
+  const [checked, setChecked] = useState(false);
 
   const getUserData = async () => {
     if (userIdUnderRMK) {
@@ -39,23 +40,31 @@ function DeletionPopup({
 
   const handleDeleteBtn = () => {
     const combinedID = currentUser.uid > userIdUnderRMK ? `${currentUser.uid}${userIdUnderRMK}` : `${userIdUnderRMK}${currentUser.uid}`;
-    deleteChat(combinedID, currentUser.uid, userIdUnderRMK, false);
+    deleteChat(combinedID, currentUser.uid, userIdUnderRMK, checked);
     setVisibility(false);
+    setChecked(false);
     if (userIdUnderRMK === userID) {
       setUserID('');
       setActiveChatID('');
     }
   };
 
-  const closePopup = (event: React.MouseEvent<HTMLDivElement>) => {
+  const closePopup = () => {
+    setVisibility(false);
+    setChecked(false);
+  };
+
+  const handleBg = (event: React.MouseEvent<HTMLDivElement>) => {
     const target = event.target as HTMLElement;
     if (!target.closest('.deletion-popup')) {
-      setVisibility(false);
+      closePopup();
     }
   };
 
+  const hanldeCheckbox = () => setChecked(!checked);
+
   return (
-    <div className={`${isVisible ? 'deletion-popup__background' : ''}`} onClick={closePopup}>
+    <div className={`${isVisible ? 'deletion-popup__background' : ''}`} onClick={handleBg}>
       <div className={`deletion-popup ${isVisible ? 'active' : ''}`}>
         <div className="deletion-popup__header-wrapper">
           <Avatar image={userData?.photoURL || ''} />
@@ -64,11 +73,22 @@ function DeletionPopup({
         <div className="deletion-popup__description">
           {`Are you shure you want to delete the chat with ${userData?.displayName}?`}
         </div>
+        <div className="deletion-popup__checkbox-wrapper">
+          <input
+            type="checkbox"
+            id="delete-options"
+            checked={checked}
+            onChange={hanldeCheckbox}
+          />
+          <label htmlFor="delete-options">
+            {`Also delete for ${userData?.displayName}`}
+          </label>
+        </div>
         <div className="deletion-popup__buttons-wrapper">
           <button
             type="button"
             className="deletion-popup__button"
-            onClick={() => setVisibility(false)}
+            onClick={closePopup}
           >
             CANCEL
           </button>

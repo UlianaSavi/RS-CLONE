@@ -39,6 +39,20 @@
       margin-bottom: 10px;
     }
 
+    &__checkbox-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 5px;
+
+      cursor: pointer;
+
+      input,
+      label {
+        cursor: pointer;
+      }
+    }
+
     &__buttons-wrapper {
       display: flex;
       justify-content: space-around;
