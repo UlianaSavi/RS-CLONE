@@ -54,9 +54,9 @@ export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProp
             />
           </button>
         </div>
-        <FormInput type="text" id="name" label="Name" value={name} setValue={setName} />
-        <FormInput type="text" id="last-name" label="Last Name" value={lastName} setValue={setLastName} />
-        <FormInput type="text" id="bio" label="Bio (optional)" value={bio} setValue={setBio} />
+        <FormInput type="text" id="name" label="Name" value={name} setValue={setName} mode="edit" />
+        <FormInput type="text" id="last-name" label="Last Name" value={lastName} setValue={setLastName} mode="edit" />
+        <FormInput type="text" id="bio" label="Bio (optional)" value={bio} setValue={setBio} mode="edit" />
       </section>
       <div className="edit-user-info__descr">
         Any details such as age, occupation or city.

@@ -8,16 +8,23 @@ interface FormInputProps {
   label: string;
   value: string;
   setValue?: (value: string) => void;
+  mode?: string;
 }
 
 function FormInput({
-  type, id, label, value, setValue,
+  type, id, label, value, setValue, mode,
 }: FormInputProps) {
   const [defaultValue, setdefaultValue] = useState(value);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setdefaultValue(e.target.value);
   };
+
+  function lostFocusAfterEnter(event: React.KeyboardEvent<HTMLInputElement>) {
+    if (event.key === 'Enter' && mode === 'edit') {
+      (event.target as HTMLInputElement).blur();
+    }
+  }
 
   useEffect(() => {
     setValue?.(defaultValue);
@@ -32,6 +39,7 @@ function FormInput({
         value={defaultValue}
         onChange={handleChange}
         placeholder=" "
+        onKeyDown={(event) => lostFocusAfterEnter(event)}
       />
       <label htmlFor={id} className="form-input__label">{label}</label>
     </div>
