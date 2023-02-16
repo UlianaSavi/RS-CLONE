@@ -102,14 +102,20 @@ export const logOut = async () => {
   });
 };
 
-export const deleteChat = async (chatID: string, currentUserID: string, userID: string) => {
-  await deleteDoc(doc(db, 'chats', chatID));
-
+export const deleteChat = async (
+  chatID: string,
+  currentUserID: string,
+  userID: string,
+  forBoth: boolean,
+) => {
   await updateDoc(doc(db, 'userChats', currentUserID), {
     [chatID]: deleteField(),
   });
 
-  await updateDoc(doc(db, 'userChats', userID), {
-    [chatID]: deleteField(),
-  });
+  if (forBoth) {
+    await deleteDoc(doc(db, 'chats', chatID));
+    await updateDoc(doc(db, 'userChats', userID), {
+      [chatID]: deleteField(),
+    });
+  }
 };

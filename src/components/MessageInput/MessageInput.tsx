@@ -49,9 +49,10 @@ function MessageInput() {
   const activateChat = async () => {
     const combinedID = currentUser.uid > userID ? `${currentUser.uid}${userID}` : `${userID}${currentUser.uid}`;
     setActiveChatID(combinedID);
-    const res = await getDoc(doc(db, 'chats', activeChatID));
+    const chat = await getDoc(doc(db, 'chats', activeChatID));
+    const userChat = await getDoc(doc(db, 'userChats', userID));
 
-    if (!res.exists()) {
+    if (!chat.exists()) {
       await setDoc(doc(db, 'chats', activeChatID), { messages: [] });
       const user = await getDoc(doc(db, 'users', userID));
       const userData = user.data();
@@ -65,7 +66,9 @@ function MessageInput() {
         },
         [`${activeChatID}.createdAt`]: serverTimestamp(),
       });
+    }
 
+    if (!userChat.get(activeChatID)) {
       await updateDoc(doc(db, 'userChats', userID), {
         [`${activeChatID}.userInfo`]: {
           uid: currentUser.uid,

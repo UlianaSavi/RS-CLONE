@@ -39,7 +39,7 @@ function DeletionPopup({
 
   const handleDeleteBtn = () => {
     const combinedID = currentUser.uid > userIdUnderRMK ? `${currentUser.uid}${userIdUnderRMK}` : `${userIdUnderRMK}${currentUser.uid}`;
-    deleteChat(combinedID, currentUser.uid, userIdUnderRMK);
+    deleteChat(combinedID, currentUser.uid, userIdUnderRMK, false);
     setVisibility(false);
     if (userIdUnderRMK === userID) {
       setUserID('');
