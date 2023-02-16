@@ -5,13 +5,15 @@ export default function BubblesMessage(props: {
   message: string,
   time: string,
   isRead: boolean,
-  isCurrenUser: boolean
+  isCurrenUser: boolean,
+  imageUrl: string
 }) {
   const {
     message,
     time,
     isRead,
     isCurrenUser,
+    imageUrl,
   } = props;
 
   let firstCheckMark;
@@ -31,6 +33,7 @@ export default function BubblesMessage(props: {
         <span className="bubble__time">{time}</span>
         {firstCheckMark}
         {secondCheckMark}
+        <img src={imageUrl} alt="" />
       </div>
     </div>
   );

@@ -11,7 +11,9 @@ interface AttachPopupProps {
   getPhoto: (url: string) => void
 }
 
-function AttachPopup({ isVisible, handleMouseLeave, getPhoto }: AttachPopupProps) {
+function AttachPopup({
+  isVisible, handleMouseLeave, getPhoto,
+}: AttachPopupProps) {
   const hiddenPhotoInput = React.useRef<HTMLInputElement>(null);
   const hiddenDocInput = React.useRef<HTMLInputElement>(null);
   const [photoUrl, setPhotoUrl] = useState<string | ArrayBuffer | null>('');
