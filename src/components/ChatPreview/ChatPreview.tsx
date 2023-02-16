@@ -13,7 +13,7 @@ interface ChatPreviewProps {
   setActiveUserID: React.Dispatch<React.SetStateAction<string>>,
   isSearchMode: boolean,
   setSearchMode: React.Dispatch<React.SetStateAction<boolean>>,
-  onContextMenu: any
+  onContextMenu: (event: React.MouseEvent, id: string) => void
 }
 
 function ChatPreview({
@@ -51,7 +51,6 @@ function ChatPreview({
 
   const handleContextMenu = (event: React.MouseEvent) => {
     onContextMenu(event, uid);
-    console.log(uid);
   };
 
   return (

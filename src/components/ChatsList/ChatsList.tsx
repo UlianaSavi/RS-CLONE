@@ -29,7 +29,7 @@ function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps
   const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
   const [userIdUnderRMK, setUserIdUnderRMK] = useState('');
 
-  const handleContextMenu = (event: React.MouseEvent<HTMLDivElement>, id: string) => {
+  const handleContextMenu = (event: React.MouseEvent, id: string) => {
     const target = event.target as HTMLElement;
     if (target.closest('.chat-preview') && !isSearchMode) {
       event.preventDefault();
