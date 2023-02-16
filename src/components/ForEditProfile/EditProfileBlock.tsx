@@ -12,11 +12,12 @@ export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProp
   const currentUser: User = useContext(AuthContext) as User;
   const [name, setName] = useState(currentUser.displayName);
   const [user, setUser] = useState(currentUser);
+  const [lastName, setLastName] = useState('');
   const [bio, setBio] = useState('');
 
   useEffect(() => {
     setUser(user);
-  }, [currentUser.photoURL]);
+  }, [name, currentUser.photoURL]);
 
   return (
     <div className="edit-profile">
@@ -26,8 +27,8 @@ export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProp
           className="header__arrow"
           onClick={() => {
             handleEditClick();
-            changeProfileName(user.displayName);
-            currentUser.displayName = user.displayName;
+            changeProfileName(name);
+            currentUser.displayName = name;
           }}
         >
           <ArrowLeftIcon />
@@ -53,8 +54,8 @@ export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProp
             />
           </button>
         </div>
-        <FormInput type="text" id="name" label="Name" value={name.split(',')[0]} setValue={setName} />
-        <FormInput type="text" id="last-name" label="Last Name" value={name.split(',').length > 1 ? name.split(',')[1] : ''} setValue={setName} />
+        <FormInput type="text" id="name" label="Name" value={name} setValue={setName} />
+        <FormInput type="text" id="last-name" label="Last Name" value={lastName} setValue={setLastName} />
         <FormInput type="text" id="bio" label="Bio (optional)" value={bio} setValue={setBio} />
       </section>
       <div className="edit-user-info__descr">
