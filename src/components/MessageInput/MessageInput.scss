@@ -12,6 +12,12 @@
   margin: 0 auto;
   padding: 5px;
   padding-bottom: 20px;
+
+  @media (max-width: 1150px) {
+    padding: 0 10px 20px 10px; 
+    margin: 0;
+    width: 95%;
+  }
   
   &__container {
     position: relative;
@@ -20,7 +26,6 @@
     align-items: flex-end;
     gap: 10px;
     flex-grow: 1;
-    // height: 34px;
     padding: 10px;
 
     background-color: $grey-main;
