@@ -1,15 +1,21 @@
-import './ChatWindow.scss';
+import { useContext } from 'react';
 import MessageInput from '../MessageInput/MessageInput';
 import { BubblesDateGroup } from '../BubblesDateGroup/BubblesDateGroup';
+import { ActiveChatContext } from '../../context/ActiveChatContext';
+import './ChatWindow.scss';
 
 function ChatWindow() {
+  const { activeChatID } = useContext(ActiveChatContext);
+
   return (
     <div className="chat-window">
+      {activeChatID && (
       <div className="chat-window__wrapper">
         {/* <BubblesDateGroup date="Yesterday" /> */}
         <BubblesDateGroup date="Today" />
       </div>
-      <MessageInput />
+      )}
+      {activeChatID && <MessageInput />}
       <svg height="0" width="0">
         <defs>
           <clipPath id="svgPath">
