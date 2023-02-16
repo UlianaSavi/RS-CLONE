@@ -8,7 +8,7 @@ import { ReactComponent as DocumentIcon } from '../../assets/icons/document.svg'
 interface AttachPopupProps {
   isVisible: boolean,
   handleMouseLeave: () => void
-  getPhoto: (url: string) => void
+  getPhoto: (props: { url: string, file: File }) => void
 }
 
 function AttachPopup({
@@ -16,7 +16,7 @@ function AttachPopup({
 }: AttachPopupProps) {
   const hiddenPhotoInput = React.useRef<HTMLInputElement>(null);
   const hiddenDocInput = React.useRef<HTMLInputElement>(null);
-  const [photoUrl, setPhotoUrl] = useState<string | ArrayBuffer | null>('');
+  const [photo, setPhoto] = useState<{ url: string, file: File } | null>(null);
 
   const choosePhoto = () => {
     if (hiddenPhotoInput.current) {
@@ -31,18 +31,28 @@ function AttachPopup({
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
+    console.log(e?.target?.files);
+    if (e?.target?.files) {
       const fileReader = new FileReader();
       fileReader.onload = () => {
-        setPhotoUrl(fileReader.result);
+        console.log({
+          file: (e.target.files as FileList)[0],
+          url: `${fileReader.result}`,
+        });
+        setPhoto({
+          file: (e.target.files as FileList)[0],
+          url: `${fileReader.result}`,
+        });
       };
       fileReader.readAsDataURL(e.target.files[0]);
     }
   };
 
   useEffect(() => {
-    getPhoto(`${photoUrl}`);
-  }, [photoUrl]);
+    if (photo) {
+      getPhoto(photo);
+    }
+  }, [photo]);
 
   return (
     <nav className={`attach-popup ${isVisible ? 'active' : ''}`} onMouseLeave={handleMouseLeave}>

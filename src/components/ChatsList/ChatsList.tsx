@@ -2,7 +2,7 @@
 /* eslint-disable no-undef */
 import { useState, useEffect, useContext } from 'react';
 import {
-  collection, query, where, getDocs, onSnapshot, doc, DocumentData,
+  collection, query, where, getDocs, onSnapshot, doc, DocumentData, getDoc,
 } from 'firebase/firestore';
 import { db } from '../../firebaseConfig';
 import { AuthContext } from '../../context/AuthContext';
@@ -14,6 +14,7 @@ import ContextMenu from '../ContextMenu/ContextMenu';
 
 import type { User, UserChat } from '../../types';
 import './ChastList.scss';
+import DeletionPopup from '../DeletionPopup/DeletionPopup';
 
 interface ChatsListProps {
   activeFolder: number,
@@ -22,6 +23,31 @@ interface ChatsListProps {
 }
 
 function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps) {
+  // Context menu
+  const [showMenu, setShowMenu] = useState(false);
+  const [showDeletionPopup, setShowDeletionPopup] = useState(false);
+  const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
+  const [userIdUnderRMK, setUserIdUnderRMK] = useState('');
+
+  const handleContextMenu = (event: React.MouseEvent, id: string) => {
+    const target = event.target as HTMLElement;
+    if (target.closest('.chat-preview') && !isSearchMode) {
+      event.preventDefault();
+      setUserIdUnderRMK(id);
+      setShowMenu(true);
+      setMenuPosition({ x: event.clientX, y: event.clientY });
+    }
+  };
+
+  const closeContextMenu = () => setShowMenu(false);
+
+  useEffect(() => {
+    document.addEventListener('click', closeContextMenu);
+    return () => {
+      document.removeEventListener('click', closeContextMenu);
+    };
+  }, []);
+
   const currentUser: User = useContext(AuthContext) as User;
   const { userID, setUserID } = useContext(UserContext);
   const { activeChatID } = useContext(ActiveChatContext);
@@ -38,6 +64,7 @@ function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps
           setActiveUserID={setUserID}
           isSearchMode={isSearchMode}
           setSearchMode={setSearchMode}
+          onContextMenu={handleContextMenu}
         />
       )));
   };
@@ -62,12 +89,17 @@ function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps
         const data = d.data();
         if (!data) return;
         const dataArray = Object.values(data);
-        if (dataArray.some((item) => item.lastMessage.date === null)) return;
+        if (dataArray.some((item) => !item.lastMessage?.date)) return;
 
-        dataArray.forEach((item) => {
-          chatsData.push(item);
+        const promises = dataArray.map(async (item) => {
+          const user = await getDoc(doc(db, 'users', item.userInfo.uid));
+          const userData = user.data() as User;
+          chatsData.push({ lastMessage: item.lastMessage, userInfo: userData });
         });
-        updateChatsList(chatsData.sort((a, b) => b.lastMessage.date - a.lastMessage.date));
+
+        Promise.all(promises).then(() => {
+          updateChatsList(chatsData.sort((a, b) => b.lastMessage.date - a.lastMessage.date));
+        });
       });
     }
   };
@@ -81,37 +113,21 @@ function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps
     showChatsList();
   }, [currentUser?.uid, activeChatID, userID, activeFolder, isSearchMode]);
 
-  // Context menu
-  const [showMenu, setShowMenu] = useState(false);
-  const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
-
-  const handleContextMenu = (event: React.MouseEvent<HTMLDivElement>) => {
-    const target = event.target as HTMLElement;
-    if (target.closest('.chat-preview')) {
-      event.preventDefault();
-      setShowMenu(true);
-      setMenuPosition({ x: event.clientX, y: event.clientY });
-    }
-  };
-
-  const closeContextMenu = () => setShowMenu(false);
-
-  useEffect(() => {
-    document.addEventListener('click', closeContextMenu);
-    return () => {
-      document.removeEventListener('click', closeContextMenu);
-    };
-  }, []);
-
   return (
     <>
-      <div className="chat-list" onContextMenu={handleContextMenu}>
+      <div className="chat-list">
         {chatsArr}
       </div>
       <ContextMenu
         isVisible={showMenu}
+        showPopup={setShowDeletionPopup}
         handleMouseLeave={closeContextMenu}
         position={menuPosition}
+      />
+      <DeletionPopup
+        isVisible={showDeletionPopup}
+        setVisibility={setShowDeletionPopup}
+        userIdUnderRMK={userIdUnderRMK}
       />
     </>
   );

@@ -1,24 +1,24 @@
 import PopupMenuItem from '../PopupMenuItem/PopupMenuItem';
-import { SettingsIcon } from '../../assets/icons/icons';
+import { ReactComponent as TrashIcon } from '../../assets/icons/trash.svg';
 import './ContextMenu.scss';
 
 interface ContextMenuProps {
   isVisible: boolean,
   handleMouseLeave: () => void,
   position: { x: number, y: number };
+  showPopup: React.Dispatch<React.SetStateAction<boolean>>,
 }
 
-function ContextMenu({ isVisible, handleMouseLeave, position }: ContextMenuProps) {
-  const click = () => null;
-
+function ContextMenu({
+  isVisible, handleMouseLeave, position, showPopup,
+}: ContextMenuProps) {
   return (
     <nav
       className={`context-menu ${isVisible ? 'active' : ''}`}
       onMouseLeave={handleMouseLeave}
       style={{ top: `${position.y}px`, left: `${position.x}px` }}
     >
-      <PopupMenuItem label="Make as unread" icon={<SettingsIcon />} handleClick={click} />
-      <PopupMenuItem label="Delete chat" icon={<SettingsIcon />} handleClick={click} />
+      <PopupMenuItem label="Delete chat" icon={<TrashIcon />} handleClick={() => showPopup(true)} />
     </nav>
   );
 }
