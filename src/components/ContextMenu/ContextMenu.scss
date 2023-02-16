@@ -20,4 +20,14 @@
 
         display: block;
     }
+
+    .popup-item {
+        &:last-child {
+          color: $danger-color;
+      
+          &:hover {
+            background-color: rgba($danger-color, 0.05);
+          }
+        }
+      }
 }

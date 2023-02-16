@@ -6,7 +6,7 @@ import {
   updateProfile,
 } from 'firebase/auth';
 import {
-  doc, setDoc, updateDoc, arrayUnion,
+  doc, setDoc, updateDoc, arrayUnion, deleteDoc, deleteField,
 } from 'firebase/firestore';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { auth, db, storage } from '../firebaseConfig';
@@ -149,4 +149,22 @@ export const changeProfilePhoto = async (
     return getDownloadURL((await uploadTask).ref);
   }
   return null;
+};
+
+export const deleteChat = async (
+  chatID: string,
+  currentUserID: string,
+  userID: string,
+  forBoth: boolean,
+) => {
+  await updateDoc(doc(db, 'userChats', currentUserID), {
+    [chatID]: deleteField(),
+  });
+
+  if (forBoth) {
+    await deleteDoc(doc(db, 'chats', chatID));
+    await updateDoc(doc(db, 'userChats', userID), {
+      [chatID]: deleteField(),
+    });
+  }
 };
