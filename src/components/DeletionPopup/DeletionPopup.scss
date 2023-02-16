@@ -1,0 +1,45 @@
+@import "../../styles/variables";
+
+.deletion-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+
+    padding: 8px;
+
+    background: $grey-main;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 2px rgb(0 0 0 / 22%);
+    opacity: 0;
+
+    display: none;
+
+    transform: translate(-50%, -50%);
+
+    &__button {
+      padding: 12px 10px 12px;
+    
+      font-size: 16px;
+      text-decoration: none;
+  
+      color: $accent-color;
+      background-color: $grey-main;
+      border: none;
+      border-radius: 10px;
+  
+      transition: .2s all;
+  
+      cursor: pointer;
+  
+      &:hover {
+        background-color: $accent-hover-folder;
+      }
+    }
+
+    &.active {
+        opacity: 1;
+
+        display: block;
+    }
+}

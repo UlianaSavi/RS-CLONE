@@ -14,6 +14,7 @@ import ContextMenu from '../ContextMenu/ContextMenu';
 
 import type { User, UserChat } from '../../types';
 import './ChastList.scss';
+import DeletionPopup from '../DeletionPopup/DeletionPopup';
 
 interface ChatsListProps {
   activeFolder: number,
@@ -24,6 +25,7 @@ interface ChatsListProps {
 function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps) {
   // Context menu
   const [showMenu, setShowMenu] = useState(false);
+  const [showDeletionPopup, setShowDeletionPopup] = useState(false);
   const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
   const [chatIdUnderRMK, setChatIdUnderRMK] = useState('');
 
@@ -113,8 +115,12 @@ function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps
       </div>
       <ContextMenu
         isVisible={showMenu}
+        showPopup={setShowDeletionPopup}
         handleMouseLeave={closeContextMenu}
         position={menuPosition}
+      />
+      <DeletionPopup
+        isVisible={showDeletionPopup}
         chatID={chatIdUnderRMK}
       />
     </>
