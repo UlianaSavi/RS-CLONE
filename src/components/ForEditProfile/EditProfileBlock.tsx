@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { ArrowLeftIcon, AddPhotoIcon } from '../../assets/icons/icons';
 import './EditProfileBlock.scss';
 import { SettingsHeaderProps } from '../../types';
@@ -13,6 +13,10 @@ export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProp
   const [name, setName] = useState(currentUser.displayName);
   const [user, setUser] = useState(currentUser);
   const [bio, setBio] = useState('');
+
+  useEffect(() => {
+    setUser(user);
+  }, [currentUser.photoURL]);
 
   return (
     <div className="edit-profile">
@@ -32,7 +36,7 @@ export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProp
       </div>
       <section className="edit-user-info">
         <div className="edit-user-info__img">
-          <img className="edit-user-info__ava" src={currentUser.photoURL !== null ? currentUser.photoURL : avatarPlaceholder} alt="User" />
+          <img className="edit-user-info__ava" src={user.photoURL || avatarPlaceholder} alt="User" />
           <button type="button" className="edit-user-info__add-photo-btn">
             <AddPhotoIcon />
             <input
