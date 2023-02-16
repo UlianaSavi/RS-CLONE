@@ -51,21 +51,10 @@ function MessageInput() {
     setActiveChatID(combinedID);
     const chat = await getDoc(doc(db, 'chats', activeChatID));
     const userChat = await getDoc(doc(db, 'userChats', userID));
+    const currentUserChat = await getDoc(doc(db, 'userChats', currentUser.uid));
 
     if (!chat.exists()) {
       await setDoc(doc(db, 'chats', activeChatID), { messages: [] });
-      const user = await getDoc(doc(db, 'users', userID));
-      const userData = user.data();
-
-      await updateDoc(doc(db, 'userChats', currentUser.uid), {
-        [`${activeChatID}.userInfo`]: {
-          uid: userID,
-          displayName: userData?.displayName,
-          photoURL: userData?.photoURL,
-          isOnline: true,
-        },
-        [`${activeChatID}.createdAt`]: serverTimestamp(),
-      });
     }
 
     if (!userChat.get(activeChatID)) {
@@ -74,6 +63,21 @@ function MessageInput() {
           uid: currentUser.uid,
           displayName: currentUser.displayName,
           photoURL: currentUser.photoURL,
+          isOnline: true,
+        },
+        [`${activeChatID}.createdAt`]: serverTimestamp(),
+      });
+    }
+
+    if (!currentUserChat.get(activeChatID)) {
+      const user = await getDoc(doc(db, 'users', userID));
+      const userData = user.data();
+
+      await updateDoc(doc(db, 'userChats', currentUser.uid), {
+        [`${activeChatID}.userInfo`]: {
+          uid: userID,
+          displayName: userData?.displayName,
+          photoURL: userData?.photoURL,
           isOnline: true,
         },
         [`${activeChatID}.createdAt`]: serverTimestamp(),
