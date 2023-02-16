@@ -1,15 +1,19 @@
+import { useState } from 'react';
 import './ChatWindow.scss';
 import MessageInput from '../MessageInput/MessageInput';
 import { BubblesDateGroup } from '../BubblesDateGroup/BubblesDateGroup';
+import SendImagePopap from '../SendImagePopap/SendImagePopap';
 
 function ChatWindow() {
+  const [photoUrl, setPhotoUrl] = useState('');
+  console.log('1', photoUrl);
+
   return (
     <div className="chat-window">
       <div className="chat-window__wrapper">
-        {/* <BubblesDateGroup date="Yesterday" /> */}
         <BubblesDateGroup date="Today" />
       </div>
-      <MessageInput />
+      <MessageInput getPhoto={setPhotoUrl} />
       <svg height="0" width="0">
         <defs>
           <clipPath id="svgPath">
@@ -18,6 +22,7 @@ function ChatWindow() {
         </defs>
       </svg>
       <div className="chat-window__bg-image" />
+      <SendImagePopap imageUrl={photoUrl} />
     </div>
   );
 }

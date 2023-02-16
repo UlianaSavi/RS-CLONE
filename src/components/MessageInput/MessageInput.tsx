@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, {
   useState, useContext, useRef, useEffect,
 } from 'react';
@@ -21,7 +22,7 @@ import './MessageInput.scss';
 
 const TextArea = styled.textarea``;
 
-function MessageInput() {
+function MessageInput({ getPhoto }: { getPhoto: (url: string) => void }) {
   const [isVisibleAttach, setVisibilityAttach] = useState(false);
   const [isVisibleEmotion, setVisibilityEmotion] = useState(false);
   const [isAudio, setIsAudio] = useState(false);
@@ -152,7 +153,11 @@ function MessageInput() {
         <button className="message-input__attach-btn" type="button" onClick={toggleAttachPopup}>
           <AttachIcon />
         </button>
-        <AttachPopup isVisible={isVisibleAttach} handleMouseLeave={toggleAttachPopup} />
+        <AttachPopup
+          getPhoto={getPhoto}
+          isVisible={isVisibleAttach}
+          handleMouseLeave={toggleAttachPopup}
+        />
       </div>
       <button
         className="message-input__send-btn"
