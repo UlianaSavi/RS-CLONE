@@ -1,6 +1,10 @@
 /* eslint-disable no-unused-vars */
 import * as firestore from 'firebase/firestore';
 import { useContext } from 'react';
+import {
+  doc, updateDoc,
+} from 'firebase/firestore';
+import { db } from '../../firebaseConfig';
 import Avatar from '../Avatar/Avatar';
 import { AuthContext } from '../../context/AuthContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
@@ -23,14 +27,21 @@ function ChatPreview({
     uid, displayName, photoURL,
   } = data.userInfo;
 
-  const { setActiveChatID } = useContext(ActiveChatContext);
+  const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
   const currentUser: User = useContext(AuthContext) as User;
+
+  const resetUnreadMessages = async () => {
+    await updateDoc(doc(db, 'userChats', currentUser.uid), {
+      [`${activeChatID}.unreadMessages`]: 0,
+    });
+  };
 
   const selectChat = () => {
     const combinedID = currentUser.uid > uid ? `${currentUser.uid}${uid}` : `${uid}${currentUser.uid}`;
     setActiveUserID(uid);
     setActiveChatID(combinedID);
     setSearchMode(false);
+    resetUnreadMessages();
   };
 
   const convertTimestamp = (timestamp: firestore.Timestamp): string => {
