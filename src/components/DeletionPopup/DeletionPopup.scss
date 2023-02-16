@@ -6,6 +6,7 @@
     left: 50%;
     z-index: 10;
 
+    width: 240px;
     padding: 8px;
 
     background: $grey-main;
@@ -17,8 +18,23 @@
 
     transform: translate(-50%, -50%);
 
+    &__header-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    &__description {
+      margin-bottom: 10px;
+    }
+
+    &__buttons-wrapper {
+      display: flex;
+      justify-content: space-around;
+    }
+
     &__button {
-      padding: 12px 10px 12px;
+      padding: 12px 10px 10px;
     
       font-size: 16px;
       text-decoration: none;
@@ -31,6 +47,14 @@
       transition: .2s all;
   
       cursor: pointer;
+
+      &.delete {
+        color: $danger-color;
+      
+        &:hover {
+          background-color: rgba($danger-color, 0.05);
+        }
+      }
   
       &:hover {
         background-color: $accent-hover-folder;

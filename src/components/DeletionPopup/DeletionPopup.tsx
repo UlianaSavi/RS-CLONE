@@ -7,6 +7,7 @@ import { UserContext } from '../../context/UserContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
 import type { User } from '../../types';
 import './DeletionPopup.scss';
+import Avatar from '../Avatar/Avatar';
 
 interface ContextMenuProps {
   isVisible: boolean,
@@ -31,7 +32,6 @@ function DeletionPopup({
 
   useEffect(() => {
     getUserData();
-    console.log(userData?.displayName);
   }, [userID]);
 
   const handleDeleteBtn = () => {
@@ -43,14 +43,19 @@ function DeletionPopup({
 
   return (
     <div className={`deletion-popup ${isVisible ? 'active' : ''}`}>
-      <div className="deletion-popup__header">Delete chat</div>
-      <div className="deletion-popup__description">{`Are you shure you want to delete the chat with ${userData?.displayName}`}</div>
-      <button type="button" className="deletion-popup__button" onClick={handleDeleteBtn}>
-        CANCEL
-      </button>
-      <button type="button" className="deletion-popup__button" onClick={handleDeleteBtn}>
-        DELETE CHAT
-      </button>
+      <div className="deletion-popup__header-wrapper">
+        <Avatar image={userData?.photoURL || ''} />
+        <h2 className="deletion-popup__header">Delete chat</h2>
+      </div>
+      <div className="deletion-popup__description">{`Are you shure you want to delete the chat with ${userData?.displayName}?`}</div>
+      <div className="deletion-popup__buttons-wrapper">
+        <button type="button" className="deletion-popup__button" onClick={handleDeleteBtn}>
+          CANCEL
+        </button>
+        <button type="button" className="deletion-popup__button delete" onClick={handleDeleteBtn}>
+          DELETE CHAT
+        </button>
+      </div>
     </div>
   );
 }
