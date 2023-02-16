@@ -94,7 +94,11 @@ function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps
         const promises = dataArray.map(async (item) => {
           const user = await getDoc(doc(db, 'users', item.userInfo.uid));
           const userData = user.data() as User;
-          chatsData.push({ lastMessage: item.lastMessage, userInfo: userData });
+          chatsData.push({
+            lastMessage: item.lastMessage,
+            unreadMessages: item?.unreadMessages || 0,
+            userInfo: userData,
+          });
         });
 
         Promise.all(promises).then(() => {

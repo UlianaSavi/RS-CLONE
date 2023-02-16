@@ -72,7 +72,7 @@ function ChatPreview({
       {!isSearchMode && (
       <div className="chat-preview__info">
         <div className="chat-preview__messenge-time">{convertTimestamp(data?.lastMessage.date)}</div>
-        {/* <div className="chat-preview__messenge-num">0</div> */}
+        {data?.unreadMessages ? <div className="chat-preview__messenge-num">{data?.unreadMessages}</div> : null}
       </div>
       )}
     </button>
