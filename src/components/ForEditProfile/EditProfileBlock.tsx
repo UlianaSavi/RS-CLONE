@@ -6,11 +6,12 @@ import { AuthContext } from '../../context/AuthContext';
 import avatarPlaceholder from '../../assets/icons/avatar-placeholder.png';
 import type { User } from '../../types';
 import FormInput from '../FormInput/FormInput';
-import { changeProfileData } from '../../API/api';
+import { changeProfileName, changeProfilePhoto } from '../../API/api';
 
 export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProps) {
   const currentUser: User = useContext(AuthContext) as User;
   const [name, setName] = useState(currentUser.displayName);
+  const [user, setUser] = useState(currentUser);
   const [bio, setBio] = useState('');
 
   return (
@@ -21,8 +22,8 @@ export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProp
           className="header__arrow"
           onClick={() => {
             handleEditClick();
-            changeProfileData(name);
-            currentUser.displayName = name;
+            changeProfileName(user.displayName);
+            currentUser.displayName = user.displayName;
           }}
         >
           <ArrowLeftIcon />
@@ -34,7 +35,18 @@ export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProp
           <img className="edit-user-info__ava" src={currentUser.photoURL !== null ? currentUser.photoURL : avatarPlaceholder} alt="User" />
           <button type="button" className="edit-user-info__add-photo-btn">
             <AddPhotoIcon />
-            <input type="file" className="edit-user-info__input-file" />
+            <input
+              type="file"
+              className="edit-user-info__input-file"
+              accept=".jpg, .jpeg, .png"
+              onChange={(event) => {
+                changeProfilePhoto(user.displayName, event.target.files).then((url) => {
+                  if (url) {
+                    setUser({ ...user, photoURL: url });
+                  }
+                });
+              }}
+            />
           </button>
         </div>
         <FormInput type="text" id="name" label="Name" value={name.split(',')[0]} setValue={setName} />

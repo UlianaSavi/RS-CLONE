@@ -102,7 +102,7 @@ export const logOut = async () => {
   });
 };
 
-export const changeProfileData = async (newName?: string, photo?: string) => {
+export const changeProfileName = async (newName: string) => {
   if (newName && auth.currentUser) {
     await updateProfile(auth.currentUser, {
       displayName: newName,
@@ -111,13 +111,42 @@ export const changeProfileData = async (newName?: string, photo?: string) => {
       displayName: newName,
     });
   }
+};
 
-  if (photo && auth.currentUser) {
-    await updateProfile(auth.currentUser, {
-      photoURL: photo,
-    });
-    await updateDoc(doc(db, 'users', auth.currentUser.uid), {
-      photoURL: photo,
-    });
+export const changeProfilePhoto = async (
+  name: string,
+  photoList: FileList | null,
+) => {
+  if (photoList && auth.currentUser) {
+    const avatar = photoList[0];
+    const storageRef = ref(storage, `${name}${Math.floor(100000 + Math.random() * 900000)}`);
+    const uploadTask = uploadBytesResumable(storageRef, avatar as File);
+    if (avatar) {
+      uploadTask.on(
+        'state_changed',
+        (snapshot) => {
+          const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          return progress;
+        },
+        (error) => {
+          throw error;
+        },
+        () => {
+          getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
+            if (auth.currentUser) {
+              await updateProfile(auth.currentUser, {
+                photoURL: downloadURL,
+              });
+              await updateDoc(doc(db, 'users', auth.currentUser.uid), {
+                photoURL: downloadURL,
+              });
+            }
+            return downloadURL;
+          });
+        },
+      );
+    }
+    return getDownloadURL((await uploadTask).ref);
   }
+  return null;
 };
