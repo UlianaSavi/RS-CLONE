@@ -6,7 +6,6 @@ import SendImagePopap from '../SendImagePopap/SendImagePopap';
 
 function ChatWindow() {
   const [photoUrl, setPhotoUrl] = useState('');
-  console.log('1', photoUrl);
 
   return (
     <div className="chat-window">
