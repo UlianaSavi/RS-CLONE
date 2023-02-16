@@ -122,7 +122,7 @@ function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps
       <DeletionPopup
         isVisible={showDeletionPopup}
         setVisibility={setShowDeletionPopup}
-        userID={userIdUnderRMK}
+        userIdUnderRMK={userIdUnderRMK}
       />
     </>
   );

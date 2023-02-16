@@ -14,20 +14,20 @@ import Avatar from '../Avatar/Avatar';
 interface ContextMenuProps {
   isVisible: boolean,
   setVisibility: React.Dispatch<React.SetStateAction<boolean>>,
-  userID: string
+  userIdUnderRMK: string
 }
 
 function DeletionPopup({
-  isVisible, setVisibility, userID,
+  isVisible, setVisibility, userIdUnderRMK,
 }: ContextMenuProps) {
   const currentUser: User = useContext(AuthContext) as User;
-  const { setUserID } = useContext(UserContext);
+  const { userID, setUserID } = useContext(UserContext);
   const [userData, setUserData] = useState<User | null>(null);
   const { setActiveChatID } = useContext(ActiveChatContext);
 
   const getUserData = async () => {
-    if (userID) {
-      const user = await getDoc(doc(db, 'users', userID));
+    if (userIdUnderRMK) {
+      const user = await getDoc(doc(db, 'users', userIdUnderRMK));
       const data = user.data() as User;
       setUserData(data);
     }
@@ -35,14 +35,16 @@ function DeletionPopup({
 
   useEffect(() => {
     getUserData();
-  }, [userID]);
+  }, [userIdUnderRMK]);
 
   const handleDeleteBtn = () => {
-    const combinedID = currentUser.uid > userID ? `${currentUser.uid}${userID}` : `${userID}${currentUser.uid}`;
-    deleteChat(combinedID, currentUser.uid, userID);
+    const combinedID = currentUser.uid > userIdUnderRMK ? `${currentUser.uid}${userIdUnderRMK}` : `${userIdUnderRMK}${currentUser.uid}`;
+    deleteChat(combinedID, currentUser.uid, userIdUnderRMK);
     setVisibility(false);
-    setUserID('');
-    setActiveChatID('');
+    if (userIdUnderRMK === userID) {
+      setUserID('');
+      setActiveChatID('');
+    }
   };
 
   const closePopup = (event: React.MouseEvent<HTMLDivElement>) => {
