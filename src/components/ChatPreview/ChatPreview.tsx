@@ -31,9 +31,11 @@ function ChatPreview({
   const currentUser: User = useContext(AuthContext) as User;
 
   const resetMessagesCounter = async () => {
-    await updateDoc(doc(db, 'userChats', currentUser.uid), {
-      [`${activeChatID}.unreadMessages`]: 0,
-    });
+    if (activeChatID) {
+      await updateDoc(doc(db, 'userChats', currentUser.uid), {
+        [`${activeChatID}.unreadMessages`]: 0,
+      });
+    }
   };
 
   const selectChat = () => {
