@@ -1,6 +1,10 @@
 /* eslint-disable no-unused-vars */
+import { useContext, useState } from 'react';
+import {
+  onSnapshot, doc, getDoc,
+} from 'firebase/firestore';
 import * as firestore from 'firebase/firestore';
-import { useContext } from 'react';
+import { db } from '../../firebaseConfig';
 import Avatar from '../Avatar/Avatar';
 import { AuthContext } from '../../context/AuthContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
@@ -20,11 +24,12 @@ function ChatPreview({
   data, isActive, setActiveUserID, isSearchMode, setSearchMode, onContextMenu,
 }: ChatPreviewProps) {
   const {
-    uid, displayName, photoURL,
+    uid, displayName, photoURL, isOnline,
   } = data.userInfo;
 
   const { setActiveChatID } = useContext(ActiveChatContext);
   const currentUser: User = useContext(AuthContext) as User;
+  const [isOnlineStatus, setIsOnlineStatus] = useState(isOnline || false);
 
   const selectChat = () => {
     const combinedID = currentUser.uid > uid ? `${currentUser.uid}${uid}` : `${uid}${currentUser.uid}`;
@@ -32,6 +37,14 @@ function ChatPreview({
     setActiveChatID(combinedID);
     setSearchMode(false);
   };
+
+  if (isSearchMode) {
+    onSnapshot(doc(db, 'users', uid), (d) => {
+      const userData = d.data();
+      if (!userData) return;
+      setIsOnlineStatus(userData.isOnline);
+    });
+  }
 
   const convertTimestamp = (timestamp: firestore.Timestamp): string => {
     const currentDate = timestamp.toDate();
@@ -65,7 +78,7 @@ function ChatPreview({
         <div className="chat-preview-text">
           <div className="chat-preview__title">{displayName}</div>
           {isSearchMode
-            ? <div className="chat-preview__online-status">Online</div>
+            ? <div className="chat-preview__online-status">{isOnlineStatus ? 'Online' : 'Offline'}</div>
             : <div className="chat-preview__last-message">{data?.lastMessage.text}</div>}
         </div>
       </div>
