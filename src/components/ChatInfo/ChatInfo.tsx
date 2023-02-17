@@ -1,8 +1,10 @@
-import { doc, getDoc } from '@firebase/firestore';
 import { useContext, useEffect, useState } from 'react';
+import {
+  onSnapshot, doc, getDoc,
+} from 'firebase/firestore';
+import { db } from '../../firebaseConfig';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
 import { UserContext } from '../../context/UserContext';
-import { db } from '../../firebaseConfig';
 import { User } from '../../types';
 import Avatar from '../Avatar/Avatar';
 import './ChatInfo.scss';
@@ -11,6 +13,7 @@ function ChatInfo() {
   const { activeChatID } = useContext(ActiveChatContext);
   const { userID } = useContext(UserContext);
   const [userInfo, setUserInfo] = useState<User | null>(null);
+  const [isOnline, setIsOnline] = useState(userInfo?.isOnline || false);
 
   const getData = async () => {
     if (activeChatID) {
@@ -22,6 +25,11 @@ function ChatInfo() {
 
   useEffect(() => {
     getData();
+    onSnapshot(doc(db, 'users', userID), (d) => {
+      const data = d.data();
+      if (!data) return;
+      setIsOnline(data.isOnline);
+    });
   }, [activeChatID]);
 
   return (
@@ -29,7 +37,7 @@ function ChatInfo() {
       <Avatar image={userInfo?.photoURL || ''} />
       <div className="chat-info__info">
         <div className="chat-info__title">{userInfo?.displayName}</div>
-        <div className="chat-info__status">Online</div>
+        <div className="chat-info__status">{isOnline ? 'Online' : 'Offline'}</div>
       </div>
     </div>
   );
