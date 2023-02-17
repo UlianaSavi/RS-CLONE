@@ -1,17 +1,20 @@
 import { useContext } from 'react';
+import { ActiveChatContext } from '../../context/ActiveChatContext';
+import { SendImageContext } from '../../context/SendImageContext';
 import MessageInput from '../MessageInput/MessageInput';
 import { BubblesDateGroup } from '../BubblesDateGroup/BubblesDateGroup';
-import { ActiveChatContext } from '../../context/ActiveChatContext';
+import SendImagePopap from '../SendImagePopap/SendImagePopap';
+
 import './ChatWindow.scss';
 
 function ChatWindow() {
+  const { popap } = useContext(SendImageContext);
   const { activeChatID } = useContext(ActiveChatContext);
 
   return (
     <div className="chat-window">
       {activeChatID && (
       <div className="chat-window__wrapper">
-        {/* <BubblesDateGroup date="Yesterday" /> */}
         <BubblesDateGroup date="Today" />
       </div>
       )}
@@ -24,6 +27,7 @@ function ChatWindow() {
         </defs>
       </svg>
       <div className="chat-window__bg-image" />
+      {popap && <SendImagePopap />}
     </div>
   );
 }

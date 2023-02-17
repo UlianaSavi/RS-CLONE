@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, {
   useState, useContext, useRef, useEffect,
 } from 'react';
@@ -157,6 +158,7 @@ function MessageInput() {
         <EmotionPopup isVisible={isVisibleEmotion} handleMouseLeave={toggleEmotionPopup} />
         <TextArea
           placeholder="Message"
+          id="message"
           className="message-input__text-area"
           ref={textAreaRef}
           value={messageValue}
@@ -167,7 +169,10 @@ function MessageInput() {
         <button className="message-input__attach-btn" type="button" onClick={toggleAttachPopup}>
           <AttachIcon />
         </button>
-        <AttachPopup isVisible={isVisibleAttach} handleMouseLeave={toggleAttachPopup} />
+        <AttachPopup
+          isVisible={isVisibleAttach}
+          handleMouseLeave={toggleAttachPopup}
+        />
       </div>
       <button
         className="message-input__send-btn"

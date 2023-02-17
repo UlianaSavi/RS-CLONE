@@ -40,6 +40,7 @@
     &.active {
         padding-bottom: 10px;
         border-bottom: 3px solid $accent-color;
+        color: $grey-secondary;
 
         &:hover {
             background: $accent-hover-folder;
