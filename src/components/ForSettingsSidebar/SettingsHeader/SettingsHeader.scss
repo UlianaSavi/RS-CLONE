@@ -9,10 +9,17 @@
     align-items: center;
     justify-content: space-around;
 
+    background-color: $grey-main;
+
+    @media (max-width: 600px) {
+      max-width: 600px;
+    }
+
     &__title {
         width: 50%;
         font-size: 22px;
         text-align: left;
+        flex: 2;
     }
 
     &__close-button {
