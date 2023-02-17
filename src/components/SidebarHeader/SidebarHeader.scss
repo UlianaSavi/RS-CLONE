@@ -10,4 +10,10 @@
   align-items: center;
   
   background-color: $grey-main;
+
+  @media (max-width: 600px) {
+    justify-content: flex-start;
+    gap: 1rem;
+    max-width: 100%;
+  }
 }

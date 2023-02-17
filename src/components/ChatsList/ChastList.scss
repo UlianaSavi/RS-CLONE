@@ -19,4 +19,8 @@
     &::-webkit-scrollbar-thumb {
         background: $grey-secondary;
     }
+
+    @media (max-width: 600px) {
+      max-width: 600px;
+    }
 }

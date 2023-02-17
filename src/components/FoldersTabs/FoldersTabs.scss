@@ -8,6 +8,10 @@
 
     background: $grey-main;
 
+    @media (max-width: 600px) {
+      max-width: 600px;
+    }
+
     &__wrapper {
         display: flex;
 
