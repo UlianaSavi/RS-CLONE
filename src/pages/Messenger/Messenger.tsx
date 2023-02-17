@@ -7,7 +7,15 @@ import './Messenger.scss';
 
 function Messenger() {
   const { popap } = useContext(SendImageContext);
-  const { isActiveSidebar } = useContext(ActiveVisibilitySidebar);
+  const { isActiveSidebar, setActiveSidebar } = useContext(ActiveVisibilitySidebar);
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 920) {
+      setActiveSidebar(true);
+    } else {
+      setActiveSidebar(false);
+    }
+  });
 
   return (
     <div className="messenger">

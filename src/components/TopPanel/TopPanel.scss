@@ -1,12 +1,16 @@
 @import "../../styles/variables";
 
 @mixin arrow-style {
+  position: absolute;
+
   width: 2.5rem;
   height: 2.5rem;
   margin-right: .5rem;
 
   background: none;
   border: none;
+
+  visibility: hidden;
 
   cursor: pointer;
 
@@ -33,14 +37,16 @@
   &__arrow {
     @include arrow-style();
 
-    position: absolute;
-
-    visibility: hidden;
-
     &_revert {
       @include arrow-style();
   
       transform: scale(-1, 1);
+
+      @media (max-width: 920px) {
+        position: relative;
+  
+        visibility: visible;
+      }
     }
 
     @media (max-width: 920px) {
