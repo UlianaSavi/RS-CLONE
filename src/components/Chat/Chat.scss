@@ -8,12 +8,14 @@
   height: 100vh;
 }
 
-.hide {
-  position: absolute;
-  
-  visibility: hidden;
-
-  button {
+.hide-chat {
+  @media (max-width: 600px) {
+    position: absolute;
+    
     visibility: hidden;
+
+    button {
+      visibility: hidden;
+    }
   }
 }
