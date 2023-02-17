@@ -8,6 +8,7 @@ import { UserContext } from '../../context/UserContext';
 import { User } from '../../types';
 import Avatar from '../Avatar/Avatar';
 import './ChatInfo.scss';
+import { convertTimestamp } from '../../hooks/timestampConverter';
 
 function ChatInfo() {
   const { activeChatID } = useContext(ActiveChatContext);
@@ -32,12 +33,14 @@ function ChatInfo() {
     });
   }, [activeChatID]);
 
+  const lastSeen = userInfo && !userInfo.isOnline ? convertTimestamp(userInfo.lastVisitAt) : '';
+
   return (
     <div className="chat-info">
       <Avatar image={userInfo?.photoURL || ''} />
       <div className="chat-info__info">
         <div className="chat-info__title">{userInfo?.displayName}</div>
-        <div className="chat-info__status">{isOnline ? 'Online' : 'Offline'}</div>
+        <div className="chat-info__status">{isOnline ? 'Online' : `Last seen ${lastSeen}`}</div>
       </div>
     </div>
   );

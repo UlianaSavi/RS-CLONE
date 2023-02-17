@@ -6,7 +6,7 @@ import {
   updateProfile,
 } from 'firebase/auth';
 import {
-  doc, setDoc, updateDoc, arrayUnion, deleteDoc, deleteField,
+  doc, setDoc, updateDoc, arrayUnion, deleteDoc, deleteField, serverTimestamp,
 } from 'firebase/firestore';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import type { User } from 'firebase/auth';
@@ -47,6 +47,7 @@ const loadPhoto = async (name: string, avatar: File | null, user = auth.currentU
 export const setOfflineStatus = async (user: User) => {
   await updateDoc(doc(db, 'users', user.uid), {
     isOnline: false,
+    lastVisitAt: serverTimestamp(),
   });
 };
 

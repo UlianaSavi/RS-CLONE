@@ -5,7 +5,8 @@ export interface User {
   displayName: string,
   photoURL: string,
   email: string,
-  isOnline: boolean
+  isOnline: boolean,
+  lastVisitAt: firestore.Timestamp,
 }
 
 export interface UserChat {
