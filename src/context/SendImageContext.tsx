@@ -26,8 +26,7 @@ export function SendImageContextProvider({ children }: ProviderProps) {
   const [popap, setPopap] = useState(false);
   const [url, setUrl] = useState('');
   const [file, setFile] = useState<File | null>(null);
-  console.log(popap, url, file);
-
+  console.log(popap);
   const value = useMemo(() => ({
     popap,
     setPopap,

@@ -1,13 +1,14 @@
 import { useContext } from 'react';
-import './ChatWindow.scss';
+import { ActiveChatContext } from '../../context/ActiveChatContext';
+import { SendImageContext } from '../../context/SendImageContext';
 import MessageInput from '../MessageInput/MessageInput';
 import { BubblesDateGroup } from '../BubblesDateGroup/BubblesDateGroup';
 import SendImagePopap from '../SendImagePopap/SendImagePopap';
-import { ActiveChatContext } from '../../context/ActiveChatContext';
-import { SendImageContext } from '../../context/SendingImageContext';
+
+import './ChatWindow.scss';
 
 function ChatWindow() {
-  const { url } = useContext(SendImageContext);
+  const { popap } = useContext(SendImageContext);
   const { activeChatID } = useContext(ActiveChatContext);
 
   return (
@@ -26,7 +27,7 @@ function ChatWindow() {
         </defs>
       </svg>
       <div className="chat-window__bg-image" />
-      {url && <SendImagePopap />}
+      {popap && <SendImagePopap />}
     </div>
   );
 }

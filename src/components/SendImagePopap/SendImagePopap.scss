@@ -1,8 +1,7 @@
 @import "../../styles/variables";
 
 .image-popap {
-    display: none;
-    z-index: 6;
+    z-index: 10;
 
     position: absolute;
     left: 50%;
@@ -19,10 +18,15 @@
     object-fit: cover;
 
     .img {
-        width: 100%;
+        display: block;
+        width: fit-content;
         height: 100%;
         max-height: 380px;
         object-fit: contain;
+        margin: 0 auto;
+
+        border: 5px solid $grey-main;
+        border-radius: 20px;
     }
 
     &__header {
@@ -41,25 +45,21 @@
         height: 40px;
         width: 75px;
         margin: 10px auto;
-    
+
         background-color: $accent-color;
         border: none;
         border-radius: 12px;
         color: $text-color-white;
         font-weight: 500;
-    
+
         transition: .2s all;
-    
+
         cursor: pointer;
-    
+
         &:hover {
             background-color: $accent-hover-dark;
         }
     }
-}
-
-.image-popap.active {
-    display: block;
 }
 
 .close {

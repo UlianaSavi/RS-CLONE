@@ -4,7 +4,7 @@ import {
 import { useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
-import { SendImageContext } from '../../context/SendingImageContext';
+import { SendImageContext } from '../../context/SendImageContext';
 import { UserContext } from '../../context/UserContext';
 import { db } from '../../firebaseConfig';
 import { loadMessagePhoto } from '../../API/api';
@@ -62,7 +62,7 @@ function SendImagePopap() {
   };
 
   return (
-    <div className={!popap && url ? 'image-popap active' : 'image-popap'}>
+    <div className="image-popap active">
       <div className="image-popap__header">
         <CloseIcon callback={() => closePopap()} />
         <span className="image-popap__header__title">Send Photo</span>

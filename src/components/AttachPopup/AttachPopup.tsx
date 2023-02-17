@@ -3,7 +3,7 @@ import PopupMenuItem from '../PopupMenuItem/PopupMenuItem';
 import './AttachPopup.scss';
 import { ReactComponent as ImageNVideoIcon } from '../../assets/icons/image-n-video.svg';
 import { ReactComponent as DocumentIcon } from '../../assets/icons/document.svg';
-import { SendImageContext } from '../../context/SendingImageContext';
+import { SendImageContext } from '../../context/SendImageContext';
 
 interface AttachPopupProps {
   isVisible: boolean,
@@ -16,11 +16,10 @@ function AttachPopup({
   const hiddenPhotoInput = React.useRef<HTMLInputElement>(null);
   const hiddenDocInput = React.useRef<HTMLInputElement>(null);
   const {
-    setPopap,
-    url,
     setUrl,
     file,
     setFile,
+    setPopap,
   } = useContext(SendImageContext);
 
   const choosePhoto = () => {
@@ -35,18 +34,11 @@ function AttachPopup({
       fileReader.onload = () => {
         setFile((e.target.files as FileList)[0]);
         setUrl(`${fileReader.result}`);
+        setPopap(true);
       };
       fileReader.readAsDataURL(e.target.files[0]);
     }
   };
-
-  if (file) {
-    setFile(file);
-    setPopap(false);
-  }
-  if (url) {
-    setUrl(url);
-  }
 
   useEffect(() => {
     if (file === null && hiddenPhotoInput?.current) {
