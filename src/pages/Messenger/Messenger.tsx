@@ -20,7 +20,7 @@ function Messenger() {
   return (
     <div className="messenger">
       {popap && <div className="blackout" />}
-      {isActiveSidebar ? <Sidebar /> : ''}
+      {isActiveSidebar ? <Sidebar sidebarClass="sidebar" /> : <Sidebar sidebarClass="sidebar hide" />}
       <Chat />
     </div>
   );
