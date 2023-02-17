@@ -9,6 +9,7 @@ import {
   doc, setDoc, updateDoc, arrayUnion, deleteDoc, deleteField,
 } from 'firebase/firestore';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
+import type { User } from 'firebase/auth';
 import { auth, db, storage } from '../firebaseConfig';
 
 const loadPhoto = async (name: string, avatar: File | null, user = auth.currentUser) => {
@@ -41,6 +42,18 @@ const loadPhoto = async (name: string, avatar: File | null, user = auth.currentU
     );
   }
   return getDownloadURL((await uploadTask).ref);
+};
+
+export const setOfflineStatus = async (user: User) => {
+  await updateDoc(doc(db, 'users', user.uid), {
+    isOnline: false,
+  });
+};
+
+export const setOnlineStatus = async (user: User) => {
+  await updateDoc(doc(db, 'users', user.uid), {
+    isOnline: true,
+  });
 };
 
 export const singUp = async (
@@ -92,27 +105,17 @@ export const singIn = async (email: string, password: string) => {
   await signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       const { user } = userCredential;
-      return user;
+      setOnlineStatus(user);
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.log(errorCode, errorMessage);
     });
-
-  if (auth.currentUser) {
-    await updateDoc(doc(db, 'users', auth.currentUser.uid), {
-      isOnline: true,
-    });
-  }
 };
 
 export const logOut = async () => {
-  if (auth.currentUser) {
-    await updateDoc(doc(db, 'users', auth.currentUser.uid), {
-      isOnline: false,
-    });
-  }
+  await setOfflineStatus(auth.currentUser as User);
 
   signOut(auth).then(() => {
     console.log('Sign-out successful.');
