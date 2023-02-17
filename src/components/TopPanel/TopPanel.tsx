@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import ChatInfo from '../ChatInfo/ChatInfo';
 import './TopPanel.scss';
 import TopPanelTools from '../TopPanelTools/TopPanelTools';
 import TopPanelPinnedMessage from '../TopPanelPinnedMessage/TopPanelPinnedMessage';
 import { ArrowLeftIcon } from '../../assets/icons/icons';
+import { ActiveVisibilitySidebar } from '../../context/VisibleSidebar';
 
 interface TopPanelProps {
   callback: () => void
@@ -11,6 +12,9 @@ interface TopPanelProps {
 
 export default function TopPanel({ callback }: TopPanelProps) {
   const [isClicked, setClick] = useState(true);
+  const { setActiveSidebar } = useContext(ActiveVisibilitySidebar);
+  setActiveSidebar(isClicked);
+  console.log(`click ${isClicked}`);
 
   return (
     <div className="top-panel">
