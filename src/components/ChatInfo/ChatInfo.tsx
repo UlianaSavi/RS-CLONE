@@ -15,6 +15,7 @@ function ChatInfo() {
   const { userID } = useContext(UserContext);
   const [userInfo, setUserInfo] = useState<User | null>(null);
   const [isOnline, setIsOnline] = useState(userInfo?.isOnline || false);
+  const [lastSeen, setLastSeen] = useState('');
 
   const getData = async () => {
     if (activeChatID) {
@@ -28,12 +29,13 @@ function ChatInfo() {
     getData();
     onSnapshot(doc(db, 'users', userID), (d) => {
       const data = d.data();
-      if (!data) return;
+      if (!data || !userInfo) return;
       setIsOnline(data.isOnline);
+      if (!userInfo.isOnline) {
+        setLastSeen(convertTimestamp(data.lastVisitAt));
+      }
     });
   }, [activeChatID]);
-
-  const lastSeen = userInfo && !userInfo.isOnline ? convertTimestamp(userInfo.lastVisitAt) : '';
 
   return (
     <div className="chat-info">

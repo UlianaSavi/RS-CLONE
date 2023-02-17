@@ -28,6 +28,7 @@ function AuthRoute(props: IProps) {
         if (uid) {
           navigate('/');
           setOnlineStatus(user);
+          window.addEventListener('beforeunload', handleBeforeUnload);
         }
       }
     });
@@ -40,10 +41,6 @@ function AuthRoute(props: IProps) {
 
   useEffect(() => {
     check();
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-    };
   }, [auth]);
   return children;
 }
