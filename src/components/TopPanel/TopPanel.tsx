@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import ChatInfo from '../ChatInfo/ChatInfo';
 import './TopPanel.scss';
 import TopPanelTools from '../TopPanelTools/TopPanelTools';
@@ -9,11 +10,16 @@ interface TopPanelProps {
 }
 
 export default function TopPanel({ callback }: TopPanelProps) {
+  const [isClicked, setClick] = useState(true);
+
   return (
     <div className="top-panel">
       <button
         type="button"
-        className="top-panel__arrow"
+        className={isClicked ? 'top-panel__arrow' : 'top-panel__arrow_revert'}
+        onClick={() => {
+          setClick(!isClicked);
+        }}
       >
         <ArrowLeftIcon />
       </button>
