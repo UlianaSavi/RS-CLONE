@@ -29,12 +29,12 @@ export default function BubblesMessage(props: {
   return (
     <div className={isCurrenUser ? 'bubble__user-message' : 'bubble__user-message another-user'}>
       <span className="message">{message}</span>
+      <img className={imageUrl ? 'img' : 'img none'} src={imageUrl} alt="" />
       <div className="bubble__time-n-check-wrapper">
         <span className="bubble__time">{time}</span>
         {firstCheckMark}
         {secondCheckMark}
       </div>
-      <img className="img" src={imageUrl} alt="" />
     </div>
   );
 }

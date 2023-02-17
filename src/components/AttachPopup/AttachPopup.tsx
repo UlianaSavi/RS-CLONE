@@ -1,22 +1,27 @@
-/* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import PopupMenuItem from '../PopupMenuItem/PopupMenuItem';
 import './AttachPopup.scss';
 import { ReactComponent as ImageNVideoIcon } from '../../assets/icons/image-n-video.svg';
 import { ReactComponent as DocumentIcon } from '../../assets/icons/document.svg';
+import { SendImageContext } from '../../context/SendingImageContext';
 
 interface AttachPopupProps {
   isVisible: boolean,
   handleMouseLeave: () => void
-  getPhoto: (props: { url: string, file: File }) => void
 }
 
 function AttachPopup({
-  isVisible, handleMouseLeave, getPhoto,
+  isVisible, handleMouseLeave,
 }: AttachPopupProps) {
   const hiddenPhotoInput = React.useRef<HTMLInputElement>(null);
   const hiddenDocInput = React.useRef<HTMLInputElement>(null);
-  const [photo, setPhoto] = useState<{ url: string, file: File } | null>(null);
+  const {
+    setPopap,
+    url,
+    setUrl,
+    file,
+    setFile,
+  } = useContext(SendImageContext);
 
   const choosePhoto = () => {
     if (hiddenPhotoInput.current) {
@@ -24,41 +29,36 @@ function AttachPopup({
     }
   };
 
-  const chooseFile = () => {
-    if (hiddenDocInput.current) {
-      hiddenDocInput.current.click();
-    }
-  };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e?.target?.files);
     if (e?.target?.files) {
       const fileReader = new FileReader();
       fileReader.onload = () => {
-        console.log({
-          file: (e.target.files as FileList)[0],
-          url: `${fileReader.result}`,
-        });
-        setPhoto({
-          file: (e.target.files as FileList)[0],
-          url: `${fileReader.result}`,
-        });
+        setFile((e.target.files as FileList)[0]);
+        setUrl(`${fileReader.result}`);
       };
       fileReader.readAsDataURL(e.target.files[0]);
     }
   };
 
+  if (file) {
+    setFile(file);
+    setPopap(false);
+  }
+  if (url) {
+    setUrl(url);
+  }
+
   useEffect(() => {
-    if (photo) {
-      getPhoto(photo);
+    if (file === null && hiddenPhotoInput?.current) {
+      hiddenPhotoInput.current.value = '';
     }
-  }, [photo]);
+  }, [file, hiddenPhotoInput]);
 
   return (
     <nav className={`attach-popup ${isVisible ? 'active' : ''}`} onMouseLeave={handleMouseLeave}>
       <PopupMenuItem label="Photo" icon={<ImageNVideoIcon />} handleClick={choosePhoto} />
       <input className="input-file" type="file" id="uploadPhoto" ref={hiddenPhotoInput} onChange={handleChange} />
-      <PopupMenuItem label="Document" icon={<DocumentIcon />} handleClick={chooseFile} />
+      <PopupMenuItem label="Document" icon={<DocumentIcon />} />
       <input className="input-file" type="file" id="uploadFile" ref={hiddenDocInput} onChange={handleChange} />
     </nav>
   );

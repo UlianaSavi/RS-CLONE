@@ -1,24 +1,34 @@
-import { useState, useEffect, useContext } from 'react';
 import {
   doc, serverTimestamp, updateDoc, arrayUnion, Timestamp,
 } from 'firebase/firestore';
-import { CloseIcon, MoreIcon } from '../../assets/icons/icons';
-import './SendImagePopap.scss';
-import { User } from '../../types';
+import { useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
-import { db } from '../../firebaseConfig';
+import { SendImageContext } from '../../context/SendingImageContext';
 import { UserContext } from '../../context/UserContext';
+import { db } from '../../firebaseConfig';
 import { loadMessagePhoto } from '../../API/api';
+import { User } from '../../types';
+import { CloseIcon, MoreIcon } from '../../assets/icons/icons';
+import './SendImagePopap.scss';
 
-function SendImagePopap({ image: { url, file } }: { image: { url: string, file: File } }) {
-  const [isActivePopup, setActivePopup] = useState(true);
+function SendImagePopap() {
+  const {
+    popap,
+    setPopap,
+    url,
+    setUrl,
+    file,
+    setFile,
+  } = useContext(SendImageContext);
   const currentUser: User = useContext(AuthContext) as User;
   const { activeChatID } = useContext(ActiveChatContext);
   const { userID } = useContext(UserContext);
 
   function closePopap() {
-    setActivePopup(!isActivePopup);
+    setUrl('');
+    setFile(null);
+    setPopap(!popap);
   }
 
   const sendMessage = async (messageText = '') => {
@@ -48,13 +58,11 @@ function SendImagePopap({ image: { url, file } }: { image: { url: string, file: 
         imageUrl,
       },
     });
-  };
-  useEffect(() => {
     closePopap();
-  }, [url]);
+  };
 
   return (
-    <div className={isActivePopup && url ? 'image-popap active' : 'image-popap'}>
+    <div className={!popap && url ? 'image-popap active' : 'image-popap'}>
       <div className="image-popap__header">
         <CloseIcon callback={() => closePopap()} />
         <span className="image-popap__header__title">Send Photo</span>

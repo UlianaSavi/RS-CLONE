@@ -1,12 +1,13 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import './ChatWindow.scss';
 import MessageInput from '../MessageInput/MessageInput';
 import { BubblesDateGroup } from '../BubblesDateGroup/BubblesDateGroup';
 import SendImagePopap from '../SendImagePopap/SendImagePopap';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
+import { SendImageContext } from '../../context/SendingImageContext';
 
 function ChatWindow() {
-  const [photo, setPhoto] = useState<{ url: string, file: File } | null>(null);
+  const { url } = useContext(SendImageContext);
   const { activeChatID } = useContext(ActiveChatContext);
 
   return (
@@ -16,7 +17,7 @@ function ChatWindow() {
         <BubblesDateGroup date="Today" />
       </div>
       )}
-      {activeChatID && <MessageInput getPhoto={setPhoto} />}
+      {activeChatID && <MessageInput />}
       <svg height="0" width="0">
         <defs>
           <clipPath id="svgPath">
@@ -25,7 +26,7 @@ function ChatWindow() {
         </defs>
       </svg>
       <div className="chat-window__bg-image" />
-      {photo && <SendImagePopap image={photo} />}
+      {url && <SendImagePopap />}
     </div>
   );
 }

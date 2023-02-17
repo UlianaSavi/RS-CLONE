@@ -22,7 +22,7 @@ import './MessageInput.scss';
 
 const TextArea = styled.textarea``;
 
-function MessageInput({ getPhoto }: { getPhoto: (props: { url: string, file: File }) => void }) {
+function MessageInput() {
   const [isVisibleAttach, setVisibilityAttach] = useState(false);
   const [isVisibleEmotion, setVisibilityEmotion] = useState(false);
   const [isAudio, setIsAudio] = useState(false);
@@ -161,7 +161,6 @@ function MessageInput({ getPhoto }: { getPhoto: (props: { url: string, file: Fil
           <AttachIcon />
         </button>
         <AttachPopup
-          getPhoto={getPhoto}
           isVisible={isVisibleAttach}
           handleMouseLeave={toggleAttachPopup}
         />
