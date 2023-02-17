@@ -30,7 +30,7 @@ function ChatPreview({
   const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
   const currentUser: User = useContext(AuthContext) as User;
 
-  const resetUnreadMessages = async () => {
+  const resetMessagesCounter = async () => {
     await updateDoc(doc(db, 'userChats', currentUser.uid), {
       [`${activeChatID}.unreadMessages`]: 0,
     });
@@ -39,9 +39,9 @@ function ChatPreview({
   const selectChat = () => {
     const combinedID = currentUser.uid > uid ? `${currentUser.uid}${uid}` : `${uid}${currentUser.uid}`;
     setActiveUserID(uid);
+    resetMessagesCounter();
     setActiveChatID(combinedID);
     setSearchMode(false);
-    resetUnreadMessages();
   };
 
   const convertTimestamp = (timestamp: firestore.Timestamp): string => {
@@ -83,7 +83,7 @@ function ChatPreview({
       {!isSearchMode && (
       <div className="chat-preview__info">
         <div className="chat-preview__messenge-time">{convertTimestamp(data?.lastMessage.date)}</div>
-        {data?.unreadMessages ? <div className="chat-preview__messenge-num">{data?.unreadMessages}</div> : null}
+        {data?.unreadMessages && !isActive ? <div className="chat-preview__messenge-num">{data?.unreadMessages}</div> : null}
       </div>
       )}
     </button>
