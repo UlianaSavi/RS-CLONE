@@ -24,7 +24,7 @@ function ChatsFolderItem({
       onClick={selectFolder}
     >
       <div className="folder-tab__title">{title}</div>
-      <span className="folder-tab__message-count">{unreadConversations}</span>
+      {unreadConversations && <span className="folder-tab__message-count">{unreadConversations}</span>}
     </button>
   );
 }
