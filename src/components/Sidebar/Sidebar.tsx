@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState, useContext, useEffect } from 'react';
+import { ActiveChatContext } from '../../context/ActiveChatContext';
+import { ActiveVisibilitySidebarProvider } from '../../context/VisibleSidebar';
 import CreateButton from '../CreateButton/CreateButton';
 import CreatePopup from '../CreatePopup/CreatePopup';
 import SettingsSidebar from '../ForSettingsSidebar/SettingsSidebar';
@@ -12,6 +14,9 @@ function Sidebar() {
   const [isActiveCreatePopup, setActiveCreatePopup] = useState(false);
   const [isSettings, setSettings] = useState(false);
   const [isSearchMode, setSearchMode] = useState(false);
+  const { activeChatID } = useContext(ActiveChatContext);
+  const [isVisibleSidebar, setVisibilitySidebar] = useState(!(window.innerWidth <= 920
+    && activeChatID));
 
   function flipFlop() {
     setActivePopup(!isActivePopup);
@@ -26,42 +31,57 @@ function Sidebar() {
     }
   }
 
+  useEffect(() => setVisibilitySidebar(!(window.innerWidth <= 920
+    && activeChatID)), [activeChatID]);
+
+  function changeVisibility() {
+    if (window.innerWidth <= 920 && activeChatID) {
+      setVisibilitySidebar(false);
+    } else {
+      setVisibilitySidebar(true);
+    }
+  }
+
+  window.addEventListener('resize', () => changeVisibility());
+
   const toggleCreatePopup = () => setActiveCreatePopup(!isActiveCreatePopup);
   const closeCreatePopup = () => setActiveCreatePopup(false);
 
   return (
-    <div className="sidebar">
-      {
-        isSettings ? <SettingsSidebar onSidebarChange={() => changeSidebar()} />
-          : (
-            <>
-              <SidebarHeader
-                callback={() => flipFlop()}
-                isSearchMode={isSearchMode}
-                setSearchMode={setSearchMode}
-              />
-              <SidebarContent
-                isSearchMode={isSearchMode}
-                setSearchMode={setSearchMode}
-              />
-              <CreateButton
-                isVisible={!isSearchMode}
-                handleClick={toggleCreatePopup}
-              />
-              <CreatePopup
-                isVisible={isActiveCreatePopup}
-                closePopup={closeCreatePopup}
-                setSearchMode={setSearchMode}
-              />
-              <SettingsMenu
-                isOpen={isActivePopup}
-                onClose={() => setActivePopup(false)}
-                onSidebarChange={() => changeSidebar()}
-              />
-            </>
-          )
-      }
-    </div>
+    <ActiveVisibilitySidebarProvider>
+      <div className={isVisibleSidebar ? 'sidebar' : 'hide'}>
+        {
+          isSettings ? <SettingsSidebar onSidebarChange={() => changeSidebar()} />
+            : (
+              <>
+                <SidebarHeader
+                  callback={() => flipFlop()}
+                  isSearchMode={isSearchMode}
+                  setSearchMode={setSearchMode}
+                />
+                <SidebarContent
+                  isSearchMode={isSearchMode}
+                  setSearchMode={setSearchMode}
+                />
+                <CreateButton
+                  isVisible={!isSearchMode}
+                  handleClick={toggleCreatePopup}
+                />
+                <CreatePopup
+                  isVisible={isActiveCreatePopup}
+                  closePopup={closeCreatePopup}
+                  setSearchMode={setSearchMode}
+                />
+                <SettingsMenu
+                  isOpen={isActivePopup}
+                  onClose={() => setActivePopup(false)}
+                  onSidebarChange={() => changeSidebar()}
+                />
+              </>
+            )
+        }
+      </div>
+    </ActiveVisibilitySidebarProvider>
   );
 }
 

@@ -7,6 +7,17 @@
   max-width: 420px;
   height: 100%;
   overflow: hidden;
+  flex: 2;
 
   background-color: $grey-dark;
+}
+
+.hide {
+  position: absolute;
+  
+  visibility: hidden;
+
+  button {
+    visibility: hidden;
+  }
 }

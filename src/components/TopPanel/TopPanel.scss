@@ -1,5 +1,27 @@
 @import "../../styles/variables";
 
+@mixin arrow-style {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: .5rem;
+
+  background: none;
+  border: none;
+
+  cursor: pointer;
+
+  &:hover {
+    border-radius: 50%;
+    background-color: $grey-hover;
+  }
+  
+  .icon {
+    font-size: 1.3rem;
+
+    padding: 0.3125rem;
+  }
+}
+
 .top-panel {
   display: flex;
   align-items: center;
@@ -7,4 +29,24 @@
 
   background-color: $grey-main;
   border-left: 1px solid $grey-dark;
+
+  &__arrow {
+    @include arrow-style();
+
+    position: absolute;
+
+    visibility: hidden;
+
+    &_revert {
+      @include arrow-style();
+  
+      transform: scale(-1, 1);
+    }
+
+    @media (max-width: 920px) {
+      position: relative;
+
+      visibility: visible;
+    }
+  }
 }

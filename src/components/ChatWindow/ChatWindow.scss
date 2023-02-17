@@ -14,14 +14,19 @@
   &__wrapper {
     box-sizing: border-box;
     width: 100%;
-    max-width: 660px;
-    margin-right: 60px;
-    padding: 20px;
+    max-width: 728px;
+    margin: 0 auto;
+    padding: 0 10px;
 
     overflow-y: scroll;
 
     &::-webkit-scrollbar {
       width: 0;
+    }
+
+    @media (max-width: 1150px) {
+      padding: 0 10px;
+      margin-right: 0;
     }
   }
 
