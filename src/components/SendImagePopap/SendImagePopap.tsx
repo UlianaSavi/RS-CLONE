@@ -3,7 +3,7 @@ import {
 } from 'react';
 import styled from 'styled-components';
 import {
-  doc, serverTimestamp, updateDoc, arrayUnion, Timestamp,
+  doc, serverTimestamp, updateDoc, arrayUnion, Timestamp, setDoc, getDoc,
 } from 'firebase/firestore';
 import { AuthContext } from '../../context/AuthContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
@@ -21,6 +21,52 @@ function SendImagePopap() {
   const [messageValue, setMessageValue] = useState('');
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
 
+  // Chat activation
+  const currentUser: User = useContext(AuthContext) as User;
+  const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
+  const { userID } = useContext(UserContext);
+
+  const activateChat = async () => {
+    const combinedID = currentUser.uid > userID ? `${currentUser.uid}${userID}` : `${userID}${currentUser.uid}`;
+    setActiveChatID(combinedID);
+    const chat = await getDoc(doc(db, 'chats', activeChatID));
+    const userChat = await getDoc(doc(db, 'userChats', userID));
+    const currentUserChat = await getDoc(doc(db, 'userChats', currentUser.uid));
+
+    if (!chat.exists()) {
+      await setDoc(doc(db, 'chats', activeChatID), { messages: [] });
+    }
+
+    if (!userChat.get(activeChatID)) {
+      await updateDoc(doc(db, 'userChats', userID), {
+        [`${activeChatID}.userInfo`]: {
+          uid: currentUser.uid,
+          displayName: currentUser.displayName,
+          photoURL: currentUser.photoURL,
+          isOnline: true,
+        },
+        [`${activeChatID}.createdAt`]: serverTimestamp(),
+        [`${activeChatID}.unreadMessages`]: 0,
+      });
+    }
+
+    if (!currentUserChat.get(activeChatID)) {
+      const user = await getDoc(doc(db, 'users', userID));
+      const userData = user.data();
+
+      await updateDoc(doc(db, 'userChats', currentUser.uid), {
+        [`${activeChatID}.userInfo`]: {
+          uid: userID,
+          displayName: userData?.displayName,
+          photoURL: userData?.photoURL,
+          isOnline: true,
+        },
+        [`${activeChatID}.createdAt`]: serverTimestamp(),
+        [`${activeChatID}.unreadMessages`]: 0,
+      });
+    }
+  };
+
   const {
     popap,
     setPopap,
@@ -29,9 +75,6 @@ function SendImagePopap() {
     file,
     setFile,
   } = useContext(SendImageContext);
-  const currentUser: User = useContext(AuthContext) as User;
-  const { activeChatID } = useContext(ActiveChatContext);
-  const { userID } = useContext(UserContext);
 
   function closePopap() {
     setUrl('');
@@ -40,6 +83,7 @@ function SendImagePopap() {
   }
 
   const sendMessage = async () => {
+    await activateChat();
     const imageUrl = await loadMessagePhoto(file);
     await updateDoc(doc(db, 'chats', activeChatID), {
       messages: arrayUnion({
