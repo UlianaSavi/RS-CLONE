@@ -58,6 +58,17 @@
 
       transform: scale(-1, 1);
     }
+
+    .img {
+      width: 100%;
+      max-width: 300px;
+      border: 5px solid $grey-main;
+      border-radius: 20px;
+    
+      &.none {
+        display: none;
+      }
+    }
   }
 
   .img {
@@ -87,6 +98,6 @@
   font-size: 1rem;
   line-height: 1.3125;
 
-  max-width: 480px;
+  max-width: 360px;
 }
 

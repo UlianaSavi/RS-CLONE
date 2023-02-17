@@ -150,6 +150,7 @@ function MessageInput() {
         <EmotionPopup isVisible={isVisibleEmotion} handleMouseLeave={toggleEmotionPopup} />
         <TextArea
           placeholder="Message"
+          id="message"
           className="message-input__text-area"
           ref={textAreaRef}
           value={messageValue}
