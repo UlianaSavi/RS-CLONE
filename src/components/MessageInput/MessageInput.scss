@@ -19,6 +19,10 @@
     margin: 0;
     width: 95%;
   }
+
+  @media (max-width: 600px) {
+    padding-bottom: 7px;
+  }
   
   &__container {
     position: relative;
@@ -31,6 +35,10 @@
 
     background-color: $grey-main;
     border-radius: 15px;
+
+    @media (max-width: 600px) {
+      padding: 5px 8px;
+    }
   }
 
   &__text-area {
@@ -100,6 +108,11 @@
 
     &:hover {
       background-color: $accent-hover-dark;
+    }
+
+    @media (max-width: 600px) {
+      height: 46px;
+      width: 46px;
     }
   }
 
