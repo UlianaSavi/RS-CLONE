@@ -28,6 +28,10 @@
       padding: 0 10px;
       margin-right: 0;
     }
+
+    @media (max-width: 920px) {
+      margin: 0;
+    }
   }
 
   &__bg-image {
