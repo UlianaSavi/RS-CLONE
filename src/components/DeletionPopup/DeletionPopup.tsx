@@ -38,20 +38,19 @@ function DeletionPopup({
     getUserData();
   }, [userIdUnderRMK]);
 
+  const closePopup = () => {
+    setVisibility(false);
+    setChecked(false);
+  };
+
   const handleDeleteBtn = () => {
     const combinedID = currentUser.uid > userIdUnderRMK ? `${currentUser.uid}${userIdUnderRMK}` : `${userIdUnderRMK}${currentUser.uid}`;
     deleteChat(combinedID, currentUser.uid, userIdUnderRMK, checked);
-    setVisibility(false);
-    setChecked(false);
+    closePopup();
     if (userIdUnderRMK === userID) {
       setUserID('');
       setActiveChatID('');
     }
-  };
-
-  const closePopup = () => {
-    setVisibility(false);
-    setChecked(false);
   };
 
   const handleBg = (event: React.MouseEvent<HTMLDivElement>) => {

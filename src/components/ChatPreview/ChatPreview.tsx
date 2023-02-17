@@ -1,6 +1,10 @@
 /* eslint-disable no-unused-vars */
 import * as firestore from 'firebase/firestore';
 import { useContext } from 'react';
+import {
+  doc, updateDoc,
+} from 'firebase/firestore';
+import { db } from '../../firebaseConfig';
 import Avatar from '../Avatar/Avatar';
 import { AuthContext } from '../../context/AuthContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
@@ -23,12 +27,21 @@ function ChatPreview({
     uid, displayName, photoURL,
   } = data.userInfo;
 
-  const { setActiveChatID } = useContext(ActiveChatContext);
+  const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
   const currentUser: User = useContext(AuthContext) as User;
+
+  const resetMessagesCounter = async () => {
+    if (activeChatID) {
+      await updateDoc(doc(db, 'userChats', currentUser.uid), {
+        [`${activeChatID}.unreadMessages`]: 0,
+      });
+    }
+  };
 
   const selectChat = () => {
     const combinedID = currentUser.uid > uid ? `${currentUser.uid}${uid}` : `${uid}${currentUser.uid}`;
     setActiveUserID(uid);
+    resetMessagesCounter();
     setActiveChatID(combinedID);
     setSearchMode(false);
   };
@@ -72,7 +85,7 @@ function ChatPreview({
       {!isSearchMode && (
       <div className="chat-preview__info">
         <div className="chat-preview__messenge-time">{convertTimestamp(data?.lastMessage.date)}</div>
-        {/* <div className="chat-preview__messenge-num">0</div> */}
+        {data?.unreadMessages && !isActive ? <div className="chat-preview__messenge-num">{data?.unreadMessages}</div> : null}
       </div>
       )}
     </button>

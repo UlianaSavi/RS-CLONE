@@ -10,6 +10,7 @@ export interface User {
 
 export interface UserChat {
   userInfo: User,
+  unreadMessages: number,
   lastMessage: {
     date: firestore.Timestamp,
     text: string

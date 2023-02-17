@@ -67,6 +67,7 @@ function MessageInput() {
           isOnline: true,
         },
         [`${activeChatID}.createdAt`]: serverTimestamp(),
+        [`${activeChatID}.unreadMessages`]: 0,
       });
     }
 
@@ -82,6 +83,7 @@ function MessageInput() {
           isOnline: true,
         },
         [`${activeChatID}.createdAt`]: serverTimestamp(),
+        [`${activeChatID}.unreadMessages`]: 0,
       });
     }
   };
@@ -104,11 +106,17 @@ function MessageInput() {
       },
     });
 
+    const chats = await getDoc(doc(db, 'userChats', userID));
+    const data = chats.data();
+    if (!data) return;
+    let { unreadMessages } = data[activeChatID];
+
     await updateDoc(doc(db, 'userChats', userID), {
       [`${activeChatID}.lastMessage`]: {
         text: messageText,
         date: serverTimestamp(),
       },
+      [`${activeChatID}.unreadMessages`]: unreadMessages += 1,
     });
   };
 
