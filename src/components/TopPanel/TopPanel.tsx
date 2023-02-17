@@ -13,7 +13,6 @@ interface TopPanelProps {
 export default function TopPanel({ callback }: TopPanelProps) {
   const [isClicked, setClick] = useState(true);
   const { setActiveSidebar } = useContext(ActiveVisibilitySidebar);
-  setActiveSidebar(isClicked);
 
   return (
     <div className="top-panel">
@@ -22,6 +21,9 @@ export default function TopPanel({ callback }: TopPanelProps) {
         className={isClicked ? 'top-panel__arrow' : 'top-panel__arrow_revert'}
         onClick={() => {
           setClick(!isClicked);
+          // Пока логическое отрицание так как isClicked в первый раз отдаёт true
+          // из-за этого контекст не меняется
+          setActiveSidebar(!isClicked);
         }}
       >
         <ArrowLeftIcon />

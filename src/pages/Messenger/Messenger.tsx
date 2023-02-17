@@ -8,6 +8,7 @@ import './Messenger.scss';
 function Messenger() {
   const { popap } = useContext(SendImageContext);
   const { isActiveSidebar } = useContext(ActiveVisibilitySidebar);
+
   return (
     <div className="messenger">
       {popap && <div className="blackout" />}
