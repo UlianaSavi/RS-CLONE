@@ -10,6 +10,7 @@ import { AuthContext } from '../../context/AuthContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
 import type { User, UserChat } from '../../types';
 import './ChatPreview.scss';
+import { ActiveVisibilitySidebar } from '../../context/VisibleSidebarContext';
 
 interface ChatPreviewProps {
   data: UserChat,
@@ -29,6 +30,7 @@ function ChatPreview({
 
   const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
   const currentUser: User = useContext(AuthContext) as User;
+  const { setActiveSidebar } = useContext(ActiveVisibilitySidebar);
 
   const resetMessagesCounter = async () => {
     if (activeChatID) {
@@ -44,6 +46,7 @@ function ChatPreview({
     resetMessagesCounter();
     setActiveChatID(combinedID);
     setSearchMode(false);
+    if (window.innerWidth <= 920) setActiveSidebar(false);
   };
 
   const convertTimestamp = (timestamp: firestore.Timestamp): string => {
