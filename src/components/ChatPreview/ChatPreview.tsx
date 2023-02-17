@@ -24,7 +24,7 @@ function ChatPreview({
   data, isActive, setActiveUserID, isSearchMode, setSearchMode, onContextMenu,
 }: ChatPreviewProps) {
   const {
-    uid, displayName, photoURL, isOnline,
+    uid, displayName, photoURL, isOnline, lastVisitAt,
   } = data.userInfo;
 
   const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
@@ -55,6 +55,8 @@ function ChatPreview({
     });
   }
 
+  const lastSeen = !isOnlineStatus && lastVisitAt ? convertTimestamp(lastVisitAt) : '';
+
   const handleContextMenu = (event: React.MouseEvent) => {
     onContextMenu(event, uid);
   };
@@ -71,7 +73,7 @@ function ChatPreview({
         <div className="chat-preview-text">
           <div className="chat-preview__title">{displayName}</div>
           {isSearchMode
-            ? <div className="chat-preview__online-status">{isOnlineStatus ? 'Online' : 'Offline'}</div>
+            ? <div className="chat-preview__online-status">{isOnlineStatus ? 'Online' : `Last seen ${lastSeen}`}</div>
             : <div className="chat-preview__last-message">{data?.lastMessage.text}</div>}
         </div>
       </div>
