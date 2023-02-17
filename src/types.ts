@@ -30,7 +30,8 @@ export interface Message {
   date: IMessageDate,
   id: string,
   senderID: string,
-  text: string
+  text: string,
+  imageUrl: string
 }
 
 export interface Messages {

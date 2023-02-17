@@ -5,13 +5,15 @@ export default function BubblesMessage(props: {
   message: string,
   time: string,
   isRead: boolean,
-  isCurrenUser: boolean
+  isCurrenUser: boolean,
+  imageUrl: string,
 }) {
   const {
     message,
     time,
     isRead,
     isCurrenUser,
+    imageUrl,
   } = props;
 
   let firstCheckMark;
@@ -26,6 +28,7 @@ export default function BubblesMessage(props: {
 
   return (
     <div className={isCurrenUser ? 'bubble__user-message' : 'bubble__user-message another-user'}>
+      <img className={imageUrl ? 'img' : 'img none'} src={imageUrl} alt="" />
       <span className="message">{message}</span>
       <div className="bubble__time-n-check-wrapper">
         <span className="bubble__time">{time}</span>

@@ -31,6 +31,7 @@ export function BubblesDateGroup(props: {date: string}) {
               isRead
               isCurrenUser={message.senderID === currentUser?.uid}
               key={message.id}
+              imageUrl={message.imageUrl}
             />
           )));
       });

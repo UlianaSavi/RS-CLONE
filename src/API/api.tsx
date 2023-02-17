@@ -12,7 +12,7 @@ import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import type { User } from 'firebase/auth';
 import { auth, db, storage } from '../firebaseConfig';
 
-const loadPhoto = async (name: string, avatar: File | null, user = auth.currentUser) => {
+const loadProfilePhoto = async (name: string, avatar: File | null, user = auth.currentUser) => {
   const storageRef = ref(storage, `${name}${Math.floor(100000 + Math.random() * 900000)}`);
   const uploadTask = uploadBytesResumable(storageRef, avatar as File);
 
@@ -96,7 +96,7 @@ export const singUp = async (
       displayName: name,
     });
 
-    await loadPhoto(name, avatar, user);
+    await loadProfilePhoto(name, avatar, user);
   } catch (error) {
     console.error(error);
   }
@@ -145,7 +145,7 @@ export const changeProfilePhoto = async (
   if (photoList && auth.currentUser) {
     const avatar = photoList[0];
 
-    return loadPhoto(name, avatar);
+    return loadProfilePhoto(name, avatar);
   }
   return null;
 };
@@ -166,4 +166,24 @@ export const deleteChat = async (
       [chatID]: deleteField(),
     });
   }
+};
+
+export const loadMessagePhoto = async (image: File | null) => {
+  const storageRef = ref(storage, `chat_image_${Math.floor(Date.now() + Math.random() * 900000)}`);
+  const uploadTask = uploadBytesResumable(storageRef, image as File);
+
+  if (image) {
+    uploadTask.on(
+      'state_changed',
+      (snapshot) => {
+        const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        return progress;
+      },
+      (error) => {
+        throw error;
+      },
+    );
+  }
+
+  return getDownloadURL((await uploadTask).ref);
 };
