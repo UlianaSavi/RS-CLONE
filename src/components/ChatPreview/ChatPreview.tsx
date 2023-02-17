@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useContext, useState } from 'react';
 import {
-  onSnapshot, doc, getDoc,
+  onSnapshot, doc, updateDoc,
 } from 'firebase/firestore';
 import * as firestore from 'firebase/firestore';
 import { db } from '../../firebaseConfig';
@@ -27,13 +27,22 @@ function ChatPreview({
     uid, displayName, photoURL, isOnline,
   } = data.userInfo;
 
-  const { setActiveChatID } = useContext(ActiveChatContext);
+  const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
   const currentUser: User = useContext(AuthContext) as User;
+
+  const resetMessagesCounter = async () => {
+    if (activeChatID) {
+      await updateDoc(doc(db, 'userChats', currentUser.uid), {
+        [`${activeChatID}.unreadMessages`]: 0,
+      });
+    }
+  };
   const [isOnlineStatus, setIsOnlineStatus] = useState(isOnline || false);
 
   const selectChat = () => {
     const combinedID = currentUser.uid > uid ? `${currentUser.uid}${uid}` : `${uid}${currentUser.uid}`;
     setActiveUserID(uid);
+    resetMessagesCounter();
     setActiveChatID(combinedID);
     setSearchMode(false);
   };
@@ -85,7 +94,7 @@ function ChatPreview({
       {!isSearchMode && (
       <div className="chat-preview__info">
         <div className="chat-preview__messenge-time">{convertTimestamp(data?.lastMessage.date)}</div>
-        {/* <div className="chat-preview__messenge-num">0</div> */}
+        {data?.unreadMessages && !isActive ? <div className="chat-preview__messenge-num">{data?.unreadMessages}</div> : null}
       </div>
       )}
     </button>
