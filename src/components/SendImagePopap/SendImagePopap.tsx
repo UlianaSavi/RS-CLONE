@@ -1,5 +1,5 @@
 import {
-  useState, useContext, useRef, useEffect,
+  useState, useContext, useRef,
 } from 'react';
 import styled from 'styled-components';
 import {
@@ -21,13 +21,6 @@ function SendImagePopap() {
   const [messageValue, setMessageValue] = useState('');
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
 
-  const resizeTextArea = () => {
-    // if (textAreaRef.current) {
-    //   textAreaRef.current.style.height = 'auto';
-    //   textAreaRef.current.style.height = `${textAreaRef.current.scrollHeight}px`;
-    // }
-  };
-  useEffect(resizeTextArea, [messageValue]);
   const {
     popap,
     setPopap,
@@ -51,7 +44,7 @@ function SendImagePopap() {
     await updateDoc(doc(db, 'chats', activeChatID), {
       messages: arrayUnion({
         id: Math.floor(10000000000 + Math.random() * 90000000000),
-        text: messageValue,
+        text: messageValue !== '' ? messageValue : 'Photo',
         senderID: currentUser.uid,
         date: Timestamp.now(),
         imageUrl,
@@ -60,7 +53,7 @@ function SendImagePopap() {
 
     await updateDoc(doc(db, 'userChats', currentUser.uid), {
       [`${activeChatID}.lastMessage`]: {
-        text: messageValue,
+        text: messageValue !== '' ? messageValue : 'Photo',
         date: serverTimestamp(),
         imageUrl,
       },
@@ -68,7 +61,7 @@ function SendImagePopap() {
 
     await updateDoc(doc(db, 'userChats', userID), {
       [`${activeChatID}.lastMessage`]: {
-        text: messageValue,
+        text: messageValue !== '' ? messageValue : 'Photo',
         date: serverTimestamp(),
         imageUrl,
       },

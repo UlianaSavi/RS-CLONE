@@ -79,7 +79,7 @@ function ChatPreview({
           <div className="chat-preview__title">{displayName}</div>
           {isSearchMode
             ? <div className="chat-preview__online-status">Online</div>
-            : <div className="chat-preview__last-message">{data?.lastMessage.text || 'Photo'}</div>}
+            : <div className="chat-preview__last-message">{data?.lastMessage.text}</div>}
         </div>
       </div>
       {!isSearchMode && (
