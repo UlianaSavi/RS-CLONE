@@ -34,6 +34,10 @@
   background-color: $grey-main;
   border-left: 1px solid $grey-dark;
 
+  @media (max-width: 600px) {
+    padding: 0.5rem .3rem;
+  }
+
   &__arrow {
     @include arrow-style();
 
