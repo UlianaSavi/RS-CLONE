@@ -89,7 +89,7 @@ export const singUp = async (
 };
 
 export const singIn = async (email: string, password: string) => {
-  signInWithEmailAndPassword(auth, email, password)
+  await signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       const { user } = userCredential;
       return user;
@@ -99,9 +99,21 @@ export const singIn = async (email: string, password: string) => {
       const errorMessage = error.message;
       console.log(errorCode, errorMessage);
     });
+
+  if (auth.currentUser) {
+    await updateDoc(doc(db, 'users', auth.currentUser.uid), {
+      isOnline: true,
+    });
+  }
 };
 
 export const logOut = async () => {
+  if (auth.currentUser) {
+    await updateDoc(doc(db, 'users', auth.currentUser.uid), {
+      isOnline: false,
+    });
+  }
+
   signOut(auth).then(() => {
     console.log('Sign-out successful.');
   }).catch((error) => {
