@@ -127,6 +127,7 @@ function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps
         showPopup={setShowDeletionPopup}
         handleMouseLeave={closeContextMenu}
         position={menuPosition}
+        userIdUnderRMK={userIdUnderRMK}
       />
       <DeletionPopup
         isVisible={showDeletionPopup}
