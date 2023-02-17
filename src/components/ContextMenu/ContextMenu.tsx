@@ -5,7 +5,7 @@ import {
 import { db } from '../../firebaseConfig';
 import PopupMenuItem from '../PopupMenuItem/PopupMenuItem';
 import { ReactComponent as TrashIcon } from '../../assets/icons/trash.svg';
-import { ReactComponent as SettingIcon } from '../../assets/icons/setting-icon.svg';
+import { ReactComponent as MarkAsReadIcon } from '../../assets/icons/mark-chat-read.svg';
 import { AuthContext } from '../../context/AuthContext';
 import type { User } from '../../types';
 import './ContextMenu.scss';
@@ -36,7 +36,7 @@ function ContextMenu({
       onMouseLeave={handleMouseLeave}
       style={{ top: `${position.y}px`, left: `${position.x}px` }}
     >
-      <PopupMenuItem label="Mark as read" icon={<SettingIcon />} handleClick={resetMessagesCounter} />
+      <PopupMenuItem label="Mark as read" icon={<MarkAsReadIcon className="context-menu__read-icon" />} handleClick={resetMessagesCounter} />
       <PopupMenuItem label="Delete chat" icon={<TrashIcon />} handleClick={() => showPopup(true)} />
     </nav>
   );
