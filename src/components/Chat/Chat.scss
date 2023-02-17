@@ -7,3 +7,13 @@
   flex: 3;
   height: 100vh;
 }
+
+.hide {
+  position: absolute;
+  
+  visibility: hidden;
+
+  button {
+    visibility: hidden;
+  }
+}
