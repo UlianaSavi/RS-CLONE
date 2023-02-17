@@ -4,17 +4,16 @@ import './TopPanel.scss';
 import TopPanelTools from '../TopPanelTools/TopPanelTools';
 import TopPanelPinnedMessage from '../TopPanelPinnedMessage/TopPanelPinnedMessage';
 import { ArrowLeftIcon } from '../../assets/icons/icons';
-import { ActiveVisibilitySidebar } from '../../context/VisibleSidebar';
+import { ActiveVisibilitySidebar } from '../../context/VisibleSidebarContext';
 
 interface TopPanelProps {
-  callback: () => void
+  callback: () => void;
 }
 
 export default function TopPanel({ callback }: TopPanelProps) {
   const [isClicked, setClick] = useState(true);
   const { setActiveSidebar } = useContext(ActiveVisibilitySidebar);
   setActiveSidebar(isClicked);
-  console.log(`click ${isClicked}`);
 
   return (
     <div className="top-panel">

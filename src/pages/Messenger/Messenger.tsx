@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import Chat from '../../components/Chat/Chat';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import { SendImageContext } from '../../context/SendImageContext';
-import { ActiveVisibilitySidebar } from '../../context/VisibleSidebar';
+import { ActiveVisibilitySidebar } from '../../context/VisibleSidebarContext';
 import './Messenger.scss';
 
 function Messenger() {

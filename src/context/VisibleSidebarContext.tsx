@@ -16,7 +16,6 @@ export const ActiveVisibilitySidebar = createContext<ActiveSidebarContextProps>(
 
 export function ActiveVisibilitySidebarProvider({ children }: ProviderProps) {
   const [isActiveSidebar, setActiveSidebar] = useState(true);
-  console.log(isActiveSidebar);
 
   const value = useMemo(() => (
     { isActiveSidebar, setActiveSidebar }), [isActiveSidebar, setActiveSidebar]);

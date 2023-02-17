@@ -16,7 +16,6 @@ export const ActiveChatContext = createContext<ChatContextProps>({
 
 export function ActiveChatContextProvider({ children }: ProviderProps) {
   const [activeChatID, setActiveChatID] = useState('');
-  console.log(activeChatID);
 
   const value = useMemo(() => ({ activeChatID, setActiveChatID }), [activeChatID, setActiveChatID]);
 
