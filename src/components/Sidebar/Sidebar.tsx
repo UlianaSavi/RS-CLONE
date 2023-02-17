@@ -1,6 +1,4 @@
-import { useState, useContext, useEffect } from 'react';
-import { ActiveChatContext } from '../../context/ActiveChatContext';
-import { ActiveVisibilitySidebarProvider } from '../../context/VisibleSidebar';
+import { useState } from 'react';
 import CreateButton from '../CreateButton/CreateButton';
 import CreatePopup from '../CreatePopup/CreatePopup';
 import SettingsSidebar from '../ForSettingsSidebar/SettingsSidebar';
@@ -14,9 +12,6 @@ function Sidebar() {
   const [isActiveCreatePopup, setActiveCreatePopup] = useState(false);
   const [isSettings, setSettings] = useState(false);
   const [isSearchMode, setSearchMode] = useState(false);
-  const { activeChatID } = useContext(ActiveChatContext);
-  const [isVisibleSidebar, setVisibilitySidebar] = useState(!(window.innerWidth <= 920
-    && activeChatID));
 
   function flipFlop() {
     setActivePopup(!isActivePopup);
@@ -31,26 +26,12 @@ function Sidebar() {
     }
   }
 
-  useEffect(() => setVisibilitySidebar(!(window.innerWidth <= 920
-    && activeChatID)), [activeChatID]);
-
-  function changeVisibility() {
-    if (window.innerWidth <= 920 && activeChatID) {
-      setVisibilitySidebar(false);
-    } else {
-      setVisibilitySidebar(true);
-    }
-  }
-
-  window.addEventListener('resize', () => changeVisibility());
-
   const toggleCreatePopup = () => setActiveCreatePopup(!isActiveCreatePopup);
   const closeCreatePopup = () => setActiveCreatePopup(false);
 
   return (
-    <ActiveVisibilitySidebarProvider>
-      <div className={isVisibleSidebar ? 'sidebar' : 'hide'}>
-        {
+    <div className="sidebar">
+      {
           isSettings ? <SettingsSidebar onSidebarChange={() => changeSidebar()} />
             : (
               <>
@@ -80,8 +61,7 @@ function Sidebar() {
               </>
             )
         }
-      </div>
-    </ActiveVisibilitySidebarProvider>
+    </div>
   );
 }
 

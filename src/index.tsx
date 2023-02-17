@@ -5,6 +5,7 @@ import { AuthContextProvider } from './context/AuthContext';
 import { ActiveChatContextProvider } from './context/ActiveChatContext';
 import { UserContextProvider } from './context/UserContext';
 import { SendImageContextProvider } from './context/SendImageContext';
+import { ActiveVisibilitySidebarProvider } from './context/VisibleSidebar';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -14,9 +15,11 @@ root.render(
   <AuthContextProvider>
     <UserContextProvider>
       <ActiveChatContextProvider>
-        <SendImageContextProvider>
-          <App />
-        </SendImageContextProvider>
+        <ActiveVisibilitySidebarProvider>
+          <SendImageContextProvider>
+            <App />
+          </SendImageContextProvider>
+        </ActiveVisibilitySidebarProvider>
       </ActiveChatContextProvider>
     </UserContextProvider>
   </AuthContextProvider>,
