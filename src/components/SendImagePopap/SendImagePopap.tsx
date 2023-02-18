@@ -110,6 +110,18 @@ function SendImagePopap() {
         imageUrl,
       },
     });
+    const chats = await getDoc(doc(db, 'userChats', userID));
+    const data = chats.data();
+    if (!data) return;
+    let { unreadMessages } = data[activeChatID];
+
+    await updateDoc(doc(db, 'userChats', userID), {
+      [`${activeChatID}.lastMessage`]: {
+        text: messageValue !== '' ? messageValue : 'Photo',
+        date: serverTimestamp(),
+      },
+      [`${activeChatID}.unreadMessages`]: unreadMessages += 1,
+    });
     closePopap();
   };
 
