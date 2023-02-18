@@ -1,10 +1,70 @@
 @import "../../styles/variables";
 
+@mixin arrow-style {
+  position: absolute;
+
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: none;
+  border: none;
+
+  visibility: hidden;
+
+  cursor: pointer;
+
+  &:hover {
+    border-radius: 50%;
+    background-color: $grey-hover;
+  }
+  
+  .icon {
+    font-size: 1.3rem;
+
+    width: 1rem;
+    padding: 0.3125rem;
+    margin: 0;
+  }
+}
+
 .top-panel {
+  position: relative;
+  z-index: 5;
+  
   display: flex;
   align-items: center;
   padding: 0.5rem 1.5rem;
 
   background-color: $grey-main;
   border-left: 1px solid $grey-dark;
+
+  @media (max-width: 600px) {
+    padding: 0.5rem .3rem;
+  }
+
+  &__arrow {
+    @include arrow-style();
+
+    &_revert {
+      @include arrow-style();
+  
+      transform: scale(-1, 1);
+
+      @media (max-width: 920px) {
+        position: relative;
+  
+        visibility: visible;
+      }
+    }
+
+    @media (max-width: 920px) {
+      position: relative;
+
+      visibility: visible;
+    }
+  }
 }

@@ -6,7 +6,7 @@ export default function TopPanel(props: {callback: () => void}) {
   const { callback } = props;
   return (
     <div className="top-panel-tools">
-      <button className="top-panel-tools__btn" type="button">
+      <button className="top-panel-tools__btn search-btn" type="button">
         <SearchIcon className="top-panel-tools__search" />
       </button>
       <button className="top-panel-tools__btn" type="button" onClick={() => callback()}>

@@ -9,17 +9,26 @@
     align-items: center;
     justify-content: space-around;
 
+    background-color: $grey-main;
+
+    @media (max-width: 600px) {
+      max-width: 600px;
+    }
+
     &__title {
         width: 50%;
         font-size: 22px;
         text-align: left;
+        flex: 2;
     }
 
     &__close-button {
-        &::before {
-            top: -8px !important;
-            left: -5px !important;
-        }
+      margin: 0 .4rem;
+
+      &::before {
+          top: -8px !important;
+          left: -5px !important;
+      }
     }
 
     &__logout-button {
