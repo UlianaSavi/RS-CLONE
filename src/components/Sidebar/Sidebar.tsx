@@ -13,6 +13,7 @@ function Sidebar(props: {sidebarClass: string}) {
   const [isSettings, setSettings] = useState(false);
   const [isSearchMode, setSearchMode] = useState(false);
   const { sidebarClass } = props;
+  const [searchInput, setSearchInput] = useState('');
 
   function flipFlop() {
     setActivePopup(!isActivePopup);
@@ -33,35 +34,38 @@ function Sidebar(props: {sidebarClass: string}) {
   return (
     <div className={sidebarClass}>
       {
-          isSettings ? <SettingsSidebar onSidebarChange={() => changeSidebar()} />
-            : (
-              <>
-                <SidebarHeader
-                  callback={() => flipFlop()}
-                  isSearchMode={isSearchMode}
-                  setSearchMode={setSearchMode}
-                />
-                <SidebarContent
-                  isSearchMode={isSearchMode}
-                  setSearchMode={setSearchMode}
-                />
-                <CreateButton
-                  isVisible={!isSearchMode}
-                  handleClick={toggleCreatePopup}
-                />
-                <CreatePopup
-                  isVisible={isActiveCreatePopup}
-                  closePopup={closeCreatePopup}
-                  setSearchMode={setSearchMode}
-                />
-                <SettingsMenu
-                  isOpen={isActivePopup}
-                  onClose={() => setActivePopup(false)}
-                  onSidebarChange={() => changeSidebar()}
-                />
-              </>
-            )
-        }
+        isSettings ? <SettingsSidebar onSidebarChange={() => changeSidebar()} />
+          : (
+            <>
+              <SidebarHeader
+                callback={() => flipFlop()}
+                isSearchMode={isSearchMode}
+                setSearchMode={setSearchMode}
+                searchInput={searchInput}
+                setSearchInput={setSearchInput}
+              />
+              <SidebarContent
+                isSearchMode={isSearchMode}
+                setSearchMode={setSearchMode}
+                searchInput={searchInput}
+              />
+              <CreateButton
+                isVisible={!isSearchMode}
+                handleClick={toggleCreatePopup}
+              />
+              <CreatePopup
+                isVisible={isActiveCreatePopup}
+                closePopup={closeCreatePopup}
+                setSearchMode={setSearchMode}
+              />
+              <SettingsMenu
+                isOpen={isActivePopup}
+                onClose={() => setActivePopup(false)}
+                onSidebarChange={() => changeSidebar()}
+              />
+            </>
+          )
+      }
     </div>
   );
 }

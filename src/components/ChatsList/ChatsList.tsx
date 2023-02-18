@@ -20,9 +20,12 @@ interface ChatsListProps {
   activeFolder: number,
   isSearchMode: boolean
   setSearchMode: React.Dispatch<React.SetStateAction<boolean>>,
+  searchInput: string
 }
 
-function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps) {
+function ChatsList({
+  activeFolder, isSearchMode, setSearchMode, searchInput,
+}: ChatsListProps) {
   // Context menu
   const [showMenu, setShowMenu] = useState(false);
   const [showDeletionPopup, setShowDeletionPopup] = useState(false);
@@ -75,7 +78,11 @@ function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps
       const q = query(collection(db, 'users'), where('uid', '!=', currentUser.uid));
       const querySnapshot = await getDocs(q);
       querySnapshot.forEach((d) => {
-        chatsData.push({ userInfo: d.data() });
+        const data = d.data();
+        if (!searchInput) chatsData.push({ userInfo: d.data() });
+        if (searchInput && data.displayName.toLowerCase().includes(searchInput.toLowerCase())) {
+          chatsData.push({ userInfo: d.data() });
+        }
       });
       updateChatsList(chatsData);
     }
@@ -111,7 +118,7 @@ function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps
 
   useEffect(() => {
     showChatsList();
-  }, [currentUser?.uid, activeChatID, userID, activeFolder, isSearchMode]);
+  }, [currentUser?.uid, activeChatID, userID, activeFolder, isSearchMode, searchInput]);
 
   return (
     <>
