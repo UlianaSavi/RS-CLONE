@@ -6,9 +6,10 @@ import {
   updateProfile,
 } from 'firebase/auth';
 import {
-  doc, setDoc, updateDoc, arrayUnion, deleteDoc, deleteField,
+  doc, setDoc, updateDoc, arrayUnion, deleteDoc, deleteField, serverTimestamp,
 } from 'firebase/firestore';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
+import type { User } from 'firebase/auth';
 import { auth, db, storage } from '../firebaseConfig';
 
 const loadProfilePhoto = async (name: string, avatar: File | null, user = auth.currentUser) => {
@@ -41,6 +42,19 @@ const loadProfilePhoto = async (name: string, avatar: File | null, user = auth.c
     );
   }
   return getDownloadURL((await uploadTask).ref);
+};
+
+export const setOfflineStatus = async (user: User) => {
+  await updateDoc(doc(db, 'users', user.uid), {
+    isOnline: false,
+    lastVisitAt: serverTimestamp(),
+  });
+};
+
+export const setOnlineStatus = async (user: User) => {
+  await updateDoc(doc(db, 'users', user.uid), {
+    isOnline: true,
+  });
 };
 
 export const singUp = async (
@@ -89,10 +103,10 @@ export const singUp = async (
 };
 
 export const singIn = async (email: string, password: string) => {
-  signInWithEmailAndPassword(auth, email, password)
+  await signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       const { user } = userCredential;
-      return user;
+      setOnlineStatus(user);
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -102,6 +116,8 @@ export const singIn = async (email: string, password: string) => {
 };
 
 export const logOut = async () => {
+  await setOfflineStatus(auth.currentUser as User);
+
   signOut(auth).then(() => {
     console.log('Sign-out successful.');
   }).catch((error) => {
