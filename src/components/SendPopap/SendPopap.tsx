@@ -13,11 +13,11 @@ import { db } from '../../firebaseConfig';
 import { loadMessagePhoto } from '../../API/api';
 import { User } from '../../types';
 import { CloseIcon, MoreIcon } from '../../assets/icons/icons';
-import './SendImagePopap.scss';
+import './SendPopap.scss';
 
 const TextArea = styled.textarea``;
 
-function SendImagePopap() {
+function SendPopap() {
   const [messageValue, setMessageValue] = useState('');
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -88,7 +88,7 @@ function SendImagePopap() {
     await updateDoc(doc(db, 'chats', activeChatID), {
       messages: arrayUnion({
         id: Math.floor(10000000000 + Math.random() * 90000000000),
-        text: messageValue !== '' ? messageValue : 'Photo',
+        text: messageValue,
         senderID: currentUser.uid,
         date: Timestamp.now(),
         imageUrl,
@@ -145,7 +145,7 @@ function SendImagePopap() {
         <span className="image-popap__header__title">Send Photo</span>
         <MoreIcon />
       </div>
-      <img className="img" src={url} alt="sending" />
+      {url && <img className="img" src={url} alt="sending" />}
       <div className="captcha">
         <TextArea
           placeholder="Add a caption..."
@@ -163,4 +163,4 @@ function SendImagePopap() {
   );
 }
 
-export default SendImagePopap;
+export default SendPopap;

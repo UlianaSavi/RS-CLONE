@@ -3,7 +3,7 @@ import { ActiveChatContext } from '../../context/ActiveChatContext';
 import { SendImageContext } from '../../context/SendImageContext';
 import MessageInput from '../MessageInput/MessageInput';
 import { BubblesDateGroup } from '../BubblesDateGroup/BubblesDateGroup';
-import SendImagePopap from '../SendImagePopap/SendImagePopap';
+import SendPopap from '../SendPopap/SendPopap';
 
 import './ChatWindow.scss';
 
@@ -27,7 +27,7 @@ function ChatWindow() {
         </defs>
       </svg>
       <div className="chat-window__bg-image" />
-      {popap && <SendImagePopap />}
+      {popap && <SendPopap />}
     </div>
   );
 }
