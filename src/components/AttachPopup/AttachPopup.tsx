@@ -27,6 +27,11 @@ function AttachPopup({
       hiddenPhotoInput.current.click();
     }
   };
+  const chooseFile = () => {
+    if (hiddenDocInput.current) {
+      hiddenDocInput.current.click();
+    }
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e?.target?.files) {
@@ -49,8 +54,8 @@ function AttachPopup({
   return (
     <nav className={`attach-popup ${isVisible ? 'active' : ''}`} onMouseLeave={handleMouseLeave}>
       <PopupMenuItem label="Photo" icon={<ImageNVideoIcon />} handleClick={choosePhoto} />
-      <input className="input-file" type="file" id="uploadPhoto" ref={hiddenPhotoInput} onChange={handleChange} />
-      <PopupMenuItem label="Document" icon={<DocumentIcon />} />
+      <input className="input-file" type="file" id="uploadPhoto" accept="image/*" ref={hiddenPhotoInput} onChange={handleChange} />
+      <PopupMenuItem label="Document" icon={<DocumentIcon />} handleClick={chooseFile} />
       <input className="input-file" type="file" id="uploadFile" ref={hiddenDocInput} onChange={handleChange} />
     </nav>
   );
