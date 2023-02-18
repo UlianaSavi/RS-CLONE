@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import {
-  onSnapshot, doc, getDoc,
+  onSnapshot, doc, getDoc, DocumentData,
 } from 'firebase/firestore';
 import { db } from '../../firebaseConfig';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
@@ -17,11 +17,19 @@ function ChatInfo() {
   const [isOnline, setIsOnline] = useState(userInfo?.isOnline || false);
   const [lastSeen, setLastSeen] = useState('');
 
+  const setData = async (data: DocumentData) => {
+    setIsOnline(data.isOnline);
+    if (!data.isOnline && data.lastVisitAt) {
+      setLastSeen(convertTimestamp(data.lastVisitAt));
+    }
+  };
+
   const getData = async () => {
     if (activeChatID) {
       const user = await getDoc(doc(db, 'users', userID));
-      const userData = user.data() as User;
-      setUserInfo(userData);
+      const data = user.data() as User;
+      setUserInfo(data);
+      setData(data);
     }
   };
 
@@ -30,10 +38,7 @@ function ChatInfo() {
     onSnapshot(doc(db, 'users', userID), (d) => {
       const data = d.data();
       if (!data || !userInfo) return;
-      setIsOnline(data.isOnline);
-      if (!userInfo.isOnline) {
-        setLastSeen(convertTimestamp(data.lastVisitAt));
-      }
+      setData(data);
     });
   }, [activeChatID]);
 
