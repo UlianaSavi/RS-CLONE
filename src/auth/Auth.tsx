@@ -8,7 +8,7 @@ interface IProps {
   children: JSX.Element
 }
 
-export const handleBeforeUnload = () => {
+export const handleBeforeUnload = async () => {
   if (auth.currentUser) {
     setOfflineStatus(auth.currentUser);
   }
@@ -28,7 +28,7 @@ function AuthRoute(props: IProps) {
         if (uid) {
           navigate('/');
           setOnlineStatus(user);
-          window.addEventListener('beforeunload', handleBeforeUnload);
+          window.addEventListener('beforeunload', () => handleBeforeUnload());
         }
       }
     });
