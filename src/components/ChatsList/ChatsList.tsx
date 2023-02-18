@@ -78,7 +78,11 @@ function ChatsList({
       const q = query(collection(db, 'users'), where('uid', '!=', currentUser.uid));
       const querySnapshot = await getDocs(q);
       querySnapshot.forEach((d) => {
-        chatsData.push({ userInfo: d.data() });
+        const data = d.data();
+        if (!searchInput) chatsData.push({ userInfo: d.data() });
+        if (searchInput && data.displayName.toLowerCase().includes(searchInput.toLowerCase())) {
+          chatsData.push({ userInfo: d.data() });
+        }
       });
       updateChatsList(chatsData);
     }
@@ -113,7 +117,6 @@ function ChatsList({
   };
 
   useEffect(() => {
-    console.log(searchInput);
     showChatsList();
   }, [currentUser?.uid, activeChatID, userID, activeFolder, isSearchMode, searchInput]);
 

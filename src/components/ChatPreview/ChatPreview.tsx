@@ -45,7 +45,6 @@ function ChatPreview({
   const [isOnlineStatus, setIsOnlineStatus] = useState(isOnline || false);
 
   const selectChat = () => {
-    console.log('selected');
     const combinedID = currentUser.uid > uid ? `${currentUser.uid}${uid}` : `${uid}${currentUser.uid}`;
     setActiveUserID(uid);
     setActiveChatID(combinedID);
