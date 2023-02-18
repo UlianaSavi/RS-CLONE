@@ -89,7 +89,9 @@ function SendImagePopap() {
         <span className="image-popap__header__title">Send Photo</span>
         <MoreIcon />
       </div>
-      <img className="img" src={url} alt="sending" />
+      <div className="image-popap__image-wrapper">
+        <img className="img" src={url} alt="sending" />
+      </div>
       <div className="captcha">
         <TextArea
           placeholder="Add a caption..."
