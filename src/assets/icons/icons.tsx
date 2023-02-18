@@ -159,7 +159,9 @@ export function EditIcon() {
 
 export function ArrowLeftIcon() {
   return (
-    <span className="icon">&#129120;</span>
+    <svg width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg" className="icon arrow-icon">
+      <path d="M3.4 8.13377H4.324L1.42 4.80977L8.608 4.78577V4.08977H1.42L4.324 0.753771H3.4L0.112 4.44977L3.4 8.13377Z" />
+    </svg>
   );
 }
 

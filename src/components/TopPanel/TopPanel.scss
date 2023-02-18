@@ -6,6 +6,9 @@
   width: 2.5rem;
   height: 2.5rem;
   margin-right: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   background: none;
   border: none;
@@ -22,7 +25,9 @@
   .icon {
     font-size: 1.3rem;
 
+    width: 1rem;
     padding: 0.3125rem;
+    margin: 0;
   }
 }
 

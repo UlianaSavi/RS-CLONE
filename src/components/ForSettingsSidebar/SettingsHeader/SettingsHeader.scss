@@ -23,10 +23,12 @@
     }
 
     &__close-button {
-        &::before {
-            top: -8px !important;
-            left: -5px !important;
-        }
+      margin: 0 .4rem;
+
+      &::before {
+          top: -8px !important;
+          left: -5px !important;
+      }
     }
 
     &__logout-button {
