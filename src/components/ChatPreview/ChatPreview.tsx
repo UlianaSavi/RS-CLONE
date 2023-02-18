@@ -1,8 +1,7 @@
 /* eslint-disable no-unused-vars */
-import * as firestore from 'firebase/firestore';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import {
-  doc, updateDoc, getDoc,
+  onSnapshot, doc, updateDoc, getDoc,
 } from 'firebase/firestore';
 import { db } from '../../firebaseConfig';
 import Avatar from '../Avatar/Avatar';
@@ -10,6 +9,7 @@ import { AuthContext } from '../../context/AuthContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
 import type { User, UserChat } from '../../types';
 import './ChatPreview.scss';
+import { convertTimestamp } from '../../hooks/timestampConverter';
 
 interface ChatPreviewProps {
   data: UserChat,
@@ -24,7 +24,7 @@ function ChatPreview({
   data, isActive, setActiveUserID, isSearchMode, setSearchMode, onContextMenu,
 }: ChatPreviewProps) {
   const {
-    uid, displayName, photoURL,
+    uid, displayName, photoURL, isOnline, lastVisitAt,
   } = data.userInfo;
 
   const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
@@ -42,6 +42,7 @@ function ChatPreview({
       }
     }
   };
+  const [isOnlineStatus, setIsOnlineStatus] = useState(isOnline || false);
 
   const selectChat = () => {
     const combinedID = currentUser.uid > uid ? `${currentUser.uid}${uid}` : `${uid}${currentUser.uid}`;
@@ -51,21 +52,15 @@ function ChatPreview({
     setSearchMode(false);
   };
 
-  const convertTimestamp = (timestamp: firestore.Timestamp): string => {
-    const currentDate = timestamp.toDate();
-    const now = new Date();
+  if (isSearchMode) {
+    onSnapshot(doc(db, 'users', uid), (d) => {
+      const userData = d.data();
+      if (!userData) return;
+      setIsOnlineStatus(userData.isOnline);
+    });
+  }
 
-    if (currentDate.getFullYear() === now.getFullYear()
-      && currentDate.getMonth() === now.getMonth()
-      && currentDate.getDate() === now.getDate()) {
-      const hours = currentDate.getHours().toString().padStart(2, '0');
-      const minutes = currentDate.getMinutes().toString().padStart(2, '0');
-      return `${hours}:${minutes}`;
-    }
-    const month = currentDate.toLocaleString('default', { month: 'short' });
-    const day = currentDate.getDate();
-    return `${month} ${day}`;
-  };
+  const lastSeen = !isOnlineStatus && lastVisitAt ? convertTimestamp(lastVisitAt) : '';
 
   const handleContextMenu = (event: React.MouseEvent) => {
     onContextMenu(event, uid);
@@ -83,7 +78,7 @@ function ChatPreview({
         <div className="chat-preview-text">
           <div className="chat-preview__title">{displayName}</div>
           {isSearchMode
-            ? <div className="chat-preview__online-status">Online</div>
+            ? <div className="chat-preview__online-status">{isOnlineStatus ? 'Online' : `Last seen ${lastSeen}`}</div>
             : <div className="chat-preview__last-message">{data?.lastMessage.text}</div>}
         </div>
       </div>
