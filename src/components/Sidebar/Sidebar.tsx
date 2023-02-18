@@ -12,6 +12,7 @@ function Sidebar() {
   const [isActiveCreatePopup, setActiveCreatePopup] = useState(false);
   const [isSettings, setSettings] = useState(false);
   const [isSearchMode, setSearchMode] = useState(false);
+  const [searchInput, setSearchInput] = useState('');
 
   function flipFlop() {
     setActivePopup(!isActivePopup);
@@ -39,10 +40,13 @@ function Sidebar() {
                 callback={() => flipFlop()}
                 isSearchMode={isSearchMode}
                 setSearchMode={setSearchMode}
+                searchInput={searchInput}
+                setSearchInput={setSearchInput}
               />
               <SidebarContent
                 isSearchMode={isSearchMode}
                 setSearchMode={setSearchMode}
+                searchInput={searchInput}
               />
               <CreateButton
                 isVisible={!isSearchMode}

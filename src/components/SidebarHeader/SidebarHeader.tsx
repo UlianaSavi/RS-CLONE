@@ -6,10 +6,14 @@ import './SidebarHeader.scss';
 interface SidebarHeaderProps {
   isSearchMode: boolean,
   setSearchMode: React.Dispatch<React.SetStateAction<boolean>>,
+  searchInput: string,
+  setSearchInput: React.Dispatch<React.SetStateAction<string>>,
   callback: () => void,
 }
 
-function SidebarHeader({ isSearchMode, callback, setSearchMode }: SidebarHeaderProps) {
+function SidebarHeader({
+  isSearchMode, callback, setSearchMode, searchInput, setSearchInput,
+}: SidebarHeaderProps) {
   const closeSearch = () => setSearchMode(false);
 
   return (
@@ -17,7 +21,12 @@ function SidebarHeader({ isSearchMode, callback, setSearchMode }: SidebarHeaderP
       {isSearchMode
         ? <SidebarCloseButton handleClick={closeSearch} />
         : <BurgerButton callback={callback} />}
-      <SearchBar />
+      <SearchBar
+        isSearchMode={isSearchMode}
+        setSearchMode={setSearchMode}
+        searchInput={searchInput}
+        setSearchInput={setSearchInput}
+      />
     </div>
   );
 }

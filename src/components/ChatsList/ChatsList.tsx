@@ -20,9 +20,12 @@ interface ChatsListProps {
   activeFolder: number,
   isSearchMode: boolean
   setSearchMode: React.Dispatch<React.SetStateAction<boolean>>,
+  searchInput: string
 }
 
-function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps) {
+function ChatsList({
+  activeFolder, isSearchMode, setSearchMode, searchInput,
+}: ChatsListProps) {
   // Context menu
   const [showMenu, setShowMenu] = useState(false);
   const [showDeletionPopup, setShowDeletionPopup] = useState(false);
@@ -110,8 +113,9 @@ function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps
   };
 
   useEffect(() => {
+    console.log(searchInput);
     showChatsList();
-  }, [currentUser?.uid, activeChatID, userID, activeFolder, isSearchMode]);
+  }, [currentUser?.uid, activeChatID, userID, activeFolder, isSearchMode, searchInput]);
 
   return (
     <>
