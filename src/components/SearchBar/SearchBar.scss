@@ -14,6 +14,11 @@
 
   cursor: text;
   transition: linear 0.15s;
+
+  @media (max-width: 600px) {
+    max-width: none;
+    margin-right: 1rem;
+  }
 }
 
 .search:hover {
@@ -36,6 +41,10 @@
 
   &::placeholder {
     color: $grey-secondary;
+  }
+
+  @media (max-width: 600px) {
+    max-width: 450px;
   }
 }
 

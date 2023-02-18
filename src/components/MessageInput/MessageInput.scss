@@ -13,6 +13,16 @@
   margin: 0 auto;
   padding: 5px;
   padding-bottom: 20px;
+
+  @media (max-width: 1150px) {
+    padding: 0 10px 20px 10px; 
+    margin: 0;
+    width: 95%;
+  }
+
+  @media (max-width: 600px) {
+    padding-bottom: 7px;
+  }
   
   &__container {
     position: relative;
@@ -21,11 +31,14 @@
     align-items: flex-end;
     gap: 10px;
     flex-grow: 1;
-    // height: 34px;
     padding: 10px;
 
     background-color: $grey-main;
     border-radius: 15px;
+
+    @media (max-width: 600px) {
+      padding: 5px 8px;
+    }
   }
 
   &__text-area {
@@ -95,6 +108,11 @@
 
     &:hover {
       background-color: $accent-hover-dark;
+    }
+
+    @media (max-width: 600px) {
+      height: 46px;
+      width: 46px;
     }
   }
 

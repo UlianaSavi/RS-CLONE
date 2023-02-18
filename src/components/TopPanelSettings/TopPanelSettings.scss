@@ -40,4 +40,19 @@
     transform: scaleX(1);
     transform-origin: top right;
   }
+
+  .search-wrapper {
+    .popup-item {
+      color: $text-color-white;
+  
+      &:hover {
+        background: $grey-hover;
+      }
+      
+    }
+    
+    @media (min-width: 600px) {
+      display: none;
+    }
+  }
 }

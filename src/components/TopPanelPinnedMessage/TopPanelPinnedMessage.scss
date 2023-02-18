@@ -4,17 +4,38 @@
   &__wrapper {
     display: flex;
     margin-left: 1rem;
+
+    @media (max-width: 600px) {
+      position: absolute;
+      left: 0;
+      bottom: -2.5rem;
+      z-index: 4;
+
+      width: 100%;
+      margin-left: 0;
+
+      background-color: $grey-main;
+      border-top: 1px solid $grey-dark;
+    }
   }
 
   &__pinned-messages {
     display: flex;
     gap: 0.5rem;
+
+    @media (max-width: 600px) {
+      flex-grow: 3;
+    }
   }
 
   &__left-border {
     display: flex;
     flex-direction: column;
     gap: 2px;
+
+    @media (max-width: 600px) {
+      padding: 5px 0;
+    }
   }
 
   &__line {
@@ -36,6 +57,10 @@
     width: 100%;
 
     overflow: hidden;
+
+    @media (max-width: 600px) {
+      max-width: 85vw;
+    }
   }
 
   &__pinned-message-text {

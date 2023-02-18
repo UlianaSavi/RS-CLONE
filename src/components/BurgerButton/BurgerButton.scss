@@ -13,6 +13,11 @@
 
   cursor: pointer;
 
+  @media (max-width: 600px) {
+    margin-left: 1rem;
+    width: 34px;
+  }
+
   &__line {
     z-index: 2;
 

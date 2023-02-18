@@ -5,8 +5,10 @@ import './Chat.scss';
 import TopPanelSettings from '../TopPanelSettings/TopPanelSettings';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
 
-function Chat() {
+function Chat(props: {chatClass: string}) {
   const [isActivePopup, setActivePopup] = useState(false);
+  const { chatClass } = props;
+
   function flipFlop() {
     setActivePopup(!isActivePopup);
   }
@@ -14,7 +16,7 @@ function Chat() {
   const { activeChatID } = useContext(ActiveChatContext);
 
   return (
-    <div className="chat">
+    <div className={chatClass}>
       {activeChatID && (
       <TopPanel
         callback={() => flipFlop()}

@@ -1,0 +1,9 @@
+.setting {
+
+  height: 100vh;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.setting::-webkit-scrollbar { width: 0; }

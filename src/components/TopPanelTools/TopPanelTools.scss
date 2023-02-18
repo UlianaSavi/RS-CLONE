@@ -25,6 +25,12 @@
     }
   }
 
+  .search-btn {
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+
   &__search, 
   &__more {
     width: 100%;

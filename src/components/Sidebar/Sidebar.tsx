@@ -7,11 +7,12 @@ import SidebarContent from '../SidebarContent/SidebarContent';
 import SidebarHeader from '../SidebarHeader/SidebarHeader';
 import './Sidebar.scss';
 
-function Sidebar() {
+function Sidebar(props: {sidebarClass: string}) {
   const [isActivePopup, setActivePopup] = useState(false);
   const [isActiveCreatePopup, setActiveCreatePopup] = useState(false);
   const [isSettings, setSettings] = useState(false);
   const [isSearchMode, setSearchMode] = useState(false);
+  const { sidebarClass } = props;
   const [searchInput, setSearchInput] = useState('');
 
   function flipFlop() {
@@ -31,7 +32,7 @@ function Sidebar() {
   const closeCreatePopup = () => setActiveCreatePopup(false);
 
   return (
-    <div className="sidebar">
+    <div className={sidebarClass}>
       {
         isSettings ? <SettingsSidebar onSidebarChange={() => changeSidebar()} />
           : (
