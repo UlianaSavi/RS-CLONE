@@ -10,23 +10,42 @@
   color: $text-color-white;
   background-color: $grey-main;
 
+  &__logo {
+    height: 20vh;
+  }
+
   &__title {
     margin: 0;
+
+    @media (max-height: 740px) {
+      font-size: 1.5rem;
+    }
   }
 
   &__subtitle {
     margin-top: 15px;
     margin-bottom: 45px;
 
-    font-size: 16px;
+    font-size: 1rem;
 
     color: $grey-secondary;
+
+    @media (max-height: 740px) {
+      font-size: medium;
+
+      margin-top: 1vh;
+      margin-bottom: 3vh;
+    }
   }
 
   &__inputs {
     display: flex;
     flex-direction: column;
     gap: 25px;
+
+    @media (max-height: 740px) {
+      gap: 2vh;
+    }
   }
 
   &__input-container {
