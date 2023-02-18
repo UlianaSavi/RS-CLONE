@@ -2,7 +2,7 @@
 import * as firestore from 'firebase/firestore';
 import { useContext } from 'react';
 import {
-  doc, updateDoc,
+  doc, updateDoc, getDoc,
 } from 'firebase/firestore';
 import { db } from '../../firebaseConfig';
 import Avatar from '../Avatar/Avatar';
@@ -34,17 +34,22 @@ function ChatPreview({
 
   const resetMessagesCounter = async () => {
     if (activeChatID) {
-      await updateDoc(doc(db, 'userChats', currentUser.uid), {
-        [`${activeChatID}.unreadMessages`]: 0,
-      });
+      const res = await getDoc(doc(db, 'userChats', currentUser.uid));
+      const chats = res.data();
+      if (!chats) return;
+      if (chats[activeChatID]) {
+        await updateDoc(doc(db, 'userChats', currentUser.uid), {
+          [`${activeChatID}.unreadMessages`]: 0,
+        });
+      }
     }
   };
 
   const selectChat = () => {
     const combinedID = currentUser.uid > uid ? `${currentUser.uid}${uid}` : `${uid}${currentUser.uid}`;
     setActiveUserID(uid);
-    resetMessagesCounter();
     setActiveChatID(combinedID);
+    resetMessagesCounter();
     setSearchMode(false);
     if (window.innerWidth <= 920) setActiveSidebar(false);
   };

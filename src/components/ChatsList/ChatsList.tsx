@@ -83,26 +83,22 @@ function ChatsList({ activeFolder, isSearchMode, setSearchMode }: ChatsListProps
 
   const getUserChats = async () => {
     if (currentUser?.uid) {
-      const chatsData: DocumentData[] = [];
       onSnapshot(doc(db, 'userChats', currentUser.uid), (d) => {
-        chatsData.length = 0;
         const data = d.data();
         if (!data) return;
         const dataArray = Object.values(data);
         if (dataArray.some((item) => !item.lastMessage?.date)) return;
-
         const promises = dataArray.map(async (item) => {
           const user = await getDoc(doc(db, 'users', item.userInfo.uid));
           const userData = user.data() as User;
-          chatsData.push({
+          return {
             lastMessage: item.lastMessage,
             unreadMessages: item?.unreadMessages || 0,
             userInfo: userData,
-          });
+          };
         });
-
         Promise.all(promises).then(() => {
-          updateChatsList(chatsData.sort((a, b) => b.lastMessage.date - a.lastMessage.date));
+          updateChatsList(dataArray.sort((a, b) => b.lastMessage.date - a.lastMessage.date));
         });
       });
     }
