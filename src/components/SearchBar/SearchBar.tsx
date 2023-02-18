@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { SearchIcon } from '../../assets/icons/icons';
 import './SearchBar.scss';
 
@@ -11,19 +12,31 @@ interface SearchBarProps {
 function SearchBar({
   isSearchMode, setSearchMode, searchInput, setSearchInput,
 }: SearchBarProps) {
+  const [isInFocus, setFocus] = useState(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchInput(e.target.value);
   };
 
+  const handleFocus = () => {
+    setFocus(true);
+    setSearchMode(true);
+  };
+
+  const handleBlur = () => {
+    setSearchInput('');
+    setFocus(false);
+  };
+
   return (
-    <div className={`search ${isSearchMode ? 'selected' : ''}`} id="search">
+    <div className={`search ${isSearchMode && isInFocus ? 'selected' : ''}`} id="search">
       <div className="search__icon" id="searchSvg">
         <SearchIcon />
       </div>
       <input
         className="search__input"
-        onFocus={() => setSearchMode(true)}
-        // onBlur={() => setSearchMode(false)}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
         type="text"
         placeholder="Search"
         value={searchInput}
