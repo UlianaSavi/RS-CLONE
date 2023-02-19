@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import {
   useContext, useRef, useEffect, useState,
 } from 'react';
@@ -31,6 +32,7 @@ function ChatWindow() {
   }, [activeChatID]);
 
   const messageContainerRef = useRef<HTMLDivElement>(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
   const messageContainer = messageContainerRef.current;
   const [scrolledToBottom, setScrolledToBottom] = useState(true);
 
@@ -55,7 +57,8 @@ function ChatWindow() {
   useEffect(() => {
     console.log(scrolledToBottom);
     if (messageContainer && scrolledToBottom) {
-      messageContainer.scrollTop = messageContainer.scrollHeight;
+      // messageContainer.scrollTop = messageContainer.scrollHeight;
+      messagesEndRef.current?.scrollIntoView();
     }
   }, [messages]);
 
@@ -64,6 +67,7 @@ function ChatWindow() {
       {activeChatID && (
       <div className="chat-window__wrapper" ref={messageContainerRef}>
         <BubblesDateGroup date="Today" messages={messages} />
+        <div ref={messagesEndRef} />
       </div>
       )}
       {activeChatID && <MessageInput />}
