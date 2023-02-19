@@ -9,10 +9,13 @@ interface FormInputProps {
   value: string;
   setValue?: (value: string) => void;
   mode?: string;
+  pattern?: string;
+  required?: boolean;
+  title?: string;
 }
 
 function FormInput({
-  type, id, label, value, setValue, mode,
+  type, id, label, value, setValue, mode, pattern, required, title,
 }: FormInputProps) {
   const [defaultValue, setdefaultValue] = useState(value);
 
@@ -40,6 +43,9 @@ function FormInput({
         onChange={handleChange}
         placeholder=" "
         onKeyDown={(event) => lostFocusAfterEnter(event)}
+        pattern={pattern}
+        required={required}
+        title={title}
       />
       <label htmlFor={id} className="form-input__label">{label}</label>
     </div>

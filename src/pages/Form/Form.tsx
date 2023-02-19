@@ -42,7 +42,7 @@ function Form({ mode }: FormProps) {
       inputs:
   <>
     <FormInput type="text" id="name" label="Name" value="" setValue={setName} />
-    <FormInput type="email" id="email" label="Email" value="" setValue={setEmail} />
+    <FormInput type="email" id="email" label="Email" value="" setValue={setEmail} pattern="^[A-Za-z0-9]*[@][A-Za-z0-9]*[.][A-Za-z]*" required title="Please enter the correct email address. For example: duck@gmail.com" />
     <FormInput type="password" id="password" label="Password" value="" setValue={setPassword} />
   </>,
     },
@@ -67,7 +67,10 @@ function Form({ mode }: FormProps) {
         <form className="form__inputs" onSubmit={handleSubmit}>
           {data[mode].inputs}
           {mode === 'register-email' && <AddAvatarButton setValue={setAvatar} />}
-          <button type="submit" className="form__button">
+          <button
+            type="submit"
+            className="form__button"
+          >
             NEXT
           </button>
           <Link className="form__button form__button_outline" to={data[mode].registrationRoute}>
