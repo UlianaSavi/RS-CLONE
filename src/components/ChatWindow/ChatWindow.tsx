@@ -1,4 +1,4 @@
-/* eslint-disable max-len */
+/* eslint-disable no-console */
 import {
   useContext, useRef, useEffect, useState,
 } from 'react';
@@ -9,14 +9,17 @@ import { SendImageContext } from '../../context/SendImageContext';
 import MessageInput from '../MessageInput/MessageInput';
 import { BubblesDateGroup } from '../BubblesDateGroup/BubblesDateGroup';
 import SendImagePopap from '../SendImagePopap/SendImagePopap';
-
+import { AuthContext } from '../../context/AuthContext';
+import { User } from '../../types';
 import './ChatWindow.scss';
+import BubblesMessage from '../BubblesMessage/BubblesMessage';
 
 function ChatWindow() {
   const { popap } = useContext(SendImageContext);
   const { activeChatID } = useContext(ActiveChatContext);
+  const currentUser: User = useContext(AuthContext) as User;
 
-  const [messages, setMessages] = useState<DocumentData>([]);
+  const [messagesArr, setMessageArr] = useState<React.ReactNode[]>([]);
 
   useEffect(() => {
     if (activeChatID) {
@@ -26,18 +29,29 @@ function ChatWindow() {
           console.log('Hey! There are no messages here.');
           return;
         }
-        setMessages(data.messages);
+
+        setMessageArr(data.messages
+          .map((message: DocumentData) => (
+            <BubblesMessage
+              message={message.text}
+              time={`${(new Date(message.date.seconds * 1000))
+                .getHours().toString().padStart(2, '0')}:${new Date(message.date.seconds * 1000)
+                .getMinutes().toString().padStart(2, '0')}`}
+              isRead
+              isCurrenUser={message.senderID === currentUser?.uid}
+              key={message.id}
+              imageUrl={message.imageUrl}
+            />
+          )));
       });
     }
   }, [activeChatID]);
 
   const messageContainerRef = useRef<HTMLDivElement>(null);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
   const messageContainer = messageContainerRef.current;
   const [scrolledToBottom, setScrolledToBottom] = useState(true);
 
   const handleScroll = () => {
-    console.log('scroll');
     const { scrollTop, scrollHeight, clientHeight } = messageContainerRef.current as HTMLDivElement;
     if (scrollTop + clientHeight === scrollHeight) {
       setScrolledToBottom(true);
@@ -55,19 +69,16 @@ function ChatWindow() {
   }, [activeChatID]);
 
   useEffect(() => {
-    console.log(scrolledToBottom);
     if (messageContainer && scrolledToBottom) {
-      // messageContainer.scrollTop = messageContainer.scrollHeight;
-      messagesEndRef.current?.scrollIntoView();
+      messageContainer.scrollTop = messageContainer.scrollHeight;
     }
-  }, [messages]);
+  }, [messagesArr]);
 
   return (
     <div className="chat-window">
       {activeChatID && (
       <div className="chat-window__wrapper" ref={messageContainerRef}>
-        <BubblesDateGroup date="Today" messages={messages} />
-        <div ref={messagesEndRef} />
+        <BubblesDateGroup date="Today" messagesArr={messagesArr} />
       </div>
       )}
       {activeChatID && <MessageInput />}
