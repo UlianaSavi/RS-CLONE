@@ -43,8 +43,9 @@ function Form({ mode }: FormProps) {
       label="Email"
       value=""
       setValue={setEmail}
+      required
     />
-    <FormInput type="password" id="password" label="Password" value="" setValue={setPassword} />
+    <FormInput type="password" id="password" label="Password" value="" setValue={setPassword} required />
   </>,
     },
     'register-email': {
@@ -54,9 +55,9 @@ function Form({ mode }: FormProps) {
       registrationRoute: '/login',
       inputs:
   <>
-    <FormInput type="text" id="name" label="Username" value="" setValue={setName} />
-    <FormInput type="email" id="email" label="Email" value="" setValue={setEmail} pattern="^[A-Za-z0-9]*[@][A-Za-z0-9]*[.][A-Za-z]*" title="Please enter the correct email address. For example: duck@gmail.com" />
-    <FormInput type="password" id="password" label="Password" value="" setValue={setPassword} />
+    <FormInput type="text" id="name" label="Username" value="" setValue={setName} required />
+    <FormInput type="email" id="email" label="Email" value="" setValue={setEmail} pattern="^[A-Za-z0-9]*[@][A-Za-z0-9]*[.][A-Za-z]*" title="Please enter the correct email address. For example: duck@gmail.com" required />
+    <FormInput type="password" id="password" label="Password" value="" setValue={setPassword} required />
   </>,
     },
   };
