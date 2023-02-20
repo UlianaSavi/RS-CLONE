@@ -56,7 +56,7 @@ function Form({ mode }: FormProps) {
       inputs:
   <>
     <FormInput type="text" id="name" label="Username" value="" setValue={setName} required />
-    <FormInput type="email" id="email" label="Email" value="" setValue={setEmail} pattern="^[A-Za-z0-9]*[@][A-Za-z0-9]*[.][A-Za-z]*" title="Please enter the correct email address. For example: duck@gmail.com" required />
+    <FormInput type="email" id="email" label="Email" value="" setValue={setEmail} pattern="^[A-Za-z0-9.-_]*[@][A-Za-z0-9]*[.][A-Za-z]*" title="Please enter the correct email address. For example: duck@gmail.com" required />
     <FormInput type="password" id="password" label="Password" value="" setValue={setPassword} pattern=".{6,}" title="At least 6 characters are required" required />
   </>,
     },
