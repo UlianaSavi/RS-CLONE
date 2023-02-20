@@ -16,6 +16,10 @@
     background: $grey-main;
     border-radius: 8px;
 
+    &.doc-popap {
+        display: flex;
+    }
+
     .img {
         display: block;
         width: fit-content;
@@ -58,6 +62,11 @@
 
         &:hover {
             background-color: $accent-hover-dark;
+        }
+
+        &:disabled {
+            cursor: default;
+            background: $grey-secondary;
         }
     }
 }

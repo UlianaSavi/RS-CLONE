@@ -20,16 +20,27 @@ function AttachPopup({
     file,
     setFile,
     setPopap,
+    setFileInfo,
   } = useContext(SendImageContext);
 
-  const choosePhoto = () => {
+  const chooseImage = () => {
     if (hiddenPhotoInput.current) {
       hiddenPhotoInput.current.click();
+      setFileInfo({
+        fileType: 'img',
+        fileSize: file ? `${(file.size / 1024).toFixed(2)} KB` : '0 KB',
+        fileName: file?.name || '',
+      });
     }
   };
   const chooseFile = () => {
     if (hiddenDocInput.current) {
       hiddenDocInput.current.click();
+      setFileInfo({
+        fileType: 'doc',
+        fileSize: file ? `${(file.size / 1024).toFixed(2)} KB` : '0 KB',
+        fileName: file?.name || '',
+      });
     }
   };
 
@@ -53,7 +64,7 @@ function AttachPopup({
 
   return (
     <nav className={`attach-popup ${isVisible ? 'active' : ''}`} onMouseLeave={handleMouseLeave}>
-      <PopupMenuItem label="Photo" icon={<ImageNVideoIcon />} handleClick={choosePhoto} />
+      <PopupMenuItem label="Photo" icon={<ImageNVideoIcon />} handleClick={chooseImage} />
       <input className="input-file" type="file" id="uploadPhoto" accept="image/*" ref={hiddenPhotoInput} onChange={handleChange} />
       <PopupMenuItem label="Document" icon={<DocumentIcon />} handleClick={chooseFile} />
       <input className="input-file" type="file" id="uploadFile" ref={hiddenDocInput} onChange={handleChange} />

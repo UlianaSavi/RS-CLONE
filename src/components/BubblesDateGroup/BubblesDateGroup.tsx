@@ -1,4 +1,3 @@
-/* eslint-disable array-callback-return */
 import { useEffect, useContext, useState } from 'react';
 import { doc, onSnapshot } from '@firebase/firestore';
 import { db } from '../../firebaseConfig';
@@ -32,6 +31,7 @@ export function BubblesDateGroup(props: {date: string}) {
               isCurrenUser={message.senderID === currentUser?.uid}
               key={message.id}
               imageUrl={message.imageUrl}
+              fileInfo={message?.fileInfo}
             />
           )));
       });

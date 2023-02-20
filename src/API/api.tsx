@@ -168,11 +168,11 @@ export const deleteChat = async (
   }
 };
 
-export const loadMessagePhoto = async (image: File | null) => {
+export const loadMessageFile = async (file: File | null) => {
   const storageRef = ref(storage, `chat_image_${Math.floor(Date.now() + Math.random() * 900000)}`);
-  const uploadTask = uploadBytesResumable(storageRef, image as File);
+  const uploadTask = uploadBytesResumable(storageRef, file as File);
 
-  if (image) {
+  if (file) {
     uploadTask.on(
       'state_changed',
       (snapshot) => {

@@ -26,12 +26,19 @@ export interface IMessageDate {
   seconds: number
 }
 
+export interface IFileInfo {
+  fileType: string,
+  fileSize: string,
+  fileName: string
+}
+
 export interface Message {
   date: IMessageDate,
   id: string,
   senderID: string,
   text: string,
-  imageUrl: string
+  imageUrl: string,
+  fileInfo?: IFileInfo,
 }
 
 export interface Messages {

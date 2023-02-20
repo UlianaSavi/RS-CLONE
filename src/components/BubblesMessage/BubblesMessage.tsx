@@ -1,4 +1,6 @@
 import { ReactComponent as CheckMark } from '../../assets/icons/check-solid.svg';
+import { IFileInfo } from '../../types';
+import FileBlock from '../FileBlock/FileBlock';
 import './BubblesMessage.scss';
 
 export default function BubblesMessage(props: {
@@ -7,6 +9,7 @@ export default function BubblesMessage(props: {
   isRead: boolean,
   isCurrenUser: boolean,
   imageUrl: string,
+  fileInfo?: IFileInfo,
 }) {
   const {
     message,
@@ -14,6 +17,7 @@ export default function BubblesMessage(props: {
     isRead,
     isCurrenUser,
     imageUrl,
+    fileInfo,
   } = props;
 
   let firstCheckMark;
@@ -29,6 +33,9 @@ export default function BubblesMessage(props: {
   return (
     <div className={isCurrenUser ? 'bubble__user-message' : 'bubble__user-message another-user'}>
       <img className={imageUrl ? 'img' : 'img none'} src={imageUrl} alt="" />
+      <div className={fileInfo?.fileType === 'doc' ? 'active' : 'none'}>
+        <FileBlock fileInfo={fileInfo} />
+      </div>
       <span className="message">{message}</span>
       <div className="bubble__time-n-check-wrapper">
         <span className="bubble__time">{time}</span>

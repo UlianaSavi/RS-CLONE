@@ -1,0 +1,57 @@
+@import "../../styles/variables";
+
+.none {
+    display: none;
+}
+
+.active {
+    display: block;
+
+    .doc:hover {
+        background: none;
+    }
+
+    .doc {
+        position: relative;
+        top: 8px;
+        height: fit-content;
+        padding: 0;
+        &__icon {
+            padding-right: 20px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.doc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 10px;
+
+    border-radius: 10px;
+
+    &:hover {
+        background: $grey-hover;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 72px;
+        height: 72px;
+        background-image: url('../../assets/icons/doc-icon.png');
+        background-size: cover;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+    }
+}
