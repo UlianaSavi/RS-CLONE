@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { ReactComponent as CheckMark } from '../../assets/icons/check-solid.svg';
 import './BubblesMessage.scss';
 
@@ -26,15 +27,31 @@ export default function BubblesMessage(props: {
     }
   }
 
+  const [isImageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    if (imageUrl) {
+      const img = new Image();
+      img.onload = () => {
+        setImageLoaded(true);
+      };
+      img.src = imageUrl;
+    }
+  }, [imageUrl]);
+
   return (
     <div className={isCurrenUser ? 'bubble__user-message' : 'bubble__user-message another-user'}>
-      <img className={imageUrl ? 'img' : 'img none'} src={imageUrl} alt="" />
-      <span className="message">{message}</span>
-      <div className="bubble__time-n-check-wrapper">
-        <span className="bubble__time">{time}</span>
-        {firstCheckMark}
-        {secondCheckMark}
-      </div>
+      {imageUrl && <img className="img" src={imageUrl} alt="" />}
+      {(!imageUrl || isImageLoaded) && (
+        <>
+          <span className="message">{message}</span>
+          <div className="bubble__time-n-check-wrapper">
+            <span className="bubble__time">{time}</span>
+            {firstCheckMark}
+            {secondCheckMark}
+          </div>
+        </>
+      )}
     </div>
   );
 }

@@ -7,7 +7,7 @@
   flex-direction: column;
   max-width: 85%;
   min-width: 56px;
-  padding: 6px 8px 6px 10px;
+  margin-right: 64px;
 
   background-color: $accent-color;
   border-radius: 12px 6px 0px 12px;
@@ -16,9 +16,12 @@
   .bubble__time-n-check-wrapper {
     display: flex;
     justify-content: flex-end;
+    padding: 0px 6px 3px 10px;
   }
 
   .bubble__time {
+    margin-right: 5px;
+
     font-size: 12px;
 
     align-self: flex-end;
@@ -62,8 +65,8 @@
     .img {
       width: 100%;
       max-width: 260px;
-      border: 5px solid $grey-main;
-      border-radius: 20px;
+
+      border-radius: 6px 10px 0px 0px;
     
       &.none {
         display: none;
@@ -74,8 +77,8 @@
   .img {
     width: 100%;
     max-width: 260px;
-    border: 5px solid $accent-color;
-    border-radius: 20px;
+
+    border-radius: 10px 6px 0px 0px;
   
     &.none {
       display: none;
@@ -95,6 +98,8 @@
 }
 
 .message {
+  padding: 6px 6px 0px 10px;
+
   font-size: 1rem;
   line-height: 1.3125;
 
