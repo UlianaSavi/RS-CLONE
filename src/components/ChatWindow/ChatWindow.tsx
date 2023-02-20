@@ -77,7 +77,7 @@ function ChatWindow() {
     }
     messageContainer?.addEventListener('scroll', handleScroll);
     return () => messageContainer?.removeEventListener('scroll', handleScroll);
-  }, [activeChatID, messageContainer]);
+  }, [activeChatID, messageContainer, messageContainer?.scrollHeight]);
 
   useEffect(() => {
     if (messageContainer && scrolledToBottom) {
