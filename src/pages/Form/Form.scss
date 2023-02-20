@@ -91,4 +91,12 @@
     
     background-color: $grey-main;
   }
+
+  &__error-message {
+    display: block;
+    margin-top: -2rem;
+    margin-bottom: .5rem;
+
+    color: $danger-color;
+  }
 }
