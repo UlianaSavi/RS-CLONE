@@ -74,11 +74,11 @@
 }
 
 .selected {
-  border: 1px solid $accent-color;
+  border: 2px solid $accent-color;
   transition: linear 0.15s;
 }
 
 .selected:hover {
-  border: 1px solid $accent-color;
+  border: 2px solid $accent-color;
 }
 
