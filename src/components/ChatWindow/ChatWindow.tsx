@@ -63,7 +63,6 @@ function ChatWindow() {
       setScrolledToBottom(false);
       setToLastMsgBtnVisible(true);
     }
-    console.log(isToLastMsgBtnVisible);
   };
 
   const handleToLastMsgBtn = () => {
@@ -76,10 +75,9 @@ function ChatWindow() {
     if (messageContainer) {
       messageContainer.scrollTop = messageContainer.scrollHeight;
     }
-    console.log(messageContainer);
     messageContainer?.addEventListener('scroll', handleScroll);
     return () => messageContainer?.removeEventListener('scroll', handleScroll);
-  }, [activeChatID]);
+  }, [activeChatID, messageContainer]);
 
   useEffect(() => {
     if (messageContainer && scrolledToBottom) {
