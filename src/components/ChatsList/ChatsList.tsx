@@ -104,8 +104,8 @@ function ChatsList({
             userInfo: userData,
           };
         });
-        Promise.all(promises).then(() => {
-          updateChatsList(dataArray.sort((a, b) => b.lastMessage.date - a.lastMessage.date));
+        Promise.all(promises).then((updatedDataArray) => {
+          updateChatsList(updatedDataArray.sort((a, b) => b.lastMessage.date - a.lastMessage.date));
         });
       });
     }
