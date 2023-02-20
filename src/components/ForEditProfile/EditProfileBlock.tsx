@@ -54,7 +54,7 @@ export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProp
             />
           </button>
         </div>
-        <FormInput type="text" id="name" label="Name" value={name} setValue={setName} mode="edit" />
+        <FormInput type="text" id="name" label="Username" value={name} setValue={setName} mode="edit" />
         <FormInput type="text" id="last-name" label="Last Name" value={lastName} setValue={setLastName} mode="edit" />
         <FormInput type="text" id="bio" label="Bio (optional)" value={bio} setValue={setBio} mode="edit" />
       </section>

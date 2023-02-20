@@ -48,13 +48,13 @@ function Form({ mode }: FormProps) {
   </>,
     },
     'register-email': {
-      title: 'Please enter your name, email and password.',
+      title: 'Please enter your username, email and password.',
       changeModeButtonText: 'SIGN IN',
       altLoginRoute: '/register-phone',
       registrationRoute: '/login',
       inputs:
   <>
-    <FormInput type="text" id="name" label="Name" value="" setValue={setName} />
+    <FormInput type="text" id="name" label="Username" value="" setValue={setName} />
     <FormInput type="email" id="email" label="Email" value="" setValue={setEmail} pattern="^[A-Za-z0-9]*[@][A-Za-z0-9]*[.][A-Za-z]*" title="Please enter the correct email address. For example: duck@gmail.com" />
     <FormInput type="password" id="password" label="Password" value="" setValue={setPassword} />
   </>,
