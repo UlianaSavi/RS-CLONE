@@ -4,6 +4,7 @@ import {
 } from 'react';
 import { doc, onSnapshot, DocumentData } from '@firebase/firestore';
 import { db } from '../../firebaseConfig';
+import { ArrowLeftIcon } from '../../assets/icons/icons';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
 import { SendImageContext } from '../../context/SendImageContext';
 import MessageInput from '../MessageInput/MessageInput';
@@ -49,14 +50,25 @@ function ChatWindow() {
 
   const messageContainerRef = useRef<HTMLDivElement>(null);
   const messageContainer = messageContainerRef.current;
+
   const [scrolledToBottom, setScrolledToBottom] = useState(true);
+  const [isToLastMsgBtnVisible, setToLastMsgBtnVisible] = useState(false);
 
   const handleScroll = () => {
     const { scrollTop, scrollHeight, clientHeight } = messageContainerRef.current as HTMLDivElement;
     if (scrollTop + clientHeight === scrollHeight) {
       setScrolledToBottom(true);
+      setToLastMsgBtnVisible(false);
     } else {
       setScrolledToBottom(false);
+      setToLastMsgBtnVisible(true);
+    }
+    console.log(isToLastMsgBtnVisible);
+  };
+
+  const handleToLastMsgBtn = () => {
+    if (messageContainer) {
+      messageContainer.scrollTop = messageContainer.scrollHeight;
     }
   };
 
@@ -64,6 +76,7 @@ function ChatWindow() {
     if (messageContainer) {
       messageContainer.scrollTop = messageContainer.scrollHeight;
     }
+    console.log(messageContainer);
     messageContainer?.addEventListener('scroll', handleScroll);
     return () => messageContainer?.removeEventListener('scroll', handleScroll);
   }, [activeChatID]);
@@ -77,9 +90,16 @@ function ChatWindow() {
   return (
     <div className="chat-window">
       {activeChatID && (
-      <div className="chat-window__wrapper" ref={messageContainerRef}>
-        <BubblesDateGroup date="Today" messagesArr={messagesArr} />
-      </div>
+        <div className="chat-window__wrapper" ref={messageContainerRef}>
+          <BubblesDateGroup date="Today" messagesArr={messagesArr} />
+          <button
+            type="button"
+            className={`to-last-message-button ${isToLastMsgBtnVisible ? '' : 'hidden'}`}
+            onClick={handleToLastMsgBtn}
+          >
+            <ArrowLeftIcon />
+          </button>
+        </div>
       )}
       {activeChatID && <MessageInput />}
       <svg height="0" width="0">
