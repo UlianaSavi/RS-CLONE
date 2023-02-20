@@ -79,7 +79,14 @@ function Form({ mode }: FormProps) {
       }
     }
     if (mode === 'login-email') {
-      singIn(email, password);
+      const checkForMatchEmail = await getAllUsers().then((result) => result
+        .some((item) => item.userInfo.email === email));
+      if (checkForMatchEmail) {
+        setErrorMessage('');
+        singIn(email, password);
+      } else {
+        setErrorMessage('There is no such e-mail');
+      }
     }
   };
 
