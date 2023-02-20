@@ -51,6 +51,8 @@ function ChatWindow() {
   const messageContainerRef = useRef<HTMLDivElement>(null);
   const messageContainer = messageContainerRef.current;
 
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
   const [scrolledToBottom, setScrolledToBottom] = useState(true);
   const [isToLastMsgBtnVisible, setToLastMsgBtnVisible] = useState(false);
 
@@ -67,13 +69,13 @@ function ChatWindow() {
 
   const handleToLastMsgBtn = () => {
     if (messageContainer) {
-      messageContainer.scrollTop = messageContainer.scrollHeight;
+      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   useEffect(() => {
     if (messageContainer) {
-      messageContainer.scrollTop = messageContainer.scrollHeight;
+      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     }
     messageContainer?.addEventListener('scroll', handleScroll);
     return () => messageContainer?.removeEventListener('scroll', handleScroll);
@@ -81,7 +83,7 @@ function ChatWindow() {
 
   useEffect(() => {
     if (messageContainer && scrolledToBottom) {
-      messageContainer.scrollTop = messageContainer.scrollHeight;
+      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     }
   }, [messagesArr]);
 
@@ -90,6 +92,7 @@ function ChatWindow() {
       {activeChatID && (
         <div className="chat-window__wrapper" ref={messageContainerRef}>
           <BubblesDateGroup date="Today" messagesArr={messagesArr} />
+          <div ref={messagesEndRef} />
           <button
             type="button"
             className={`to-last-message-button ${isToLastMsgBtnVisible ? '' : 'hidden'}`}

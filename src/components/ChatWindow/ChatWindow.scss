@@ -102,11 +102,9 @@
   }
 
   &.hidden {
-      position: absolute;
+    opacity: 0;
 
-      opacity: 0;
-
-      visibility: hidden;
+    visibility: hidden;
   }
 
   .arrow-icon {
