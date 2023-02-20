@@ -75,7 +75,7 @@ function ChatWindow() {
 
   useEffect(() => {
     if (messageContainer) {
-      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+      messagesEndRef.current?.scrollIntoView();
     }
     messageContainer?.addEventListener('scroll', handleScroll);
     return () => messageContainer?.removeEventListener('scroll', handleScroll);
