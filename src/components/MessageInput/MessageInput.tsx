@@ -88,6 +88,13 @@ function MessageInput() {
     }
   };
 
+  const findImail = (messageText: string) => {
+    const expression = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)?/gi;
+    const regex = new RegExp(expression);
+    const textWithLink = messageText.replace(regex, '<a href="$&">$&</a>');
+    return textWithLink;
+  };
+
   // Send message
   const sendMessage = async (messageText: string) => {
     await updateDoc(doc(db, 'chats', activeChatID), {
@@ -142,6 +149,7 @@ function MessageInput() {
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setMessageValue(e.target.value);
+    findImail(e.target.value);
     if (messageValue === '' || e.target.value === '') {
       setIsAudio(!isAudio);
     } else {
