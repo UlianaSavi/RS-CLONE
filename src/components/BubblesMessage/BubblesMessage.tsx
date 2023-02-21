@@ -1,5 +1,8 @@
-import { useState, useEffect } from 'react';
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import { useState, useEffect, useContext } from 'react';
 import { ReactComponent as CheckMark } from '../../assets/icons/check-solid.svg';
+import { ModalPhotoContext } from '../../context/ModalPhotoContext';
 import './BubblesMessage.scss';
 
 export default function BubblesMessage(props: {
@@ -28,6 +31,7 @@ export default function BubblesMessage(props: {
   }
 
   const [isImageLoaded, setImageLoaded] = useState(false);
+  const { setUrl, setImagePopap } = useContext(ModalPhotoContext);
 
   useEffect(() => {
     if (imageUrl) {
@@ -39,12 +43,24 @@ export default function BubblesMessage(props: {
     }
   }, [imageUrl]);
 
+  const findImail = (messageText: string) => {
+    const expression = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)?/gi;
+    const regex = new RegExp(expression);
+    const textWithLink = messageText.replace(regex, '<a target="_blank" class="link" href="$&">$&</a>');
+    return { __html: textWithLink };
+  };
+
+  const openPopap = (currentImgUrl: string) => {
+    setUrl(currentImgUrl);
+    setImagePopap(true);
+  };
+
   return (
     <div className={isCurrenUser ? 'bubble__user-message' : 'bubble__user-message another-user'}>
-      {imageUrl && <img className="img" src={imageUrl} alt="" />}
+      {imageUrl && <img className="img" onClick={() => openPopap(imageUrl)} src={imageUrl} alt="" />}
       {(!imageUrl || isImageLoaded) && (
         <>
-          <span className="message">{message}</span>
+          <span className="message" dangerouslySetInnerHTML={findImail(message)} />
           <div className="bubble__time-n-check-wrapper">
             <span className="bubble__time">{time}</span>
             {firstCheckMark}
