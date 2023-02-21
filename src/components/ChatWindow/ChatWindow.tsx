@@ -90,8 +90,6 @@ function ChatWindow() {
     }
   }, [messagesArr]);
 
-  console.log(imagePopap);
-
   return (
     <div className="chat-window">
       {activeChatID && (
