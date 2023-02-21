@@ -49,7 +49,7 @@ function AttachPopup({
   return (
     <nav className={`attach-popup ${isVisible ? 'active' : ''}`} onMouseLeave={handleMouseLeave}>
       <PopupMenuItem label="Photo" icon={<ImageNVideoIcon />} handleClick={choosePhoto} />
-      <input className="input-file" type="file" id="uploadPhoto" ref={hiddenPhotoInput} onChange={handleChange} />
+      <input className="input-file" type="file" id="uploadPhoto" accept=".jpg, .jpeg, .png" ref={hiddenPhotoInput} onChange={handleChange} />
       <PopupMenuItem label="Document" icon={<DocumentIcon />} />
       <input className="input-file" type="file" id="uploadFile" ref={hiddenDocInput} onChange={handleChange} />
     </nav>

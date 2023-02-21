@@ -27,3 +27,18 @@
 .arrow-icon {
   fill: $grey-lite;
 }
+
+.link {
+  color: $text-color-white;
+}
+
+.blackout {
+  z-index: 9;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $blackout-color;
+}
+

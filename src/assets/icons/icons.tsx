@@ -284,7 +284,7 @@ export function CloseIcon(props: {callback: () => void }) {
   const { callback } = props;
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events
-    <div className="close-sending-popap" onClick={() => callback()}>
+    <div className="close-popap-icon" onClick={() => callback()}>
       <svg
         className="icon close"
         viewBox="0 0 1024 1024"

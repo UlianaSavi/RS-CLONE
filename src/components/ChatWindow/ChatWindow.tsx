@@ -12,8 +12,8 @@ import { BubblesDateGroup } from '../BubblesDateGroup/BubblesDateGroup';
 import SendImagePopap from '../SendImagePopap/SendImagePopap';
 import { AuthContext } from '../../context/AuthContext';
 import { User } from '../../types';
-import './ChatWindow.scss';
 import BubblesMessage from '../BubblesMessage/BubblesMessage';
+import './ChatWindow.scss';
 
 interface SplitByDates {
   date: string;

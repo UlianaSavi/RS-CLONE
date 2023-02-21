@@ -44,7 +44,7 @@ function SendImagePopap() {
     await updateDoc(doc(db, 'chats', activeChatID), {
       messages: arrayUnion({
         id: Math.floor(10000000000 + Math.random() * 90000000000),
-        text: messageValue !== '' ? messageValue : 'Photo',
+        text: messageValue,
         senderID: currentUser.uid,
         date: Timestamp.now(),
         imageUrl,
