@@ -19,6 +19,8 @@ export function BubblesDateGroup({ date, messagesArr }: BubblesDateGroupProps) {
     dateForView = 'Today';
   } else if (date === yesterday) {
     dateForView = 'Yesterday';
+  } else {
+    dateForView = `${new Date(date).toLocaleString('en', { month: 'long' })} ${date.split(' ')[1]}`;
   }
 
   return (
