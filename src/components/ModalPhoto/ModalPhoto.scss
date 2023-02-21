@@ -1,0 +1,30 @@
+@import "../../styles/variables";
+
+.modal-img {
+    z-index: 10;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: fit-content;
+    height: fit-content;
+    max-width: 500px;
+    max-height: 500px;
+    padding: 10px;
+
+    background: $grey-main;
+    border-radius: 8px;
+
+    .img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .close-popap-icon {
+        position: absolute;
+        top: -45px;
+        right: -55px;
+    }
+}
