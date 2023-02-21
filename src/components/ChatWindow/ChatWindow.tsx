@@ -7,19 +7,16 @@ import { db } from '../../firebaseConfig';
 import { ArrowLeftIcon } from '../../assets/icons/icons';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
 import { SendImageContext } from '../../context/SendImageContext';
-import { ModalPhotoContext } from '../../context/ModalPhotoContext';
 import MessageInput from '../MessageInput/MessageInput';
 import { BubblesDateGroup } from '../BubblesDateGroup/BubblesDateGroup';
 import SendImagePopap from '../SendImagePopap/SendImagePopap';
 import { AuthContext } from '../../context/AuthContext';
 import { User } from '../../types';
 import BubblesMessage from '../BubblesMessage/BubblesMessage';
-import ModalPhoto from '../ModalPhoto/ModalPhoto';
 import './ChatWindow.scss';
 
 function ChatWindow() {
   const { popap } = useContext(SendImageContext);
-  const { url, imagePopap } = useContext(ModalPhotoContext);
   const { activeChatID } = useContext(ActiveChatContext);
   const currentUser: User = useContext(AuthContext) as User;
 
@@ -114,7 +111,6 @@ function ChatWindow() {
         </defs>
       </svg>
       <div className="chat-window__bg-image" />
-      {imagePopap && <ModalPhoto imageUrl={url} />}
       {popap && <SendImagePopap />}
     </div>
   );

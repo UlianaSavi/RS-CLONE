@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import { useContext } from 'react';
 import Chat from '../../components/Chat/Chat';
+import ModalPhoto from '../../components/ModalPhoto/ModalPhoto';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
 import { ModalPhotoContext } from '../../context/ModalPhotoContext';
@@ -16,7 +17,8 @@ function Messenger() {
     setFile,
     setUrl,
   } = useContext(SendImageContext);
-  const { imagePopap, setImagePopap } = useContext(ModalPhotoContext);
+  const { url, imagePopap, setImagePopap } = useContext(ModalPhotoContext);
+
   const { isActiveSidebar, setActiveSidebar } = useContext(ActiveVisibilitySidebar);
   const { activeChatID } = useContext(ActiveChatContext);
 
@@ -46,6 +48,7 @@ function Messenger() {
       {(popap || imagePopap) && <div className="blackout" onClick={closePopap} />}
       {isActiveSidebar ? <Sidebar sidebarClass="sidebar" /> : <Sidebar sidebarClass="sidebar hide-sidebar" />}
       {isActiveSidebar ? <Chat chatClass="chat hide-chat" /> : <Chat chatClass="chat" />}
+      {imagePopap && <ModalPhoto imageUrl={url} />}
     </div>
   );
 }
