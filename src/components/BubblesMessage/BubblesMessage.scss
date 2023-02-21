@@ -67,7 +67,7 @@
       max-width: 260px;
 
       border-radius: 6px 10px 0px 0px;
-    
+
       &.none {
         display: none;
       }
@@ -80,7 +80,7 @@
 
     border-radius: 10px 6px 0px 0px;
     cursor: pointer;
-  
+
     &.none {
       display: none;
     }
@@ -103,7 +103,7 @@
 
   font-size: 1rem;
   line-height: 1.3125;
+  white-space: break-spaces;
 
   max-width: 360px;
 }
-

@@ -134,7 +134,7 @@ function MessageInput() {
     if (e.key === 'Enter' && !e.shiftKey && messageValue.trim() !== '') {
       e.preventDefault();
       await activateChat();
-      await sendMessage(messageValue);
+      await sendMessage(messageValue.trim());
       setIsAudio(!isAudio);
       setMessageValue('');
     }
