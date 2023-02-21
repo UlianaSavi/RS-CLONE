@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import {
-  useContext, useRef, useEffect, useState,
+  useContext, useRef, useEffect, useState, ReactNode,
 } from 'react';
 import { doc, onSnapshot, DocumentData } from '@firebase/firestore';
 import { db } from '../../firebaseConfig';
@@ -15,12 +15,17 @@ import { User } from '../../types';
 import './ChatWindow.scss';
 import BubblesMessage from '../BubblesMessage/BubblesMessage';
 
+interface SplitByDates {
+  date: string;
+  messageArr: ReactNode[];
+}
+
 function ChatWindow() {
   const { popap } = useContext(SendImageContext);
   const { activeChatID } = useContext(ActiveChatContext);
   const currentUser: User = useContext(AuthContext) as User;
 
-  const [messagesArr, setMessageArr] = useState<React.ReactNode[]>([]);
+  const [datesNMessagesArr, setDatesNMessagesArr] = useState<SplitByDates[]>([]);
 
   useEffect(() => {
     if (activeChatID) {
@@ -31,9 +36,11 @@ function ChatWindow() {
           return;
         }
 
-        setMessageArr(data.messages
-          .map((message: DocumentData) => (
-            <BubblesMessage
+        const datesNMessagesArray = data.messages
+          .map((message: DocumentData) => ({
+            date: new Date(message.date.seconds * 1000).toString().split(' ').slice(1, 3)
+              .join(' '),
+            messageBubble: <BubblesMessage
               message={message.text}
               time={`${(new Date(message.date.seconds * 1000))
                 .getHours().toString().padStart(2, '0')}:${new Date(message.date.seconds * 1000)
@@ -42,8 +49,38 @@ function ChatWindow() {
               isCurrenUser={message.senderID === currentUser?.uid}
               key={message.id}
               imageUrl={message.imageUrl}
-            />
-          )));
+            />,
+          }));
+
+        function splitByDate(setDatesArray: DocumentData[]) {
+          const arr: SplitByDates[] = [];
+          let shouldLeave = false;
+          for (let i = 0; i < setDatesArray.length; i += 1) {
+            if (shouldLeave) {
+              break;
+            }
+            const item = setDatesArray[i];
+            const index = arr.push({
+              date: item.date,
+              messageArr: [item.messageBubble],
+            });
+            for (let j = i + 1; j < setDatesArray.length; j += 1) {
+              if (item.date === setDatesArray[j].date) {
+                arr[index - 1].messageArr.push(setDatesArray[j].messageBubble);
+                if (setDatesArray.length - 1 === j) {
+                  shouldLeave = true;
+                }
+              } else {
+                i = j - 1;
+                break;
+              }
+            }
+          }
+          return arr;
+        }
+        const splitedByDate = splitByDate(datesNMessagesArray);
+
+        setDatesNMessagesArr(splitedByDate);
       });
     }
   }, [activeChatID]);
@@ -85,13 +122,26 @@ function ChatWindow() {
     if (messageContainer && scrolledToBottom) {
       messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     }
-  }, [messagesArr]);
+  }, [datesNMessagesArr]);
+
+  let index = 0;
 
   return (
     <div className="chat-window">
       {activeChatID && (
         <div className="chat-window__wrapper" ref={messageContainerRef}>
-          <BubblesDateGroup date="Today" messagesArr={messagesArr} />
+          {
+            datesNMessagesArr.map((dateNMessages) => {
+              index += 1;
+              return (
+                <BubblesDateGroup
+                  date={dateNMessages.date}
+                  messagesArr={dateNMessages.messageArr}
+                  key={index}
+                />
+              );
+            })
+          }
           <div ref={messagesEndRef} />
           <button
             type="button"
