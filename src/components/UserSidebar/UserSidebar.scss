@@ -1,0 +1,22 @@
+@import "../../styles/variables";
+
+.user-sidebar {
+    position: relative;
+    z-index: 6;
+  
+    width: 100%;
+    max-width: 420px;
+    height: 100%;
+    overflow: hidden;
+    flex: 2;
+  
+    background-color: $grey-dark;
+  
+    @media (min-width: 601px) {
+      min-width: 420px;
+    }
+  
+    @media (max-width: 600px) {
+      max-width: 100%;
+    }
+}

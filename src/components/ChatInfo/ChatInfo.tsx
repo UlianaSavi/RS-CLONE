@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import { useContext, useEffect, useState } from 'react';
 import {
   onSnapshot, doc, getDoc, DocumentData,
@@ -9,10 +11,12 @@ import { User } from '../../types';
 import Avatar from '../Avatar/Avatar';
 import './ChatInfo.scss';
 import { convertTimestamp } from '../../hooks/timestampConverter';
+import { UserSidebarContext } from '../../context/UserSidebarContext';
 
 function ChatInfo() {
   const { activeChatID } = useContext(ActiveChatContext);
   const { userID } = useContext(UserContext);
+  const { userSidebar, setUserSidebar } = useContext(UserSidebarContext);
   const [userInfo, setUserInfo] = useState<User | null>(null);
   const [isOnline, setIsOnline] = useState(userInfo?.isOnline || false);
   const [lastSeen, setLastSeen] = useState('');
@@ -32,6 +36,9 @@ function ChatInfo() {
       setData(data);
     }
   };
+  const FlipFlopUserSidebar = () => {
+    setUserSidebar(!userSidebar);
+  };
 
   useEffect(() => {
     getData();
@@ -43,7 +50,7 @@ function ChatInfo() {
   }, [activeChatID]);
 
   return (
-    <div className="chat-info">
+    <div className="chat-info" onClick={FlipFlopUserSidebar}>
       <Avatar image={userInfo?.photoURL || ''} />
       <div className="chat-info__info">
         <div className="chat-info__title">{userInfo?.displayName}</div>
