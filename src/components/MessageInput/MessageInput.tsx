@@ -10,6 +10,7 @@ import { db } from '../../firebaseConfig';
 import { AuthContext } from '../../context/AuthContext';
 import { UserContext } from '../../context/UserContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
+import { clickedEmoji } from '../../context/ClickedEmojiContext';
 
 import AttachPopup from '../AttachPopup/AttachPopup';
 import EmotionPopup from '../EmotionPopup/EmotionPopup';
@@ -148,6 +149,11 @@ function MessageInput() {
       setIsAudio(isAudio);
     }
   };
+
+  const { isClickedEmoji } = useContext(clickedEmoji);
+  useEffect(() => {
+    console.log(isClickedEmoji);
+  }, [isClickedEmoji]);
 
   return (
     <div className="message-input">
