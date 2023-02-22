@@ -1,10 +1,12 @@
-import UserInfo from '../ForSettingsSidebar/UserInfo/UserInfo';
+import UserSidebarHeader from '../UserSidebarHeader/UserSidebarHeader';
+import UserSidebarInfo from '../UserSidebarInfo/UserSidebarInfo';
 import './UserSidebar.scss';
 
 function UserSidebar() {
   return (
     <div className="user-sidebar">
-      <UserInfo />
+      <UserSidebarHeader />
+      <UserSidebarInfo />
     </div>
   );
 }
