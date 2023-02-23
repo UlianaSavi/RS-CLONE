@@ -153,6 +153,7 @@ function MessageInput() {
   const { isClickedEmoji } = useContext(clickedEmoji);
   useEffect(() => {
     setMessageValue(messageValue + isClickedEmoji);
+    setIsAudio(true);
   }, [isClickedEmoji]);
 
   return (
@@ -168,7 +169,7 @@ function MessageInput() {
           className="message-input__text-area"
           ref={textAreaRef}
           value={messageValue}
-          onChange={handleChange}
+          onInput={handleChange}
           onKeyDown={handleSendMessageTextArea}
           rows={1}
         />
