@@ -150,11 +150,13 @@ function MessageInput() {
     }
   };
 
-  const { isClickedEmoji } = useContext(clickedEmoji);
+  const { isClickedEmoji, setClickedEmoji } = useContext(clickedEmoji);
+
   useEffect(() => {
     setMessageValue(messageValue + isClickedEmoji);
     setIsAudio(true);
     textAreaRef.current?.focus();
+    setClickedEmoji('');
   }, [isClickedEmoji]);
 
   return (
