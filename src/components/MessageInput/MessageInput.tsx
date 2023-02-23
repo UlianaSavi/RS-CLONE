@@ -14,7 +14,6 @@ import { ActiveChatContext } from '../../context/ActiveChatContext';
 import AttachPopup from '../AttachPopup/AttachPopup';
 import EmotionPopup from '../EmotionPopup/EmotionPopup';
 import type { User } from '../../types';
-import { MAIN_GROUP_CHAT_ID } from '../../API/api';
 
 import {
   EmojiIcon, AttachIcon, SendMessageIcon, AudioMessageIcon,
@@ -137,12 +136,18 @@ function MessageInput() {
       });
 
       const promises = membersArr.map(async (memberID: string) => {
+        const groups = await getDoc(doc(db, 'userGroups', memberID));
+        const groupsData = groups.data();
+        if (!groupsData) return;
+        let { unreadMessages } = groupsData[activeChatID];
+        if (Number.isNaN(unreadMessages)) unreadMessages = 0;
+
         await updateDoc(doc(db, 'userGroups', memberID), {
           [`${activeChatID}.lastMessage`]: {
             text: messageText,
             date: serverTimestamp(),
           },
-          // [`${activeChatID}.unreadMessages`]: unreadMessages += 1,
+          [`${activeChatID}.unreadMessages`]: unreadMessages += 1,
         });
       });
       Promise.all(promises);

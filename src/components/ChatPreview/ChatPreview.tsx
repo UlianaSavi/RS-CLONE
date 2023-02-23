@@ -35,18 +35,27 @@ function ChatPreview({
   const currentUser: User = useContext(AuthContext) as User;
   const { setActiveSidebar } = useContext(ActiveVisibilitySidebar);
 
+  const resetCounter = async (isGroup: boolean) => {
+    const res = await getDoc(doc(db, isGroup ? 'userGroups' : 'userChats', currentUser.uid));
+    const chats = res.data();
+    if (!chats) return;
+    if (chats[activeChatID]) {
+      await updateDoc(doc(db, isGroup ? 'userGroups' : 'userChats', currentUser.uid), {
+        [`${activeChatID}.unreadMessages`]: 0,
+      });
+    }
+  };
+
   const resetMessagesCounter = async () => {
     if (activeChatID) {
-      const res = await getDoc(doc(db, 'userChats', currentUser.uid));
-      const chats = res.data();
-      if (!chats) return;
-      if (chats[activeChatID]) {
-        await updateDoc(doc(db, 'userChats', currentUser.uid), {
-          [`${activeChatID}.unreadMessages`]: 0,
-        });
+      if (activeChatID === MAIN_GROUP_CHAT_ID) {
+        resetCounter(true);
+      } else {
+        resetCounter(false);
       }
     }
   };
+
   const [isOnlineStatus, setIsOnlineStatus] = useState(data.userInfo?.isOnline || false);
 
   const selectChat = () => {
@@ -77,7 +86,6 @@ function ChatPreview({
   }
 
   const lastSeen = isSearchMode ? !isOnlineStatus && data.userInfo?.lastVisitAt ? convertTimestamp(data.userInfo?.lastVisitAt) : '' : '';
-  console.log(data);
   const lastMessageTime = !isSearchMode ? convertTimestamp(data?.lastMessage?.date) : '';
 
   const handleContextMenu = (event: React.MouseEvent) => {
