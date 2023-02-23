@@ -52,14 +52,18 @@ function ChatInfo() {
     }
   }, [activeChatID]);
 
-  const onlineStatus = isOnline ? 'Online' : `Last seen ${lastSeen}`;
+  const onlineStatus = isOnline ? 'online' : `last seen ${lastSeen}`;
 
   return (
     <div className="chat-info">
       <Avatar image={(activeChatID !== MAIN_GROUP_CHAT_ID ? userInfo?.photoURL : groupInfo?.photoURL) || ''} />
       <div className="chat-info__info">
-        <div className="chat-info__title">{activeChatID !== MAIN_GROUP_CHAT_ID ? userInfo?.displayName : groupInfo?.name}</div>
-        <div className="chat-info__status">{activeChatID !== MAIN_GROUP_CHAT_ID ? onlineStatus : `${groupInfo?.members.length} members`}</div>
+        <div className="chat-info__title">
+          {activeChatID !== MAIN_GROUP_CHAT_ID ? userInfo?.displayName : groupInfo?.name}
+        </div>
+        <div className={`chat-info__status ${isOnline && activeChatID !== MAIN_GROUP_CHAT_ID ? 'online' : ''}`}>
+          {activeChatID !== MAIN_GROUP_CHAT_ID ? onlineStatus : `${groupInfo?.members.length} members`}
+        </div>
       </div>
     </div>
   );

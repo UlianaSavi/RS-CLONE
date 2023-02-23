@@ -104,7 +104,7 @@ function ChatPreview({
         <div className="chat-preview-text">
           <div className="chat-preview__title">{displayName}</div>
           {isSearchMode
-            ? <div className="chat-preview__online-status">{isOnlineStatus ? 'Online' : `Last seen ${lastSeen}`}</div>
+            ? <div className="chat-preview__online-status">{isOnlineStatus ? 'online' : `last seen ${lastSeen}`}</div>
             : <div className="chat-preview__last-message">{data?.lastMessage.text}</div>}
         </div>
       </div>
