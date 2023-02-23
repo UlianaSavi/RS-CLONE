@@ -11,6 +11,7 @@ import { db } from '../../firebaseConfig';
 import { AuthContext } from '../../context/AuthContext';
 import { UserContext } from '../../context/UserContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
+import { clickedEmoji } from '../../context/ClickedEmojiContext';
 import { sendMessage } from '../../API/api';
 import AttachPopup from '../AttachPopup/AttachPopup';
 import EmotionPopup from '../EmotionPopup/EmotionPopup';
@@ -121,6 +122,15 @@ function MessageInput() {
     }
   };
 
+  const { isClickedEmoji, setClickedEmoji } = useContext(clickedEmoji);
+
+  useEffect(() => {
+    setMessageValue(messageValue + isClickedEmoji);
+    setIsAudio(true);
+    textAreaRef.current?.focus();
+    setClickedEmoji('');
+  }, [isClickedEmoji]);
+
   return (
     <div className="message-input">
       <div className="message-input__container">
@@ -134,7 +144,7 @@ function MessageInput() {
           className="message-input__text-area"
           ref={textAreaRef}
           value={messageValue}
-          onChange={handleChange}
+          onInput={handleChange}
           onKeyDown={handleSendMessageTextArea}
           rows={1}
         />
