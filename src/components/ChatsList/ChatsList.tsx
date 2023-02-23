@@ -61,13 +61,15 @@ function ChatsList({
     setChatsArr(chatsData
       .map((chat: UserChat) => (
         <ChatPreview
-          key={chat.userInfo.uid}
+          key={chat.userInfo.uid || '1'}
           data={chat}
-          isActive={chat?.userInfo.uid === userID}
+          isActive={chat?.userInfo.uid === userID
+            || (activeChatID === userID && activeFolder === 1)}
           setActiveUserID={setUserID}
           isSearchMode={isSearchMode}
           setSearchMode={setSearchMode}
           onContextMenu={handleContextMenu}
+          activeFolder={activeFolder}
         />
       )));
   };
@@ -111,9 +113,32 @@ function ChatsList({
     }
   };
 
+  const getUserGroups = async () => {
+    if (currentUser?.uid) {
+      onSnapshot(doc(db, 'userGroups', currentUser.uid), (d) => {
+        const data = d.data();
+        if (!data) return;
+        const dataArray = Object.values(data);
+        console.log(dataArray);
+        const groupsData = dataArray.map((item) => ({
+          lastMessage: item?.lastMessage || '',
+          unreadMessages: item?.unreadMessages || 0,
+          userInfo: item.groupInfo,
+        }));
+        console.log(groupsData);
+        updateChatsList(groupsData);
+      });
+    }
+  };
+
   const showChatsList = async () => {
-    const res = isSearchMode ? await getAllUsers() : await getUserChats();
-    return res;
+    if (isSearchMode) {
+      await getAllUsers();
+    } else if (activeFolder === 0) {
+      await getUserChats();
+    } else {
+      await getUserGroups();
+    }
   };
 
   useEffect(() => {
