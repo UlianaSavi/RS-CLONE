@@ -49,6 +49,7 @@ function ChatWindow() {
               isCurrenUser={message.senderID === currentUser?.uid}
               key={message.id}
               imageUrl={message.imageUrl}
+              senderID={message.senderID}
             />,
           }));
 

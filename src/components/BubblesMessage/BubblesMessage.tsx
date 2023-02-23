@@ -1,10 +1,13 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useState, useEffect, useContext } from 'react';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../../firebaseConfig';
 import { ReactComponent as CheckMark } from '../../assets/icons/check-solid.svg';
 import { ModalPhotoContext } from '../../context/ModalPhotoContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
 import { UserContext } from '../../context/UserContext';
+import { User } from '../../types';
 import Avatar from '../Avatar/Avatar';
 import './BubblesMessage.scss';
 
@@ -14,6 +17,7 @@ export default function BubblesMessage(props: {
   isRead: boolean,
   isCurrenUser: boolean,
   imageUrl: string,
+  senderID: string,
 }) {
   const {
     message,
@@ -21,6 +25,7 @@ export default function BubblesMessage(props: {
     isRead,
     isCurrenUser,
     imageUrl,
+    senderID,
   } = props;
 
   const { activeChatID } = useContext(ActiveChatContext);
@@ -38,6 +43,7 @@ export default function BubblesMessage(props: {
 
   const [isImageLoaded, setImageLoaded] = useState(false);
   const { setUrl, setImagePopap } = useContext(ModalPhotoContext);
+  const [senderData, setSenderData] = useState<User | null>(null);
 
   useEffect(() => {
     if (imageUrl) {
@@ -61,11 +67,23 @@ export default function BubblesMessage(props: {
     setImagePopap(true);
   };
 
+  const getSenderData = async () => {
+    const user = await getDoc(doc(db, 'users', senderID));
+    const data = user.data() as User;
+    setSenderData(data);
+  };
+
+  useEffect(() => {
+    if (activeChatID === userID) {
+      getSenderData();
+    }
+  }, []);
+
   return (
     <div className={`bubble__user-message-wrapper ${isCurrenUser ? '' : 'another-user'}`}>
-      {!isCurrenUser && activeChatID === userID && <Avatar image="" />}
+      {!isCurrenUser && activeChatID === userID && <Avatar image={senderData?.photoURL || ''} />}
       <div className={isCurrenUser ? 'bubble__user-message' : 'bubble__user-message another-user'}>
-        {!isCurrenUser && activeChatID === userID && <div className="bubble__username">Namme</div>}
+        {!isCurrenUser && activeChatID === userID && <div className="bubble__username">{senderData?.displayName}</div>}
         {imageUrl && <img className="img" onClick={() => openPopap(imageUrl)} src={imageUrl} alt="" />}
         {(!imageUrl || isImageLoaded) && (
           <>
