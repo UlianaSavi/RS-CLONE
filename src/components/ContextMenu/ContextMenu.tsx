@@ -44,7 +44,7 @@ function ContextMenu({
       style={{ top: `${position.y}px`, left: `${position.x}px` }}
     >
       <PopupMenuItem label="Mark as read" icon={<MarkAsReadIcon className="context-menu__read-icon" />} handleClick={resetMessagesCounter} />
-      <PopupMenuItem label="Delete chat" icon={<TrashIcon />} handleClick={() => showPopup(true)} />
+      {userIdUnderRMK !== MAIN_GROUP_CHAT_ID && <PopupMenuItem label="Delete chat" icon={<TrashIcon />} handleClick={() => showPopup(true)} />}
     </nav>
   );
 }
