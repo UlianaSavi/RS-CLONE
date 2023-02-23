@@ -89,7 +89,7 @@ function ChatPreview({
   const lastMessageTime = !isSearchMode ? convertTimestamp(data?.lastMessage?.date) : '';
 
   const handleContextMenu = (event: React.MouseEvent) => {
-    onContextMenu(event, uid);
+    onContextMenu(event, uid || MAIN_GROUP_CHAT_ID);
   };
 
   return (

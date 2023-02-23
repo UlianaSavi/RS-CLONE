@@ -8,6 +8,7 @@ import { ReactComponent as TrashIcon } from '../../assets/icons/trash.svg';
 import { ReactComponent as MarkAsReadIcon } from '../../assets/icons/mark-chat-read.svg';
 import { AuthContext } from '../../context/AuthContext';
 import type { User } from '../../types';
+import { MAIN_GROUP_CHAT_ID } from '../../API/api';
 import './ContextMenu.scss';
 
 interface ContextMenuProps {
@@ -24,10 +25,16 @@ function ContextMenu({
   const currentUser: User = useContext(AuthContext) as User;
 
   const resetMessagesCounter = async () => {
-    const combinedID = currentUser.uid > userIdUnderRMK ? `${currentUser.uid}${userIdUnderRMK}` : `${userIdUnderRMK}${currentUser.uid}`;
-    await updateDoc(doc(db, 'userChats', currentUser.uid), {
-      [`${combinedID}.unreadMessages`]: 0,
-    });
+    if (userIdUnderRMK !== MAIN_GROUP_CHAT_ID) {
+      const combinedID = currentUser.uid > userIdUnderRMK ? `${currentUser.uid}${userIdUnderRMK}` : `${userIdUnderRMK}${currentUser.uid}`;
+      await updateDoc(doc(db, 'userChats', currentUser.uid), {
+        [`${combinedID}.unreadMessages`]: 0,
+      });
+    } else {
+      await updateDoc(doc(db, 'userGroups', currentUser.uid), {
+        [`${userIdUnderRMK}.unreadMessages`]: 0,
+      });
+    }
   };
 
   return (
