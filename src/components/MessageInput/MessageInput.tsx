@@ -152,7 +152,7 @@ function MessageInput() {
 
   const { isClickedEmoji } = useContext(clickedEmoji);
   useEffect(() => {
-    console.log(isClickedEmoji);
+    setMessageValue(messageValue + isClickedEmoji);
   }, [isClickedEmoji]);
 
   return (
