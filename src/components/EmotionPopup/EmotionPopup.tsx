@@ -11,7 +11,7 @@ interface EmotionPopupProps {
 function EmotionPopup({ isVisible, handleMouseLeave }: EmotionPopupProps) {
   const { setClickedEmoji } = useContext(clickedEmoji);
 
-  const emojiArrPopup = emojisArray.map((item, index) => <li className="emotion-popup__emoji" key={item} id={`emoji-${index}`} onClick={() => setClickedEmoji(item)} role="presentation">{String.fromCodePoint(parseInt(item, 16))}</li>);
+  const emojiArrPopup = emojisArray.map((item, index) => <li className="emotion-popup__emoji" key={item} id={`emoji-${index}`} onClick={() => setClickedEmoji(String.fromCodePoint(parseInt(item, 16)))} role="presentation">{String.fromCodePoint(parseInt(item, 16))}</li>);
 
   return (
     <div className={`emotion-popup ${isVisible ? 'active' : ''}`} onMouseLeave={handleMouseLeave}>
