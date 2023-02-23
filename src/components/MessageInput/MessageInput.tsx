@@ -4,16 +4,16 @@ import React, {
 } from 'react';
 import styled from 'styled-components';
 import {
-  doc, getDoc, serverTimestamp, setDoc, updateDoc, arrayUnion, Timestamp,
+  doc, getDoc, serverTimestamp, setDoc, updateDoc,
 } from 'firebase/firestore';
+import type { User } from 'firebase/auth';
 import { db } from '../../firebaseConfig';
 import { AuthContext } from '../../context/AuthContext';
 import { UserContext } from '../../context/UserContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
-
+import { sendMessage } from '../../API/api';
 import AttachPopup from '../AttachPopup/AttachPopup';
 import EmotionPopup from '../EmotionPopup/EmotionPopup';
-import type { User } from '../../types';
 
 import {
   EmojiIcon, AttachIcon, SendMessageIcon, AudioMessageIcon,
@@ -88,78 +88,12 @@ function MessageInput() {
     }
   };
 
-  // Send message
-  const sendMessage = async (messageText: string) => {
-    await updateDoc(doc(db, 'chats', activeChatID), {
-      messages: arrayUnion({
-        id: Math.floor(10000000000 + Math.random() * 90000000000),
-        text: messageText,
-        senderID: currentUser.uid,
-        date: Timestamp.now(),
-      }),
-    });
-
-    if (activeChatID !== userID) {
-      await updateDoc(doc(db, 'userChats', currentUser.uid), {
-        [`${activeChatID}.lastMessage`]: {
-          text: messageText,
-          date: serverTimestamp(),
-        },
-      });
-
-      const chats = await getDoc(doc(db, 'userChats', userID));
-      const data = chats.data();
-      if (!data) return;
-      let { unreadMessages } = data[activeChatID];
-
-      await updateDoc(doc(db, 'userChats', userID), {
-        [`${activeChatID}.lastMessage`]: {
-          text: messageText,
-          date: serverTimestamp(),
-        },
-        [`${activeChatID}.unreadMessages`]: unreadMessages += 1,
-      });
-    } else {
-      await updateDoc(doc(db, 'userGroups', currentUser.uid), {
-        [`${activeChatID}.lastMessage`]: {
-          text: messageText,
-          date: serverTimestamp(),
-        },
-      });
-
-      const res = await getDoc(doc(db, 'chats', activeChatID));
-      const data = res.data();
-      if (!data) return;
-      const membersArr = data.members.map((member: {[key: string]: boolean}) => {
-        if (Object.values(member)[0]) return Object.keys(member)[0];
-        return null;
-      });
-
-      const promises = membersArr.map(async (memberID: string) => {
-        const groups = await getDoc(doc(db, 'userGroups', memberID));
-        const groupsData = groups.data();
-        if (!groupsData) return;
-        let { unreadMessages } = groupsData[activeChatID];
-        if (Number.isNaN(unreadMessages)) unreadMessages = 0;
-
-        await updateDoc(doc(db, 'userGroups', memberID), {
-          [`${activeChatID}.lastMessage`]: {
-            text: messageText,
-            date: serverTimestamp(),
-          },
-          [`${activeChatID}.unreadMessages`]: unreadMessages += 1,
-        });
-      });
-      Promise.all(promises);
-    }
-  };
-
   const handleSendMessageBtn = async () => {
     if (messageValue.trim() !== '') {
       if (activeChatID !== userID) {
         await activateChat();
       }
-      await sendMessage(messageValue);
+      await sendMessage(messageValue, currentUser, activeChatID, userID);
       setIsAudio(!isAudio);
       setMessageValue('');
     }
@@ -172,7 +106,7 @@ function MessageInput() {
       if (activeChatID !== userID) {
         await activateChat();
       }
-      await sendMessage(messageValue.trim());
+      await sendMessage(messageValue.trim(), currentUser, activeChatID, userID);
       setIsAudio(!isAudio);
       setMessageValue('');
     }

@@ -6,7 +6,7 @@ import {
   updateProfile,
 } from 'firebase/auth';
 import {
-  doc, setDoc, updateDoc, arrayUnion, deleteDoc, deleteField, serverTimestamp,
+  doc, setDoc, getDoc, updateDoc, arrayUnion, deleteDoc, deleteField, serverTimestamp, Timestamp,
 } from 'firebase/firestore';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import type { User } from 'firebase/auth';
@@ -187,4 +187,76 @@ export const loadMessagePhoto = async (image: File | null) => {
   }
 
   return getDownloadURL((await uploadTask).ref);
+};
+
+export const sendMessage = async (
+  messageText: string,
+  currentUser: User,
+  activeChatID: string,
+  userID: string,
+) => {
+  await updateDoc(doc(db, 'chats', activeChatID), {
+    messages: arrayUnion({
+      id: Math.floor(10000000000 + Math.random() * 90000000000),
+      text: messageText,
+      senderID: currentUser.uid,
+      date: Timestamp.now(),
+    }),
+  });
+
+  if (activeChatID !== userID) {
+    // Private chat
+    await updateDoc(doc(db, 'userChats', currentUser.uid), {
+      [`${activeChatID}.lastMessage`]: {
+        text: messageText,
+        date: serverTimestamp(),
+      },
+    });
+
+    const chats = await getDoc(doc(db, 'userChats', userID));
+    const data = chats.data();
+    if (!data) return;
+    let { unreadMessages } = data[activeChatID];
+
+    await updateDoc(doc(db, 'userChats', userID), {
+      [`${activeChatID}.lastMessage`]: {
+        text: messageText,
+        date: serverTimestamp(),
+      },
+      [`${activeChatID}.unreadMessages`]: unreadMessages += 1,
+    });
+  } else {
+    // Group chat
+    await updateDoc(doc(db, 'userGroups', currentUser.uid), {
+      [`${activeChatID}.lastMessage`]: {
+        text: messageText,
+        date: serverTimestamp(),
+      },
+    });
+
+    const res = await getDoc(doc(db, 'chats', activeChatID));
+    const data = res.data();
+    if (!data) return;
+    const membersArr = data.members.map((member: {[key: string]: boolean}) => {
+      if (Object.values(member)[0]) return Object.keys(member)[0];
+      return null;
+    });
+
+    const promises = membersArr.map(async (memberID: string) => {
+      const groups = await getDoc(doc(db, 'userGroups', memberID));
+      const groupsData = groups.data();
+      if (!groupsData) return;
+      let { unreadMessages } = groupsData[activeChatID];
+      if (Number.isNaN(unreadMessages)) unreadMessages = 0;
+
+      await updateDoc(doc(db, 'userGroups', memberID), {
+        [`${activeChatID}.lastMessage`]: {
+          text: messageText,
+          date: serverTimestamp(),
+        },
+        [`${activeChatID}.unreadMessages`]: unreadMessages += 1,
+      });
+    });
+    Promise.all(promises);
+  }
 };
