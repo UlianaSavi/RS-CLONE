@@ -154,6 +154,7 @@ function MessageInput() {
   useEffect(() => {
     setMessageValue(messageValue + isClickedEmoji);
     setIsAudio(true);
+    textAreaRef.current?.focus();
   }, [isClickedEmoji]);
 
   return (
