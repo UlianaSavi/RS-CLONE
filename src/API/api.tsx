@@ -194,13 +194,20 @@ export const sendMessage = async (
   currentUser: User,
   activeChatID: string,
   userID: string,
+  file?: File | null,
 ) => {
+  let imageUrl;
+  if (file) {
+    imageUrl = await loadMessagePhoto(file);
+  }
+
   await updateDoc(doc(db, 'chats', activeChatID), {
     messages: arrayUnion({
       id: Math.floor(10000000000 + Math.random() * 90000000000),
       text: messageText,
       senderID: currentUser.uid,
       date: Timestamp.now(),
+      ...(imageUrl && { imageUrl }),
     }),
   });
 
@@ -208,7 +215,7 @@ export const sendMessage = async (
     // Private chat
     await updateDoc(doc(db, 'userChats', currentUser.uid), {
       [`${activeChatID}.lastMessage`]: {
-        text: messageText,
+        text: messageText || 'Photo',
         date: serverTimestamp(),
       },
     });
@@ -220,7 +227,7 @@ export const sendMessage = async (
 
     await updateDoc(doc(db, 'userChats', userID), {
       [`${activeChatID}.lastMessage`]: {
-        text: messageText,
+        text: messageText || 'Photo',
         date: serverTimestamp(),
       },
       [`${activeChatID}.unreadMessages`]: unreadMessages += 1,
@@ -229,7 +236,7 @@ export const sendMessage = async (
     // Group chat
     await updateDoc(doc(db, 'userGroups', currentUser.uid), {
       [`${activeChatID}.lastMessage`]: {
-        text: messageText,
+        text: messageText || 'Photo',
         date: serverTimestamp(),
       },
     });
@@ -251,7 +258,7 @@ export const sendMessage = async (
 
       await updateDoc(doc(db, 'userGroups', memberID), {
         [`${activeChatID}.lastMessage`]: {
-          text: messageText,
+          text: messageText || 'Photo',
           date: serverTimestamp(),
         },
         [`${activeChatID}.unreadMessages`]: unreadMessages += 1,
