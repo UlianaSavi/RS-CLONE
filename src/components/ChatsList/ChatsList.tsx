@@ -119,13 +119,12 @@ function ChatsList({
         const data = d.data();
         if (!data) return;
         const dataArray = Object.values(data);
-        console.log(dataArray);
+        if (dataArray.some((item) => !item.lastMessage?.date)) return;
         const groupsData = dataArray.map((item) => ({
           lastMessage: item?.lastMessage || '',
           unreadMessages: item?.unreadMessages || 0,
           userInfo: item.groupInfo,
         }));
-        console.log(groupsData);
         updateChatsList(groupsData);
       });
     }

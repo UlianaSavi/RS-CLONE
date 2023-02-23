@@ -77,7 +77,8 @@ function ChatPreview({
   }
 
   const lastSeen = isSearchMode ? !isOnlineStatus && data.userInfo?.lastVisitAt ? convertTimestamp(data.userInfo?.lastVisitAt) : '' : '';
-  const lastMessageTime = !isSearchMode && !activeFolder ? convertTimestamp(data?.lastMessage?.date) : '';
+  console.log(data);
+  const lastMessageTime = !isSearchMode ? convertTimestamp(data?.lastMessage?.date) : '';
 
   const handleContextMenu = (event: React.MouseEvent) => {
     onContextMenu(event, uid);
