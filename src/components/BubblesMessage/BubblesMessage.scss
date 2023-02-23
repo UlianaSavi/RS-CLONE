@@ -1,5 +1,30 @@
 @import "../../styles/variables";
 
+.bubble__user-message-wrapper {
+  display: flex;
+  align-self: flex-end;
+  align-items: end;
+  gap: 5px;
+  
+  &.another-user {
+    align-self: flex-start;
+  }
+
+  .avatar {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.bubble__username {
+  padding: 10px 10px 0;
+
+  line-height: 10px;
+  font-size: 13px;
+
+  color: $accent-color;
+}
+
 .bubble__user-message {
   position: relative;
 

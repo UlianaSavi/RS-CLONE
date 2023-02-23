@@ -3,6 +3,9 @@
 import { useState, useEffect, useContext } from 'react';
 import { ReactComponent as CheckMark } from '../../assets/icons/check-solid.svg';
 import { ModalPhotoContext } from '../../context/ModalPhotoContext';
+import { ActiveChatContext } from '../../context/ActiveChatContext';
+import { UserContext } from '../../context/UserContext';
+import Avatar from '../Avatar/Avatar';
 import './BubblesMessage.scss';
 
 export default function BubblesMessage(props: {
@@ -19,6 +22,9 @@ export default function BubblesMessage(props: {
     isCurrenUser,
     imageUrl,
   } = props;
+
+  const { activeChatID } = useContext(ActiveChatContext);
+  const { userID } = useContext(UserContext);
 
   let firstCheckMark;
   let secondCheckMark;
@@ -56,18 +62,22 @@ export default function BubblesMessage(props: {
   };
 
   return (
-    <div className={isCurrenUser ? 'bubble__user-message' : 'bubble__user-message another-user'}>
-      {imageUrl && <img className="img" onClick={() => openPopap(imageUrl)} src={imageUrl} alt="" />}
-      {(!imageUrl || isImageLoaded) && (
-        <>
-          <span className="message" dangerouslySetInnerHTML={findImail(message)} />
-          <div className="bubble__time-n-check-wrapper">
-            <span className="bubble__time">{time}</span>
-            {firstCheckMark}
-            {secondCheckMark}
-          </div>
-        </>
-      )}
+    <div className={`bubble__user-message-wrapper ${isCurrenUser ? '' : 'another-user'}`}>
+      {!isCurrenUser && activeChatID === userID && <Avatar image="" />}
+      <div className={isCurrenUser ? 'bubble__user-message' : 'bubble__user-message another-user'}>
+        {!isCurrenUser && activeChatID === userID && <div className="bubble__username">Namme</div>}
+        {imageUrl && <img className="img" onClick={() => openPopap(imageUrl)} src={imageUrl} alt="" />}
+        {(!imageUrl || isImageLoaded) && (
+          <>
+            <span className="message" dangerouslySetInnerHTML={findImail(message)} />
+            <div className="bubble__time-n-check-wrapper">
+              <span className="bubble__time">{time}</span>
+              {firstCheckMark}
+              {secondCheckMark}
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 }

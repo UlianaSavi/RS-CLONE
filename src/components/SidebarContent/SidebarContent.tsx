@@ -27,6 +27,7 @@ function SidebarContent({ isSearchMode, setSearchMode, searchInput }: SidebarCon
         activeFolder={activeFolder}
         setSearchMode={setSearchMode}
         searchInput={searchInput}
+        setActiveFolder={setActiveFolder}
       />
     </div>
   );

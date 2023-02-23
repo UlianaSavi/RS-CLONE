@@ -21,10 +21,11 @@ interface ChatsListProps {
   isSearchMode: boolean
   setSearchMode: React.Dispatch<React.SetStateAction<boolean>>,
   searchInput: string
+  setActiveFolder: React.Dispatch<React.SetStateAction<number>>,
 }
 
 function ChatsList({
-  activeFolder, isSearchMode, setSearchMode, searchInput,
+  activeFolder, isSearchMode, setSearchMode, searchInput, setActiveFolder,
 }: ChatsListProps) {
   // Context menu
   const [showMenu, setShowMenu] = useState(false);
@@ -132,6 +133,7 @@ function ChatsList({
 
   const showChatsList = async () => {
     if (isSearchMode) {
+      setActiveFolder(0);
       await getAllUsers();
     } else if (activeFolder === 0) {
       await getUserChats();
