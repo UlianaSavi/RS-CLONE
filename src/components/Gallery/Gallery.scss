@@ -38,5 +38,15 @@
             object-fit: fill;
             cursor: pointer;
         }
+
+        @media (max-width: 420px) {
+            .img {
+              max-width: 50%;
+              width: 176px;
+              height: 176px;
+            }
+          }
     }
+
+    
 }
