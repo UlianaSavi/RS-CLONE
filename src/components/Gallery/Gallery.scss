@@ -1,0 +1,42 @@
+@import "../../styles/variables";
+
+.gallery {
+    min-height: 200px;
+    background: $grey-main;
+
+    &__tab {
+        display: flex;
+        align-items: center;
+        padding: 13px;
+
+        white-space: nowrap;
+        font-size: 1rem;
+
+        background-color: $grey-main;
+        border: none;
+        border-bottom: 3px solid $accent-color;
+        cursor: pointer;
+
+        &:hover {
+            background: $accent-hover-folder;
+        }
+
+        &__title {
+            color: $accent-color;
+            margin-right: 5px;
+        }
+    }
+
+    &__images {
+        display: flex;
+        flex-wrap: wrap;
+
+        .img {
+            max-width: 34%;
+            width: 140px;
+            height: 140px;
+            object-fit: fill;
+            cursor: pointer;
+        }
+    }
+}
