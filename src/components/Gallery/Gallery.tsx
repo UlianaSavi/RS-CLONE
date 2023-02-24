@@ -13,7 +13,6 @@ function Gallery() {
   const { setUrl, setImagePopap } = useContext(ModalPhotoContext);
   const [imagesArray, setImagesArray] = useState([]);
   const openPopap = (currentImgUrl: string) => {
-    console.log(currentImgUrl);
     setUrl(currentImgUrl);
     setImagePopap(true);
   };
@@ -26,8 +25,6 @@ function Gallery() {
           console.log('Hey! There are no messages here.');
           return;
         }
-        console.log(data.messages);
-
         setImagesArray(data.messages.map((message: DocumentData) => (
           message.imageUrl && <img className="img" onClick={() => openPopap(message.imageUrl)} src={message.imageUrl} alt="Media in chat" />
         )));

@@ -62,7 +62,7 @@ function ChatInfo() {
   const onlineStatus = isOnline ? 'online' : `last seen ${lastSeen}`;
 
   return (
-    <div className="chat-info">
+    <div className="chat-info" onClick={FlipFlopUserSidebar}>
       <Avatar image={(activeChatID !== MAIN_GROUP_CHAT_ID ? userInfo?.photoURL : groupInfo?.photoURL) || ''} />
       <div className="chat-info__info">
         <div className="chat-info__title">
