@@ -1,7 +1,7 @@
 import './PopupMenuItem.scss';
 
 interface PopupMenuItemProps {
-  label: string,
+  label?: string,
   icon: JSX.Element,
   title?: string,
   handleClick?: () => void

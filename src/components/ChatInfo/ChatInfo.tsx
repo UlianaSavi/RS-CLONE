@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import { useContext, useEffect, useState } from 'react';
 import {
   onSnapshot, doc, getDoc, DocumentData,
@@ -7,13 +9,15 @@ import { ActiveChatContext } from '../../context/ActiveChatContext';
 import { UserContext } from '../../context/UserContext';
 import { User } from '../../types';
 import Avatar from '../Avatar/Avatar';
-import './ChatInfo.scss';
 import { convertTimestamp } from '../../hooks/timestampConverter';
 import { MAIN_GROUP_CHAT_ID } from '../../API/api';
+import { UserSidebarContext } from '../../context/UserSidebarContext';
+import './ChatInfo.scss';
 
 function ChatInfo() {
   const { activeChatID } = useContext(ActiveChatContext);
   const { userID } = useContext(UserContext);
+  const { userSidebar, setUserSidebar } = useContext(UserSidebarContext);
   const [userInfo, setUserInfo] = useState<User | null>(null);
   const [groupInfo, setGroupInfo] = useState<DocumentData | null>(null);
   const [isOnline, setIsOnline] = useState(userInfo?.isOnline || false);
@@ -33,6 +37,9 @@ function ChatInfo() {
       setUserInfo(data);
       setUserData(data);
     }
+  };
+  const FlipFlopUserSidebar = () => {
+    setUserSidebar(!userSidebar);
   };
 
   useEffect(() => {
@@ -55,7 +62,7 @@ function ChatInfo() {
   const onlineStatus = isOnline ? 'online' : `last seen ${lastSeen}`;
 
   return (
-    <div className="chat-info">
+    <div className="chat-info" onClick={FlipFlopUserSidebar}>
       <Avatar image={(activeChatID !== MAIN_GROUP_CHAT_ID ? userInfo?.photoURL : groupInfo?.photoURL) || ''} />
       <div className="chat-info__info">
         <div className="chat-info__title">

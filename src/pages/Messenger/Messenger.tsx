@@ -4,9 +4,11 @@ import { useContext } from 'react';
 import Chat from '../../components/Chat/Chat';
 import ModalPhoto from '../../components/ModalPhoto/ModalPhoto';
 import Sidebar from '../../components/Sidebar/Sidebar';
+import UserSidebar from '../../components/UserSidebar/UserSidebar';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
 import { ModalPhotoContext } from '../../context/ModalPhotoContext';
 import { SendImageContext } from '../../context/SendImageContext';
+import { UserSidebarContext } from '../../context/UserSidebarContext';
 import { ActiveVisibilitySidebar } from '../../context/VisibleSidebarContext';
 import './Messenger.scss';
 
@@ -20,6 +22,7 @@ function Messenger() {
   const { url, imagePopap, setImagePopap } = useContext(ModalPhotoContext);
 
   const { isActiveSidebar, setActiveSidebar } = useContext(ActiveVisibilitySidebar);
+  const { userSidebar } = useContext(UserSidebarContext);
   const { activeChatID } = useContext(ActiveChatContext);
 
   window.addEventListener('resize', () => {
@@ -48,6 +51,7 @@ function Messenger() {
       {(popap || imagePopap) && <div className="blackout" onClick={closePopap} />}
       {isActiveSidebar ? <Sidebar sidebarClass="sidebar" /> : <Sidebar sidebarClass="sidebar hide-sidebar" />}
       {isActiveSidebar ? <Chat chatClass="chat hide-chat" /> : <Chat chatClass="chat" />}
+      {userSidebar && <UserSidebar /> }
       {imagePopap && <ModalPhoto imageUrl={url} />}
     </div>
   );
