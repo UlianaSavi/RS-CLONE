@@ -28,11 +28,12 @@ function ChatWindow() {
   const [datesNMessagesArr, setDatesNMessagesArr] = useState<SplitByDates[]>([]);
 
   useEffect(() => {
+    console.log(activeChatID);
     if (activeChatID) {
       onSnapshot(doc(db, 'chats', activeChatID), (d) => {
         const data = d.data();
         if (!data) {
-          console.log('Hey! There are no messages here.');
+          setDatesNMessagesArr([]);
           return;
         }
 
@@ -131,8 +132,8 @@ function ChatWindow() {
     <div className="chat-window">
       {activeChatID && (
         <div className="chat-window__wrapper" ref={messageContainerRef}>
-          {
-            datesNMessagesArr.map((dateNMessages) => {
+          { datesNMessagesArr.length
+            ? datesNMessagesArr.map((dateNMessages) => {
               index += 1;
               return (
                 <BubblesDateGroup
@@ -142,7 +143,7 @@ function ChatWindow() {
                 />
               );
             })
-          }
+            : <span className="chat-window__no-messages-bage">No messages here yet...</span>}
           <div ref={messagesEndRef} />
           <button
             type="button"

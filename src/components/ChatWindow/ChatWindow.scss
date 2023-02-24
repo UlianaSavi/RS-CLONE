@@ -13,7 +13,9 @@
 
   &__wrapper {
     position: relative;
-
+    
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     width: 100%;
     max-width: 728px;
@@ -70,6 +72,21 @@
     linear-gradient(127deg, rgba(162, 0, 255, 0.8), rgba(0,255,0,0) 70%),
     linear-gradient(336deg, rgba(255, 187, 0, 0.8), rgba(0,0,255,0) 25%);
     opacity: 0.09;
+  }
+
+  &__no-messages-bage {
+    margin: 0 auto;
+    z-index: 2;
+
+    font-size: 15px;
+    line-height: 20px;
+  
+    display: inline-block;
+    align-self: center;
+    padding: 0.28125rem 0.625rem;
+  
+    background-color: $date-in-chat-bg;
+    border-radius: 0.875rem;
   }
 }
 
