@@ -26,7 +26,7 @@ function Gallery() {
           return;
         }
         setImagesArray(data.messages.map((message: DocumentData) => (
-          message.imageUrl && <img id={message.id} className="img" onClick={() => openPopap(message.imageUrl)} src={message.imageUrl} alt="Media in chat" />
+          message.imageUrl && <img key={message.id} className="img" onClick={() => openPopap(message.imageUrl)} src={message.imageUrl} alt="Media in chat" />
         )));
       });
     }
