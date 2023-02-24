@@ -53,13 +53,13 @@ function UserSidebarInfo() {
         <div className="user-sidebar-info__wrapper__status">{isOnline ? 'Online' : `Last seen ${lastSeen}`}</div>
       </div>
       <div className="user-sidebar-info__item">
-        <PopupMenuItem label={userInfo?.email || 'Label'} icon={<NameUserIcon />} title="Email" />
+        <PopupMenuItem label={activeChatID !== userID ? userInfo?.email : 'This if group chat'} icon={<NameUserIcon />} title={activeChatID !== userID ? 'Email' : 'Info'} />
       </div>
       <div className="user-sidebar-info__item">
-        <PopupMenuItem label={userInfo?.displayName || 'User'} icon={<NameUserIcon />} title="Username" />
+        <PopupMenuItem label={activeChatID !== userID ? userInfo?.displayName : 'Launge'} icon={<NameUserIcon />} title={activeChatID !== userID ? 'Username' : 'Pulic name'} />
       </div>
       <div className="user-sidebar-info__item">
-        <PopupMenuItem label="About me info" icon={<InfoIcon />} title="About" />
+        <PopupMenuItem label="About" icon={<InfoIcon />} title="About" />
       </div>
     </div>
   );
