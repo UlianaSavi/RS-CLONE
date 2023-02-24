@@ -22,9 +22,11 @@ function UserSidebarInfo() {
   const [isOnline, setIsOnline] = useState(userInfo?.isOnline || false);
   const [lastSeen, setLastSeen] = useState('');
   const setData = async (data: DocumentData) => {
-    setIsOnline(data.isOnline);
-    if (!data.isOnline && data.lastVisitAt) {
-      setLastSeen(convertTimestamp(data.lastVisitAt));
+    if (activeChatID !== userID) {
+      setIsOnline(data.isOnline);
+      if (!data.isOnline && data.lastVisitAt) {
+        setLastSeen(convertTimestamp(data.lastVisitAt));
+      }
     }
   };
 
@@ -49,8 +51,9 @@ function UserSidebarInfo() {
     <div className="user-sidebar-info">
       <div className="user-sidebar-info__wrapper">
         <img className="user-sidebar-info__wrapper__ava" src={userInfo?.photoURL || avatarPlaceholder} alt="User" />
-        <div className="user-sidebar-info__wrapper__name">{userInfo?.displayName}</div>
-        <div className="user-sidebar-info__wrapper__status">{isOnline ? 'Online' : `Last seen ${lastSeen}`}</div>
+        <div className="user-sidebar-info__wrapper__name">{activeChatID !== userID ? userInfo?.displayName : 'Group'}</div>
+        {activeChatID !== userID
+          ? <div className="user-sidebar-info__wrapper__status">{isOnline ? 'Online' : `Last seen ${lastSeen}`}</div> : ''}
       </div>
       <div className="user-sidebar-info__item">
         <PopupMenuItem label={activeChatID !== userID ? userInfo?.email : 'This if group chat'} icon={<NameUserIcon />} title={activeChatID !== userID ? 'Email' : 'Info'} />
