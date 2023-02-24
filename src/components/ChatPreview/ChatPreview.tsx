@@ -22,14 +22,27 @@ interface ChatPreviewProps {
   setSearchMode: React.Dispatch<React.SetStateAction<boolean>>,
   onContextMenu: (event: React.MouseEvent, id: string) => void,
   activeFolder: number,
+  isGroupCreationMode: boolean,
+  selectedUsers: string[],
+  setSelectedUsers: React.Dispatch<React.SetStateAction<string[]>>,
 }
 
 function ChatPreview({
-  data, isActive, setActiveUserID, isSearchMode, setSearchMode, onContextMenu, activeFolder,
+  data,
+  isActive,
+  setActiveUserID,
+  isSearchMode,
+  setSearchMode,
+  onContextMenu,
+  activeFolder,
+  isGroupCreationMode,
+  selectedUsers,
+  setSelectedUsers,
 }: ChatPreviewProps) {
   const {
     uid, displayName, photoURL,
   } = data.userInfo;
+  console.log(selectedUsers);
 
   const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
   const currentUser: User = useContext(AuthContext) as User;
@@ -92,14 +105,42 @@ function ChatPreview({
     onContextMenu(event, uid || MAIN_GROUP_CHAT_ID);
   };
 
+  const [checked, setChecked] = useState(false);
+
+  const handleClick = () => {
+    if (!isGroupCreationMode) {
+      if (activeFolder) selectGroup();
+      else selectChat();
+    } else {
+      setChecked(!checked);
+      if (!checked) {
+        selectedUsers.push(displayName);
+      } else {
+        const index = selectedUsers.findIndex((el) => el === displayName);
+        selectedUsers.splice(index, 1);
+      }
+    }
+  };
+
+  const hanldeCheckbox = () => setChecked(!checked);
+
   return (
     <button
       type="button"
       className={`chat-preview ${isActive ? 'active' : ''}`}
-      onClick={activeFolder ? selectGroup : selectChat}
+      onClick={handleClick}
       onContextMenu={handleContextMenu}
     >
       <div className="chat-preview-wrapper">
+        {isGroupCreationMode && (
+          <input
+            className="chat-preview__checkbox"
+            type="checkbox"
+            id="delete-options"
+            checked={checked}
+            onChange={hanldeCheckbox}
+          />
+        )}
         <Avatar image={photoURL} />
         <div className="chat-preview-text">
           <div className="chat-preview__title">{displayName}</div>

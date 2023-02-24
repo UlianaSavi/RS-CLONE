@@ -8,9 +8,12 @@ interface SidebarContentProps {
   isSearchMode: boolean,
   setSearchMode: React.Dispatch<React.SetStateAction<boolean>>,
   searchInput: string,
+  isGroupCreationMode: boolean,
 }
 
-function SidebarContent({ isSearchMode, setSearchMode, searchInput }: SidebarContentProps) {
+function SidebarContent({
+  isSearchMode, setSearchMode, searchInput, isGroupCreationMode,
+}: SidebarContentProps) {
   const [activeFolder, setActiveFolder] = useState(0);
 
   return (
@@ -28,6 +31,7 @@ function SidebarContent({ isSearchMode, setSearchMode, searchInput }: SidebarCon
         setSearchMode={setSearchMode}
         searchInput={searchInput}
         setActiveFolder={setActiveFolder}
+        isGroupCreationMode={isGroupCreationMode}
       />
     </div>
   );

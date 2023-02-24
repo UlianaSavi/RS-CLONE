@@ -22,16 +22,18 @@ interface ChatsListProps {
   setSearchMode: React.Dispatch<React.SetStateAction<boolean>>,
   searchInput: string
   setActiveFolder: React.Dispatch<React.SetStateAction<number>>,
+  isGroupCreationMode: boolean,
 }
 
 function ChatsList({
-  activeFolder, isSearchMode, setSearchMode, searchInput, setActiveFolder,
+  activeFolder, isSearchMode, setSearchMode, searchInput, setActiveFolder, isGroupCreationMode,
 }: ChatsListProps) {
   // Context menu
   const [showMenu, setShowMenu] = useState(false);
   const [showDeletionPopup, setShowDeletionPopup] = useState(false);
   const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
   const [userIdUnderRMK, setUserIdUnderRMK] = useState('');
+  const [selectedUsers, setSelectedUsers] = useState<string[]>([]);
 
   const handleContextMenu = (event: React.MouseEvent, id: string) => {
     const target = event.target as HTMLElement;
@@ -71,6 +73,9 @@ function ChatsList({
           setSearchMode={setSearchMode}
           onContextMenu={handleContextMenu}
           activeFolder={activeFolder}
+          isGroupCreationMode={isGroupCreationMode}
+          selectedUsers={selectedUsers}
+          setSelectedUsers={setSelectedUsers}
         />
       )));
   };

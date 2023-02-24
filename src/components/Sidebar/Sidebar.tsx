@@ -12,6 +12,7 @@ function Sidebar(props: {sidebarClass: string}) {
   const [isActiveCreatePopup, setActiveCreatePopup] = useState(false);
   const [isSettings, setSettings] = useState(false);
   const [isSearchMode, setSearchMode] = useState(false);
+  const [isGroupCreationMode, setGroupCreationMode] = useState(false);
   const { sidebarClass } = props;
   const [searchInput, setSearchInput] = useState('');
 
@@ -48,6 +49,7 @@ function Sidebar(props: {sidebarClass: string}) {
                 isSearchMode={isSearchMode}
                 setSearchMode={setSearchMode}
                 searchInput={searchInput}
+                isGroupCreationMode={isGroupCreationMode}
               />
               <CreateButton
                 isVisible={!isSearchMode}
@@ -57,6 +59,7 @@ function Sidebar(props: {sidebarClass: string}) {
                 isVisible={isActiveCreatePopup}
                 closePopup={closeCreatePopup}
                 setSearchMode={setSearchMode}
+                setGroupCreationMode={setGroupCreationMode}
               />
               <SettingsMenu
                 isOpen={isActivePopup}
