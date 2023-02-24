@@ -74,7 +74,7 @@
     opacity: 0.09;
   }
 
-  &__no-messages-bage {
+  &__no-messages-badge {
     margin: 0 auto;
     z-index: 2;
 
@@ -101,6 +101,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   margin-right: 4px;
 
   border: none;

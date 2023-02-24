@@ -142,7 +142,7 @@ function ChatWindow() {
                 />
               );
             })
-            : <span className="chat-window__no-messages-bage">No messages here yet...</span>}
+            : <span className="chat-window__no-messages-badge">No messages here yet...</span>}
           <div ref={messagesEndRef} />
           <button
             type="button"
