@@ -92,7 +92,7 @@ function ChatsList({
   };
 
   const getUserChats = async () => {
-    if (currentUser?.uid) {
+    if (currentUser?.uid && activeFolder === 0) {
       onSnapshot(doc(db, 'userChats', currentUser.uid), (d) => {
         const data = d.data();
         if (!data) return;

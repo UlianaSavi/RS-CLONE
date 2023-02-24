@@ -7,7 +7,7 @@ import { AuthContext } from '../../context/AuthContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
 import { SendImageContext } from '../../context/SendImageContext';
 import { UserContext } from '../../context/UserContext';
-import { sendMessage } from '../../API/api';
+import { sendMessage, activateChat } from '../../API/api';
 import { CloseIcon, MoreIcon } from '../../assets/icons/icons';
 import './SendImagePopap.scss';
 
@@ -26,7 +26,7 @@ function SendImagePopap() {
     setFile,
   } = useContext(SendImageContext);
   const currentUser: User = useContext(AuthContext) as User;
-  const { activeChatID } = useContext(ActiveChatContext);
+  const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
   const { userID } = useContext(UserContext);
 
   function closePopap() {
@@ -38,6 +38,7 @@ function SendImagePopap() {
   const handleSendMessageTextArea = async (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && messageValue.trim() !== '') {
       e.preventDefault();
+      await activateChat(currentUser, userID, activeChatID, setActiveChatID);
       await sendMessage(messageValue, currentUser, activeChatID, userID, file);
       closePopap();
       setMessageValue('');
@@ -73,7 +74,8 @@ function SendImagePopap() {
         <button
           className="image-popap__send-button"
           type="button"
-          onClick={() => {
+          onClick={async () => {
+            await activateChat(currentUser, userID, activeChatID, setActiveChatID);
             sendMessage(messageValue, currentUser, activeChatID, userID, file);
             closePopap();
           }}

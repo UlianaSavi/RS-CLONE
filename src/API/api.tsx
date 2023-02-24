@@ -267,3 +267,49 @@ export const sendMessage = async (
     Promise.all(promises);
   }
 };
+
+export const activateChat = async (
+  currentUser: User,
+  userID: string,
+  activeChatID: string,
+  setActiveChatID: React.Dispatch<React.SetStateAction<string>>,
+) => {
+  const combinedID = currentUser.uid > userID ? `${currentUser.uid}${userID}` : `${userID}${currentUser.uid}`;
+  setActiveChatID(combinedID);
+  const chat = await getDoc(doc(db, 'chats', activeChatID));
+  const userChat = await getDoc(doc(db, 'userChats', userID));
+  const currentUserChat = await getDoc(doc(db, 'userChats', currentUser.uid));
+
+  if (!chat.exists()) {
+    await setDoc(doc(db, 'chats', activeChatID), { messages: [] });
+  }
+
+  if (!userChat.get(activeChatID)) {
+    await updateDoc(doc(db, 'userChats', userID), {
+      [`${activeChatID}.userInfo`]: {
+        uid: currentUser.uid,
+        displayName: currentUser.displayName,
+        photoURL: currentUser.photoURL,
+        isOnline: true,
+      },
+      [`${activeChatID}.createdAt`]: serverTimestamp(),
+      [`${activeChatID}.unreadMessages`]: 0,
+    });
+  }
+
+  if (!currentUserChat.get(activeChatID)) {
+    const user = await getDoc(doc(db, 'users', userID));
+    const userData = user.data();
+
+    await updateDoc(doc(db, 'userChats', currentUser.uid), {
+      [`${activeChatID}.userInfo`]: {
+        uid: userID,
+        displayName: userData?.displayName,
+        photoURL: userData?.photoURL,
+        isOnline: true,
+      },
+      [`${activeChatID}.createdAt`]: serverTimestamp(),
+      [`${activeChatID}.unreadMessages`]: 0,
+    });
+  }
+};

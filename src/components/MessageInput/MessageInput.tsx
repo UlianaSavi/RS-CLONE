@@ -3,16 +3,12 @@ import React, {
   useState, useContext, useRef, useEffect,
 } from 'react';
 import styled from 'styled-components';
-import {
-  doc, getDoc, serverTimestamp, setDoc, updateDoc,
-} from 'firebase/firestore';
 import type { User } from 'firebase/auth';
-import { db } from '../../firebaseConfig';
 import { AuthContext } from '../../context/AuthContext';
 import { UserContext } from '../../context/UserContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
 import { clickedEmoji } from '../../context/ClickedEmojiContext';
-import { sendMessage } from '../../API/api';
+import { sendMessage, activateChat } from '../../API/api';
 import AttachPopup from '../AttachPopup/AttachPopup';
 import EmotionPopup from '../EmotionPopup/EmotionPopup';
 
@@ -43,56 +39,14 @@ function MessageInput() {
   const toggleAttachPopup = () => setVisibilityAttach(!isVisibleAttach);
   const toggleEmotionPopup = () => setVisibilityEmotion(!isVisibleEmotion);
 
-  // Chat activation
   const currentUser: User = useContext(AuthContext) as User;
   const { userID } = useContext(UserContext);
   const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
 
-  const activateChat = async () => {
-    const combinedID = currentUser.uid > userID ? `${currentUser.uid}${userID}` : `${userID}${currentUser.uid}`;
-    setActiveChatID(combinedID);
-    const chat = await getDoc(doc(db, 'chats', activeChatID));
-    const userChat = await getDoc(doc(db, 'userChats', userID));
-    const currentUserChat = await getDoc(doc(db, 'userChats', currentUser.uid));
-
-    if (!chat.exists()) {
-      await setDoc(doc(db, 'chats', activeChatID), { messages: [] });
-    }
-
-    if (!userChat.get(activeChatID)) {
-      await updateDoc(doc(db, 'userChats', userID), {
-        [`${activeChatID}.userInfo`]: {
-          uid: currentUser.uid,
-          displayName: currentUser.displayName,
-          photoURL: currentUser.photoURL,
-          isOnline: true,
-        },
-        [`${activeChatID}.createdAt`]: serverTimestamp(),
-        [`${activeChatID}.unreadMessages`]: 0,
-      });
-    }
-
-    if (!currentUserChat.get(activeChatID)) {
-      const user = await getDoc(doc(db, 'users', userID));
-      const userData = user.data();
-
-      await updateDoc(doc(db, 'userChats', currentUser.uid), {
-        [`${activeChatID}.userInfo`]: {
-          uid: userID,
-          displayName: userData?.displayName,
-          photoURL: userData?.photoURL,
-          isOnline: true,
-        },
-        [`${activeChatID}.createdAt`]: serverTimestamp(),
-        [`${activeChatID}.unreadMessages`]: 0,
-      });
-    }
-  };
-
   const handleSendMessageBtn = async () => {
     if (messageValue.trim() !== '') {
       if (activeChatID !== userID) {
-        await activateChat();
+        await activateChat(currentUser, userID, activeChatID, setActiveChatID);
       }
       await sendMessage(messageValue, currentUser, activeChatID, userID);
       setIsAudio(!isAudio);
@@ -105,7 +59,7 @@ function MessageInput() {
     if (e.key === 'Enter' && !e.shiftKey && messageValue.trim() !== '') {
       e.preventDefault();
       if (activeChatID !== userID) {
-        await activateChat();
+        await activateChat(currentUser, userID, activeChatID, setActiveChatID);
       }
       await sendMessage(messageValue.trim(), currentUser, activeChatID, userID);
       setIsAudio(!isAudio);
