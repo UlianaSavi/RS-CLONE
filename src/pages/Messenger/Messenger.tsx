@@ -49,12 +49,14 @@ function Messenger() {
   };
 
   return (
-    <div className={isDark ? 'messenger dark' : 'messenger light'}>
-      {(popap || imagePopap) && <div className="blackout" onClick={closePopap} />}
-      {isActiveSidebar ? <Sidebar sidebarClass="sidebar" /> : <Sidebar sidebarClass="sidebar hide-sidebar" />}
-      {isActiveSidebar ? <Chat chatClass="chat hide-chat" /> : <Chat chatClass="chat" />}
-      {userSidebar && <UserSidebar /> }
-      {imagePopap && <ModalPhoto imageUrl={url} />}
+    <div className={isDark ? 'messenger-container dark' : 'messenger-container light'}>
+      <div className="messenger">
+        {(popap || imagePopap) && <div className="blackout" onClick={closePopap} />}
+        {isActiveSidebar ? <Sidebar sidebarClass="sidebar" /> : <Sidebar sidebarClass="sidebar hide-sidebar" />}
+        {isActiveSidebar ? <Chat chatClass="chat hide-chat" /> : <Chat chatClass="chat" />}
+        {userSidebar && <UserSidebar /> }
+        {imagePopap && <ModalPhoto imageUrl={url} />}
+      </div>
     </div>
   );
 }
