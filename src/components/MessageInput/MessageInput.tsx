@@ -62,7 +62,7 @@ function MessageInput() {
         await activateChat(currentUser, userID, activeChatID, setActiveChatID);
       }
       await sendMessage(messageValue.trim(), currentUser, activeChatID, userID);
-      setIsAudio(!isAudio);
+      setIsAudio(true);
       setMessageValue('');
     }
   };
@@ -70,7 +70,7 @@ function MessageInput() {
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setMessageValue(e.target.value);
     if (messageValue === '' || e.target.value === '') {
-      setIsAudio(!isAudio);
+      setIsAudio(true);
     } else {
       setIsAudio(isAudio);
     }

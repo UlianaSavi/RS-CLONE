@@ -38,7 +38,9 @@ function SendImagePopap() {
   const handleSendMessageTextArea = async (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && messageValue.trim() !== '') {
       e.preventDefault();
-      await activateChat(currentUser, userID, activeChatID, setActiveChatID);
+      if (activeChatID !== userID) {
+        await activateChat(currentUser, userID, activeChatID, setActiveChatID);
+      }
       await sendMessage(messageValue, currentUser, activeChatID, userID, file);
       closePopap();
       setMessageValue('');
@@ -75,7 +77,9 @@ function SendImagePopap() {
           className="image-popap__send-button"
           type="button"
           onClick={async () => {
-            await activateChat(currentUser, userID, activeChatID, setActiveChatID);
+            if (activeChatID !== userID) {
+              await activateChat(currentUser, userID, activeChatID, setActiveChatID);
+            }
             sendMessage(messageValue, currentUser, activeChatID, userID, file);
             closePopap();
           }}
