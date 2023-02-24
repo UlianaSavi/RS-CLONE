@@ -1,6 +1,7 @@
 import PopupMenuItem from '../PopupMenuItem/PopupMenuItem';
 import './CreatePopup.scss';
-import { ReactComponent as SettingIcon } from '../../assets/icons/setting-icon.svg';
+import { ReactComponent as NewGroupIcon } from '../../assets/icons/new-group.svg';
+import { ReactComponent as NewPrivateChatIcon } from '../../assets/icons/new-contact.svg';
 
 interface CreatePopupProps {
   isVisible: boolean,
@@ -23,12 +24,12 @@ function CreatePopup({ isVisible, closePopup, setSearchMode }: CreatePopupProps)
     >
       <PopupMenuItem
         label="New Group"
-        icon={<SettingIcon />}
+        icon={<NewGroupIcon />}
         handleClick={createNewGroup}
       />
       <PopupMenuItem
         label="New Private Chat"
-        icon={<SettingIcon />}
+        icon={<NewPrivateChatIcon />}
         handleClick={createNewPrivateChat}
       />
     </nav>
