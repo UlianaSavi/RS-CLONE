@@ -8,6 +8,7 @@ import { SendImageContextProvider } from './context/SendImageContext';
 import { ActiveVisibilitySidebarProvider } from './context/VisibleSidebarContext';
 import { ModalPhotoContextProvider } from './context/ModalPhotoContext';
 import { UserSidebarProvider } from './context/UserSidebarContext';
+import { ClickedEmojiProvider } from './context/ClickedEmojiContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -21,7 +22,9 @@ root.render(
           <ActiveVisibilitySidebarProvider>
             <SendImageContextProvider>
               <ModalPhotoContextProvider>
-                <App />
+                <ClickedEmojiProvider>
+                  <App />
+                </ClickedEmojiProvider>
               </ModalPhotoContextProvider>
             </SendImageContextProvider>
           </ActiveVisibilitySidebarProvider>
