@@ -1,42 +1,90 @@
 .form-container {
   --accent-color: #8774e1; // яркий цвет, цвет выбранной темы, акцентный
-  --grey-main: #212121; // основной серый ( фон сообщений, табов и т.д. )
+  --main-color: #212121; // основной серый ( фон сообщений, табов и т.д. )
   --text-color-white: #ffff;
   --grey-secondary: #6f6f6f; // второстепенный серый ( некоторые иконки, статус последнего онлайна и т.д. )
   --grey-lite: #707070; // светло-серый (такие элементы как кол-во сообщений)
 }
 
+// TODO: для иконок
+
 .messenger-container {
   &.dark {
     --accent-color: #8774e1; // яркий цвет, цвет выбранной темы, акцентный
-    --grey-main: #212121; // основной серый ( фон сообщений, табов и т.д. )
-    
-    --grey-dark: #181818; // темный серый ( такие места как поиск )
+    --main-color: #212121; // основной серый ( фон сообщений, табов и т.д. )
+
+    --input-bg-color: #181818; //цвет input
+    --container-color: #181818;
+    --border-color: #181818;
+    --bg-color-main: #181818; // главный цвет фона
     --grey-lite: #707070; // светло-серый (такие элементы как кол-во сообщений)
-    
+
     --grey-secondary: #6f6f6f; // второстепенный серый ( некоторые иконки, статус последнего онлайна и т.д. )
     --grey-hover: #333333; // к примеру цвет фона сообщения при наведении на него в чат-листе
     --accent-hover-dark: #7963dd; // при наведении на иконку создания нового чата
     --accent-hover-folder: #292830; // при наведении на папку чатов
-    
+
     --text-color-white: #ffff;
     --text-color-time: #aaaa;
     --text-color-time-out: #ffffff99;
-    
+
     --date-in-chat-bg: hsla(299, 45%, 37%, 0.3);
+    --date-in-chat-text: #ffff;
     --danger-color: #ff595a;
-    
+
     --input-border-color: #2f2f2f;
     --label-color: #9e9e9e;
-    
+
     --blackout-color: #000000cc;
+
+    --chat-bg-gradient: linear-gradient(235deg, rgba(0, 153, 255, 0.8), rgba(255, 0, 0, 0) 35%),
+                        linear-gradient(127deg, rgba(162, 0, 255, 0.8), rgba(0, 255, 0, 0) 70%),
+                        linear-gradient(336deg, rgba(255, 187, 0, 0.8), rgba(0, 0, 255, 0) 25%);
+    --filter-img-bg-chat: invert(1);
+  }
+
+  &.light {
+    --accent-color: #3390ec; // яркий цвет, цвет выбранной темы, акцентный
+    --main-color: #ffffff; // основной серый ( фон сообщений, табов и т.д. )
+
+    --input-bg-color: #ffffff;
+    --container-color: #ffffff;
+    --border-color: #707579;
+    --bg-color-main: #f4f4f5; // главный цвет фона
+    --grey-lite: #707070; // светло-серый (такие элементы как кол-во сообщений)
+
+    --grey-secondary: #6f6f6f; // второстепенный серый ( некоторые иконки, статус последнего онлайна и т.д. )
+    --grey-hover: #333333; // к примеру цвет фона сообщения при наведении на него в чат-листе
+    --accent-hover-dark: #7963dd; // при наведении на иконку создания нового чата
+    --accent-hover-folder: #292830; // при наведении на папку чатов
+
+    --text-color-white: #000;
+    --text-color-time: #aaaa;
+    --text-color-time-out: #ffffff99;
+
+    --date-in-chat-bg: hsla(86.4, 43.8462%, 45.1176%, 0.4);
+    --date-in-chat-text: #ffff;
+    --danger-color: #ff595a;
+
+    --input-border-color: #2f2f2f;
+    --label-color: #9e9e9e;
+
+    --blackout-color: #000000cc;
+
+    --chat-bg-gradient: linear-gradient(235deg, rgba(156, 241, 44, 0.8), rgba(212, 222, 11, 0.863) 35%),
+                        linear-gradient(127deg, rgb(9, 232, 32), rgb(0, 255, 0) 70%),
+                        linear-gradient(336deg, rgba(0, 255, 30, 0.888), rgba(0, 0, 255, 0) 25%);
+    --filter-img-bg-chat: invert(0);
   }
 }
 
 $accent-color: var(--accent-color); // яркий цвет, цвет выбранной темы, акцентный
-$grey-main: var(--grey-main); // основной серый ( фон сообщений, табов и т.д. )
+$main-color: var(--main-color); // основной серый ( фон сообщений, табов и т.д. )
 
-$grey-dark: var(--grey-dark); // темный серый ( такие места как поиск )
+$input-bg-color: var(--input-bg-color);
+$container-color: var(--container-color);
+$border-color: var(--border-color);
+$bg-color-main: var(--bg-color-main); // главный цвет фона
 $grey-lite: var(--grey-lite); // светло-серый (такие элементы как кол-во сообщений)
 
 $grey-secondary: var(--grey-secondary); // второстепенный серый ( некоторые иконки, статус последнего онлайна и т.д. )
@@ -49,9 +97,13 @@ $text-color-time: var(--text-color-time);
 $text-color-time-out: var(--text-color-time-out);
 
 $date-in-chat-bg: var(--date-in-chat-bg);
+$date-in-chat-text: var(--date-in-chat-text);
 $danger-color: var(--danger-color);
 
 $input-border-color: var(--input-border-color);
 $label-color: var(--label-color);
 
 $blackout-color: var(--blackout-color);
+
+$chat-bg-gradient: var(--chat-bg-gradient);
+$filter-img-bg-chat: var(--filter-img-bg-chat);

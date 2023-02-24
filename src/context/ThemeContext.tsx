@@ -19,7 +19,7 @@ export const ThemeContext = createContext<IContext>({
 });
 
 export function ThemeProvider({ children }: ProviderProps) {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
 
   const value = useMemo(() => ({ isDark, setIsDark }), [isDark, setIsDark]);
 

@@ -13,14 +13,14 @@
 .messenger-container {
   @include container();
 
-  background-color: $grey-dark;
+  background-color: $container-color;
   color: $text-color-white;
 }
 
 .form-container {
   @include container();
 
-  background-color: $grey-dark;
+  background-color: $bg-color-main;
   color: $text-color-white;
 }
 
@@ -53,4 +53,3 @@
   height: 100vh;
   background-color: $blackout-color;
 }
-

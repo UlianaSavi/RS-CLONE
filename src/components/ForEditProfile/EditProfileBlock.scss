@@ -7,7 +7,7 @@
     align-items: center;
     padding: .5rem;
 
-    background-color: $grey-main;
+    background-color: $main-color;
 
     &__arrow {
       width: 2.5rem;
@@ -45,7 +45,7 @@
   padding: 0 1.5rem;
   padding-bottom: 1.5rem;
 
-  background-color: $grey-main;
+  background-color: $main-color;
 
   &__img {
     position: relative;
@@ -64,7 +64,7 @@
 
     border-radius: 50%;
 
-    object-fit: cover; 
+    object-fit: cover;
     filter: brightness(60%);
   }
 
@@ -113,27 +113,27 @@
     &:hover {
       border: 1px solid $accent-color;
     }
-  
+
     &:focus {
       border: 2px solid $accent-color;
     }
 
-    &:focus + .form-input__label {
+    &:focus+.form-input__label {
       left: 13px;
       top: -7px;
       z-index: 10;
-  
+
       font-size: .71rem;
       font-weight: 500;
-  
+
       color: $accent-color;
     }
 
-    &:not(:placeholder-shown) + .form-input__label {
+    &:not(:placeholder-shown)+.form-input__label {
       left: 13px;
       top: -7px;
       z-index: 10;
-  
+
       font-size: .71rem;
       font-weight: 500;
     }
