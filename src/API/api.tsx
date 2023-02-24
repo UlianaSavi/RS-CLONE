@@ -13,6 +13,8 @@ import type { User } from 'firebase/auth';
 import { auth, db, storage } from '../firebaseConfig';
 
 export const MAIN_GROUP_CHAT_ID = 'g_6j5jkb5JQJrT4xkArXtq';
+export const MAIN_GROUP_CHAT_NAME = 'Launge';
+export const MAIN_GROUP_CHAT_PHOTO = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Qjtp0fWNnqp0cR4tp6a7PAOiObojZG9d-A&usqp=CAU';
 
 const loadProfilePhoto = async (name: string, avatar: File | null, user = auth.currentUser) => {
   const storageRef = ref(storage, `${name}${Math.floor(100000 + Math.random() * 900000)}`);
@@ -79,12 +81,20 @@ export const singUp = async (
     await setDoc(doc(db, 'userChats', user.uid), {});
     await setDoc(doc(db, 'userGroups', user.uid), {});
 
+    const groupChat = await getDoc(doc(db, 'chats', MAIN_GROUP_CHAT_ID));
+    const groupMessages = groupChat.data()?.messages;
+    const lastMessage = groupMessages[groupMessages.length - 1];
+
     await updateDoc(doc(db, 'userGroups', user.uid), {
       [`${MAIN_GROUP_CHAT_ID}.groupInfo`]: {
-        displayName: 'Launge',
-        photoURL: '',
+        displayName: MAIN_GROUP_CHAT_NAME,
+        photoURL: MAIN_GROUP_CHAT_PHOTO,
       },
-      [`${MAIN_GROUP_CHAT_ID}.lastMessage`]: {},
+      [`${MAIN_GROUP_CHAT_ID}.lastMessage`]: {
+        text: lastMessage.text || '',
+        date: lastMessage.date || '',
+      },
+      [`${MAIN_GROUP_CHAT_ID}.unreadMessages`]: 0,
     });
 
     await updateDoc(doc(db, 'chats', MAIN_GROUP_CHAT_ID), {

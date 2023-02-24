@@ -28,7 +28,6 @@ function ChatWindow() {
   const [datesNMessagesArr, setDatesNMessagesArr] = useState<SplitByDates[]>([]);
 
   useEffect(() => {
-    console.log(activeChatID);
     if (activeChatID) {
       onSnapshot(doc(db, 'chats', activeChatID), (d) => {
         const data = d.data();
