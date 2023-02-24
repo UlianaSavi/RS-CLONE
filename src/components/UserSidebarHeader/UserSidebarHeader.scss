@@ -22,23 +22,6 @@
         flex: 2;
     }
 
-    &__logout-button {
-        position: relative;
-
-        &:hover::after {
-            content: attr(data-title);
-
-            z-index: 5;
-            position: absolute;
-            top: 45px;
-            right: 8px;
-
-            font-size: 13px;
-            font-weight: 500;
-            color: $grey-lite;
-        }
-    }
-
     &__close-button {
         height: fit-content;
         min-height: 25px;
