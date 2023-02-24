@@ -49,7 +49,6 @@ function MessageInput() {
         await activateChat(currentUser, userID, activeChatID, setActiveChatID);
       }
       await sendMessage(messageValue, currentUser, activeChatID, userID);
-      setIsAudio(!isAudio);
       setMessageValue('');
     }
     return null;
@@ -62,18 +61,12 @@ function MessageInput() {
         await activateChat(currentUser, userID, activeChatID, setActiveChatID);
       }
       await sendMessage(messageValue.trim(), currentUser, activeChatID, userID);
-      setIsAudio(true);
       setMessageValue('');
     }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setMessageValue(e.target.value);
-    if (messageValue === '' || e.target.value === '') {
-      setIsAudio(true);
-    } else {
-      setIsAudio(isAudio);
-    }
   };
 
   const { isClickedEmoji, setClickedEmoji } = useContext(clickedEmoji);
@@ -84,6 +77,14 @@ function MessageInput() {
     textAreaRef.current?.focus();
     setClickedEmoji('');
   }, [isClickedEmoji]);
+
+  useEffect(() => {
+    if (messageValue) {
+      setIsAudio(true);
+    } else {
+      setIsAudio(false);
+    }
+  }, [messageValue]);
 
   return (
     <div className="message-input">
