@@ -32,7 +32,7 @@ function ChatWindow() {
       onSnapshot(doc(db, 'chats', activeChatID), (d) => {
         const data = d.data();
         if (!data) {
-          console.log('Hey! There are no messages here.');
+          setDatesNMessagesArr([]);
           return;
         }
 
@@ -49,6 +49,7 @@ function ChatWindow() {
               isCurrenUser={message.senderID === currentUser?.uid}
               key={message.id}
               imageUrl={message.imageUrl}
+              senderID={message.senderID}
             />,
           }));
 
@@ -130,8 +131,8 @@ function ChatWindow() {
     <div className="chat-window">
       {activeChatID && (
         <div className="chat-window__wrapper" ref={messageContainerRef}>
-          {
-            datesNMessagesArr.map((dateNMessages) => {
+          { datesNMessagesArr.length
+            ? datesNMessagesArr.map((dateNMessages) => {
               index += 1;
               return (
                 <BubblesDateGroup
@@ -141,7 +142,7 @@ function ChatWindow() {
                 />
               );
             })
-          }
+            : <span className="chat-window__no-messages-badge">No messages here yet...</span>}
           <div ref={messagesEndRef} />
           <button
             type="button"

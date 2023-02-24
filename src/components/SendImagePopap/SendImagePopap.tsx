@@ -2,16 +2,12 @@ import {
   useState, useContext, useRef,
 } from 'react';
 import styled from 'styled-components';
-import {
-  doc, serverTimestamp, updateDoc, arrayUnion, Timestamp,
-} from 'firebase/firestore';
+import type { User } from 'firebase/auth';
 import { AuthContext } from '../../context/AuthContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
 import { SendImageContext } from '../../context/SendImageContext';
 import { UserContext } from '../../context/UserContext';
-import { db } from '../../firebaseConfig';
-import { loadMessagePhoto } from '../../API/api';
-import { User } from '../../types';
+import { sendMessage, activateChat } from '../../API/api';
 import { CloseIcon, MoreIcon } from '../../assets/icons/icons';
 import './SendImagePopap.scss';
 
@@ -30,7 +26,7 @@ function SendImagePopap() {
     setFile,
   } = useContext(SendImageContext);
   const currentUser: User = useContext(AuthContext) as User;
-  const { activeChatID } = useContext(ActiveChatContext);
+  const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
   const { userID } = useContext(UserContext);
 
   function closePopap() {
@@ -39,40 +35,14 @@ function SendImagePopap() {
     setPopap(!popap);
   }
 
-  const sendMessage = async () => {
-    const imageUrl = await loadMessagePhoto(file);
-    await updateDoc(doc(db, 'chats', activeChatID), {
-      messages: arrayUnion({
-        id: Math.floor(10000000000 + Math.random() * 90000000000),
-        text: messageValue,
-        senderID: currentUser.uid,
-        date: Timestamp.now(),
-        imageUrl,
-      }),
-    });
-
-    await updateDoc(doc(db, 'userChats', currentUser.uid), {
-      [`${activeChatID}.lastMessage`]: {
-        text: messageValue !== '' ? messageValue : 'Photo',
-        date: serverTimestamp(),
-        imageUrl,
-      },
-    });
-
-    await updateDoc(doc(db, 'userChats', userID), {
-      [`${activeChatID}.lastMessage`]: {
-        text: messageValue !== '' ? messageValue : 'Photo',
-        date: serverTimestamp(),
-        imageUrl,
-      },
-    });
-    closePopap();
-  };
-
   const handleSendMessageTextArea = async (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && messageValue.trim() !== '') {
       e.preventDefault();
-      await sendMessage();
+      if (activeChatID !== userID) {
+        await activateChat(currentUser, userID, activeChatID, setActiveChatID);
+      }
+      await sendMessage(messageValue, currentUser, activeChatID, userID, file);
+      closePopap();
       setMessageValue('');
     }
     return null;
@@ -103,7 +73,20 @@ function SendImagePopap() {
           onChange={handleChange}
           rows={2}
         />
-        <button className="image-popap__send-button" type="button" onClick={() => sendMessage()}>Send</button>
+        <button
+          className="image-popap__send-button"
+          type="button"
+          onClick={async () => {
+            if (activeChatID !== userID) {
+              await activateChat(currentUser, userID, activeChatID, setActiveChatID);
+            }
+            sendMessage(messageValue, currentUser, activeChatID, userID, file);
+            closePopap();
+          }}
+        >
+          Send
+
+        </button>
       </div>
     </div>
   );

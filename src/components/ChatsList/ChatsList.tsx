@@ -21,10 +21,11 @@ interface ChatsListProps {
   isSearchMode: boolean
   setSearchMode: React.Dispatch<React.SetStateAction<boolean>>,
   searchInput: string
+  setActiveFolder: React.Dispatch<React.SetStateAction<number>>,
 }
 
 function ChatsList({
-  activeFolder, isSearchMode, setSearchMode, searchInput,
+  activeFolder, isSearchMode, setSearchMode, searchInput, setActiveFolder,
 }: ChatsListProps) {
   // Context menu
   const [showMenu, setShowMenu] = useState(false);
@@ -61,13 +62,15 @@ function ChatsList({
     setChatsArr(chatsData
       .map((chat: UserChat) => (
         <ChatPreview
-          key={chat.userInfo.uid}
+          key={chat.userInfo.uid || '1'}
           data={chat}
-          isActive={chat?.userInfo.uid === userID}
+          isActive={chat?.userInfo.uid === userID
+            || (activeChatID === userID && activeFolder === 1)}
           setActiveUserID={setUserID}
           isSearchMode={isSearchMode}
           setSearchMode={setSearchMode}
           onContextMenu={handleContextMenu}
+          activeFolder={activeFolder}
         />
       )));
   };
@@ -89,7 +92,7 @@ function ChatsList({
   };
 
   const getUserChats = async () => {
-    if (currentUser?.uid) {
+    if (currentUser?.uid && activeFolder === 0) {
       onSnapshot(doc(db, 'userChats', currentUser.uid), (d) => {
         const data = d.data();
         if (!data) return;
@@ -111,9 +114,32 @@ function ChatsList({
     }
   };
 
+  const getUserGroups = async () => {
+    if (currentUser?.uid) {
+      onSnapshot(doc(db, 'userGroups', currentUser.uid), (d) => {
+        const data = d.data();
+        if (!data) return;
+        const dataArray = Object.values(data);
+        if (dataArray.some((item) => !item.lastMessage?.date)) return;
+        const groupsData = dataArray.map((item) => ({
+          lastMessage: item?.lastMessage || '',
+          unreadMessages: item?.unreadMessages || 0,
+          userInfo: item.groupInfo,
+        }));
+        updateChatsList(groupsData);
+      });
+    }
+  };
+
   const showChatsList = async () => {
-    const res = isSearchMode ? await getAllUsers() : await getUserChats();
-    return res;
+    if (isSearchMode) {
+      setActiveFolder(0);
+      await getAllUsers();
+    } else if (activeFolder === 0) {
+      await getUserChats();
+    } else {
+      await getUserGroups();
+    }
   };
 
   useEffect(() => {

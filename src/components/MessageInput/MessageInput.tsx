@@ -3,18 +3,14 @@ import React, {
   useState, useContext, useRef, useEffect,
 } from 'react';
 import styled from 'styled-components';
-import {
-  doc, getDoc, serverTimestamp, setDoc, updateDoc, arrayUnion, Timestamp,
-} from 'firebase/firestore';
-import { db } from '../../firebaseConfig';
+import type { User } from 'firebase/auth';
 import { AuthContext } from '../../context/AuthContext';
 import { UserContext } from '../../context/UserContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
 import { clickedEmoji } from '../../context/ClickedEmojiContext';
-
+import { sendMessage, activateChat } from '../../API/api';
 import AttachPopup from '../AttachPopup/AttachPopup';
 import EmotionPopup from '../EmotionPopup/EmotionPopup';
-import type { User } from '../../types';
 
 import {
   EmojiIcon, AttachIcon, SendMessageIcon, AudioMessageIcon,
@@ -43,89 +39,16 @@ function MessageInput() {
   const toggleAttachPopup = () => setVisibilityAttach(!isVisibleAttach);
   const toggleEmotionPopup = () => setVisibilityEmotion(!isVisibleEmotion);
 
-  // Chat activation
   const currentUser: User = useContext(AuthContext) as User;
   const { userID } = useContext(UserContext);
   const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
 
-  const activateChat = async () => {
-    const combinedID = currentUser.uid > userID ? `${currentUser.uid}${userID}` : `${userID}${currentUser.uid}`;
-    setActiveChatID(combinedID);
-    const chat = await getDoc(doc(db, 'chats', activeChatID));
-    const userChat = await getDoc(doc(db, 'userChats', userID));
-    const currentUserChat = await getDoc(doc(db, 'userChats', currentUser.uid));
-
-    if (!chat.exists()) {
-      await setDoc(doc(db, 'chats', activeChatID), { messages: [] });
-    }
-
-    if (!userChat.get(activeChatID)) {
-      await updateDoc(doc(db, 'userChats', userID), {
-        [`${activeChatID}.userInfo`]: {
-          uid: currentUser.uid,
-          displayName: currentUser.displayName,
-          photoURL: currentUser.photoURL,
-          isOnline: true,
-        },
-        [`${activeChatID}.createdAt`]: serverTimestamp(),
-        [`${activeChatID}.unreadMessages`]: 0,
-      });
-    }
-
-    if (!currentUserChat.get(activeChatID)) {
-      const user = await getDoc(doc(db, 'users', userID));
-      const userData = user.data();
-
-      await updateDoc(doc(db, 'userChats', currentUser.uid), {
-        [`${activeChatID}.userInfo`]: {
-          uid: userID,
-          displayName: userData?.displayName,
-          photoURL: userData?.photoURL,
-          isOnline: true,
-        },
-        [`${activeChatID}.createdAt`]: serverTimestamp(),
-        [`${activeChatID}.unreadMessages`]: 0,
-      });
-    }
-  };
-
-  // Send message
-  const sendMessage = async (messageText: string) => {
-    await updateDoc(doc(db, 'chats', activeChatID), {
-      messages: arrayUnion({
-        id: Math.floor(10000000000 + Math.random() * 90000000000),
-        text: messageText,
-        senderID: currentUser.uid,
-        date: Timestamp.now(),
-      }),
-    });
-
-    await updateDoc(doc(db, 'userChats', currentUser.uid), {
-      [`${activeChatID}.lastMessage`]: {
-        text: messageText,
-        date: serverTimestamp(),
-      },
-    });
-
-    const chats = await getDoc(doc(db, 'userChats', userID));
-    const data = chats.data();
-    if (!data) return;
-    let { unreadMessages } = data[activeChatID];
-
-    await updateDoc(doc(db, 'userChats', userID), {
-      [`${activeChatID}.lastMessage`]: {
-        text: messageText,
-        date: serverTimestamp(),
-      },
-      [`${activeChatID}.unreadMessages`]: unreadMessages += 1,
-    });
-  };
-
   const handleSendMessageBtn = async () => {
     if (messageValue.trim() !== '') {
-      await activateChat();
-      await sendMessage(messageValue);
-      setIsAudio(!isAudio);
+      if (activeChatID !== userID) {
+        await activateChat(currentUser, userID, activeChatID, setActiveChatID);
+      }
+      await sendMessage(messageValue, currentUser, activeChatID, userID);
       setMessageValue('');
     }
     return null;
@@ -134,20 +57,16 @@ function MessageInput() {
   const handleSendMessageTextArea = async (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && !e.shiftKey && messageValue.trim() !== '') {
       e.preventDefault();
-      await activateChat();
-      await sendMessage(messageValue.trim());
-      setIsAudio(!isAudio);
+      if (activeChatID !== userID) {
+        await activateChat(currentUser, userID, activeChatID, setActiveChatID);
+      }
+      await sendMessage(messageValue.trim(), currentUser, activeChatID, userID);
       setMessageValue('');
     }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setMessageValue(e.target.value);
-    if (messageValue === '' || e.target.value === '') {
-      setIsAudio(!isAudio);
-    } else {
-      setIsAudio(isAudio);
-    }
   };
 
   const { isClickedEmoji, setClickedEmoji } = useContext(clickedEmoji);
@@ -158,6 +77,14 @@ function MessageInput() {
     textAreaRef.current?.focus();
     setClickedEmoji('');
   }, [isClickedEmoji]);
+
+  useEffect(() => {
+    if (messageValue) {
+      setIsAudio(true);
+    } else {
+      setIsAudio(false);
+    }
+  }, [messageValue]);
 
   return (
     <div className="message-input">
