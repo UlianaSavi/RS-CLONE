@@ -7,6 +7,7 @@ import Sidebar from '../../components/Sidebar/Sidebar';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
 import { ModalPhotoContext } from '../../context/ModalPhotoContext';
 import { SendImageContext } from '../../context/SendImageContext';
+import { ThemeContext } from '../../context/ThemeContext';
 import { ActiveVisibilitySidebar } from '../../context/VisibleSidebarContext';
 import './Messenger.scss';
 
@@ -21,6 +22,7 @@ function Messenger() {
 
   const { isActiveSidebar, setActiveSidebar } = useContext(ActiveVisibilitySidebar);
   const { activeChatID } = useContext(ActiveChatContext);
+  const { isDark } = useContext(ThemeContext);
 
   window.addEventListener('resize', () => {
     if (window.innerWidth > 920) {
@@ -44,7 +46,7 @@ function Messenger() {
   };
 
   return (
-    <div className="messenger">
+    <div className={isDark ? 'messenger dark' : 'messenger light'}>
       {(popap || imagePopap) && <div className="blackout" onClick={closePopap} />}
       {isActiveSidebar ? <Sidebar sidebarClass="sidebar" /> : <Sidebar sidebarClass="sidebar hide-sidebar" />}
       {isActiveSidebar ? <Chat chatClass="chat hide-chat" /> : <Chat chatClass="chat" />}

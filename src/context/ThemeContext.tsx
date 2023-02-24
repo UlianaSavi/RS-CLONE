@@ -9,19 +9,19 @@ interface ProviderProps {
 }
 
 interface IContext {
-  type: string;
-  setType: TypeSetState<string>;
+  isDark: boolean;
+  setIsDark: TypeSetState<boolean>;
 }
 
 export const ThemeContext = createContext<IContext>({
-  type: 'Dark',
-  setType: () => 'Dark',
+  isDark: true,
+  setIsDark: () => true,
 });
 
 export function ThemeProvider({ children }: ProviderProps) {
-  const [type, setType] = useState('Dark');
+  const [isDark, setIsDark] = useState(true);
 
-  const value = useMemo(() => ({ type, setType }), [type, setType]);
+  const value = useMemo(() => ({ isDark, setIsDark }), [isDark, setIsDark]);
 
   return (
     <ThemeContext.Provider value={value}>
