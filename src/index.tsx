@@ -7,6 +7,7 @@ import { UserContextProvider } from './context/UserContext';
 import { SendImageContextProvider } from './context/SendImageContext';
 import { ActiveVisibilitySidebarProvider } from './context/VisibleSidebarContext';
 import { ModalPhotoContextProvider } from './context/ModalPhotoContext';
+import { UserSidebarProvider } from './context/UserSidebarContext';
 import { ClickedEmojiProvider } from './context/ClickedEmojiContext';
 
 const root = ReactDOM.createRoot(
@@ -16,17 +17,19 @@ const root = ReactDOM.createRoot(
 root.render(
   <AuthContextProvider>
     <UserContextProvider>
-      <ActiveChatContextProvider>
-        <ActiveVisibilitySidebarProvider>
-          <SendImageContextProvider>
-            <ModalPhotoContextProvider>
-              <ClickedEmojiProvider>
-                <App />
-              </ClickedEmojiProvider>
-            </ModalPhotoContextProvider>
-          </SendImageContextProvider>
-        </ActiveVisibilitySidebarProvider>
-      </ActiveChatContextProvider>
+      <UserSidebarProvider>
+        <ActiveChatContextProvider>
+          <ActiveVisibilitySidebarProvider>
+            <SendImageContextProvider>
+              <ModalPhotoContextProvider>
+                <ClickedEmojiProvider>
+                  <App />
+                </ClickedEmojiProvider>
+              </ModalPhotoContextProvider>
+            </SendImageContextProvider>
+          </ActiveVisibilitySidebarProvider>
+        </ActiveChatContextProvider>
+      </UserSidebarProvider>
     </UserContextProvider>
   </AuthContextProvider>,
 );

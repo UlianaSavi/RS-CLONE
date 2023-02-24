@@ -1,7 +1,7 @@
 @import "../../styles/variables";
 
 .image-popap {
-    z-index: 10;
+    z-index: 40;
 
     position: absolute;
     left: 50%;
@@ -18,13 +18,13 @@
     border-radius: 8px;
 
     @media (max-width: 500px) {
-      max-width: 300px;
+        max-width: 300px;
     }
 
     &__image-wrapper {
-      display: flex;
-      justify-content: center;
-      width: 100%;
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 
     .img {
@@ -51,6 +51,7 @@
     }
 
     &__send-button {
+        position: relative;
         display: block;
         height: 40px;
         width: 75px;
@@ -68,6 +69,21 @@
 
         &:hover {
             background-color: $accent-hover-dark;
+        }
+
+        &:disabled {
+            cursor: auto;
+            background-color: $grey-hover;
+
+            &:hover::after {
+                content: attr(data-title);
+                position: absolute;
+                top: 45px;
+                right: 0;
+                font-size: 12px;
+                font-weight: 500;
+                color: #707070;
+            }
         }
     }
 }

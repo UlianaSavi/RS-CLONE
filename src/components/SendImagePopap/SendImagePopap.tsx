@@ -10,6 +10,7 @@ import { UserContext } from '../../context/UserContext';
 import { sendMessage, activateChat } from '../../API/api';
 import { CloseIcon, MoreIcon } from '../../assets/icons/icons';
 import './SendImagePopap.scss';
+import { limit } from '../../constans';
 
 const TextArea = styled.textarea``;
 
@@ -74,7 +75,9 @@ function SendImagePopap() {
           rows={2}
         />
         <button
+          disabled={file ? file?.size > limit : false}
           className="image-popap__send-button"
+          data-title="File is too big! Max size - 7mb"
           type="button"
           onClick={async () => {
             if (activeChatID !== userID) {
