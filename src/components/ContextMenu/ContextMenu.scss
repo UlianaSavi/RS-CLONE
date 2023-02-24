@@ -29,7 +29,7 @@
     }
 
     .popup-item {
-        &:last-child {
+        &:nth-child(2) {
           color: $danger-color;
       
           &:hover {
