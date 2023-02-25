@@ -41,6 +41,8 @@
                         linear-gradient(127deg, rgba(162, 0, 255, 0.8), rgba(0, 255, 0, 0) 70%),
                         linear-gradient(336deg, rgba(255, 187, 0, 0.8), rgba(0, 0, 255, 0) 25%);
     --filter-img-bg-chat: invert(1);
+
+    --text-accent-color: #fff;
   }
 
   &.light {
@@ -75,6 +77,8 @@
                         linear-gradient(127deg, rgb(9, 232, 32), rgb(0, 255, 0) 70%),
                         linear-gradient(336deg, rgba(0, 255, 30, 0.888), rgba(0, 0, 255, 0) 25%);
     --filter-img-bg-chat: invert(0);
+
+    --text-accent-color: #fff;
   }
 }
 
@@ -107,3 +111,5 @@ $blackout-color: var(--blackout-color);
 
 $chat-bg-gradient: var(--chat-bg-gradient);
 $filter-img-bg-chat: var(--filter-img-bg-chat);
+
+$text-accent-color: var(--text-accent-color);
