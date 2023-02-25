@@ -45,6 +45,8 @@
     --text-accent-color: #fff;
 
     --bubbles-message-bg-color: #8774e1;
+
+    --rss-link: #fff;
   }
 
   &.light {
@@ -83,6 +85,8 @@
     --text-accent-color: #fff;
 
     --bubbles-message-bg-color: #e9f5e9;
+
+    --rss-link: #aaaa;
   }
 }
 
@@ -121,3 +125,5 @@ $text-accent-color: var(--text-accent-color);
 $bubbles-message-bg-color: var(--bubbles-message-bg-color);
 
 $num-message-color: var(--num-message-color);
+
+$rss-link: var(--rss-link);
