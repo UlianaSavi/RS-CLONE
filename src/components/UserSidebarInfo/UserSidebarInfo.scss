@@ -49,6 +49,8 @@
       left: 20px;
 
       font-size: 21px;
+
+      color: white;
     }
 
     &__status {
@@ -56,9 +58,10 @@
       bottom: 15px;
       left: 20px;
 
-      color: $text-color-time-out;
       font-size: 14px;
       font-weight: 500;
+      
+      color: white;
     }
 
     .icon-button {
