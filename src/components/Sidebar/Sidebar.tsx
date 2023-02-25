@@ -90,6 +90,7 @@ function Sidebar(props: {sidebarClass: string}) {
                 isGroupCreationMode={isGroupCreationMode}
                 isGroupInfo={isGroupInfo}
                 handleClick={handleCreateButton}
+                groupName={groupName}
               />
             </>
           )
@@ -114,6 +115,7 @@ function Sidebar(props: {sidebarClass: string}) {
                   isGroupCreationMode={isGroupCreationMode}
                   isGroupInfo={isGroupInfo}
                   handleClick={handleCreateButton}
+                  groupName={groupName}
                 />
                 <CreatePopup
                   isVisible={isActiveCreatePopup}

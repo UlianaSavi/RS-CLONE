@@ -8,16 +8,20 @@ interface CreateButtonpProps {
   isGroupCreationMode: boolean,
   isGroupInfo: boolean,
   handleClick: () => void,
+  groupName: string
 }
 
 function CreateButton({
-  isSearchMode, handleClick, isGroupCreationMode, isGroupInfo,
+  isSearchMode, handleClick, isGroupCreationMode, isGroupInfo, groupName,
 }: CreateButtonpProps) {
   const { selectedUsers } = useContext(SelectedUsersContext);
   return (
     <button
       type="button"
-      className={`icon-button ${!isSearchMode || isGroupInfo || (isGroupCreationMode && selectedUsers.length) ? '' : 'hidden'}`}
+      className={`icon-button ${!isSearchMode
+        || (isGroupInfo && groupName.length)
+        || (isGroupCreationMode && selectedUsers.length && !isGroupInfo)
+        ? '' : 'hidden'}`}
       onClick={handleClick}
     >
       {isGroupCreationMode || isGroupInfo ? <ArrowLeftIcon /> : <CreateNewChatIcon />}
