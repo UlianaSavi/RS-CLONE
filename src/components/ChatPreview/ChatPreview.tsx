@@ -11,6 +11,7 @@ import { ActiveChatContext } from '../../context/ActiveChatContext';
 import type { User, UserChat } from '../../types';
 import './ChatPreview.scss';
 import { ActiveVisibilitySidebar } from '../../context/VisibleSidebarContext';
+import { SelectedUsersContext } from '../../context/SelectedUsersContext';
 import { convertTimestamp } from '../../hooks/timestampConverter';
 import { MAIN_GROUP_CHAT_ID } from '../../API/api';
 
@@ -23,8 +24,6 @@ interface ChatPreviewProps {
   onContextMenu: (event: React.MouseEvent, id: string) => void,
   activeFolder: number,
   isGroupCreationMode: boolean,
-  selectedUsers: string[],
-  setSelectedUsers: React.Dispatch<React.SetStateAction<string[]>>,
 }
 
 function ChatPreview({
@@ -36,17 +35,15 @@ function ChatPreview({
   onContextMenu,
   activeFolder,
   isGroupCreationMode,
-  selectedUsers,
-  setSelectedUsers,
 }: ChatPreviewProps) {
   const {
     uid, displayName, photoURL,
   } = data.userInfo;
-  console.log(selectedUsers);
 
   const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
   const currentUser: User = useContext(AuthContext) as User;
   const { setActiveSidebar } = useContext(ActiveVisibilitySidebar);
+  const { selectedUsers, setSelectedUsers } = useContext(SelectedUsersContext);
 
   const resetCounter = async (isGroup: boolean) => {
     const res = await getDoc(doc(db, isGroup ? 'userGroups' : 'userChats', currentUser.uid));
@@ -114,10 +111,9 @@ function ChatPreview({
     } else {
       setChecked(!checked);
       if (!checked) {
-        selectedUsers.push(displayName);
+        setSelectedUsers([...selectedUsers, displayName]);
       } else {
-        const index = selectedUsers.findIndex((el) => el === displayName);
-        selectedUsers.splice(index, 1);
+        setSelectedUsers(selectedUsers.filter((user) => user !== displayName));
       }
     }
   };

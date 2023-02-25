@@ -8,6 +8,7 @@ import { db } from '../../firebaseConfig';
 import { AuthContext } from '../../context/AuthContext';
 import { UserContext } from '../../context/UserContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
+import { SelectedUsersContext } from '../../context/SelectedUsersContext';
 
 import ChatPreview from '../ChatPreview/ChatPreview';
 import ContextMenu from '../ContextMenu/ContextMenu';
@@ -33,7 +34,6 @@ function ChatsList({
   const [showDeletionPopup, setShowDeletionPopup] = useState(false);
   const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
   const [userIdUnderRMK, setUserIdUnderRMK] = useState('');
-  const [selectedUsers, setSelectedUsers] = useState<string[]>([]);
 
   const handleContextMenu = (event: React.MouseEvent, id: string) => {
     const target = event.target as HTMLElement;
@@ -57,6 +57,7 @@ function ChatsList({
   const currentUser: User = useContext(AuthContext) as User;
   const { userID, setUserID } = useContext(UserContext);
   const { activeChatID } = useContext(ActiveChatContext);
+  const { selectedUsers } = useContext(SelectedUsersContext);
 
   const [chatsArr, setChatsArr] = useState([]);
 
@@ -74,8 +75,6 @@ function ChatsList({
           onContextMenu={handleContextMenu}
           activeFolder={activeFolder}
           isGroupCreationMode={isGroupCreationMode}
-          selectedUsers={selectedUsers}
-          setSelectedUsers={setSelectedUsers}
         />
       )));
   };
@@ -149,7 +148,9 @@ function ChatsList({
 
   useEffect(() => {
     showChatsList();
-  }, [currentUser?.uid, activeChatID, userID, activeFolder, isSearchMode, searchInput]);
+    console.log(selectedUsers);
+  }, [currentUser?.uid,
+    activeChatID, userID, activeFolder, isSearchMode, searchInput, selectedUsers]);
 
   return (
     <>
