@@ -24,6 +24,7 @@ function Sidebar(props: {sidebarClass: string}) {
   const [searchInput, setSearchInput] = useState('');
   const { selectedUsers, setSelectedUsers } = useContext(SelectedUsersContext);
   const currentUser: User = useContext(AuthContext) as User;
+  const [groupName, setGroupName] = useState('');
 
   function flipFlop() {
     setActivePopup(!isActivePopup);
@@ -40,12 +41,16 @@ function Sidebar(props: {sidebarClass: string}) {
 
   const closeCreatePopup = () => setActiveCreatePopup(false);
 
-  const handleCreateButton = () => {
-    if (isGroupCreationMode) {
+  const handleCreateButton = async () => {
+    if (isGroupCreationMode && !isGroupInfo) {
       setSelectedUsers([...selectedUsers, currentUser.uid]);
       setGroupInfo(true);
     } else if (isGroupInfo) {
-      createNewGroup([], 'name', 'url', 'admin');
+      await createNewGroup(selectedUsers, groupName, 'url', currentUser.uid);
+      setGroupInfo(false);
+      setGroupCreationMode(false);
+      setSearchMode(false);
+      setSelectedUsers([]);
     } else {
       setActiveCreatePopup(!isActiveCreatePopup);
     }
@@ -53,7 +58,12 @@ function Sidebar(props: {sidebarClass: string}) {
 
   const handleEditGroupInfoBackBtn = () => {
     setGroupInfo(false);
-    console.log(selectedUsers);
+    setSelectedUsers([]);
+  };
+
+  const closeSearch = () => {
+    setSearchMode(false);
+    setGroupCreationMode(false);
     setSelectedUsers([]);
   };
 
@@ -61,7 +71,21 @@ function Sidebar(props: {sidebarClass: string}) {
     <div className={sidebarClass}>
       {
         isSettings ? <SettingsSidebar onSidebarChange={() => changeSidebar()} />
-          : isGroupInfo ? <EditGroupInfo handleBackClick={handleEditGroupInfoBackBtn} />
+          : isGroupInfo ? (
+            <>
+              <EditGroupInfo
+                groupName={groupName}
+                setGroupName={setGroupName}
+                handleBackClick={handleEditGroupInfoBackBtn}
+              />
+              <CreateButton
+                isSearchMode={isSearchMode}
+                isGroupCreationMode={isGroupCreationMode}
+                isGroupInfo={isGroupInfo}
+                handleClick={handleCreateButton}
+              />
+            </>
+          )
             : (
               <>
                 <SidebarHeader
@@ -70,6 +94,7 @@ function Sidebar(props: {sidebarClass: string}) {
                   setSearchMode={setSearchMode}
                   searchInput={searchInput}
                   setSearchInput={setSearchInput}
+                  closeSearch={closeSearch}
                 />
                 <SidebarContent
                   isSearchMode={isSearchMode}

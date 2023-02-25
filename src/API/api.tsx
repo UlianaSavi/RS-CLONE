@@ -334,11 +334,12 @@ export const createNewGroup = async (
     [memberID]: true,
   }));
 
-  await updateDoc(doc(db, 'chats', groupName), {
+  await setDoc(doc(db, 'chats', `${groupName}${Math.floor(100000 + Math.random() * 900000)}`), {
     members: membersArr,
     messages: [],
     name: groupName,
     photoURL,
     admin,
   });
+  console.log('created');
 };

@@ -1,6 +1,6 @@
 /* eslint-disable no-nested-ternary */
 /* eslint-disable no-unused-vars */
-import { useContext, useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import {
   onSnapshot, doc, updateDoc, getDoc,
 } from 'firebase/firestore';
@@ -117,6 +117,10 @@ function ChatPreview({
       }
     }
   };
+
+  useEffect(() => {
+    setChecked(false);
+  }, []);
 
   const hanldeCheckbox = () => setChecked(!checked);
 

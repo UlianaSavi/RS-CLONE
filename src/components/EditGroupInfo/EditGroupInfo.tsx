@@ -7,12 +7,15 @@ import AddPhotoButton from '../AddPhotoButton/AddPhotoButton';
 import './EditGroupInfo.scss';
 
 interface EditGroupInfoProps {
+  groupName: string,
+  setGroupName: React.Dispatch<React.SetStateAction<string>>,
   handleBackClick: () => void
 }
 
-export default function EditGroupInfo({ handleBackClick }: EditGroupInfoProps) {
+export default function EditGroupInfo({
+  handleBackClick, groupName, setGroupName,
+}: EditGroupInfoProps) {
   const currentUser: User = useContext(AuthContext) as User;
-  const [groupName, setGroupName] = useState('');
   const [groupPhoto, setGroupPhoto] = useState('');
 
   useEffect(() => {

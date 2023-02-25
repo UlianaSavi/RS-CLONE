@@ -14,7 +14,6 @@ function CreateButton({
   isSearchMode, handleClick, isGroupCreationMode, isGroupInfo,
 }: CreateButtonpProps) {
   const { selectedUsers } = useContext(SelectedUsersContext);
-  console.log(isGroupInfo);
   return (
     <button
       type="button"
