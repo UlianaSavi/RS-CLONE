@@ -2,7 +2,7 @@ import '../../pages/Form/Form.scss';
 import './AddAvatarButton.scss';
 
 interface AddAvatarButtonProps {
-  setValue: any; // ТИПИЗИРОВАТЬ
+  setValue: any; // TODO: ТИПИЗИРОВАТЬ
 }
 
 function AddAvatarButton({ setValue }: AddAvatarButtonProps) {
