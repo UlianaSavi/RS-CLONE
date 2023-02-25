@@ -29,8 +29,15 @@ function Sidebar(props: {sidebarClass: string}) {
     }
   }
 
-  const toggleCreatePopup = () => setActiveCreatePopup(!isActiveCreatePopup);
   const closeCreatePopup = () => setActiveCreatePopup(false);
+
+  const handleCreateButton = () => {
+    if (isGroupCreationMode) {
+      console.log('wup');
+    } else {
+      setActiveCreatePopup(!isActiveCreatePopup);
+    }
+  };
 
   return (
     <div className={sidebarClass}>
@@ -52,8 +59,9 @@ function Sidebar(props: {sidebarClass: string}) {
                 isGroupCreationMode={isGroupCreationMode}
               />
               <CreateButton
-                isVisible={!isSearchMode}
-                handleClick={toggleCreatePopup}
+                isSearchMode={isSearchMode}
+                isGroupCreationMode={isGroupCreationMode}
+                handleClick={handleCreateButton}
               />
               <CreatePopup
                 isVisible={isActiveCreatePopup}

@@ -1,19 +1,20 @@
-import { CreateNewChatIcon } from '../../assets/icons/icons';
+import { ArrowLeftIcon, CreateNewChatIcon } from '../../assets/icons/icons';
 import './CreateButton.scss';
 
 interface CreateButtonpProps {
-  isVisible: boolean,
-  handleClick: () => void
+  isSearchMode: boolean,
+  isGroupCreationMode: boolean,
+  handleClick: () => void,
 }
 
-function CreateButton({ isVisible, handleClick }: CreateButtonpProps) {
+function CreateButton({ isSearchMode, handleClick, isGroupCreationMode }: CreateButtonpProps) {
   return (
     <button
       type="button"
-      className={`icon-button ${isVisible ? '' : 'hidden'}`}
+      className={`icon-button ${!isSearchMode || isGroupCreationMode ? '' : 'hidden'}`}
       onClick={handleClick}
     >
-      <CreateNewChatIcon />
+      {isGroupCreationMode ? <ArrowLeftIcon /> : <CreateNewChatIcon />}
     </button>
   );
 }
