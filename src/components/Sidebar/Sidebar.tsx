@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import { useState, useContext } from 'react';
 import CreateButton from '../CreateButton/CreateButton';
 import CreatePopup from '../CreatePopup/CreatePopup';
@@ -9,11 +10,13 @@ import { AuthContext } from '../../context/AuthContext';
 import { SelectedUsersContext } from '../../context/SelectedUsersContext';
 import type { User } from '../../types';
 import './Sidebar.scss';
+import EditGroupInfo from '../EditGroupInfo/EditGroupInfo';
 
 function Sidebar(props: {sidebarClass: string}) {
   const [isActivePopup, setActivePopup] = useState(false);
   const [isActiveCreatePopup, setActiveCreatePopup] = useState(false);
   const [isSettings, setSettings] = useState(false);
+  const [isGroupInfo, setGroupInfo] = useState(false);
   const [isSearchMode, setSearchMode] = useState(false);
   const [isGroupCreationMode, setGroupCreationMode] = useState(false);
   const { sidebarClass } = props;
@@ -39,49 +42,56 @@ function Sidebar(props: {sidebarClass: string}) {
   const handleCreateButton = () => {
     if (isGroupCreationMode) {
       setSelectedUsers([...selectedUsers, currentUser.uid]);
-      setSettings(true);
+      setGroupInfo(true);
     } else {
       setActiveCreatePopup(!isActiveCreatePopup);
     }
+  };
+
+  const handleEditGroupInfoBackBtn = () => {
+    setGroupInfo(false);
+    console.log(selectedUsers);
+    setSelectedUsers([]);
   };
 
   return (
     <div className={sidebarClass}>
       {
         isSettings ? <SettingsSidebar onSidebarChange={() => changeSidebar()} />
-          : (
-            <>
-              <SidebarHeader
-                callback={() => flipFlop()}
-                isSearchMode={isSearchMode}
-                setSearchMode={setSearchMode}
-                searchInput={searchInput}
-                setSearchInput={setSearchInput}
-              />
-              <SidebarContent
-                isSearchMode={isSearchMode}
-                setSearchMode={setSearchMode}
-                searchInput={searchInput}
-                isGroupCreationMode={isGroupCreationMode}
-              />
-              <CreateButton
-                isSearchMode={isSearchMode}
-                isGroupCreationMode={isGroupCreationMode}
-                handleClick={handleCreateButton}
-              />
-              <CreatePopup
-                isVisible={isActiveCreatePopup}
-                closePopup={closeCreatePopup}
-                setSearchMode={setSearchMode}
-                setGroupCreationMode={setGroupCreationMode}
-              />
-              <SettingsMenu
-                isOpen={isActivePopup}
-                onClose={() => setActivePopup(false)}
-                onSidebarChange={() => changeSidebar()}
-              />
-            </>
-          )
+          : isGroupInfo ? <EditGroupInfo handleBackClick={handleEditGroupInfoBackBtn} />
+            : (
+              <>
+                <SidebarHeader
+                  callback={() => flipFlop()}
+                  isSearchMode={isSearchMode}
+                  setSearchMode={setSearchMode}
+                  searchInput={searchInput}
+                  setSearchInput={setSearchInput}
+                />
+                <SidebarContent
+                  isSearchMode={isSearchMode}
+                  setSearchMode={setSearchMode}
+                  searchInput={searchInput}
+                  isGroupCreationMode={isGroupCreationMode}
+                />
+                <CreateButton
+                  isSearchMode={isSearchMode}
+                  isGroupCreationMode={isGroupCreationMode}
+                  handleClick={handleCreateButton}
+                />
+                <CreatePopup
+                  isVisible={isActiveCreatePopup}
+                  closePopup={closeCreatePopup}
+                  setSearchMode={setSearchMode}
+                  setGroupCreationMode={setGroupCreationMode}
+                />
+                <SettingsMenu
+                  isOpen={isActivePopup}
+                  onClose={() => setActivePopup(false)}
+                  onSidebarChange={() => changeSidebar()}
+                />
+              </>
+            )
       }
     </div>
   );
