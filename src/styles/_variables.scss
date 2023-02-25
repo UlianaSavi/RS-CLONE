@@ -7,7 +7,23 @@
 }
 
 .messenger-container {
+  --grey-secondary: #6f6f6f; // второстепенный серый ( некоторые иконки, статус последнего онлайна и т.д. )
+
+  --text-color-time: #aaaa;
+
+  --date-in-chat-text: #ffff;
+
   --num-message-color: #fff;
+
+  --danger-color: #ff595a;
+
+  --input-border-color: #2f2f2f;
+
+  --label-color: #9e9e9e;
+
+  --blackout-color: #000000cc;
+  
+  --text-accent-color: #fff;
 
   &.dark {
     --accent-color: #8774e1; // яркий цвет, цвет выбранной темы, акцентный
@@ -19,30 +35,19 @@
     --bg-color-main: #181818; // главный цвет фона
     --grey-lite: #707070; // светло-серый (такие элементы как кол-во сообщений)
 
-    --grey-secondary: #6f6f6f; // второстепенный серый ( некоторые иконки, статус последнего онлайна и т.д. )
     --grey-hover: #333333; // к примеру цвет фона сообщения при наведении на него в чат-листе
     --accent-hover-dark: #7963dd; // при наведении на иконку создания нового чата
     --accent-hover-folder: #292830; // при наведении на папку чатов
 
     --text-color-white: #ffff;
-    --text-color-time: #aaaa;
     --text-color-time-out: #ffffff99;
 
     --date-in-chat-bg: hsla(299, 45%, 37%, 0.3);
-    --date-in-chat-text: #ffff;
-    --danger-color: #ff595a;
-
-    --input-border-color: #2f2f2f;
-    --label-color: #9e9e9e;
-
-    --blackout-color: #000000cc;
 
     --chat-bg-gradient: linear-gradient(235deg, rgba(0, 153, 255, 0.8), rgba(255, 0, 0, 0) 35%),
                         linear-gradient(127deg, rgba(162, 0, 255, 0.8), rgba(0, 255, 0, 0) 70%),
                         linear-gradient(336deg, rgba(255, 187, 0, 0.8), rgba(0, 0, 255, 0) 25%);
     --filter-img-bg-chat: invert(1);
-
-    --text-accent-color: #fff;
 
     --bubbles-message-bg-color: #8774e1;
 
@@ -59,30 +64,19 @@
     --bg-color-main: #f4f4f5; // главный цвет фона
     --grey-lite: #c4c9cc; // светло-серый (такие элементы как кол-во сообщений)
 
-    --grey-secondary: #6f6f6f; // второстепенный серый ( некоторые иконки, статус последнего онлайна и т.д. )
     --grey-hover: #70757914; // к примеру цвет фона сообщения при наведении на него в чат-листе
     --accent-hover-dark: #2086ea; // при наведении на иконку создания нового чата
     --accent-hover-folder: #3390ec14; // при наведении на папку чатов
 
     --text-color-white: #000;
-    --text-color-time: #aaaa;
     --text-color-time-out: #4fae4e;
 
     --date-in-chat-bg: hsla(86.4, 43.8462%, 45.1176%, 0.4);
-    --date-in-chat-text: #ffff;
-    --danger-color: #ff595a;
-
-    --input-border-color: #2f2f2f;
-    --label-color: #9e9e9e;
-
-    --blackout-color: #000000cc;
 
     --chat-bg-gradient: linear-gradient(235deg, rgba(156, 241, 44, 0.8), rgba(212, 222, 11, 0.863) 35%),
                         linear-gradient(127deg, rgb(9, 232, 32), rgb(0, 255, 0) 70%),
                         linear-gradient(336deg, rgba(0, 255, 30, 0.888), rgba(0, 0, 255, 0) 25%);
     --filter-img-bg-chat: invert(0);
-
-    --text-accent-color: #fff;
 
     --bubbles-message-bg-color: #e9f5e9;
 
