@@ -43,6 +43,8 @@
     --filter-img-bg-chat: invert(1);
 
     --text-accent-color: #fff;
+
+    --bubbles-message-bg-color: #8774e1;
   }
 
   &.light {
@@ -79,6 +81,8 @@
     --filter-img-bg-chat: invert(0);
 
     --text-accent-color: #fff;
+
+    --bubbles-message-bg-color: #e9f5e9;
   }
 }
 
@@ -113,3 +117,5 @@ $chat-bg-gradient: var(--chat-bg-gradient);
 $filter-img-bg-chat: var(--filter-img-bg-chat);
 
 $text-accent-color: var(--text-accent-color);
+
+$bubbles-message-bg-color: var(--bubbles-message-bg-color);
