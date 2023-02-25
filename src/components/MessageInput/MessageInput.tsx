@@ -1,9 +1,7 @@
-/* eslint-disable no-unused-vars */
 import React, {
   useState, useContext, useRef, useEffect,
 } from 'react';
 import styled from 'styled-components';
-import type { User } from 'firebase/auth';
 import { AuthContext } from '../../context/AuthContext';
 import { UserContext } from '../../context/UserContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
@@ -39,16 +37,18 @@ function MessageInput() {
   const toggleAttachPopup = () => setVisibilityAttach(!isVisibleAttach);
   const toggleEmotionPopup = () => setVisibilityEmotion(!isVisibleEmotion);
 
-  const currentUser: User = useContext(AuthContext) as User;
+  const { currentUser } = useContext(AuthContext);
   const { userID } = useContext(UserContext);
   const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
 
   const handleSendMessageBtn = async () => {
     if (messageValue.trim() !== '') {
-      if (activeChatID !== userID) {
+      if (activeChatID !== userID && currentUser) {
         await activateChat(currentUser, userID, activeChatID, setActiveChatID);
       }
-      await sendMessage(messageValue, currentUser, activeChatID, userID);
+      if (currentUser) {
+        await sendMessage(messageValue, currentUser, activeChatID, userID);
+      }
       setMessageValue('');
     }
     return null;
@@ -57,10 +57,12 @@ function MessageInput() {
   const handleSendMessageTextArea = async (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && !e.shiftKey && messageValue.trim() !== '') {
       e.preventDefault();
-      if (activeChatID !== userID) {
+      if (activeChatID !== userID && currentUser) {
         await activateChat(currentUser, userID, activeChatID, setActiveChatID);
       }
-      await sendMessage(messageValue.trim(), currentUser, activeChatID, userID);
+      if (currentUser) {
+        await sendMessage(messageValue.trim(), currentUser, activeChatID, userID);
+      }
       setMessageValue('');
     }
   };

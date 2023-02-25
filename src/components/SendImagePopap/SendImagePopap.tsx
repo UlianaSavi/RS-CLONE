@@ -2,7 +2,6 @@ import {
   useState, useContext, useRef,
 } from 'react';
 import styled from 'styled-components';
-import type { User } from 'firebase/auth';
 import { AuthContext } from '../../context/AuthContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
 import { SendImageContext } from '../../context/SendImageContext';
@@ -26,7 +25,7 @@ function SendImagePopap() {
     file,
     setFile,
   } = useContext(SendImageContext);
-  const currentUser: User = useContext(AuthContext) as User;
+  const { currentUser } = useContext(AuthContext);
   const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
   const { userID } = useContext(UserContext);
 
@@ -39,10 +38,12 @@ function SendImagePopap() {
   const handleSendMessageTextArea = async (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && messageValue.trim() !== '') {
       e.preventDefault();
-      if (activeChatID !== userID) {
+      if (activeChatID !== userID && currentUser) {
         await activateChat(currentUser, userID, activeChatID, setActiveChatID);
       }
-      await sendMessage(messageValue, currentUser, activeChatID, userID, file);
+      if (currentUser) {
+        await sendMessage(messageValue, currentUser, activeChatID, userID, file);
+      }
       closePopap();
       setMessageValue('');
     }
@@ -80,10 +81,12 @@ function SendImagePopap() {
           data-title="File is too big! Max size - 7mb"
           type="button"
           onClick={async () => {
-            if (activeChatID !== userID) {
+            if (activeChatID !== userID && currentUser) {
               await activateChat(currentUser, userID, activeChatID, setActiveChatID);
             }
-            sendMessage(messageValue, currentUser, activeChatID, userID, file);
+            if (currentUser) {
+              sendMessage(messageValue, currentUser, activeChatID, userID, file);
+            }
             closePopap();
           }}
         >

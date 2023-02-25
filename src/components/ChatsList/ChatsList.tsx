@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable no-undef */
 import { useState, useEffect, useContext } from 'react';
 import {
   collection, query, where, getDocs, onSnapshot, doc, DocumentData, getDoc,
@@ -52,7 +50,7 @@ function ChatsList({
     };
   }, []);
 
-  const currentUser: User = useContext(AuthContext) as User;
+  const { currentUser } = useContext(AuthContext);
   const { userID, setUserID } = useContext(UserContext);
   const { activeChatID } = useContext(ActiveChatContext);
 
