@@ -6,9 +6,9 @@
   --grey-lite: #707070; // светло-серый (такие элементы как кол-во сообщений)
 }
 
-// TODO: для иконок
-
 .messenger-container {
+  --num-message-color: #fff;
+
   &.dark {
     --accent-color: #8774e1; // яркий цвет, цвет выбранной темы, акцентный
     --main-color: #212121; // основной серый ( фон сообщений, табов и т.д. )
@@ -55,7 +55,7 @@
     --container-color: #ffffff;
     --border-color: #707579;
     --bg-color-main: #f4f4f5; // главный цвет фона
-    --grey-lite: #707070; // светло-серый (такие элементы как кол-во сообщений)
+    --grey-lite: #c4c9cc; // светло-серый (такие элементы как кол-во сообщений)
 
     --grey-secondary: #6f6f6f; // второстепенный серый ( некоторые иконки, статус последнего онлайна и т.д. )
     --grey-hover: #70757914; // к примеру цвет фона сообщения при наведении на него в чат-листе
@@ -119,3 +119,5 @@ $filter-img-bg-chat: var(--filter-img-bg-chat);
 $text-accent-color: var(--text-accent-color);
 
 $bubbles-message-bg-color: var(--bubbles-message-bg-color);
+
+$num-message-color: var(--num-message-color);
