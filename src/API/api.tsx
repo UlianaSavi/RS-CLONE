@@ -341,5 +341,31 @@ export const createNewGroup = async (
     photoURL,
     admin,
   });
-  console.log('created');
+};
+
+export const changeGroupPhoto = async (
+  photoList: FileList | null,
+) => {
+  if (photoList && auth.currentUser) {
+    const avatar = photoList[0];
+
+    const storageRef = ref(storage, `group_${Math.floor(Date.now() + Math.random() * 900000)}`);
+    const uploadTask = uploadBytesResumable(storageRef, avatar as File);
+
+    if (avatar) {
+      uploadTask.on(
+        'state_changed',
+        (snapshot) => {
+          const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          return progress;
+        },
+        (error) => {
+          throw error;
+        },
+      );
+    }
+
+    return getDownloadURL((await uploadTask).ref);
+  }
+  return '';
 };

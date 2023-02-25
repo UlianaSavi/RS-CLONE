@@ -148,7 +148,6 @@ function ChatsList({
 
   useEffect(() => {
     showChatsList();
-    console.log(selectedUsers);
   }, [currentUser?.uid,
     activeChatID, userID, activeFolder, isSearchMode, searchInput, selectedUsers]);
 

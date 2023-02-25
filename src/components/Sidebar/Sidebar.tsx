@@ -25,6 +25,7 @@ function Sidebar(props: {sidebarClass: string}) {
   const { selectedUsers, setSelectedUsers } = useContext(SelectedUsersContext);
   const currentUser: User = useContext(AuthContext) as User;
   const [groupName, setGroupName] = useState('');
+  const [groupPhoto, setGroupPhoto] = useState('');
 
   function flipFlop() {
     setActivePopup(!isActivePopup);
@@ -46,11 +47,13 @@ function Sidebar(props: {sidebarClass: string}) {
       setSelectedUsers([...selectedUsers, currentUser.uid]);
       setGroupInfo(true);
     } else if (isGroupInfo) {
-      await createNewGroup(selectedUsers, groupName, 'url', currentUser.uid);
+      await createNewGroup(selectedUsers, groupName, groupPhoto, currentUser.uid);
       setGroupInfo(false);
       setGroupCreationMode(false);
       setSearchMode(false);
       setSelectedUsers([]);
+      setGroupName('');
+      setGroupPhoto('');
     } else {
       setActiveCreatePopup(!isActiveCreatePopup);
     }
@@ -59,6 +62,8 @@ function Sidebar(props: {sidebarClass: string}) {
   const handleEditGroupInfoBackBtn = () => {
     setGroupInfo(false);
     setSelectedUsers([]);
+    setGroupName('');
+    setGroupPhoto('');
   };
 
   const closeSearch = () => {
@@ -76,6 +81,8 @@ function Sidebar(props: {sidebarClass: string}) {
               <EditGroupInfo
                 groupName={groupName}
                 setGroupName={setGroupName}
+                groupPhoto={groupPhoto}
+                setGroupPhoto={setGroupPhoto}
                 handleBackClick={handleEditGroupInfoBackBtn}
               />
               <CreateButton

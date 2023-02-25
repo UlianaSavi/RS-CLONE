@@ -1,35 +1,23 @@
-import { useContext, useEffect, useState } from 'react';
 import { ArrowLeftIcon } from '../../assets/icons/icons';
-import { AuthContext } from '../../context/AuthContext';
-import type { User } from '../../types';
 import FormInput from '../FormInput/FormInput';
 import AddPhotoButton from '../AddPhotoButton/AddPhotoButton';
 import './EditGroupInfo.scss';
+import { changeGroupPhoto } from '../../API/api';
 
 interface EditGroupInfoProps {
   groupName: string,
   setGroupName: React.Dispatch<React.SetStateAction<string>>,
+  groupPhoto: string,
+  setGroupPhoto: React.Dispatch<React.SetStateAction<string>>,
   handleBackClick: () => void
 }
 
 export default function EditGroupInfo({
-  handleBackClick, groupName, setGroupName,
+  handleBackClick, groupName, setGroupName, groupPhoto, setGroupPhoto,
 }: EditGroupInfoProps) {
-  const currentUser: User = useContext(AuthContext) as User;
-  const [groupPhoto, setGroupPhoto] = useState('');
-
-  useEffect(() => {
-    console.log('');
-  }, [currentUser.photoURL]);
-
-  const changePhoto = (event: React.ChangeEvent<HTMLInputElement>) => {
-    // changeProfilePhoto(user.displayName, event.target.files).then((url) => {
-    //   if (url) {
-    //     setUser({ ...user, photoURL: url });
-    //   }
-    // });
-    console.log(event);
-    setGroupPhoto('');
+  const changePhoto = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const photoUrl = await changeGroupPhoto(event.target.files);
+    setGroupPhoto(photoUrl);
   };
 
   return (
