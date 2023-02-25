@@ -1,3 +1,9 @@
 # RS-CLONE
 
-Here will be a description of our application and instructions for launching it.
+Developers:
+
+- https://github.com/UlianaSavi
+
+- https://github.com/AlyaKavalenka
+
+- https://github.com/Ilichhh
