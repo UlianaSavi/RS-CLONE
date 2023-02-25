@@ -25,5 +25,23 @@
     &__rsschool {
         width: 100%;
         max-width: 100px;
+        transition: all .3s;
+
+        .links__rsschool__path {
+            transition: all .3s;
+        }
+
+        &:hover {
+            fill: $accent-color;
+            opacity: .9;
+            transition: all .3s;
+
+            .links__rsschool__path {
+                fill: $accent-color;
+                transition: all .3s;
+            }
+        }
+
+        
     }
 }

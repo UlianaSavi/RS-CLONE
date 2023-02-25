@@ -1,4 +1,4 @@
-import { GithubIcon } from '../../assets/icons/icons';
+import { GithubIcon, RsschoolIcon } from '../../assets/icons/icons';
 import './RsSchoolLinks.scss';
 
 function RsSchoolLinks() {
@@ -8,7 +8,7 @@ function RsSchoolLinks() {
         <GithubIcon />
       </a>
       <a href="https://rs.school/js/" target="_blank" rel="noreferrer">
-        <img className="links__rsschool" src="https://rs.school/images/rs_school_js.svg" alt="Rs school" />
+        <RsschoolIcon />
       </a>
     </div>
   );
