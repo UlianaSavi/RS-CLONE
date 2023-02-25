@@ -6,18 +6,22 @@ import './CreateButton.scss';
 interface CreateButtonpProps {
   isSearchMode: boolean,
   isGroupCreationMode: boolean,
+  isGroupInfo: boolean,
   handleClick: () => void,
 }
 
-function CreateButton({ isSearchMode, handleClick, isGroupCreationMode }: CreateButtonpProps) {
+function CreateButton({
+  isSearchMode, handleClick, isGroupCreationMode, isGroupInfo,
+}: CreateButtonpProps) {
   const { selectedUsers } = useContext(SelectedUsersContext);
+  console.log(isGroupInfo);
   return (
     <button
       type="button"
-      className={`icon-button ${!isSearchMode || (isGroupCreationMode && selectedUsers.length) ? '' : 'hidden'}`}
+      className={`icon-button ${!isSearchMode || isGroupInfo || (isGroupCreationMode && selectedUsers.length) ? '' : 'hidden'}`}
       onClick={handleClick}
     >
-      {isGroupCreationMode ? <ArrowLeftIcon /> : <CreateNewChatIcon />}
+      {isGroupCreationMode || isGroupInfo ? <ArrowLeftIcon /> : <CreateNewChatIcon />}
     </button>
   );
 }

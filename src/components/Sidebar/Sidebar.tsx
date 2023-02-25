@@ -11,6 +11,7 @@ import { SelectedUsersContext } from '../../context/SelectedUsersContext';
 import type { User } from '../../types';
 import './Sidebar.scss';
 import EditGroupInfo from '../EditGroupInfo/EditGroupInfo';
+import { createNewGroup } from '../../API/api';
 
 function Sidebar(props: {sidebarClass: string}) {
   const [isActivePopup, setActivePopup] = useState(false);
@@ -43,6 +44,8 @@ function Sidebar(props: {sidebarClass: string}) {
     if (isGroupCreationMode) {
       setSelectedUsers([...selectedUsers, currentUser.uid]);
       setGroupInfo(true);
+    } else if (isGroupInfo) {
+      createNewGroup([], 'name', 'url', 'admin');
     } else {
       setActiveCreatePopup(!isActiveCreatePopup);
     }
@@ -77,6 +80,7 @@ function Sidebar(props: {sidebarClass: string}) {
                 <CreateButton
                   isSearchMode={isSearchMode}
                   isGroupCreationMode={isGroupCreationMode}
+                  isGroupInfo={isGroupInfo}
                   handleClick={handleCreateButton}
                 />
                 <CreatePopup

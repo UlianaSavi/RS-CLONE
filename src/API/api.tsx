@@ -323,3 +323,22 @@ export const activateChat = async (
     });
   }
 };
+
+export const createNewGroup = async (
+  members: string[],
+  groupName: string,
+  photoURL: string,
+  admin: string,
+) => {
+  const membersArr = members.map((memberID) => ({
+    [memberID]: true,
+  }));
+
+  await updateDoc(doc(db, 'chats', groupName), {
+    members: membersArr,
+    messages: [],
+    name: groupName,
+    photoURL,
+    admin,
+  });
+};
