@@ -13,7 +13,7 @@ import { SelectedUsersContext } from '../../context/SelectedUsersContext';
 import ChatPreview from '../ChatPreview/ChatPreview';
 import ContextMenu from '../ContextMenu/ContextMenu';
 
-import type { User, UserChat } from '../../types';
+import type { User } from '../../types';
 import './ChastList.scss';
 import DeletionPopup from '../DeletionPopup/DeletionPopup';
 
@@ -63,12 +63,12 @@ function ChatsList({
 
   const updateChatsList = (chatsData: any) => {
     setChatsArr(chatsData
-      .map((chat: UserChat) => (
+      .map((chat: DocumentData, index: number) => (
         <ChatPreview
-          key={chat.userInfo.uid || '1'}
+          key={chat.userInfo.uid || index}
           data={chat}
           isActive={chat?.userInfo.uid === userID
-            || (activeChatID === userID && activeFolder === 1)}
+            || (chat?.userInfo?.groupID === userID && activeFolder === 1)}
           setActiveUserID={setUserID}
           isSearchMode={isSearchMode}
           setSearchMode={setSearchMode}

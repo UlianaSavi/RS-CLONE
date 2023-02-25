@@ -2,12 +2,13 @@
 /* eslint-disable no-unused-vars */
 import { useContext, useState, useEffect } from 'react';
 import {
-  onSnapshot, doc, updateDoc, getDoc,
+  onSnapshot, doc, updateDoc, getDoc, DocumentData,
 } from 'firebase/firestore';
 import { db } from '../../firebaseConfig';
 import Avatar from '../Avatar/Avatar';
 import { AuthContext } from '../../context/AuthContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
+import { UserContext } from '../../context/UserContext';
 import type { User, UserChat } from '../../types';
 import './ChatPreview.scss';
 import { ActiveVisibilitySidebar } from '../../context/VisibleSidebarContext';
@@ -16,7 +17,7 @@ import { convertTimestamp } from '../../hooks/timestampConverter';
 import { MAIN_GROUP_CHAT_ID } from '../../API/api';
 
 interface ChatPreviewProps {
-  data: UserChat,
+  data: DocumentData,
   isActive: boolean,
   setActiveUserID: React.Dispatch<React.SetStateAction<string>>,
   isSearchMode: boolean,
@@ -44,6 +45,7 @@ function ChatPreview({
   const currentUser: User = useContext(AuthContext) as User;
   const { setActiveSidebar } = useContext(ActiveVisibilitySidebar);
   const { selectedUsers, setSelectedUsers } = useContext(SelectedUsersContext);
+  const { userID } = useContext(UserContext);
 
   const resetCounter = async (isGroup: boolean) => {
     const res = await getDoc(doc(db, isGroup ? 'userGroups' : 'userChats', currentUser.uid));
@@ -58,7 +60,7 @@ function ChatPreview({
 
   const resetMessagesCounter = async () => {
     if (activeChatID) {
-      if (activeChatID === MAIN_GROUP_CHAT_ID) {
+      if (activeChatID === userID) {
         resetCounter(true);
       } else {
         resetCounter(false);
@@ -80,8 +82,8 @@ function ChatPreview({
   };
 
   const selectGroup = () => {
-    setActiveUserID(MAIN_GROUP_CHAT_ID);
-    setActiveChatID(MAIN_GROUP_CHAT_ID);
+    setActiveUserID(data?.userInfo.groupID);
+    setActiveChatID(data?.userInfo.groupID);
     resetMessagesCounter();
     setSearchMode(false);
     if (window.innerWidth <= 920) setActiveSidebar(false);

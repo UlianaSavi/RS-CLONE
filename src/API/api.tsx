@@ -333,14 +333,31 @@ export const createNewGroup = async (
   const membersArr = members.map((memberID) => ({
     [memberID]: true,
   }));
+  const groupID = `${groupName}${Math.floor(100000 + Math.random() * 900000)}`;
 
-  await setDoc(doc(db, 'chats', `${groupName}${Math.floor(100000 + Math.random() * 900000)}`), {
+  await setDoc(doc(db, 'chats', groupID), {
     members: membersArr,
     messages: [],
     name: groupName,
     photoURL,
     admin,
   });
+
+  const promises = members.map(async (memberID: string) => {
+    await updateDoc(doc(db, 'userGroups', memberID), {
+      [`${groupID}.groupInfo`]: {
+        displayName: groupName,
+        photoURL,
+        groupID,
+      },
+      [`${groupID}.lastMessage`]: {
+        text: '',
+        date: serverTimestamp(),
+      },
+      [`${groupID}.unreadMessages`]: 0,
+    });
+  });
+  Promise.all(promises);
 };
 
 export const changeGroupPhoto = async (
