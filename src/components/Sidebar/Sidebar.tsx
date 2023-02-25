@@ -1,10 +1,13 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import CreateButton from '../CreateButton/CreateButton';
 import CreatePopup from '../CreatePopup/CreatePopup';
 import SettingsSidebar from '../ForSettingsSidebar/SettingsSidebar';
 import SettingsMenu from '../SettingsPopap/SettingsPopap';
 import SidebarContent from '../SidebarContent/SidebarContent';
 import SidebarHeader from '../SidebarHeader/SidebarHeader';
+import { AuthContext } from '../../context/AuthContext';
+import { SelectedUsersContext } from '../../context/SelectedUsersContext';
+import type { User } from '../../types';
 import './Sidebar.scss';
 
 function Sidebar(props: {sidebarClass: string}) {
@@ -15,6 +18,8 @@ function Sidebar(props: {sidebarClass: string}) {
   const [isGroupCreationMode, setGroupCreationMode] = useState(false);
   const { sidebarClass } = props;
   const [searchInput, setSearchInput] = useState('');
+  const { selectedUsers, setSelectedUsers } = useContext(SelectedUsersContext);
+  const currentUser: User = useContext(AuthContext) as User;
 
   function flipFlop() {
     setActivePopup(!isActivePopup);
@@ -33,7 +38,8 @@ function Sidebar(props: {sidebarClass: string}) {
 
   const handleCreateButton = () => {
     if (isGroupCreationMode) {
-      console.log('wup');
+      setSelectedUsers([...selectedUsers, currentUser.uid]);
+      setSettings(true);
     } else {
       setActiveCreatePopup(!isActiveCreatePopup);
     }

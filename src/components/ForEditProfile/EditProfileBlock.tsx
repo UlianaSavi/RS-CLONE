@@ -1,12 +1,12 @@
 import { useContext, useEffect, useState } from 'react';
-import { ArrowLeftIcon, AddPhotoIcon } from '../../assets/icons/icons';
+import { ArrowLeftIcon } from '../../assets/icons/icons';
 import './EditProfileBlock.scss';
 import { SettingsHeaderProps } from '../../types';
 import { AuthContext } from '../../context/AuthContext';
-import avatarPlaceholder from '../../assets/icons/avatar-placeholder.png';
 import type { User } from '../../types';
 import FormInput from '../FormInput/FormInput';
 import { changeProfileName, changeProfilePhoto } from '../../API/api';
+import AddPhotoButton from '../AddPhotoButton/AddPhotoButton';
 
 export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProps) {
   const currentUser: User = useContext(AuthContext) as User;
@@ -18,6 +18,14 @@ export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProp
   useEffect(() => {
     setUser(user);
   }, [name, currentUser.photoURL]);
+
+  const changePhoto = (event: React.ChangeEvent<HTMLInputElement>) => {
+    changeProfilePhoto(user.displayName, event.target.files).then((url) => {
+      if (url) {
+        setUser({ ...user, photoURL: url });
+      }
+    });
+  };
 
   return (
     <div className="edit-profile">
@@ -36,24 +44,7 @@ export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProp
         <h3 className="header__text">Edit Profile</h3>
       </div>
       <section className="edit-user-info">
-        <div className="edit-user-info__img">
-          <img className="edit-user-info__ava" src={user.photoURL || avatarPlaceholder} alt="User" />
-          <button type="button" className="edit-user-info__add-photo-btn">
-            <AddPhotoIcon />
-            <input
-              type="file"
-              className="edit-user-info__input-file"
-              accept=".jpg, .jpeg, .png"
-              onChange={(event) => {
-                changeProfilePhoto(user.displayName, event.target.files).then((url) => {
-                  if (url) {
-                    setUser({ ...user, photoURL: url });
-                  }
-                });
-              }}
-            />
-          </button>
-        </div>
+        <AddPhotoButton handleChange={changePhoto} imageSrc={user.photoURL} />
         <FormInput type="text" id="name" label="Username" value={name} setValue={setName} mode="edit" />
         <FormInput type="text" id="last-name" label="Last Name" value={lastName} setValue={setLastName} mode="edit" />
         <FormInput type="text" id="bio" label="Bio (optional)" value={bio} setValue={setBio} mode="edit" />

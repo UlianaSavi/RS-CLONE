@@ -111,9 +111,9 @@ function ChatPreview({
     } else {
       setChecked(!checked);
       if (!checked) {
-        setSelectedUsers([...selectedUsers, displayName]);
+        setSelectedUsers([...selectedUsers, uid]);
       } else {
-        setSelectedUsers(selectedUsers.filter((user) => user !== displayName));
+        setSelectedUsers(selectedUsers.filter((user) => user !== uid));
       }
     }
   };
