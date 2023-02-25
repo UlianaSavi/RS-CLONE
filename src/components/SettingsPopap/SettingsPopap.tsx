@@ -23,7 +23,7 @@ function SettingsMenu(props: { isOpen: boolean, onClose: () => void,
       <PopupMenuItem label="Settings" icon={<SettingIcon />} handleClick={onSidebarChange} />
       <div className="dark-mode" onClick={changeTheme} role="presentation">
         <PopupMenuItem label="Dark mode" icon={<DarkModeIcon />} handleClick={click} />
-        <div className={`switch-btn switch-${!isDark ? 'on' : 'off'}`} />
+        <div className={`switch-btn switch-${isDark ? 'on' : 'off'}`} />
       </div>
     </nav>
   );
