@@ -21,7 +21,10 @@ function SettingsMenu(props: { isOpen: boolean, onClose: () => void,
     <nav className={isOpen ? 'popup active' : 'popup'} id="popup" onMouseLeave={() => onClose()}>
       <PopupMenuItem label="Saved Messages" icon={<SavedMessIcon />} handleClick={click} />
       <PopupMenuItem label="Settings" icon={<SettingIcon />} handleClick={onSidebarChange} />
-      <PopupMenuItem label="Dark mode" icon={<DarkModeIcon />} handleClick={changeTheme} />
+      <div className="dark-mode" onClick={changeTheme} role="presentation">
+        <PopupMenuItem label="Dark mode" icon={<DarkModeIcon />} handleClick={click} />
+        <div className={`switch-btn switch-${!isDark ? 'on' : 'off'}`} />
+      </div>
     </nav>
   );
 }
