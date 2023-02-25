@@ -11,9 +11,7 @@
 
   --text-color-time: #aaaa;
 
-  --date-in-chat-text: #ffff;
-
-  --num-message-color: #fff;
+  --const-white: #ffff;
 
   --danger-color: #ff595a;
 
@@ -22,8 +20,6 @@
   --label-color: #9e9e9e;
 
   --blackout-color: #000000cc;
-  
-  --text-accent-color: #fff;
 
   &.dark {
     --accent-color: #8774e1; // яркий цвет, цвет выбранной темы, акцентный
@@ -103,7 +99,7 @@ $text-color-time: var(--text-color-time);
 $text-color-time-out: var(--text-color-time-out);
 
 $date-in-chat-bg: var(--date-in-chat-bg);
-$date-in-chat-text: var(--date-in-chat-text);
+$const-white: var(--const-white);
 $danger-color: var(--danger-color);
 
 $input-border-color: var(--input-border-color);
@@ -114,10 +110,6 @@ $blackout-color: var(--blackout-color);
 $chat-bg-gradient: var(--chat-bg-gradient);
 $filter-img-bg-chat: var(--filter-img-bg-chat);
 
-$text-accent-color: var(--text-accent-color);
-
 $bubbles-message-bg-color: var(--bubbles-message-bg-color);
-
-$num-message-color: var(--num-message-color);
 
 $rss-link: var(--rss-link);

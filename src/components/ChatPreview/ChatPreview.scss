@@ -63,14 +63,14 @@
 
     padding: 2px 6px;
 
-    color: $num-message-color;
+    color: $const-white;
     background: $grey-lite;
     border-radius: 10px;
   }
 
   &.active {
     background: $accent-color;
-    color: $text-accent-color;
+    color: $const-white;
 
     .chat-preview {
       &__messenge-num {
@@ -80,11 +80,11 @@
 
       &__last-message,
       &__online-status {
-        color: $text-accent-color;
+        color: $const-white;
       }
 
       &__messenge-time {
-        color: $text-accent-color;
+        color: $const-white;
       }
     }
   }
