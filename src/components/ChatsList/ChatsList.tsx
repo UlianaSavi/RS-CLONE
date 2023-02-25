@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable no-undef */
 import { useState, useEffect, useContext } from 'react';
 import {
   collection, query, where, getDocs, onSnapshot, doc, DocumentData, getDoc,
