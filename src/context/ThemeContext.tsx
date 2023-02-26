@@ -19,7 +19,17 @@ export const ThemeContext = createContext<IContext>({
 });
 
 export function ThemeProvider({ children }: ProviderProps) {
-  const [isDark, setIsDark] = useState(true);
+  let initialState;
+
+  const localStorageValue = localStorage.getItem('theme');
+  if (localStorageValue) {
+    initialState = JSON.parse(localStorageValue);
+  } else {
+    initialState = true;
+  }
+
+  const [isDark, setIsDark] = useState(initialState);
+  localStorage.setItem('theme', JSON.stringify(isDark));
 
   const value = useMemo(() => ({ isDark, setIsDark }), [isDark, setIsDark]);
 
