@@ -59,7 +59,7 @@ function ChatsList({
 
   const [chatsArr, setChatsArr] = useState([]);
 
-  const updateChatsList = (chatsData: any) => {
+  const updateChatsList = (chatsData: DocumentData) => {
     setChatsArr(chatsData
       .map((chat: DocumentData, index: number) => (
         <ChatPreview

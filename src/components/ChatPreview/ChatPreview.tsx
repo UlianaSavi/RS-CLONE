@@ -1,4 +1,3 @@
-/* eslint-disable no-nested-ternary */
 /* eslint-disable no-unused-vars */
 import { useContext, useState, useEffect } from 'react';
 import {

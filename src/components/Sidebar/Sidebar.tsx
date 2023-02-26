@@ -1,4 +1,3 @@
-/* eslint-disable no-nested-ternary */
 import { useState, useContext } from 'react';
 import CreateButton from '../CreateButton/CreateButton';
 import CreatePopup from '../CreatePopup/CreatePopup';
