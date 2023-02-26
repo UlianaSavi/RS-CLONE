@@ -83,11 +83,13 @@ export default function EditGroupInfo({
         <AddPhotoButton handleChange={changePhoto} imageSrc={groupPhoto} />
         <FormInput type="text" id="name" label="Group Name" value={groupName} setValue={setGroupName} mode="edit" />
       </section>
-      <section className="edit-group__users-list">
+      <section className="edit-group__users-list-wrapper">
         <div className="edit-group__users-count">
           {`${usersArr?.length} members`}
         </div>
-        {usersArr}
+        <div className="edit-group__users-list">
+          {usersArr}
+        </div>
       </section>
     </div>
   );
