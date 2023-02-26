@@ -164,7 +164,7 @@ function ChatsList({
       <DeletionPopup
         isVisible={showDeletionPopup}
         setVisibility={setShowDeletionPopup}
-        userIdUnderRMK={userIdUnderRMK}
+        userIdToDelete={userIdUnderRMK}
       />
     </>
   );
