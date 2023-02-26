@@ -82,7 +82,11 @@ export default function BubblesMessage(props: {
       {!isCurrenUser && activeChatID === userID && <Avatar image={senderData?.photoURL || ''} />}
       <div className={isCurrenUser ? 'bubble__user-message' : 'bubble__user-message another-user'}>
         {!isCurrenUser && activeChatID === userID && <div className="bubble__username">{senderData?.displayName}</div>}
-        {imageUrl && <button className="btn" type="button" aria-label="Open" onClick={() => openPopap(imageUrl)}><img className={`img ${activeChatID === userID ? 'in-group' : ''}`} src={imageUrl} alt="" /></button>}
+        {imageUrl && (
+          <button className="btn" type="button" aria-label="Open" onClick={() => openPopap(imageUrl)}>
+            <img className={`img ${activeChatID === userID ? 'in-group' : ''}`} src={imageUrl} alt="" />
+          </button>
+        )}
         {(!imageUrl || isImageLoaded) && (
           <>
             <span className="message" dangerouslySetInnerHTML={findImail(message)} />
