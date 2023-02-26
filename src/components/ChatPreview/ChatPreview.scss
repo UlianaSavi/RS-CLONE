@@ -93,6 +93,29 @@
 
   &__checkbox {
     margin-right: 15px;
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__checkbox + label::before {
+    content: "";
+    margin-right: 15px;
+    
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+
+    border: 2px solid $grey-lite;
+    border-radius: 4px;
+    background-color: $grey-main;
+
+    cursor: pointer;
+  }
+  
+  &__checkbox:checked + label::before {
+    background-color: $accent-color;
+    border-color: $accent-color;
   }
 
 }

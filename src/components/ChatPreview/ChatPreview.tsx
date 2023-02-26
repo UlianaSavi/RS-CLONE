@@ -128,7 +128,7 @@ function ChatPreview({
     setChecked(isSelected);
   }, []);
 
-  const hanldeCheckbox = () => setChecked(!checked);
+  const hanldeCheckbox = () => null;
 
   return (
     <button
@@ -139,13 +139,16 @@ function ChatPreview({
     >
       <div className="chat-preview-wrapper">
         {isGroupCreationMode && (
-          <input
-            className="chat-preview__checkbox"
-            type="checkbox"
-            id="delete-options"
-            checked={checked}
-            onChange={hanldeCheckbox}
-          />
+          <>
+            <input
+              className="chat-preview__checkbox"
+              type="checkbox"
+              id="delete-options"
+              checked={checked}
+              onChange={hanldeCheckbox}
+            />
+            <label htmlFor="delete-options"> </label>
+          </>
         )}
         <Avatar image={photoURL} />
         <div className="chat-preview-text">
