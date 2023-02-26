@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 import { useContext } from 'react';
 import Chat from '../../components/Chat/Chat';
 import ModalPhoto from '../../components/ModalPhoto/ModalPhoto';
@@ -48,7 +46,7 @@ function Messenger() {
 
   return (
     <div className="messenger">
-      {(popap || imagePopap) && <div className="blackout" onClick={closePopap} />}
+      {(popap || imagePopap) && <button type="button" aria-label="Blackout" className="blackout" onClick={closePopap} />}
       {isActiveSidebar ? <Sidebar sidebarClass="sidebar" /> : <Sidebar sidebarClass="sidebar hide-sidebar" />}
       {isActiveSidebar ? <Chat chatClass="chat hide-chat" /> : <Chat chatClass="chat" />}
       {userSidebar && <UserSidebar /> }

@@ -10,7 +10,6 @@ import MessageInput from '../MessageInput/MessageInput';
 import { BubblesDateGroup } from '../BubblesDateGroup/BubblesDateGroup';
 import SendImagePopap from '../SendImagePopap/SendImagePopap';
 import { AuthContext } from '../../context/AuthContext';
-import { User } from '../../types';
 import BubblesMessage from '../BubblesMessage/BubblesMessage';
 import './ChatWindow.scss';
 
@@ -22,7 +21,7 @@ interface SplitByDates {
 function ChatWindow() {
   const { popap } = useContext(SendImageContext);
   const { activeChatID } = useContext(ActiveChatContext);
-  const currentUser: User = useContext(AuthContext) as User;
+  const { currentUser } = useContext(AuthContext);
 
   const [datesNMessagesArr, setDatesNMessagesArr] = useState<SplitByDates[]>([]);
 

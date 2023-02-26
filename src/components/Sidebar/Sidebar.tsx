@@ -8,7 +8,6 @@ import SidebarContent from '../SidebarContent/SidebarContent';
 import SidebarHeader from '../SidebarHeader/SidebarHeader';
 import { AuthContext } from '../../context/AuthContext';
 import { SelectedUsersContext } from '../../context/SelectedUsersContext';
-import type { User } from '../../types';
 import './Sidebar.scss';
 import EditGroupInfo from '../EditGroupInfo/EditGroupInfo';
 import { createNewGroup } from '../../API/api';
@@ -23,7 +22,7 @@ function Sidebar(props: {sidebarClass: string}) {
   const { sidebarClass } = props;
   const [searchInput, setSearchInput] = useState('');
   const { selectedUsers, setSelectedUsers } = useContext(SelectedUsersContext);
-  const currentUser: User = useContext(AuthContext) as User;
+  const { currentUser } = useContext(AuthContext);
   const [groupName, setGroupName] = useState('');
   const [groupPhoto, setGroupPhoto] = useState('');
 
@@ -43,19 +42,21 @@ function Sidebar(props: {sidebarClass: string}) {
   const closeCreatePopup = () => setActiveCreatePopup(false);
 
   const handleCreateButton = async () => {
-    if (isGroupCreationMode && !isGroupInfo) {
-      setSelectedUsers([...selectedUsers, currentUser.uid]);
-      setGroupInfo(true);
-    } else if (isGroupInfo) {
-      await createNewGroup(selectedUsers, groupName, groupPhoto, currentUser.uid);
-      setGroupInfo(false);
-      setGroupCreationMode(false);
-      setSearchMode(false);
-      setSelectedUsers([]);
-      setGroupName('');
-      setGroupPhoto('');
-    } else {
-      setActiveCreatePopup(!isActiveCreatePopup);
+    if (currentUser) {
+      if (isGroupCreationMode && !isGroupInfo) {
+        setSelectedUsers([...selectedUsers, currentUser.uid]);
+        setGroupInfo(true);
+      } else if (isGroupInfo) {
+        await createNewGroup(selectedUsers, groupName, groupPhoto, currentUser.uid);
+        setGroupInfo(false);
+        setGroupCreationMode(false);
+        setSearchMode(false);
+        setSelectedUsers([]);
+        setGroupName('');
+        setGroupPhoto('');
+      } else {
+        setActiveCreatePopup(!isActiveCreatePopup);
+      }
     }
   };
 

@@ -52,7 +52,7 @@ function ChatsList({
     };
   }, []);
 
-  const currentUser: User = useContext(AuthContext) as User;
+  const { currentUser } = useContext(AuthContext);
   const { userID, setUserID } = useContext(UserContext);
   const { activeChatID } = useContext(ActiveChatContext);
   const { selectedUsers } = useContext(SelectedUsersContext);

@@ -1,6 +1,3 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable react/button-has-type */
 import { doc, DocumentData, onSnapshot } from '@firebase/firestore';
 import { useState, useContext, useEffect } from 'react';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
@@ -22,11 +19,10 @@ function Gallery() {
       onSnapshot(doc(db, 'chats', activeChatID), (d) => {
         const data = d.data();
         if (!data) {
-          console.log('Hey! There are no messages here.');
           return;
         }
         setImagesArray(data.messages.map((message: DocumentData) => (
-          message.imageUrl && <img key={message.id} className="img" onClick={() => openPopap(message.imageUrl)} src={message.imageUrl} alt="Media in chat" />
+          message.imageUrl && <button type="button" key={message.id} onClick={() => openPopap(message.imageUrl)} className="btn"><img key={message.id} className="img" src={message.imageUrl} alt="Media in chat" /></button>
         )));
       });
     }
@@ -34,7 +30,7 @@ function Gallery() {
 
   return (
     <div className="gallery">
-      <button className="gallery__tab">
+      <button type="button" className="gallery__tab">
         <span className="gallery__tab__title">Media</span>
       </button>
       <div className="gallery__images">{imagesArray}</div>

@@ -3,6 +3,7 @@ import * as firestore from 'firebase/firestore';
 export interface User {
   uid: string,
   displayName: string,
+  bio: string,
   photoURL: string,
   email: string,
   isOnline: boolean,

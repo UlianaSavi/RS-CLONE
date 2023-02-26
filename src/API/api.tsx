@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -147,6 +146,19 @@ export const changeProfileName = async (newName: string) => {
       displayName: newName,
     });
   }
+};
+
+export const changeProfileBio = async (newBio: string) => {
+  if (newBio && auth.currentUser) {
+    await updateDoc(doc(db, 'users', auth.currentUser.uid), {
+      bio: newBio,
+    });
+
+    const user = await getDoc(doc(db, 'users', auth.currentUser.uid));
+
+    return user.data() || null;
+  }
+  return null;
 };
 
 export const changeProfilePhoto = async (
