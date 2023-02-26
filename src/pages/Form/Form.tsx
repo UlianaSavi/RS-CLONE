@@ -18,7 +18,7 @@ function Form({ mode }: FormProps) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [avatar, setAvatar] = useState({ file: null });
+  const [avatar, setAvatar] = useState<{ file: File | null; }>({ file: null });
   const [errorMessage, setErrorMessage] = useState('');
 
   const getAllUsers = async () => {

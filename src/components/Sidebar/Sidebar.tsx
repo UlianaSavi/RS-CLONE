@@ -72,65 +72,70 @@ function Sidebar(props: {sidebarClass: string}) {
     setSelectedUsers([]);
   };
 
+  let sidebarContent = null;
+  if (isSettings) {
+    sidebarContent = <SettingsSidebar onSidebarChange={() => changeSidebar()} />;
+  } else if (isGroupInfo) {
+    sidebarContent = (
+      <>
+        <EditGroupInfo
+          groupName={groupName}
+          setGroupName={setGroupName}
+          groupPhoto={groupPhoto}
+          setGroupPhoto={setGroupPhoto}
+          handleBackClick={handleEditGroupInfoBackBtn}
+        />
+        <CreateButton
+          isSearchMode={isSearchMode}
+          isGroupCreationMode={isGroupCreationMode}
+          isGroupInfo={isGroupInfo}
+          handleClick={handleCreateButton}
+          groupName={groupName}
+        />
+      </>
+    );
+  } else {
+    sidebarContent = (
+      <>
+        <SidebarHeader
+          callback={() => flipFlop()}
+          isSearchMode={isSearchMode}
+          setSearchMode={setSearchMode}
+          searchInput={searchInput}
+          setSearchInput={setSearchInput}
+          closeSearch={closeSearch}
+        />
+        <SidebarContent
+          isSearchMode={isSearchMode}
+          setSearchMode={setSearchMode}
+          searchInput={searchInput}
+          isGroupCreationMode={isGroupCreationMode}
+        />
+        <CreateButton
+          isSearchMode={isSearchMode}
+          isGroupCreationMode={isGroupCreationMode}
+          isGroupInfo={isGroupInfo}
+          handleClick={handleCreateButton}
+          groupName={groupName}
+        />
+        <CreatePopup
+          isVisible={isActiveCreatePopup}
+          closePopup={closeCreatePopup}
+          setSearchMode={setSearchMode}
+          setGroupCreationMode={setGroupCreationMode}
+        />
+        <SettingsMenu
+          isOpen={isActivePopup}
+          onClose={() => setActivePopup(false)}
+          onSidebarChange={() => changeSidebar()}
+        />
+      </>
+    );
+  }
+
   return (
     <div className={sidebarClass}>
-      {
-        isSettings ? <SettingsSidebar onSidebarChange={() => changeSidebar()} />
-          : isGroupInfo ? (
-            <>
-              <EditGroupInfo
-                groupName={groupName}
-                setGroupName={setGroupName}
-                groupPhoto={groupPhoto}
-                setGroupPhoto={setGroupPhoto}
-                handleBackClick={handleEditGroupInfoBackBtn}
-              />
-              <CreateButton
-                isSearchMode={isSearchMode}
-                isGroupCreationMode={isGroupCreationMode}
-                isGroupInfo={isGroupInfo}
-                handleClick={handleCreateButton}
-                groupName={groupName}
-              />
-            </>
-          )
-            : (
-              <>
-                <SidebarHeader
-                  callback={() => flipFlop()}
-                  isSearchMode={isSearchMode}
-                  setSearchMode={setSearchMode}
-                  searchInput={searchInput}
-                  setSearchInput={setSearchInput}
-                  closeSearch={closeSearch}
-                />
-                <SidebarContent
-                  isSearchMode={isSearchMode}
-                  setSearchMode={setSearchMode}
-                  searchInput={searchInput}
-                  isGroupCreationMode={isGroupCreationMode}
-                />
-                <CreateButton
-                  isSearchMode={isSearchMode}
-                  isGroupCreationMode={isGroupCreationMode}
-                  isGroupInfo={isGroupInfo}
-                  handleClick={handleCreateButton}
-                  groupName={groupName}
-                />
-                <CreatePopup
-                  isVisible={isActiveCreatePopup}
-                  closePopup={closeCreatePopup}
-                  setSearchMode={setSearchMode}
-                  setGroupCreationMode={setGroupCreationMode}
-                />
-                <SettingsMenu
-                  isOpen={isActivePopup}
-                  onClose={() => setActivePopup(false)}
-                  onSidebarChange={() => changeSidebar()}
-                />
-              </>
-            )
-      }
+      {sidebarContent}
     </div>
   );
 }

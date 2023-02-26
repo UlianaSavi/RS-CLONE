@@ -1,7 +1,6 @@
 import PopupMenuItem from '../PopupMenuItem/PopupMenuItem';
 import './CreatePopup.scss';
-import { ReactComponent as NewGroupIcon } from '../../assets/icons/new-group.svg';
-import { ReactComponent as NewPrivateChatIcon } from '../../assets/icons/new-contact.svg';
+import { NewGroupIcon, NewPrivateChatIcon } from '../../assets/icons/icons';
 
 interface CreatePopupProps {
   isVisible: boolean,
