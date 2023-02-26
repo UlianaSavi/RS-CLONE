@@ -75,6 +75,7 @@ export const singUp = async (
       email,
       photoURL: '',
       isOnline: true,
+      lastVisitAt: serverTimestamp(),
     });
 
     await setDoc(doc(db, 'userChats', user.uid), {});
