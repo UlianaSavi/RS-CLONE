@@ -9,6 +9,7 @@ function Gallery() {
   const { activeChatID } = useContext(ActiveChatContext);
   const { setUrl, setImagePopap } = useContext(ModalPhotoContext);
   const [imagesArray, setImagesArray] = useState([]);
+
   const openPopap = (currentImgUrl: string) => {
     setUrl(currentImgUrl);
     setImagePopap(true);
@@ -18,12 +19,9 @@ function Gallery() {
     if (activeChatID) {
       onSnapshot(doc(db, 'chats', activeChatID), (d) => {
         const data = d.data();
-        if (!data) {
-          return;
-        }
-        setImagesArray(data.messages.map((message: DocumentData) => (
+        setImagesArray(data?.messages.map((message: DocumentData) => (
           message.imageUrl && <button type="button" key={message.id} onClick={() => openPopap(message.imageUrl)} className="btn"><img key={message.id} className="img" src={message.imageUrl} alt="Media in chat" /></button>
-        )));
+        )) || []);
       });
     }
   }, [activeChatID]);
