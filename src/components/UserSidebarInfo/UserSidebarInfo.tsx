@@ -19,8 +19,10 @@ function UserSidebarInfo() {
   const { activeChatID } = useContext(ActiveChatContext);
   const { userID } = useContext(UserContext);
   const [userInfo, setUserInfo] = useState<User | null>(null);
+  const [groupInfo, setGroupInfo] = useState<DocumentData | null>(null);
   const [isOnline, setIsOnline] = useState(userInfo?.isOnline || false);
   const [lastSeen, setLastSeen] = useState('');
+
   const setData = async (data: DocumentData) => {
     if (activeChatID !== userID) {
       setIsOnline(data.isOnline);
@@ -40,31 +42,61 @@ function UserSidebarInfo() {
   };
 
   useEffect(() => {
-    getData();
-    onSnapshot(doc(db, 'users', userID), (d) => {
-      const data = d.data();
-      if (!data || !userInfo) return;
-      setData(data);
-    });
+    if (activeChatID !== userID) {
+      getData();
+      onSnapshot(doc(db, 'users', userID), (d) => {
+        const data = d.data();
+        if (!data || !userInfo) return;
+        setData(data);
+      });
+    } else {
+      onSnapshot(doc(db, 'chats', userID), (d) => {
+        const data = d.data();
+        if (!data) return;
+        setGroupInfo(data);
+      });
+    }
   }, [activeChatID]);
+
+  const onlineStatus = isOnline ? 'online' : `last seen ${lastSeen}`;
 
   return (
     <div className="user-sidebar-info">
       <div className="user-sidebar-info__wrapper">
-        <img className="user-sidebar-info__wrapper__ava" src={userInfo?.photoURL || avatarPlaceholder} alt="User" />
-        <div className="user-sidebar-info__wrapper__name">{activeChatID !== userID ? userInfo?.displayName : 'Group'}</div>
-        {activeChatID !== userID
-          ? <div className="user-sidebar-info__wrapper__status">{isOnline ? 'Online' : `Last seen ${lastSeen}`}</div> : ''}
+        <img
+          className="user-sidebar-info__wrapper__ava"
+          src={(activeChatID !== userID ? userInfo?.photoURL : groupInfo?.photoURL)
+            || avatarPlaceholder}
+          alt="User"
+        />
+        <div className="user-sidebar-info__wrapper__name">{activeChatID !== userID ? userInfo?.displayName : groupInfo?.name}</div>
+        <div className="user-sidebar-info__wrapper__status">
+          {activeChatID !== userID ? onlineStatus : `${groupInfo?.members.length} members`}
+        </div>
       </div>
       <div className="user-sidebar-info__item">
-        <PopupMenuItem label={activeChatID !== userID ? userInfo?.email : 'This if group chat'} icon={<NameUserIcon />} title={activeChatID !== userID ? 'Email' : 'Info'} />
+        <PopupMenuItem
+          label={activeChatID !== userID ? userInfo?.email : 'This is group chat'}
+          icon={<NameUserIcon />}
+          title={activeChatID !== userID ? 'Email' : 'Info'}
+        />
       </div>
       <div className="user-sidebar-info__item">
-        <PopupMenuItem label={activeChatID !== userID ? userInfo?.displayName : 'Launge'} icon={<NameUserIcon />} title={activeChatID !== userID ? 'Username' : 'Pulic name'} />
+        <PopupMenuItem
+          label={activeChatID !== userID ? userInfo?.displayName : groupInfo?.name}
+          icon={<NameUserIcon />}
+          title={activeChatID !== userID ? 'Username' : 'Pulic name'}
+        />
       </div>
-      <div className="user-sidebar-info__item">
-        <PopupMenuItem label={userInfo?.bio || 'About'} icon={<InfoIcon />} title="About" />
-      </div>
+      {activeChatID !== userID && (
+        <div className="user-sidebar-info__item">
+          <PopupMenuItem
+            label={userInfo?.bio || 'About'}
+            icon={<InfoIcon />}
+            title="About"
+          />
+        </div>
+      )}
     </div>
   );
 }

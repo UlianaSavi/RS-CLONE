@@ -1,19 +1,30 @@
-import { CreateNewChatIcon } from '../../assets/icons/icons';
+import { useContext } from 'react';
+import { ArrowLeftIcon, CreateNewChatIcon } from '../../assets/icons/icons';
+import { SelectedUsersContext } from '../../context/SelectedUsersContext';
 import './CreateButton.scss';
 
 interface CreateButtonpProps {
-  isVisible: boolean,
-  handleClick: () => void
+  isSearchMode: boolean,
+  isGroupCreationMode: boolean,
+  isGroupInfo: boolean,
+  handleClick: () => void,
+  groupName: string
 }
 
-function CreateButton({ isVisible, handleClick }: CreateButtonpProps) {
+function CreateButton({
+  isSearchMode, handleClick, isGroupCreationMode, isGroupInfo, groupName,
+}: CreateButtonpProps) {
+  const { selectedUsers } = useContext(SelectedUsersContext);
   return (
     <button
       type="button"
-      className={`icon-button ${isVisible ? '' : 'hidden'}`}
+      className={`icon-button ${!isSearchMode
+        || (isGroupInfo && groupName.length)
+        || (isGroupCreationMode && selectedUsers.length && !isGroupInfo)
+        ? '' : 'hidden'}`}
       onClick={handleClick}
     >
-      <CreateNewChatIcon />
+      {isGroupCreationMode || isGroupInfo ? <ArrowLeftIcon /> : <CreateNewChatIcon />}
     </button>
   );
 }

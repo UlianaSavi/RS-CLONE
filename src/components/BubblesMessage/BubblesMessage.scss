@@ -4,7 +4,6 @@
   &__user-message-wrapper {
     display: flex;
     align-self: flex-end;
-    align-items: end;
     gap: 5px;
 
     &.another-user {
@@ -38,7 +37,11 @@
     background-color: $bubbles-message-bg-color;
     border-radius: 12px 6px 0px 12px;
     box-shadow: 0 1px 2px 0 rgb(16 35 47 / 15%);
-    overflow: hidden;
+
+    .btn {
+      border-radius: 12px 6px 0px 12px;
+      overflow: hidden;
+    }
 
     .bubble__time-n-check-wrapper {
       display: flex;
@@ -78,6 +81,10 @@
 
       background-color: $main-color;
       border-radius: 6px 12px 12px 0px;
+
+      .btn {
+        border-radius: 6px 12px 12px 0px;
+      }
 
       .bubble__time {
         color: $text-color-time;
@@ -144,4 +151,3 @@
 
   max-width: 360px;
 }
-

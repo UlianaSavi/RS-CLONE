@@ -22,7 +22,15 @@
     visibility: visible;
   }
 
-  .popup-item {
-    padding: 5px;
-  }
+    .popup-item {
+      padding: 5px;
+    }
+
+    .popup-svg {
+      transform: scale(.9);
+
+      &_private {
+        transform: scale(1.4);
+      }
+    }
 }

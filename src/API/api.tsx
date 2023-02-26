@@ -75,6 +75,7 @@ export const singUp = async (
       email,
       photoURL: '',
       isOnline: true,
+      lastVisitAt: serverTimestamp(),
     });
 
     await setDoc(doc(db, 'userChats', user.uid), {});
@@ -334,4 +335,67 @@ export const activateChat = async (
       [`${activeChatID}.unreadMessages`]: 0,
     });
   }
+};
+
+export const createNewGroup = async (
+  members: string[],
+  groupName: string,
+  photoURL: string,
+  admin: string,
+) => {
+  const membersArr = members.map((memberID) => ({
+    [memberID]: true,
+  }));
+  const groupID = `${groupName}${Math.floor(100000 + Math.random() * 900000)}`;
+
+  await setDoc(doc(db, 'chats', groupID), {
+    members: membersArr,
+    messages: [],
+    name: groupName,
+    photoURL,
+    admin,
+  });
+
+  const promises = members.map(async (memberID: string) => {
+    await updateDoc(doc(db, 'userGroups', memberID), {
+      [`${groupID}.groupInfo`]: {
+        displayName: groupName,
+        photoURL,
+        groupID,
+      },
+      [`${groupID}.lastMessage`]: {
+        text: 'You have been added to the group',
+        date: serverTimestamp(),
+      },
+      [`${groupID}.unreadMessages`]: 0,
+    });
+  });
+  Promise.all(promises);
+};
+
+export const changeGroupPhoto = async (
+  photoList: FileList | null,
+) => {
+  if (photoList && auth.currentUser) {
+    const avatar = photoList[0];
+
+    const storageRef = ref(storage, `group_${Math.floor(Date.now() + Math.random() * 900000)}`);
+    const uploadTask = uploadBytesResumable(storageRef, avatar as File);
+
+    if (avatar) {
+      uploadTask.on(
+        'state_changed',
+        (snapshot) => {
+          const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          return progress;
+        },
+        (error) => {
+          throw error;
+        },
+      );
+    }
+
+    return getDownloadURL((await uploadTask).ref);
+  }
+  return '';
 };

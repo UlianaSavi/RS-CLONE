@@ -9,13 +9,12 @@ interface SidebarHeaderProps {
   searchInput: string,
   setSearchInput: React.Dispatch<React.SetStateAction<string>>,
   callback: () => void,
+  closeSearch: () => void,
 }
 
 function SidebarHeader({
-  isSearchMode, callback, setSearchMode, searchInput, setSearchInput,
+  isSearchMode, callback, setSearchMode, searchInput, setSearchInput, closeSearch,
 }: SidebarHeaderProps) {
-  const closeSearch = () => setSearchMode(false);
-
   return (
     <div className="sidebar-header">
       {isSearchMode

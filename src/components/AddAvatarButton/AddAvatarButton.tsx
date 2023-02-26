@@ -1,8 +1,9 @@
+import { SetStateAction } from 'react';
 import '../../pages/Form/Form.scss';
 import './AddAvatarButton.scss';
 
 interface AddAvatarButtonProps {
-  setValue: any; // TODO: ТИПИЗИРОВАТЬ
+  setValue: React.Dispatch<SetStateAction<{ file: File | null; }>>;
 }
 
 function AddAvatarButton({ setValue }: AddAvatarButtonProps) {

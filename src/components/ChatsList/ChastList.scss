@@ -2,13 +2,17 @@
 
 .chat-list {
   max-width: 400px;
-  height: 85%;
-
+  max-height: calc(100vh - 120px);
+  
   overflow-y: scroll;
   padding: 10px;
 
   background: $main-color;
   border-top: 1px solid $border-color;
+
+  &.search-view {
+    max-height: calc(100vh - 74px);
+  }
 
   &::-webkit-scrollbar {
     width: 100%;

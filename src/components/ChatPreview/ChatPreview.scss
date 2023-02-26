@@ -93,9 +93,44 @@
     margin-right: 10px;
   }
 
+  &__checkbox {
+    width: 40px;
+    height: 20px;
+    margin-right: 0;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  &__checkbox + label::before {
+    content: "";
+    margin-right: 15px;
+    
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+
+    border: 2px solid $grey-lite;
+    border-radius: 4px;
+    background-color: $main-color;
+
+    cursor: pointer;
+  }
+  
+  &__checkbox:checked + label::before {
+    background-color: $accent-color;
+    border-color: $accent-color;
+  }
+
 }
 
 .chat-preview-wrapper {
+  position: relative;
   display: flex;
   align-items: center;
   text-align: left;

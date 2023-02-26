@@ -6,11 +6,12 @@ import { db } from '../../firebaseConfig';
 import { AuthContext } from '../../context/AuthContext';
 import { UserContext } from '../../context/UserContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
+import { SelectedUsersContext } from '../../context/SelectedUsersContext';
 
 import ChatPreview from '../ChatPreview/ChatPreview';
 import ContextMenu from '../ContextMenu/ContextMenu';
 
-import type { User, UserChat } from '../../types';
+import type { User } from '../../types';
 import './ChastList.scss';
 import DeletionPopup from '../DeletionPopup/DeletionPopup';
 
@@ -20,10 +21,11 @@ interface ChatsListProps {
   setSearchMode: React.Dispatch<React.SetStateAction<boolean>>,
   searchInput: string
   setActiveFolder: React.Dispatch<React.SetStateAction<number>>,
+  isGroupCreationMode: boolean,
 }
 
 function ChatsList({
-  activeFolder, isSearchMode, setSearchMode, searchInput, setActiveFolder,
+  activeFolder, isSearchMode, setSearchMode, searchInput, setActiveFolder, isGroupCreationMode,
 }: ChatsListProps) {
   // Context menu
   const [showMenu, setShowMenu] = useState(false);
@@ -53,22 +55,24 @@ function ChatsList({
   const { currentUser } = useContext(AuthContext);
   const { userID, setUserID } = useContext(UserContext);
   const { activeChatID } = useContext(ActiveChatContext);
+  const { selectedUsers } = useContext(SelectedUsersContext);
 
   const [chatsArr, setChatsArr] = useState([]);
 
-  const updateChatsList = (chatsData: any) => {
+  const updateChatsList = (chatsData: DocumentData) => {
     setChatsArr(chatsData
-      .map((chat: UserChat) => (
+      .map((chat: DocumentData, index: number) => (
         <ChatPreview
-          key={chat.userInfo.uid || '1'}
+          key={chat.userInfo.uid || index}
           data={chat}
           isActive={chat?.userInfo.uid === userID
-            || (activeChatID === userID && activeFolder === 1)}
+            || (chat?.userInfo?.groupID === userID && activeFolder === 1)}
           setActiveUserID={setUserID}
           isSearchMode={isSearchMode}
           setSearchMode={setSearchMode}
           onContextMenu={handleContextMenu}
           activeFolder={activeFolder}
+          isGroupCreationMode={isGroupCreationMode}
         />
       )));
   };
@@ -124,7 +128,7 @@ function ChatsList({
           unreadMessages: item?.unreadMessages || 0,
           userInfo: item.groupInfo,
         }));
-        updateChatsList(groupsData);
+        updateChatsList(groupsData.sort((a, b) => b.lastMessage.date - a.lastMessage.date));
       });
     }
   };
@@ -142,11 +146,12 @@ function ChatsList({
 
   useEffect(() => {
     showChatsList();
-  }, [currentUser?.uid, activeChatID, userID, activeFolder, isSearchMode, searchInput]);
+  }, [currentUser?.uid,
+    activeChatID, userID, activeFolder, isSearchMode, searchInput, selectedUsers]);
 
   return (
     <>
-      <div className="chat-list">
+      <div className={`chat-list ${isSearchMode ? 'search-view' : ''}`}>
         {chatsArr}
       </div>
       <ContextMenu
