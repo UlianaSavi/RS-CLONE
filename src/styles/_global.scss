@@ -1,14 +1,26 @@
 @import "./variables";
 
-.container {
+@mixin container {
   box-sizing: border-box;
 
-  background-color: $grey-dark;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.messenger-container {
+  @include container();
+
+  background-color: $container-color;
+  color: $text-color-white;
+}
+
+.form-container {
+  @include container();
+
+  background-color: $bg-color-main;
   color: $text-color-white;
 }
 
@@ -47,4 +59,3 @@
   border: none;
   padding: 0;
 }
-

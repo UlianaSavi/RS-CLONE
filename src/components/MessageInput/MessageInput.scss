@@ -15,7 +15,7 @@
   padding-bottom: 20px;
 
   @media (max-width: 1150px) {
-    padding: 0 10px 20px 10px; 
+    padding: 0 10px 20px 10px;
     margin: 0;
     width: 95%;
   }
@@ -23,7 +23,7 @@
   @media (max-width: 600px) {
     padding-bottom: 7px;
   }
-  
+
   &__container {
     position: relative;
 
@@ -33,7 +33,7 @@
     flex-grow: 1;
     padding: 10px;
 
-    background-color: $grey-main;
+    background-color: $main-color;
     border-radius: 15px;
 
     @media (max-width: 600px) {
@@ -47,7 +47,7 @@
     max-height: 600px;
     flex-grow: 1;
 
-    background-color: $grey-main;
+    background-color: $main-color;
     color: $text-color-white;
     border: none;
     outline: none;
@@ -56,12 +56,12 @@
     &::-webkit-scrollbar {
       width: 100%;
       height: 4px;
-      background: $grey-main;
-  }
+      background: $main-color;
+    }
 
-  &::-webkit-scrollbar-thumb {
+    &::-webkit-scrollbar-thumb {
       background: $grey-secondary;
-  }
+    }
   }
 
   &__emotion-btn,
@@ -72,7 +72,7 @@
     width: 36px;
     height: 36px;
     padding: 0;
-    
+
     background: none;
     border: none;
     border-radius: 18px;
@@ -128,6 +128,6 @@
     max-height: 25px;
     transition: height 0.25s linear;
 
-    fill: $text-color-white;
+    fill: $const-white;
   }
 }

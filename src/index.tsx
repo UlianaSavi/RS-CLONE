@@ -9,6 +9,7 @@ import { ActiveVisibilitySidebarProvider } from './context/VisibleSidebarContext
 import { ModalPhotoContextProvider } from './context/ModalPhotoContext';
 import { UserSidebarProvider } from './context/UserSidebarContext';
 import { ClickedEmojiProvider } from './context/ClickedEmojiContext';
+import { ThemeProvider } from './context/ThemeContext';
 import { SelectedUsersContextProvider } from './context/SelectedUsersContext';
 
 const root = ReactDOM.createRoot(
@@ -24,9 +25,11 @@ root.render(
             <SendImageContextProvider>
               <ModalPhotoContextProvider>
                 <ClickedEmojiProvider>
-                  <SelectedUsersContextProvider>
-                    <App />
-                  </SelectedUsersContextProvider>
+                  <ThemeProvider>
+                    <SelectedUsersContextProvider>
+                      <App />
+                    </SelectedUsersContextProvider>
+                  </ThemeProvider>
                 </ClickedEmojiProvider>
               </ModalPhotoContextProvider>
             </SendImageContextProvider>
