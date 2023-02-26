@@ -1,119 +1,119 @@
 @import "../../styles/variables";
 
 .image-popap {
-    z-index: 40;
+  z-index: 40;
 
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 
+  width: 100%;
+  max-width: 400px;
+  max-height: 500px;
+  height: fit-content;
+  padding: 10px;
+
+  background: $main-color;
+  border-radius: 8px;
+
+  @media (max-width: 500px) {
+    max-width: 300px;
+  }
+
+  &__image-wrapper {
+    display: flex;
+    justify-content: center;
     width: 100%;
-    max-width: 400px;
-    max-height: 500px;
-    height: fit-content;
-    padding: 10px;
+  }
 
-    background: $grey-main;
-    border-radius: 8px;
+  .img {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    height: 100%;
+    max-height: 380px;
+    object-fit: contain;
 
-    @media (max-width: 500px) {
-        max-width: 300px;
+    border: 5px solid $main-color;
+    border-radius: 20px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    &__title {
+      width: 60%;
+    }
+  }
+
+  &__send-button {
+    position: relative;
+    display: block;
+    height: 40px;
+    width: 75px;
+    margin: 10px auto;
+
+    background-color: $accent-color;
+    border: none;
+    border-radius: 12px;
+    color: $const-white;
+    font-weight: 500;
+
+    transition: .2s all;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: $accent-hover-dark;
     }
 
-    &__image-wrapper {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
+    &:disabled {
+      cursor: auto;
+      background-color: $grey-hover;
 
-    .img {
-        display: block;
-        width: 100%;
-        max-width: 350px;
-        height: 100%;
-        max-height: 380px;
-        object-fit: contain;
-
-        border: 5px solid $grey-main;
-        border-radius: 20px;
-    }
-
-    &__header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 15px;
-
-        &__title {
-            width: 60%;
-        }
-    }
-
-    &__send-button {
-        position: relative;
-        display: block;
-        height: 40px;
-        width: 75px;
-        margin: 10px auto;
-
-        background-color: $accent-color;
-        border: none;
-        border-radius: 12px;
-        color: $text-color-white;
+      &:hover::after {
+        content: attr(data-title);
+        position: absolute;
+        top: 45px;
+        right: 0;
+        font-size: 12px;
         font-weight: 500;
-
-        transition: .2s all;
-
-        cursor: pointer;
-
-        &:hover {
-            background-color: $accent-hover-dark;
-        }
-
-        &:disabled {
-            cursor: auto;
-            background-color: $grey-hover;
-
-            &:hover::after {
-                content: attr(data-title);
-                position: absolute;
-                top: 45px;
-                right: 0;
-                font-size: 12px;
-                font-weight: 500;
-                color: #707070;
-            }
-        }
+        color: #707070;
+      }
     }
+  }
 }
 
 .close {
-    width: 20px;
-    height: 20px;
-    fill: $grey-secondary;
-    padding: 10px;
-    transition: all .2s;
+  width: 20px;
+  height: 20px;
+  fill: $grey-secondary;
+  padding: 10px;
+  transition: all .2s;
 }
 
 .more {
-    width: 24px;
-    height: 24px;
-    fill: $grey-secondary;
-    padding: 10px;
-    transition: all .2s;
+  width: 24px;
+  height: 24px;
+  fill: $grey-secondary;
+  padding: 10px;
+  transition: all .2s;
 }
 
 .close,
 .more {
-    &:hover {
-        background-color: rgba($grey-secondary, 0.08);
-        border-radius: 50%;
-        transition: all .2s;
-    }
+  &:hover {
+    background-color: rgba($grey-secondary, 0.08);
+    border-radius: 50%;
+    transition: all .2s;
+  }
 }
 
 .captcha {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }

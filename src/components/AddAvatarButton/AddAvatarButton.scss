@@ -4,7 +4,7 @@
   padding: 16px 10px 16px;
 
   color: $accent-color;
-  background-color: $grey-main;
+  background-color: $main-color;
   border: 1px solid $accent-color;
 
   &:hover {
@@ -14,7 +14,7 @@
   &_hidden {
     display: none;
   }
-  
+
   &__label {
     font-size: 18px;
   }

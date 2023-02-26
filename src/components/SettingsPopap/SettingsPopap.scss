@@ -12,7 +12,7 @@
   opacity: 0;
   visibility: hidden;
 
-  background: $grey-main;
+  background: $main-color;
   box-shadow: 0px 0px 5px 2px rgb(0 0 0 / 22%);
   border-radius: 10px;
 
@@ -26,5 +26,69 @@
     transition: .2s ease-in-out;
     transform: scaleX(1);
     transform-origin: top left;
+  }
+}
+
+.dark-mode {
+  display: flex;
+  padding-right: 15px;
+
+
+  &:hover {
+    background-color: $grey-hover;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .popup-item {
+    &:hover {
+      background: none;
+    }
+  }
+
+  .switch-btn {
+    position: relative;
+    z-index: 0;
+    
+    display: inline-block;
+    align-self: center;
+    width: 45px; /* ширина */
+    height: 15px; /* высота */
+    margin: 0;
+    padding: 0;
+
+    border-radius: 19px; /* радиус скругления */
+    background: $accent-color; /* цвет фона */
+    border: none;
+    
+    transition-duration: 300ms; /* анимация */
+    
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      
+      position: absolute;
+      top: -3px; /* положение кнопки по вертикали относительно основы */
+      left: -3px; /* положение кнопки по горизонтали относительно основы */
+      z-index: 1;
+      
+      height: 18px; /* высота кнопки */
+      width: 18px; /* ширина кнопки */
+
+      border-radius: 17px;
+      background: #fff; /* цвет кнопки */
+      border: 2px solid $accent-color;
+      
+      transition-duration: 300ms; /* анимация */
+    }
+  }
+
+  .switch-on {
+    background: $accent-color;
+
+    &::after {
+      left: 15px;
+    }
   }
 }

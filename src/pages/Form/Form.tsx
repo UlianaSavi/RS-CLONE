@@ -91,25 +91,27 @@ function Form({ mode }: FormProps) {
   };
 
   return (
-    <div className="form__background">
-      <div className="form">
-        <img className="form__logo" src={telegramLogo} alt="SVG logo" />
-        <h1 className="form__title">Telegram</h1>
-        <h2 className="form__subtitle">{data[mode].title}</h2>
-        {errorMessage ? <span className="form__error-message">{errorMessage}</span> : ''}
-        <form className="form__inputs" onSubmit={handleSubmit}>
-          {data[mode].inputs}
-          {mode === 'register-email' && <AddAvatarButton setValue={setAvatar} />}
-          <button
-            type="submit"
-            className="form__button"
-          >
-            NEXT
-          </button>
-          <Link className="form__button form__button_outline" to={data[mode].registrationRoute}>
-            {data[mode].changeModeButtonText}
-          </Link>
-        </form>
+    <div className="form-container">
+      <div className="form__background">
+        <div className="form">
+          <img className="form__logo" src={telegramLogo} alt="SVG logo" />
+          <h1 className="form__title">Telegram</h1>
+          <h2 className="form__subtitle">{data[mode].title}</h2>
+          {errorMessage ? <span className="form__error-message">{errorMessage}</span> : ''}
+          <form className="form__inputs" onSubmit={handleSubmit}>
+            {data[mode].inputs}
+            {mode === 'register-email' && <AddAvatarButton setValue={setAvatar} />}
+            <button
+              type="submit"
+              className="form__button"
+            >
+              NEXT
+            </button>
+            <Link className="form__button form__button_outline" to={data[mode].registrationRoute}>
+              {data[mode].changeModeButtonText}
+            </Link>
+          </form>
+        </div>
       </div>
     </div>
   );

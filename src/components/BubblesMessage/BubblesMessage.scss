@@ -6,11 +6,11 @@
     align-self: flex-end;
     align-items: end;
     gap: 5px;
-    
+
     &.another-user {
       align-self: flex-start;
     }
-  
+
     .avatar {
       height: 40px;
       width: 40px;
@@ -19,80 +19,80 @@
 
   &__username {
     padding: 10px 10px 0;
-  
+
     line-height: 10px;
     font-size: 13px;
-  
+
     color: $accent-color;
   }
 
   &__user-message {
     position: relative;
-  
+
     display: flex;
     flex-direction: column;
     max-width: 85%;
     min-width: 56px;
     margin-right: 64px;
-  
-    background-color: $accent-color;
+
+    background-color: $bubbles-message-bg-color;
     border-radius: 12px 6px 0px 12px;
     box-shadow: 0 1px 2px 0 rgb(16 35 47 / 15%);
     overflow: hidden;
-  
+
     .bubble__time-n-check-wrapper {
       display: flex;
       justify-content: flex-end;
       padding: 0px 6px 3px 10px;
     }
-  
+
     .bubble__time {
       margin-right: 5px;
-  
+
       font-size: 12px;
-  
+
       align-self: flex-end;
-  
+
       color: $text-color-time-out;
     }
-  
-  
+
+
     &::after {
       content: "";
-  
+
       position: absolute;
       bottom: 0;
       right: -19px;
-  
+
       display: block;
       height: 9.5px;
       width: 20px;
-  
+
       background: inherit;
-  
+
       clip-path: url(#svgPath);
     }
-  
+
     &.another-user {
       align-self: flex-start;
-  
-      background-color: $grey-main;
+
+      background-color: $main-color;
       border-radius: 6px 12px 12px 0px;
-  
+
       .bubble__time {
         color: $text-color-time;
       }
-  
+
       &::after {
         left: -20px;
-  
+
         transform: scale(-1, 1);
       }
-  
+
       .img {
         width: 100%;
         max-width: 374px;
-  
+
         &.none {
           display: none;
         }
@@ -101,18 +101,18 @@
           max-width: 260px;
         }
       }
-  
+
       .in-group {
         margin-top: 10px;
       }
     }
-  
+
     .img {
       width: 100%;
       max-width: 374px;
-  
+
       cursor: pointer;
-  
+
       &.none {
         display: none;
       }
@@ -124,10 +124,10 @@
   }
 
   &__check-mark {
-    fill: $text-color-white;
+    fill: $text-color-time-out;
     width: 12px;
     height: 12px;
-  
+
     &.second-check {
       position: absolute;
       right: 4px;

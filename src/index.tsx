@@ -10,6 +10,7 @@ import { ModalPhotoContextProvider } from './context/ModalPhotoContext';
 import { UserSidebarProvider } from './context/UserSidebarContext';
 import { ClickedEmojiProvider } from './context/ClickedEmojiContext';
 import { SelectedUsersContextProvider } from './context/SelectedUsersContext';
+import { ThemeProvider } from './context/ThemeContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -24,9 +25,11 @@ root.render(
             <SendImageContextProvider>
               <ModalPhotoContextProvider>
                 <ClickedEmojiProvider>
-                  <SelectedUsersContextProvider>
-                    <App />
-                  </SelectedUsersContextProvider>
+                  <ThemeProvider>
+                    <SelectedUsersContextProvider>
+                      <App />
+                    </SelectedUsersContextProvider>
+                  </ThemeProvider>
                 </ClickedEmojiProvider>
               </ModalPhotoContextProvider>
             </SendImageContextProvider>
