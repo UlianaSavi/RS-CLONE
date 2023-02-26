@@ -142,11 +142,11 @@ function ChatPreview({
             <input
               className="chat-preview__checkbox"
               type="checkbox"
-              id="delete-options"
+              id={`user${uid}`}
               checked={checked}
               onChange={hanldeCheckbox}
             />
-            <label htmlFor="delete-options"> </label>
+            <label htmlFor={`user${uid}`}> </label>
           </>
         )}
         <Avatar image={photoURL} />
