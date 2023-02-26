@@ -16,7 +16,6 @@ function Gallery() {
 
   useEffect(() => {
     if (activeChatID) {
-      console.log(activeChatID);
       onSnapshot(doc(db, 'chats', activeChatID), (d) => {
         const data = d.data();
         if (!data) {

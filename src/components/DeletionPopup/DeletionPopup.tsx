@@ -44,12 +44,14 @@ function DeletionPopup({
   };
 
   const handleDeleteBtn = () => {
-    const combinedID = (currentUser?.uid || '') > userIdUnderRMK ? `${currentUser?.uid}${userIdUnderRMK}` : `${userIdUnderRMK}${currentUser?.uid}`;
-    deleteChat(combinedID, currentUser?.uid || '', userIdUnderRMK, checked);
-    closePopup();
-    if (userIdUnderRMK === userID) {
-      setUserID('');
-      setActiveChatID('');
+    if (currentUser) {
+      const combinedID = (currentUser.uid) > userIdUnderRMK ? `${currentUser.uid}${userIdUnderRMK}` : `${userIdUnderRMK}${currentUser.uid}`;
+      deleteChat(combinedID, currentUser.uid, userIdUnderRMK, checked);
+      closePopup();
+      if (userIdUnderRMK === userID) {
+        setUserID('');
+        setActiveChatID('');
+      }
     }
   };
 

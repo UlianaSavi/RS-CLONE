@@ -24,15 +24,17 @@ function ContextMenu({
   const { currentUser } = useContext(AuthContext);
 
   const resetMessagesCounter = async () => {
-    if (userIdUnderRMK !== MAIN_GROUP_CHAT_ID) {
-      const combinedID = (currentUser?.uid || '') > userIdUnderRMK ? `${currentUser?.uid}${userIdUnderRMK}` : `${userIdUnderRMK}${currentUser?.uid}`;
-      await updateDoc(doc(db, 'userChats', currentUser?.uid || ''), {
-        [`${combinedID}.unreadMessages`]: 0,
-      });
-    } else {
-      await updateDoc(doc(db, 'userGroups', currentUser?.uid || ''), {
-        [`${userIdUnderRMK}.unreadMessages`]: 0,
-      });
+    if (currentUser) {
+      if (userIdUnderRMK !== MAIN_GROUP_CHAT_ID) {
+        const combinedID = (currentUser.uid) > userIdUnderRMK ? `${currentUser.uid}${userIdUnderRMK}` : `${userIdUnderRMK}${currentUser.uid}`;
+        await updateDoc(doc(db, 'userChats', currentUser.uid), {
+          [`${combinedID}.unreadMessages`]: 0,
+        });
+      } else {
+        await updateDoc(doc(db, 'userGroups', currentUser.uid), {
+          [`${userIdUnderRMK}.unreadMessages`]: 0,
+        });
+      }
     }
   };
 
