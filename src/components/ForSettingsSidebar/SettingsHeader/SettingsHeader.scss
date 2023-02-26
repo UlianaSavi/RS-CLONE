@@ -1,84 +1,84 @@
 @import "../../../styles/variables";
 
 .settings-header {
-    height: 56px;
-    width: 100%;
-    max-width: 420px;
+  height: 56px;
+  width: 100%;
+  max-width: 420px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 
-    background-color: $grey-main;
+  background-color: $main-color;
 
-    @media (max-width: 600px) {
-      max-width: 600px;
+  @media (max-width: 600px) {
+    max-width: 600px;
+  }
+
+  &__title {
+    width: 50%;
+    font-size: 22px;
+    text-align: left;
+    flex: 2;
+  }
+
+  &__close-button {
+    margin: 0 .4rem;
+
+    &::before {
+      top: -8px !important;
+      left: -5px !important;
+    }
+  }
+
+  &__logout-button {
+    position: relative;
+
+    &:hover::after {
+      content: attr(data-title);
+
+      z-index: 5;
+      position: absolute;
+      top: 45px;
+      right: 8px;
+
+      font-size: 13px;
+      font-weight: 500;
+      color: $grey-lite;
+    }
+  }
+
+  &__close-button,
+  &__edit-button,
+  &__logout-button {
+    height: fit-content;
+    min-height: 25px;
+    position: relative;
+    border: none;
+    background: none;
+
+    cursor: pointer;
+
+    &::before {
+      z-index: 1;
+      content: "";
+      position: absolute;
+      top: -6px;
+      left: -2px;
+
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: none;
+      transition: linear .15s;
     }
 
-    &__title {
-        width: 50%;
-        font-size: 22px;
-        text-align: left;
-        flex: 2;
-    }
-
-    &__close-button {
-      margin: 0 .4rem;
-
+    &:hover {
       &::before {
-          top: -8px !important;
-          left: -5px !important;
+        z-index: 1;
+        transition: linear .15s;
+        background: $grey-hover;
       }
     }
-
-    &__logout-button {
-        position: relative;
-
-        &:hover::after {
-            content: attr(data-title);
-
-            z-index: 5;
-            position: absolute;
-            top: 45px;
-            right: 8px;
-
-            font-size: 13px;
-            font-weight: 500;
-            color: $grey-lite;
-        }
-    }
-
-    &__close-button,
-    &__edit-button,
-    &__logout-button {
-        height: fit-content;
-        min-height: 25px;
-        position: relative;
-        border: none;
-        background: none;
-    
-        cursor: pointer;
-    
-        &::before {
-            z-index: 1;
-            content: "";
-            position: absolute;
-            top: -6px;
-            left: -2px;
-    
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: none;
-            transition: linear .15s;
-        }
-    
-        &:hover {
-            &::before {
-                z-index: 1;
-                transition: linear .15s;
-                background: $grey-hover;
-            }
-        }
-    }
+  }
 }

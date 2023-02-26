@@ -12,7 +12,7 @@
   font-size: 18px;
 
   color: $text-color-white;
-  background-color: $grey-main;
+  background-color: $main-color;
   border: 1px solid $grey-lite;
   border-radius: 10px;
   outline: none;
@@ -27,7 +27,7 @@
     border: 2px solid $accent-color;
   }
 
-  &:focus + .form-input__label {
+  &:focus+.form-input__label {
     left: 7px;
     top: -12px;
     z-index: 10;
@@ -36,7 +36,7 @@
 
     color: $accent-color;
   }
-  
+
   &::placeholder {
     color: $grey-lite;
   }
@@ -52,12 +52,12 @@
     padding: 0 5px;
 
     color: $grey-secondary;
-    background-color: $grey-main;
+    background-color: $main-color;
 
     transition: .2s all;
   }
 
-  &:not(:placeholder-shown) + .form-input__label {
+  &:not(:placeholder-shown)+.form-input__label {
     left: 7px;
     top: -12px;
     z-index: 10;

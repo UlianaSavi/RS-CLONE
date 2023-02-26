@@ -7,13 +7,17 @@
     margin-top: 10px;
     padding: 10px;
 
-    background: $grey-main;
+    background: $main-color;
 
     .github-icon {
         width: 100%;
         max-width: 45px;
-        cursor: pointer;
+
         transition: all .3s;
+        
+        cursor: pointer;
+
+        fill: $rss-link;
 
         &:hover {
             fill: $accent-color;
@@ -25,10 +29,15 @@
     &__rsschool {
         width: 100%;
         max-width: 100px;
+
         transition: all .3s;
+
+        fill: $rss-link;
 
         .links__rsschool__path {
             transition: all .3s;
+
+            fill: $rss-link;
         }
 
         &:hover {

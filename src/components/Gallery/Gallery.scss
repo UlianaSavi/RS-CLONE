@@ -1,35 +1,35 @@
 @import "../../styles/variables";
 
 .gallery {
-    min-height: 200px;
-    background: $grey-main;
+  min-height: 200px;
+  background: $main-color;
 
-    &__tab {
-        display: flex;
-        align-items: center;
-        padding: 13px;
+  &__tab {
+    display: flex;
+    align-items: center;
+    padding: 13px;
 
-        white-space: nowrap;
-        font-size: 1rem;
+    white-space: nowrap;
+    font-size: 1rem;
 
-        background-color: $grey-main;
-        border: none;
-        border-bottom: 3px solid $accent-color;
-        cursor: pointer;
+    background-color: $main-color;
+    border: none;
+    border-bottom: 3px solid $accent-color;
+    cursor: pointer;
 
-        &:hover {
-            background: $accent-hover-folder;
-        }
-
-        &__title {
-            color: $accent-color;
-            margin-right: 5px;
-        }
+    &:hover {
+      background: $accent-hover-folder;
     }
 
-    &__images {
-        display: flex;
-        flex-wrap: wrap;
+    &__title {
+      color: $accent-color;
+      margin-right: 5px;
+    }
+  }
+
+  &__images {
+    display: flex;
+    flex-wrap: wrap;
 
         .btn {
             max-width: 34%;
