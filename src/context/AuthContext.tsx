@@ -39,7 +39,7 @@ export function AuthContextProvider({ children }: Props) {
 
   useEffect(() => {
     ((async () => {
-      if (currentUser?.uid) {
+      if (currentUser) {
         const user = await getDoc(doc(db, 'users', currentUser?.uid));
         setUserFull(user.data() as User);
       }

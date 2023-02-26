@@ -64,7 +64,7 @@ function ChatPreview({
     if (currentUser) {
       const combinedID = (currentUser.uid) > data.userInfo.uid
         ? `${currentUser.uid}${data.userInfo.uid}`
-        : `${data.userInfo.uid}${currentUser?.uid}`;
+        : `${data.userInfo.uid}${currentUser.uid}`;
       setActiveUserID(data.userInfo.uid);
       setActiveChatID(combinedID);
       resetMessagesCounter();
