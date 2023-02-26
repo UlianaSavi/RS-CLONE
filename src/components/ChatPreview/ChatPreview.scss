@@ -94,9 +94,16 @@
   }
 
   &__checkbox {
-    margin-right: 15px;
+    width: 40px;
+    height: 20px;
+    margin-right: 0;
     position: absolute;
     opacity: 0;
+    cursor: pointer;
+  }
+
+  label {
+    cursor: pointer;
   }
 
   &__checkbox + label::before {
@@ -123,6 +130,7 @@
 }
 
 .chat-preview-wrapper {
+  position: relative;
   display: flex;
   align-items: center;
   text-align: left;
