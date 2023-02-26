@@ -38,6 +38,7 @@ function UserSidebarInfo() {
       setData(data);
     }
   };
+
   useEffect(() => {
     getData();
     onSnapshot(doc(db, 'users', userID), (d) => {
@@ -62,7 +63,7 @@ function UserSidebarInfo() {
         <PopupMenuItem label={activeChatID !== userID ? userInfo?.displayName : 'Launge'} icon={<NameUserIcon />} title={activeChatID !== userID ? 'Username' : 'Pulic name'} />
       </div>
       <div className="user-sidebar-info__item">
-        <PopupMenuItem label="About" icon={<InfoIcon />} title="About" />
+        <PopupMenuItem label={userInfo?.bio || 'About'} icon={<InfoIcon />} title="About" />
       </div>
     </div>
   );

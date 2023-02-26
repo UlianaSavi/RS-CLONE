@@ -8,7 +8,7 @@ import { db } from '../../firebaseConfig';
 import Avatar from '../Avatar/Avatar';
 import { AuthContext } from '../../context/AuthContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
-import type { User, UserChat } from '../../types';
+import type { UserChat } from '../../types';
 import './ChatPreview.scss';
 import { ActiveVisibilitySidebar } from '../../context/VisibleSidebarContext';
 import { convertTimestamp } from '../../hooks/timestampConverter';
@@ -32,17 +32,19 @@ function ChatPreview({
   } = data.userInfo;
 
   const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
-  const currentUser: User = useContext(AuthContext) as User;
+  const { currentUser } = useContext(AuthContext);
   const { setActiveSidebar } = useContext(ActiveVisibilitySidebar);
 
   const resetCounter = async (isGroup: boolean) => {
-    const res = await getDoc(doc(db, isGroup ? 'userGroups' : 'userChats', currentUser.uid));
-    const chats = res.data();
-    if (!chats) return;
-    if (chats[activeChatID]) {
-      await updateDoc(doc(db, isGroup ? 'userGroups' : 'userChats', currentUser.uid), {
-        [`${activeChatID}.unreadMessages`]: 0,
-      });
+    if (currentUser) {
+      const res = await getDoc(doc(db, isGroup ? 'userGroups' : 'userChats', currentUser.uid));
+      const chats = res.data();
+      if (!chats) return;
+      if (chats[activeChatID]) {
+        await updateDoc(doc(db, isGroup ? 'userGroups' : 'userChats', currentUser.uid), {
+          [`${activeChatID}.unreadMessages`]: 0,
+        });
+      }
     }
   };
 
@@ -59,14 +61,16 @@ function ChatPreview({
   const [isOnlineStatus, setIsOnlineStatus] = useState(data.userInfo?.isOnline || false);
 
   const selectChat = () => {
-    const combinedID = currentUser.uid > data.userInfo.uid
-      ? `${currentUser.uid}${data.userInfo.uid}`
-      : `${data.userInfo.uid}${currentUser.uid}`;
-    setActiveUserID(data.userInfo.uid);
-    setActiveChatID(combinedID);
-    resetMessagesCounter();
-    setSearchMode(false);
-    if (window.innerWidth <= 920) setActiveSidebar(false);
+    if (currentUser) {
+      const combinedID = (currentUser.uid) > data.userInfo.uid
+        ? `${currentUser.uid}${data.userInfo.uid}`
+        : `${data.userInfo.uid}${currentUser.uid}`;
+      setActiveUserID(data.userInfo.uid);
+      setActiveChatID(combinedID);
+      resetMessagesCounter();
+      setSearchMode(false);
+      if (window.innerWidth <= 920) setActiveSidebar(false);
+    }
   };
 
   const selectGroup = () => {

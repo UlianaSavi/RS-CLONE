@@ -31,22 +31,34 @@
     display: flex;
     flex-wrap: wrap;
 
-    .img {
-      max-width: 34%;
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
-      cursor: pointer;
-    }
+        .btn {
+            max-width: 34%;
+            width: 140px;
+            height: 140px;
+            cursor: pointer;
+            padding: 0;
+        }
 
-    @media (max-width: 420px) {
-      .img {
-        max-width: 50%;
-        width: 176px;
-        height: 176px;
-      }
+        .img {
+            max-width: 100%;
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 420px) {
+            .btn {
+                max-width: 50%;
+                width: 176px;
+                height: 176px;
+            }
+
+            .img {
+                width: 176px;
+                height: 176px;
+            }
+        }
     }
-  }
 
 
 }

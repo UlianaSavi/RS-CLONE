@@ -1,9 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import '../../pages/Form/Form.scss';
 import './AddAvatarButton.scss';
 
 interface AddAvatarButtonProps {
-  setValue: any;
+  setValue: any; // TODO: ТИПИЗИРОВАТЬ
 }
 
 function AddAvatarButton({ setValue }: AddAvatarButtonProps) {

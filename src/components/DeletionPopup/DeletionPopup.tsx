@@ -20,7 +20,7 @@ interface ContextMenuProps {
 function DeletionPopup({
   isVisible, setVisibility, userIdUnderRMK,
 }: ContextMenuProps) {
-  const currentUser: User = useContext(AuthContext) as User;
+  const { currentUser } = useContext(AuthContext);
   const { userID, setUserID } = useContext(UserContext);
   const [userData, setUserData] = useState<User | null>(null);
   const { setActiveChatID } = useContext(ActiveChatContext);
@@ -44,12 +44,14 @@ function DeletionPopup({
   };
 
   const handleDeleteBtn = () => {
-    const combinedID = currentUser.uid > userIdUnderRMK ? `${currentUser.uid}${userIdUnderRMK}` : `${userIdUnderRMK}${currentUser.uid}`;
-    deleteChat(combinedID, currentUser.uid, userIdUnderRMK, checked);
-    closePopup();
-    if (userIdUnderRMK === userID) {
-      setUserID('');
-      setActiveChatID('');
+    if (currentUser) {
+      const combinedID = (currentUser.uid) > userIdUnderRMK ? `${currentUser.uid}${userIdUnderRMK}` : `${userIdUnderRMK}${currentUser.uid}`;
+      deleteChat(combinedID, currentUser.uid, userIdUnderRMK, checked);
+      closePopup();
+      if (userIdUnderRMK === userID) {
+        setUserID('');
+        setActiveChatID('');
+      }
     }
   };
 
