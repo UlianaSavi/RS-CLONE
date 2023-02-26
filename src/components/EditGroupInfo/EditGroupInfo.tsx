@@ -68,7 +68,7 @@ export default function EditGroupInfo({
   }, []);
 
   return (
-    <div className="edit-profile">
+    <div className="edit-group">
       <div className="header">
         <button
           type="button"
@@ -79,11 +79,16 @@ export default function EditGroupInfo({
         </button>
         <h3 className="header__text">New Group</h3>
       </div>
-      <section className="edit-user-info">
+      <section className="edit-group__info">
         <AddPhotoButton handleChange={changePhoto} imageSrc={groupPhoto} />
         <FormInput type="text" id="name" label="Group Name" value={groupName} setValue={setGroupName} mode="edit" />
       </section>
-      {usersArr}
+      <section className="edit-group__users-list">
+        <div className="edit-group__users-count">
+          {`${usersArr?.length} members`}
+        </div>
+        {usersArr}
+      </section>
     </div>
   );
 }

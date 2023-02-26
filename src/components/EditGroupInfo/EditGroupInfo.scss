@@ -1,6 +1,31 @@
 @import "../../styles/variables";
 
-.edit-profile {
+.edit-group {
+
+  &__info {
+    margin-bottom: 12px;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+    padding-bottom: 1.5rem;
+  
+    background-color: $grey-main;
+  }
+
+  &__users-list {
+    padding: 10px;
+
+    background-color: $grey-main;
+  }
+
+  &__users-count {
+    padding: 5px 10px;
+
+    color: $accent-color;
+  }
+
   .header {
     display: flex;
     gap: 1rem;
@@ -38,12 +63,4 @@
   }
 }
 
-.edit-user-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 0 1.5rem;
-  padding-bottom: 1.5rem;
 
-  background-color: $grey-main;
-}
