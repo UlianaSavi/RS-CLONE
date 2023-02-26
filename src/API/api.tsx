@@ -364,7 +364,7 @@ export const createNewGroup = async (
         groupID,
       },
       [`${groupID}.lastMessage`]: {
-        text: ' ',
+        text: 'You have been added to the group',
         date: serverTimestamp(),
       },
       [`${groupID}.unreadMessages`]: 0,

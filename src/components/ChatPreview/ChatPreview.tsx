@@ -9,7 +9,6 @@ import Avatar from '../Avatar/Avatar';
 import { AuthContext } from '../../context/AuthContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
 import { UserContext } from '../../context/UserContext';
-import type { User, UserChat } from '../../types';
 import './ChatPreview.scss';
 import { ActiveVisibilitySidebar } from '../../context/VisibleSidebarContext';
 import { SelectedUsersContext } from '../../context/SelectedUsersContext';
@@ -125,7 +124,8 @@ function ChatPreview({
   };
 
   useEffect(() => {
-    setChecked(false);
+    const isSelected = selectedUsers.includes(uid);
+    setChecked(isSelected);
   }, []);
 
   const hanldeCheckbox = () => setChecked(!checked);

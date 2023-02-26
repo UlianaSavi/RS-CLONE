@@ -128,7 +128,7 @@ function ChatsList({
           unreadMessages: item?.unreadMessages || 0,
           userInfo: item.groupInfo,
         }));
-        updateChatsList(groupsData);
+        updateChatsList(groupsData.sort((a, b) => b.lastMessage.date - a.lastMessage.date));
       });
     }
   };
