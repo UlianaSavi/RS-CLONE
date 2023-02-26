@@ -25,11 +25,11 @@ root.render(
             <SendImageContextProvider>
               <ModalPhotoContextProvider>
                 <ClickedEmojiProvider>
-                  <ThemeProvider>
-                    <SelectedUsersContextProvider>
+                  <SelectedUsersContextProvider>
+                    <ThemeProvider>
                       <App />
-                    </SelectedUsersContextProvider>
-                  </ThemeProvider>
+                    </ThemeProvider>
+                  </SelectedUsersContextProvider>
                 </ClickedEmojiProvider>
               </ModalPhotoContextProvider>
             </SendImageContextProvider>
