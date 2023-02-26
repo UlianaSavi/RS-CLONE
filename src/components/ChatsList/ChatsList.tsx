@@ -151,7 +151,7 @@ function ChatsList({
 
   return (
     <>
-      <div className="chat-list">
+      <div className={`chat-list ${isSearchMode ? 'search-view' : ''}`}>
         {chatsArr}
       </div>
       <ContextMenu
