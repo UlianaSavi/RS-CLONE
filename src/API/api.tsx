@@ -89,6 +89,7 @@ export const singUp = async (
       [`${MAIN_GROUP_CHAT_ID}.groupInfo`]: {
         displayName: MAIN_GROUP_CHAT_NAME,
         photoURL: MAIN_GROUP_CHAT_PHOTO,
+        groupID: MAIN_GROUP_CHAT_ID,
       },
       [`${MAIN_GROUP_CHAT_ID}.lastMessage`]: {
         text: lastMessage.text || '',
