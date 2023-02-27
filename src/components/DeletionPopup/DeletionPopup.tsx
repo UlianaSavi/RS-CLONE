@@ -1,42 +1,56 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useContext, useEffect, useState } from 'react';
-import { doc, getDoc } from '@firebase/firestore';
+import { doc, getDoc, DocumentData } from '@firebase/firestore';
 import { db } from '../../firebaseConfig';
-import { deleteChat } from '../../API/api';
+import { deleteChat, deleteGroup, MAIN_GROUP_CHAT_ID } from '../../API/api';
 import { AuthContext } from '../../context/AuthContext';
 import { UserContext } from '../../context/UserContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
-import type { User } from '../../types';
 import './DeletionPopup.scss';
 import Avatar from '../Avatar/Avatar';
 
 interface ContextMenuProps {
   isVisible: boolean,
   setVisibility: React.Dispatch<React.SetStateAction<boolean>>,
-  userIdUnderRMK: string
+  userIdToDelete: string
 }
 
 function DeletionPopup({
-  isVisible, setVisibility, userIdUnderRMK,
+  isVisible, setVisibility, userIdToDelete,
 }: ContextMenuProps) {
   const { currentUser } = useContext(AuthContext);
   const { userID, setUserID } = useContext(UserContext);
-  const [userData, setUserData] = useState<User | null>(null);
+  const [userData, setUserData] = useState<DocumentData | null | undefined>(null);
   const { setActiveChatID } = useContext(ActiveChatContext);
   const [checked, setChecked] = useState(false);
+  const [isGroup, setIsGroup] = useState(false);
+  const [isAdmin, setAsAdmin] = useState(false);
 
   const getUserData = async () => {
-    if (userIdUnderRMK) {
-      const user = await getDoc(doc(db, 'users', userIdUnderRMK));
-      const data = user.data() as User;
-      setUserData(data);
+    setUserData(null);
+    setAsAdmin(false);
+    setIsGroup(false);
+    if (userIdToDelete) {
+      const user = await getDoc(doc(db, 'users', userIdToDelete));
+      const data = user.data();
+      if (data) {
+        setUserData(data);
+      } else {
+        setIsGroup(true);
+        const group = await getDoc(doc(db, 'chats', userIdToDelete));
+        const groupData = group.data();
+        setUserData(groupData);
+        if (currentUser?.uid === groupData?.admin) {
+          setAsAdmin(true);
+        }
+      }
     }
   };
 
   useEffect(() => {
     getUserData();
-  }, [userIdUnderRMK]);
+  }, [userIdToDelete]);
 
   const closePopup = () => {
     setVisibility(false);
@@ -45,10 +59,14 @@ function DeletionPopup({
 
   const handleDeleteBtn = () => {
     if (currentUser) {
-      const combinedID = (currentUser.uid) > userIdUnderRMK ? `${currentUser.uid}${userIdUnderRMK}` : `${userIdUnderRMK}${currentUser.uid}`;
-      deleteChat(combinedID, currentUser.uid, userIdUnderRMK, checked);
+      if (!isGroup) {
+        const combinedID = (currentUser.uid) > userIdToDelete ? `${currentUser.uid}${userIdToDelete}` : `${userIdToDelete}${currentUser.uid}`;
+        deleteChat(combinedID, currentUser.uid, userIdToDelete, checked);
+      } else {
+        deleteGroup(userIdToDelete, currentUser.uid, checked);
+      }
       closePopup();
-      if (userIdUnderRMK === userID) {
+      if (userIdToDelete === userID) {
         setUserID('');
         setActiveChatID('');
       }
@@ -62,45 +80,66 @@ function DeletionPopup({
     }
   };
 
-  const hanldeCheckbox = () => setChecked(!checked);
+  const hanldeCheckbox = () => {
+    setChecked(!checked);
+  };
 
   return (
     <div className={`${isVisible ? 'deletion-popup__background' : ''}`} onClick={handleBg}>
       <div className={`deletion-popup ${isVisible ? 'active' : ''}`}>
         <div className="deletion-popup__header-wrapper">
           <Avatar image={userData?.photoURL || ''} />
-          <h2 className="deletion-popup__header">Delete chat</h2>
+          <h2 className="deletion-popup__header">{isGroup ? 'Delete group' : 'Delete chat'}</h2>
         </div>
-        <div className="deletion-popup__description">
-          {`Are you sure you want to delete the chat with ${userData?.displayName}?`}
-        </div>
-        <div className="deletion-popup__checkbox-wrapper">
-          <input
-            type="checkbox"
-            id="delete-options"
-            checked={checked}
-            onChange={hanldeCheckbox}
-          />
-          <label htmlFor="delete-options">
-            {`Also delete for ${userData?.displayName}`}
-          </label>
-        </div>
-        <div className="deletion-popup__buttons-wrapper">
-          <button
-            type="button"
-            className="deletion-popup__button"
-            onClick={closePopup}
-          >
-            CANCEL
-          </button>
-          <button
-            type="button"
-            className="deletion-popup__button delete"
-            onClick={handleDeleteBtn}
-          >
-            DELETE CHAT
-          </button>
-        </div>
+        {userIdToDelete === MAIN_GROUP_CHAT_ID ? (
+          <div className="deletion-popup__description">
+            Sorry, but it&apos;s impossible to leave this group :(
+            You are here forever and ever until the end of time!
+          </div>
+        ) : (
+          <>
+            <div className="deletion-popup__description">
+              {isGroup
+                ? `Are you sure you want to delete and leave the group ${userData?.name}?`
+                : `Are you sure you want to delete the chat with ${userData?.displayName}?`}
+            </div>
+            {!isGroup || isAdmin ? (
+              <button
+                type="button"
+                className="deletion-popup__checkbox-wrapper"
+              >
+                <input
+                  className="deletion-popup__checkbox"
+                  type="checkbox"
+                  id="delete-options"
+                  checked={checked}
+                  onChange={hanldeCheckbox}
+                />
+                <label htmlFor="delete-options">
+                  {isGroup
+                    ? 'Delete for all members'
+                    : `Also delete for ${userData?.displayName}`}
+                </label>
+              </button>
+            ) : null}
+            <div className="deletion-popup__buttons-wrapper">
+              <button
+                type="button"
+                className="deletion-popup__button"
+                onClick={closePopup}
+              >
+                CANCEL
+              </button>
+              <button
+                type="button"
+                className="deletion-popup__button delete"
+                onClick={handleDeleteBtn}
+              >
+                {isGroup ? 'DELETE GROUP' : 'DELETE CHAT'}
+              </button>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

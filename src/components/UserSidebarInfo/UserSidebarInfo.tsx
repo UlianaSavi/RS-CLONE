@@ -71,7 +71,12 @@ function UserSidebarInfo() {
         />
         <div className="user-sidebar-info__wrapper__name">{activeChatID !== userID ? userInfo?.displayName : groupInfo?.name}</div>
         <div className="user-sidebar-info__wrapper__status">
-          {activeChatID !== userID ? onlineStatus : `${groupInfo?.members.length} members`}
+          {activeChatID !== userID ? onlineStatus : `${groupInfo?.members.reduce((acc: number, curr: number) => {
+            if (Object.values(curr)[0]) {
+              return acc + 1;
+            }
+            return acc;
+          }, 0)} members`}
         </div>
       </div>
       <div className="user-sidebar-info__item">

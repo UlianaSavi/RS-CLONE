@@ -197,6 +197,51 @@ export const deleteChat = async (
   }
 };
 
+export const deleteGroup = async (
+  chatID: string,
+  currentUserID: string,
+  forAll: boolean,
+) => {
+  const res = await getDoc(doc(db, 'chats', chatID));
+  const data = res.data();
+  if (!data) return;
+
+  if (forAll) {
+    const membersArr = data.members.map((member: {[key: string]: boolean}) => {
+      if (Object.values(member)[0]) return Object.keys(member)[0];
+      return null;
+    });
+
+    const promises = membersArr.map(async (memberID: string | null) => {
+      if (memberID) {
+        await updateDoc(doc(db, 'userGroups', memberID), {
+          [chatID]: deleteField(),
+        });
+      }
+    });
+    Promise.all(promises);
+
+    await deleteDoc(doc(db, 'chats', chatID));
+  } else {
+    await updateDoc(doc(db, 'userGroups', currentUserID), {
+      [chatID]: deleteField(),
+    });
+
+    const updatedMembersArr = data.members.map((member: {[key: string]: boolean}) => {
+      if (Object.keys(member)[0] === currentUserID) {
+        return {
+          [currentUserID]: false,
+        };
+      }
+      return member;
+    });
+
+    await updateDoc(doc(db, 'chats', chatID), {
+      members: updatedMembersArr,
+    });
+  }
+};
+
 export const loadMessagePhoto = async (image: File | null) => {
   const storageRef = ref(storage, `chat_image_${Math.floor(Date.now() + Math.random() * 900000)}`);
   const uploadTask = uploadBytesResumable(storageRef, image as File);
@@ -277,20 +322,22 @@ export const sendMessage = async (
       return null;
     });
 
-    const promises = membersArr.map(async (memberID: string) => {
-      const groups = await getDoc(doc(db, 'userGroups', memberID));
-      const groupsData = groups.data();
-      if (!groupsData) return;
-      let { unreadMessages } = groupsData[activeChatID];
-      if (Number.isNaN(unreadMessages)) unreadMessages = 0;
+    const promises = membersArr.map(async (memberID: string | null) => {
+      if (memberID) {
+        const groups = await getDoc(doc(db, 'userGroups', memberID));
+        const groupsData = groups.data();
+        if (!groupsData) return;
+        let { unreadMessages } = groupsData[activeChatID];
+        if (Number.isNaN(unreadMessages)) unreadMessages = 0;
 
-      await updateDoc(doc(db, 'userGroups', memberID), {
-        [`${activeChatID}.lastMessage`]: {
-          text: messageText || 'Photo',
-          date: serverTimestamp(),
-        },
-        [`${activeChatID}.unreadMessages`]: unreadMessages += 1,
-      });
+        await updateDoc(doc(db, 'userGroups', memberID), {
+          [`${activeChatID}.lastMessage`]: {
+            text: messageText || 'Photo',
+            date: serverTimestamp(),
+          },
+          [`${activeChatID}.unreadMessages`]: unreadMessages += 1,
+        });
+      }
     });
     Promise.all(promises);
   }

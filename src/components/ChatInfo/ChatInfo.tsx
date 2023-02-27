@@ -68,7 +68,12 @@ function ChatInfo() {
           {activeChatID !== userID ? userInfo?.displayName : groupInfo?.name}
         </div>
         <div className={`chat-info__status ${isOnline && activeChatID !== userID ? 'online' : ''}`}>
-          {activeChatID !== userID ? onlineStatus : `${groupInfo?.members.length} members`}
+          {activeChatID !== userID ? onlineStatus : `${groupInfo?.members.reduce((acc: number, curr: number) => {
+            if (Object.values(curr)[0]) {
+              return acc + 1;
+            }
+            return acc;
+          }, 0)} members`}
         </div>
       </div>
     </div>

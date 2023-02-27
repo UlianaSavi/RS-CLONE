@@ -14,7 +14,6 @@ import './ChatPreview.scss';
 import { ActiveVisibilitySidebar } from '../../context/VisibleSidebarContext';
 import { SelectedUsersContext } from '../../context/SelectedUsersContext';
 import { convertTimestamp } from '../../hooks/timestampConverter';
-import { MAIN_GROUP_CHAT_ID } from '../../API/api';
 
 interface ChatPreviewProps {
   data: DocumentData,
@@ -105,7 +104,7 @@ function ChatPreview({
   const lastMessageTime = !isSearchMode ? convertTimestamp(data?.lastMessage?.date) : '';
 
   const handleContextMenu = (event: React.MouseEvent) => {
-    onContextMenu(event, uid || MAIN_GROUP_CHAT_ID);
+    onContextMenu(event, uid || data?.userInfo.groupID);
   };
 
   const [checked, setChecked] = useState(false);
