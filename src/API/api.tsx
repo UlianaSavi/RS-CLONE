@@ -55,9 +55,13 @@ export const setOfflineStatus = async (user: User) => {
 };
 
 export const setOnlineStatus = async (user: User) => {
-  await updateDoc(doc(db, 'users', user.uid), {
-    isOnline: true,
-  });
+  const userData = await getDoc(doc(db, 'users', user.uid));
+  const data = userData.data();
+  if (data) {
+    await updateDoc(doc(db, 'users', user.uid), {
+      isOnline: true,
+    });
+  }
 };
 
 export const singUp = async (
