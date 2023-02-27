@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import Chat from '../../components/Chat/Chat';
 import ModalPhoto from '../../components/ModalPhoto/ModalPhoto';
 import Sidebar from '../../components/Sidebar/Sidebar';
@@ -6,6 +6,7 @@ import UserSidebar from '../../components/UserSidebar/UserSidebar';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
 import { ModalPhotoContext } from '../../context/ModalPhotoContext';
 import { SendImageContext } from '../../context/SendImageContext';
+import { UserContext } from '../../context/UserContext';
 import { UserSidebarContext } from '../../context/UserSidebarContext';
 import { ThemeContext } from '../../context/ThemeContext';
 import { ActiveVisibilitySidebar } from '../../context/VisibleSidebarContext';
@@ -22,7 +23,8 @@ function Messenger() {
 
   const { isActiveSidebar, setActiveSidebar } = useContext(ActiveVisibilitySidebar);
   const { userSidebar } = useContext(UserSidebarContext);
-  const { activeChatID } = useContext(ActiveChatContext);
+  const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
+  const { setUserID } = useContext(UserContext);
   const { isDark } = useContext(ThemeContext);
 
   window.addEventListener('resize', () => {
@@ -45,6 +47,11 @@ function Messenger() {
       setImagePopap(false);
     }
   };
+
+  useEffect(() => {
+    setUserID('');
+    setActiveChatID('');
+  }, []);
 
   return (
     <div className={isDark ? 'messenger-container dark' : 'messenger-container light'}>
