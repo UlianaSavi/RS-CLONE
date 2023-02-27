@@ -82,7 +82,7 @@ function ChatWindow() {
         setDatesNMessagesArr(splitedByDate);
       });
     }
-  }, [activeChatID]);
+  }, [activeChatID, currentUser]);
 
   const messageContainerRef = useRef<HTMLDivElement>(null);
   const messageContainer = messageContainerRef.current;
