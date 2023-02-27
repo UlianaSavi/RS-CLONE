@@ -90,10 +90,14 @@
   }
 }
 
+.button-wrapper {
+  position: absolute;
+  bottom: 7%;
+  right: 9%;
+}
+
 .to-last-message-button {
-  position: sticky;
-  bottom: 0;
-  left: calc(100% - 10px);
+  position: fixed;
   width: 54px;
   height: 54px;
   z-index: 20;
@@ -114,6 +118,11 @@
   visibility: visible;
 
   transition: .2s all;
+
+  @media (max-width: 600px) {
+    width: 34px;
+    height: 34px;
+  }
 
   &:hover {
       background-color: $grey-hover;

@@ -29,4 +29,8 @@
   button {
     visibility: hidden;
   }
+
+  @media (max-width: 600px) {
+    max-width: 0;
+  }
 }

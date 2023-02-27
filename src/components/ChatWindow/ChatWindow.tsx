@@ -142,13 +142,15 @@ function ChatWindow() {
             })
             : <span className="chat-window__no-messages-badge">No messages here yet...</span>}
           <div ref={messagesEndRef} />
-          <button
-            type="button"
-            className={`to-last-message-button ${isToLastMsgBtnVisible ? '' : 'hidden'}`}
-            onClick={handleToLastMsgBtn}
-          >
-            <ArrowLeftIcon />
-          </button>
+          <div className="button-wrapper">
+            <button
+              type="button"
+              className={`to-last-message-button ${isToLastMsgBtnVisible ? '' : 'hidden'}`}
+              onClick={handleToLastMsgBtn}
+            >
+              <ArrowLeftIcon />
+            </button>
+          </div>
         </div>
       )}
       {activeChatID && <MessageInput />}
