@@ -135,3 +135,13 @@
   align-items: center;
   text-align: left;
 }
+
+
+@media (max-width: 370px) {
+  .chat-preview-wrapper {
+    width: 80%;
+  }
+  .chat-preview-text {
+    width: 90%;
+  }
+}
