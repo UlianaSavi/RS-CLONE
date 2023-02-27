@@ -81,7 +81,6 @@ function DeletionPopup({
   };
 
   const hanldeCheckbox = () => {
-    console.log('click');
     setChecked(!checked);
   };
 
