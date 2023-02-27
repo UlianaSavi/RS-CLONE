@@ -10,7 +10,6 @@ import { UserContext } from '../../context/UserContext';
 import { User } from '../../types';
 import Avatar from '../Avatar/Avatar';
 import { convertTimestamp } from '../../hooks/timestampConverter';
-import { MAIN_GROUP_CHAT_ID } from '../../API/api';
 import { UserSidebarContext } from '../../context/UserSidebarContext';
 import './ChatInfo.scss';
 
@@ -43,7 +42,7 @@ function ChatInfo() {
   };
 
   useEffect(() => {
-    if (activeChatID !== MAIN_GROUP_CHAT_ID) {
+    if (activeChatID !== userID) {
       getData();
       onSnapshot(doc(db, 'users', userID), (d) => {
         const data = d.data();
@@ -51,7 +50,7 @@ function ChatInfo() {
         setUserData(data);
       });
     } else {
-      onSnapshot(doc(db, 'chats', MAIN_GROUP_CHAT_ID), (d) => {
+      onSnapshot(doc(db, 'chats', userID), (d) => {
         const data = d.data();
         if (!data) return;
         setGroupInfo(data);
@@ -63,13 +62,18 @@ function ChatInfo() {
 
   return (
     <div className="chat-info" onClick={FlipFlopUserSidebar}>
-      <Avatar image={(activeChatID !== MAIN_GROUP_CHAT_ID ? userInfo?.photoURL : groupInfo?.photoURL) || ''} />
+      <Avatar image={(activeChatID !== userID ? userInfo?.photoURL : groupInfo?.photoURL) || ''} />
       <div className="chat-info__info">
         <div className="chat-info__title">
-          {activeChatID !== MAIN_GROUP_CHAT_ID ? userInfo?.displayName : groupInfo?.name}
+          {activeChatID !== userID ? userInfo?.displayName : groupInfo?.name}
         </div>
-        <div className={`chat-info__status ${isOnline && activeChatID !== MAIN_GROUP_CHAT_ID ? 'online' : ''}`}>
-          {activeChatID !== MAIN_GROUP_CHAT_ID ? onlineStatus : `${groupInfo?.members.length} members`}
+        <div className={`chat-info__status ${isOnline && activeChatID !== userID ? 'online' : ''}`}>
+          {activeChatID !== userID ? onlineStatus : `${groupInfo?.members.reduce((acc: number, curr: number) => {
+            if (Object.values(curr)[0]) {
+              return acc + 1;
+            }
+            return acc;
+          }, 0)} members`}
         </div>
       </div>
     </div>

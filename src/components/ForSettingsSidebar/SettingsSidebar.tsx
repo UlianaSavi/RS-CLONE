@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import SettingsList from './SettingsList/SettingsList';
 import SettingsTopPanel from './SettingsHeader/SettingsHeader';
 import UserInfo from './UserInfo/UserInfo';
 import EditProfileBlock from '../ForEditProfile/EditProfileBlock';
@@ -23,7 +22,6 @@ function SettingsSidebar(props: { onSidebarChange: () => void }) {
       <div className="setting">
         <SettingsTopPanel handleClick={onSidebarChange} handleEditClick={() => changeSettings()} />
         <UserInfo />
-        <SettingsList />
         <RsSchoolLinks />
       </div>
     )

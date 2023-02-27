@@ -55,9 +55,13 @@ export const setOfflineStatus = async (user: User) => {
 };
 
 export const setOnlineStatus = async (user: User) => {
-  await updateDoc(doc(db, 'users', user.uid), {
-    isOnline: true,
-  });
+  const userData = await getDoc(doc(db, 'users', user.uid));
+  const data = userData.data();
+  if (data) {
+    await updateDoc(doc(db, 'users', user.uid), {
+      isOnline: true,
+    });
+  }
 };
 
 export const singUp = async (
@@ -75,6 +79,7 @@ export const singUp = async (
       email,
       photoURL: '',
       isOnline: true,
+      lastVisitAt: serverTimestamp(),
     });
 
     await setDoc(doc(db, 'userChats', user.uid), {});
@@ -88,6 +93,7 @@ export const singUp = async (
       [`${MAIN_GROUP_CHAT_ID}.groupInfo`]: {
         displayName: MAIN_GROUP_CHAT_NAME,
         photoURL: MAIN_GROUP_CHAT_PHOTO,
+        groupID: MAIN_GROUP_CHAT_ID,
       },
       [`${MAIN_GROUP_CHAT_ID}.lastMessage`]: {
         text: lastMessage.text || '',
@@ -191,6 +197,51 @@ export const deleteChat = async (
   }
 };
 
+export const deleteGroup = async (
+  chatID: string,
+  currentUserID: string,
+  forAll: boolean,
+) => {
+  const res = await getDoc(doc(db, 'chats', chatID));
+  const data = res.data();
+  if (!data) return;
+
+  if (forAll) {
+    const membersArr = data.members.map((member: {[key: string]: boolean}) => {
+      if (Object.values(member)[0]) return Object.keys(member)[0];
+      return null;
+    });
+
+    const promises = membersArr.map(async (memberID: string | null) => {
+      if (memberID) {
+        await updateDoc(doc(db, 'userGroups', memberID), {
+          [chatID]: deleteField(),
+        });
+      }
+    });
+    Promise.all(promises);
+
+    await deleteDoc(doc(db, 'chats', chatID));
+  } else {
+    await updateDoc(doc(db, 'userGroups', currentUserID), {
+      [chatID]: deleteField(),
+    });
+
+    const updatedMembersArr = data.members.map((member: {[key: string]: boolean}) => {
+      if (Object.keys(member)[0] === currentUserID) {
+        return {
+          [currentUserID]: false,
+        };
+      }
+      return member;
+    });
+
+    await updateDoc(doc(db, 'chats', chatID), {
+      members: updatedMembersArr,
+    });
+  }
+};
+
 export const loadMessagePhoto = async (image: File | null) => {
   const storageRef = ref(storage, `chat_image_${Math.floor(Date.now() + Math.random() * 900000)}`);
   const uploadTask = uploadBytesResumable(storageRef, image as File);
@@ -271,20 +322,22 @@ export const sendMessage = async (
       return null;
     });
 
-    const promises = membersArr.map(async (memberID: string) => {
-      const groups = await getDoc(doc(db, 'userGroups', memberID));
-      const groupsData = groups.data();
-      if (!groupsData) return;
-      let { unreadMessages } = groupsData[activeChatID];
-      if (Number.isNaN(unreadMessages)) unreadMessages = 0;
+    const promises = membersArr.map(async (memberID: string | null) => {
+      if (memberID) {
+        const groups = await getDoc(doc(db, 'userGroups', memberID));
+        const groupsData = groups.data();
+        if (!groupsData) return;
+        let { unreadMessages } = groupsData[activeChatID];
+        if (Number.isNaN(unreadMessages)) unreadMessages = 0;
 
-      await updateDoc(doc(db, 'userGroups', memberID), {
-        [`${activeChatID}.lastMessage`]: {
-          text: messageText || 'Photo',
-          date: serverTimestamp(),
-        },
-        [`${activeChatID}.unreadMessages`]: unreadMessages += 1,
-      });
+        await updateDoc(doc(db, 'userGroups', memberID), {
+          [`${activeChatID}.lastMessage`]: {
+            text: messageText || 'Photo',
+            date: serverTimestamp(),
+          },
+          [`${activeChatID}.unreadMessages`]: unreadMessages += 1,
+        });
+      }
     });
     Promise.all(promises);
   }
@@ -334,4 +387,67 @@ export const activateChat = async (
       [`${activeChatID}.unreadMessages`]: 0,
     });
   }
+};
+
+export const createNewGroup = async (
+  members: string[],
+  groupName: string,
+  photoURL: string,
+  admin: string,
+) => {
+  const membersArr = members.map((memberID) => ({
+    [memberID]: true,
+  }));
+  const groupID = `${groupName}${Math.floor(100000 + Math.random() * 900000)}`;
+
+  await setDoc(doc(db, 'chats', groupID), {
+    members: membersArr,
+    messages: [],
+    name: groupName,
+    photoURL,
+    admin,
+  });
+
+  const promises = members.map(async (memberID: string) => {
+    await updateDoc(doc(db, 'userGroups', memberID), {
+      [`${groupID}.groupInfo`]: {
+        displayName: groupName,
+        photoURL,
+        groupID,
+      },
+      [`${groupID}.lastMessage`]: {
+        text: 'You have been added to the group',
+        date: serverTimestamp(),
+      },
+      [`${groupID}.unreadMessages`]: 0,
+    });
+  });
+  Promise.all(promises);
+};
+
+export const changeGroupPhoto = async (
+  photoList: FileList | null,
+) => {
+  if (photoList && auth.currentUser) {
+    const avatar = photoList[0];
+
+    const storageRef = ref(storage, `group_${Math.floor(Date.now() + Math.random() * 900000)}`);
+    const uploadTask = uploadBytesResumable(storageRef, avatar as File);
+
+    if (avatar) {
+      uploadTask.on(
+        'state_changed',
+        (snapshot) => {
+          const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          return progress;
+        },
+        (error) => {
+          throw error;
+        },
+      );
+    }
+
+    return getDownloadURL((await uploadTask).ref);
+  }
+  return '';
 };

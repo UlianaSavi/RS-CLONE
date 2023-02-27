@@ -8,8 +8,8 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  
-  background-color: $grey-main;
+
+  background-color: $main-color;
 
   @media (max-width: 600px) {
     justify-content: flex-start;

@@ -1,60 +1,59 @@
 @import "../../styles/variables";
 
 .folder-tab {
-    display: flex;
-    align-items: center;
-    padding: 13px;
+  display: flex;
+  align-items: center;
+  padding: 13px;
 
-    white-space: nowrap;
-    font-size: 1rem;
+  white-space: nowrap;
+  font-size: 1rem;
 
-    background-color: $grey-main;
-    border: none;
-    border-radius: 7px 7px 0 0;
+  background-color: $main-color;
+  border: none;
+  border-radius: 7px 7px 0 0;
 
-    cursor: pointer;
+  cursor: pointer;
+
+  &:hover {
+    background: $grey-hover;
+  }
+
+  &__title {
+    color: $label-color;
+    margin-right: 5px;
+  }
+
+  &__message-count {
+    height: fit-content;
+    min-width: 20px;
+
+    padding: 2px;
+    background: #707579;
+    border-radius: 12px;
+
+    color: $text-color-white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &.active {
+    padding-bottom: 10px;
+    border-bottom: 3px solid $accent-color;
+    color: $grey-secondary;
 
     &:hover {
-        background: $grey-hover;
+      background: $accent-hover-folder;
     }
 
-    &__title {
-        color: $label-color;
-        margin-right: 5px;
+    .folder-tab {
+      &__title {
+        color: $accent-color;
+      }
+
+      &__message-count {
+        background: $accent-color;
+      }
     }
-    
-    &__message-count{
-        height: fit-content;
-        min-width: 20px;
-
-        padding: 2px;
-        background: #707579;
-        border-radius: 12px;
-
-        color: $text-color-white;
-        font-size: 0.9rem;
-        font-weight: 500;
-        text-align: center;
-    }
-
-    &.active {
-        padding-bottom: 10px;
-        border-bottom: 3px solid $accent-color;
-        color: $grey-secondary;
-
-        &:hover {
-            background: $accent-hover-folder;
-        }
-    
-        .folder-tab {
-            &__title {
-                color: $accent-color;
-            }
-
-            &__message-count {
-                background: $accent-color;
-            }
-        }
-    }
+  }
 }
-

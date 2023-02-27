@@ -24,10 +24,12 @@ function ChatWindow() {
   const { currentUser } = useContext(AuthContext);
 
   const [datesNMessagesArr, setDatesNMessagesArr] = useState<SplitByDates[]>([]);
+  const [messagesListener, setMessagesListener] = useState<() => void>(() => () => null);
 
   useEffect(() => {
     if (activeChatID) {
-      onSnapshot(doc(db, 'chats', activeChatID), (d) => {
+      messagesListener();
+      const listener = onSnapshot(doc(db, 'chats', activeChatID), (d) => {
         const data = d.data();
         if (!data) {
           setDatesNMessagesArr([]);
@@ -81,8 +83,12 @@ function ChatWindow() {
 
         setDatesNMessagesArr(splitedByDate);
       });
+      setMessagesListener(() => listener);
     }
-  }, [activeChatID]);
+    return () => {
+      messagesListener();
+    };
+  }, [activeChatID, currentUser]);
 
   const messageContainerRef = useRef<HTMLDivElement>(null);
   const messageContainer = messageContainerRef.current;
