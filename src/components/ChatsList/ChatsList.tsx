@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
 import { useState, useEffect, useContext } from 'react';
 import {
   collection, query, where, getDocs, onSnapshot, doc, DocumentData, getDoc,
@@ -59,7 +58,7 @@ function ChatsList({
   const { selectedUsers } = useContext(SelectedUsersContext);
 
   const [chatsArr, setChatsArr] = useState([]);
-  const [chatsListener, setChatsListener] = useState<() => void>(() => () => {});
+  const [chatsListener, setChatsListener] = useState<() => void>(() => () => null);
 
   const updateChatsList = (chatsData: DocumentData) => {
     setChatsArr(chatsData

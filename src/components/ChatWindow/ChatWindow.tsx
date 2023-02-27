@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
 import {
   useContext, useRef, useEffect, useState, ReactNode,
 } from 'react';
@@ -25,7 +24,7 @@ function ChatWindow() {
   const { currentUser } = useContext(AuthContext);
 
   const [datesNMessagesArr, setDatesNMessagesArr] = useState<SplitByDates[]>([]);
-  const [messagesListener, setMessagesListener] = useState<() => void>(() => () => {});
+  const [messagesListener, setMessagesListener] = useState<() => void>(() => () => null);
 
   useEffect(() => {
     if (activeChatID) {
