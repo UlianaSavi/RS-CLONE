@@ -55,9 +55,13 @@ export const setOfflineStatus = async (user: User) => {
 };
 
 export const setOnlineStatus = async (user: User) => {
-  await updateDoc(doc(db, 'users', user.uid), {
-    isOnline: true,
-  });
+  const userData = await getDoc(doc(db, 'users', user.uid));
+  const data = userData.data();
+  if (data) {
+    await updateDoc(doc(db, 'users', user.uid), {
+      isOnline: true,
+    });
+  }
 };
 
 export const singUp = async (
@@ -89,6 +93,7 @@ export const singUp = async (
       [`${MAIN_GROUP_CHAT_ID}.groupInfo`]: {
         displayName: MAIN_GROUP_CHAT_NAME,
         photoURL: MAIN_GROUP_CHAT_PHOTO,
+        groupID: MAIN_GROUP_CHAT_ID,
       },
       [`${MAIN_GROUP_CHAT_ID}.lastMessage`]: {
         text: lastMessage.text || '',
