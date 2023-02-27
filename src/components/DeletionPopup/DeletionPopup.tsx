@@ -45,7 +45,6 @@ function DeletionPopup({
           setAsAdmin(true);
         }
       }
-      // console.log(userData);
     }
   };
 
@@ -86,10 +85,12 @@ function DeletionPopup({
       <div className={`deletion-popup ${isVisible ? 'active' : ''}`}>
         <div className="deletion-popup__header-wrapper">
           <Avatar image={userData?.photoURL || ''} />
-          <h2 className="deletion-popup__header">Delete chat</h2>
+          <h2 className="deletion-popup__header">{isGroup ? 'Delete group' : 'Delete chat'}</h2>
         </div>
         <div className="deletion-popup__description">
-          {`Are you sure you want to delete the chat with ${isGroup ? userData?.name : userData?.displayName}?`}
+          {isGroup
+            ? `Are you sure you want to delete and leave the group ${userData?.name}?`
+            : `Are you sure you want to delete the chat with ${userData?.displayName}?`}
         </div>
         {!isGroup || isAdmin ? (
           <div className="deletion-popup__checkbox-wrapper">
@@ -100,7 +101,9 @@ function DeletionPopup({
               onChange={hanldeCheckbox}
             />
             <label htmlFor="delete-options">
-              {`Also delete for ${userData?.displayName}`}
+              {isGroup
+                ? 'Delete for all members'
+                : `Also delete for ${userData?.displayName}`}
             </label>
           </div>
         ) : null}
@@ -117,7 +120,7 @@ function DeletionPopup({
             className="deletion-popup__button delete"
             onClick={handleDeleteBtn}
           >
-            DELETE CHAT
+            {isGroup ? 'DELETE GROUP' : 'DELETE CHAT'}
           </button>
         </div>
       </div>
