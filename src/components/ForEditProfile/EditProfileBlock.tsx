@@ -11,7 +11,6 @@ export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProp
   const { currentUser, userFull, setUserFull } = useContext(AuthContext);
   const [name, setName] = useState(currentUser?.displayName || '');
   const [user, setUser] = useState(currentUser);
-  const [lastName, setLastName] = useState('');
   const [bio, setBio] = useState('');
 
   const onSubmit = async () => {
@@ -53,7 +52,6 @@ export default function EditProfileBlock({ handleEditClick }: SettingsHeaderProp
       <section className="edit-user-info">
         <AddPhotoButton handleChange={changePhoto} imageSrc={user?.photoURL || ''} />
         <FormInput type="text" id="name" label="Username" value={name} setValue={setName} mode="edit" />
-        <FormInput type="text" id="last-name" label="Last Name (optional)" value={lastName} setValue={setLastName} mode="edit" />
         <FormInput type="text" id="bio" label="Bio (optional)" value={userFull?.bio || ''} setValue={setBio} mode="edit" />
       </section>
       <div className="edit-user-info__descr">

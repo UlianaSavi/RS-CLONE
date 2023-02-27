@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from 'react';
 import PopupMenuItem from '../PopupMenuItem/PopupMenuItem';
 import './AttachPopup.scss';
 import { ReactComponent as ImageNVideoIcon } from '../../assets/icons/image-n-video.svg';
-import { ReactComponent as DocumentIcon } from '../../assets/icons/document.svg';
 import { SendImageContext } from '../../context/SendImageContext';
 
 interface AttachPopupProps {
@@ -14,7 +13,6 @@ function AttachPopup({
   isVisible, handleMouseLeave,
 }: AttachPopupProps) {
   const hiddenPhotoInput = React.useRef<HTMLInputElement>(null);
-  const hiddenDocInput = React.useRef<HTMLInputElement>(null);
   const {
     setUrl,
     file,
@@ -50,8 +48,6 @@ function AttachPopup({
     <nav className={`attach-popup ${isVisible ? 'active' : ''}`} onMouseLeave={handleMouseLeave}>
       <PopupMenuItem label="Photo" icon={<ImageNVideoIcon />} handleClick={choosePhoto} />
       <input className="input-file" type="file" id="uploadPhoto" accept=".jpg, .jpeg, .png" ref={hiddenPhotoInput} onChange={handleChange} />
-      <PopupMenuItem label="Document" icon={<DocumentIcon />} />
-      <input className="input-file" type="file" id="uploadFile" ref={hiddenDocInput} onChange={handleChange} />
     </nav>
   );
 }
