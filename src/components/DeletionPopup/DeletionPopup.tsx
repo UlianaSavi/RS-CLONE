@@ -80,7 +80,10 @@ function DeletionPopup({
     }
   };
 
-  const hanldeCheckbox = () => setChecked(!checked);
+  const hanldeCheckbox = () => {
+    console.log('click');
+    setChecked(!checked);
+  };
 
   return (
     <div className={`${isVisible ? 'deletion-popup__background' : ''}`} onClick={handleBg}>
@@ -105,10 +108,9 @@ function DeletionPopup({
               <button
                 type="button"
                 className="deletion-popup__checkbox-wrapper"
-                onClick={hanldeCheckbox}
               >
                 <input
-                  className="chat-preview__checkbox"
+                  className="deletion-popup__checkbox"
                   type="checkbox"
                   id="delete-options"
                   checked={checked}
