@@ -3,7 +3,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { doc, getDoc, DocumentData } from '@firebase/firestore';
 import { db } from '../../firebaseConfig';
-import { deleteChat } from '../../API/api';
+import { deleteChat, deleteGroup } from '../../API/api';
 import { AuthContext } from '../../context/AuthContext';
 import { UserContext } from '../../context/UserContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
@@ -62,11 +62,13 @@ function DeletionPopup({
       if (!isGroup) {
         const combinedID = (currentUser.uid) > userIdToDelete ? `${currentUser.uid}${userIdToDelete}` : `${userIdToDelete}${currentUser.uid}`;
         deleteChat(combinedID, currentUser.uid, userIdToDelete, checked);
-        closePopup();
-        if (userIdToDelete === userID) {
-          setUserID('');
-          setActiveChatID('');
-        }
+      } else {
+        deleteGroup(userIdToDelete, currentUser.uid, checked);
+      }
+      closePopup();
+      if (userIdToDelete === userID) {
+        setUserID('');
+        setActiveChatID('');
       }
     }
   };
