@@ -3,7 +3,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { doc, getDoc, DocumentData } from '@firebase/firestore';
 import { db } from '../../firebaseConfig';
-import { deleteChat, deleteGroup } from '../../API/api';
+import { deleteChat, deleteGroup, MAIN_GROUP_CHAT_ID } from '../../API/api';
 import { AuthContext } from '../../context/AuthContext';
 import { UserContext } from '../../context/UserContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
@@ -89,42 +89,51 @@ function DeletionPopup({
           <Avatar image={userData?.photoURL || ''} />
           <h2 className="deletion-popup__header">{isGroup ? 'Delete group' : 'Delete chat'}</h2>
         </div>
-        <div className="deletion-popup__description">
-          {isGroup
-            ? `Are you sure you want to delete and leave the group ${userData?.name}?`
-            : `Are you sure you want to delete the chat with ${userData?.displayName}?`}
-        </div>
-        {!isGroup || isAdmin ? (
-          <div className="deletion-popup__checkbox-wrapper">
-            <input
-              type="checkbox"
-              id="delete-options"
-              checked={checked}
-              onChange={hanldeCheckbox}
-            />
-            <label htmlFor="delete-options">
-              {isGroup
-                ? 'Delete for all members'
-                : `Also delete for ${userData?.displayName}`}
-            </label>
+        {userIdToDelete === MAIN_GROUP_CHAT_ID ? (
+          <div className="deletion-popup__description">
+            Sorry, but it&apos;s impossible to leave this group :(
+            You are here forever and ever until the end of time!
           </div>
-        ) : null}
-        <div className="deletion-popup__buttons-wrapper">
-          <button
-            type="button"
-            className="deletion-popup__button"
-            onClick={closePopup}
-          >
-            CANCEL
-          </button>
-          <button
-            type="button"
-            className="deletion-popup__button delete"
-            onClick={handleDeleteBtn}
-          >
-            {isGroup ? 'DELETE GROUP' : 'DELETE CHAT'}
-          </button>
-        </div>
+        ) : (
+          <>
+            <div className="deletion-popup__description">
+              {isGroup
+                ? `Are you sure you want to delete and leave the group ${userData?.name}?`
+                : `Are you sure you want to delete the chat with ${userData?.displayName}?`}
+            </div>
+            {!isGroup || isAdmin ? (
+              <div className="deletion-popup__checkbox-wrapper">
+                <input
+                  type="checkbox"
+                  id="delete-options"
+                  checked={checked}
+                  onChange={hanldeCheckbox}
+                />
+                <label htmlFor="delete-options">
+                  {isGroup
+                    ? 'Delete for all members'
+                    : `Also delete for ${userData?.displayName}`}
+                </label>
+              </div>
+            ) : null}
+            <div className="deletion-popup__buttons-wrapper">
+              <button
+                type="button"
+                className="deletion-popup__button"
+                onClick={closePopup}
+              >
+                CANCEL
+              </button>
+              <button
+                type="button"
+                className="deletion-popup__button delete"
+                onClick={handleDeleteBtn}
+              >
+                {isGroup ? 'DELETE GROUP' : 'DELETE CHAT'}
+              </button>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

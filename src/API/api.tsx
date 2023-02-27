@@ -207,10 +207,12 @@ export const deleteGroup = async (
       return null;
     });
 
-    const promises = membersArr.map(async (memberID: string) => {
-      await updateDoc(doc(db, 'userGroups', memberID), {
-        [chatID]: deleteField(),
-      });
+    const promises = membersArr.map(async (memberID: string | null) => {
+      if (memberID) {
+        await updateDoc(doc(db, 'userGroups', memberID), {
+          [chatID]: deleteField(),
+        });
+      }
     });
     Promise.all(promises);
 
