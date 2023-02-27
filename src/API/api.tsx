@@ -315,20 +315,22 @@ export const sendMessage = async (
       return null;
     });
 
-    const promises = membersArr.map(async (memberID: string) => {
-      const groups = await getDoc(doc(db, 'userGroups', memberID));
-      const groupsData = groups.data();
-      if (!groupsData) return;
-      let { unreadMessages } = groupsData[activeChatID];
-      if (Number.isNaN(unreadMessages)) unreadMessages = 0;
+    const promises = membersArr.map(async (memberID: string | null) => {
+      if (memberID) {
+        const groups = await getDoc(doc(db, 'userGroups', memberID));
+        const groupsData = groups.data();
+        if (!groupsData) return;
+        let { unreadMessages } = groupsData[activeChatID];
+        if (Number.isNaN(unreadMessages)) unreadMessages = 0;
 
-      await updateDoc(doc(db, 'userGroups', memberID), {
-        [`${activeChatID}.lastMessage`]: {
-          text: messageText || 'Photo',
-          date: serverTimestamp(),
-        },
-        [`${activeChatID}.unreadMessages`]: unreadMessages += 1,
-      });
+        await updateDoc(doc(db, 'userGroups', memberID), {
+          [`${activeChatID}.lastMessage`]: {
+            text: messageText || 'Photo',
+            date: serverTimestamp(),
+          },
+          [`${activeChatID}.unreadMessages`]: unreadMessages += 1,
+        });
+      }
     });
     Promise.all(promises);
   }
