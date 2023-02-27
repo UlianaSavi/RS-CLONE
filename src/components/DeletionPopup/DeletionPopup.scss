@@ -52,7 +52,12 @@
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+    background-color: $main-color;
+    border: none;
+    color: $text-color-white;
 
     cursor: pointer;
 

@@ -102,8 +102,13 @@ function DeletionPopup({
                 : `Are you sure you want to delete the chat with ${userData?.displayName}?`}
             </div>
             {!isGroup || isAdmin ? (
-              <div className="deletion-popup__checkbox-wrapper">
+              <button
+                type="button"
+                className="deletion-popup__checkbox-wrapper"
+                onClick={hanldeCheckbox}
+              >
                 <input
+                  className="chat-preview__checkbox"
                   type="checkbox"
                   id="delete-options"
                   checked={checked}
@@ -114,7 +119,7 @@ function DeletionPopup({
                     ? 'Delete for all members'
                     : `Also delete for ${userData?.displayName}`}
                 </label>
-              </div>
+              </button>
             ) : null}
             <div className="deletion-popup__buttons-wrapper">
               <button
