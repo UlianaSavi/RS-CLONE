@@ -58,6 +58,7 @@ function ChatsList({
   const { selectedUsers } = useContext(SelectedUsersContext);
 
   const [chatsArr, setChatsArr] = useState([]);
+  const [chatsListener, setChatsListener] = useState<() => void>(() => () => null);
 
   const updateChatsList = (chatsData: DocumentData) => {
     setChatsArr(chatsData
@@ -95,7 +96,8 @@ function ChatsList({
 
   const getUserChats = async () => {
     if (currentUser?.uid && activeFolder === 0) {
-      onSnapshot(doc(db, 'userChats', currentUser.uid), (d) => {
+      chatsListener();
+      const listener = onSnapshot(doc(db, 'userChats', currentUser.uid), (d) => {
         const data = d.data();
         if (!data) return;
         const dataArray = Object.values(data);
@@ -110,15 +112,20 @@ function ChatsList({
           };
         });
         Promise.all(promises).then((updatedDataArray) => {
-          updateChatsList(updatedDataArray.sort((a, b) => b.lastMessage.date - a.lastMessage.date));
+          if (activeFolder === 0) {
+            updateChatsList(updatedDataArray
+              .sort((a, b) => b.lastMessage.date - a.lastMessage.date));
+          }
         });
       });
+      setChatsListener(() => listener);
     }
   };
 
   const getUserGroups = async () => {
     if (currentUser?.uid) {
-      onSnapshot(doc(db, 'userGroups', currentUser.uid), (d) => {
+      chatsListener();
+      const listener = onSnapshot(doc(db, 'userGroups', currentUser.uid), (d) => {
         const data = d.data();
         if (!data) return;
         const dataArray = Object.values(data);
@@ -128,8 +135,11 @@ function ChatsList({
           unreadMessages: item?.unreadMessages || 0,
           userInfo: item.groupInfo,
         }));
-        updateChatsList(groupsData.sort((a, b) => b.lastMessage.date - a.lastMessage.date));
+        if (activeFolder === 1) {
+          updateChatsList(groupsData.sort((a, b) => b.lastMessage.date - a.lastMessage.date));
+        }
       });
+      setChatsListener(() => listener);
     }
   };
 
@@ -146,6 +156,9 @@ function ChatsList({
 
   useEffect(() => {
     showChatsList();
+    return () => {
+      chatsListener();
+    };
   }, [currentUser?.uid,
     activeChatID, userID, activeFolder, isSearchMode, searchInput, selectedUsers]);
 
