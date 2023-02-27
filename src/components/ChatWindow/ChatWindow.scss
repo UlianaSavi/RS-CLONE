@@ -88,10 +88,18 @@
   }
 }
 
+.button-wrapper {
+  position: absolute;
+  bottom: 70px;
+  right: 9%;
+
+  @media (max-width: 580px) {
+    right: 65px;
+  }
+}
+
 .to-last-message-button {
-  position: sticky;
-  bottom: 0;
-  left: calc(100% - 10px);
+  position: fixed;
   width: 54px;
   height: 54px;
   z-index: 20;
