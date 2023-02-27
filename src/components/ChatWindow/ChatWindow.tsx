@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import {
   useContext, useRef, useEffect, useState, ReactNode,
 } from 'react';
@@ -24,10 +25,12 @@ function ChatWindow() {
   const { currentUser } = useContext(AuthContext);
 
   const [datesNMessagesArr, setDatesNMessagesArr] = useState<SplitByDates[]>([]);
+  const [messagesListener, setMessagesListener] = useState<() => void>(() => () => {});
 
   useEffect(() => {
     if (activeChatID) {
-      onSnapshot(doc(db, 'chats', activeChatID), (d) => {
+      messagesListener();
+      const listener = onSnapshot(doc(db, 'chats', activeChatID), (d) => {
         const data = d.data();
         if (!data) {
           setDatesNMessagesArr([]);
@@ -81,7 +84,11 @@ function ChatWindow() {
 
         setDatesNMessagesArr(splitedByDate);
       });
+      setMessagesListener(() => listener);
     }
+    return () => {
+      messagesListener();
+    };
   }, [activeChatID, currentUser]);
 
   const messageContainerRef = useRef<HTMLDivElement>(null);
