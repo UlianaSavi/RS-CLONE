@@ -1,13 +1,12 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useContext, useEffect, useState } from 'react';
-import { doc, getDoc } from '@firebase/firestore';
+import { doc, getDoc, DocumentData } from '@firebase/firestore';
 import { db } from '../../firebaseConfig';
 import { deleteChat } from '../../API/api';
 import { AuthContext } from '../../context/AuthContext';
 import { UserContext } from '../../context/UserContext';
 import { ActiveChatContext } from '../../context/ActiveChatContext';
-import type { User } from '../../types';
 import './DeletionPopup.scss';
 import Avatar from '../Avatar/Avatar';
 
@@ -22,15 +21,31 @@ function DeletionPopup({
 }: ContextMenuProps) {
   const { currentUser } = useContext(AuthContext);
   const { userID, setUserID } = useContext(UserContext);
-  const [userData, setUserData] = useState<User | null>(null);
+  const [userData, setUserData] = useState<DocumentData | null | undefined>(null);
   const { setActiveChatID } = useContext(ActiveChatContext);
   const [checked, setChecked] = useState(false);
+  const [isGroup, setIsGroup] = useState(false);
+  const [isAdmin, setAsAdmin] = useState(false);
 
   const getUserData = async () => {
+    setUserData(null);
+    setAsAdmin(false);
+    setIsGroup(false);
     if (userIdToDelete) {
       const user = await getDoc(doc(db, 'users', userIdToDelete));
-      const data = user.data() as User;
-      setUserData(data);
+      const data = user.data();
+      if (data) {
+        setUserData(data);
+      } else {
+        setIsGroup(true);
+        const group = await getDoc(doc(db, 'chats', userIdToDelete));
+        const groupData = group.data();
+        setUserData(groupData);
+        if (currentUser?.uid === groupData?.admin) {
+          setAsAdmin(true);
+        }
+      }
+      // console.log(userData);
     }
   };
 
@@ -45,12 +60,14 @@ function DeletionPopup({
 
   const handleDeleteBtn = () => {
     if (currentUser) {
-      const combinedID = (currentUser.uid) > userIdToDelete ? `${currentUser.uid}${userIdToDelete}` : `${userIdToDelete}${currentUser.uid}`;
-      deleteChat(combinedID, currentUser.uid, userIdToDelete, checked);
-      closePopup();
-      if (userIdToDelete === userID) {
-        setUserID('');
-        setActiveChatID('');
+      if (!isGroup) {
+        const combinedID = (currentUser.uid) > userIdToDelete ? `${currentUser.uid}${userIdToDelete}` : `${userIdToDelete}${currentUser.uid}`;
+        deleteChat(combinedID, currentUser.uid, userIdToDelete, checked);
+        closePopup();
+        if (userIdToDelete === userID) {
+          setUserID('');
+          setActiveChatID('');
+        }
       }
     }
   };
@@ -72,19 +89,21 @@ function DeletionPopup({
           <h2 className="deletion-popup__header">Delete chat</h2>
         </div>
         <div className="deletion-popup__description">
-          {`Are you sure you want to delete the chat with ${userData?.displayName}?`}
+          {`Are you sure you want to delete the chat with ${isGroup ? userData?.name : userData?.displayName}?`}
         </div>
-        <div className="deletion-popup__checkbox-wrapper">
-          <input
-            type="checkbox"
-            id="delete-options"
-            checked={checked}
-            onChange={hanldeCheckbox}
-          />
-          <label htmlFor="delete-options">
-            {`Also delete for ${userData?.displayName}`}
-          </label>
-        </div>
+        {!isGroup || isAdmin ? (
+          <div className="deletion-popup__checkbox-wrapper">
+            <input
+              type="checkbox"
+              id="delete-options"
+              checked={checked}
+              onChange={hanldeCheckbox}
+            />
+            <label htmlFor="delete-options">
+              {`Also delete for ${userData?.displayName}`}
+            </label>
+          </div>
+        ) : null}
         <div className="deletion-popup__buttons-wrapper">
           <button
             type="button"
