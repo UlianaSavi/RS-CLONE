@@ -41,13 +41,26 @@ function MessageInput() {
   const { userID } = useContext(UserContext);
   const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
 
+  function escape(string: string) {
+    const htmlEscapes: Record<string, string> = {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": "'",
+    };
+
+    return string.replace(/[&<>"']/g, (match) => htmlEscapes[match]);
+  }
+
   const handleSendMessageBtn = async () => {
     if (messageValue.trim() !== '') {
       if (activeChatID !== userID && currentUser) {
         await activateChat(currentUser, userID, activeChatID, setActiveChatID);
       }
       if (currentUser) {
-        await sendMessage(messageValue, currentUser, activeChatID, userID);
+        const val = escape(messageValue);
+        await sendMessage(val, currentUser, activeChatID, userID);
       }
       setMessageValue('');
     }
@@ -61,7 +74,8 @@ function MessageInput() {
         await activateChat(currentUser, userID, activeChatID, setActiveChatID);
       }
       if (currentUser) {
-        await sendMessage(messageValue.trim(), currentUser, activeChatID, userID);
+        const val = escape(messageValue);
+        await sendMessage(val, currentUser, activeChatID, userID);
       }
       setMessageValue('');
     }
