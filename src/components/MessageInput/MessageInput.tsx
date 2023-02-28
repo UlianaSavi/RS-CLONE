@@ -41,18 +41,25 @@ function MessageInput() {
   const { userID } = useContext(UserContext);
   const { activeChatID, setActiveChatID } = useContext(ActiveChatContext);
 
+  function escape(string: string) {
+    const htmlEscapes: Record<string, string> = {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": "'",
+    };
+
+    return string.replace(/[&<>"']/g, (match) => htmlEscapes[match]);
+  }
+
   const handleSendMessageBtn = async () => {
     if (messageValue.trim() !== '') {
       if (activeChatID !== userID && currentUser) {
         await activateChat(currentUser, userID, activeChatID, setActiveChatID);
       }
       if (currentUser) {
-        const regExp = /(\b)(on\S+)(\s*)=|javascript|<(|\/|[^\\/>][^>]+|\/[^>][^>]+)>/gm;
-        let val = messageValue;
-        if (regExp.test(val)) {
-          val = encodeURIComponent(val);
-        }
-
+        const val = escape(messageValue);
         await sendMessage(val, currentUser, activeChatID, userID);
       }
       setMessageValue('');
@@ -67,11 +74,7 @@ function MessageInput() {
         await activateChat(currentUser, userID, activeChatID, setActiveChatID);
       }
       if (currentUser) {
-        const regExp = /(\b)(on\S+)(\s*)=|javascript|<(|\/|[^\\/>][^>]+|\/[^>][^>]+)>/gm;
-        let val = messageValue.trim();
-        if (regExp.test(val)) {
-          val = encodeURIComponent(val);
-        }
+        const val = escape(messageValue);
         await sendMessage(val, currentUser, activeChatID, userID);
       }
       setMessageValue('');
