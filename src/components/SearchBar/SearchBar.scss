@@ -1,0 +1,84 @@
+@import "../../styles/variables";
+
+.search {
+  position: relative;
+
+  width: 100%;
+  max-width: 332px;
+  height: 42px;
+  
+  background-color: $input-bg-color;
+  border: 0.5px solid $grey-hover;
+  border-radius: 22px;
+  color: $text-color-white;
+
+  cursor: text;
+  transition: linear 0.15s;
+
+  @media (max-width: 600px) {
+    max-width: none;
+    margin-right: 1rem;
+  }
+}
+
+.search:hover {
+  border: 0.5px solid $grey-lite;
+}
+
+.search__input {
+  position: absolute;
+  top: 2px;
+  left: 45px;
+
+  width: 100%;
+  max-width: 260px;
+  height: 35px;
+
+  background: none;
+  border: none;
+  outline: none;
+  color: $text-color-white;
+
+  &::placeholder {
+    color: $grey-secondary;
+  }
+
+  @media (max-width: 600px) {
+    max-width: 450px;
+  }
+}
+
+#search-svg {
+  position: absolute;
+  bottom: 0;
+  left: 14px;
+
+  height: 100%;
+  width: 100%;
+  max-width: 25px;
+
+  transform: scale(0.8);
+  transition: linear 0.15s;
+
+  stroke: $grey-secondary;
+  stroke-width: 4%;
+
+  &.selected {
+    border: none;
+
+    transition: linear 0.15s;
+    
+    fill: $accent-color;
+    stroke: $accent-color;
+  }
+}
+
+.selected {
+  border: 2px solid $accent-color;
+  transition: linear 0.15s;
+}
+
+.selected:hover {
+  border: 2px solid $accent-color;
+}
+

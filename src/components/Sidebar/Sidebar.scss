@@ -1,0 +1,36 @@
+@import "../../styles/variables";
+
+.sidebar {
+  position: relative;
+  z-index: 4;
+
+  width: 100%;
+  max-width: 420px;
+  height: 100%;
+  overflow: hidden;
+  flex: 2;
+
+  background-color: $bg-color-main;
+
+  @media (min-width: 601px) {
+    min-width: 420px;
+  }
+
+  @media (max-width: 600px) {
+    max-width: 100%;
+  }
+}
+
+.hide-sidebar {
+  position: absolute;
+
+  visibility: hidden;
+
+  button {
+    visibility: hidden;
+  }
+
+  @media (max-width: 600px) {
+    max-width: 0;
+  }
+}

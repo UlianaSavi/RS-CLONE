@@ -1,0 +1,19 @@
+@import "../../styles/variables";
+
+.sidebar-header {
+  width: 100%;
+  max-width: 420px;
+  height: 56px;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background-color: $main-color;
+
+  @media (max-width: 600px) {
+    justify-content: flex-start;
+    gap: 1rem;
+    max-width: 100%;
+  }
+}

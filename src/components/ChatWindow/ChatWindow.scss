@@ -1,0 +1,141 @@
+@import "../../styles/variables";
+
+.chat-window {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: center;
+
+  overflow: hidden;
+
+  &__wrapper {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 728px;
+    margin: 0 auto;
+    padding: 0 10px;
+
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+    @media (max-width: 1150px) {
+      padding: 0 5px;
+      margin-right: 0;
+    }
+
+    @media (max-width: 920px) {
+      margin: 0;
+    }
+  }
+
+  &__bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: transparent;
+    background-image: url(../../assets/chat-bg/bg-house-theme.png);
+    background-size: 500px;
+
+    opacity: 0.12;
+    filter: $filter-img-bg-chat;
+  }
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background: transparent;
+    background: $chat-bg-gradient;
+    opacity: 0.09;
+  }
+
+  &__no-messages-badge {
+    margin: 0 auto;
+    z-index: 2;
+
+    font-size: 15px;
+    line-height: 20px;
+
+    display: inline-block;
+    align-self: center;
+    padding: 0.28125rem 0.625rem;
+
+    background-color: $date-in-chat-bg;
+    border-radius: 0.875rem;
+  }
+}
+
+.button-wrapper {
+  position: absolute;
+  bottom: 70px;
+  right: 9%;
+
+  @media (max-width: 580px) {
+    right: 65px;
+  }
+}
+
+.to-last-message-button {
+  position: fixed;
+  width: 54px;
+  height: 54px;
+  z-index: 20;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-right: 4px;
+
+  border: none;
+  border-radius: 50%;
+  color: $const-white;
+  background-color: $main-color;
+  cursor: pointer;
+  opacity: 1;
+
+  visibility: visible;
+
+  transition: .2s all;
+
+  &:hover {
+    background-color: $grey-hover;
+  }
+
+  &.hidden {
+    opacity: 0;
+
+    visibility: hidden;
+  }
+
+  .arrow-icon {
+    margin: 0;
+
+    fill: $label-color;
+
+    transform: rotate(270deg);
+  }
+}

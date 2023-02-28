@@ -1,0 +1,17 @@
+@import "../../styles/variables";
+
+.bubbles-date {
+  z-index: 2;
+
+  font-size: 15px;
+  line-height: 20px;
+
+  display: block;
+  align-self: center;
+  padding: 0.28125rem 0.625rem;
+  margin-top: 0.5rem;
+
+  background-color: $date-in-chat-bg;
+  color: $const-white;
+  border-radius: 0.875rem;
+}

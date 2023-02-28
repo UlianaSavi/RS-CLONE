@@ -1,0 +1,53 @@
+@import "../../styles/variables";
+
+.burger-button {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 29px;
+
+  border: none;
+  background: none;
+
+  cursor: pointer;
+
+  @media (max-width: 600px) {
+    margin-left: 1rem;
+    width: 34px;
+  }
+
+  &__line {
+    z-index: 2;
+
+    width: 100%;
+    height: 2px;
+
+    margin-bottom: 3px;
+
+    background: $grey-lite;
+    border-radius: 2px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: -4px;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: none;
+    transition: linear .15s;
+    z-index: 1;
+  }
+
+  &:hover {
+    &::before {
+      transition: linear .15s;
+      background: $grey-hover;
+    }
+  }
+}

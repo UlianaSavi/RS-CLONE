@@ -1,0 +1,21 @@
+@import "../../styles/variables";
+
+.add-avatar {
+  padding: 16px 10px 16px;
+
+  color: $accent-color;
+  background-color: $main-color;
+  border: 1px solid $accent-color;
+
+  &:hover {
+    background-color: $accent-hover-folder;
+  }
+
+  &_hidden {
+    display: none;
+  }
+
+  &__label {
+    font-size: 18px;
+  }
+}

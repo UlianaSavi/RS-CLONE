@@ -1,0 +1,58 @@
+@import "../../styles/variables";
+
+#top-panel-popup {
+  position: absolute;
+  top: 63px;
+  right: 20px;
+
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+
+  opacity: 0;
+  visibility: hidden;
+
+  background: $main-color;
+  box-shadow: 0px 0px 5px 2px rgb(0 0 0 / 22%);
+  border-radius: 10px;
+
+  transition: .2s ease-in-out;
+  transform-origin: bottom right;
+
+  .popup-item {
+    &:last-child {
+      color: $danger-color;
+
+      &:hover {
+        background-color: rgba($danger-color, 0.05);
+      }
+    }
+  }
+
+
+  &.active {
+    z-index: 3;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition: .2s ease-in-out;
+    transform: scaleX(1);
+    transform-origin: top right;
+  }
+
+  .search-wrapper {
+    .popup-item {
+      color: $text-color-white;
+
+      &:hover {
+        background: $grey-hover;
+      }
+
+    }
+
+    @media (min-width: 600px) {
+      display: none;
+    }
+  }
+}

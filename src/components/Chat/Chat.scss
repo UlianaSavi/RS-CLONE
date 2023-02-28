@@ -1,0 +1,21 @@
+.chat {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 3;
+  height: 100vh;
+}
+
+.hide-chat {
+  @media (max-width: 600px) {
+    position: absolute;
+    
+    visibility: hidden;
+
+    button {
+      visibility: hidden;
+    }
+  }
+}

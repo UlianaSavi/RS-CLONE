@@ -1,0 +1,44 @@
+@import "../../styles/variables";
+
+.icon-button {
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border: none;
+    border-radius: 50%;
+    color: $const-white;
+    background-color: $accent-color;
+    cursor: pointer;
+    opacity: 1;
+
+    visibility: visible;
+
+    &:hover {
+        background-color: $accent-hover-dark;
+    }
+
+    &.hidden {
+        opacity: 0;
+
+        visibility: hidden;
+    }
+
+    .arrow-icon {
+        margin: 0;
+    
+        fill: $const-white;
+    
+        transform: rotate(180deg);
+      }
+}
+
+#button-svg {
+    height: 100%;
+}

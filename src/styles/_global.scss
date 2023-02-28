@@ -1,0 +1,61 @@
+@import "./variables";
+
+@mixin container {
+  box-sizing: border-box;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.messenger-container {
+  @include container();
+
+  background-color: $container-color;
+  color: $text-color-white;
+}
+
+.form-container {
+  @include container();
+
+  background-color: $bg-color-main;
+  color: $text-color-white;
+}
+
+.icon {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 25px;
+  height: fit-content;
+  margin-right: 10px;
+
+  color: $grey-lite;
+  cursor: pointer;
+}
+
+.arrow-icon {
+  fill: $grey-lite;
+}
+
+.link {
+  color: $text-color-white;
+}
+
+.blackout {
+  z-index: 30;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $blackout-color;
+}
+
+.btn {
+  background: none;
+  border: none;
+  padding: 0;
+}

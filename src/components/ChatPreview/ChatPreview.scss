@@ -1,0 +1,147 @@
+@import "../../styles/variables";
+
+.chat-preview {
+  width: 100%;
+  padding: 8px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+  border: none;
+  border-radius: 10px;
+  background-color: $main-color;
+  color: $text-color-white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $grey-hover;
+  }
+
+  &__title {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  &__last-message,
+  &__online-status {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.375rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    width: 100%;
+    max-width: 250px;
+
+    color: $grey-secondary;
+
+    overflow: hidden;
+  }
+
+  &__messenge-time {
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1rem;
+
+    margin-top: 4px;
+    margin-bottom: 12px;
+
+    color: $grey-secondary;
+  }
+
+  &__messenge-num {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+
+    padding: 2px 6px;
+
+    color: $const-white;
+    background: $grey-lite;
+    border-radius: 10px;
+  }
+
+  &.active {
+    background: $accent-color;
+    color: $const-white;
+
+    .chat-preview {
+      &__messenge-num {
+        color: $accent-color;
+        background: $text-color-white;
+      }
+
+      &__last-message,
+      &__online-status {
+        color: $const-white;
+      }
+
+      &__messenge-time {
+        color: $const-white;
+      }
+    }
+  }
+
+  .avatar {
+    margin-right: 10px;
+  }
+
+  &__checkbox {
+    width: 40px;
+    height: 20px;
+    margin-right: 0;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  &__checkbox + label::before {
+    content: "";
+    margin-right: 15px;
+    
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+
+    border: 2px solid $grey-lite;
+    border-radius: 4px;
+    background-color: $main-color;
+
+    cursor: pointer;
+  }
+  
+  &__checkbox:checked + label::before {
+    background-color: $accent-color;
+    border-color: $accent-color;
+  }
+
+}
+
+.chat-preview-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+
+@media (max-width: 370px) {
+  .chat-preview-wrapper {
+    width: 80%;
+  }
+  .chat-preview-text {
+    width: 90%;
+  }
+}
