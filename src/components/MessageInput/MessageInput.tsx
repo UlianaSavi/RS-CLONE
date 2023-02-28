@@ -47,7 +47,13 @@ function MessageInput() {
         await activateChat(currentUser, userID, activeChatID, setActiveChatID);
       }
       if (currentUser) {
-        await sendMessage(messageValue, currentUser, activeChatID, userID);
+        const regExp = /(\b)(on\S+)(\s*)=|javascript|<(|\/|[^\\/>][^>]+|\/[^>][^>]+)>/gm;
+        let val = messageValue;
+        if (regExp.test(val)) {
+          val = encodeURIComponent(val);
+        }
+
+        await sendMessage(val, currentUser, activeChatID, userID);
       }
       setMessageValue('');
     }
@@ -61,7 +67,12 @@ function MessageInput() {
         await activateChat(currentUser, userID, activeChatID, setActiveChatID);
       }
       if (currentUser) {
-        await sendMessage(messageValue.trim(), currentUser, activeChatID, userID);
+        const regExp = /(\b)(on\S+)(\s*)=|javascript|<(|\/|[^\\/>][^>]+|\/[^>][^>]+)>/gm;
+        let val = messageValue.trim();
+        if (regExp.test(val)) {
+          val = encodeURIComponent(val);
+        }
+        await sendMessage(val, currentUser, activeChatID, userID);
       }
       setMessageValue('');
     }
